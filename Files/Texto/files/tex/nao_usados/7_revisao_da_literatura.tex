@@ -1,0 +1,38 @@
+\chapter{Revisão da literatura}
+    
+    Alguns pontos relevantes a se aprofundar com a revisão literária são:
+    
+    \section{Qual é o problema?}
+        
+% [Usar a fonte para explicar o problema de timetabling: https://sci-hub.se/https://doi.org/10.1007/978-3-030-33720-9_21]
+        O "problema de organização de grade horária" (\textit{timetabling problem}) é uma subcategoria do problema de \textbf{agendamento} (\textit{scheduling}) que por sua vez é definido por \cite{WREN1996} como sendo:
+
+        \begin{quote}\footnotesize
+            Resolver problemas práticos relacionados à alocação, sujeito a restrições, de recursos a objetos sendo colocados no espaço-tempo, usando ou desenvolvendo quaisquer ferramentas que possam ser apropriadas. Os problemas irão frequentemente se relacionar à satisfação de certos objetivos.
+        \end{quote}
+        
+        Wren também informa que uma determinada \textit{timetable} apenas informa quando eventos serão realizados, e esse conceito se encaixa no que proponho neste documento. Entretanto, ele também diz que "a grade horária de classes de uma universidade deve levar em conta a disponibilidade de professores individualmente.", bem como a atribuição de salas, sendo ambos limitados por restrições duras e flexíveis (\textit{hard and soft constraints}).
+    
+    \section{Há solução?}
+        
+        Existem diversas implementações já realizadas, utilizando de uma variedade de métodos. Em seu trabalho, J. Miranda \cite{MIRANDA2012505} informa sobre diversos sistemas baseados em computador para auxiliar na tarefa de agendamento. J. Miranda também cita um dos métodos de resolução como sendo o \textbf{modelo de programação inteira} e \textbf{heurísticas}.
+        
+        % Já [Vinod](\ref{https://www.researchgate.net/publication/301564510_ACADEMIC_TIMETABLE_SCHEDULING_REVISITED}) cita diversos outros autores como: .[34](a) [64](a)D.Abramson(1991), D.Abramson et al (1999) proposed simulated annealing [66](a) [20](a) M. Wright(1996) used heuristic search and A. Schaerf (1999) used Local search techniques for School.
+        
+        % <!-- Preciso formatar muito direitinho isso daqui. Tem qualidade de referência, mas tá porco o uso -->
+    
+    \section{Quais são os desafios da solução do problema?}
+        
+        Também segundo J. Miranda, embora o problema de atribuição de salas não seja novo e tenha extensa literatura a seu respeito, são poucos os que de fato implementaram um sistema para suporte de decisões. Isso se dá por diversos fatores, também listado pelo autor fazendo referência a trabalhos anteriores, sendo alguns deles a resistência organizacional à mudanças e adoção de novas tecnologias, nível de dificuldade do problema, dentre outros.
+        
+        % <!-- Pegar a referência original? -->
+        
+        Outra característica é informada por Joshua \cite{THOMAS2009} que fala sobre a multidimensional do problema de timetabling. Por causa dessa questão há uma complexidade elevada para conseguir conceber visual e mentalmente de que forma os dados relacionados ao problema se estruturam, assim dificultando a elaboração de sistemas computacionais que auxiliem nessa tarefa.
+        
+        Tomáš Müller \cite{MURRAY2007} traz a questão da modelagem como um dos maiores obstáculos. À medida em que a complexidade aumenta, se torna cada vez mais difícil desenvolver uma solução efetiva. Assim fazendo com que a solução para uma universidade possa não ter utilidade para outras, ou até mesmo não seja capaz de lidar com todos os problemas de uma mesma universidade.
+    
+    \section{Como resolver os desafios?}
+        
+        Apesar do contra-fluxo encontrado na resolução dessa problema, Tomáš cita que, apesar da complexidade, é sim possível desenvolver soluções que tenham uso prático, mesmo que não seja um processo fácil. As ferramentas existem e estão disponíveis. Restando então considerar e resolver as preocupações dos usuários às questões além dos métodos de resolução.
+        
+        Com isso, entramos também no ramo da Interação Homem-Máquina, ramo abordado por Dinata \cite{ANDRE2018} que visou em seu desenvolvimento a criação de uma interface focada no usuário. Assim minimizando o atrito na abordagem desse problema complexo.
