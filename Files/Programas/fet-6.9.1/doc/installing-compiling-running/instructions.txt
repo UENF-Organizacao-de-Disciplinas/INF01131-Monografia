@@ -1,0 +1,1 @@
+Please see the README file in the main directory for advice on how to install, compile and run FET on your platform.
