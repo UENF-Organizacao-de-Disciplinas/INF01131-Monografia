@@ -14,17 +14,13 @@
   /* align-items: center; */
 }
 
-.base-select {
-  /* align-items: stretch; */
-  /* color: wheat; */
+.CRUD-select {
   padding-top: 2%;
   padding-left: 2%;
   align-self: baseline;
 }
 
-.CS-grid-image {
-  height: 70%;
+.CRUD-subjects {
+  align-self: center;
   padding-bottom: 2%;
-  padding-right: 2%;
-  align-self: last baseline;
 }
