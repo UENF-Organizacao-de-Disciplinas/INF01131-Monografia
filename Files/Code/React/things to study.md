@@ -4,6 +4,7 @@
 
 - [ ] Webpacks
 - [ ] Readme from react app
+- [ ] Fat Arrow Function
 
 ### React Select
 
