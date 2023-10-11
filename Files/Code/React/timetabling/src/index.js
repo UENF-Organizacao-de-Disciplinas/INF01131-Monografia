@@ -2,12 +2,14 @@ import React from "react";
 import ReactDOM from "react-dom/client";
 import "./index.css";
 // import MainCRUD from "./code/CRUD_main";
-import CRUDdisciplinas from "./code/CRUD_disciplinas";
+// import CRUDdisciplinas from "./code/CRUD_disciplinas";
+import CRUDprofessors from "./code/CRUD_professors";
 
 const root = ReactDOM.createRoot(document.getElementById("root"));
 root.render(
   <React.StrictMode>
     {/* <MainCRUD /> */}
-    <CRUDdisciplinas />
+    {/* <CRUDdisciplinas /> */}
+    <CRUDprofessors />
   </React.StrictMode>
 );
