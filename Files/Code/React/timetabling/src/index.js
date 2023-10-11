@@ -4,7 +4,8 @@ import "./index.css";
 // import MainCRUD from "./code/CRUD_main";
 // import CRUDdisciplinas from "./code/CRUD_disciplinas";
 // import CRUDprofessors from "./code/CRUD_professors";
-import CRUDrooms from "./code/CRUD_rooms";
+// import CRUDrooms from "./code/CRUD_rooms";
+import CRUDstudents from "./code/CRUD_students";
 
 const root = ReactDOM.createRoot(document.getElementById("root"));
 root.render(
@@ -12,6 +13,7 @@ root.render(
     {/* <MainCRUD /> */}
     {/* <CRUDdisciplinas /> */}
     {/* <CRUDprofessors /> */}
-    <CRUDrooms />
+    {/* <CRUDrooms /> */}
+    <CRUDstudents />
   </React.StrictMode>
 );
