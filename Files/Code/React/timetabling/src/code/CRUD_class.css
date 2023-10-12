@@ -28,3 +28,12 @@
   padding-right: 2%;
   align-self: last baseline;
 }
+
+.CRUD-Class-properties {
+  align-self: center;
+  padding-bottom: 2%;
+}
+
+.CRUD-class-timeperiods {
+  color: black;
+}
