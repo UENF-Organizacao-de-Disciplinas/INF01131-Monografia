@@ -105,28 +105,102 @@ const CRUDPageSelection = () => {
   );
 };
 
+const Timeperiod = () => {
+  return (
+    <div className="CRUD-timeperiod-properties">
+      <div className="CRUD-timeperiod-property">
+        Hora de início
+        <input placeholder="9:00"></input>
+      </div>
+      <div className="CRUD-timeperiod-property">
+        Tempo de duração
+        <input placeholder="2:00"></input>
+      </div>
+      <div className="CRUD-timeperiod-property">
+        Dia
+        <MySelectList options={options.days} newPlaceHolder={"Dia da semana"} />
+      </div>
+      <div className="CRUD-timeperiod-property">
+        Hora de início
+        <MyLabeledSelectList
+          options={options.roomCodes}
+          newPlaceHolder={"Sala"}
+        />
+      </div>
+    </div>
+  );
+};
+
+const NewTimePeriod = () => {
+  return (
+    <div className="CRUD-class-NewTimePeriod">
+      <div className="CRUD-NewTimePeriod-plus">+</div>
+    </div>
+  );
+};
+
+const CRUDTimePeriods = () => {
+  return (
+    <div className="CRUD-class-timeperiods">
+      <div className="CRUD-timeperiods">Períodos de horários</div>
+      <Timeperiod />
+      <Timeperiod />
+      <NewTimePeriod />
+    </div>
+  );
+};
+
+const CRUDClassProperties = () => {
+  return (
+    <div className="CRUD-Class-properties">
+      <MySelectList newPlaceHolder={"Ano"} options={options.years} />
+      <MySelectList newPlaceHolder={"Semestre"} options={options.semesters} />
+      <MyLabeledSelectList
+        newPlaceHolder={"Código: Nome da disciplina"}
+        options={options.subjectCodeName}
+      />
+      <MySelectList newPlaceHolder={"Docente"} options={options.professors} />
+      <img className="placeholder-image" src={temp_img} alt="Logo" />
+      <CRUDTimePeriods />
+    </div>
+  );
+};
+
+const CRUDParticipants = () => {
+  return (
+    <div className="participants-container">
+      <div className="participants-title">
+        <div className="participants-number">8</div>
+        <div className="participants-icon">figura</div>
+      </div>
+      <div className="participants-list">
+        <div className="participants-participant">
+          {options.students[0].value}: {options.students[0].label}
+        </div>
+        <div className="participants-participant">
+          {options.students[1].value}: {options.students[1].label}
+        </div>
+        <div className="participants-participant">
+          {options.students[2].value}: {options.students[2].label}
+        </div>
+        <div className="participants-participant">
+          {options.students[3].value}: {options.students[3].label}
+        </div>
+        <div className="participants-participant">
+          {options.students[4].value}: {options.students[4].label}
+        </div>
+      </div>
+    </div>
+  );
+};
+
 function CRUDclass() {
   return (
     <div className="background">
       <div className="contain-components">
         <CRUDPageSelection />
-        <div className="CRUD-Class-properties">
-          <MySelectList options={options.years} newPlaceHolder={"Ano"} />
-          <MySelectList
-            options={options.semesters}
-            newPlaceHolder={"Semestre"}
-          />
-          <MyLabeledSelectList
-            options={options.subjectCodeName}
-            newPlaceHolder={"Código: Nome da disciplina"}
-          />
-          <MySelectList
-            options={options.professors}
-            newPlaceHolder={"Docente"}
-          />
-          <img className="placeholder-image" src={temp_img} alt="Logo" />
-          <div className="CRUD-class-timeperiods"></div>
-        </div>
+        <CRUDClassProperties />
+        <CRUDParticipants />
       </div>
     </div>
   );
