@@ -1,0 +1,41 @@
+.participants-container {
+    display: flex;
+    flex-direction: column;
+    height: fit-content;
+    padding: 1em;
+    margin: 2vw;
+    border: 1px solid #dee2e6;
+    border-top-left-radius: 40px;
+    border-bottom-right-radius: 40px;
+}
+
+.participants-title {
+    display: flex;
+    flex-direction: row;
+    align-self: center;
+    font-weight: 700;
+    color: #343a40;
+}
+
+.participants-number {
+    font-size: 1.5em;
+    color: #6c757d;
+    margin-right: 1em;
+}
+
+
+.participants-icon {
+    color: #ffc107;
+    margin-right: .5em;
+}
+
+.participants-list {
+    display: flex;
+    margin-top: 20px;
+    flex-direction: column;
+    width: max-content;
+}
+
+.participants-participant {
+    color: #c6c6c6;
+}
