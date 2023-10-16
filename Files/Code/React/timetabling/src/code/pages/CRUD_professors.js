@@ -1,8 +1,7 @@
 import Select from "react-select";
 import "../CSS/CRUD_professors.css";
 import options from "../temp/options";
-
-const temp_img = "./ProfessorPreferenceMap.png";
+import assets from "../../assets/imagesImport";
 
 const MyLabeledSelectList = (props) => {
   return (
@@ -49,7 +48,11 @@ function CRUDprofessors() {
               isMulti={true}
             />
           </div>
-          <img className="CRUD-docentes-placeholderimg" src={temp_img} alt="" />
+          <img
+            className="CRUD-docentes-placeholderimg"
+            src={assets.professorMap}
+            alt=""
+          />
         </div>
       </div>
     </div>

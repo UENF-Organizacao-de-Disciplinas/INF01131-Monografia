@@ -2,10 +2,7 @@ import "../CSS/CRUD_class.css";
 import "../CSS/participantList.css";
 import Select from "react-select";
 import options from "../temp/options";
-
-const temp_img = "./Turma.png";
-const participantsIcon = "icons/students.svg";
-const addTimePeriodIcon = "icons/Add Circle.svg";
+import assets from "../../assets/imagesImport";
 
 const MySelectList = (props) => {
   return (
@@ -82,7 +79,11 @@ const CRUDParticipants = () => {
       <div className="participants-title">
         <div className="participants-number">{options.students.length}</div>
         <div className="participants-icon">
-          <img className="participants-icon" src={participantsIcon} alt="" />
+          <img
+            className="participants-icon"
+            src={assets.icons.students}
+            alt=""
+          />
         </div>
       </div>
       <div className="participants-list">
@@ -147,12 +148,12 @@ function CRUDclass() {
               <Timeperiod />
               <img
                 className="CRUD-Class-properties-NewTimePeriod-icon"
-                src={addTimePeriodIcon}
+                src={assets.icons.add}
                 alt=""
               />
             </div>
           </div>
-          <img className="placeholder-image" src={temp_img} alt="Logo" />
+          <img className="placeholder-image" src={assets.class} alt="Logo" />
         </div>
         <CRUDParticipants />
       </div>

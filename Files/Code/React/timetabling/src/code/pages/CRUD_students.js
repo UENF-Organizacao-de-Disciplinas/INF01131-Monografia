@@ -1,8 +1,7 @@
 import Select from "react-select";
 import "../CSS/CRUD_students.css";
 import options from "../temp/options";
-
-const temp_img = "./Grade_JVFD.png";
+import assets from "../../assets/imagesImport";
 
 const MyLabeledSelectList = (props) => {
   return (
@@ -49,7 +48,11 @@ function CRUDstudents() {
               isMulti={false}
             />
           </div>
-          <img className="CRUD-room-placeholderimg" src={temp_img} alt="" />
+          <img
+            className="CRUD-room-placeholderimg"
+            src={assets.gridJV}
+            alt=""
+          />
         </div>
       </div>
     </div>

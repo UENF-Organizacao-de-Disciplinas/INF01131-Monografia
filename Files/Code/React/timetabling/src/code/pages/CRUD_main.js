@@ -1,8 +1,7 @@
 import Select from "react-select";
 import "../CSS/CRUD_main.css";
 import options from "../temp/options";
-
-const temp_img = "./GradeCS_grid.png";
+import assets from "../../assets/imagesImport";
 
 const MySelectList = (props) => {
   return <Select options={props.options} placeholder={props.newPlaceHolder} />;
@@ -18,7 +17,7 @@ function MainCRUD() {
             newPlaceHolder="Selecionar CRUD"
           />
         </div>
-        <img className="CS-grid-image" src={temp_img} alt="Logo" />
+        <img className="CS-grid-image" src={assets.gridCS} alt="Logo" />
       </div>
     </div>
   );

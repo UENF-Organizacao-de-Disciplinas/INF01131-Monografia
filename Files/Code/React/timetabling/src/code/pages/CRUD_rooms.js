@@ -1,8 +1,7 @@
 import "../CSS/CRUD_rooms.css";
 import Select from "react-select";
 import options from "../temp/options";
-
-const temp_img = "./Sala.png";
+import assets from "../../assets/imagesImport";
 
 const MyLabeledSelectList = (props) => {
   return (
@@ -59,7 +58,7 @@ function CRUDrooms() {
               isMulti={true}
             />
           </div>
-          <img className="CRUD-room-placeholderimg" src={temp_img} alt="" />
+          <img className="CRUD-room-placeholderimg" src={assets.room} alt="" />
         </div>
       </div>
     </div>
