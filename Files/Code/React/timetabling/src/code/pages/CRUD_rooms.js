@@ -2,6 +2,7 @@ import "../CSS/CRUD_rooms.css";
 import Select from "react-select";
 import options from "../temp/options";
 import assets from "../../assets/imagesImport";
+import CRUDPageSelection from "../components/PageSelect";
 
 const MyLabeledSelectList = (props) => {
   return (
@@ -28,13 +29,7 @@ function CRUDrooms() {
   return (
     <div className="background">
       <div className="contain-components">
-        <div className="CRUD-select">
-          <MySelectList
-            newPlaceHolder="Selecionar CRUD"
-            options={options.CRUD}
-            isMulti={false}
-          />
-        </div>
+        <CRUDPageSelection defaultValue={options.CRUD[1]} />
         <div className="CRUD-outro">
           <div className="CRUD-properties">
             <MyLabeledSelectList

@@ -1,6 +1,7 @@
 import "../CSS/CRUD_disciplinas.css";
 import Select from "react-select";
 import options from "../temp/options";
+import CRUDPageSelection from "../components/PageSelect";
 
 const MyLabeledSelectList = (props) => {
   return (
@@ -27,13 +28,7 @@ function CRUDDisciplinas() {
   return (
     <div className="background">
       <div className="contain-components">
-        <div className="CRUD-select">
-          <MySelectList
-            newPlaceHolder="Selecionar CRUD"
-            options={options.CRUD}
-            isMulti={false}
-          />
-        </div>
+        <CRUDPageSelection defaultValue={options.CRUD[5]} />
         <div className="CRUD-subjects">
           <MyLabeledSelectList
             newPlaceHolder="Disciplina"

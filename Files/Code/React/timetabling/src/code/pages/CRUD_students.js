@@ -2,6 +2,7 @@ import Select from "react-select";
 import "../CSS/CRUD_students.css";
 import options from "../temp/options";
 import assets from "../../assets/imagesImport";
+import CRUDPageSelection from "../components/PageSelect";
 
 const MyLabeledSelectList = (props) => {
   return (
@@ -28,13 +29,7 @@ function CRUDstudents() {
   return (
     <div className="background">
       <div className="contain-components">
-        <div className="CRUD-select">
-          <MySelectList
-            newPlaceHolder="Selecionar CRUD"
-            options={options.CRUD}
-            isMulti={false}
-          />
-        </div>
+        <CRUDPageSelection defaultValue={options.CRUD[4]} />
         <div className="CRUD-outro">
           <div className="CRUD-properties">
             <MyLabeledSelectList

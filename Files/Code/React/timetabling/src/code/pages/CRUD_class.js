@@ -3,6 +3,7 @@ import "../CSS/participantList.css";
 import Select from "react-select";
 import options from "../temp/options";
 import assets from "../../assets/imagesImport";
+import CRUDPageSelection from "../components/PageSelect";
 
 const MySelectList = (props) => {
   return (
@@ -23,14 +24,6 @@ const MyLabeledSelectList = (props) => {
       getOptionLabel={(option) => `${option.value}: ${option.label}`}
       isMulti={props.isMulti}
     />
-  );
-};
-
-const CRUDPageSelection = () => {
-  return (
-    <div className="page-select">
-      <MySelectList options={options.CRUD} newPlaceHolder="Selecionar CRUD" />
-    </div>
   );
 };
 
@@ -121,7 +114,7 @@ const CRUDParticipants = () => {
 function CRUDclass() {
   return (
     <div className="background">
-      <CRUDPageSelection />
+      <CRUDPageSelection defaultValue={options.CRUD[2]} />
       <div className="CRUD-lateral">
         <div className="CRUD-contain-components">
           <div className="CRUD-Class-properties">

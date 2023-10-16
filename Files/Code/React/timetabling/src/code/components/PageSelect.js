@@ -1,21 +1,15 @@
-import "./CRUD_class.css";
-import Select from "react-select";
+import "../CSS/CRUD_class.css";
 import options from "../temp/options";
+import MySelectList from "../components/MySelectList";
 
-const MySelectList = (props) => {
+const CRUDPageSelection = (props) => {
   return (
-    <Select
-      className="SelectListBase"
-      options={props.options}
-      placeholder={props.newPlaceHolder}
-    />
-  );
-};
-
-const CRUDPageSelection = () => {
-  return (
-    <div className="page-select">
-      <MySelectList options={options.CRUD} newPlaceHolder="Selecionar CRUD" />
+    <div className="base-select">
+      <MySelectList
+        options={options.CRUD}
+        newPlaceHolder="Selecionar CRUD"
+        defaultValue={props.defaultValue}
+      />
     </div>
   );
 };

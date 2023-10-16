@@ -5,11 +5,13 @@ const options = {
     { value: "Eletiva Livre", label: "Eletiva Livre" },
   ],
   CRUD: [
+    { label: "Main CRUD", value: "Main CRUD" },
     { label: "Salas", value: "salas" },
     { label: "Turmas", value: "turmas" },
     { label: "Docentes", value: "docentes" },
     { label: "Discentes", value: "discentes" },
     { label: "Disciplinas", value: "disciplinas" },
+    { label: "Main", value: "main" },
   ],
   courses: [
     { label: "Ciência da Computação", value: "Ciência da Computação" },
