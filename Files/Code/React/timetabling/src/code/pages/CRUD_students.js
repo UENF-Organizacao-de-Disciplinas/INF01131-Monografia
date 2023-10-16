@@ -1,29 +1,8 @@
-import Select from "react-select";
 import "../CSS/CRUD_students.css";
 import options from "../temp/options";
 import assets from "../../assets/imagesImport";
 import CRUDPageSelection from "../components/PageSelect";
-
-const MyLabeledSelectList = (props) => {
-  return (
-    <Select
-      placeholder={props.newPlaceHolder}
-      options={props.options}
-      isMulti={props.isMulti}
-      getOptionLabel={(option) => `${option.value}: ${option.label}`}
-    />
-  );
-};
-
-const MySelectList = (props) => {
-  return (
-    <Select
-      placeholder={props.newPlaceHolder}
-      options={props.options}
-      isMulti={props.isMulti}
-    />
-  );
-};
+import MySelectList from "../components/MySelectList";
 
 function CRUDstudents() {
   return (
@@ -32,7 +11,8 @@ function CRUDstudents() {
         <CRUDPageSelection defaultValue={options.CRUD[4]} />
         <div className="CRUD-outro">
           <div className="CRUD-properties">
-            <MyLabeledSelectList
+            <MySelectList
+              isLabeled={true}
               newPlaceHolder="Alunos"
               options={options.students}
               isMulti={false}

@@ -1,28 +1,7 @@
 import "../CSS/CRUD_disciplinas.css";
-import Select from "react-select";
 import options from "../temp/options";
 import CRUDPageSelection from "../components/PageSelect";
-
-const MyLabeledSelectList = (props) => {
-  return (
-    <Select
-      placeholder={props.newPlaceHolder}
-      options={props.options}
-      getOptionLabel={(option) => `${option.value}: ${option.label}`}
-      isMulti={props.isMulti}
-    />
-  );
-};
-
-const MySelectList = (props) => {
-  return (
-    <Select
-      placeholder={props.newPlaceHolder}
-      options={props.options}
-      isMulti={props.isMulti}
-    />
-  );
-};
+import MySelectList from "../components/MySelectList";
 
 function CRUDDisciplinas() {
   return (
@@ -30,7 +9,8 @@ function CRUDDisciplinas() {
       <div className="contain-components">
         <CRUDPageSelection defaultValue={options.CRUD[5]} />
         <div className="CRUD-subjects">
-          <MyLabeledSelectList
+          <MySelectList
+            isLabeled={true}
             newPlaceHolder="Disciplina"
             options={options.subjectCodeName}
             isMulti={false}
@@ -44,7 +24,8 @@ function CRUDDisciplinas() {
             options={options.courses}
             isMulti={true}
           />
-          <MyLabeledSelectList
+          <MySelectList
+            isLabeled={true}
             newPlaceHolder="Requisitos de Disciplina"
             options={options.subjectCodeName}
             isMulti={true}

@@ -1,0 +1,10 @@
+.SelectList-base {
+    display: flex;
+    color: black
+}
+
+.CRUD-page-selection {
+    padding-top: 2%;
+    padding-left: 2%;
+    align-self: baseline;
+}

@@ -7,23 +7,11 @@
   height: 100vh;
 }
 
-.page-select {
-  padding-top: 2%;
-  padding-left: 2%;
-  align-self: baseline;
-
-}
-
 .placeholder-image {
   height: 10%;
   padding-bottom: 2%;
   padding-right: 2%;
   align-self: center;
-}
-
-.SelectListBase {
-  display: flex;
-  color: black
 }
 
 .CRUD-lateral {

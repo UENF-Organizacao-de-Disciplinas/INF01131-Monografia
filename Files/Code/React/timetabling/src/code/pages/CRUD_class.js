@@ -1,31 +1,9 @@
 import "../CSS/CRUD_class.css";
 import "../CSS/participantList.css";
-import Select from "react-select";
 import options from "../temp/options";
 import assets from "../../assets/imagesImport";
 import CRUDPageSelection from "../components/PageSelect";
-
-const MySelectList = (props) => {
-  return (
-    <Select
-      className="SelectListBase"
-      options={props.options}
-      placeholder={props.newPlaceHolder}
-    />
-  );
-};
-
-const MyLabeledSelectList = (props) => {
-  return (
-    <Select
-      className="SelectListBase"
-      placeholder={props.newPlaceHolder}
-      options={props.options}
-      getOptionLabel={(option) => `${option.value}: ${option.label}`}
-      isMulti={props.isMulti}
-    />
-  );
-};
+import MySelectList from "../components/MySelectList";
 
 const Timeperiod = () => {
   return (
@@ -44,7 +22,8 @@ const Timeperiod = () => {
       </div>
       <div className="CRUD-timeperiod-property-room">
         Sala
-        <MyLabeledSelectList
+        <MySelectList
+          isLabeled={true}
           options={options.roomCodes}
           newPlaceHolder={"Sala"}
         />
@@ -125,7 +104,8 @@ function CRUDclass() {
                 options={options.semesters}
               />
             </div>
-            <MyLabeledSelectList
+            <MySelectList
+              isLabeled={true}
               newPlaceHolder={"Código: Nome da disciplina"}
               options={options.subjectCodeName}
             />

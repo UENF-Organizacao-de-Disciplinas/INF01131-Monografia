@@ -14,14 +14,6 @@
   /* align-items: center; */
 }
 
-.base-select {
-  /* align-items: stretch; */
-  /* color: wheat; */
-  padding-top: 2%;
-  padding-left: 2%;
-  align-self: baseline;
-}
-
 .CS-grid-image {
   height: 70%;
   padding-bottom: 2%;

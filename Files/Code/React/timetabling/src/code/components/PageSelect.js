@@ -1,10 +1,10 @@
-import "../CSS/CRUD_class.css";
 import options from "../temp/options";
 import MySelectList from "../components/MySelectList";
+import "./componentStyles.css";
 
 const CRUDPageSelection = (props) => {
   return (
-    <div className="base-select">
+    <div className="CRUD-page-selection">
       <MySelectList
         options={options.CRUD}
         newPlaceHolder="Selecionar CRUD"

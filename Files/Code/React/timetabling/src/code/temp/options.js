@@ -65,11 +65,11 @@ const options = {
     { label: "Tang", value: "Tang" },
   ],
   roomCodes: [
-    { label: "105", value: "P5" },
-    { label: "106-A", value: "CCT" },
-    { label: "106-B", value: "P5" },
-    { label: "107", value: "P5" },
-    { label: "109", value: "CCTA" },
+    { label: "P5", value: "105" },
+    { label: "CCT", value: "106-A" },
+    { label: "P5", value: "106-B" },
+    { label: "P5", value: "107" },
+    { label: "CCTA", value: "109" },
   ],
   roomProps: [
     { label: "Monitor", value: "monitor" },

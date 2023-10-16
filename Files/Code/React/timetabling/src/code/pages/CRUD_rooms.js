@@ -1,29 +1,8 @@
 import "../CSS/CRUD_rooms.css";
-import Select from "react-select";
 import options from "../temp/options";
 import assets from "../../assets/imagesImport";
 import CRUDPageSelection from "../components/PageSelect";
-
-const MyLabeledSelectList = (props) => {
-  return (
-    <Select
-      placeholder={props.newPlaceHolder}
-      options={props.options}
-      isMulti={props.isMulti}
-      getOptionLabel={(option) => `${option.value}: ${option.label}`}
-    />
-  );
-};
-
-const MySelectList = (props) => {
-  return (
-    <Select
-      placeholder={props.newPlaceHolder}
-      options={props.options}
-      isMulti={props.isMulti}
-    />
-  );
-};
+import MySelectList from "../components/MySelectList";
 
 function CRUDrooms() {
   return (
@@ -32,10 +11,11 @@ function CRUDrooms() {
         <CRUDPageSelection defaultValue={options.CRUD[1]} />
         <div className="CRUD-outro">
           <div className="CRUD-properties">
-            <MyLabeledSelectList
+            <MySelectList
               newPlaceHolder="Sala"
               options={options.roomCodes}
               isMulti={false}
+              isLabeled={true}
             />
             <input
               required={true}

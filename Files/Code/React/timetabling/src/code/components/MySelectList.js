@@ -1,14 +1,17 @@
 import Select from "react-select";
-import "../CSS/CRUD_class.css";
-// import "./CRUD_class.css";
+import "./componentStyles.css";
 
 const MySelectList = (props) => {
   return (
     <Select
-      className="SelectListBase"
-      options={props.options}
       placeholder={props.newPlaceHolder}
+      options={props.options}
+      isMulti={props.isMulti}
+      className="SelectList-base"
       defaultValue={props.defaultValue}
+      getOptionLabel={(option) =>
+        props.isLabeled ? `${option.value}: ${option.label}` : `${option.label}`
+      }
     />
   );
 };
