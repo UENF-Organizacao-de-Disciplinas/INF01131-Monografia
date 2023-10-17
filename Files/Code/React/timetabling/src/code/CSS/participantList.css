@@ -7,6 +7,8 @@
     border: 1px solid #dee2e6;
     border-top-left-radius: 40px;
     border-bottom-right-radius: 40px;
+
+    background-color: #296323;
 }
 
 .participants-title {
@@ -14,12 +16,12 @@
     flex-direction: row;
     align-self: center;
     font-weight: 700;
-    color: #343a40;
+    color: #000000;
 }
 
 .participants-number {
     font-size: 1.5em;
-    color: #6c757d;
+    color: #18191b;
     margin-right: 1em;
 }
 
