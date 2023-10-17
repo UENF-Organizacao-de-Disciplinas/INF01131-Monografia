@@ -1,10 +1,10 @@
 import "../CSS/CRUD_class.css";
-import "../CSS/participantList.css";
 import "../CSS/defaultStyle.css";
+import "../CSS/participantList.css";
 import options from "../temp/options";
 import assets from "../../assets/imagesImport";
-import CRUDPageSelection from "../components/PageSelect";
 import MySelectList from "../components/MySelectList";
+import CRUDPageSelection from "../components/PageSelect";
 
 const Timeperiod = () => {
   return (
@@ -33,25 +33,13 @@ const Timeperiod = () => {
   );
 };
 
-const name = () => {
-  var lista = [];
-  for (let i = 0; i < options.students.length; i++) {
-    const element = options.students[i];
-    lista.push(
-      <div className="participants-participant">
-        {element.value}: {element.label}
-      </div>
-    );
-  }
-  return lista;
-};
-
 const CRUDParticipants = () => {
   return (
     <div className="participants-container">
       <div className="participants-title">
         <div className="participants-number">{options.students.length}</div>
         <div className="participants-icon">
+          {/* Something went wrong here */}
           <img
             className="participants-icon"
             src={assets.icons.students}
@@ -60,32 +48,15 @@ const CRUDParticipants = () => {
         </div>
       </div>
       <div className="participants-list">
-        {/* Make a for loop here later */}
-        {name}
-        <div className="participants-participant">
-          {options.students[0].value}: {options.students[0].label}
-        </div>
-        <div className="participants-participant">
-          {options.students[1].value}: {options.students[1].label}
-        </div>
-        <div className="participants-participant">
-          {options.students[2].value}: {options.students[2].label}
-        </div>
-        <div className="participants-participant">
-          {options.students[3].value}: {options.students[3].label}
-        </div>
-        <div className="participants-participant">
-          {options.students[4].value}: {options.students[4].label}
-        </div>
-        <div className="participants-participant">
-          {options.students[5].value}: {options.students[5].label}
-        </div>
-        <div className="participants-participant">
-          {options.students[6].value}: {options.students[6].label}
-        </div>
-        <div className="participants-participant">
-          {options.students[7].value}: {options.students[7].label}
-        </div>
+        <ul>
+          {options.students.map((student) => (
+            <li key={student.value}>
+              <t className="participants-participant">
+                {student.value}: {student.label}
+              </t>
+            </li>
+          ))}
+        </ul>
       </div>
     </div>
   );
