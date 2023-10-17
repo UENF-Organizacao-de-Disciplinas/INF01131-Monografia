@@ -1,7 +1,8 @@
 import React from "react";
 import ReactDOM from "react-dom/client";
 import "./index.css";
-import App from "./code/routingWeb";
+import App from "./code/routing3";
+// import App from "./code/routingWeb";
 // import Routing from "./code/routing";
 // import MainPage from "./code/pages/mainpage";
 // import MainCRUD from "./code/pages/CRUD_main";
