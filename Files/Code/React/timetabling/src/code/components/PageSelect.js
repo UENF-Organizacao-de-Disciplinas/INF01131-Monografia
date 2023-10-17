@@ -1,5 +1,5 @@
 import options from "../temp/options";
-import MySelectList from "../components/MySelectList";
+import MySelectList from "./MySelectList";
 import "./componentStyles.css";
 
 const CRUDPageSelection = (props) => {

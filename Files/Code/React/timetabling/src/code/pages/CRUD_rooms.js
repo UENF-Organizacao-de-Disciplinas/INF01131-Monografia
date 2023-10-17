@@ -1,13 +1,14 @@
 import "../CSS/CRUD_rooms.css";
-import options from "../temp/options";
+import "../CSS/defaultStyle.css";
 import assets from "../../assets/imagesImport";
-import CRUDPageSelection from "../components/PageSelect";
+import options from "../temp/options";
 import MySelectList from "../components/MySelectList";
+import CRUDPageSelection from "../components/PageSelect";
 
 function CRUDrooms() {
   return (
     <div className="background">
-      <div className="contain-components">
+      <div className="CRUD-contain-components">
         <CRUDPageSelection defaultValue={options.CRUD[1]} />
         <div className="CRUD-outro">
           <div className="CRUD-properties">

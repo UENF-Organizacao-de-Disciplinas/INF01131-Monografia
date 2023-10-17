@@ -1,13 +1,14 @@
 import "../CSS/CRUD_professors.css";
+import "../CSS/defaultStyle.css";
 import options from "../temp/options";
 import assets from "../../assets/imagesImport";
-import CRUDPageSelection from "../components/PageSelect";
 import MySelectList from "../components/MySelectList";
+import CRUDPageSelection from "../components/PageSelect";
 
 function CRUDprofessors() {
   return (
     <div className="background">
-      <div className="contain-components">
+      <div className="CRUD-contain-components">
         <CRUDPageSelection defaultValue={options.CRUD[3]} />
         <div className="CRUD-outro">
           <div className="CRUD-docentes-properties">

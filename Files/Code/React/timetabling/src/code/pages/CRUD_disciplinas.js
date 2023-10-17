@@ -1,4 +1,5 @@
 import "../CSS/CRUD_disciplinas.css";
+import "../CSS/defaultStyle.css";
 import options from "../temp/options";
 import CRUDPageSelection from "../components/PageSelect";
 import MySelectList from "../components/MySelectList";
@@ -6,7 +7,7 @@ import MySelectList from "../components/MySelectList";
 function CRUDDisciplinas() {
   return (
     <div className="background">
-      <div className="contain-components">
+      <div className="CRUD-contain-components">
         <CRUDPageSelection defaultValue={options.CRUD[5]} />
         <div className="CRUD-subjects">
           <MySelectList

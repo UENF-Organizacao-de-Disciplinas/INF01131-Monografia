@@ -1,5 +1,6 @@
 import "../CSS/CRUD_class.css";
 import "../CSS/participantList.css";
+import "../CSS/defaultStyle.css";
 import options from "../temp/options";
 import assets from "../../assets/imagesImport";
 import CRUDPageSelection from "../components/PageSelect";
