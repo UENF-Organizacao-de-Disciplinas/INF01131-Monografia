@@ -8,7 +8,7 @@ function MainCRUD() {
   return (
     <div className="background">
       <div className="CRUD-contain-components">
-        <CRUDPageSelection defaultValue={options.CRUD[0]} />
+        <CRUDPageSelection defaultValue={options.CRUD.crud} />
         <img className="CS-grid-image" src={assets.gridCS} alt="Logo" />
       </div>
     </div>

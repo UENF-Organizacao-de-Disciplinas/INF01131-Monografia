@@ -65,7 +65,7 @@ const CRUDParticipants = () => {
 function CRUDclass() {
   return (
     <div className="background">
-      <CRUDPageSelection defaultValue={options.CRUD[2]} />
+      <CRUDPageSelection defaultValue={options.CRUD.crud_turmas} />
       <div className="CRUD-lateral">
         <div className="CRUD-contain-components">
           <div className="CRUD-Class-properties">

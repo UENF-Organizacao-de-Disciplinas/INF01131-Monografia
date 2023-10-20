@@ -8,7 +8,7 @@ function CRUDDisciplinas() {
   return (
     <div className="background">
       <div className="CRUD-contain-components">
-        <CRUDPageSelection defaultValue={options.CRUD[5]} />
+        <CRUDPageSelection defaultValue={options.CRUD.crud_disciplinas} />
         <div className="CRUD-subjects">
           <MySelectList
             isLabeled={true}

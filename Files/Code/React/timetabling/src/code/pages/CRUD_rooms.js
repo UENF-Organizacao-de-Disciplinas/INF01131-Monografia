@@ -9,7 +9,7 @@ function CRUDrooms() {
   return (
     <div className="background">
       <div className="CRUD-contain-components">
-        <CRUDPageSelection defaultValue={options.CRUD[1]} />
+        <CRUDPageSelection defaultValue={options.CRUD.crud_salas} />
         <div className="CRUD-outro">
           <div className="CRUD-properties">
             <MySelectList

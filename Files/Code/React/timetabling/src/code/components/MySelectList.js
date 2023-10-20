@@ -9,6 +9,7 @@ const MySelectList = (props) => {
       isMulti={props.isMulti}
       className="SelectList-base"
       defaultValue={props.defaultValue}
+      formatOptionLabel={props.formatOptionLabel}
       getOptionLabel={(option) =>
         props.isLabeled ? `${option.value}: ${option.label}` : `${option.label}`
       }

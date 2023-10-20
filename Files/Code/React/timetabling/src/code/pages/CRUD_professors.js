@@ -9,7 +9,7 @@ function CRUDprofessors() {
   return (
     <div className="background">
       <div className="CRUD-contain-components">
-        <CRUDPageSelection defaultValue={options.CRUD[3]} />
+        <CRUDPageSelection defaultValue={options.CRUD.crud_professores} />
         <div className="CRUD-outro">
           <div className="CRUD-docentes-properties">
             <MySelectList

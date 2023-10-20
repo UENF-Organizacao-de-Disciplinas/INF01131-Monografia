@@ -7,7 +7,7 @@ function MainPage() {
   return (
     <div className="background">
       <div className="CRUD-contain-components">
-        <CRUDPageSelection defaultValue={options.CRUD[6]} />
+        <CRUDPageSelection defaultValue={options.CRUD.main} />
         <h1 className="whiteColor">Welcome to my app!</h1>
         <p className="whiteColor">This is the main page.</p>
       </div>

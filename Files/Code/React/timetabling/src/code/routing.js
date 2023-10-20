@@ -1,30 +1,48 @@
-import React from "react";
-import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
+import { Routes, Route, BrowserRouter } from "react-router-dom";
+import options from "./temp/options";
 
-import MainCRUD from "./pages/CRUD_main";
+// Page imports
 import CRUDdisciplinas from "./pages/CRUD_disciplinas";
 import CRUDprofessors from "./pages/CRUD_professors";
-import CRUDrooms from "./pages/CRUD_rooms";
 import CRUDstudents from "./pages/CRUD_students";
+import CRUDrooms from "./pages/CRUD_rooms";
 import CRUDclass from "./pages/CRUD_class";
+import MainCRUD from "./pages/CRUD_main";
 import MainPage from "./pages/mainpage";
+import NoMatch from "./pages/NoPage";
 
-const Routing = () => {
+const MyRouting = () => {
   return (
-    <Router>
+    <BrowserRouter>
+      {/* <Navigation /> */}
       <Routes>
-        <Route exact path="/" element={<MainPage />} />
-        <Route path="CRUD" element={<MainCRUD />}>
-          <Route path="disciplinas" element={<CRUDdisciplinas />} />
-          <Route path="docentes" element={<CRUDprofessors />} />
-          <Route path="salas" element={<CRUDrooms />} />
-          <Route path="alunos" element={<CRUDstudents />} />
-          <Route path="turmas" element={<CRUDclass />} />
-        </Route>
-        {/* <Route component={NotFound} /> */}
+        <Route index element={<MainPage />} />
+        <Route path={options.CRUD.crud.url_path} element={<MainCRUD />} />
+        <Route
+          path={options.CRUD.crud_salas.url_path}
+          element={<CRUDrooms />}
+        />
+        <Route
+          path={options.CRUD.crud_turmas.url_path}
+          element={<CRUDclass />}
+        />
+        <Route
+          path={options.CRUD.crud_alunos.url_path}
+          element={<CRUDstudents />}
+        />
+        <Route
+          path={options.CRUD.crud_professores.url_path}
+          element={<CRUDprofessors />}
+        />
+        <Route
+          path={options.CRUD.crud_disciplinas.url_path}
+          element={<CRUDdisciplinas />}
+        />
+        <Route path={options.CRUD.not_found.url_path} element={<NoMatch />} />
+        <Route path="*" element={<NoMatch />} />
       </Routes>
-    </Router>
+    </BrowserRouter>
   );
 };
 
-export default Routing;
+export default MyRouting;
