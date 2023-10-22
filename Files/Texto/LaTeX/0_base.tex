@@ -1,0 +1,49 @@
+\input{files/tex/structure}
+\input{files/tex/1_capa_e_folha_de_rosto}
+
+\begin{document} % --- Início do documento --- %
+
+\pretextual                 % --- INÍCIO DOS ELEMENTOS PRÉ-TEXTUAIS --- %
+
+\imprimircapa           % Capa
+\imprimirfolhaderosto   % Folha de rosto (o * indica que haverá a ficha bibliográfica)
+
+% \include{files/tex/nao_usados/ficha_catalografica}   % --- FICHA CATALOGRÁFICA --- % NÃO DEVE SER USADO
+% \include{files/tex/nao_usados/errata}                % --- ERRATA --- % NÃO HÁ ERRATA
+% \include{files/tex/nao_usados/folha_de_aprovacao}    % --- FOLHA DE APROVAÇÃO --- % REALMENTE NECESSÁRIO?
+% \include{files/tex/nao_usados/dedicatoria}           % --- DEDICATÓRIA --- % REALMENTE NECESSÁRIO?
+% \include{files/tex/nao_usados/agradecimentos}        % --- AGRADECIMENTOS --- % REALMENTE NECESSÁRIO?
+% \include{files/tex/nao_usados/epigrafe}              % --- EPÍGRAFE --- % REALMENTE NECESSÁRIO?
+\include{files/tex/2_lista_de_ilustracoes}            % --- inserir lista de ilustrações --- % NÃO USADO
+% \include{files/tex/nao_usados/siglas}               % --- inserir lista de abreviaturas e siglas --- % NÃO USADO
+% --- inserir lista de símbolos --- % NÃO USADO
+% --- inserir o sumario --- %
+
+% \include{files/tex/2_resumo}                % --- RESUMOS --- %
+% \include{files/tex/3_abstract}              % --- ABSTRACT --- %
+% \include{files/tex/4_lista_de_tabelas}                % --- inserir lista de tabelas --- %
+\include{files/tex/5_sumario}
+
+\textual                                        % --- INÍCIO DOS ELEMENTOS TEXTUAIS --- %
+
+\include{files/tex/6_introducao}
+\include{files/tex/7_contexto}
+\include{files/tex/8_modelagem}
+
+% \include{files/tex/7_revisao_da_literatura}
+% \include{files/tex/8_objetivos}
+% \include{files/tex/9_metodologia}
+% \include{files/tex/10_cronograma}
+
+% \include{files/tex/nao_usados/referenciais_teoricos} % NÃO USADO
+% \include{files/tex/nao_usados/resultados}            % NÃO USADO
+% \include{files/tex/nao_usados/conclusao}             % --- CONCLUSÃO --- % NÃO USADO
+
+\postextual                                     % --- INÍCIO DOS ELEMENTOS PÓS-TEXTUAIS --- %
+
+\bibliography{files/referencias}      % --- Referências bibliográficas --- %
+% \glossary                                 % --- Glossário --- % NÃO USADO
+% \include{files/tex/nao_usados/apendices}             % --- Inicia os apêndices --- % NÃO USADO
+% \include{files/tex/nao_usados/indice_remissivo}      % --- INDICE REMISSIVO --- %
+
+\end{document}
