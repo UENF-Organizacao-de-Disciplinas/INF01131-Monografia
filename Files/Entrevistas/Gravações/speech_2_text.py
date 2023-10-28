@@ -1,3 +1,5 @@
+""" Speech 2 text """
+
 from google.cloud import speech_v1p1beta1 as speech
 client = speech.SpeechClient()
 
@@ -12,3 +14,5 @@ response = client.recognize(config=config, audio=audio)
 
 for result in response.results:
     print("Transcript: {}".format(result.alternatives[0].transcript))
+
+
