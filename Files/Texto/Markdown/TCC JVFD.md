@@ -462,6 +462,12 @@ Com isso, entramos também no ramo da Interação Homem-Máquina, ramo abordado 
 % - Falar sobre técnicas existentes e quem já fez. Tipo o que aquele artigo sem DOI fez
 -->
 
+### 2.4. Projetos anteriores
+
+### 2.4.1. Rodrigo
+
+### 2.4.2. Sânya
+
 ## 3. Modelagem geral do sistema
 
 <!--
@@ -529,3 +535,75 @@ O sistema final seguirá uma dinâmica similar à que foi ilustrada por \cite{be
 -->
 
 A Figura \ref{fig:sistema} apresenta o comportamento geral do sistema, como seus diferentes segmentos interagem entre si e de que forma o usuário interage com o mesmo. O usuário poderá ajustar os objetivos da otimização e suas restrições, elas serão utilizadas nos métodos de otimização. Estes métodos serão utilizados para se alcançar soluções para estes critérios, as melhores serão então armazenadas. Em posso destes dados, a aplicação apresentará visualmente estas informações ao usuário, permitindo que ele interaja dinamicamente a fim de alcançar seus objetivos.
+
+## 4. Estrutura Organizacional
+
+## 4. Desenvolvimento
+
+### 4.1. Pré desenvolvimento
+
+- Projeto pessoal: Andamento dos alunos
+
+Como interesse próprio, cogitou-se o desenvolvimento de uma plataforma onde se pudesse ver em que ponto os alunos se encontram em relação ao andamento de seus cursos. Para isso, seria necessária a obtenção dos dados dos alunos, seja por parte dos mesmos, do coordenador ou por integração com o sistema acadêmico. Com estes dados, seria possível criar uma interface que mostrasse o andamento dos alunos, quais matérias já foram cursadas, quais estão sendo cursadas e quais ainda faltam. Além disso, seria possível mostrar quais matérias são pré-requisitos para outras. Assim, o aluno e a coordenação poderia ter uma visão geral de seu andamento e de quais matérias ele precisará cursar para se formar. Infelizmente esse projeto não saiu do mundo das ideias. Entretanto, lá permaneceu sendo maturado.
+
+- Projeto pessoal: Cálculo de demanda
+
+Ao longo dos semestres, foi percebido que durante o intervalo entre-semestres, os alunos precisam se inscrever nas matérias que desejam cursar no semestre seguinte. Para isso, é necessário que o coordenador saiba quantos alunos estão interessados em cada matéria para que ele possa definir quantas turmas serão abertas. Para isso, o coordenador dispõe de algumas alternativas como estimar quantos alunos se inscreverão em cada disciplina, checar manualmente no sistema acadêmico quais alunos podem fazer cada matéri, ou então obter diretamente dos alunos através de um formulário em quais disciplinas cada um dos alunos tem a intenção de cursar. Entretanto, todas essas alternativas são trabalhosas e propensas a erros. Assim, foi pensado em uma forma de automatizar esse processo
+
+Para este fim, foi elaborado um código em [Python][LinkPython] que atualmente [se encontra no GitHub][LinkRepoDemanda]. Este código tem como entrada os extratos de matrícula dos alunos e como saída uma lista de disciplinas e a quantidade de alunos que estão matriculados em cada uma delas.
+
+[LinkPython]: https://www.python.org/
+[LinkRepoDemanda]: https://github.com/jvfd3/university_demand
+
+```python
+
+'''Obter demanda por extratos pdf'''
+import code_1_set_working_directory     as swd
+import code_2_get_pdf_list              as gpl
+import code_3_get_string_from_pdf       as gsp
+import code_4_structure_data_from_text  as sdt
+import code_5_filter_structured_data    as fsd
+import code_6_get_demand_list           as gdl
+import code_7_merge_demands             as mgd
+import code_8_output_demand_as_txt      as odt
+
+swd.set_cwd()
+pdf_path_list           = gpl.get_pdf_list()
+text_list               = gsp.get_pdf_text(pdf_path_list)
+structured_data_list    = sdt.structure_data(text_list)
+approved_code_list      = fsd.get_approved_codes(structured_data_list)
+demand_list             = gdl.get_demand_list(approved_code_list)
+demand_and_values_list  = mgd.get_merged_demands(demand_list)
+odt.output_to_txt(demand_and_values_list)
+```
+
+Este código foi desenvolvido em 8 etapas, cada uma com um arquivo separado. Para alcançar a lista das demandas, é necessário primeiro obter a lista dos arquivos pdf que serão processados, em seguida extrair seus dados com a biblioteca PDFminer, estruturar os dados obtidos, filtrar os dados estruturados, obter a demanda de cada disciplina, juntar as demandas de cada disciplina e salvar os dados obtidos em um arquivo txt.
+
+Embora o código cumpra com seu objetivo, apresenta algumas características limitantes. A primeira é que os pdfs precisam ser obtidos manualmente, um por um, pelo coordenador, sendo ela por si só uma tarefa extenuante, o que não é desejado. Além disso, o seu uso não é muito intuitivo, sendo necessário que o usuário lide com o prompt de comando e instale as dependências necessárias, o que acaba trazendo uma dificuldade a mais ao usuário. O código também apresenta limitações por sistema operacional, não sendo garantido o seu funcionamento em sistemas operacionais diferentes do Windows.
+
+Com estes empecilhos, o código acabou abandonado, visto que apesar de útil, não era prático o suficiente para ser utilizado.
+
+### 4.2. Entrevistas
+
+## 4.1. Estrutura organizacional
+
+Para que se possa entender melhor o problema, é necessário que se entenda a estrutura organizacional da UENF disposta no [Estatuto da UENF][LinkEstatutoUENF]. A Universidade Estadual do Norte Fluminense Darcy Ribeiro (UENF) é dividida em centros, cada centro é dividido em departamentos, cada departamento é dividido em cursos e cada curso é dividido em disciplinas. Cada disciplina é ministrada por um professor e ocorre em uma sala. Cada disciplina tem uma quantidade de alunos que a cursam. Cada disciplina tem uma quantidade de créditos que ela vale. Cada disciplina tem uma quantidade de horas que ela deve ser ministrada. Cada disciplina tem uma quantidade de aulas que ela deve ter por semana. Cada disciplina tem uma quantidade de aulas que ela deve ter por dia. Cada disciplina tem uma quantidade de aulas que ela deve ter por turno. Cada disciplina tem uma quantidade de aulas que ela deve ter por período. Cada disciplina tem uma quantidade de aulas que ela deve ter por semestre. Cada disciplina tem uma quantidade de aulas que ela deve ter por ano. Cada disciplina tem uma quantidade de aulas que ela deve ter por curso. Cada disciplina tem uma quantidade de aulas que ela deve ter por professor. Cada disciplina tem uma quantidade de aulas que ela deve ter por sala. Cada disciplina tem uma quantidade de aulas que ela deve ter por aluno. Cada disciplina tem uma quantidade de aulas que ela deve
+
+[LinkEstatutoUENF]: https://www.uenf.br/UENF_ARQUIVOS/Downloads/REITORIA_1360_1101117875.pdf
+
+### 4.3. Explicação do processo
+
+Dentro do contexto da universidade, o problema de agendamento se torna mais complexo pois um dos recursos que está relacionado com o problema é a existência de prazos em cada uma das etapas, assim fazendo com que uma solução ideal seja aquela que é capaz de ser executada dentro do prazo estipulado, mesmo que não seja ótima.
+
+- Sequência de ações
+  1. Estimativa
+  2. Professores designados
+  3. Matrícula
+  4. Últimas mudanças
+  5. Inclusão e exclusão
+
+Precisa verificar manualmente quantos alunos foram aprovados em cada matéria. Ele, então, precisa fazer uma estimativa de quantos alunos irão se inscrever nas matérias que ainda não foram abertas. Com isso, ele pode definir quantas turmas serão abertas para cada matéria. Entretanto, esse processo é muito trabalhoso e propenso a erros. Assim, foi pensado em uma forma de automatizar esse processo. Para isso, seria necessário obter os dados de quantos alunos estão inscritos em cada matéria e então calcular a demanda de cada uma. Com isso, o coordenador poderia ter uma visão geral de quantas turmas serão necessárias para cada matéria. Infelizmente esse projeto também não saiu do mundo das ideias. Entretanto, lá permaneceu sendo maturado.
+
+### 4.4 Solução Organizacional
+
+Durante as entrevistas, uma alternativa válida para a amenização da problemática abordada é a alteração da regulamentação da UENF que define férias de duas semanas entre os semestres. Caso essa regulamentação seja alterada para que as férias sejam de duas semanas, o problema de agendamento teria maior tempo para ser resolvido, assim fazendo com que a solução ótima seja provável de ser alcançada.
