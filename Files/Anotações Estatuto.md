@@ -139,8 +139,7 @@ graph LR
 
 ```
 
-CAPÍTULO I
-DA ADMINISTRAÇÃO SUPERIOR
+CAPÍTULO I: DA ADMINISTRAÇÃO SUPERIOR
 Art. 10 - A administração superior tem como órgão de consulta o Conselho Consultivo; como órgão supervisor, auditor e indutor na captação de recursos, o Conselho Curador; como órgãos deliberativos o Conselho Universitário, o Colegiado Acadêmico, a Câmara de Graduação, a Câmara de Pesquisa e Pós- Graduação e a Câmara de Extensão e Assuntos Comunitários; como órgãos executivos, a Reitoria, o Colegiado executivo, as Pró-Reitorias, a Diretoria Geral Administrativa e a Diretoria de administração de Projetos.
 
 § 3o - Os representantes dos Chefes de Laboratórios são eleitos por seus pares dos
@@ -157,3 +156,41 @@ Universidade;
 X - aprovar o calendário escolar;
 
 Categorias
+
+Art.20 - São atribuições do Reitor, com as responsabilidades definidas em Lei:
+XV - expedir títulos honoríficos e dignidades, na forma prevista neste Estatuto;
+
+DOS ÓRGÃOS AUXILIARES DA REITORIA E DOS ÓRGÃOS SUPLEMENTARES
+Art. 28 - À Secretaria Acadêmica, órgão auxiliar da Reitoria, compete:
+I - coordenar a divulgação do horário escolar dos vários cursos da UENF, de modo a otimizar os recursos humanos, ampliar as opções de disciplinas para os alunos e tornar acessíveis os dados escolares;
+II - centralizar os serviços de registro da vida escolar dos alunos, compreendendo inscrição, admissão, matrícula, créditos, opções, transferências, promoções, graduações e preparação dos respectivos diplomas, dentro das normas estabelecidas;
+
+Art. 32 - A administração do Centro é da competência do Diretor e de seu respectivo Conselho.
+
+Art. 33 - O Conselho de Centro é constituído dos seguintes membros:
+I - Diretor do Centro, como seu presidente;
+II - Chefes de Laboratório;
+
+CAPÍTULO II - DA ADMINISTRAÇÃO DOS CENTROS, DOS LABORATÓRIOS E DAS COORDENAÇÕES DE CURSO
+SEÇÃO I - DOS CENTROS
+
+Art. 34 - São atribuições do Conselho de Centro:
+XVII- designar, semestralmente, os professores responsáveis pelas disciplinas dos Cursos de Graduação e Programas de Pós-Graduação, ouvidos os respectivos Laboratórios, os Colegiados de Curso e Comissões de Coordenação;
+
+SEÇÃO II - DOS LABORATÓRIOS
+
+Art. 37 – O Laboratório, que deve ter um número mínimo de 5 professores, é a unidade básica da estrutura universitária para todos os efeitos de organização administrativa, didático-científica, distribuição de pessoal e de representação nos órgãos colegiados da Universidade.
+§ 1o – O Laboratório é responsável pelo planejamento, distribuição e execução das tarefas que lhe são peculiares em todos os níveis relativos ao ensino, pesquisa e extensão, na forma destas Normas.
+§ 2o - Cada Laboratório pode ser integrado por vários setores específicos, em número variável, conforme se apresente a necessidade de constituição.
+§ 3o - Cada Setor é coordenado por um professor designado pelo Chefe do respectivo Laboratório.
+
+Art. 39 – Cada Laboratório é chefiado por um docente da UENF, escolhido pelos seus pares, Professores lotados em regime de tempo integral no respectivo Laboratório, com notória experiência acadêmica, conforme estabelecido no Regimento Interno, entre os que tiverem sua candidatura homologada pelo Conselho de Centro.
+
+SEÇÃO III
+DAS COORDENAÇÕES DOS CURSOS
+
+TÍTULO III: DO REGIME ACADÊMICO
+CAPÍTULO I: DOS CURSOS, CURRÍCULOS E DISCIPLINAS
+SEÇÃO II: DO REGIME ESCOLAR
+
+Art. 63 - Os calendários dos cursos de graduação e programas de pós- graduação e extensão são aprovados pelas correspondentes Câmaras, com observância do calendário da Universidade.
