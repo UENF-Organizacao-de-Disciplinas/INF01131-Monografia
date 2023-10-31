@@ -1,5 +1,18 @@
 # TCC
 
+## Capa
+
+**Autor:** João Vítor Fernandes Dias
+**Título:** _Timetabling Problem_: desafios no desenvolvimento de um sistema de decisão voltado ao problema de organização de grade horária do ensino superior
+**Local:** Campos dos Goytacazes, RJ
+\local{}
+
+**Orientador:** Prof. Dr. Fermín Alfredo Tang Montané
+**Instituição:** Universidade Estadual do Norte Fluminense Darcy Ribeiro
+**Curso:** Ciência da Computação
+
+**Preambulo:** Trabalho de Conclusão de Curso apresentado ao Curso de Graduação em Ciência da Computação da Universidade Estadual do Norte Fluminense Darcy Ribeiro, sob orientação do Prof. Dr. Fermín Alfredo Tang Montané
+
 ## 1. Introdução
 
 <!--
