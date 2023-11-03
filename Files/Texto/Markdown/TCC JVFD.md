@@ -318,7 +318,7 @@ Este trabalho abordará capítulos que de forma resumida lidam com os seguintes 
 - O Capítulo 4 de resultados e discussões demonstra o software final utilizado, apresenta comparações das qualidades entre grades horárias geradas pelo software e as que foram utilizadas nos últimos semestres. Apresenta também a pesquisa de satisfação realizada com os \textit{stakeholders} entrevistados no início do desenvolvimento.
 - O Capítulo 5 da conclusão e trabalhos futuros finaliza o presente trabalho com os pensamentos gerais sobre a pesquisa e desenvolvimento, apresentando as características não abordadas e indicando caminhos a serem seguidos por pesquisadores posteriormente.
 
-## 2. Contexto do *Timetabling Problem* no meio acadêmico
+## 2. Contexto do _Timetabling Problem_ no meio acadêmico
 
 <!-- \chapter{Contexto acadêmico do \textit{Timetabling Problem}} -->
 
@@ -549,9 +549,86 @@ O sistema final seguirá uma dinâmica similar à que foi ilustrada por \cite{be
 
 A Figura \ref{fig:sistema} apresenta o comportamento geral do sistema, como seus diferentes segmentos interagem entre si e de que forma o usuário interage com o mesmo. O usuário poderá ajustar os objetivos da otimização e suas restrições, elas serão utilizadas nos métodos de otimização. Estes métodos serão utilizados para se alcançar soluções para estes critérios, as melhores serão então armazenadas. Em posso destes dados, a aplicação apresentará visualmente estas informações ao usuário, permitindo que ele interaja dinamicamente a fim de alcançar seus objetivos.
 
-## 4. Estrutura Organizacional
+## 4. Estrutura organizacional <!-- WIP -->
 
-## 4. Desenvolvimento
+Para que se possa entender melhor o problema, é necessário que se entenda a estrutura organizacional da UENF disposta no [Estatuto da UENF][LinkEstatutoUENF]. A [Universidade Estadual do Norte Fluminense Darcy Ribeiro (UENF)][LinkUENF], ainda que limitando ao que convém neste trabalho.
+
+[LinkEstatutoUENF]: https://www.uenf.br/UENF_ARQUIVOS/Downloads/REITORIA_1360_1101117875.pdf
+[LinkUENF]: https://uenf.br/portal/
+
+### 4.1. A UENF e seu estatuto <!-- Provavelmente eu deveria adicionar informações sobre a secretaria acadêmica --> <!-- Precisa de revisão --> <!-- Sinto que falta falar sobre secretaria acadêmica e Conselho de Centro -->
+
+Segundo o estatuto, a UENF compreende:
+
+- órgãos da Administração Superior de política, gestão e supervisão;
+- unidades universitárias de ensino, pesquisa e extensão;
+- órgãos e serviços especiais, destinados a auxiliar na administração e a suplementar as atividades de ensino, pesquisa, extensão e apoio técnico.
+
+Quanto aos órgãos da Administração Superior devemos enfocar o órgão executivo, constituído unicamente pela reitoria, cujos órgãos auxiliares englobam a Secretaria Acadêmica, que por sua vez tem como algumas de suas atribuições as seguintes:
+
+> I - coordenar a divulgação do horário escolar dos vários cursos da UENF, de modo a otimizar os recursos humanos, ampliar as opções de disciplinas para os alunos e tornar acessíveis os dados escolares;
+>
+> II - **centralizar os serviços de registro da vida escolar dos alunos**, compreendendo **inscrição**, admissão, **matrícula**, **créditos**, **opções**, transferências, **promoções**, graduações e preparação dos respectivos diplomas, dentro das normas estabelecidas;
+
+Já quanto as unidades universitárias de ensino, temos no estatuto que:
+
+> As unidades universitárias de ensino, pesquisa e extensão, definidas por áreas de conhecimento, são constituídas em Centros, que por sua vez congregam Laboratórios afins.
+>
+> O Laboratório é a menor parte da estrutura universitária para todos os efeitos de organização administrativa, didático-científica, distribuição de pessoal e de representação nos órgãos colegiados da UENF
+
+A administração do Centro é da competência do Diretor e seu Conselho. Os Laboratórios, por sua vez, são administrados pelos Chefes de Laboratório.
+
+O Conselho de Centro, tem como uma de suas atribuições:
+
+> XVII- **designar, semestralmente, os professores responsáveis pelas disciplinas dos Cursos de Graduação** e Programas de Pós-Graduação, ouvidos os respectivos Laboratórios, os Colegiados de Curso e Comissões de Coordenação;
+
+Atualmente, segundo o site da UENF, a universidade possui 4 Centros, sendo eles:
+
+- Centro de Ciências do Homem - [CCH][LinkCCH]
+- Centro de Ciência e Tecnologia - [CCT][LinkCCT]
+- Centro de Biociências e Biotecnologia - [CBB][LinkCBB]
+- Centro de Ciências e Tecnologias Agropecuárias - [CCTA][LinkCCTA]
+
+[LinkCCH]: https://uenf.br/
+[LinkCCT]: https://uenf.br/cct/
+[LinkCBB]: https://uenf.br/
+[LinkCCTA]: https://uenf.br/
+
+E também existem 8 laboratórios vinculados ao Centro de Ciência e Tecnologia (CCT) possui 8 laboratórios, sendo eles:
+
+- Laboratório de Meteorologia – [LAMET][LinkLCFIS]
+- Laboratório de Ciências Físicas – [LCFIS][LinkLCMAT]
+- Laboratório de Engenharia Civil – [LECIV][LinkLCQUI]
+- Laboratório de Ciências Químicas – [LCQUI][LinkLECIV]
+- Laboratório de Materiais Avançados – [LAMAV][LinkLENEP]
+- Laboratório de Ciências Matemáticas – [LCMAT][LinkLEPROD]
+- Laboratório de Engenharia de Produção – [LEPROD][LinkLAMAV]
+- Laboratório de Engenharia e Exploração de Petróleo – [LENEP][LinkLAMET]
+
+[LinkLCFIS]: https://uenf.br/cct/administracao/laboratorios/
+[LinkLCMAT]: https://uenf.br/cct/lcmat/
+[LinkLCQUI]: https://uenf.br/cct/administracao/laboratorios/
+[LinkLECIV]: https://uenf.br/cct/administracao/laboratorios/
+[LinkLENEP]: https://uenf.br/cct/administracao/laboratorios/
+[LinkLEPROD]: https://uenf.br/cct/administracao/laboratorios/
+[LinkLAMAV]: https://uenf.br/cct/administracao/laboratorios/
+[LinkLAMET]: https://uenf.br/cct/administracao/laboratorios/
+
+Os Laboratórios englobam os Cursos de Graduação e Pós-Graduação, que são administrados pelos Coordenadores de Curso.
+
+Além disso, o LCMAT mantém dois cursos de graduação e um programa de pós-graduação stricto sensu. Sendo eles:
+
+- [Licenciatura em Matemática][LinkLicMat]
+- [Bacharelado em Ciência da Computação][LinkCC]
+- [Mestrado Profissional em Matemática][LinkMestradoMat] – [PROFMAT][LinkPROFMAT] / [SBM][LinkSBM]
+
+[LinkLicMat]: https://uenf.br/posgraduacao/licenciatura-matematica/
+[LinkCC]: https://cc.uenf.br/
+[LinkMestradoMat]: https://uenf.br/posgraduacao/matematica/apresentacao/
+[LinkPROFMAT]: https://uenf.br/posgraduacao/programas/pos-graduacao-stricto-sensu/
+[LinkSBM]: https://www.profmat-sbm.org.br/
+
+## 5. Desenvolvimento
 
 ### 4.1. Pré desenvolvimento
 
@@ -598,11 +675,17 @@ Com estes empecilhos, o código acabou abandonado, visto que apesar de útil, n�
 
 ### 4.2. Entrevistas
 
-## 4.1. Estrutura organizacional
+Como forma de entender melhor a percepção real daqueles que podem ser diretamente 
 
-Para que se possa entender melhor o problema, é necessário que se entenda a estrutura organizacional da UENF disposta no [Estatuto da UENF][LinkEstatutoUENF]. A Universidade Estadual do Norte Fluminense Darcy Ribeiro (UENF) é dividida em centros, cada centro é dividido em departamentos, cada departamento é dividido em cursos e cada curso é dividido em disciplinas. Cada disciplina é ministrada por um professor e ocorre em uma sala. Cada disciplina tem uma quantidade de alunos que a cursam. Cada disciplina tem uma quantidade de créditos que ela vale. Cada disciplina tem uma quantidade de horas que ela deve ser ministrada. Cada disciplina tem uma quantidade de aulas que ela deve ter por semana. Cada disciplina tem uma quantidade de aulas que ela deve ter por dia. Cada disciplina tem uma quantidade de aulas que ela deve ter por turno. Cada disciplina tem uma quantidade de aulas que ela deve ter por período. Cada disciplina tem uma quantidade de aulas que ela deve ter por semestre. Cada disciplina tem uma quantidade de aulas que ela deve ter por ano. Cada disciplina tem uma quantidade de aulas que ela deve ter por curso. Cada disciplina tem uma quantidade de aulas que ela deve ter por professor. Cada disciplina tem uma quantidade de aulas que ela deve ter por sala. Cada disciplina tem uma quantidade de aulas que ela deve ter por aluno. Cada disciplina tem uma quantidade de aulas que ela deve
+#### 4.2.1. Diretor do CCT - Oscar
 
-[LinkEstatutoUENF]: https://www.uenf.br/UENF_ARQUIVOS/Downloads/REITORIA_1360_1101117875.pdf
+#### 4.2.2. Chefe de Laboratório de Matemática - Annabell
+
+#### 4.2.3. Responsável pela Secretaria Acadêmica - Gustavo
+
+#### 4.2.4. Coordenador de Computação - Tang
+
+## 999. ================================ Não sei onde colocar ================================   <!-- Organizar isso depois -->
 
 ### 4.3. Explicação do processo
 
@@ -620,3 +703,93 @@ Precisa verificar manualmente quantos alunos foram aprovados em cada matéria. E
 ### 4.4 Solução Organizacional
 
 Durante as entrevistas, uma alternativa válida para a amenização da problemática abordada é a alteração da regulamentação da UENF que define férias de duas semanas entre os semestres. Caso essa regulamentação seja alterada para que as férias sejam de duas semanas, o problema de agendamento teria maior tempo para ser resolvido, assim fazendo com que a solução ótima seja provável de ser alcançada.
+
+Art. 28 - À Secretaria Acadêmica, órgão auxiliar da Reitoria, compete: II - elaborar a proposta de calendário escolar, ouvidas as respectivas Câmaras, para aprovação pelo Colegiado Acadêmico
+§ 8o - Compete ao Colegiado Acadêmico: X - aprovar o calendário escolar;
+
+TÍTULO III: DO REGIME ACADÊMICO
+CAPÍTULO I: DOS CURSOS, CURRÍCULOS E DISCIPLINAS
+SEÇÃO II: DO REGIME ESCOLAR
+Art. 63
+
+Os calendários dos cursos de graduação e programas de pós-graduação e extensão são aprovados pelas correspondentes Câmaras, com observância do calendário da Universidade.
+
+### 4.5. Alterações de horários
+
+Segundo as Normas de Graduação:
+
+> Art. 36 As aulas deverão ser ministradas pelo Docente responsável da disciplina nos horários designados pela Coordenação de Curso.
+>
+> § 1º Qualquer alteração de horário/turno após o período de matrícula deverá ter a anuência por escrito de todos os discentes matriculados na turma.
+> § 2º º A alteração de horário das aulas da turma deverá ter a anuência da Coordenação de Curso e a ciência do Chefe do Laboratório responsável pela disciplina.
+
+Então é possível alterar os horários de aula caso desejado.
+
+## Anexo 1
+
+Abaixo se encontram algumas perguntas feitas a discentes da UENF em relação à sua satisfação com a atual distribuição de disciplinas semestrais.
+
+### Introdução
+
+Olá! Desde já agradeço por ceder um pouco do seu tempo para responder a este formulário. Considerando que nosso tempo é valioso, vamos direto ao objetivo:
+
+Me chamo João Vítor Fernandes Dias, estudante de Ciência da Computação na UENF, e estou fazendo minha Monografia. Ela trata sobre a elaboração de um sistema para a coordenação de curso poder analisar mais facilmente quais são as disciplinas que serão disponibilizadas a cada semestre e a quais salas e professores serão atribuídas.
+
+O objetivo é que mais disciplinas possam ser oferecidas em horários que mais alunos possam se inscrever sem haver conflitos com outras disciplinas.
+
+Este formulário tem como objetivo avaliar a sua satisfação em relação a este processo de inscrição semestral nas disciplinas.
+
+### Perguntas
+
+#### Objetivas
+
+- Pessoais
+  - Qual o seu curso?
+  - Em que ano você ingressou na UENF?
+- Vagas
+  - Você já quis entrar em uma disciplina mas ela não tinha vaga?
+  - Você já ficou acordado após meia-noite por medo de não ter vaga para as disciplinas que deseja cursar?
+- Conflitos
+  - Você já se deparou com duas ou mais disciplinas desejadas sendo ofertadas no mesmo horário?
+  - Você já teve que não se inscrever em uma disciplina por causa de conflito de horário?
+- Salas
+  - Você já se sentiu insatisfeito com a sala de aula atribuída a uma disciplina?
+  - Você já teve aula cuja sala não dispunha de cadeiras o suficiente?
+- Opiniões
+  - Você acha que a distribuição de disciplinas semestrais atende às necessidades dos alunos?
+  - Você acha que a universidade deveria oferecer mais horários para as disciplinas mais populares para evitar conflitos de horário?
+
+#### Multipla escolha
+
+- Opiniões
+  - Você acha que a distribuição de disciplinas semestrais é...
+    - Justa: (feita de acordo a atender os desejos da maioria)
+    - Variada: (bem diversa e abrange diversos interesses)
+    - Contínua: (oferecida de forma a ter aulas sequenciais)
+    - Eficiente: (bem sucedida em atender aos desejos dos alunos)
+    - Distribuída: (bem espaçada ao longo da semana)
+    - Satisfatória: (agradável aos meus desejos pessoais)
+- Como você lida com conflitos de horário entre as disciplinas que deseja cursar?
+  - Escolho a mais difícil
+  - Escolho a mais fácil
+  - Escolho a que tem mais créditos
+  - Escolho a que prefiro
+  - Escolho a que prende mais matérias
+  - Outro
+
+## Anexo 2
+
+Perguntas para professores
+
+Características positivas da distribuição de disciplinas semestrais:
+
+Flexibilidade: Permite aos alunos escolherem disciplinas de acordo com seus interesses e horários.
+Variedade: Oferece uma ampla gama de disciplinas para escolher a cada semestre.
+Atualização: Permite a introdução de novas disciplinas ou atualização de conteúdos existentes de acordo com as tendências atuais.
+Ritmo de aprendizado: Os alunos podem aprender no seu próprio ritmo, escolhendo disciplinas mais difíceis ou mais fáceis dependendo de suas habilidades e carga de trabalho.
+Características negativas da distribuição de disciplinas semestrais:
+
+Sobrecarga: Pode levar a uma sobrecarga de trabalho se os alunos escolherem muitas disciplinas difíceis no mesmo semestre.
+Conflito de horários: Pode haver conflitos de horários entre as disciplinas desejadas.
+Continuidade: Pode haver uma falta de continuidade no aprendizado se as disciplinas relacionadas não forem oferecidas no mesmo semestre.
+Indecisão: A grande variedade de escolhas pode levar à indecisão.
