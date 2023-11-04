@@ -628,6 +628,28 @@ Além disso, o LCMAT mantém dois cursos de graduação e um programa de pós-gr
 [LinkPROFMAT]: https://uenf.br/posgraduacao/programas/pos-graduacao-stricto-sensu/
 [LinkSBM]: https://www.profmat-sbm.org.br/
 
+### 4.2. Progressão usual da criação de grades horárias <!-- Estou com dúvida novamente de qual é a progressão e de quem faz o quê -->
+
+Abaixo está listada a progressão usual da elaboração de grades horárias
+
+1. Período ocorrendo normalmente
+2. Coordenadores enviam para Chefes de Laboratório <!-- ? --> uma demanda estimada de cada uma das disciplinas que serão ofertadas
+3. Chefes de Laboratório enviam para Diretores de Centro a demanda estimada
+4. O Diretor aloca provisoriamente as disciplinas em horários e salas <!-- ? -->
+5. O Coordenador de Curso analisa possíveis mudanças de horários que possam ser mais eficientes na distribuição dos alunos
+6. Dependendo das disponibilidade dos professores, cabendo solicitar a abertura de uma bolsa para docência complementar <!-- Descobrir qual o nome correto para isso -->
+7. O Período letivo acaba
+8. Estima-se mais precisamente a demanda de cada disciplina
+9. Turmas são abertas com a quantidade de vagas de acordo com as demandas estimadas
+10. Alunos se inscrevem
+11. Período de inclusão e exclusão
+12. Período ocorrendo normalmente
+13. Alguns possíveis ajustes finais
+
+Uma das etapas de criação das grades horárias é a coleta de uma demanda esperada. Cada Coordenador faz isso do seu próprio jeito. Uma possibilidade seria analisar quantos alunos costumam reprovar em determinada disciplina pela visualização estatística anterior, somado aos que possivelmente aprovarão na disciplina que é pré-requisito. <!-- Essa parte tá mal escrita -->
+
+Porém, toda essa pesquisa e estimativa é dispendiosa e pode desagradar a alguns coordenadores, ou então gerar estimativas incondizentes com a realidade.
+
 ## 5. Desenvolvimento
 
 ### 4.1. Pré desenvolvimento
@@ -675,55 +697,63 @@ Com estes empecilhos, o código acabou abandonado, visto que apesar de útil, n�
 
 ### 4.2. Entrevistas
 
-Como forma de entender melhor a percepção real daqueles que podem ser diretamente 
+Como forma de entender melhor a percepção real daqueles que recorrentemente lidam com a tarefa de criação da grade horária, diversas entrevistas foram feitas como forma de analisar qualitativamente quais são as opiniões, pedidos, reclamações e pensamentos de diferentes níveis organizacionais da UENF.
 
 #### 4.2.1. Diretor do CCT - Oscar
 
-#### 4.2.2. Chefe de Laboratório de Matemática - Annabell
+O primeiro entrevistado foi o Oscar, atual Diretor do CCT. Ele atualmente estrutura a relação de disciplinas ofertadas pelo CCT em Excel e as publica em formato PDF no [site do CCT][LinkCCTSalas]. Seu trabalho auxilia os Chefes de Laboratório e Coordenadores de Curso a visualizarem quais são as salas disponíveis e em quais horários cada professor está alocado.
 
-#### 4.2.3. Responsável pela Secretaria Acadêmica - Gustavo
+[LinkCCTSalas]: https://uenf.br/cct/secretaria-academica/distribuicao-das-salas-de-aula-do-cct/
 
-#### 4.2.4. Coordenador de Computação - Tang
+Um dos tópicos dialogados, foi quanto às categorias das disciplinas, ou seja, quais características notáveis as disciplinas poderiam ter. Com isso podemos listar as seguintes categorias de disciplinas:
 
-## 999. ================================ Não sei onde colocar ================================   <!-- Organizar isso depois -->
+- Anuais: disciplinas que ocorrem apenas uma vez no ano.
+- Ímpares: disciplinas que são ofertadas no primeiro semestre letivo.
+- Pares: disciplinas que são ofertadas no segundo semestre letivo.
+- De serviço: disciplinas ofertadas para mais de um curso simultaneamente
+- ciclo básico: disciplinas oferecidas para todas as engenharias
+- Repetentes: turmas criadas especialmente para repetentes
 
-### 4.3. Explicação do processo
+As disciplinas ímpares e pares geralmente estão atreladas à expectativa de que os alunos progredirão sequencialmente sem reprovação alguma. Entretanto, caso uma quantidade de alunos considerável de alunos reprove em determinada disciplina, é possível que estes se enquadrem na criação de uma turma especial para repetentes, ou não.
 
-Dentro do contexto da universidade, o problema de agendamento se torna mais complexo pois um dos recursos que está relacionado com o problema é a existência de prazos em cada uma das etapas, assim fazendo com que uma solução ideal seja aquela que é capaz de ser executada dentro do prazo estipulado, mesmo que não seja ótima.
+Uma sugestão de utilidade para o software é a de permitir que as "disciplinas de serviço" sejam fixas, visto que estas são as que têm maior complexidade de manejamento de horário posteriormente, justamente por geralmente abrangerem muitos alunos e de diversos cursos diferentes.
 
-- Sequência de ações
-  1. Estimativa
-  2. Professores designados
-  3. Matrícula
-  4. Últimas mudanças
-  5. Inclusão e exclusão
+Uma outra característica notável é a repetição de atribuições de disciplinas em pares regulares, ou seja, alocadas no mesmo período de horário com um dia de intervalo entre elas. Um exemplo desse tipo de alocação recorrente seria "14 às 16 horas de segunda e quarta feira".
 
-Precisa verificar manualmente quantos alunos foram aprovados em cada matéria. Ele, então, precisa fazer uma estimativa de quantos alunos irão se inscrever nas matérias que ainda não foram abertas. Com isso, ele pode definir quantas turmas serão abertas para cada matéria. Entretanto, esse processo é muito trabalhoso e propenso a erros. Assim, foi pensado em uma forma de automatizar esse processo. Para isso, seria necessário obter os dados de quantos alunos estão inscritos em cada matéria e então calcular a demanda de cada uma. Com isso, o coordenador poderia ter uma visão geral de quantas turmas serão necessárias para cada matéria. Infelizmente esse projeto também não saiu do mundo das ideias. Entretanto, lá permaneceu sendo maturado.
+Com isso, surge a dúvida: há uma preferência ativa por aulas alocadas com este padrão? A resposta dada é que não. O que se mostra como uma restrição a menos na hora de se alocar as turmas.
 
-### 4.4 Solução Organizacional
+Outro caso notável é a existência majoritárias de turmas criadas com dois períodos de duas horas, entretanto existem algumas que fogem deste padrão e possuem três horas de duração. A solução encontrada pelo Diretor é a de colocar esta disciplina começando às 10h, o que faz com que se alonge até as 13h, período geralmente usado pelos estudantes e servidores para se alimentar, e justamente por isso evitando que atrapalhe a distribuição das salas. Outra alternativa é alocar esta turma para as 13h, fazendo com que finalize às 16h, horário em que as disciplinas com duas horas de duração geralmente terminam.
 
-Durante as entrevistas, uma alternativa válida para a amenização da problemática abordada é a alteração da regulamentação da UENF que define férias de duas semanas entre os semestres. Caso essa regulamentação seja alterada para que as férias sejam de duas semanas, o problema de agendamento teria maior tempo para ser resolvido, assim fazendo com que a solução ótima seja provável de ser alcançada.
+Segundo ele, saber a demanda máxima possível seria bom, visto que podem haver casos de solicitações de vagas para disciplinas de serviço que extrapolam a quantidade esperada para a distribuição balanceada dentre os cursos.
 
-Art. 28 - À Secretaria Acadêmica, órgão auxiliar da Reitoria, compete: II - elaborar a proposta de calendário escolar, ouvidas as respectivas Câmaras, para aprovação pelo Colegiado Acadêmico
-§ 8o - Compete ao Colegiado Acadêmico: X - aprovar o calendário escolar;
+Uma outra situação que ocorre é que algumas disciplinas historicamente têm seus horários definidos em um mesmo horário ao longo dos anos. Caso essa alocação seja alterada, ocorre a possibilidade de reclamação por parte dos professores, mesmo que esta alteração seja benéfica para os estudantes. Então por exemplo, os horários de 8h de uma segunda feira e de 16h de sexta feira, não são geralmente desajados pelos professores, mesmo que eles teoricamente tenham disponibilidade de 8 horas diárias.
 
-TÍTULO III: DO REGIME ACADÊMICO
-CAPÍTULO I: DOS CURSOS, CURRÍCULOS E DISCIPLINAS
-SEÇÃO II: DO REGIME ESCOLAR
-Art. 63
+Considerando a quantidade de laborátorios "concorrendo" simultaneamente às vagas, surge a dúvida: há ordem de precedência entre os laboratórios? A resposta para esta pergunta é "não. As vagas são distribuídas com prioridade na ordem de chegada".
 
-Os calendários dos cursos de graduação e programas de pós-graduação e extensão são aprovados pelas correspondentes Câmaras, com observância do calendário da Universidade.
+Algumas outras informações que ele elenca:
 
-### 4.5. Alterações de horários
+- Os períodos ímpares são os piores
+  - Essa opinião pode ser resultado do fato de que os períodos ímpares apresentam um intervalo de tempo para preparo das grades menor do que os períodos pares.
+- As disciplinas básicas são grandes
+  - É esperado que uma grande quantidade de alunos se inscrevam nas disciplinas essenciais e iniciais de seus cursos, sendo boa parte dela relacionada com o conceito das disciplinas de serviço e com o conceito de ciclo básico das engenharias.
+- As disciplinas de serviço devem ser alocadas primeiro
+  - Visto a grande quantidade de conflitos possíveis dentre os diversos cursos, ao alocá-las primeiro, os conflitos passam a ocorrer em turmas com uma quantidade menor de pessoas e/ou que sejam de um mesmo curso.
+- As alterações vão até o final do período
+  - Embora possa parecer que a alocação de turmas finalize após o encerramento do período de inscrição e desinscrição, na prática, a realocação ocorre durante todo o período.
+- Teoricamente matérias de um mesmo período não devem conflitar
+  - Isso se dá segundo a percepção de que a maioria dos alunos está seguindo a mesma linha sequencial de disciplinas, o que muitas das vezes não é a realidade.
 
-Segundo as Normas de Graduação:
+#### 4.2.2. Desenvolvedor do Sistema Acadêmico - Rodrigo
 
-> Art. 36 As aulas deverão ser ministradas pelo Docente responsável da disciplina nos horários designados pela Coordenação de Curso.
->
-> § 1º Qualquer alteração de horário/turno após o período de matrícula deverá ter a anuência por escrito de todos os discentes matriculados na turma.
-> § 2º º A alteração de horário das aulas da turma deverá ter a anuência da Coordenação de Curso e a ciência do Chefe do Laboratório responsável pela disciplina.
+#### 4.2.3. Chefe de Laboratório de Matemática - Annabell
 
-Então é possível alterar os horários de aula caso desejado.
+#### 4.2.4. Responsável pela Secretaria Acadêmica - Gustavo
+
+#### 4.2.5. Coordenador de Computação - Tang
+
+Diferente de como foi respondido pelo Diretor do CCT, para o Coordenador de Computação a alocação de disciplinas em pares se mostra como "didática", sendo ela então preferível, mas não necessariamente vista como obrigatória.
+
+#### 4.2.6. Entendimento geral das entrevistas
 
 ## Anexo 1
 
@@ -777,19 +807,42 @@ Este formulário tem como objetivo avaliar a sua satisfação em relação a est
   - Escolho a que prende mais matérias
   - Outro
 
-## Anexo 2
+## 999. ================================ Não sei onde colocar ================================   <!-- Organizar isso depois -->
 
-Perguntas para professores
+### 4.3. Explicação do processo
 
-Características positivas da distribuição de disciplinas semestrais:
+Dentro do contexto da universidade, o problema de agendamento se torna mais complexo pois um dos recursos que está relacionado com o problema é a existência de prazos em cada uma das etapas, assim fazendo com que uma solução ideal seja aquela que é capaz de ser executada dentro do prazo estipulado, mesmo que não seja ótima.
 
-Flexibilidade: Permite aos alunos escolherem disciplinas de acordo com seus interesses e horários.
-Variedade: Oferece uma ampla gama de disciplinas para escolher a cada semestre.
-Atualização: Permite a introdução de novas disciplinas ou atualização de conteúdos existentes de acordo com as tendências atuais.
-Ritmo de aprendizado: Os alunos podem aprender no seu próprio ritmo, escolhendo disciplinas mais difíceis ou mais fáceis dependendo de suas habilidades e carga de trabalho.
-Características negativas da distribuição de disciplinas semestrais:
+- Sequência de ações
+  1. Estimativa
+  2. Professores designados
+  3. Matrícula
+  4. Últimas mudanças
+  5. Inclusão e exclusão
 
-Sobrecarga: Pode levar a uma sobrecarga de trabalho se os alunos escolherem muitas disciplinas difíceis no mesmo semestre.
-Conflito de horários: Pode haver conflitos de horários entre as disciplinas desejadas.
-Continuidade: Pode haver uma falta de continuidade no aprendizado se as disciplinas relacionadas não forem oferecidas no mesmo semestre.
-Indecisão: A grande variedade de escolhas pode levar à indecisão.
+Precisa verificar manualmente quantos alunos foram aprovados em cada matéria. Ele, então, precisa fazer uma estimativa de quantos alunos irão se inscrever nas matérias que ainda não foram abertas. Com isso, ele pode definir quantas turmas serão abertas para cada matéria. Entretanto, esse processo é muito trabalhoso e propenso a erros. Assim, foi pensado em uma forma de automatizar esse processo. Para isso, seria necessário obter os dados de quantos alunos estão inscritos em cada matéria e então calcular a demanda de cada uma. Com isso, o coordenador poderia ter uma visão geral de quantas turmas serão necessárias para cada matéria. Infelizmente esse projeto também não saiu do mundo das ideias. Entretanto, lá permaneceu sendo maturado.
+
+### 4.4 Solução Organizacional
+
+Durante as entrevistas, uma alternativa válida para a amenização da problemática abordada é a alteração da regulamentação da UENF que define férias de duas semanas entre os semestres. Caso essa regulamentação seja alterada para que as férias sejam de duas semanas, o problema de agendamento teria maior tempo para ser resolvido, assim fazendo com que a solução ótima seja provável de ser alcançada.
+
+Art. 28 - À Secretaria Acadêmica, órgão auxiliar da Reitoria, compete: II - elaborar a proposta de calendário escolar, ouvidas as respectivas Câmaras, para aprovação pelo Colegiado Acadêmico
+§ 8o - Compete ao Colegiado Acadêmico: X - aprovar o calendário escolar;
+
+TÍTULO III: DO REGIME ACADÊMICO
+CAPÍTULO I: DOS CURSOS, CURRÍCULOS E DISCIPLINAS
+SEÇÃO II: DO REGIME ESCOLAR
+Art. 63
+
+Os calendários dos cursos de graduação e programas de pós-graduação e extensão são aprovados pelas correspondentes Câmaras, com observância do calendário da Universidade.
+
+### 4.5. Alterações de horários
+
+Segundo as Normas de Graduação:
+
+> Art. 36 As aulas deverão ser ministradas pelo Docente responsável da disciplina nos horários designados pela Coordenação de Curso.
+>
+> § 1º Qualquer alteração de horário/turno após o período de matrícula deverá ter a anuência por escrito de todos os discentes matriculados na turma.
+> § 2º º A alteração de horário das aulas da turma deverá ter a anuência da Coordenação de Curso e a ciência do Chefe do Laboratório responsável pela disciplina.
+
+Então é possível alterar os horários de aula caso desejado.
