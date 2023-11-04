@@ -776,6 +776,12 @@ Ele também sugere que, para evitar a complexidade de se trabalhar com dados rea
 
 #### 5.2.3. Chefe de Laboratório de Matemática - Annabell
 
+Considerando que um dos cargos relacionados com o processo de elaboração de grades horários é o de Chefe de Laboratório, foi entrevistada a atual Chefe de Laboratório de Matemática, Annabell.
+
+Assim como sugerido pelo Desenvolvedor do Sistema Acadêmico, a Chefe também sugeriu que dados fictícios fossem utilizados. Sugeriu ainda que fosse utilizado o schema do banco de dados do sistema acadêmico como sua criação. Outra sugestão foi a solicitação ao Desenvolvedor do Sistema Acadêmico uma listagem de possíveis valores recorrentes no banco de dados.
+
+A entrevistada também relatou algumas problemáticas envolvendo a realocação dos horários das turmas. Segundo ela, qualquer alteração pode ser feita durante a semana anterior à matrícula, visto que, não havendo inscritos, não há problema na alteração. A partir do momento em que houver ao menos um aluno inscrito na disciplina, alterações só podem ser feitas caso não hajam conflitos aparentes e preferencialmente com um documento assinado pelos alunos que estiverem inscritos.
+
 #### 5.2.4. Responsável pela Secretaria Acadêmica - Gustavo
 
 #### 5.2.5. Coordenador de Computação - Tang
