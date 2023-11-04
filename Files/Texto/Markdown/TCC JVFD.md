@@ -652,7 +652,7 @@ Porém, toda essa pesquisa e estimativa é dispendiosa e pode desagradar a algun
 
 ## 5. Desenvolvimento
 
-### 4.1. Pré desenvolvimento
+### 5.1. Pré desenvolvimento
 
 - Projeto pessoal: Andamento dos alunos
 
@@ -695,11 +695,11 @@ Embora o código cumpra com seu objetivo, apresenta algumas características lim
 
 Com estes empecilhos, o código acabou abandonado, visto que apesar de útil, não era prático o suficiente para ser utilizado.
 
-### 4.2. Entrevistas
+### 5.2. Entrevistas
 
 Como forma de entender melhor a percepção real daqueles que recorrentemente lidam com a tarefa de criação da grade horária, diversas entrevistas foram feitas como forma de analisar qualitativamente quais são as opiniões, pedidos, reclamações e pensamentos de diferentes níveis organizacionais da UENF.
 
-#### 4.2.1. Diretor do CCT - Oscar
+#### 5.2.1. Diretor do CCT - Oscar
 
 O primeiro entrevistado foi o Oscar, atual Diretor do CCT. Ele atualmente estrutura a relação de disciplinas ofertadas pelo CCT em Excel e as publica em formato PDF no [site do CCT][LinkCCTSalas]. Seu trabalho auxilia os Chefes de Laboratório e Coordenadores de Curso a visualizarem quais são as salas disponíveis e em quais horários cada professor está alocado.
 
@@ -743,17 +743,17 @@ Algumas outras informações que ele elenca:
 - Teoricamente matérias de um mesmo período não devem conflitar
   - Isso se dá segundo a percepção de que a maioria dos alunos está seguindo a mesma linha sequencial de disciplinas, o que muitas das vezes não é a realidade.
 
-#### 4.2.2. Desenvolvedor do Sistema Acadêmico - Rodrigo
+#### 5.2.2. Desenvolvedor do Sistema Acadêmico - Rodrigo
 
-#### 4.2.3. Chefe de Laboratório de Matemática - Annabell
+#### 5.2.3. Chefe de Laboratório de Matemática - Annabell
 
-#### 4.2.4. Responsável pela Secretaria Acadêmica - Gustavo
+#### 5.2.4. Responsável pela Secretaria Acadêmica - Gustavo
 
-#### 4.2.5. Coordenador de Computação - Tang
+#### 5.2.5. Coordenador de Computação - Tang
 
 Diferente de como foi respondido pelo Diretor do CCT, para o Coordenador de Computação a alocação de disciplinas em pares se mostra como "didática", sendo ela então preferível, mas não necessariamente vista como obrigatória.
 
-#### 4.2.6. Entendimento geral das entrevistas
+#### 5.2.6. Entendimento geral das entrevistas
 
 ### 5.3 Dados pessoais e a LGPD
 
