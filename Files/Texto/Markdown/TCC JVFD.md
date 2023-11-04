@@ -660,9 +660,11 @@ Como interesse próprio, cogitou-se o desenvolvimento de uma plataforma onde se 
 
 - Projeto pessoal: Cálculo de demanda
 
-Ao longo dos semestres, foi percebido que durante o intervalo entre-semestres, os alunos precisam se inscrever nas matérias que desejam cursar no semestre seguinte. Para isso, é necessário que o coordenador saiba quantos alunos estão interessados em cada matéria para que ele possa definir quantas turmas serão abertas. Para isso, o coordenador dispõe de algumas alternativas como estimar quantos alunos se inscreverão em cada disciplina, checar manualmente no sistema acadêmico quais alunos podem fazer cada matéri, ou então obter diretamente dos alunos através de um formulário em quais disciplinas cada um dos alunos tem a intenção de cursar. Entretanto, todas essas alternativas são trabalhosas e propensas a erros. Assim, foi pensado em uma forma de automatizar esse processo
+Ao longo dos semestres, foi percebido que durante o intervalo entre-semestres, os alunos precisam se inscrever nas matérias que desejam cursar no semestre seguinte. Para isso, é necessário que o coordenador saiba quantos alunos estão interessados em cada matéria para que ele possa definir quantas turmas serão abertas. Para isso, o coordenador dispõe de algumas alternativas como estimar quantos alunos se inscreverão em cada disciplina, checar manualmente no sistema acadêmico quais alunos podem fazer cada matéria, ou então obter diretamente dos alunos através de um formulário em quais disciplinas cada um dos alunos tem a intenção de cursar.
 
-Para este fim, foi elaborado um código em [Python][LinkPython] que atualmente [se encontra no GitHub][LinkRepoDemanda]. Este código tem como entrada os extratos de matrícula dos alunos e como saída uma lista de disciplinas e a quantidade de alunos que estão matriculados em cada uma delas.
+O método que o Coordenador de Ciência da Computação realiza consiste em baixar o extrato de todos os alunos do curso, e tabelar no excel qual é o andamento de cada um dos alunos, para que assim, através da análise manual pudesse ver qual é o andamento de cada um e de quantos alunos demandam quais disciplinas.
+
+Entretanto, todas essas alternativas são trabalhosas e propensas a erros. Sendo assim, foi pensado em uma forma de automatizar esse processo. Para este fim, foi elaborado um código em [Python][LinkPython] que atualmente [se encontra no GitHub][LinkRepoDemanda]. Este código tem como entrada os extratos de matrícula dos alunos e como saída uma lista de disciplinas e a quantidade de alunos que estão matriculados em cada uma delas.
 
 [LinkPython]: https://www.python.org/
 [LinkRepoDemanda]: https://github.com/jvfd3/university_demand
@@ -699,9 +701,9 @@ Com estes empecilhos, o código acabou abandonado, visto que apesar de útil, n�
 
 Como forma de entender melhor a percepção real daqueles que recorrentemente lidam com a tarefa de criação da grade horária, diversas entrevistas foram feitas como forma de analisar qualitativamente quais são as opiniões, pedidos, reclamações e pensamentos de diferentes níveis organizacionais da UENF.
 
-#### 5.2.1. Diretor do CCT - Oscar
+#### 5.2.1. Diretor do CCT - Oscar <!-- Devo omitir o nome dos entrevistados? -->
 
-O primeiro entrevistado foi o Oscar, atual Diretor do CCT. Ele atualmente estrutura a relação de disciplinas ofertadas pelo CCT em Excel e as publica em formato PDF no [site do CCT][LinkCCTSalas]. Seu trabalho auxilia os Chefes de Laboratório e Coordenadores de Curso a visualizarem quais são as salas disponíveis e em quais horários cada professor está alocado.
+O primeiro entrevistado foi o <!-- Oscar, --> atual Diretor do CCT. Ele atualmente estrutura a relação de disciplinas ofertadas pelo CCT em Excel e as publica em formato PDF no [site do CCT][LinkCCTSalas]. Seu trabalho auxilia os Chefes de Laboratório e Coordenadores de Curso a visualizarem quais são as salas disponíveis e em quais horários cada professor está alocado.
 
 [LinkCCTSalas]: https://uenf.br/cct/secretaria-academica/distribuicao-das-salas-de-aula-do-cct/
 
@@ -744,6 +746,33 @@ Algumas outras informações que ele elenca:
   - Isso se dá segundo a percepção de que a maioria dos alunos está seguindo a mesma linha sequencial de disciplinas, o que muitas das vezes não é a realidade.
 
 #### 5.2.2. Desenvolvedor do Sistema Acadêmico - Rodrigo
+
+Considerando que a integração do sistema proposto seria certamente mais eficiente se integrada ao sistema acadêmico, viu-se como apropriado entrevistar o desenvolvedor do Sistema Acadêmico para se ponderar sobre o uso dos dados e a possível integração.
+
+Durante a entrevista, foram listados alguns dados que seriam interessantes para a análise:
+
+- Demanda de disciplinas
+- Listagem de professores
+- Listagem dos alunos aprovados
+- Requisitos das disciplinas
+
+Outra questão analisada seria quanto a forma de integração. Boa parte das aplicações web se comunicam em forma de API, entretanto, devido à quantidade de alterações executadas ao longo do semestre no sistema acadêmico, o Desenvolvedor do Sistema Acadêmico utiliza o sistema de mensagerias através do [RabbitMQ][LinkRabbit].
+
+[LinkRabbit]: https://www.rabbitmq.com/
+
+Foi citado sobre a abordagem do Coordenador de Computação para o cálculo das demandas, quanto a isso, o Desenvolvedor citou que poderia facilmente permitir o download de um CSV dos dados necessários.
+
+Quanto à possibilidade de aprimoramentos no Sistema Acadêmico, ele disse que "eu faço o que me pedem", se referindo ao repositório do Acadêmico disponível no [GitLab][LinkGitLab], onde alguns poucos usuários fazem solicitações de alterações e melhorias. Havendo então a possibilidade de que o Coordenador de Computação faça uma solicitação à SECACAD para que seja implementada uma funcionalidade que permita a exportação dos dados necessários para o cálculo das demandas.
+
+[LinkGitLab]: https://about.gitlab.com/
+
+Um outro problema apontado por ele é a falta de gente. Segundo ele, outras duas pessoas entraram junto com ele no mesmo concurso, mas foram realocadas para outras áreas da universidade. Ele cita também sobre a "cultura do trabalho opcional" existente na UENF, onde muitos servidores não se sentem obrigados a trabalhar.
+
+Em relação a estrutura dos dados, o sistema acadêmico utiliza o SQL. Foi citado o uso de NOSQL e estrutura de Grafos como possibilidades de mudança, mas como a mesma não se mostrou necessária até o momento, não foi implementada.
+
+Uma questão levantada pelo entrevistado diz respeito à manutenção do software desenvolvido neste trabalho. Não sabendo ele dizer se o mesmo seria mantido pela UENF.
+
+Ele também sugere que, para evitar a complexidade de se trabalhar com dados reais de alunos, que sejam utilizados dados fictícios.
 
 #### 5.2.3. Chefe de Laboratório de Matemática - Annabell
 
