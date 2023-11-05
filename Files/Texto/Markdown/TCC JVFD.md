@@ -634,17 +634,19 @@ Abaixo está listada a progressão usual da elaboração de grades horárias
 
 1. Período ocorrendo normalmente
 2. Coordenadores enviam para Chefes de Laboratório <!-- ? --> uma demanda estimada de cada uma das disciplinas que serão ofertadas
-3. Chefes de Laboratório enviam para Diretores de Centro a demanda estimada
-4. O Diretor aloca provisoriamente as disciplinas em horários e salas <!-- ? -->
-5. O Coordenador de Curso analisa possíveis mudanças de horários que possam ser mais eficientes na distribuição dos alunos
-6. Dependendo das disponibilidade dos professores, cabendo solicitar a abertura de uma bolsa para docência complementar <!-- Descobrir qual o nome correto para isso -->
-7. O Período letivo acaba
-8. Estima-se mais precisamente a demanda de cada disciplina
-9. Turmas são abertas com a quantidade de vagas de acordo com as demandas estimadas
-10. Alunos se inscrevem
-11. Período de inclusão e exclusão
-12. Período ocorrendo normalmente
-13. Alguns possíveis ajustes finais
+3. Chefes de Laboratório atrelam professores à disciplinas <!-- ? -->
+4. Chefes de Laboratório enviam para Diretores de Centro a demanda estimada
+5. O Diretor aloca provisoriamente as disciplinas em horários e salas <!-- ? -->
+6. O Coordenador de Curso analisa possíveis mudanças de horários que possam ser mais eficientes na distribuição dos alunos
+7. Dependendo das disponibilidade dos professores, cabendo solicitar a abertura de uma bolsa para docência complementar <!-- Descobrir qual o nome correto para isso -->
+8. O Período letivo acaba
+9. Estima-se mais precisamente a demanda de cada disciplina
+10. Turmas são abertas com a quantidade de vagas de acordo com as demandas estimadas
+11. Alunos se inscrevem
+12. Últimas mudanças são feitas
+13. Período de inclusão e exclusão
+14. Período ocorrendo normalmente
+15. Alguns possíveis ajustes finais
 
 Uma das etapas de criação das grades horárias é a coleta de uma demanda esperada. Cada Coordenador faz isso do seu próprio jeito. Uma possibilidade seria analisar quantos alunos costumam reprovar em determinada disciplina pela visualização estatística anterior, somado aos que possivelmente aprovarão na disciplina que é pré-requisito. <!-- Essa parte tá mal escrita -->
 
@@ -697,7 +699,7 @@ Embora o código cumpra com seu objetivo, apresenta algumas características lim
 
 Com estes empecilhos, o código acabou abandonado, visto que apesar de útil, não era prático o suficiente para ser utilizado.
 
-### 5.2. Entrevistas
+### 5.2. Entrevistas <!-- Separar entrevistas de minhas opiniões pessoais -->
 
 Como forma de entender melhor a percepção real daqueles que recorrentemente lidam com a tarefa de criação da grade horária, diversas entrevistas foram feitas como forma de analisar qualitativamente quais são as opiniões, pedidos, reclamações e pensamentos de diferentes níveis organizacionais da UENF.
 
@@ -812,7 +814,23 @@ Uma ferramenta que o beneficiaria seria a análise dos alunos que estão à beir
 
 #### 5.2.5. Coordenador de Computação - Tang
 
+Sendo o Coordenador de Computação o principal usuário do sistema, o atual Coordenador de Computação, Fermín Alfredo Tang Montané.
+
+Seguindo o conceito de Design Iterativo utilizado também por \cite{andre_interaction_2018}, o Coordenador foi consultado em diversas etapas do desenvolvimento do sistema. Inicialmente, foi apresentado a ele o conceito do sistema, suas funcionalidades e possíveis benefícios. Em seguida, foi apresentado a ele um protótipo do sistema. Mas esta questão será melhor tratada em outro segmento deste mesmo trabalho, aqui será abordado apenas o conteúdo das entrevistas.
+
+Assim como comentado pelo Diretor do CCT, o Coordenador também fala sobre a definição de matérias que se mostram fixas, porém, agora com outro olhar: enquanto o diretor vê as matérias fixas como uma forma de atribuição histórica seguindo a ideia de "já era assim quando eu cheguei", o Coordenador por sua vez vê apenas como uma forma pré definida e imutável. Porém, olhando em um contexto mais amplo, essa definição de matérias não se mostra como obrigatória, visto que pode haver casos em que outra alocação de uma disciplina "fixa" apresente uma qualidade melhor do que seu horário usual.
+
+Outra questão levantada por ele é quanto a um problema já antigo no curso de Ciência da Computação na UENF, que há anos apresenta um corpo docente reduzido em comparação com outros cursos, sendo necessário um desdobramento maior para suprir a demanda de disciplinas dos alunos. Uma solução utilizada é a de solicitar a abertura de uma bolsa para docência complementar, onde um aluno de pós-graduação pode ser alocado como professor de uma disciplina. Solução que embora não seja a ideal, é a que se mostra mais viável, dada a diminuta inscrição de candidatos à docência.
+
+Uma outra característica até então não citada pelos outros entrevistados é que existem salas que são vistas culturalmente como sendo de determinado curso, onde acaba sendo um certo tabu a alocação de uma disciplina de outro curso, mesmo que não se esteja infrigindo regra alguma.
+
+Quanto à priorização de veteranos já citada anteriormente, o Coordenador aponta uma outra forma de se enxergar a situação: em disciplinas dos períodos finais do curso, a prioridade é dos veteranos, ficando os calouros que ocasionalmente possam ter se adiantado, em segundo plano. Já em disciplinas dos períodos iniciais, a prioridade é dos calouros, ficando os veteranos que por ventura tenham reprovado, em segundo plano.
+
 Diferente de como foi respondido pelo Diretor do CCT, para o Coordenador de Computação a alocação de disciplinas em pares se mostra como "didática", sendo ela então preferível, mas não necessariamente vista como obrigatória.
+
+Considerando a recorrência de citação do conceito de estimativas de demanda, o Coordenador de Computação sugere que haja um campo no sistema para que seja inserida a demanda estimada de cada disciplina.
+
+Considerando que no contexto atual do curso de Ciência da Computação na UENF é iminente a adoção de uma nova grade currícular, o Coodenador apresentou preocupação em relação à possibilidade de que o sistema não seja mais utilizado após a adoção da nova grade. Essa questão encontra-se atualmente fora do escopo do atual projeto, entretanto, não se mostra como um problema de difícil solução, visto que o sistema pode ser adaptado para a nova grade.
 
 #### 5.2.6. Entendimento geral das entrevistas
 
