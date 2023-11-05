@@ -384,13 +384,14 @@
 - Quais os fundamentos teóricos que usarei?
 - Usar como base as tentativas anteriores
 - IHM, Engenharia de Software, Banco de Dados, Estrutura de Dados, teste de software
-- Oscar e Annabell, Márcia (Professora de petróleo) (nova diretora do CCT),
+- Oscar e Annabell, Márcia (Professora de petróleo) (nova diretora do CCT)
 - O CRUD não é tão relevante
-- Importa mais a construção em si
+  - Importa mais a construção em si
 - Fazer um cenário 23.1/23.2 e mostrar como a ferramenta influencia
 - Fazer schema do BD baseado no do Sistema Acadêmico
 - Limar disciplinas precisando de salas
 - Sistema -> Escrita OU Escrita -> Sistema?
+  - Idealmente, ambos juntos
 - O que escrever?
   - Como funciona?
   - Entrevistas
