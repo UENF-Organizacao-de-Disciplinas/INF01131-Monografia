@@ -782,7 +782,33 @@ Assim como sugerido pelo Desenvolvedor do Sistema Acadêmico, a Chefe também su
 
 A entrevistada também relatou algumas problemáticas envolvendo a realocação dos horários das turmas. Segundo ela, qualquer alteração pode ser feita durante a semana anterior à matrícula, visto que, não havendo inscritos, não há problema na alteração. A partir do momento em que houver ao menos um aluno inscrito na disciplina, alterações só podem ser feitas caso não hajam conflitos aparentes e preferencialmente com um documento assinado pelos alunos que estiverem inscritos.
 
-#### 5.2.4. Responsável pela Secretaria Acadêmica - Gustavo
+#### 5.2.4. Responsável pela Secretaria Acadêmica (SECACAD) - Gustavo
+
+Inicialmente, alguns tópicos foram trazidos como ponto focal da entrevista, sendo alguns deles os seguintes:
+
+- Dúvidas quanto as atribuições da SECACAD
+- Permissão de acesso aos dados que não são estritamente necessários, mas ajudariam
+- Definição dos períodos, demanda provisória e erros de estimativa
+- GitLab, issues e demandas
+- Automatização da burocracia
+- Ética VS Eficiência
+
+Logo de início, o entrevistado informou que ele não pode ceder dados de nenhum aluno, mesmo que anonimizados, mas sugeriu que poderia reencaminhar um formulário de pesquisa para os alunos, para que assim eles próprios pudessem fornecer os dados necessários.
+
+Outra abordagem interessante informada por ele é quanto ao seu conhecimento técnico, onde sugeriu abordagens de análise multicritérios como forma de se auxiliar a criação das grades horárias.
+
+Durante a conversa, ocorreram alguns apontamentos:
+
+- Foi citado de forma positiva quanto à demanda exata de cada disciplina.
+- Geralmente há uma preferência pela alocação de disciplinas visando os estudantes mais próximos da conclusão do curso, estando em último aqueles que decidem se adiantar com disciplinas de períodos mais avançados.
+- A sequência de definições é a seguinte: Vagas -> Professor -> Sala -> Horário
+- Não existe um registro oficial das salas e suas capacidades. Essa informação é inserida como um campo de texto no sistema acadêmico.
+  - Com isso, o sistema permitiria teoricamente a alocação de duas turmas em uma mesma sala em um mesmo horário.
+- Cabe à pró-reitoria a mundança do início do primeiro semestre para expandir o período de preparação das grades horárias para o segundo período, sendo que este pedido deve partir da Câmara de Graduação.
+
+Quanto ao tópico "ética VS eficiência", ele citou que embora o sistema acadêmico impeça a realocação de turmas com alunos inscritos, é possível que o mesmo seja burlado ao manualmente se excluir a inscrição do aluno. Sendo esta prática justificável em alguns casos.
+
+Uma ferramenta que o beneficiaria seria a análise dos alunos que estão à beira de perder o vínculo com a universidade, para que a Secretaria Acadêmica possa tomar as medidas cabíveis.
 
 #### 5.2.5. Coordenador de Computação - Tang
 
