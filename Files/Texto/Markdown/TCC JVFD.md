@@ -771,7 +771,7 @@ Outros problemas encontrados, remetem à acomodação institucional de algumas p
 
 ### 4.3. Progressão usual da criação de grades horárias <!-- Estou com dúvida novamente de qual é a progressão e de quem faz o quê -->
 
-Abaixo está listada a progressão usual da elaboração de grades horárias
+Ao somarmos o conhecimento presente no estatuto da UENF, com o conhecimento adquirido através das entrevistas, podemos ter uma visão geral de como se dá a criação das grades horárias na UENF. Assim, abaixo estão listados os passos que geralmente são seguidos para a criação das grades horárias.
 
 1. Período ocorrendo normalmente
 2. Coordenadores enviam para Chefes de Laboratório <!-- ? --> uma demanda estimada de cada uma das disciplinas que serão ofertadas
@@ -789,9 +789,7 @@ Abaixo está listada a progressão usual da elaboração de grades horárias
 14. Período ocorrendo normalmente
 15. Alguns possíveis ajustes finais
 
-Uma das etapas de criação das grades horárias é a coleta de uma demanda esperada. Cada Coordenador faz isso do seu próprio jeito. Uma possibilidade seria analisar quantos alunos costumam reprovar em determinada disciplina pela visualização estatística anterior, somado aos que possivelmente aprovarão na disciplina que é pré-requisito. <!-- Essa parte tá mal escrita -->
-
-Porém, toda essa pesquisa e estimativa é dispendiosa e pode desagradar a alguns coordenadores, ou então gerar estimativas incondizentes com a realidade.
+Entrando em detalhes ainda maiores, podemos citar uma das etapas de criação das grades horárias que é a coleta de uma demanda esperada. Nela, cada Coordenador elabora de seu próprio modo. Uma possibilidade seria analisar quantos alunos costumam reprovar em determinada disciplina pela visualização estatística anterior, somado aos que possivelmente aprovarão na disciplina que é pré-requisito. Porém, toda essa pesquisa e estimativa é dispendiosa e pode desagradar a alguns coordenadores, ou então gerar estimativas incondizentes com a realidade.
 
 ## 5. O Sistema
 
