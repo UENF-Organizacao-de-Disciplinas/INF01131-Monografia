@@ -628,35 +628,11 @@ Além disso, o LCMAT mantém dois cursos de graduação e um programa de pós-gr
 [LinkPROFMAT]: https://uenf.br/posgraduacao/programas/pos-graduacao-stricto-sensu/
 [LinkSBM]: https://www.profmat-sbm.org.br/
 
-### 4.2. Progressão usual da criação de grades horárias <!-- Estou com dúvida novamente de qual é a progressão e de quem faz o quê -->
-
-Abaixo está listada a progressão usual da elaboração de grades horárias
-
-1. Período ocorrendo normalmente
-2. Coordenadores enviam para Chefes de Laboratório <!-- ? --> uma demanda estimada de cada uma das disciplinas que serão ofertadas
-3. Chefes de Laboratório atrelam professores à disciplinas <!-- ? -->
-4. Chefes de Laboratório enviam para Diretores de Centro a demanda estimada
-5. O Diretor aloca provisoriamente as disciplinas em horários e salas <!-- ? -->
-6. O Coordenador de Curso analisa possíveis mudanças de horários que possam ser mais eficientes na distribuição dos alunos
-7. Dependendo das disponibilidade dos professores, cabendo solicitar a abertura de uma bolsa para docência complementar <!-- Descobrir qual o nome correto para isso -->
-8. O Período letivo acaba
-9. Estima-se mais precisamente a demanda de cada disciplina
-10. Turmas são abertas com a quantidade de vagas de acordo com as demandas estimadas
-11. Alunos se inscrevem
-12. Últimas mudanças são feitas
-13. Período de inclusão e exclusão
-14. Período ocorrendo normalmente
-15. Alguns possíveis ajustes finais
-
-Uma das etapas de criação das grades horárias é a coleta de uma demanda esperada. Cada Coordenador faz isso do seu próprio jeito. Uma possibilidade seria analisar quantos alunos costumam reprovar em determinada disciplina pela visualização estatística anterior, somado aos que possivelmente aprovarão na disciplina que é pré-requisito. <!-- Essa parte tá mal escrita -->
-
-Porém, toda essa pesquisa e estimativa é dispendiosa e pode desagradar a alguns coordenadores, ou então gerar estimativas incondizentes com a realidade.
-
-## 5. Entrevistas <!-- Separar entrevistas de minhas opiniões pessoais -->
+### 4.2. Entrevistas <!-- Separar entrevistas de minhas opiniões pessoais -->
 
 Como forma de entender melhor a percepção real daqueles que recorrentemente lidam com a tarefa de criação da grade horária, diversas entrevistas foram feitas com o intuito de analisar qualitativamente quais são as opiniões, pedidos, reclamações e pensamentos de diferentes níveis organizacionais da UENF.
 
-### 5.1. Diretor do CCT - Oscar <!-- Devo omitir o nome dos entrevistados? -->
+#### 4.2.1. Diretor do CCT - Oscar <!-- Devo omitir o nome dos entrevistados? -->
 
 O primeiro entrevistado foi o <!-- Oscar, --> atual Diretor do CCT. Ele atualmente estrutura a relação de disciplinas ofertadas pelo CCT em Excel e as publica em formato PDF no [site do CCT][LinkCCTSalas]. Seu trabalho auxilia os Chefes de Laboratório e Coordenadores de Curso a visualizarem quais são as salas disponíveis e em quais horários cada professor está alocado.
 
@@ -700,7 +676,7 @@ Algumas outras informações que ele elenca:
 - Teoricamente matérias de um mesmo período não devem conflitar
   - Isso se dá segundo a percepção de que a maioria dos alunos está seguindo a mesma linha sequencial de disciplinas, o que muitas das vezes não é a realidade.
 
-### 5.2. Desenvolvedor do Sistema Acadêmico - Rodrigo
+#### 4.2.2. Desenvolvedor do Sistema Acadêmico - Rodrigo
 
 Considerando que a integração do sistema proposto seria certamente mais eficiente se integrada ao sistema acadêmico, viu-se como apropriado entrevistar o desenvolvedor do Sistema Acadêmico para se ponderar sobre o uso dos dados e a possível integração.
 
@@ -729,7 +705,7 @@ Uma questão levantada pelo entrevistado diz respeito à manutenção do softwar
 
 Ele também sugere que, para evitar a complexidade de se trabalhar com dados reais de alunos, que sejam utilizados dados fictícios.
 
-### 5.3. Chefe de Laboratório de Matemática - Annabell
+#### 4.2.3. Chefe de Laboratório de Matemática - Annabell
 
 Considerando que um dos cargos relacionados com o processo de elaboração de grades horários é o de Chefe de Laboratório, foi entrevistada a atual Chefe de Laboratório de Matemática, Annabell.
 
@@ -737,7 +713,7 @@ Assim como sugerido pelo Desenvolvedor do Sistema Acadêmico, a Chefe também su
 
 A entrevistada também relatou algumas problemáticas envolvendo a realocação dos horários das turmas. Segundo ela, qualquer alteração pode ser feita durante a semana anterior à matrícula, visto que, não havendo inscritos, não há problema na alteração. A partir do momento em que houver ao menos um aluno inscrito na disciplina, alterações só podem ser feitas caso não hajam conflitos aparentes e preferencialmente com um documento assinado pelos alunos que estiverem inscritos.
 
-### 5.4. Responsável pela Secretaria Acadêmica (SECACAD) - Gustavo
+#### 4.2.4. Responsável pela Secretaria Acadêmica (SECACAD) - Gustavo
 
 Inicialmente, alguns tópicos foram trazidos como ponto focal da entrevista, sendo alguns deles os seguintes:
 
@@ -765,7 +741,7 @@ Quanto ao tópico "ética VS eficiência", ele citou que embora o sistema acadê
 
 Uma ferramenta que o beneficiaria seria a análise dos alunos que estão à beira de perder o vínculo com a universidade, para que a Secretaria Acadêmica possa tomar as medidas cabíveis.
 
-### 5.5. Coordenador de Computação - Tang
+#### 4.2.5. Coordenador de Computação - Tang
 
 Sendo o Coordenador de Computação o principal usuário do sistema, o atual Coordenador de Computação, Fermín Alfredo Tang Montané.
 
@@ -785,13 +761,37 @@ Considerando a recorrência de citação do conceito de estimativas de demanda, 
 
 Considerando que no contexto atual do curso de Ciência da Computação na UENF é iminente a adoção de uma nova grade currícular, o Coodenador apresentou preocupação em relação à possibilidade de que o sistema não seja mais utilizado após a adoção da nova grade. Essa questão encontra-se atualmente fora do escopo do atual projeto, entretanto, não se mostra como um problema de difícil solução, visto que o sistema pode ser adaptado para a nova grade.
 
-### 5.6. Entendimento geral das entrevistas
+#### 4.2.6. Entendimento geral das entrevistas
 
 Podemos concluir após a análise qualitativa das entrevistas que há de fato um certo grau de insatisfação por parte dos usuários do sistema atual. Embora o sistema funcione, ele apresenta gargalos que poderiam ser resolvidos com a utilização de um sistema mais eficiente que envolvesse mais diferente as diferentes partes interessadas. Suas maiores insatisfações são quanto à burocracia e o curto período de tempo disposto para a elaboração das grades horárias.
 
 Embora não sejam apontadas como insatisfação, algumas potenciais ferramentas e melhorias foram também citadas pelos entrevistados. Dentre elas, a demanda máxima possível, que passaria a evitar superestimações de demanda, a alocação de disciplinas de serviço como fixas, e em alguns casos, a alocação de disciplinas em pares, que embora não seja uma regra, é uma preferência de um dos entrevistados. Outra ferramenta que foi citada é a de análise de alunos à beira de perder o vínculo com a universidade, que poderia ser utilizada pela Secretaria Acadêmica para tomar as medidas cabíveis. Também se fazendo notória a necessidade de registro oficial das salas e suas capacidades, que atualmente é inserida como um campo de texto no sistema acadêmico.
 
 Outros problemas encontrados, remetem à acomodação institucional de algumas práticas, como a alocação de disciplinas em horários fixos, em pares e/ou nas mesmas salas. Essas práticas, embora não sejam obrigatórias, são vistas como um costume e por isso são mantidas.
+
+### 4.3. Progressão usual da criação de grades horárias <!-- Estou com dúvida novamente de qual é a progressão e de quem faz o quê -->
+
+Abaixo está listada a progressão usual da elaboração de grades horárias
+
+1. Período ocorrendo normalmente
+2. Coordenadores enviam para Chefes de Laboratório <!-- ? --> uma demanda estimada de cada uma das disciplinas que serão ofertadas
+3. Chefes de Laboratório atrelam professores à disciplinas <!-- ? -->
+4. Chefes de Laboratório enviam para Diretores de Centro a demanda estimada
+5. O Diretor aloca provisoriamente as disciplinas em horários e salas <!-- ? -->
+6. O Coordenador de Curso analisa possíveis mudanças de horários que possam ser mais eficientes na distribuição dos alunos
+7. Dependendo das disponibilidade dos professores, cabendo solicitar a abertura de uma bolsa para docência complementar <!-- Descobrir qual o nome correto para isso -->
+8. O Período letivo acaba
+9. Estima-se mais precisamente a demanda de cada disciplina
+10. Turmas são abertas com a quantidade de vagas de acordo com as demandas estimadas
+11. Alunos se inscrevem
+12. Últimas mudanças são feitas
+13. Período de inclusão e exclusão
+14. Período ocorrendo normalmente
+15. Alguns possíveis ajustes finais
+
+Uma das etapas de criação das grades horárias é a coleta de uma demanda esperada. Cada Coordenador faz isso do seu próprio jeito. Uma possibilidade seria analisar quantos alunos costumam reprovar em determinada disciplina pela visualização estatística anterior, somado aos que possivelmente aprovarão na disciplina que é pré-requisito. <!-- Essa parte tá mal escrita -->
+
+Porém, toda essa pesquisa e estimativa é dispendiosa e pode desagradar a alguns coordenadores, ou então gerar estimativas incondizentes com a realidade.
 
 ## 5. O Sistema
 
