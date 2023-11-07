@@ -1,4 +1,6 @@
-# TCC - WIP - Sim, eu sei que a numeração está errada
+# TCC - WIP
+
+<!-- Sim, eu sei que a numeração está errada  -->
 
 ## Capa
 
@@ -549,7 +551,7 @@ O sistema final seguirá uma dinâmica similar à que foi ilustrada por \cite{be
 
 A Figura \ref{fig:sistema} apresenta o comportamento geral do sistema, como seus diferentes segmentos interagem entre si e de que forma o usuário interage com o mesmo. O usuário poderá ajustar os objetivos da otimização e suas restrições, elas serão utilizadas nos métodos de otimização. Estes métodos serão utilizados para se alcançar soluções para estes critérios, as melhores serão então armazenadas. Em posso destes dados, a aplicação apresentará visualmente estas informações ao usuário, permitindo que ele interaja dinamicamente a fim de alcançar seus objetivos.
 
-## 4. Estrutura organizacional <!-- WIP -->
+## 4. Estrutura organizacional
 
 Para que se possa entender melhor o problema, é necessário que se entenda a estrutura organizacional da UENF disposta no [Estatuto da UENF][LinkEstatutoUENF]. A [Universidade Estadual do Norte Fluminense Darcy Ribeiro (UENF)][LinkUENF], ainda que limitando ao que convém neste trabalho.
 
@@ -791,17 +793,161 @@ Ao somarmos o conhecimento presente no estatuto da UENF, com o conhecimento adqu
 
 Entrando em detalhes ainda maiores, podemos citar uma das etapas de criação das grades horárias que é a coleta de uma demanda esperada. Nela, cada Coordenador elabora de seu próprio modo. Uma possibilidade seria analisar quantos alunos costumam reprovar em determinada disciplina pela visualização estatística anterior, somado aos que possivelmente aprovarão na disciplina que é pré-requisito. Porém, toda essa pesquisa e estimativa é dispendiosa e pode desagradar a alguns coordenadores, ou então gerar estimativas incondizentes com a realidade.
 
+### 4.4. Formulário de pesquisa <!-- CORRIGIR FUTURAMENTE: Fill XXX --> <!-- Checar se as perguntas nas tabelas, prints e anexo são as mesmas -->
+
+Como forma de analisar também a perspectiva dos discentes quanto à problemática abordada, foi elaborado um formulário de pesquisa com o intuito de se confirmar ou não a hipótese de que em sua maioria os alunos também se encontram insatisfeitos com a atual conjuntura de distribuição e alocação de turmas.
+
+Para este fim, foi utilizado um formulário de pesquisa qualitativa dos alunos disponível no [Anexo 1](#anexo-1). O formulário foi divulgado através de um link disponibilizado no grupo de alunos do curso de Ciência da Computação no WhatsApp, e também através de um link distribuído pela Secretaria Acadêmica à todos os discentes da UENF. No link, os estudantes poderiam apenas responder ao formulário utilizando de seu e-mail institucional, que é um e-mail do Google disponibilizado apenas para estudantes da UENF.
+
+A seguir, estão dispostos alguns resultados obtidos pelo formulário:
+
+[ImgForms1.0]: <img/forms/1.0) SobreVoce.png>
+[ImgForms2.0]: <img/forms/2.0) Satisfação.png>
+[ImgForms3.0]: <img/forms/3.0) preferencias pessoais.png>
+[ImgForms4.0]: <img/forms/4.0) Atrasos.png>
+[ImgForms5.1]: <img/forms/5.1) opiniao - justa, variada.png>
+[ImgForms5.2]: <img/forms/5.2) opiniao - contínua, eficiente.png>
+[ImgForms5.3]: <img/forms/5.3) opiniao - distribuída, satisfatória.png>
+
+#### 4.4.1. Respondentes
+
+O formulário foi respondido por XXX alunos, sendo XXX do curso de Ciência da Computação e XXX de outros cursos.
+
+Vemos também a distribruição dos anos de ingresso dos alunos que responderam o formulário, sendo em sua maioria de XXX e XXX, o que pode ser justificado pela esperada evasão de alunos mais antigos.
+
+![Temp Form Image][ImgForms1.0]
+
+#### 4.4.2. Pesquisa de satisfação
+
+Considerando que o escopo deste trabalho revolve em torno da alocação de recursos físicos e humanos, como salas, professores e alunos, foi elaborada uma seção do formulário de pesquisa com o intuito de se analisar a satisfação dos alunos quanto a mesma.
+
+Quanto à distribuição dos recursos físicos, vemos uma alta taxa de alunos que já tiveram que mudar de sala por falta de algum acessório disposto necessário para a aula. Já a necessidade de mudança de sala devido à ausência de carteiras suficientes, embora não seja tão alta, ainda se faz presente.
+
+Em seus resultados, é notório o receio dos alunos quanto à possibilidade de não conseguir se inscrever nas disciplinas que desejam cursar, temor este com fundamento na também alta afirmação de ausência de vagas em disciplinas desejas.
+
+O temor de não conseguir se inscrever nas disciplinas desejadas é ainda agravado pelo fato de ser maior de XXX% a quantidade de alunos que já deixaram de se inscrever em disciplinas devido a conflitos de horário.
+
+Embora seja uma prática recorrente a oferta de diversas turmas para uma mesma disciplina, isto é feito de forma que as turmas sejam ofertadas no mesmo horário. Entretanto, os alunos não se mostram satisfeitos com esta prática, visto que a maioria considera que a universidade deveria dispor de outros horários para as disciplinas mais demandadas com o intuito de evitar conflitos de horários.
+
+O que se apresenta como um agravante ainda maior na percepção da progressão não sequencial dos alunos é a quantidade de alunos que já preferiram não se inscrever em uma disciplina para cursá-la em outro momento mais oportuno, mesmo que isto signifique um atraso na progressão do curso.
+
+Abaixo estão dispostos os resultados encontrados nesta seção:
+
+![Temp Form Image][ImgForms2.0]
+
+Como alternativa de visualização dos dados, dispõe-se aqui uma tabela com os dados obtidos através dessa seção do formulário.
+
+| **Pergunta**                                                                                                                                                  |  Sim  |  Não  | Outro |
+| ------------------------------------------------------------------------------------------------------------------------------------------------------------- | :---: | :---: | :---: |
+| Salas: Você já teve que mudar de sala por falta de algum acessório como quadro, projetor ou monitor?                                                          |  XXX  |  XXX  |  XXX  |
+| Salas: Você já teve aula cuja sala não dispunha de carteiras o suficiente?                                                                                    |  XXX  |  XXX  |  XXX  |
+| Vagas: Você já quis entrar em uma disciplina mas ela não tinha vaga?                                                                                          |  XXX  |  XXX  |  XXX  |
+| Vagas: Você já ficou acordado após meia-noite por medo de não ter vaga para as disciplinas que deseja cursar?                                                 |  XXX  |  XXX  |  XXX  |
+| Conflitos: Você já deixou de se inscrever em uma disciplina por causa de conflito de horário?                                                                 |  XXX  |  XXX  |  XXX  |
+| Preferências: Você já preferiu não se inscrever em uma disciplina para cursá-la em outro momento mais oportuno?                                               |  XXX  |  XXX  |  XXX  |
+| Opiniões: Você acha que a universidade deveria oferecer horários diferentes para as disciplinas mais demandadas para evitar conflitos com outras disciplinas? |  XXX  |  XXX  |  XXX  |
+
+#### 4.4.3. Preferências pessoais
+
+Neste segmento, visa-se enteder um pouco melhor o processo decisório dos alunos quanto à escolha das disciplinas que desejam cursar. Primeiro, lhes é indagado quanto à disposição das disciplinas, variando entre disciplinas concentradas em poucos dias ou espalhadas durante a semana e quanto à preferência de horários, variando entre horários matutinos e vespertinos.
+
+Embora não lide com conflitos, a análise de seus resultados podem auxiliar na escolha de distribuição futura dos usuários do sistema, ao desenvolverem a grade horária, caso desejem considerar as preferências dos estudantes.
+
+Podemos ver que há uma grande distribuição entre as preferências dos alunos, tendendo um pouco para XXX no período XXX.
+
+Em seguida, é questionado sobre qual é o critério de seleção de disciplinas que se apresentam conflituosas. Nesta vertente vemos uma maior propensão às disciplinas que é pré-requisito de uma grande quantidade de disciplinas, ou seja, disciplinas que, caso se tenham reprovação ou não sejam cursadas, resultam no que é coloquialmente chamado de "prender disciplinas", assim atrasando mais a progressão do aluno.
+
+Resultado este que é curioso, visto que o desejo de não se atrasar em seu progresso ocorre simultaneamente com a preferência pessoal de não se inscrever em disciplinas e cursá-las posteriormente, mesmo que isso possa atrasar seu progresso. Entende-se que nem todas as disciplinas, caso não cursadas em seu período esperado, resultarão no atraso da grade, mas ainda assim, é um fato curioso.
+
+![Temp Form Image][ImgForms3.0]
+
+| **Característica**                          |  _1_  |  _2_  |  _3_  |  _4_  |  _5_  |
+| ------------------------------------------- | :---: | :---: | :---: | :---: | :---: |
+| Disciplinas distribuídas ao longo da semana |  XXX  |  XXX  |  XXX  |  XXX  |  XXX  |
+| ~                                           |  XXX  |  XXX  |  XXX  |  XXX  |  XXX  |
+| Sem preferência                             |  XXX  |  XXX  |  XXX  |  XXX  |  XXX  |
+| ~                                           |  XXX  |  XXX  |  XXX  |  XXX  |  XXX  |
+| Disciplinas acumuladas em poucos dias       |  XXX  |  XXX  |  XXX  |  XXX  |  XXX  |
+
+| **Característica**      |  _1_  |  _2_  |  _3_  |  _4_  |  _5_  |
+| ----------------------- | :---: | :---: | :---: | :---: | :---: |
+| Disciplinas matutinas   |  XXX  |  XXX  |  XXX  |  XXX  |  XXX  |
+| ~                       |  XXX  |  XXX  |  XXX  |  XXX  |  XXX  |
+| Sem preferência         |  XXX  |  XXX  |  XXX  |  XXX  |  XXX  |
+| ~                       |  XXX  |  XXX  |  XXX  |  XXX  |  XXX  |
+| Disciplinas vespertinas |  XXX  |  XXX  |  XXX  |  XXX  |  XXX  |
+
+#### 4.4.4. Experiências passadas com atrasos e disciplinas
+
+Quanto aos atrasos para a realização de disciplinas, o ideal desejado é que não haja nenhum atraso, entretanto, a realidade é outra e isso se dá por diversos motivos, seja por reprovação, por não conseguir se inscrever na disciplina desejada ou por simplesmente não ter interesse em cursar a disciplina naquele momento. Esta característica se apresenta na percepção da frequência e distância que percebemos dos atrasos.
+
+Podemos então calcular que o atraso médio dentre os respondentes da pesquisa é de XXX semestres, sendo que XXX% dos alunos já atrasaram XXX semestres ou mais.
+
+![Temp Form Image][ImgForms4.0]
+
+| **Pergunta**                                                                                              |  _1_  |  _2_  |  _3_  |  _4_  |  _5_  |  _6_  |  _7_  |  _8_  |  _9_  | _10_  |
+| --------------------------------------------------------------------------------------------------------- | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
+| Quanto tempo (em períodos) você já teve que esperar para fazer uma disciplina da sua grade?               |  XXX  |  XXX  |  XXX  |  XXX  |  XXX  |  XXX  |  XXX  |  XXX  |  XXX  |  XXX  |
+| Qual foi a quantidade máxima de períodos que você se distanciou de uma disciplina de determinado período? |  XXX  |  XXX  |  XXX  |  XXX  |  XXX  |  XXX  |  XXX  |  XXX  |  XXX  |  XXX  |
+
+#### 4.4.5. Opiniões quanto à distribuição das disciplinas
+
+Aqui, buscamos uma análise mais bruta e direta à concordância dos respondentes quanto às características atribuídas à distribuição de disciplinas semestrais, ondem eles avaliam com notas de 1 a 5 o quanto concordam com cada um dos adjetivos, sendo eles "Justa", "Variada", "Contínua", "Eficiente", "Distribuída" e "Satisfatória".
+
+![Temp Form Image][ImgForms5.1]
+
+![Temp Form Image][ImgForms5.2]
+
+![Temp Form Image][ImgForms5.3]
+
+Como forma tabular, temos os seguintes resultados:
+
+| **Característica** |  _1_  |  _2_  |  _3_  |  _4_  |  _5_  |
+| ------------------ | :---: | :---: | :---: | :---: | :---: |
+| Justa              |  XXX  |  XXX  |  XXX  |  XXX  |  XXX  |
+| Variada            |  XXX  |  XXX  |  XXX  |  XXX  |  XXX  |
+| Contínua           |  XXX  |  XXX  |  XXX  |  XXX  |  XXX  |
+| Eficiente          |  XXX  |  XXX  |  XXX  |  XXX  |  XXX  |
+| Distribuída        |  XXX  |  XXX  |  XXX  |  XXX  |  XXX  |
+| Satisfatória       |  XXX  |  XXX  |  XXX  |  XXX  |  XXX  |
+
+Ao calcularmos a média de cada uma, podemos dizer que, segundo os alunos respondentes da pesquisa, a distribuição de disciplinas semestrais tem os seguintes valores:
+
+| **Característica** | _Média_ |
+| ------------------ | :-----: |
+| Justa              |  XXXXX  |
+| Variada            |  XXXXX  |
+| Contínua           |  XXXXX  |
+| Eficiente          |  XXXXX  |
+| Distribuída        |  XXXXX  |
+| Satisfatória       |  XXXXX  |
+
+O que em suma, pode representar o visível desagrado do corpo discente quanto à distribuição de disciplinas semestrais, o que reforça a necessidade de aprimoramento do sistema atual.
+
+#### 4.4.6. Respostas qualitativas
+
+Por fim, havia um espaço livre no formulário para que os alunos pudessem expressar suas opiniões de forma mais livre. Abaixo estão dispostas algumas das respostas obtidas:
+
+- > XXX
+- > XXX
+
+#### 4.4.7. Conclusões
+
+Por fim, entendemos que, além das insatisfações dormentes por parte dos gestores e criadores de grades horárias, os alunos também se mostram insatisfeitos com a atual estrutura de distribuição de disciplinas semestrais.
+
+Os interesses dos alunos se mostram em sua maioria alinhados com os interesses dos gestores, onde ambos visam reduzir a quantidade de atrasos na progressão do curso, mesmo que isso traga certa disparidade com o desejo estudantil de optar por cursar certas disciplinas em outro momento.
+
 ## 5. O Sistema
 
-### 5.1 Como funciona?
+### 5.1. Como funciona?
 
-### 5.1. Modelagem
+### 5.2. Modelagem
 
-### 5.1 Marco Teórico <!-- O que e de quais disciplinas tô usando? -->
+### 5.3. Marco Teórico <!-- O que e de quais disciplinas tô usando? -->
 
-## 5. Desenvolvimento
+## 6. Desenvolvimento
 
-### 5.1. Pré desenvolvimento
+### 6.1. Pré desenvolvimento
 
 - Projeto pessoal: Andamento dos alunos
 
@@ -846,7 +992,7 @@ Embora o código cumpra com seu objetivo, apresenta algumas características lim
 
 Com estes empecilhos, o código acabou abandonado, visto que apesar de útil, não era prático o suficiente para ser utilizado.
 
-### 5.3 Dados pessoais e a LGPD
+### 6.2. Dados pessoais e a LGPD
 
 Em sua concepção original, o presente trabalho visaria integrar o sistema desenvolvido com o atual sistema acadêmico da UENF. Essa abordagem foi descartada devido às dificuldades encontradas por parte do setor administrativo da UENF que, devido à [Lei Geral de Proteção dos Dados (LGPD)][LinkLGPD], não podem divulgar dados dos alunos, mesmo anonimizados.
 
@@ -861,15 +1007,17 @@ Segundo o [Estudo Técnico sobre o tratamento de dados pessoais para fins acadê
 Apesar das possibilidades de meios legalmente válidos para a aquisição dos dados, optou-se por abandonar a integração com o Sistema Acadêmico e o uso de dados reais dos alunos já existentes na plataformas. Rumando-se então para uma abordagem mais manual de inserção de dados manualmente por parte dos usuários do 
 sistema.
 
-### 5.4. Protótipo
+### 6.3. Protótipo
 
-### 5.5. Banco de Dados
+### 6.4. Banco de Dados
 
-### 88. - Resultado/Experimentos/Cenários
+### 7. - Resultado/Experimentos/Cenários
 
-## 99. Referências
+## 99. Referências <!-- Lembrar te colocar links para PDFs para ajudar o futuro 🫡 -->
 
 ## Anexo 1
+
+### Formulário de pesquisa qualitativa dos alunos
 
 Abaixo se encontram algumas perguntas feitas a discentes da UENF em relação à sua satisfação com a atual distribuição de disciplinas semestrais.
 
