@@ -15,7 +15,7 @@
 
 **Preambulo:** Trabalho de Conclusão de Curso apresentado ao Curso de Graduação em Ciência da Computação da Universidade Estadual do Norte Fluminense Darcy Ribeiro, sob orientação do Prof. Dr. Fermín Alfredo Tang Montané
 
-## 1. Introdução
+## 1. Introdução <!-- Fazer algumas sutis alterações no português --> <!-- Fazer referência ao TCC do Ricador falando sobre "Já existem no mercado algumas ferramentas que prometem a geração automatizada de grades de horários" -->
 
 <!--
 % \chapter[Introdução]{Introdução}
