@@ -5,15 +5,20 @@
 ## Capa
 
 **Autor:** João Vítor Fernandes Dias
+
 **Título:** _Timetabling Problem_: desafios no desenvolvimento de um sistema de decisão voltado ao problema de organização de grade horária do ensino superior
+
 **Local:** Campos dos Goytacazes, RJ
-\local{}
 
 **Orientador:** Prof. Dr. Fermín Alfredo Tang Montané
+
 **Instituição:** Universidade Estadual do Norte Fluminense Darcy Ribeiro
+
 **Curso:** Ciência da Computação
 
 **Preambulo:** Trabalho de Conclusão de Curso apresentado ao Curso de Graduação em Ciência da Computação da Universidade Estadual do Norte Fluminense Darcy Ribeiro, sob orientação do Prof. Dr. Fermín Alfredo Tang Montané
+
+---
 
 ## 1. Introdução <!-- Fazer algumas sutis alterações no português --> <!-- Fazer referência ao TCC do Ricador falando sobre "Já existem no mercado algumas ferramentas que prometem a geração automatizada de grades de horários" -->
 
@@ -320,6 +325,8 @@ Este trabalho abordará capítulos que de forma resumida lidam com os seguintes 
 - O Capítulo 4 de resultados e discussões demonstra o software final utilizado, apresenta comparações das qualidades entre grades horárias geradas pelo software e as que foram utilizadas nos últimos semestres. Apresenta também a pesquisa de satisfação realizada com os \textit{stakeholders} entrevistados no início do desenvolvimento.
 - O Capítulo 5 da conclusão e trabalhos futuros finaliza o presente trabalho com os pensamentos gerais sobre a pesquisa e desenvolvimento, apresentando as características não abordadas e indicando caminhos a serem seguidos por pesquisadores posteriormente.
 
+---
+
 ## 2. Contexto do _Timetabling Problem_ no meio acadêmico
 
 <!-- \chapter{Contexto acadêmico do \textit{Timetabling Problem}} -->
@@ -477,13 +484,26 @@ Com isso, entramos também no ramo da Interação Homem-Máquina, ramo abordado 
 % - Falar sobre técnicas existentes e quem já fez. Tipo o que aquele artigo sem DOI fez
 -->
 
-### 2.4. Projetos anteriores
+### 2.4. Trabalhos anteriores
 
-### 2.4.1. Rodrigo
+#### 2.4.1. Sânya
 
-### 2.4.2. Sânya
+#### 2.4.2. Rodrigo
 
-## 3. Modelagem geral do sistema
+- Contato dele
+- Turma vs aluno
+- Fixo vs solto
+- Um professor por disciplina
+- Uma turma por disciplina
+- Disciplinas de um mesmo período não conflitando
+- Dois horários de aula no mesmo dia: hard x soft
+- Tamanha eficiência é de fato necessária?
+
+> Como possível trabalho futuro propõe-se o aperfeiçoamento da interface gráfica e do banco de dados da ferramenta desenvolvida para que seja possível armazenar um maior número de informações pertinentes ao problema de uma forma eficiente, para que o usuário possa realizar modificações no quadro de horários e a ferramenta seja capaz de informar se essas modificações são viáveis ou não e para que a escolha dos dados usados na resolução do problema tenha uma maior flexibilidade. Além disso, os mecanismos usados na implementação da Função Objetivo (função que avalia a qualidade das soluções obtidas) podem ser aperfeiçoados com o intuito de cada vez mais atender a um maior número de particularidades do dia a dia do curso de Ciência da Computação da UENF.
+
+---
+
+## 3. Modelagem geral do sistema <!-- Modificar o texto para descrever o que o sistema de fato faz -->
 
 <!--
 \chapter{Modelagem geral do sistema}
@@ -551,7 +571,11 @@ O sistema final seguirá uma dinâmica similar à que foi ilustrada por \cite{be
 
 A Figura \ref{fig:sistema} apresenta o comportamento geral do sistema, como seus diferentes segmentos interagem entre si e de que forma o usuário interage com o mesmo. O usuário poderá ajustar os objetivos da otimização e suas restrições, elas serão utilizadas nos métodos de otimização. Estes métodos serão utilizados para se alcançar soluções para estes critérios, as melhores serão então armazenadas. Em posso destes dados, a aplicação apresentará visualmente estas informações ao usuário, permitindo que ele interaja dinamicamente a fim de alcançar seus objetivos.
 
-## 4. Estrutura organizacional
+---
+
+### 3.4. Marco Teórico <!-- O que e de quais disciplinas tô usando? -->
+
+## 4. Estrutura organizacional da instituição estudada
 
 Para que se possa entender melhor o problema, é necessário que se entenda a estrutura organizacional da UENF disposta no [Estatuto da UENF][LinkEstatutoUENF]. A [Universidade Estadual do Norte Fluminense Darcy Ribeiro (UENF)][LinkUENF], ainda que limitando ao que convém neste trabalho.
 
@@ -775,21 +799,21 @@ Outros problemas encontrados, remetem à acomodação institucional de algumas p
 
 Ao somarmos o conhecimento presente no estatuto da UENF, com o conhecimento adquirido através das entrevistas, podemos ter uma visão geral de como se dá a criação das grades horárias na UENF. Assim, abaixo estão listados os passos que geralmente são seguidos para a criação das grades horárias.
 
-1. Período ocorrendo normalmente
-2. Coordenadores enviam para Chefes de Laboratório <!-- ? --> uma demanda estimada de cada uma das disciplinas que serão ofertadas
-3. Chefes de Laboratório atrelam professores à disciplinas <!-- ? -->
-4. Chefes de Laboratório enviam para Diretores de Centro a demanda estimada
-5. O Diretor aloca provisoriamente as disciplinas em horários e salas <!-- ? -->
-6. O Coordenador de Curso analisa possíveis mudanças de horários que possam ser mais eficientes na distribuição dos alunos
-7. Dependendo das disponibilidade dos professores, cabendo solicitar a abertura de uma bolsa para docência complementar <!-- Descobrir qual o nome correto para isso -->
-8. O Período letivo acaba
-9. Estima-se mais precisamente a demanda de cada disciplina
-10. Turmas são abertas com a quantidade de vagas de acordo com as demandas estimadas
-11. Alunos se inscrevem
-12. Últimas mudanças são feitas
-13. Período de inclusão e exclusão
-14. Período ocorrendo normalmente
-15. Alguns possíveis ajustes finais
+1. Período ocorrendo normalmente;
+2. Coordenadores enviam para Chefes de Laboratório uma demanda estimada de cada uma das disciplinas que serão ofertadas;
+3. Chefes de Laboratório atrelam professores à disciplinas;
+4. Chefes de Laboratório enviam para Diretores de Centro a demanda estimada;
+5. Dependendo das disponibilidade dos professores, cabe solicitar a abertura de uma bolsa de apoio ao ensino;
+6. O Diretor aloca provisoriamente as disciplinas em horários e salas;
+7. O Coordenador de Curso analisa possíveis mudanças de horários que possam ser mais eficientes na distribuição dos alunos;
+8. O período letivo acaba;
+9. Estima-se mais precisamente a demanda de cada disciplina;
+10. Turmas são abertas com a quantidade de vagas de acordo com as demandas estimadas;
+11. Alunos se inscrevem;
+12. Últimas mudanças são feitas;
+13. Período de inclusão e exclusão;
+14. Alguns possíveis ajustes finais;
+15. Período ocorrendo normalmente.
 
 Entrando em detalhes ainda maiores, podemos citar uma das etapas de criação das grades horárias que é a coleta de uma demanda esperada. Nela, cada Coordenador elabora de seu próprio modo. Uma possibilidade seria analisar quantos alunos costumam reprovar em determinada disciplina pela visualização estatística anterior, somado aos que possivelmente aprovarão na disciplina que é pré-requisito. Porém, toda essa pesquisa e estimativa é dispendiosa e pode desagradar a alguns coordenadores, ou então gerar estimativas incondizentes com a realidade.
 
@@ -937,17 +961,9 @@ Por fim, entendemos que, além das insatisfações dormentes por parte dos gesto
 
 Os interesses dos alunos se mostram em sua maioria alinhados com os interesses dos gestores, onde ambos visam reduzir a quantidade de atrasos na progressão do curso, mesmo que isso traga certa disparidade com o desejo estudantil de optar por cursar certas disciplinas em outro momento.
 
-## 5. O Sistema
+## 5. Desenvolvimento
 
-### 5.1. Como funciona?
-
-### 5.2. Modelagem
-
-### 5.3. Marco Teórico <!-- O que e de quais disciplinas tô usando? -->
-
-## 6. Desenvolvimento
-
-### 6.1. Pré desenvolvimento
+### 5.1. Pré desenvolvimento
 
 - Projeto pessoal: Andamento dos alunos
 
@@ -992,7 +1008,7 @@ Embora o código cumpra com seu objetivo, apresenta algumas características lim
 
 Com estes empecilhos, o código acabou abandonado, visto que apesar de útil, não era prático o suficiente para ser utilizado.
 
-### 6.2. Dados pessoais e a LGPD
+### 5.2. Dados pessoais e a LGPD
 
 Em sua concepção original, o presente trabalho visaria integrar o sistema desenvolvido com o atual sistema acadêmico da UENF. Essa abordagem foi descartada devido às dificuldades encontradas por parte do setor administrativo da UENF que, devido à [Lei Geral de Proteção dos Dados (LGPD)][LinkLGPD], não podem divulgar dados dos alunos, mesmo anonimizados.
 
@@ -1004,14 +1020,27 @@ Segundo o [Estudo Técnico sobre o tratamento de dados pessoais para fins acadê
 
 [LinkANPD]: https://www.gov.br/anpd/pt-br/assuntos/noticias/sei_00261-000810_2022_17.pdf
 
-Apesar das possibilidades de meios legalmente válidos para a aquisição dos dados, optou-se por abandonar a integração com o Sistema Acadêmico e o uso de dados reais dos alunos já existentes na plataformas. Rumando-se então para uma abordagem mais manual de inserção de dados manualmente por parte dos usuários do 
-sistema.
+Apesar das possibilidades de meios legalmente válidos para a aquisição dos dados, optou-se por abandonar a integração com o Sistema Acadêmico e o uso de dados reais dos alunos já existentes na plataformas. Rumando-se então para uma abordagem mais manual de inserção de dados manualmente por parte dos usuários do sistema.
 
-### 6.3. Protótipo
+### 5.3. Protótipo
 
-### 6.4. Banco de Dados
+Para protótipo foi usado o figma...
 
-### 7. - Resultado/Experimentos/Cenários
+### 5.4. Banco de Dados
+
+Usando o mesmo banco de dados do Sistema Acadêmico, temos que...
+
+```mermaid
+
+```
+
+### 5.5. Front-end
+
+### 5.6. Back-end
+
+## 6. Resultado/Experimentos/Cenários
+
+## 7. Conclusões
 
 ## 99. Referências <!-- Lembrar te colocar links para PDFs para ajudar o futuro 🫡 -->
 
