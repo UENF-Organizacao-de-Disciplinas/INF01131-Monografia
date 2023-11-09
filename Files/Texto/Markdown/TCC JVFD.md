@@ -20,7 +20,7 @@
 
 ---
 
-## 1. Introdução <!-- Fazer algumas sutis alterações no português --> <!-- Fazer referência ao TCC do Ricador falando sobre "Já existem no mercado algumas ferramentas que prometem a geração automatizada de grades de horários" -->
+## 1. Introdução <!-- Fazer algumas sutis alterações no português --> <!-- Fazer referência ao TCC do Ricardo falando sobre "Já existem no mercado algumas ferramentas que prometem a geração automatizada de grades de horários" -->
 
 <!--
 % \chapter[Introdução]{Introdução}
@@ -224,7 +224,7 @@ Considerando as dificuldades encontradas em trabalhos anteriores, entende-se que
 % Adicionar referência sobre pesquisa qualitativa?
 -->
 
-Com este conhecimento, um material inicial para a pesquisa exploratória e qualitativa deve ser desenvolvido levando em conta as questões próprias da universidade em questão, visando também coletar dados relevantes para uma futura pesquisa com maior enfoque em características emergentes que a pesquisa anterior pode levantar, similar à como foi proposto e realizado por \cite{andre_interaction_2018}.
+Com este conhecimento, um material inicial para a pesquisa exploratória e qualitativa deve ser desenvolvido levando em conta as questões próprias da universidade em questão, visando também coletar dados relevantes para uma futura pesquisa com maior enfoque em características emergentes que a pesquisa anterior pode levantar, similar a como foi proposto e realizado por \cite{andre_interaction_2018}.
 
 Nesta pesquisa exploratória em formato de entrevista, algumas informações esperadas revolvem em torno das percepções dos \textit{stakeholders} do sistema proposto, sendo esses principalmente os professores, coordenadores de cursos, chefes de laboratório e diretores de centro. Estas percepções incluem o entendimento deles quanto ao método atual e às alternativas existentes, nível de insatisfação com o método atual, nível de desejo quanto à um novo método. Além disso, espera-se aproveitar o ensejo para elicitar as características e funcionalidades que gostariam de ter em um sistema de suporte à decisão, solicitando também que deem informações adicionais que gostariam de acrescentar.
 
@@ -245,7 +245,7 @@ Questionamentos similares também serão realizados com alunos, porém em format
 Tendo obtido as informações dos \textit{stakeholders} primários, será então necessário modelar quais são as regras que ditam a estrutura organizacional em foco. Para este fim, serão utilizados diagramas conceituais utilizando softwares de suporte como o [Visual Paradigm][LinkVisualParadigm], [draw.io][LinkDrawio] e a [ferramenta Mermaid][LinkMermaid].
 
 <!--
-% Essa parte de baixo tá muito estranha. Revisar depois
+% Essa parte de baixo está muito estranha. Revisar depois
 -->
 
 Esta etapa será de grande importância pois guiará a pesquisa para quais serão os detalhes dos módulos existentes durante o desenvolvimento do projeto, bem como esclarecerá visualmente quais são as informações sobre os recursos que são necessárias para se calcular a grade ótima. Como por exemplo:
@@ -424,7 +424,7 @@ Outros trabalhos buscaram condensar em forma de tabela as informações encontra
 
 Na figura \ref{Desenvolvimento}, \cite{alegre_desenvolvimento_2012} traça a relação entre os diversos autores, ano de sua publicação e seu país de origem com os dados encontrados em seus trabalhos quanto aos parâmetros utilizados na elaboração da grade horária, quão grandes eram cada um de seus parâmetros, quanto tempo foi necessário para achar uma solução e quais foram as técnicas utilizadas.
 
-% Entender o que tá dando errado aqui depois
+<!-- % Entender o que está dando errado aqui depois -->
 
 ![Resumo de trabalhos, parâmetros, dimensões, tempo e técnicas.](img/tabelas/Desenvolvimento.png)
 
@@ -592,9 +592,9 @@ Segundo o estatuto, a UENF compreende:
 
 Quanto aos órgãos da Administração Superior devemos enfocar o órgão executivo, constituído unicamente pela reitoria, cujos órgãos auxiliares englobam a Secretaria Acadêmica, que por sua vez tem como algumas de suas atribuições as seguintes:
 
-> I - coordenar a divulgação do horário escolar dos vários cursos da UENF, de modo a otimizar os recursos humanos, ampliar as opções de disciplinas para os alunos e tornar acessíveis os dados escolares;
+> I - Coordenar a divulgação do horário escolar dos vários cursos da UENF, de modo a otimizar os recursos humanos, ampliar as opções de disciplinas para os alunos e tornar acessíveis os dados escolares;
 >
-> II - **centralizar os serviços de registro da vida escolar dos alunos**, compreendendo **inscrição**, admissão, **matrícula**, **créditos**, **opções**, transferências, **promoções**, graduações e preparação dos respectivos diplomas, dentro das normas estabelecidas;
+> II - **Centralizar os serviços de registro da vida escolar dos alunos**, compreendendo **inscrição**, admissão, **matrícula**, **créditos**, **opções**, transferências, **promoções**, graduações e preparação dos respectivos diplomas, dentro das normas estabelecidas;
 
 Já quanto as unidades universitárias de ensino, temos no estatuto que:
 
@@ -681,20 +681,20 @@ Uma outra característica notável é a repetição de atribuições de discipli
 
 Com isso, surge a dúvida: há uma preferência ativa por aulas alocadas com este padrão? A resposta dada é que não. O que se mostra como uma restrição a menos na hora de se alocar as turmas.
 
-Outro caso notável é a existência majoritárias de turmas criadas com dois períodos de duas horas, entretanto existem algumas que fogem deste padrão e possuem três horas de duração. A solução encontrada pelo Diretor é a de colocar esta disciplina começando às 10h, o que faz com que se alonge até as 13h, período geralmente usado pelos estudantes e servidores para se alimentar, e justamente por isso evitando que atrapalhe a distribuição das salas. Outra alternativa é alocar esta turma para as 13h, fazendo com que finalize às 16h, horário em que as disciplinas com duas horas de duração geralmente terminam.
+Outro caso notável é a existência majoritárias de turmas criadas com dois períodos de duas horas, entretanto existem algumas que fogem deste padrão e possuem três horas de duração. A solução encontrada pelo Diretor é a de colocar esta disciplina começando às 10h, o que faz com que se alongue até as 13h, período geralmente usado pelos estudantes e servidores para se alimentar, e justamente por isso evitando que atrapalhe a distribuição das salas. Outra alternativa é alocar esta turma para as 13h, fazendo com que finalize às 16h, horário em que as disciplinas com duas horas de duração geralmente terminam.
 
 Segundo ele, saber a demanda máxima possível seria bom, visto que podem haver casos de solicitações de vagas para disciplinas de serviço que extrapolam a quantidade esperada para a distribuição balanceada dentre os cursos.
 
-Uma outra situação que ocorre é que algumas disciplinas historicamente têm seus horários definidos em um mesmo horário ao longo dos anos. Caso essa alocação seja alterada, ocorre a possibilidade de reclamação por parte dos professores, mesmo que esta alteração seja benéfica para os estudantes. Então por exemplo, os horários de 8h de uma segunda feira e de 16h de sexta feira, não são geralmente desajados pelos professores, mesmo que eles teoricamente tenham disponibilidade de 8 horas diárias.
+Uma outra situação que ocorre é que algumas disciplinas historicamente têm seus horários definidos em um mesmo horário ao longo dos anos. Caso essa alocação seja alterada, ocorre a possibilidade de reclamação por parte dos professores, mesmo que esta alteração seja benéfica para os estudantes. Então por exemplo, os horários de 8h de uma segunda feira e de 16h de sexta feira, não são geralmente desejados pelos professores, mesmo que eles teoricamente tenham disponibilidade de 8 horas diárias.
 
-Considerando a quantidade de laborátorios "concorrendo" simultaneamente às vagas, surge a dúvida: há ordem de precedência entre os laboratórios? A resposta para esta pergunta é "não. As vagas são distribuídas com prioridade na ordem de chegada".
+Considerando a quantidade de laboratórios "concorrendo" simultaneamente às vagas, surge a dúvida: há ordem de precedência entre os laboratórios? A resposta para esta pergunta é "não. As vagas são distribuídas com prioridade na ordem de chegada".
 
 Algumas outras informações que ele elenca:
 
 - Os períodos ímpares são os piores
   - Essa opinião pode ser resultado do fato de que os períodos ímpares apresentam um intervalo de tempo para preparo das grades menor do que os períodos pares.
 - As disciplinas básicas são grandes
-  - É esperado que uma grande quantidade de alunos se inscrevam nas disciplinas essenciais e iniciais de seus cursos, sendo boa parte dela relacionada com o conceito das disciplinas de serviço e com o conceito de ciclo básico das engenharias.
+  - É esperado que uma grande quantidade de alunos se inscreva nas disciplinas essenciais e iniciais de seus cursos, sendo boa parte dela relacionada com o conceito das disciplinas de serviço e com o conceito de ciclo básico das engenharias.
 - As disciplinas de serviço devem ser alocadas primeiro
   - Visto a grande quantidade de conflitos possíveis dentre os diversos cursos, ao alocá-las primeiro, os conflitos passam a ocorrer em turmas com uma quantidade menor de pessoas e/ou que sejam de um mesmo curso.
 - As alterações vão até o final do período
@@ -737,7 +737,7 @@ Considerando que um dos cargos relacionados com o processo de elaboração de gr
 
 Assim como sugerido pelo Desenvolvedor do Sistema Acadêmico, a Chefe também sugeriu que dados fictícios fossem utilizados. Sugeriu ainda que fosse utilizado o schema do banco de dados do sistema acadêmico como sua criação. Outra sugestão foi a solicitação ao Desenvolvedor do Sistema Acadêmico uma listagem de possíveis valores recorrentes no banco de dados.
 
-A entrevistada também relatou algumas problemáticas envolvendo a realocação dos horários das turmas. Segundo ela, qualquer alteração pode ser feita durante a semana anterior à matrícula, visto que, não havendo inscritos, não há problema na alteração. A partir do momento em que houver ao menos um aluno inscrito na disciplina, alterações só podem ser feitas caso não hajam conflitos aparentes e preferencialmente com um documento assinado pelos alunos que estiverem inscritos.
+A entrevistada também relatou algumas problemáticas envolvendo a realocação dos horários das turmas. Segundo ela, qualquer alteração pode ser feita durante a semana anterior à matrícula, visto que, não havendo inscritos, não há problema na alteração. A partir do momento em que houver ao menos um aluno inscrito na disciplina, alterações só podem ser feitas caso não haja conflitos aparentes e preferencialmente com um documento assinado pelos alunos que estiverem inscritos.
 
 #### 4.2.4. Responsável pela Secretaria Acadêmica (SECACAD) - Gustavo
 
@@ -746,7 +746,7 @@ Inicialmente, alguns tópicos foram trazidos como ponto focal da entrevista, sen
 - Dúvidas quanto as atribuições da SECACAD
 - Permissão de acesso aos dados que não são estritamente necessários, mas ajudariam
 - Definição dos períodos, demanda provisória e erros de estimativa
-- GitLab, issues e demandas
+- GitLab, tarefas (issues) e demandas
 - Automatização da burocracia
 - Ética VS Eficiência
 
@@ -761,7 +761,7 @@ Durante a conversa, ocorreram alguns apontamentos:
 - A sequência de definições é a seguinte: Vagas -> Professor -> Sala -> Horário
 - Não existe um registro oficial das salas e suas capacidades. Essa informação é inserida como um campo de texto no sistema acadêmico.
   - Com isso, o sistema permitiria teoricamente a alocação de duas turmas em uma mesma sala em um mesmo horário.
-- Cabe à pró-reitoria a mundança do início do primeiro semestre para expandir o período de preparação das grades horárias para o segundo período, sendo que este pedido deve partir da Câmara de Graduação.
+- Cabe à Pró-Reitoria a mudança do início do primeiro semestre para expandir o período de preparação das grades horárias para o segundo período, sendo que este pedido deve partir da Câmara de Graduação.
 
 Quanto ao tópico "ética VS eficiência", ele citou que embora o sistema acadêmico impeça a realocação de turmas com alunos inscritos, é possível que o mesmo seja burlado ao manualmente se excluir a inscrição do aluno. Sendo esta prática justificável em alguns casos.
 
@@ -773,11 +773,11 @@ Sendo o Coordenador de Computação o principal usuário do sistema, o atual Coo
 
 Seguindo o conceito de Design Iterativo utilizado também por \cite{andre_interaction_2018}, o Coordenador foi consultado em diversas etapas do desenvolvimento do sistema. Inicialmente, foi apresentado a ele o conceito do sistema, suas funcionalidades e possíveis benefícios. Em seguida, foi apresentado a ele um protótipo do sistema. Mas esta questão será melhor tratada em outro segmento deste mesmo trabalho, aqui será abordado apenas o conteúdo das entrevistas.
 
-Assim como comentado pelo Diretor do CCT, o Coordenador também fala sobre a definição de matérias que se mostram fixas, porém, agora com outro olhar: enquanto o diretor vê as matérias fixas como uma forma de atribuição histórica seguindo a ideia de "já era assim quando eu cheguei", o Coordenador por sua vez vê apenas como uma forma pré definida e imutável. Porém, olhando em um contexto mais amplo, essa definição de matérias não se mostra como obrigatória, visto que pode haver casos em que outra alocação de uma disciplina "fixa" apresente uma qualidade melhor do que seu horário usual.
+Assim como comentado pelo Diretor do CCT, o Coordenador também fala sobre a definição de matérias que se mostram fixas, porém, agora com outro olhar: enquanto o diretor vê as matérias fixas como uma forma de atribuição histórica seguindo a ideia de "já era assim quando eu cheguei", o Coordenador por sua vez vê apenas como uma forma predefinida e imutável. Porém, olhando em um contexto mais amplo, essa definição de matérias não se mostra como obrigatória, visto que pode haver casos em que outra alocação de uma disciplina "fixa" apresente uma qualidade melhor do que seu horário usual.
 
 Outra questão levantada por ele é quanto a um problema já antigo no curso de Ciência da Computação na UENF, que há anos apresenta um corpo docente reduzido em comparação com outros cursos, sendo necessário um desdobramento maior para suprir a demanda de disciplinas dos alunos. Uma solução utilizada é a de solicitar a abertura de uma bolsa para docência complementar, onde um aluno de pós-graduação pode ser alocado como professor de uma disciplina. Solução que embora não seja a ideal, é a que se mostra mais viável, dada a diminuta inscrição de candidatos à docência.
 
-Uma outra característica até então não citada pelos outros entrevistados é que existem salas que são vistas culturalmente como sendo de determinado curso, onde acaba sendo um certo tabu a alocação de uma disciplina de outro curso, mesmo que não se esteja infrigindo regra alguma.
+Uma outra característica até então não citada pelos outros entrevistados é que existem salas que são vistas culturalmente como sendo de determinado curso, onde acaba sendo um certo tabu a alocação de uma disciplina de outro curso, mesmo que não se esteja infringindo regra alguma.
 
 Quanto à priorização de veteranos já citada anteriormente, o Coordenador aponta uma outra forma de se enxergar a situação: em disciplinas dos períodos finais do curso, a prioridade é dos veteranos, ficando os calouros que ocasionalmente possam ter se adiantado, em segundo plano. Já em disciplinas dos períodos iniciais, a prioridade é dos calouros, ficando os veteranos que por ventura tenham reprovado, em segundo plano.
 
@@ -785,7 +785,7 @@ Diferente de como foi respondido pelo Diretor do CCT, para o Coordenador de Comp
 
 Considerando a recorrência de citação do conceito de estimativas de demanda, o Coordenador de Computação sugere que haja um campo no sistema para que seja inserida a demanda estimada de cada disciplina.
 
-Considerando que no contexto atual do curso de Ciência da Computação na UENF é iminente a adoção de uma nova grade currícular, o Coodenador apresentou preocupação em relação à possibilidade de que o sistema não seja mais utilizado após a adoção da nova grade. Essa questão encontra-se atualmente fora do escopo do atual projeto, entretanto, não se mostra como um problema de difícil solução, visto que o sistema pode ser adaptado para a nova grade.
+Considerando que no contexto atual do curso de Ciência da Computação na UENF é iminente a adoção de uma nova grade curricular, o Coordenador apresentou preocupação em relação à possibilidade de que o sistema não seja mais utilizado após a adoção da nova grade. Essa questão encontra-se atualmente fora do escopo do atual projeto, entretanto, não se mostra como um problema de difícil solução, visto que o sistema pode ser adaptado para a nova grade.
 
 #### 4.2.6. Entendimento geral das entrevistas
 
@@ -801,9 +801,9 @@ Ao somarmos o conhecimento presente no estatuto da UENF, com o conhecimento adqu
 
 1. Período ocorrendo normalmente;
 2. Coordenadores enviam para Chefes de Laboratório uma demanda estimada de cada uma das disciplinas que serão ofertadas;
-3. Chefes de Laboratório atrelam professores à disciplinas;
+3. Chefes de Laboratório atrelam professores a disciplinas;
 4. Chefes de Laboratório enviam para Diretores de Centro a demanda estimada;
-5. Dependendo das disponibilidade dos professores, cabe solicitar a abertura de uma bolsa de apoio ao ensino;
+5. Dependendo das disponibilidades dos professores, cabe solicitar a abertura de uma bolsa de apoio ao ensino;
 6. O Diretor aloca provisoriamente as disciplinas em horários e salas;
 7. O Coordenador de Curso analisa possíveis mudanças de horários que possam ser mais eficientes na distribuição dos alunos;
 8. O período letivo acaba;
@@ -821,7 +821,7 @@ Entrando em detalhes ainda maiores, podemos citar uma das etapas de criação da
 
 Como forma de analisar também a perspectiva dos discentes quanto à problemática abordada, foi elaborado um formulário de pesquisa com o intuito de se confirmar ou não a hipótese de que em sua maioria os alunos também se encontram insatisfeitos com a atual conjuntura de distribuição e alocação de turmas.
 
-Para este fim, foi utilizado um formulário de pesquisa qualitativa dos alunos disponível no [Anexo 1](#anexo-1). O formulário foi divulgado através de um link disponibilizado no grupo de alunos do curso de Ciência da Computação no WhatsApp, e também através de um link distribuído pela Secretaria Acadêmica à todos os discentes da UENF. No link, os estudantes poderiam apenas responder ao formulário utilizando de seu e-mail institucional, que é um e-mail do Google disponibilizado apenas para estudantes da UENF.
+Para este fim, foi utilizado um formulário de pesquisa qualitativa dos alunos disponível no [Anexo 1](#anexo-1). O formulário foi divulgado através de um link disponibilizado no grupo de alunos do curso de Ciência da Computação no WhatsApp, e também através de um link distribuído pela Secretaria Acadêmica a todos os discentes da UENF. No link, os estudantes poderiam apenas responder ao formulário utilizando de seu e-mail institucional, que é um e-mail do Google disponibilizado apenas para estudantes da UENF.
 
 A seguir, estão dispostos alguns resultados obtidos pelo formulário:
 
@@ -837,9 +837,9 @@ A seguir, estão dispostos alguns resultados obtidos pelo formulário:
 
 O formulário foi respondido por XXX alunos, sendo XXX do curso de Ciência da Computação e XXX de outros cursos.
 
-Vemos também a distribruição dos anos de ingresso dos alunos que responderam o formulário, sendo em sua maioria de XXX e XXX, o que pode ser justificado pela esperada evasão de alunos mais antigos.
+Vemos também a distribuição dos anos de ingresso dos alunos que responderam o formulário, sendo em sua maioria de XXX e XXX, o que pode ser justificado pela esperada evasão de alunos mais antigos.
 
-![Temp Form Image][ImgForms1.0]
+![Imagem temporária do Formulário][ImgForms1.0]
 
 #### 4.4.2. Pesquisa de satisfação
 
@@ -857,7 +857,7 @@ O que se apresenta como um agravante ainda maior na percepção da progressão n
 
 Abaixo estão dispostos os resultados encontrados nesta seção:
 
-![Temp Form Image][ImgForms2.0]
+![Imagem temporária do Formulário][ImgForms2.0]
 
 Como alternativa de visualização dos dados, dispõe-se aqui uma tabela com os dados obtidos através dessa seção do formulário.
 
@@ -865,7 +865,7 @@ Como alternativa de visualização dos dados, dispõe-se aqui uma tabela com os 
 | ------------------------------------------------------------------------------------------------------------------------------------------------------------- | :---: | :---: | :---: |
 | Salas: Você já teve que mudar de sala por falta de algum acessório como quadro, projetor ou monitor?                                                          |  XXX  |  XXX  |  XXX  |
 | Salas: Você já teve aula cuja sala não dispunha de carteiras o suficiente?                                                                                    |  XXX  |  XXX  |  XXX  |
-| Vagas: Você já quis entrar em uma disciplina mas ela não tinha vaga?                                                                                          |  XXX  |  XXX  |  XXX  |
+| Vagas: Você já quis entrar em uma disciplina, mas ela não tinha vaga?                                                                                         |  XXX  |  XXX  |  XXX  |
 | Vagas: Você já ficou acordado após meia-noite por medo de não ter vaga para as disciplinas que deseja cursar?                                                 |  XXX  |  XXX  |  XXX  |
 | Conflitos: Você já deixou de se inscrever em uma disciplina por causa de conflito de horário?                                                                 |  XXX  |  XXX  |  XXX  |
 | Preferências: Você já preferiu não se inscrever em uma disciplina para cursá-la em outro momento mais oportuno?                                               |  XXX  |  XXX  |  XXX  |
@@ -873,9 +873,9 @@ Como alternativa de visualização dos dados, dispõe-se aqui uma tabela com os 
 
 #### 4.4.3. Preferências pessoais
 
-Neste segmento, visa-se enteder um pouco melhor o processo decisório dos alunos quanto à escolha das disciplinas que desejam cursar. Primeiro, lhes é indagado quanto à disposição das disciplinas, variando entre disciplinas concentradas em poucos dias ou espalhadas durante a semana e quanto à preferência de horários, variando entre horários matutinos e vespertinos.
+Neste segmento, visa-se entender um pouco melhor o processo decisório dos alunos quanto à escolha das disciplinas que desejam cursar. Primeiro, lhes é indagado quanto à disposição das disciplinas, variando entre disciplinas concentradas em poucos dias ou espalhadas durante a semana e quanto à preferência de horários, variando entre horários matutinos e vespertinos.
 
-Embora não lide com conflitos, a análise de seus resultados podem auxiliar na escolha de distribuição futura dos usuários do sistema, ao desenvolverem a grade horária, caso desejem considerar as preferências dos estudantes.
+Embora não lide com conflitos, a análise de seus resultados pode auxiliar na escolha de distribuição futura dos usuários do sistema, ao desenvolverem a grade horária, caso desejem considerar as preferências dos estudantes.
 
 Podemos ver que há uma grande distribuição entre as preferências dos alunos, tendendo um pouco para XXX no período XXX.
 
@@ -883,7 +883,7 @@ Em seguida, é questionado sobre qual é o critério de seleção de disciplinas
 
 Resultado este que é curioso, visto que o desejo de não se atrasar em seu progresso ocorre simultaneamente com a preferência pessoal de não se inscrever em disciplinas e cursá-las posteriormente, mesmo que isso possa atrasar seu progresso. Entende-se que nem todas as disciplinas, caso não cursadas em seu período esperado, resultarão no atraso da grade, mas ainda assim, é um fato curioso.
 
-![Temp Form Image][ImgForms3.0]
+![Imagem temporária do Formulário][ImgForms3.0]
 
 | **Característica**                          |  _1_  |  _2_  |  _3_  |  _4_  |  _5_  |
 | ------------------------------------------- | :---: | :---: | :---: | :---: | :---: |
@@ -907,7 +907,7 @@ Quanto aos atrasos para a realização de disciplinas, o ideal desejado é que n
 
 Podemos então calcular que o atraso médio dentre os respondentes da pesquisa é de XXX semestres, sendo que XXX% dos alunos já atrasaram XXX semestres ou mais.
 
-![Temp Form Image][ImgForms4.0]
+![Imagem temporária do Formulário][ImgForms4.0]
 
 | **Pergunta**                                                                                              |  _1_  |  _2_  |  _3_  |  _4_  |  _5_  |  _6_  |  _7_  |  _8_  |  _9_  | _10_  |
 | --------------------------------------------------------------------------------------------------------- | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
@@ -918,11 +918,11 @@ Podemos então calcular que o atraso médio dentre os respondentes da pesquisa �
 
 Aqui, buscamos uma análise mais bruta e direta à concordância dos respondentes quanto às características atribuídas à distribuição de disciplinas semestrais, ondem eles avaliam com notas de 1 a 5 o quanto concordam com cada um dos adjetivos, sendo eles "Justa", "Variada", "Contínua", "Eficiente", "Distribuída" e "Satisfatória".
 
-![Temp Form Image][ImgForms5.1]
+![Imagem temporária do Formulário][ImgForms5.1]
 
-![Temp Form Image][ImgForms5.2]
+![Imagem temporária do Formulário][ImgForms5.2]
 
-![Temp Form Image][ImgForms5.3]
+![Imagem temporária do Formulário][ImgForms5.3]
 
 Como forma tabular, temos os seguintes resultados:
 
@@ -967,13 +967,13 @@ Os interesses dos alunos se mostram em sua maioria alinhados com os interesses d
 
 - Projeto pessoal: Andamento dos alunos
 
-Como interesse próprio, cogitou-se o desenvolvimento de uma plataforma onde se pudesse ver em que ponto os alunos se encontram em relação ao andamento de seus cursos. Para isso, seria necessária a obtenção dos dados dos alunos, seja por parte dos mesmos, do coordenador ou por integração com o sistema acadêmico. Com estes dados, seria possível criar uma interface que mostrasse o andamento dos alunos, quais matérias já foram cursadas, quais estão sendo cursadas e quais ainda faltam. Além disso, seria possível mostrar quais matérias são pré-requisitos para outras. Assim, o aluno e a coordenação poderia ter uma visão geral de seu andamento e de quais matérias ele precisará cursar para se formar. Infelizmente esse projeto não saiu do mundo das ideias. Entretanto, lá permaneceu sendo maturado.
+Como interesse próprio, cogitou-se o desenvolvimento de uma plataforma onde se pudesse ver em que ponto os alunos se encontram em relação ao andamento de seus cursos. Para isso, seria necessária a obtenção dos dados dos alunos, seja por parte dos mesmos, do coordenador ou por integração com o sistema acadêmico. Com estes dados, seria possível criar uma interface que mostrasse o andamento dos alunos, quais matérias já foram cursadas, quais estão sendo cursadas e quais ainda faltam. Além disso, seria possível mostrar quais matérias são pré-requisitos para outras. Assim, o aluno e a coordenação poderiam ter uma visão geral de seu andamento e de quais matérias ele precisará cursar para se formar. Infelizmente esse projeto não saiu do mundo das ideias. Entretanto, lá permaneceu sendo maturado.
 
 - Projeto pessoal: Cálculo de demanda
 
-Ao longo dos semestres, foi percebido que durante o intervalo entre-semestres, os alunos precisam se inscrever nas matérias que desejam cursar no semestre seguinte. Para isso, é necessário que o coordenador saiba quantos alunos estão interessados em cada matéria para que ele possa definir quantas turmas serão abertas. Para isso, o coordenador dispõe de algumas alternativas como estimar quantos alunos se inscreverão em cada disciplina, checar manualmente no sistema acadêmico quais alunos podem fazer cada matéria, ou então obter diretamente dos alunos através de um formulário em quais disciplinas cada um dos alunos tem a intenção de cursar.
+Ao longo dos semestres, foi percebido que durante o intervalo entre os semestres, os alunos precisam se inscrever nas matérias que desejam cursar no semestre seguinte. Para isso, é necessário que o coordenador saiba quantos alunos estão interessados em cada matéria para que ele possa definir quantas turmas serão abertas. Para isso, o coordenador dispõe de algumas alternativas como estimar quantos alunos se inscreverão em cada disciplina, checar manualmente no sistema acadêmico quais alunos podem fazer cada matéria, ou então obter diretamente dos alunos através de um formulário em quais disciplinas cada um dos alunos tem a intenção de cursar.
 
-O método que o Coordenador de Ciência da Computação realiza consiste em baixar o extrato de todos os alunos do curso, e tabelar no excel qual é o andamento de cada um dos alunos, para que assim, através da análise manual pudesse ver qual é o andamento de cada um e de quantos alunos demandam quais disciplinas.
+O método que o Coordenador de Ciência da Computação realiza consiste em baixar o extrato de todos os alunos do curso, e tabelar no Excel qual é o andamento de cada um dos alunos, para que assim, através da análise manual pudesse ver qual é o andamento de cada um e de quantos alunos demandam quais disciplinas.
 
 Entretanto, todas essas alternativas são trabalhosas e propensas a erros. Sendo assim, foi pensado em uma forma de automatizar esse processo. Para este fim, foi elaborado um código em [Python][LinkPython] que atualmente [se encontra no GitHub][LinkRepoDemanda]. Este código tem como entrada os extratos de matrícula dos alunos e como saída uma lista de disciplinas e a quantidade de alunos que estão matriculados em cada uma delas.
 
@@ -982,7 +982,7 @@ Entretanto, todas essas alternativas são trabalhosas e propensas a erros. Sendo
 
 ```python
 
-'''Obter demanda por extratos pdf'''
+'''Obter demanda por extratos em PDF'''
 import code_1_set_working_directory     as swd
 import code_2_get_pdf_list              as gpl
 import code_3_get_string_from_pdf       as gsp
@@ -1002,9 +1002,11 @@ demand_and_values_list  = mgd.get_merged_demands(demand_list)
 odt.output_to_txt(demand_and_values_list)
 ```
 
-Este código foi desenvolvido em 8 etapas, cada uma com um arquivo separado. Para alcançar a lista das demandas, é necessário primeiro obter a lista dos arquivos pdf que serão processados, em seguida extrair seus dados com a biblioteca PDFminer, estruturar os dados obtidos, filtrar os dados estruturados, obter a demanda de cada disciplina, juntar as demandas de cada disciplina e salvar os dados obtidos em um arquivo txt.
+Este código foi desenvolvido em 8 etapas, cada uma com um arquivo separado. Para alcançar a lista das demandas, é necessário primeiro obter a lista dos arquivos em formato PDF que serão processados, em seguida extrair seus dados com a biblioteca [PDFMiner][PDFMiner], estruturar os dados obtidos, filtrar os dados estruturados, obter a demanda de cada disciplina, juntar as demandas de cada disciplina e salvar os dados obtidos em um arquivo de texto.
 
-Embora o código cumpra com seu objetivo, apresenta algumas características limitantes. A primeira é que os pdfs precisam ser obtidos manualmente, um por um, pelo coordenador, sendo ela por si só uma tarefa extenuante, o que não é desejado. Além disso, o seu uso não é muito intuitivo, sendo necessário que o usuário lide com o prompt de comando e instale as dependências necessárias, o que acaba trazendo uma dificuldade a mais ao usuário. O código também apresenta limitações por sistema operacional, não sendo garantido o seu funcionamento em sistemas operacionais diferentes do Windows.
+[PDFMiner]: https://pypi.org/project/pdfminer/
+
+Embora o código cumpra com seu objetivo, apresenta algumas características limitantes. A primeira é que os PDFs precisam ser obtidos manualmente, um por um, pelo coordenador, sendo ela por si só uma tarefa extenuante, o que não é desejado. Além disso, o seu uso não é muito intuitivo, sendo necessário que o usuário lide com o prompt de comando e instale as dependências necessárias, o que acaba trazendo uma dificuldade a mais ao usuário. O código também apresenta limitações por sistema operacional, não sendo garantido o seu funcionamento em sistemas operacionais diferentes do Windows.
 
 Com estes empecilhos, o código acabou abandonado, visto que apesar de útil, não era prático o suficiente para ser utilizado.
 
@@ -1020,11 +1022,13 @@ Segundo o [Estudo Técnico sobre o tratamento de dados pessoais para fins acadê
 
 [LinkANPD]: https://www.gov.br/anpd/pt-br/assuntos/noticias/sei_00261-000810_2022_17.pdf
 
-Apesar das possibilidades de meios legalmente válidos para a aquisição dos dados, optou-se por abandonar a integração com o Sistema Acadêmico e o uso de dados reais dos alunos já existentes na plataformas. Rumando-se então para uma abordagem mais manual de inserção de dados manualmente por parte dos usuários do sistema.
+Apesar das possibilidades de meios legalmente válidos para a aquisição dos dados, optou-se por abandonar a integração com o Sistema Acadêmico e o uso de dados reais dos alunos já existentes na plataforma. Rumando-se então para uma abordagem mais manual de inserção de dados manualmente por parte dos usuários do sistema.
 
 ### 5.3. Protótipo
 
-Para protótipo foi usado o figma...
+Para protótipo foi usado o [Figma][LinkFigma]...
+
+[LinkFigma]: https://www.figma.com/
 
 ### 5.4. Banco de Dados
 
@@ -1054,7 +1058,7 @@ Abaixo se encontram algumas perguntas feitas a discentes da UENF em relação à
 
 Olá! Desde já agradeço por ceder um pouco do seu tempo para responder a este formulário. Considerando que nosso tempo é valioso, vamos direto ao objetivo:
 
-Me chamo João Vítor Fernandes Dias, estudante de Ciência da Computação na UENF, e estou fazendo minha Monografia. Ela trata sobre a elaboração de um sistema para a coordenação de curso poder analisar mais facilmente quais são as disciplinas que serão disponibilizadas a cada semestre e a quais salas e professores serão atribuídas.
+Me chamo João Vítor Fernandes Dias, estudante de Ciência da Computação na UENF, e estou fazendo minha Monografia. Ela trata sobre a elaboração de um sistema para a coordenação de curso poder analisar mais facilmente quais são as disciplinas que serão disponibilizadas a cada semestre e a quais salas e professores serão atribuídos.
 
 O objetivo é que mais disciplinas possam ser oferecidas em horários que mais alunos possam se inscrever sem haver conflitos com outras disciplinas.
 
@@ -1068,7 +1072,7 @@ Este formulário tem como objetivo avaliar a sua satisfação em relação a est
   - Qual o seu curso?
   - Em que ano você ingressou na UENF?
 - Vagas
-  - Você já quis entrar em uma disciplina mas ela não tinha vaga?
+  - Você já quis entrar em uma disciplina, mas ela não tinha vaga?
   - Você já ficou acordado após meia-noite por medo de não ter vaga para as disciplinas que deseja cursar?
 - Conflitos
   - Você já se deparou com duas ou mais disciplinas desejadas sendo ofertadas no mesmo horário?
