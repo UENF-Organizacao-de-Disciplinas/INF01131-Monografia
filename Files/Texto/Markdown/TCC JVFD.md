@@ -575,6 +575,22 @@ A Figura \ref{fig:sistema} apresenta o comportamento geral do sistema, como seus
 
 ### 3.4. Marco Teórico <!-- O que e de quais disciplinas tô usando? -->
 
+Tendo em vista que o trabalho envolve uma pletora de conhecimento de diversas áres, é necessário que sejam definidos alguns conceitos que serão utilizados ao longo do trabalho.
+
+- Estruturas de dados
+- Algoritmos
+- Engenharia de Software
+- Pesquisa científica
+
+<!--
+[19:53, 09/11/2023] 💠: Conversamos sobre o marco teórico. Isso seria informar sobre os trabalhos anteriores de outros pesquisadores ou informar quais são os conteúdos disciplinares usados para o desenvolvimento da monografia?
+[19:55, 09/11/2023] 🧑‍💻: Marco teórico seria apresentar, desenvolver os conteúdos usados na monografia.
+[19:56, 09/11/2023] 💠: Aprofundar um pouco mais nos conceitos gerais?
+[19:56, 09/11/2023] 🧑‍💻: Já revisão da literatura envolve, pesquisar, resumir e apresentar os trabalhos relacionados com a mesma temática.
+[19:56, 09/11/2023] 🧑‍💻: Sim, tem que ter base teórica. E ao mesmo tempo, um contexto, como se encaixa seu trabalho no que já foi feito.
+[19:58, 09/11/2023] 💠: Acho que consigo seguir com isso
+-->
+
 ## 4. Estrutura organizacional da instituição estudada
 
 Para que se possa entender melhor o problema, é necessário que se entenda a estrutura organizacional da UENF disposta no [Estatuto da UENF][LinkEstatutoUENF]. A [Universidade Estadual do Norte Fluminense Darcy Ribeiro (UENF)][LinkUENF], ainda que limitando ao que convém neste trabalho.
@@ -1034,10 +1050,6 @@ Para protótipo foi usado o [Figma][LinkFigma]...
 
 Usando o mesmo banco de dados do Sistema Acadêmico, temos que...
 
-```mermaid
-
-```
-
 ### 5.5. Front-end
 
 ### 5.6. Back-end
@@ -1045,6 +1057,8 @@ Usando o mesmo banco de dados do Sistema Acadêmico, temos que...
 ## 6. Resultado/Experimentos/Cenários
 
 ## 7. Conclusões
+
+### 7.1. Trabalhos futuros
 
 ## 99. Referências <!-- Lembrar te colocar links para PDFs para ajudar o futuro 🫡 -->
 
