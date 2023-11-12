@@ -25,7 +25,10 @@ HEURÍSTICA PARA O PROBLEMA DA PROGRAMAÇÃO DE HORÁRIO: ESTUDO DE CASO DO CURS
 CAMPOS DOS GOYTACAZES
 2013
 
+---
+
 UNIVERSIDADE ESTADUAL DO NORTE FLUMINENSE DARCY RIBEIRO
+
 LABORATÓRIO DE CIÊNCIAS MATEMÁTICAS
 CIÊNCIA DA COMPUTAÇÃO
 
@@ -33,29 +36,29 @@ SÂNYA CARVALHO DOS SANTOS
 
 HEURÍSTICA PARA O PROBLEMA DA PROGRAMAÇÃO DE HORÁRIO: ESTUDO DE CASO DO CURSO DE CIÊNCIA DA COMPUTAÇÃO DA UNIVERSIDADE ESTADUAL DO NORTE FLUMINENSE
 
-Trabalho apresentado à Coordenação do Curso de Graduação em Ciência da Computação, da Universidade Estadual do Norte Fluminense como parte das exigências para obtenção do titulo dc Bacharel em Ciência da Computação.
+Trabalho apresentado à Coordenação do Curso de Graduação em Ciência da Computação, da Universidade Estadual do Norte Fluminense como parte das exigências para obtenção do título de Bacharel em Ciência da Computação.
 
-Orientador: Prof. Dr. Ferrnín Alfredo Tang Montané
+Orientador: Prof. Dr. Fermín Alfredo Tang Montané
 
 CAMPOS DOS GOYTACAZES
 2013
 
 ---
 
-Monografia sob o título Heurística para o Problema da Programação de Caso Ciência da Computação da Universidade Estadual do Norte Fluminense, por Sanya Carvalho dos Santos e aprovada no dia 05/09/2013, em Campos dos Estado do Rio lareiro, pela banca examinadora constituída pelos doutores:
+Monografia sob o título Heurística para o Problema da Programação de Caso Ciência da Computação da Universidade Estadual do Norte Fluminense, por Sânya Carvalho dos Santos e aprovada no dia 05/09/2013, em Campos dos Goytacazes, Estado do Rio de Janeiro,1pela banca examinadora constituída pelos doutores:
 
-Prof. ry. Fermin Alfredo Tang Montané
-Orientador — Universidade Estadual do Norte Fluminense Darcy
+Prof. Dr. Fermín Alfredo Tang Montané
+Orientador - Universidade Estadual do Norte Fluminense Darcy
 
-Antonio Rivera Escriba
+Prof. Dr. Luis Antonio Rivera Escriba
 Universidade Estadual do Norte Fluminense Darcy Ribeiro
 
-Prof. Dr. Oscar Alfredo Paz la Torre
+Prof. Dr. Oscar Alfredo P1z la Torre
 Universidade Estadual do Norte Fluminense Darcy Ribeiro
 
 ---
 
-Dedico este trabalho a minha mae que me ensinou o amor pelos estudos. Sem o seu apoio e ensinamentos eu não teria a base que precisei para erguer esta conquista.
+Dedico este trabalho a minha mãe que me ensinou o amor pelos estudos. Sem o seu apoio e ensinamentos eu não teria a base que precisei para erguer esta conquista.
 
 ## Sumário
 
@@ -110,17 +113,17 @@ Apêndice F
 
 ### 1.1 Considerações iniciais
 
-No inicio de cada período letivo as instituições de ensino desenvolvem sua grade de horários, distribuindo os professores entre as turmas e as turmas entre os horários e salas de aulas disponíveis. Na maioria dessas instituições esse trabalho demanda muito tempo e esforço, geram transtornos e muita das vezes os resultados não são tão satisfatórios, pois a solução pode não atender a todos os requisitos.
+No início de cada período letivo as instituições de ensino desenvolvem sua grade de horários, distribuindo os professores entre as turmas e as turmas entre os horários e salas de aulas disponíveis. Na maioria dessas instituições esse trabalho demanda muito tempo e esforço, geram transtornos e muita das vezes os resultados não são tão satisfatórios, pois a solução pode não atender a todos os requisitos.
 
 O Problema de Programação de Horários (PPH), que na literatura é referenciado como Timetabling Problem (TTP) diz respeito à alocação de aulas na grade de horário de uma instituição de ensino a um conjunto restrito de horários, satisfazendo diversas restrições. Vale ressaltar que o nome Problema de Programação de Horários (PPH) não denota um problema específico, porém, representa a uma família de problemas com diversas variantes que podem ser classificadas em categorias.
 
-Uma categoria deste problema é o Problema de Programação de Horários Professor x Turma com Capacidade (PPTC), neste problema, cada professor deve lecionar um determinado número de aulas para cada turma em um conjunto de períodos [Santos2007]. Outra categoria é o Problema de Alocação de Aulas a Salas (PAAS). Este problema consiste em alocar aulas, com horários de início e término previamente programados, a um número fixo de salas, tal como abordados por Subramanian et al [Subramanian+2011].
+Uma categoria deste problema é o Problema de Programação de Horários Professor x Turma com Capacidade (PPTC), neste problema, cada professor deve lecionar um determinado número de aulas para cada turma em um conjunto de períodos [Santos2007]. Outra categoria é o Problema de Alocação de Aulas a Salas (PAAS). Este problema consiste em alocar aulas, com horários de início e término previamente programados, a um número fixo de salas, tal como abordados por Subramanian et al [Subramanian__2011].
 
-O PPH é um problema de dificil generalização, sendo desenvolvido na maioria das vezes, para atender a uma instituição específica, dado que há uma diversidade de regimes que variam de instituição para instituição [Silva+2005]. Sua solução manual geralmente não gera soluções ótimas, demandam muito tempo e esforço, e muita das vezes não atendem aos requisitos essenciais, causando muito transtorno no início do período letivo.
+O PPH é um problema de dificil generalização, sendo desenvolvido na maioria das vezes, para atender a uma instituição específica, dado que há uma diversidade de regimes que variam de instituição para instituição [Silva__2005]. Sua solução manual geralmente não gera soluções ótimas, demandam muito tempo e esforço, e muita das vezes não atendem aos requisitos essenciais, causando muito transtorno no início do período letivo.
 
-Por ser um problema NP-Dificil a solução ótima para grandes instâncias não é possível de ser encontrada em tempo razoável usando métodos de programação matemática (métodos exatos). O problema é então normalmente tratado através de técnicas heurísticas, que apesar de não enconfrarem soluções ótimas são capazes de retomar soluções de qualidade em um tempo adequado para as necessidades da aplicação.
+Por ser um problema NP-Dificil a solução ótima para grandes instâncias não é possível de ser encontrada em tempo razoável usando métodos de programação matemática (métodos exatos). O problema é então normalmente tratado através de técnicas heurísticas, que apesar de não encontrarem soluções ótimas são capazes de retomar soluções de qualidade em um tempo adequado para as necessidades da aplicação.
 
-Entre as técnicas heurísticas destacam-se as chamadas metaheurísticas porque são providas de mecanismos para escapar de ótimos locais. Em geral, no entanto, as metaheurísticas sofrem grande influência das soluções iniciais, isto é, uma solução inicial de boa qualidade induz a um processo de busca mais rápida, com produção de soluções finais melhores [Souza+2002]. Entre as metaheurísticas mais utilizadas para resolver o problema estão: Simulated Annealing, Algoritmos Genéticos, Colônia de Formigas, Busca Tabu, entre outros.
+Entre as técnicas heurísticas destacam-se as chamadas metaheurísticas porque são providas de mecanismos para escapar de ótimos locais. Em geral, no entanto, as metaheurísticas sofrem grande influência das soluções iniciais, isto é, uma solução inicial de boa qualidade induz a um processo de busca mais rápida, com produção de soluções finais melhores [Souza__2002]. Entre as metaheurísticas mais utilizadas para resolver o problema estão: Simulated Annealing, Algoritmos Genéticos, Colônia de Formigas, Busca Tabu, entre outros.
 
 Uma característica particular do problema é a dificuldade de avaliação da solução, pois existem várias soluções viáveis e consideradas de qualidade. Outro aspecto de dificuldade de avaliação do método foi levantado por Santos [Santos2007], ele conclui que apesar das inúmeras heurísticas existentes na literatura, a analise comparativa destas é muitas vezes prejudicada pela metodologia empregada, segundo Santos [Santos2007] as "comparações entre métodos são raras, sendo que a avaliação das soluções obtidas se dá na maioria dos casos por meios subjetivos, através da descrição do sucesso obtido pelo ponto de vista de usuários das aplicações".
 
@@ -128,11 +131,11 @@ Uma característica particular do problema é a dificuldade de avaliação da so
 
 Existem algumas ferramentas comerciais que prometem a geração automatizada de grades de horários, entretanto, sua utilização é pouco frequente uma vez que este tipo de problema incorre em necessidades específicas de um determinado curso, em detrimento das soluções genéricas existentes [Vieira2011].
 
-O objetivo, portanto, é resolver o problema de alocação de horários de disciplinas para um período letivo qualquer do curso de Ciência da Computação na UENF. Para isso, certas restrições obrigatórias deverão ser atendidas e outras não obrigatórias poderão ser otimizadas. Procura-se produzir um bom quadro de horários de fonna automática.
+O objetivo, portanto, é resolver o problema de alocação de horários de disciplinas para um período letivo qualquer do curso de Ciência da Computação na UENF. Para isso, certas restrições obrigatórias deverão ser atendidas e outras não obrigatórias poderão ser otimizadas. Procura-se produzir um bom quadro de horários de forma automática.
 
-O PPH por ser um problema NP-Dificil, na medida que os dados de entrada crescem, também cresce sua complexidade, dificultando a obtenção de soluções ótimas. Suas aplicações em diversos contextos, e o grande esforço para encontrar soluções viáveis de alta qualidade vêm atraindo pesquisadores, incluindo uma competição em 2007, a International Timetabling Competition.
+O PPH por ser um problema NP-Difícil, na medida que os dados de entrada crescem, também cresce sua complexidade, dificultando a obtenção de soluções ótimas. Suas aplicações em diversos contextos, e o grande esforço para encontrar soluções viáveis de alta qualidade vêm atraindo pesquisadores, incluindo uma competição em 2007, a International Timetabling Competition.
 
-Na literatura é possível encontrar diversos trabalhos e abordagens de solução para o PPH, porém, desenvolvidas para instituições especificas. Devido às particularidades de cada instituição não é possível generalizar os requisitos do problema, e fazer um único software generalizado, o que justifica a busca por implementações de métodos de solução automáticos para o curso de Ciência da Computação na UENF , ondejá é encontrada dificuldade pelos professores responsáveis de gerar a grade de todos os períodos em cada semestre,
+Na literatura é possível encontrar diversos trabalhos e abordagens de solução para o PPH, porém, desenvolvidas para instituições especificas. Devido às particularidades de cada instituição não é possível generalizar os requisitos do problema, e fazer um único software generalizado, o que justifica a busca por implementações de métodos de solução automáticos para o curso de Ciência da Computação na UENF , onde já é encontrada dificuldade pelos professores responsáveis de gerar a grade de todos os períodos em cada semestre,
 
 ### 1.3 Estrutura do trabalho
 
@@ -162,54 +165,104 @@ A programação inteira e combinatória ou também conhecida como otimização d
 
 Existem diferentes problemas de programação matemática que podem ser classificados de acordo com o tipo de variável. Os principais tipos de problemas são os seguintes: Problema de Programação Linear, Problema de Programação Inteira, Problema de Programação Binária e o Problema de Programação Linear Inteira Mista. Estes problemas são descritos a seguir.
 
-Quando todas as variáveis são inteiras, tem-se um problema de programação (linear) inteira (PI),
+Quando todas as variáveis são inteiras, tem-se um _problema de programação (linear) inteira (PI)_,
 
-<!-- EQUAÇÃO -->
+$$
+z = \max cx \\
+Ax \leq b \\
+x \in Z^{n}_{+}
+$$
+(2.1)
 
-E se todas as variáveis assumem valores O ou l, tem-se um problema de programação 0-1 ou binária (PB) escrito como:
+E se todas as variáveis assumem valores _0 ou l, tem-se um problema de programação 0-1 ou binária (PB)_ escrito como:
 
-<!-- EQUAÇÃO -->
+$$
+z = \max cx \\
+Ax \leq b \\
+x \in B^{n}
+$$
+(2.2)
 
-Já um problema com variáveis inteiras e reais é chamado de programação (linear) inteira mista (PIM) quando possui a seguinte forma:
+Já um problema com variáveis inteiras e reais é chamado de _programação (linear) inteira mista (PIM)_ quando possui a seguinte forma:
 
-<!-- EQUAÇÃO -->
+$$
+z = \max cx + dy \\
+Ax + Dy = b \\
+x \in R^{n}_{+}, y \in Z^{p}_{+}
+$$
+(2.3)
 
-onde os parâmetros do problema são representados por: A é uma matriz (mxn), D uma matriz (mxp), c um vetor (lxn), d um vetor (lxp) e b um vetor (mxl). Os vetores de variáveis são x e y com dimensões (nxl) e (pxl).
+onde os parâmetros do problema são representados por: $A$ é uma matriz ($mxn$), $D$ uma matriz ($mxp$), $c$ um vetor ($lxn$), $d$ um vetor ($lxp$) e $b$ um vetor ($mxl$). Os vetores de variáveis são $x$ e $y$ com dimensões ($nxl$) e ($pxl$).
 
-O problema de otimização combinatória (OC) pode ser definido como um conjunto finito N = (1 n}, um conjunto de pesos CJ para cada j e N, e uma família F de subconjuntos factíveis de N, consiste em achar o subconjunto de peso mínimo de F,
+O problema de $otimização combinatória (OC)$ pode ser definido como um conjunto finito $N = \{1 \dots n\}$, um conjunto de pesos $C_j$ para cada $j \in N$, e uma família $F$ de subconjuntos factíveis de $N$, consiste em achar o subconjunto de peso mínimo de $F$,
 isto é:
 
-<!-- EQUAÇÃO -->
+$$
+\min \{\sum_{j \in S} C_j: S \in F \}
+$$
+(2.4)
 
-De modo geral, um problema de OC pode ser formulado como um problema de PI ou de PB. Problemas de programação inteira e combinatória podem ser resolvidos pelos seguintes métodos:
+<!-- Não consegui usar o Left and Right -->
 
-- métodos ótimos (exatos): fornecem soluções ótimas.
-- algoritmos aproximados: fornecem soluções subótimas com limite de distância máxima entre elas e o valor da solução ótima.
-- métodos heurísticos: fornece uma solução subótima, sem conhecimento da qualidade desta em relação a uma solução ótima.
+De modo geral, um problema de OC pode ser formulado como um problema de _PI_ ou de _PB_. Problemas de _programação inteira e combinatória_ podem ser resolvidos pelos seguintes métodos:
 
-Dentre os métodos mais bem sucedidos para resolver problemas genéricos de programação inteira estão os baseados nos enfoques de enumeração implícita, ou branch-and-bound, e de planos de corte, presentes nos pacotes comerciais de otimização, tais como CPLEX, XPRESS e LINDO. Diversos problemas de programação de horário podem ser fielmente modelados utilizando a Programação Linear Inteira Mista, e estes podem ser resolvidos através desses softwares [ArenaIes+2007].
+- **métodos ótimos (exatos)**: fornecem soluções ótimas.
+- **algoritmos aproximados**: fornecem soluções subótimas com limite de distância máxima entre elas e o valor da solução ótima.
+- **métodos heurísticos**: fornece uma solução subótima, sem conhecimento da qualidade desta em relação a uma solução ótima.
+
+Dentre os métodos mais bem sucedidos para resolver problemas genéricos de programação inteira estão os baseados nos enfoques de enumeração implícita, ou _branch-and-bound_, e de planos de corte, presentes nos pacotes comerciais de otimização, tais como CPLEX, XPRESS e LINDO. Diversos problemas de programação de horário podem ser fielmente modelados utilizando a Programação Linear Inteira Mista, e estes podem ser resolvidos através desses softwares [ArenaIes__2007].
 
 Uma descrição de um problema clássico de PPH, o Problema de Programação de Horários Professor x Turma (PPT), onde cada professor deve lecionar um determinado números de aulas para cada turma em um conjunto de períodos foi modelado por Santos [Santos 2007]. O modelo é o seguinte:
 
-<!-- EQUAÇÃO -->
+$$
+\text{encontre } x_{ptdh}
+\forall p \in P, t \in T, d \in D, h \in H
+$$
+(2.5)
+
+$$
+\text{sujeito a } \\
+\sum_{d \in D} \sum_{h \in H} x_{ptdh} = \~{r}_{pt} \forall p \in P, t \in T
+$$
+(2.6)
+
+$$
+\sum_{p \in P} x_{ptdh} \leq 1 \forall t \in T, d \in D, h \in H
+$$
+(2.7)
+
+$$
+\sum_{t \in T} x_{ptdh} \leq \~{p}_{pdh} \forall p \in P, d \in D, h \in H
+$$
+(2.8)
+
+$$
+x_{ptdh} \in \{0, 1\} \forall p \in P, t \in T, d \in D, h \in H
+$$
+(2.9)
 
 Onde:
 
-- P: coujunto de professores, com elementos p e P numerados como 1, , IPI;
-- T: conjunto de turmas, com elementos t e T numerados como l, ... , ITI
-- D: conjunto de dias letivos, com elementos d D numerados como l, , IDI
-- H: conjunto de períodos letivos por dia, com elementos h E H numerados como
-- IHI;
-- RIPIxlTl: matriz de requerimentos, onde Fpt indica quantas aulas o professor p deve lecionar para a turma t;
-- IPIxlDlxlHl: matriz de disponibilidade de professores, onde ppdh = 1 indica que o professor p está disponível do dia d no período h, ppdh = 0 caso contrário; e Xptdh é a seguinte variável de decisão:
+- P: conjunto de professores, com elementos $p \in P$ numerados como $1, \dots, |P|$;
+- T: conjunto de turmas, com elementos $t \in T$ numerados como $1, \dots, |T|$;
+- D: conjunto de dias letivos, com elementos $d \in D$ numerados como $1, \dots, |D|$;
+- H: conjunto de períodos letivos por dia, com elementos $h \in H$ numerados como $ 1, \dots, |H|$;
+- $\~{R}_{|P|x|T|}$: matriz de requerimentos, onde $\~{r}_{pt}$ indica quantas aulas o professor $p$ deve lecionar para a turma $t$;
+- $\~{P}_{|P|x|D|x|H|}$: matriz de disponibilidade de professores, onde $\~{p}_{pdh} = 1$ indica que o professor $p$ está disponível do dia $d$ no período $h$, $\~{p}_{pdh} = 0$ caso contrário; e $X_{ptdh}$ é a seguinte variável de decisão:
 
-<!-- EQUAÇÃO -->
+$$
+x_{ptdh} =
+\begin{cases}
+    1 & \text{se o professor p leciona para a turma t no dia d no período h} \\
+    0 & \text{caso contrário}
+\end{cases}
+$$
 
 As restrições (2.5) asseguram o cumprimento da carga horário, (2.7) a não ocorrência de conflitos em horários para turmas e (2.8) o respeito a disponibilidade dos professores e a não existência de conflitos em horários para professores.
 
 Santos [Santos2007] salienta a intratabilidade computacional do PPT, pois apenas casos especiais podem ser resolvidos em tempo polinomial. Simples considerações de restrições de disponibilidade coloca o PPT na classe de problemas combinatórios NP-Completos, sendo essas considerações bastante comuns em problemas reais.
 
-Apesar da importância teórica, 0 objetivo de se resolver problemas desse tipo é sempre para aplicações reais. Necessita-se então encontrar formas viáveis de determinar soluções aceitáveis em tempo hábil. É neste caso que entram as heurísticas e metaheurísticas, já que nos fornecem essa possibilidade. As heurísticas e metaheurísticas são explicadas detalhadamente no capítulo 4.
+Apesar da importância teórica, o objetivo de se resolver problemas desse tipo é sempre para aplicações reais. Necessita-se então encontrar formas viáveis de determinar soluções aceitáveis em tempo hábil. É neste caso que entram as heurísticas e metaheurísticas, já que nos fornecem essa possibilidade. As heurísticas e metaheurísticas são explicadas detalhadamente no capítulo 4.
 
 ## 3. Revisão Bibliográfica do Problemas de Programação de Horários
 
@@ -219,45 +272,45 @@ O Problema de Programação de Horários (Timetabling Problem) é um problema de
 
 Em geral, os problemas de timetabling são classificados de acordo com os setores de aplicação a que se propõe: área esportiva, hospitalar, educacional, entre outras [Vieira2011]. Em seu trabalho, Splinder [Splinder2010] apresenta uma definição bem genérica para o problema de timetabling como "a alocação, sujeito a restrições, de recursos a objetos colocados no espaço e no tempo, de modo a satisfazer, tanto quanto possível, um conjunto de objetivos desejáveis".
 
-Com relação a área educacional uma definição do problema de programação automatimda de um horário acadêmico consiste em: agendar uma sequência de encontros (aulas, exames, bancas, palestras ou outro tipo de atividade escolar) entre professores e estudantes em um período de tempo prefixado (normalmente uma semana) satisfazendo um conjunto de restrições de vários tipos.
+Com relação a área educacional uma definição do problema de programação automatizada de um horário acadêmico consiste em: agendar uma sequência de encontros (aulas, exames, bancas, palestras ou outro tipo de atividade escolar) entre professores e estudantes em um período de tempo prefixado (normalmente uma semana) satisfazendo um conjunto de restrições de vários tipos.
 
 As diversas variantes do Problema de Horário Educacional podem ser classificadas em duas grandes categorias: o Problema de Programação de Horário Escolar (School Timetabling), e o Problema de Programação de Horário de Disciplinas em Universidades (University Course Timetabling).
 
-O Problema de Programação de Horário Escolar pode ser generalizado como o escalonamento semanal das aulas em uma escola sem que professores e alunos tenham mais de uma aula ao mesmo tempo (estudantes são agrupados em turmas com os mesmos planos de aula). Já o Problema de Programação de Horário de Disciplinas em Universidades como o escalonamento semestral das aulas de um conjunto de disciplinas de uma universidade de modo a evitar colisão de horários (estudantes geralmente são considerados individualmente) [Paim+2010].
+O Problema de Programação de Horário Escolar pode ser generalizado como o escalonamento semanal das aulas em uma escola sem que professores e alunos tenham mais de uma aula ao mesmo tempo (estudantes são agrupados em turmas com os mesmos planos de aula). Já o Problema de Programação de Horário de Disciplinas em Universidades como o escalonamento semestral das aulas de um conjunto de disciplinas de uma universidade de modo a evitar colisão de horários (estudantes geralmente são considerados individualmente) [Paim__2010].
 
-Como em todo PPH existem diversas variações, e em cada instituição o problema assume particularidades, surgem muitas outras classificações, tratando apenas alguma dessas particularidades como, por exemplo, o Problema de Alocação de Salas, o Problema de Programação Turma com Capacidade, o Problema de Horário Professornurma, etc. Tamanha é a abrangência e o número de variantes que Gomes [Gomes2006] listou as seguintes denominações para os problemas de timetabling: nurse rostering , university timetabling , exam timetabling, sport timetabling, railway timetabling school timetabling course timetabling class-teacher timetabling, student scheduling, teacher assignment, project sheduling, busscheduling, airflight schedules.
+Como em todo PPH existem diversas variações, e em cada instituição o problema assume particularidades, surgem muitas outras classificações, tratando apenas alguma dessas particularidades como, por exemplo, o Problema de Alocação de Salas, o Problema de Programação Turma com Capacidade, o Problema de Horário Professor/Turma, etc. Tamanha é a abrangência e o número de variantes que Gomes [Gomes2006] listou as seguintes denominações para os problemas de timetabling: _nurse rostering , university timetabling , exam timetabling, sport timetabling, railway timetabling school timetabling course timetabling class-teacher timetabling, student scheduling, teacher assignment, project sheduling, busscheduling, airflight schedules_.
 
 Este capítulo apresenta alguns dos casos mais estudados encontrados na literatura, onde podem ser observados diferentes variantes do problema PPH e métodos de resolução adotadas em cada caso.
 
 ### 3.2 Casos mais estudados
 
-Para resolver o problema de Programação de Horários em Escolas Souza [Soum2000] desenvolveu uma heurística de Busca Local baseada em caminhos mínimos para melhorar um quadro de horário, ainda que com certo grau de inviabilidade. A heurística age primeiramente tentando eliminar a inviabilidade, e se bem sucedida tenta melhorar os requisitos de qualidade exigidos para o quadro de horário. Esse procedimento foi inserido em várias metaheurísticas e comprovou-se que sua utilização não somente faz alcançar a viabilidade mais rapidamente, quanto, também, faz gerar soluções finais de melhor qualidade. A partir do desempenho das diversas metaheurfsticas testadas, um algoritmo GRASP com busca local, feito por um algoritmo de Busca Tabu, foi idealizado. Esse algoritmo mostrou-se superior a todos os demais, sendo capaz de produzir soluções melhores mais rapidamente. Foi proposta, também, uma modelagem de programação matemática.
+Para resolver o problema de Programação de Horários em Escolas Souza [Soum2000] desenvolveu uma heurística de Busca Local baseada em caminhos mínimos para melhorar um quadro de horário, ainda que com certo grau de inviabilidade. A heurística age primeiramente tentando eliminar a inviabilidade, e se bem sucedida tenta melhorar os requisitos de qualidade exigidos para o quadro de horário. Esse procedimento foi inserido em várias metaheurísticas e comprovou-se que sua utilização não somente faz alcançar a viabilidade mais rapidamente, quanto, também, faz gerar soluções finais de melhor qualidade. A partir do desempenho das diversas metaheurísticas testadas, um algoritmo GRASP com busca local, feito por um algoritmo de Busca Tabu, foi idealizado. Esse algoritmo mostrou-se superior a todos os demais, sendo capaz de produzir soluções melhores mais rapidamente. Foi proposta, também, uma modelagem de programação matemática.
 
 Costa [Costa2003] apresentou uma técnica híbrida com base nas metaheurísticas GRASP e Busca Tabu. Os resultados computacionais obtidos com esse procedimento mostraram que, soluções viáveis de melhor qualidade podem ser encontradas mais rapidamente.
 
 Santos [Santos2007] aplicou em sua pesquisa três metodologias de solução. A primeira, uma nova heurística híbrida, baseada em Busca Tabu, onde os experimentos computacionais demonstraram melhoras dos resultados da literatura, apresentando um desempenho consistentemente superior em todos os problemas teste. A segunda foi usando técnicas de Programação Linear Inteira Mista, no qual permitiu a obtenção de limites inferiores bastante fortes, os quais permitiram a prova da otimalidade para 3 instâncias da literatura. E a terceira foi explorar a sinergia entre heurísticas e métodos exatos. Esses algoritmos híbridos ofereceram os melhores limites superiores disponíveis.
 
-Com o objetivo de comparar três técnicas (método matemático, abordagem heurística e método misto) Góes et al [Góes+2010] desenvolveram um protótipo para a construção da grade horária escolar obtendo a programação de horários de professores/turmas para uma instituição de ensino municipal. O modelo matemático gerou o melhor resultado chegando a solução ótima, porém com um tempo computacional alto em relação aos outros métodos. A abordagem heurística baseada em Algoritmos Genéticos apesar de nem sempre apresentar a melhor solução, retomou um resultado mais rápido do que o modelo matemático. Com o menor tempo computacional o método misto resolve primeiramente o problema através do modelo matemático sem adicionar restrições de preferência (ou não) por aulas geminadas, que juntas compõem mais de 50% das restrições geradas, na sequência, aplica-se urna heurística de melhoramento com relação à preferência de aulas geminadas. Todos os três métodos utilizados apresentaram resultados melhores do que o gerado manualmente para o estudo de caso abordado.
+Com o objetivo de comparar três técnicas (método matemático, abordagem heurística e método misto) Góes et al [Góes__2010] desenvolveram um protótipo para a construção da grade horária escolar obtendo a programação de horários de professores/turmas para uma instituição de ensino municipal. O modelo matemático gerou o melhor resultado chegando a solução ótima, porém com um tempo computacional alto em relação aos outros métodos. A abordagem heurística baseada em Algoritmos Genéticos apesar de nem sempre apresentar a melhor solução, retomou um resultado mais rápido do que o modelo matemático. Com o menor tempo computacional o método misto resolve primeiramente o problema através do modelo matemático sem adicionar restrições de preferência (ou não) por aulas geminadas, que juntas compõem mais de 50% das restrições geradas, na sequência, aplica-se urna heurística de melhoramento com relação à preferência de aulas geminadas. Todos os três métodos utilizados apresentaram resultados melhores do que o gerado manualmente para o estudo de caso abordado.
 
-Com relação ao Problema de Programação de Horário em Universidades Vieria [Vieira+201 II apresenta um estudo de caso no Departamento de Computação (DCOMP) da Universidade Federal de Sergipe (UFS), em particular do curso de Sistemas de Informação. A abordagem proposta foi uma metaheurfstica com base em Algoritmos Genéticos. Tais algoritmos realizam um processo de busca inspirado nos princípios da seleção natural e evolução para que a melhor solução seja gerada ao final do processo. A abordagem adotada permite a reprodução da solução de forma a atender restrições de outros cursos e de outras instituições. Os experimentos realizados e as análises feitas deram validade a modelagem apresentada, mostrando que a solução é viável, porém com relação à restrições soft, nem todas foram plenamente atendidas, mesmo na melhor solução encontrada.
+Com relação ao Problema de Programação de Horário em Universidades Vieria [Vieira__2011] apresenta um estudo de caso no Departamento de Computação (DCOMP) da Universidade Federal de Sergipe (UFS), em particular do curso de Sistemas de Informação. A abordagem proposta foi uma metaheurfstica com base em Algoritmos Genéticos. Tais algoritmos realizam um processo de busca inspirado nos princípios da seleção natural e evolução para que a melhor solução seja gerada ao final do processo. A abordagem adotada permite a reprodução da solução de forma a atender restrições de outros cursos e de outras instituições. Os experimentos realizados e as análises feitas deram validade a modelagem apresentada, mostrando que a solução é viável, porém com relação à restrições soft, nem todas foram plenamente atendidas, mesmo na melhor solução encontrada.
 
-Splinder [Splinder2010] propôs uma solução para o Problema de Horário Educacional utilizando um algoritmo de Busca Dispersa (Scatter Search) que utiliza o método de Reconexão por Caminhos como estratégia de intensificação de busca da solução ótima. O autor frisa que não foram encontrados trabalhos que reportem a utilização desta técnica para a solução deste tipo de problema anteriormente ao seu trabalho. Para testar a eficiência da abordagem proposta, foram considerados dois estudos de casos: o primeiro referente ao problema de progamação de cursos pós matrícula, abordado na International Timetabling Competition, e o segundo, referente a problemas encontrados no cenário de uma instituição de ensino brasileira, do tipo universidade. A implementação do modelo e sua execução sobre os dados da International Timetabling Competition proporcionaram a comprovação de sua aplicabilidade, mesmo que com resultados inferiores aos registrados anteriormente por outros métodos de solução. Apesar do tempo computacional elevado que demarxla a aplicação da técnica utilizada, as grades de horário geradas atenderam a todas as restrições consideradas gerando grades de horário de boa qualidade. A forma em que o método foi implementado apresenta uma grande dificuldade de escapar de regiões representando ótimos locais. Outra dificuldade foi a validação da eficiência de estruturas de vizinhança para o problema abordado.
+Splinder [Splinder2010] propôs uma solução para o Problema de Horário Educacional utilizando um algoritmo de Busca Dispersa (Scatter Search) que utiliza o método de Reconexão por Caminhos como estratégia de intensificação de busca da solução ótima. O autor frisa que não foram encontrados trabalhos que reportem a utilização desta técnica para a solução deste tipo de problema anteriormente ao seu trabalho. Para testar a eficiência da abordagem proposta, foram considerados dois estudos de casos: o primeiro referente ao problema de programação de cursos pós matrícula, abordado na International Timetabling Competition, e o segundo, referente a problemas encontrados no cenário de uma instituição de ensino brasileira, do tipo universidade. A implementação do modelo e sua execução sobre os dados da International Timetabling Competition proporcionaram a comprovação de sua aplicabilidade, mesmo que com resultados inferiores aos registrados anteriormente por outros métodos de solução. Apesar do tempo computacional elevado que demanda a aplicação da técnica utilizada, as grades de horário geradas atenderam a todas as restrições consideradas gerando grades de horário de boa qualidade. A forma em que o método foi implementado apresenta uma grande dificuldade de escapar de regiões representando ótimos locais. Outra dificuldade foi a validação da eficiência de estruturas de vizinhança para o problema abordado.
 
 ### 3.3 Outras Variantes
 
 Um problema relacionado com o PHH, que é bastante estudado na literatura, é o Problema de Alocação de Salas. Silva [Silva2005] usou instâncias distintas e a linguagem de programação Java para testar a técnica de Simulated Annealing neste problema. O sistema desenvolvido mostrou-se eficiente e produziu bons resultados, além de possuir uma flexibilidade útil ao executar o programa para outras instâncias, bastando atualizar o Banco de Dados.
 
-Já Oliveira [Oliveira2006] compara duas técnicas heurísticas: Algoritrno Genético e Simulated Annealing. Com implementações pouco modificadas em relação àquela original apresentada na literatura, o Simulated Annealing mostrou-se mais eficiente.
+Já Oliveira [Oliveira2006] compara duas técnicas heurísticas: Algoritmo Genético e Simulated Annealing. Com implementações pouco modificadas em relação àquela original apresentada na literatura, o Simulated Annealing mostrou-se mais eficiente.
 
-Subramaniam et al [Subramanian+2011] aplica a metaheurística Busca Tabu em um estudo de caso feito em um Centro de Tecnologia (CT) de uma Instituição de Ensino Superior. Esta instituição possui um total de 28 salas de aulas divididas em três tipos — Carteira (17), Mesa (8), Prancheta (3). Através de uma abordagem construtiva foi possível, quase que instantaneamente, soluções que contemplam todas as restrições de viabilidade com adicional qualitativo. Observou-se que os resultados apresentados pelo procedimento desenvolvido foram superiores aos procedimentos manuais, visto que, desta forma, não era possível alocar cerca de 4,7% do total de horas/aula.
+Subramanian et al [Subramanian__2011] aplica a metaheurística Busca Tabu em um estudo de caso feito em um Centro de Tecnologia (CT) de uma Instituição de Ensino Superior. Esta instituição possui um total de 28 salas de aulas divididas em três tipos - Carteira (17), Mesa (8), Prancheta (3). Através de uma abordagem construtiva foi possível, quase que instantaneamente, soluções que contemplam todas as restrições de viabilidade com adicional qualitativo. Observou-se que os resultados apresentados pelo procedimento desenvolvido foram superiores aos procedimentos manuais, visto que, desta forma, não era possível alocar cerca de 4,7% do total de horas/aula.
 
-Outra variante, na área esportiva, é o Problema na Programação de Jogos. Biajoli em seu trabalho, "Resolução do Problema de Programação de Jogos no Campeonato Brasileiro de Futebol", apresenta contribuições junto à solução de dois problemas de escalonamento de jogos: programação de jogos para competições que apresentam tumo único e programação de jogos para competições que apresentam turno e returno. O objetivo foi construir uma tabela de jogos entre times que participam de uma competição esportiva realizada em vários locais e ao longo de um determinado conjunto de rodadas, minimimndo a distância percorrida pelo time que menos se deslocou e a distância percorrida pelo time que mais se deslocou, satisfazendo a um determinado conjunto de restrições. Duas técnicas metaheurísticas de busca local associadas foram empregadas como estratégia de solução do problema: Simulated Annealing e Busca Tabu. Em todas as soluções, tanto para competições que apresentam turno único quanto para as que apresentam turno e returno, não houve a ocorrência de nenhum tipo de inviabilidade, além da melhora na distância percorrida e na diferença entre a maior e menor distância percorrida pelos times em relação à tabela oficial praticada no ano anterior. Em todos os testes o algoritmo atendeu os requisitos essenciais, obtendo em cada caso, tabelas de jogos viáveis, ou seja, praticáveis.
+Outra variante, na área esportiva, é o Problema na Programação de Jogos. Biajoli em seu trabalho, "Resolução do Problema de Programação de Jogos no Campeonato Brasileiro de Futebol", apresenta contribuições junto à solução de dois problemas de escalonamento de jogos: programação de jogos para competições que apresentam turno único e programação de jogos para competições que apresentam turno e returno. O objetivo foi construir uma tabela de jogos entre times que participam de uma competição esportiva realizada em vários locais e ao longo de um determinado conjunto de rodadas, minimizando a distância percorrida pelo time que menos se deslocou e a distância percorrida pelo time que mais se deslocou, satisfazendo a um determinado conjunto de restrições. Duas técnicas metaheurísticas de busca local associadas foram empregadas como estratégia de solução do problema: Simulated Annealing e Busca Tabu. Em todas as soluções, tanto para competições que apresentam turno único quanto para as que apresentam turno e returno, não houve a ocorrência de nenhum tipo de inviabilidade, além da melhora na distância percorrida e na diferença entre a maior e menor distância percorrida pelos times em relação à tabela oficial praticada no ano anterior. Em todos os testes o algoritmo atendeu os requisitos essenciais, obtendo em cada caso, tabelas de jogos viáveis, ou seja, praticáveis.
 
 ## 4. Metodologia
 
 ### 4.1 Conceitos de Heurística e Metaheurística
 
-O terrno heurística é derivado do grego heuriskein, que significa descobrir ou achar, encontrar [Silva2005]. As heurísticas são métodos aproximados que se preocupam em encontrar soluções próximas da otimalidade em um tempo computacional hábil. Arenales et al [ArenaIes+2007] cita uma definição de Nicholson (1971) que expressa muito bem as características de uma heurística: é um procedimento para resolver problemas por meio de um enfoque "intuitivo", em geral racional, no qual a estrutura do problema possa ser interpretada e explorada inteligentemente para se obter uma solução razoável.
+O termno heurística é derivado do grego _heuriskein_, que significa descobrir ou achar, encontrar [Silva2005]. As heurísticas são métodos aproximados que se preocupam em encontrar soluções próximas da otimalidade em um tempo computacional hábil. Arenales et al [Arenales__2007] cita uma definição de Nicholson (1971) que expressa muito bem as características de uma heurística: é um procedimento para resolver problemas por meio de um enfoque "intuitivo", em geral racional, no qual a estrutura do problema possa ser interpretada e explorada inteligentemente para se obter uma solução razoável.
 
 Como se pode perceber, o enfoque de uma heurística é encontrar uma solução aceitável, razoável, que seja útil, mesmo não sendo esta a melhor. Problemas como do PPH são comumente resolvidos através de métodos heurísticos por estes fornecerem soluções satisfatórias para o problema, já que os métodos exatos não o fazem em tempo razoável.
 
@@ -272,28 +325,29 @@ A forma de escolha de cada elemento a ser inserido a cada passo varia de acordo 
 Algoritmos de construção aleatória simplesmente geram um posicionamento qualquer, isto é, a cada passo, o elemento a ser inserido na solução é aleatoriamente selecionado dentre o conjunto de elementos candidatos ainda não selecionados. Não há otimização, mas é o mais rápido, além de fácil implementação. A grande desvantagem é a baixa qualidade da solução inicial gerando um maior esforço computacional na fase de refinamento, entretanto, se aplica perfeitamente para algoritmos iterativos que independem da solução inicial.
 
 Nas heurísticas clássicas, os elementos candidatos são geralmente ordenados
-segundo uma construção gulosa, que estima o beneficio da inserção de cada elemento, e somente o "melhor" elemento é inserido a cada passo [Dutra2008]. A função de avaliação costuma ser específica para cada problema. A figura 4.1 mostra o pseudocódigo para a geração de uma solução utilizando a construção gulosa.
+segundo uma construção gulosa, que estima o benefício da inserção de cada elemento, e somente o "melhor" elemento é inserido a cada passo [Dutra2008]. A função de avaliação costuma ser específica para cada problema. A figura 4.1 mostra o pseudocódigo para a geração de uma solução utilizando a construção gulosa.
 
 ```c
+
 Procedimento Construção Gulosa
 
 1. Inicializar s
-2. Enquanto a solução s não esteja completa
-3. Identificar a melhor ação possível em relação a um determinado critério
-4. Executar a ação modificando s
-5. Fim do enquanto
+2.   Enquanto a solução s não esteja completa
+3.     Identificar a melhor ação possível em relação a um determinado critério
+4.     Executar a ação modificando s
+5.   Fim do enquanto
 6. Retornar s
 ```
 
 Figura 4.1- pseudocódigo construção gulosa.
 
-Na linha I o conjunto 8 é inicializdo e está vazio, ou seja, não há candidatos escolhidos. Então, a cada passo, utiliza-se um critério de seleção para detenninar qual o melhor candidato a ser inserido na solução 8 (linhas 3 e 4). Isso deve ser feito enquanto a solução g não esteja completa, ou seja, há candidatos não avaliados que devem ser inseridos (linhas 2 e 5).
+Na linha 1 o conjunto 8 é inicializdo e está vazio, ou seja, não há candidatos escolhidos. Então, a cada passo, utiliza-se um critério de seleção para determinar qual o melhor candidato a ser inserido na solução 8 (linhas 3 e 4). Isso deve ser feito enquanto a solução g não esteja completa, ou seja, há candidatos não avaliados que devem ser inseridos (linhas 2 e 5).
 
 As soluções iniciais geradas por um algoritmo de construção gulosa geralmente são melhores que as obtidas de forma aleatória. A desvantagem da construção gulosa é que o número de soluções possíveis é pequeno [Fraga2006].
 
 ### 4.3 Métodos de refinamento (Busca Local)
 
-As heurísticas de refinamento em problemas de otimimção, também chamadas de técnicas de busca local, constituem uma família de técnicas baseadas na noção de vizinhança. Sua proposta consiste em buscar um bom resultado para o problema caminhando por ótimos locais, efetuando a troca sistematicamente de vizinhança.
+As heurísticas de refinamento em problemas de otimização, também chamadas de técnicas de busca local, constituem uma família de técnicas baseadas na noção de vizinhança. Sua proposta consiste em buscar um bom resultado para o problema caminhando por ótimos locais, efetuando a troca sistematicamente de vizinhança.
 
 Em linhas gerais, essa classe de heurísticas partem de uma solução inicial qualquer, a qual pode ser obtida por uma heurística construtiva ou então gerada aleatoriamente, e caminha, a cada iteração, de vizinho para vizinho de acordo com a definição de vizinhança adotada, ao encontrar solução de melhor qualidade em sua vizinhança, esta substitui a solução corrente [Dutra2008].
 
@@ -339,7 +393,7 @@ O método da descida claramente para em um ótimo local, mas não necessariament
 
 ### 4.4 Metaheurísticas
 
-As metaheurísticas usam técnicas para guiar e modificar as heurísticas de forma a produzir soluções além daquelas geradas por heurísticas de busca local. Resultante dos estudos nas áreas de Otimização Combinatória e Inteligência Artificial, deram aos métodos heurísticos até então existentes, um caráter mais geral, tornando-os mais flexíveis e inteligentes [Silva+2005].
+As metaheurísticas usam técnicas para guiar e modificar as heurísticas de forma a produzir soluções além daquelas geradas por heurísticas de busca local. Resultante dos estudos nas áreas de Otimização Combinatória e Inteligência Artificial, deram aos métodos heurísticos até então existentes, um caráter mais geral, tornando-os mais flexíveis e inteligentes [Silva__2005].
 
 Problemas de otimização combinatória, como já apresentado no capítulo 2, são problemas típicos de minimização ou maximização, nesse tipo de problema "encontra- se um ótimo local quando qualquer movimento a ser feito piore o valor atual da função objetivo. Um ótimo global corresponde ao menor valor da função objetivo, entre todos os ótimos locais existentes no espaço de busca" [Chaves2003]. A Figura 4.5 mostra graficamente um problema de minimização com três ótimos locais e um ótimo global.
 
@@ -359,21 +413,21 @@ Em analogia a tenninologia biológica o termo cromossomo consiste em uma maneira
 
 Foi inspirado na observação do comportamento das formigas ao saírem de sua colônia (formigueiro) para encontrar comida. As formigas reais são capazes de encontrar o caminho mais curto para uma fonte de alimento do formigueiro sem a utilização de dados visuais.
 
-Enquanto caminham, as formigas depositam no solo uma substância denominada de feromônio e tem seu deslocamento baseado em trilhas de feromônios previamente depositados por outras formigas [Coelho+2004]. Com o passar do tempo, entretanto, as trilhas de feromônio começam a evaporar, reduzindo, assim, sua força atrativa. Trilhas mais longas evaporam mais rápido, consequentemente o caminho mais curto atrairá mais formigas, o que implica aumento na intensidade de feromônio. Portanto, o caminho mais curto sempre será o escolhido, pois a evaporação também possui a vantagem de evitar a convergência para uma solução local ótima. O algoritmo é então utilizado para problemas computacionais que envolvem procura de caminhos em grafos, como, por exemplo, o Problema do Caixeiro Viajante.
+Enquanto caminham, as formigas depositam no solo uma substância denominada de feromônio e tem seu deslocamento baseado em trilhas de feromônios previamente depositados por outras formigas [Coelho__2004]. Com o passar do tempo, entretanto, as trilhas de feromônio começam a evaporar, reduzindo, assim, sua força atrativa. Trilhas mais longas evaporam mais rápido, consequentemente o caminho mais curto atrairá mais formigas, o que implica aumento na intensidade de feromônio. Portanto, o caminho mais curto sempre será o escolhido, pois a evaporação também possui a vantagem de evitar a convergência para uma solução local ótima. O algoritmo é então utilizado para problemas computacionais que envolvem procura de caminhos em grafos, como, por exemplo, o Problema do Caixeiro Viajante.
 
 #### 4.4.3 Busca Tabu
 
 Em sua forma clássica a cada iteração procura-se um ótimo local selecionando-se o melhor vizinho s ' da vizinhança N(s) da solução corrente s. Independentemente def(s') ser melhor ou pior que f(s), s' será sempre a nova solução corrente [Costa2003]. No entanto, esse mecanismo não é suficiente para escapar de ótimos locais, pois pode haver retorno de uma solução previamente gerada. Para que isto não ocorra, o algoritmo utiliza o conceito de lista tabu.
 
-A lista tabu "define todos os movimentos que têm um certo atributo como sendo tabu por um determinado número de iterações, conhecido como tempo tabi/' [Souza+2002]. Esses movimentos são proibidos, a menos que a solução satisfaça um certo critério de aspiração A, como por exemplo que a solução seja melhor do que a melhor solução já encontrada. Os atributos são escolhidos para prevenir o retorno a soluções visitadas recentemente e por possuírem características fáceis de detectar. O procedimento chega ao fim quando alcança um certo critério de parada, geralmente um determinado número de iterações sem melhoras.
+A lista tabu "define todos os movimentos que têm um certo atributo como sendo tabu por um determinado número de iterações, conhecido como tempo tabi/' [Souza__2002]. Esses movimentos são proibidos, a menos que a solução satisfaça um certo critério de aspiração A, como por exemplo que a solução seja melhor do que a melhor solução já encontrada. Os atributos são escolhidos para prevenir o retorno a soluções visitadas recentemente e por possuírem características fáceis de detectar. O procedimento chega ao fim quando alcança um certo critério de parada, geralmente um determinado número de iterações sem melhoras.
 
 ### 4.5 Simulated Annealing
 
-Simulated Annealing (SA), um método de otimimção bastante geral, se destaca na literatura por um excelente desempenho em problemas que apresentam um número muito grande de ótimos locais. Inspirado pelo processo fisico proposto por Metropolis et al [Metropolis+1953] que descreve a obtenção de estruturas cristalinas, o nétodo foi estendido de otimização termodinâmica para o problema de otimização combinatorial por a. Kirkpatrick et al [Kirkpatrick+1983] em 1983 no contexto da mecânica estatística.
+Simulated Annealing (SA), um método de otimização bastante geral, se destaca na literatura por um excelente desempenho em problemas que apresentam um número muito grande de ótimos locais. Inspirado pelo processo fisico proposto por Metropolis et al [Metropolis__1953] que descreve a obtenção de estruturas cristalinas, o nétodo foi estendido de otimização termodinâmica para o problema de otimização combinatorial por a. Kirkpatrick et al [Kirkpatrick__1983] em 1983 no contexto da mecânica estatística.
 
 #### 4.5.1 Analogia Física
 
-"Annealing é o processo utilizado para fiadir um metal, onde este é aquecido a uma temperatura elevada e em seguida é resfriado lentamente, de modo que o produto final seja uma massa homogênea" [Haeser+2008].
+"Annealing é o processo utilizado para fiadir um metal, onde este é aquecido a uma temperatura elevada e em seguida é resfriado lentamente, de modo que o produto final seja uma massa homogênea" [Haeser__2008].
 
 A ideia fundamental do SA está baseada nesta observação fisica da matéria: a obtenção de estruturas cristalinas é feita através do super aquecimento e resfriamento lento da substância, o que induz o sistema a atingir o nível mais baixo de energia possível. Quanto mais organizada a esü•utura cristalina de um material, menor sua energia.
 
@@ -399,7 +453,7 @@ O algoritmo, então, simula este processo substituindo a solução atual por uma
 CÓDIGO
 ```
 
-Figura 4.9 — Algoritmo Simulated Annealing.
+Figura 4.9 - Algoritmo Simulated Annealing.
 
 O procedimento começa na linha 1, com a inicialização da melhor solução conhecida s *, calculada previamente por métodos de construção e refinamento. Nas linhas 2 e 3, inicializam-se o contador de iterações para sustentação de temperatura constante, IterT, e a temperatura inicial, T, respectivamente. Enquanto a temperatura corrente T for maior que zero e o contador IterT for menor que o número máximo de iterações, um vizinho de s é gerado, denotado como s' (linha 7). Na linha 8, calcula-se A como a diferença entre os valores das funções objetivo correspondentes às soluções s' e s, solução vizinha e solução atual, respectivamente. Nas linhas de 9 a 15, o valor de A será avaliado para verificação de aceitação da solução vizinha como solução atual. Na linha 9 verifica-se se A<O, a solução vizinha é melhor que a solução atual, neste caso a solução vizinha substitui a solução atual (linha 10). Verifica-se também se essa solução vizinha é melhor que a melhor solução s* (linha I l). Caso A 0, a solução vizinha s' (que é pior que a solução atual s) só será aceita como a solução atual de acordo com um critério de aceitação de piora. Esse critério é avaliado nas linhas 13 e 14. Na linha 13 um número de O a 1 é gerado aleatoriamente, já na linha 14, se este número for menor que uma função conhecida por fator de Boltzrnann, que é dada por e¯Ô/T, a piora da solução será aceita. Nesta função a temperatura Té usada como parâmetro. Inicialmente quando a temperatura está alta a probabilidade de aceitação de piora é maior. Após um número fixo de iterações a temperatura T é gradativamente diminuída por uma taxa de resfriamento a, sendo 0 < a < 1 (linha 17). Conforme a temperatura for caindo a probabilidade de aceitação de piora também será menor. O algoritrno termina quando a temperatura T for suficientemente próxima de zero, retornando a melhor solução s* (linha 21).
 
@@ -411,9 +465,9 @@ Algoritrnos baseados em Simulated Annealing com frequência consideram o princí
 
 A definição básica do problema timetabling, segundo Cooper e Kingston [Cooper1992], é atribuir horários, professores, alunos e salas para uma coleção de aulas e outros encontros de tal forma que a nenhum dos participantes seja necessário estar no mesmo horário em duas aulas ou encontros diferentes.
 
-AS combinações possíveis para resolver o problema de acordo com esta definição já geram uma dificuldade computacional para grandes instâncias. Se tratando de casos reais, a dificuldade pode aumentar significativamente, a ponto de a complexidade ser tão grande que toma o a solução inviável. Isso acontece devido aos requisitos adicionais considerados, podendo estes ser obrigatórios, ou seja, se não atendidos tornam a solução inviável, ou de qualidade, que devem ser atendidos, mas seu não atendimento não inviabiliza a solução [Souza+2002].
+AS combinações possíveis para resolver o problema de acordo com esta definição já geram uma dificuldade computacional para grandes instâncias. Se tratando de casos reais, a dificuldade pode aumentar significativamente, a ponto de a complexidade ser tão grande que torna a solução inviável. Isso acontece devido aos requisitos adicionais considerados, podendo estes serem obrigatórios, ou seja, se não atendidos tornam a solução inviável, ou de qualidade, que devem ser atendidos, mas seu não atendimento não inviabiliza a solução [Souza__2002].
 
-Considerando os dois tipos de requisitos (restrições e requisitos de qualidade), Subramanian et al [Subramanian+2011] modelou uma função de avaliação f, a qual deve ser minimizada, para a avaliar a solução s. Sendo ri(s) as restrições e q(s) os requisitos de qualidade, a expressão da função fé dada por:
+Considerando os dois tipos de requisitos (restrições e requisitos de qualidade), Subramanian et al [Subramanian__2011] modelou uma função de avaliação f, a qual deve ser minimizada, para a avaliar a solução s. Sendo ri(s) as restrições e q(s) os requisitos de qualidade, a expressão da função f é dada por:
 
 $f(s) = R(s) + Q(s)$ (5.1)
 
@@ -425,7 +479,7 @@ e
 
 $Q(s) = \sum_{Q^n}^{i=Q_1} \alpha_j q_j $ (5.3)
 
-em que é o números de vezes que a restrição i E {RI ...Rn} , e qj(s) os requisitos de qualidade j c (Ql Qn) não são atendidos na solução s. M é um parâmetro de penalidade associado ao não atendimento das restrições, enquanto aj O é a penalidade associada ao requisito de qualidade qj. A ideia de Subramanian et al [Subramanian+2011], foi permitir ao usuário atribuir valores às penalimções referentes aos requisitos de qualidade diretamente proporcionais às suas respectivas relevâncias, permitindo este gerar diferentes soluçOes, por meio da variação de tais penalidades.
+em que é o números de vezes que a restrição i E {RI ...Rn} , e qj(s) os requisitos de qualidade j c (Ql Qn) não são atendidos na solução s. M é um parâmetro de penalidade associado ao não atendimento das restrições, enquanto aj O é a penalidade associada ao requisito de qualidade qj. A ideia de Subramanian et al [Subramanian__2011], foi permitir ao usuário atribuir valores às penalimções referentes aos requisitos de qualidade diretamente proporcionais às suas respectivas relevâncias, permitindo este gerar diferentes soluçOes, por meio da variação de tais penalidades.
 
 Uma solução viável para este modelo só ocorre quando R(s) assume valor. zero, isto ocorre quando cada termo se anula. Para alcançar este objetivo, o parâmetro de penalidade M deve ter um valor suficientemente elevado na função de
 avaliação.
@@ -438,20 +492,20 @@ Porém a obrigatoriedade ou não dos requisitos não está ligada ao tipo, pois 
 
 ### 5.2 Definição do Estudo de Caso
 
-Como na UENF a tarefa de distribuição de sala não varia muito a cada período, sendo feito separadamente por cada centro e as aulas que necessitam de salas com recursos especiais são geralmente já pré estabelecidas, não há necessidade de automatizar esta tarefa de distribuição de salas. Outra tarefa que no presente cenário do curso de Ciência da Computação não viabiliz algum tipo de automatização é a distribuição de professores, pois além de um número muito pequeno destes, não há muitas alternativas de mudanças de suas respectivas disciplinas.
+Como na UENF a tarefa de distribuição de sala não varia muito a cada período, sendo feito separadamente por cada centro e as aulas que necessitam de salas com recursos especiais são geralmente já pré estabelecidas, não há necessidade de automatizar esta tarefa de distribuição de salas. Outra tarefa que no presente cenário do curso de Ciência da Computação não viabiliza algum tipo de automatização é a distribuição de professores, pois além de um número muito pequeno destes, não há muitas alternativas de mudanças de suas respectivas disciplinas.
 
-Desta forma este trabalho visa resolver apenas 0 problema de distribuição de horário para o curso de Ciência da Computação na UENF, onde existem a cada período 5 turmas com em média 7 disciplinas por período, sendo ao todo mais ou menos 35 disciplinas, com geralmente, 4 horas/aulas cada disciplina. O objetivo é criar uma grade de horário que atenda a todos os requisitos dos problema. Estes são divididos em duas categorias: requisitos essenciais e requisitos não essenciais.
+Desta forma este trabalho visa resolver apenas o problema de distribuição de horário para o curso de Ciência da Computação na UENF, onde existem a cada período 5 turmas com em média 7 disciplinas por período, sendo ao todo mais ou menos 35 disciplinas, com geralmente, 4 horas/aulas cada disciplina. O objetivo é criar uma grade de horário que atenda a todos os requisitos dos problema. Estes são divididos em duas categorias: requisitos essenciais e requisitos não essenciais.
 
-Para uma gade de horário ser considerada viável todos os requisitos essenciais devem ser atendidos, ou seja, é obrigatório seu cumprimento. Os não essenciais devem ser satisfeitos sempre que possível. Nao inviabilizam uma solução, contudo, seu atendimento é sempre desejável. Uma grade de horários ideal é aquela que cumpre todos os requisitos, essenciais ou não. Os requisitos são apresentados a seguir.
+Para uma grade de horário ser considerada viável todos os requisitos essenciais devem ser atendidos, ou seja, é obrigatório seu cumprimento. Os não essenciais devem ser satisfeitos sempre que possível. Não inviabilizam uma solução, contudo, seu atendimento é sempre desejável. Uma grade de horários ideal é aquela que cumpre todos os requisitos, essenciais ou não. Os requisitos são apresentados a seguir.
 
 Requisitos essenciais, ou seja, obrigatórios:
 
-REI - Um professor não pode lecionar aula em duas turmas diferentes no mesmo horário.
+RE1 - Um professor não pode lecionar aula em duas turmas diferentes no mesmo horário.
 RE2 - Uma turma não pode ter aula em duas disciplinas no mesmo horário.
 
 Requisitos não essenciais, de qualidade:
 
-RNEI - O ideal é que existam no máximo duas aulas consecutivas da mesma disciplina.
+RNE1 - O ideal é que existam no máximo duas aulas consecutivas da mesma disciplina.
 RNE2 - Não devem haver mais de duas aulas da mesma disciplina em um dia.
 RNE3 - Não preencher os horários de 12h às 14h, pois se trata de horário de almoço.
 RNE4 - Os professores associados, por terem exclusividade com a instituição, preferem espalhar os horários das aulas dadas, e não acumular todas no mesmo dia.
@@ -463,7 +517,7 @@ O problema da programação de horário abordado considera um conjunto de aulas 
 
 <!-- TABELA -->
 
-Figura 5.1 — Distribuição dos timeslots com relação aos horários e dias da semana.
+Figura 5.1 - Distribuição dos timeslots com relação aos horários e dias da semana.
 
 Uma solução para o problema é encontrada quando cada evento (aula) é alocado em um timeslost respeitando os requisitos essenciais. A qualidade da solução é por sua vez, determinada através do cumprimento dos requisitos não essenciais, ou também chamados requisitos de qualidade.
 
@@ -475,7 +529,7 @@ A criação de soluções neste presente projeto foi divida em 3 fases. A primei
 
 Uma heurística construtiva para o PPH consiste em formar uma boa grade de horário considerando a cada iteração somente o próximo passo, ou seja, ela parte de uma solução vazia e através da inserção das disciplinas, uma de cada vez, seguindo algum critério, até atingir a grade de horário completa. Algoritmos construtivos não possuem nenhum esquema de backtracking, ou seja, após uma disciplina inserida na grade não é possível retirá-la de seu horário.
 
-O critério de inserçao para a heurística construtiva neste trabalho consiste em obedecer a uma matriz chamada de matriz de preferência. Esta matriz de tamanho 5x6 representada na figura 5.3, guarda a preferência da alocação do próximo dia para uma disciplina, de forma a espalhar os horários de aulas de uma mesma disciplina. A primeira coluna representa os 5 dias da semana, de segunda a sexta. As próximas colunas representam os próximos dias desejáveis para alocação da disciplina que já está alocada no dia da semana desta primeira coluna. A segunda coluna, portanto, representa o melhor dia para a alocação da disciplina já alocada de acordo com a primeira. Quanto mais se afasta da primeira coluna, pior é considerado o resultado desta alocação, mas mesmo assim viável. A última coluna é igual a primeira, pois não havendo espaço em nenhum outro dia, aloca-se no mesmo dia, fechando todas as opções de dias possível para a alocação. Esta é a pior solução possível.
+O critério de inserção para a heurística construtiva neste trabalho consiste em obedecer a uma matriz chamada de matriz de preferência. Esta matriz de tamanho 5x6 representada na figura 5.3, guarda a preferência da alocação do próximo dia para uma disciplina, de forma a espalhar os horários de aulas de uma mesma disciplina. A primeira coluna representa os 5 dias da semana, de segunda a sexta. As próximas colunas representam os próximos dias desejáveis para alocação da disciplina que já está alocada no dia da semana desta primeira coluna. A segunda coluna, portanto, representa o melhor dia para a alocação da disciplina já alocada de acordo com a primeira. Quanto mais se afasta da primeira coluna, pior é considerado o resultado desta alocação, mas mesmo assim viável. A última coluna é igual a primeira, pois não havendo espaço em nenhum outro dia, aloca-se no mesmo dia, fechando todas as opções de dias possível para a alocação. Esta é a pior solução possível.
 
 De acordo com os índices de cada dia da semana mostrados na figura 5.2 e figura 5.3 podemos montar a matriz de preferência.
 
@@ -485,78 +539,53 @@ Figura 5.2- índices correspondentes aos dias da semana.
 
 <!-- TABELA -->
 
-Figura 5.3- Distribuição dos dias da semana de acordo com a preferência de alocação e a matriz de preferencia.
+Figura 5.3- Distribuição dos dias da semana de acordo com a preferência de alocação e a matriz de preferência.
 
 Através deste método construtivo, onde, seguindo o critério de inserção da matriz de preferência na matriz de timeslot é possível criar uma solução na qual atenda todos os requisitos essenciais, ou seja, após a inserção de todas as disciplinas através da matriz de preferência já existe uma solução viável.
 
 Após a construção dessa solução viável são realizados movimentos de melhoria para atender aos requisitos não essenciais, ou de qualidade. Estes movimentos são explicados na Seção 5.5 e 5.6. Como observado em muitos dos trabalhos encontrados na literatura, a qualidade da solução inicial pode interferir no resultado final após a aplicação de outros métodos. Foi em busca desta qualidade na solução inicial que se pensou neste método de inserção usando a matriz de preferência.
 
-O algoritmo 5.1 Alocar Disciplinas(id) mostra como é feita a alocação de acordo com matriz de preferência.
+O algoritmo 5.1 Alocar Disciplinas (id) mostra como é feita a alocação de acordo com matriz de preferência.
 
-``` {Algoritmo 5.1 Alocar Disciplinas(id)}
-I : inicio
-2: Numhoras 4— Disciplina(id).Nhor;
-6:
-8:
-9:
-11:
-12:
-13:
-15:
-16:
-17:
-18:
-19:
-21:
-22:
-23:
-25:
-26:
-27:
-28:
-29:
-30:
-31:
-32:
-33:
-35:
-36:
-37:
-// índice do timeslot
-// índice do timeslot do dia da preferência
-// índices iniciais da matriz de preferência
-enquanto (Numhoras faça
-se Numhoras então
-nt<—2; //nt—• total de horas alocadas de uma só vez
-senão
-encontrare-FaIso;
-se então
-// sem primeira alocação
-enquanto (i<5) e !(encontrar) faça
-itd<—matriz_prefência(i,j); //dia da preferência
-(id,itd, it.,nt)
-se !(encontrar) então
-senão
-fim-enquanto
-senio
-// seguinte dia
-// seguinte preferência
-/.com primeira alocação
-enquanto (j<5) e !(encontrar) faça
-itd<— matriz_prefência (i,j);
-10);
-encontrare—BuscaNoDia (id,itd, it,nt)
-se !(encontrar) então
-// seguinte preferencia
-nm—enquanto
-fim-se
-se (encontrar) então
-Numhoras 4— Nwnhoras — nt;
-fim-se
-fim-enquanto;
+```c {Algoritmo 5.1 Alocar Disciplinas (id)}
+inicio
+    Numhoras <- Disciplina(id).Nhor;
+    it <- 0;                    // índice do timeslot
+    itd <- 0;                   // índice do timeslot do dia da preferência
+    i <- 0; j <- 0;             // índices iniciais da matriz de preferência
+    enquanto (Numhoras > 0) faça
+        se Numhoras > 1 então
+            nt <- 2;            // nt -> total de horas alocadas de uma só vez
+        senão
+            nt <- 1;
+        fim-se
+        encontrar <- Falso;
+        se j=0 então            // sem primeira alocação
+            enquanto (i<5) e !(encontrar) faça
+                itd <- matriz_preferencia(i, j);    //dia da preferência
+                it <- (itd*10);
+                encontrar <- BuscaNoDia(id, itd, it, nt)
+                se !(encontrar) então
+                    i <- i+1;           // seguinte dia
+                senão
+                    j <- j+1;           // seguinte preferência
+            fim-enquanto
+        senão               // com primeira alocação
+            enquanto (j<5) e !(encontrar) faça
+                itd <- matriz_preferencia (i, j);
+                it <- (itd*10);
+                encontrar <- BuscaNoDia (id, itd, it, nt)
+                se !(encontrar) então
+                    j <- j+1;           // seguinte preferencia
+            fim-enquanto
+        fim-se
+        se (encontrar) então
+            Numhoras <- Numhoras - nt;
+        fim-se
+    fim-enquanto;
 ```
 
-O algoriüno, na linha 2 se inicia recebendo o número de horas/aulas da disciplina a ter seus horários alocados na matriz timeslot. Esses horários são alocados dois a dois enquanto possível nas linhas de 7 a 11, ou seja, somente no caso de disciplinas com número de horas/aulas ímpar, que um horário apenas será alocado sozinho, nunca três horários seguidos. A primeira alocação é feita nas linhas 12 a 22. Na linha 15 a variável itd recebe o dia de preferência da primeira alocação de acordo com a matriz de preferência. Na linha 17 a função BuscaNoDia verifica se é viável a alocação desses horários no dia desejado. Se for possível é feita a alocação, caso contrário, um próximo dia de acordo com a matriz de preferência será avaliado. Após a primeira alocação a segunda alocação é feita nas linhas 24 a 31 , seguindo o mesmo procedimento da primeira alocação através da função BuscaNoDia. O que difere nos dois blocos de alocação é maneira como a matriz de preferência é percorrida para obtenção do índice da próxima preferência. Na primeira alocação percorre-se a primeira coluna da matriz. Na segunda alocação percorre-se a linha correspondente ao índice da primeira alocação.
+O algoritmo, na linha 2 se inicia recebendo o número de horas/aulas da disciplina a ter seus horários alocados na matriz timeslot. Esses horários são alocados dois a dois enquanto possível nas linhas de 7 a 11, ou seja, somente no caso de disciplinas com número de horas/aulas ímpar, que um horário apenas será alocado sozinho, nunca três horários seguidos. A primeira alocação é feita nas linhas 12 a 22. Na linha 15 a variável itd recebe o dia de preferência da primeira alocação de acordo com a matriz de preferência. Na linha 17 a função BuscaNoDia verifica se é viável a alocação desses horários no dia desejado. Se for possível é feita a alocação, caso contrário, um próximo dia de acordo com a matriz de preferência será avaliado. Após a primeira alocação a segunda alocação é feita nas linhas 24 a 31 , seguindo o mesmo procedimento da primeira alocação através da função BuscaNoDia. O que difere nos dois blocos de alocação é maneira como a matriz de preferência é percorrida para obtenção do índice da próxima preferência. Na primeira alocação percorre-se a primeira coluna da matriz. Na segunda alocação percorre-se a linha correspondente ao índice da primeira alocação.
 
 Esta função Alocar Disciplina é chamado através do procedimento Alocação Inicial (algoritmo 5.2). No algoritmo 5.2, o primeiro passo para se iniciar a construção de uma solução é carregar todos os dados para o programa. Para este projeto os dados a serem inseridos são os professores e as disciplinas. Como não é feita a alocação de professor, cada disciplina já é inserida com seu respectivo professor, assim como também suas horas/aulas e o período no qual pertence.
 
@@ -567,15 +596,15 @@ Quando inserido os dados de todas as disciplinas deve-se ter, portanto, a inform
 ```{Algoritmo 5.2 Alocação Inicial}
 I: Inicio
 Inicial
-3: T e— Alocar Disciplinas Prefixadas();
+3: T e- Alocar Disciplinas Prefixadas();
 4: id O; I/ índice da disciplina
 5: enquanto (id NumDisciplinas) faça l/ NumDisciplinas é o número total de disciplinas
 se Disciplina(id) não estiver alocada então
 6:
-T 4— AlocarDiscipIina(id);
+T 4- AlocarDiscipIina(id);
 fim-se
 8:
-id 4— id+l ;
+id 4- id+l ;
 9:
 10: fim-enquanto;
 11: retorne T;
@@ -594,9 +623,9 @@ No presente projeto, cada ponto do espaço de soluções é, naturalmente uma gr
 
 Uma solução vizinha é adquirida através do movimento de troca de uma disciplina que se encontra em um timeslot para outro timeslot. Porém só é válido a realização deste movimento se a nova solução também seja uma solução válida.
 
-A utilimção desses movimentos foi dividida em duas etapas, que correspondem a segunda e terceira fase do processo de construção da solução. Na segunda fase este movimento é utilimdo para resolver apenas um dos requisitos não essenciais, o não preencher os horários de 12h às 14h, pois se trata de horário de almoço.
+A utilização desses movimentos foi dividida em duas etapas, que correspondem a segunda e terceira fase do processo de construção da solução. Na segunda fase este movimento é utilizando para resolver apenas um dos requisitos não essenciais, o não preencher os horários de 12h às 14h, pois se trata de horário de almoço.
 
-Esta etapa é simples, e consiste em apenas varrer a matriz de timeslot com a solução já obtida na primeira etapa buscando os timeslots dos horários de almoço (timeslots 4, 5, 14, 15, 24, 25, 34, 35, 44, 45) no caso destes estarem ocupados com uma disciplina sem horário prefixado, transferi-la para outro timeslost viável. Essa transferência é feita da seguinte forma: tira a disciplina do horário do almoço e varre a matriz timeslot de forma sequencial a procura de um novo timeslot viável para esta disciplina. Um passo da heurística de melhoria, segunda fase da implementação para se chegar a uma solução final, é ilustrada na figura 5.5 através de uma troca realimda na solução do exemplo anterior da figura 5.4.
+Esta etapa é simples, e consiste em apenas varrer a matriz de timeslot com a solução já obtida na primeira etapa buscando os timeslots dos horários de almoço (timeslots 4, 5, 14, 15, 24, 25, 34, 35, 44, 45) no caso destes estarem ocupados com uma disciplina sem horário prefixado, transferí-la para outro timeslost viável. Essa transferência é feita da seguinte forma: tira a disciplina do horário do almoço e varre a matriz timeslot de forma sequencial a procura de um novo timeslot viável para esta disciplina. Um passo da heurística de melhoria, segunda fase da implementação para se chegar a uma solução final, é ilustrada na figura 5.5 através de uma troca realizada na solução do exemplo anterior da figura 5.4.
 
 <!-- IMAGEM -->
 
@@ -604,7 +633,7 @@ Figura 5.5 - Resultado da heurística de melhoria do exemplo.
 
 Uma observação quanto ao exemplo, é que não necessariamente as disciplinas retiradas do horário do almoço serão alocadas sequencialmente como mostra na figura, pois elas são alocadas individualmente e buscam espaços individuais. Neste exemplo coincidiu de ficarem novamente em sequência.
 
-A terceira e última fase na implementação da solução para o problema é realizada através da heurística Simulated Annealing. Realizando movimentos aleatoriamente e um critério de parada, chaga-se a solução final. Esse processo é descrito na próxima seção 5.5.
+A terceira e última fase na implementação da solução para o problema é realizada através da heurística Simulated Annealing. Realizando movimentos aleatoriamente e um critério de parada, chega-se a solução final. Esse processo é descrito na próxima seção 5.5.
 
 ### 5.6 Metaheurística Simulated Annealing
 
@@ -626,19 +655,19 @@ Como o requisito não essencial RNE3, que diz que nao é permitido preencher os 
 
 O pseudocódigo do algoritmo Simulated Annealing utilizado neste projeto é apresentado no algoritrno 5.3. Os identificadores utiliados são:
 
-- So —+ Solução Inicial;
-- Si —Y Solução da Iteração i;
-- S —+ Configuração Final;
-- To —4 Temperatura Inicial;
-- Ti —+ Temperatura na Iteração i;
+- So -+ Solução Inicial;
+- Si -Y Solução da Iteração i;
+- S -+ Configuração Final;
+- To -4 Temperatura Inicial;
+- Ti -+ Temperatura na Iteração i;
 - M Número máximo de iterações;
 - P Número máximo de Perturbações por iteração;
-- L —9 Número máximo de sucessos por iteração;
-- a —+ Fator de redução da temperatura;
-- (Si) —+ Valor da função objetivo correspondente á Solução Si;
-- nSucesso —+ Contador de sucesso em uma iteração;
+- L -9 Número máximo de sucessos por iteração;
+- a -+ Fator de redução da temperatura;
+- (Si) -+ Valor da função objetivo correspondente á Solução Si;
+- nSucesso -+ Contador de sucesso em uma iteração;
 - i ej Variáveis de controle de Loops.
-- Perturba(S) —+ Função que realiza uma perturbação na Solução S;
+- Perturba(S) -+ Função que realiza uma perturbação na Solução S;
 - Randomiza() Função que gera um número aleatório no intervalo [0,1];
 
 Como na literatura as metodologias adotadas são muito distintas para cada SA os parâmetros variam muito, portanto, os valores utilizados para nos parâmetros M, P, L, To e a foram obtidos através de testes computacionais, como será explicado na próxima seção.
@@ -649,13 +678,13 @@ I: Inicio
 Ler (So, M, P, L, To, a); // Entrada do Algoritmo
 l* Inicialiaçao das variáveis*/
 3:
-Se—So;
+Se-So;
 5: 6: Té-To•,
-7: Loop principal — verifica se foram atendidas as condições de término do
+7: Loop principal - verifica se foram atendidas as condições de término do
 8: algoritrno*/
 9: Repita
 II:
-Loop Interno — Realização de perturbação em uma iteraçao
+Loop Interno - Realização de perturbação em uma iteraçao
 12:
 Repita
 13:
@@ -664,7 +693,7 @@ Teste de aceitação de urna soluçao 8/
 se (AFi O) ou (exp(-AfifD > Randomiza()) entao
 17:
 SeSi,•
-nSucesso 4— nSucesso + 1 ;
+nSucesso 4- nSucesso + 1 ;
 19:
 fim-se
 21:
@@ -694,26 +723,26 @@ A Tabela I mostra os dados das disciplinas utilizadas para a programação de ho
 
 <!-- Tabela 6.1 -->
 
-Tabela 6.1 — Dados das disdpllnas de períodos ímpares.
+Tabela 6.1 - Dados das disdpllnas de períodos ímpares.
 
 Os dados das disciplinas utilizadas para a programação de horários no caso dos períodos pares são apresentados na tabela 6.2. Esta tabela apresenta 26 disciplinas e possui estrutura idêntica à tabela 6.1
 
 <!-- Tabela 6.2  -->
 
-Tabela 6.2 — Dados das disciplinas de períodos pares.
+Tabela 6.2 - Dados das disciplinas de períodos pares.
 
 Além dos dados das disciplinas descritos nas tabelas 6.1 e 62. foram utilizadas mais três matrizes de dados complementares: i) matriz de preferência ii) matriz de horários préfixados e iii) matriz de categoria de professor.
 
 A matriz de preferência foi descrita na seção 5.4. A matriz de horários pré- fixados contém as informações das disciplinas que tem horário fixo. Cada linha da matriz contém o código de identificação da disciplina, na primeira coluna e nas colunas subsequentes a identificação dos timeslots pré-fixados a essa disciplina (ver Figura 6.1).
 <!-- Figura 6.1 -->
 
-Figura 6.1 — RepresentaçSo da matriz de horários pré-fixados.
+Figura 6.1 - RepresentaçSo da matriz de horários pré-fixados.
 
 A matriz de categoria de professor guarda os índices dos professores e um dígito binário que será igual a um se o professor for contratado e zero se for associados. (ver Figura 6.2).
 
 <!-- Figura 6.2 -->
 
-Figura 6.2 — Representação da matriz de categoria de
+Figura 6.2 - Representação da matriz de categoria de
 
 Todos os dados de entrada descritos anteriormente foram armazenados em arquivos de texto e lidos pelos algoritmos heurísticos.
 
@@ -725,7 +754,7 @@ Cada timeslot pode ser entendido como um tempo de aula, no presente trabalho est
 
 <!-- Figura 6.3 -->
 
-Figura 6.3 — Representação dos timeslots.
+Figura 6.3 - Representação dos timeslots.
 
 ### 6.3 Resultados Computacionais
 
@@ -749,25 +778,25 @@ Foram necessários testes computacionais para se chegar aos melhores valores par
 
 <!-- Tabela 6.3 -->
 
-Tabela 6.3 — Dados das disciplinas de períodos pares.
+Tabela 6.3 - Dados das disciplinas de períodos pares.
 
 De acordo com os códigos das disciplinas para os períodos ímpares apresentados na tabela 6.1, o resultado da solução construtiva é apresentado na figura 6.4. A figura 6.5 por sua vez, apresenta a distribuição das disciplinas de acordo com a heurística de melhoria. Para ambas as soluções o valor da função objetivo foi de 206, ou seja, perrnaneceu o mesmo, já que a função objetivo não penalizou horários de almoço.
 
-Figura 6.4 — Solução construtiva: Caso perfodos ímpares.
-Figura 6.5 — Solução da Heurística de mehoria: Caso períodos ímpares.
+Figura 6.4 - Solução construtiva: Caso perfodos ímpares.
+Figura 6.5 - Solução da Heurística de mehoria: Caso períodos ímpares.
 
 Na figura 6.6 temos o resultado da solução da metaheurística simulated annealing. Após várias execuções o menor valor encontrado da função objetivo foi 10. Não se chegou em momento algum a uma função objetivo de valor zero. Nenhum caso de piora da função objetivo também foi objetivo, porém, muita das vezes, o valor mesmo diminuindo permanece alto.
 
-Figura 6.6 — Solução da metaheurfstica Simulated Annealing: Caso períodos ímpares.
+Figura 6.6 - Solução da metaheurfstica Simulated Annealing: Caso períodos ímpares.
 
 O resultado da solução construtiva com os códigos das disciplinas dos períodos pares mostrado na tabela 6.2 é mostrado na figura 6.7. A figura 6.8 mostra a solução da heurística de melhoria. Como aconteceu com os períodos ímpares, para ambas as soluções o valor da função objetivo pennaneceu o mesmo, o valor foi 120.
 
-Figura 6.7 — Soluçao construtiva: Caso perfodos pares.
-Figura 6.8 — Solução da Heurística de melhoria: Caso períodos pares.
+Figura 6.7 - Soluçao construtiva: Caso perfodos pares.
+Figura 6.8 - Solução da Heurística de melhoria: Caso períodos pares.
 
 A figura 6.9, é apresentada a solução para o melhor resultado da função objetivo encontrado para os dados dos períodos pares após a aplicação da metaheurística Simulated Anneling. Assim como no exemplo anterior, não houve registro de piora da frnção objetivo e nem de seu valor ter chegado a zero. O valor menor encontrado foi 15.
 
-Figura 6.9 — Solução da metaheurística Simulated Annealing: Caso períodos pares.
+Figura 6.9 - Solução da metaheurística Simulated Annealing: Caso períodos pares.
 
 Como os resultados apresentados estão com códigos de disciplina, e vários períodos ao mesmo tempo, a compreensão dos mesmos fica prejudicada. Para melhor visualização e análise dos resultados os Apêndices trazem os resultados de cada heurística separados por períodos e com 0 nome da disciplina, assim como seus respectivos professores.
 
@@ -787,7 +816,7 @@ Em relação a metaheurística Simulated Annealing o resultado esperado de minim
 
 Com resultados dentro do esperado conclui-se que as heurísticas atenderam aos seus propósitos. Porém devido a função objetivo não permitir piora desobedecendo aos requisitos obrigatórios não se chegou em momento algum ao valor zero, que seria em princípio a melhor solução possível. Vale observar no entanto, que dada a natureza do problema, não é possível saber se de fato uma solução com valor zero seria viável.
 
-A heurística de melhoria apesar de cumprir seu propósito não melhorou em nada o valor da função objetivo, já que a fünção objetivo não é penalizada quando uma disciplina é alocada nos horários de 12h às 14h. Contudo isto não influenciou o resultado final. Uma altemativa a forma sequencial de troca seria um modelo que frocasse de forma aleatória.
+A heurística de melhoria apesar de cumprir seu propósito não melhorou em nada o valor da função objetivo, já que a função objetivo não é penalizada quando uma disciplina é alocada nos horários de 12h às 14h. Contudo isto não influenciou o resultado final. Uma altenativa a forma sequencial de troca seria um modelo que trocasse de forma aleatória.
 
 A heurística construtiva trouxe grande contribuição para resoluções de problemas de Programação de Horários. Esta atendeu a todos os requisitos obrigatórios e distribuiu as disciplinas duas a duas sequencialmente, e em dias diferentes com um intervalo de pelo menos um dia entre elas.
 
@@ -804,29 +833,30 @@ O Problema da Programação de Horário é um problema complexo, assim, depois d
 
 ## Referência Bibliográfica
 
-1. [Arenales2007] Arenales, Marcos; Armentano, Vinicius; Morabito, Reinaldo e Yanasse, Horacio (2007). Pesquisa Operacional para Cursos de Engenharia. Editora Elsevier /Campus-Abepro, la Edição.
+1. [Arenales2007] Arenales, Marcos; Armentano, Vinicius; Morabito, Reinaldo e Yanasse, Horacio (2007). Pesquisa Operacional para Cursos de Engenharia. Editora Elsevier /Campus-Abepro, 1a Edição.
 2. [Chaves2003] Augusto, Antônio. Modelagem Exata e Heurística para Resolução do Problema do Caixeiro Viajante com Coleta de Prêmios, Monografia para obtenção de Bacharel em Ciência da Computação, Universidade Federal de Ouro Preto, 2003.
-3. [Coelho+2004] Santos, Leandro; Neto, Roberto. Colônia de Formigas: Uma Abordagem Promissora para Aplicações de Atribuição Quadrática e Projeto de Layout, XXIV Encontro Nacional de Engenharia de Produção, Florianópolis — SC, de 3 a 5 de novembro de 2004 (ENEGEP 2004).
-4. [Cooper+1992] Cooper, Tim; Kingston, Jefrrey. The Solution of Real Instances of Timetabling Problem. Basser Department of Computer Science, The University of Sydney 2006, Australia, 1992.
+3. [Coelho__2004] Santos, Leandro; Neto, Roberto. Colônia de Formigas: Uma Abordagem Promissora para Aplicações de Atribuição Quadrática e Projeto de Layout, XXIV Encontro Nacional de Engenharia de Produção, Florianópolis - SC, de 3 a 5 de novembro de 2004 (ENEGEP 2004).
+4. [Cooper__1992] Cooper, Tim; Kingston, Jefrrey. The Solution of Real Instances of Timetabling Problem. Basser Department of Computer Science, The University of Sydney 2006, Australia, 1992.
 5. [Costa2003] Pereira, Felipe. Programação de Horários em Escolas via GRASP e Busca Tabu, Monografia para obtenção do Grau de Engenheiro de Produção, Universidade Federal de Ouro Preto, 2003.
-6. [Dutra2008] Dutra, Vagner Gonçalves. AI goritmo Genético Aplicado Ao Problema De P-Medianas Capacitado, Monog•afia para obtenção do Grau de Engenheiro de Produção, Universidade Federal de Ouro Preto, 2008.
-7. [Fraga2006] Fraga, Marcelo C. Pimentel. Uma metodologia híbrida Colônia de Formigas — Busca Tabu — Reconexão por Caminhos para resolução do Problema de Roteamento de Veículos com Janelas de Tempo, Dissertação de Mestrado para a obtenção do título de Mestre em Modelagem Matemática e Computacional, Centro Federal de Educação Tecnológica em Minas Gerais, CEFET-MG, 2006.
-8. [Góes+2010] Teixeira, Anderson; Costa, Deise; Steiner, Maria. Otimização na programação de horário de professores/turmas; Modelos Matemático, Abordagem Heurística e Método Misto, SISTEMAS & GESTÃO, v. 5, n. 1, 2010, p. 50-66.
-9. [Haeser+2008] Haeser, G.; Gomes—Ruggiero, M. Aspectos Teóricos de Simulated Annealing e um Algoritmo duas Fases em Otimização Global, TEMA Tend. Mat. Apl. Comput., 9, No. 3, 2008, pp 395-404.
-10. [Kirkpatrick+1983] Kirkpatrick, S.; Gelatt, C. D.; Vecchi, M. P. Optimization by Simulated Annealing, Science, New Series, Vol. 220, No. 4598. (May 13, 1983), pp. 671-680.
+6. [Dutra2008] Dutra, Vagner Gonçalves. AI goritmo Genético Aplicado Ao Problema De P-Medianas Capacitado, Monografia para obtenção do Grau de Engenheiro de Produção, Universidade Federal de Ouro Preto, 2008.
+7. [Fraga2006] Fraga, Marcelo C. Pimentel. Uma metodologia híbrida Colônia de Formigas - Busca Tabu - Reconexão por Caminhos para resolução do Problema de Roteamento de Veículos com Janelas de Tempo, Dissertação de Mestrado para a obtenção do título de Mestre em Modelagem Matemática e Computacional, Centro Federal de Educação Tecnológica em Minas Gerais, CEFET-MG, 2006.
+8. [Góes__2010] Teixeira, Anderson; Costa, Deise; Steiner, Maria. Otimização na programação de horário de professores/turmas; Modelos Matemático, Abordagem Heurística e Método Misto, SISTEMAS & GESTÃO, v. 5, n. 1, 2010, p. 50-66.
+9. [Haeser__2008] Haeser, G.; Gomes-Ruggiero, M. Aspectos Teóricos de Simulated Annealing e um Algoritmo duas Fases em Otimização Global, TEMA Tend. Mat. Apl. Comput., 9, No. 3, 2008, pp 395-404.
+10. [Kirkpatrick__1983] Kirkpatrick, S.; Gelatt, C. D.; Vecchi, M. P. Optimization by Simulated Annealing, Science, New Series, Vol. 220, No. 4598. (May 13, 1983), pp. 671-680.
 11. [Lob02005] Lobo, Eduardo. Uma Solução do Problema de Horário Escolar Via Algoritmo Genético Paralelo, Dissertação para obtenção do título de Mestre em Modelagem Matemática e Computacional, Centro Federal de Educação Tecnológica de Minas Gerias, CEFET-MG, 2005.
 12. [Mendes1999] Mendes, Alexandre. Dissertação para obtenção do título de Mestre em Engenharia Elétrica, Universidade Estadual de Campinas, 1999.
-13. [Metropolis+1953] Metropolis, Nicholas; Rosenbluth, Arianna W.; Rusenbluts Marshall N. e Teller, Augusta H. Equations of state calculations by fast computing machines, Journal of Chemical Physics, 1953.
+13. [Metropolis__1953] Metropolis, Nicholas; Rosenbluth, Arianna W.; Rusenbluts Marshall N. e Teller, Augusta H. Equations of state calculations by fast computing machines, Journal of Chemical Physics, 1953.
 14. [Noronha2000] Noronha, T.F. Uma Abordagem sobre Estratégias Metaheurísticas, Projeto Orientado, Universidade Federal do Rio Grande do Norte. Rio Grande do Norte, 2000.
 15. [Oliveira2006] César, Adriano. Uso do Algoritmo Genético e Recozimento Simulado para o Problema de Alocação de Salas, Monografia para obtenção de Bacharel em Ciência da Computação, Universidade Federal de Lavras, 2006.
 16. [Santos2007] Gambini, Haroldo. Formulações e Algoritmos para o Problema de Programação de Horários em Escolas, Tese para a obtenção do título de Doutor submetida ao Programa de Pós-Graduação em Computação, Universidade Federal Fluminense, 2007.
 17. [Silva2005] Silva, Amanda. Estudo e implementação, mediante recozimento simulado, do problema de alocação de salas, Monografia para obtenção de Bacharel em Ciência da Computação, Universidade Federal de Lavras, 2005.
-18. [Silva+2005] Silva, Amanda; Sampaio, Rudini e Alvarenga, Guilherme. Uma Aplicação Simmulated Annealing para Problema de Alocação de Salas. NFO COMP (Journal of Computer Science), 2005. 17
+18. [Silva__2005] Silva, Amanda; Sampaio, Rudini e Alvarenga, Guilherme. Uma Aplicação Simmulated Annealing para Problema de Alocação de Salas. NFO COMP (Journal of Computer Science), 2005. 17
 19. [Souza2000] Freitas, Marcone. Programação de Horários em Escolas: Uma Aproximação por Metaheurísticas, Tese para obtenção do título de Doutor em Ciências em Engenharia de Sistemas da Computação submetida ao Programa de Pós-Graduação de Engenharia, Universidade Federal do Rio de Janeiro, 2000.
-20. [Souz+2002] Freitas, Marcone; Costa, Felippe e Guimarães, Irce. Um Algoritmo Evolutivo Híbrido para o Problema de Programação de Horários em Escolas. XXII Encontro Nacional de Engenharia de Produção, Curitiba — PR, 23 a 25 de outubro de 2002 (ENEGEP 2002), pp 1-8.
-21. [Souza+2002] Freitas, Marcone; Martins, Alexandre e Araújo, Cássio. Experiências com Simulated Annealing e Busca Tabu na Resolução do Problema de Alocação de Salas, XXXIV Simpósio Brasileiro De Pesquisa Operacional, Rio de Janeiro — RJ, 8 a 11 de novembro de 2002 (SBPO 2002).
+20. [Souz__2002] Freitas, Marcone; Costa, Felippe e Guimarães, Irce. Um Algoritmo Evolutivo Híbrido para o Problema de Programação de Horários em Escolas. XXII Encontro Nacional de Engenharia de Produção, Curitiba - PR, 23 a 25 de outubro de 2002 (ENEGEP 2002), pp 1-8.
+21. [Souza__2002] Freitas, Marcone; Martins, Alexandre e Araújo, Cássio. Experiências com Simulated Annealing e Busca Tabu na Resolução do Problema de Alocação de Salas, XXXIV Simpósio Brasileiro De Pesquisa Operacional, Rio de Janeiro - RJ, 8 a 11 de novembro de 2002 (SBPO 2002).
 22. [Spindler2010] Spindler, Morgana. Uma Proposta de Solução para Problemas de Horário Educacional utilizando Busca Dispersa e Reconexão por Caminhos, Dissertação para a obtenção do grau de Mestre em Computação Aplicada, Universidade do Vale do Rio dos Sinos, 2010.
-23. [Subramanian+2011] Subramanian, Anand; Medeiros, José M.; Formiga, Lucídio e Souza, Marcone. Aplicação da Methaurística Busca Tabu ao Problema de Alocação de Aulas a Salas em uma Instituição Universitária. Associação Brasileira de Engenharia de Produção (ABEPRO), Revista Produção Online, v.11, n.1, mar. 2011, pp 54-75.
+23. [Subramanian__2011] Subramanian, Anand; Medeiros, José M.; Formiga, Lucídio e Souza, Marcone. Aplicação da Methaurística Busca Tabu ao Problema de Alocação de Aulas a Salas em uma Instituição Universitária. Associação Brasileira de Engenharia de Produção (ABEPRO), Revista Produção Online, v.11, n.1, mar. 2011, pp 54-75.
+24. [Vieira__2011] Vieira, F.; Macedo, H.; Sistema de Alocação de Horários de Cursos Universitários: Um estudo de Caso no Departamento de Computação da Universidade Federal de Sergipe, Scientia Plena, Vol. 7, Num. 3, 039901 (2011).
 
 ## Apêndice A - Solução Construtiva
 
