@@ -1144,7 +1144,22 @@ Usando o mesmo banco de dados do Sistema Acadêmico, temos que...
 
 ### 7.1. Trabalhos futuros
 
-## 99. Referências <!-- Lembrar te colocar links para PDFs para ajudar o futuro 🫡 -->
+## 99. Referências <!-- Lembrar de colocar links para PDFs para ajudar o futuro 🫡 -->
+
+ALEGRE, P. Desenvolvimento de um Modelo para o School Timetabling Problem Baseado na Meta-Heurística Simulated Annealing. Simulated Annealing, 2012. Citado na página 13.
+ALENCAR, W. et al. Visualization Methods for Educational Timetabling Problems: A Systematic Review of Literature. In: Proceedings of the 14th International Joint Conference on Computer Vision, Imaging and Computer Graphics Theory and Applications. Prague, Czech Republic: SCITEPRESS - Science and Technology Publications, 2019. p. 275–281. ISBN 978-989-758-354-4. Disponível em: <http://www.scitepress.org/DigitalLibrary/Link.aspx?doi=10.5220/0007375802750281>. Citado 5 vezes nas páginas 11, 12, 13, 14 e 15.
+ALENCAR, W. D. S. et al. Information Visualization for Highlighting Conflicts in Educational Timetabling Problems. In: BEBIS, G. et al. (Ed.). Advances in Visual Computing. Cham: Springer International Publishing, 2019. v. 11844, p. 275–288. ISBN 978-3-030-33719-3 978-3-030-33720-9. Series Title: Lecture Notes in Computer Science. Disponível em: <http://link.springer.com/10.1007/978-3-030-33720-9_21>. Citado 2 vezes nas páginas 17 e 18.
+ANDRE, A.; DINATA, H. Interaction Design to Enhance UX of University Timetable Plotting System on Mobile Version. IOP Conference Series: Materials Science and Engineering, v. 407, p. 012174, set. 2018. ISSN 1757-899X. Disponível em: <https://iopscience.iop.org/article/10.1088/1757-899X/407/1/012174>. Citado 3 vezes nas páginas 8, 15 e 17.
+ARRATIA-MARTINEZ, N. M.; MAYA-PADRON, C.; AVILA-TORRES, P. A. University Course Timetabling Problem with Professor Assignment. Mathematical Problems in Engineering, v. 2021, p. 1–9, jan. 2021. ISSN 1563-5147, 1024-123X. Disponível em: <https://www.hindawi.com/journals/mpe/2021/6617177/>. Citado 3 vezes nas páginas 11, 13 e 14.
+BARHAM, A. M.; WESTWOOD, J. B. A Simple Heuristic to Facilitate Course Timetabling. The Journal of the Operational Research Society, v. 29, n. 11, p. 1055, nov. 1978. ISSN 01605682. Disponível em: <https://www.jstor.org/stable/3009353?origin=crossref>. Citado na página 5.
+BOURQUE, P.; FAIRLEY, R. E. (Ed.). SWEBOK: guide to the software engineering body of knowledge. Version 3.0. Los Alamitos, CA: IEEE Computer Society, 2014. OCLC: 880350861. ISBN 978-0-7695-5166-1. Citado na página 9.
+MIRANDA, J.; REY, P. A.; ROBLES, J. M. udpSkeduler: A Web architecture based decision support system for course and classroom scheduling. Decision Support Systems, v. 52, n. 2, p. 505–513, jan. 2012. ISSN 01679236. Disponível em: <https://linkinghub.elsevier.com/retrieve/pii/S0167923611001746>. Citado 3 vezes nas páginas 5, 12 e 16.
+MURRAY, K.; MüLLER, T.; RUDOVá, H. Modeling and Solution of a Complex University Course Timetabling Problem. In: BURKE, E. K.; RUDOVá, H. (Ed.). Practice and Theory of Automated Timetabling VI. Berlin, Heidelberg: Springer Berlin Heidelberg, 2007. v. 3867, p. 189–209. ISBN 978-3-540-77344-3. Series Title: Lecture Notes in Computer Science. Disponível em: <http://link.springer.com/10.1007/978-3-540-77345-0_13>. Citado na página 14.
+THOMAS, J. J.; KHADER, A. T.; BELATON, B. Visualization Techniques on the Examination Timetabling Pre-processing Data. In: 2009 Sixth International Conference on Computer Graphics, Imaging and Visualization. Tianjin, China: IEEE, 2009. p. 454–458. ISBN 978-0-7695-3789-4. Disponível em: <http://ieeexplore.ieee.org/document/5298764/>. Citado na página 5.
+WREN, A. Scheduling, timetabling and rostering — A special relationship? In: OOS, G. et al. (Ed.). Practice and Theory of Automated Timetabling. Berlin, Heidelberg: Springer Berlin Heidelberg, 1996. v. 1153, p. 46–75. ISBN 978-3-540-61794-5 978-3-540-70682-3. Series Title: Lecture Notes in Computer Science. Disponível em: <http://link.springer.com/10.1007/3-540-61794-9_51>. Citado 2 vezes nas páginas 11 e 12.
+
+Sânya
+Ricardo
 
 ## Anexo 1
 
