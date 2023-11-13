@@ -1191,9 +1191,11 @@ O bando de dados utilizado foi o [MySQL][LinkMySQL], visto que é o mesmo utiliz
 
 [LinkMySQL]: sql.com
 
-## 6. Resultado/Experimentos/Cenários
+## 6. Experimentos
 
-## 7. Conclusões
+## 7. Resultado
+
+## 8. Conclusões
 
 O problema de organização de grade horária no ensino superior tem sido amplamente estudada por diversos pesquisadores. Devido sua natureza multidimensional e com forte tendência à especificidades, este campo de estudo se mostra como amplo e complexo.
 
@@ -1215,7 +1217,7 @@ Quanto ao software, mesmo que o prioritário seja a sua funcionalidade, é esper
 
 Considerando que as duas tentativas anteriores resultaram em métodos que embora atingissem seu objetivo, não foram implementados na prática, tem-se como esperado que o mesmo ocorra com este trabalho. Com isso, espera-se que em trabalhos futuros se estude e analise os motivos de falha do uso prático do atual sistema.
 
-## 99. Referências <!-- Lembrar de colocar links para PDFs para ajudar o futuro 🫡 -->
+## 9. Referências <!-- Lembrar de colocar links para PDFs para ajudar o futuro 🫡 -->
 
 ALEGRE, P. Desenvolvimento de um Modelo para o School Timetabling Problem Baseado na Meta-Heurística Simulated Annealing. Simulated Annealing, 2012. Citado na página 13.
 ALENCAR, W. et al. Visualization Methods for Educational Timetabling Problems: A Systematic Review of Literature. In: Proceedings of the 14th International Joint Conference on Computer Vision, Imaging and Computer Graphics Theory and Applications. Prague, Czech Republic: SCITEPRESS - Science and Technology Publications, 2019. p. 275–281. ISBN 978-989-758-354-4. Disponível em: <http://www.scitepress.org/DigitalLibrary/Link.aspx?doi=10.5220/0007375802750281>. Citado 5 vezes nas páginas 11, 12, 13, 14 e 15.
