@@ -20,7 +20,7 @@
 
 ---
 
-## 1. Introdução <!-- Fazer algumas sutis alterações no português --> <!-- Fazer referência ao TCC do Ricardo falando sobre "Já existem no mercado algumas ferramentas que prometem a geração automatizada de grades de horários" -->
+## 1. Introdução <!-- Fazer algumas sutis alterações no português --> <!-- Fazer referência ao TCC do Ricardo falando sobre "Já existem no mercado algumas ferramentas que prometem a geração automatizada de grades de horários" --> <!-- Adicionar o que Sanya, Ricardo e Vieira 2011 falam em relação às ferramentas, buscando também um novo autor mais recente que diga o mesmo -->
 
 <!--
 % \chapter[Introdução]{Introdução}
@@ -191,7 +191,7 @@ Levando em conta a problemática evidenciada e os sucessos prévios dos artigos 
 
 <!-- ## \section{Metodologia} -->
 
-### 1.5. Metodologia
+### 1.5. Metodologia <!-- Alterar a parte final da metodologia -->
 
 <!--
 % - Entrevistas qualitativas com stakeholders     x
@@ -297,6 +297,8 @@ Esta etapa será de grande importância pois guiará a pesquisa para quais serã
   - Quantas disciplinas podem ministrar?
   - Quais seus horários de preferência?
 
+<!-- Realmente vou testar? -->
+
 Com as regras organizacionais e variáveis bem definidas, serão testados alguns softwares que visam a criação de grades horárias para confirmar se há a real necessidade de se desenvolver um software específico para a instituição. Após realizados os testes, caso os softwares existentes supram as necessidades, este será utilizado nos passos seguintes. De outro modo, haverá a necessidade de desenvolvimento de um sistema de suporte à decisão como ferramenta centralizada para este fim.
 
 Independente de qual dos softwares será testada a aplicabilidade do mesmo no contexto universitário e será mensurada a satisfação dos \textit{stakeholders} durante o seu uso, assim buscando assegurar o seu uso na criação de grades horárias ótimas futuras.
@@ -335,6 +337,11 @@ Antes de prosseguirmos com o desenrolar deste trabalho, é adequado que primeiro
 
 <!-- \section{Definição de termos} -->
 
+<!-- O Problema de Programação de Horários (Timetabling Problem) é um problema de grande relevância e amplamente estudado na área de Pesquisa Operacional. Um número significativo de trabalhos sobre esse problema foi publicado nos últimos anos e conferências regulares discutem o tema no meio científico [Splinder2010]. -->
+<!-- Sânya -->
+<!-- O Problema de Programação de Horário Escolar pode ser generalizado como o escalonamento semanal das aulas em uma escola sem que professores e alunos tenham mais de uma aula ao mesmo tempo (estudantes são agrupados em turmas com os mesmos planos de aula). Já o Problema de Programação de Horário de Disciplinas em Universidades como o escalonamento semestral das aulas de um conjunto de disciplinas de uma universidade de modo a evitar colisão de horários (estudantes geralmente são considerados individualmente) [Paim__2010]. -->
+<!-- Sânya -->
+
 ### 2.1 Definição de termos
 
 Ao longo dos anos de desenvolvimento acadêmico, diversos assuntos vão se aprofundando e se tornando mais específicos, assim, os estudiosos acabam cunhando novos termos que o auxiliam a desvencilhar as novas áreas específicas das suas áreas originárias. Porém, existe o potencial de que haja um crescimento desestruturado destes novos termos, assim vários termos diferentes podem se referir a um mesmo conceito, enquanto que um mesmo tempo pode se referir a vários conceitos diferentes de acordo com o autor.
@@ -344,6 +351,8 @@ Assim como feito por \cite{goos_scheduling_1996}, definiremos os conceitos dos t
 O termo "\textit{timetable}" tem o mesmo valor que "grade horária" e serão usadas como se fossem sinônimos mesmo sendo de línguas diferentes. Segundo \cite{goos_scheduling_1996}, podemos definir \textit{timetable} como uma estrutura que mostra quando que eventos ocorrerão, não havendo necessariamente a alocação de recursos.
 
 Vale ressaltar que este termo não tem seu uso limitado para os fins desta pesquisa, sendo também usado para problemas de alocação de enfermeiros, esportes, funcionários e transportes \cite{arratia-martinez_university_2021}. Entretanto, neste trabalho, abordaremos principalmente os termos relacionados ao que pode ser chamado de \textit{Educational Timetabling} (Ed-TT) \cite{alencar_visualization_2019}, que é o que tende a envolver um conjunto específico de recursos relacionados à educação.
+
+<!-- Sânya fala sobre International Timetabling Competition -->
 
 Wren também define os conceitos para \textit{class timetable}, \textit{university examination timetable} e \textit{university class timetable}, tendo relevância apenas o último, que considera a disponibilidade de professores e salas, a quantidade de alunos e os requisitos que determinada disciplina exige.
 
@@ -486,7 +495,17 @@ Com isso, entramos também no ramo da Interação Homem-Máquina, ramo abordado 
 
 ### 2.4. Trabalhos anteriores
 
+Este trabalho não se mostra desprovido de histórico na tentativa de resolução do mesmo problema. Sânya e Ricardo, ambos estudantes de Ciência da Computação da UENF, já realizaram trabalhos com o mesmo fim, porém com abordagens diferentes da atual proposta.
+
+Tendo vista que atualmente o problema de Programação Horária da UENF ainda perdura, podemos considerar que embora os trabalhos anteriores tenham se mostrado importantes ao pavimentar o caminho em direção à resolução da problemática disposta, as soluções ótimas encontradas por ambos, embora ótimas para a modelagem proposta, não se mostraram ótimas para a realidade da universidade.
+
+Abaixo são listados os trabalhos anteriores e suas respectivas abordagens, bem como os apontamentos do que se mostrou inviável para a realidade da universidade.
+
 #### 2.4.1. Sânya
+
+Em seu trabalho, Sânya aborda o problema de Programação de Horários de Disciplinas em Universidades, tendo como foco o curso de Ciência da Computação da UENF. Sua abordagem foi a de desenvolver um software que fosse capaz de gerar uma grade horária ótima para o curso, levando em conta as restrições impostas pelo curso. Para isso, Sânya explicou diversos métodos possíveis para se alcançar a solução desejada, passando inicialmente pelos métodos construtivos, seguido de métodos refinamento, podendo essas heurísticas serem utilizadas em conjunto com metaheurísticas.
+
+Por fim, utilizou uma heurística que consistia em respeitar a uma matriz de preferência para a distribuição das disciplinas. Seguindo com o uso do Simulated Annealling para a otimização da solução inicial.
 
 #### 2.4.2. Rodrigo
 
@@ -502,6 +521,65 @@ Com isso, entramos também no ramo da Interação Homem-Máquina, ramo abordado 
 > Como possível trabalho futuro propõe-se o aperfeiçoamento da interface gráfica e do banco de dados da ferramenta desenvolvida para que seja possível armazenar um maior número de informações pertinentes ao problema de uma forma eficiente, para que o usuário possa realizar modificações no quadro de horários e a ferramenta seja capaz de informar se essas modificações são viáveis ou não e para que a escolha dos dados usados na resolução do problema tenha uma maior flexibilidade. Além disso, os mecanismos usados na implementação da Função Objetivo (função que avalia a qualidade das soluções obtidas) podem ser aperfeiçoados com o intuito de cada vez mais atender a um maior número de particularidades do dia a dia do curso de Ciência da Computação da UENF.
 
 ---
+
+#### 2.4.3. Divergências
+
+##### Sânya
+
+- Sânya
+  - Conceito de turma
+  - Preferência de professores
+
+É dito por Sânya que:
+
+> Como na UENF a tarefa de distribuição de sala não varia muito a cada período, sendo feito separadamente por cada centro [...]
+
+Embora possamos entender o conceito de "variar muito" como subjetivo, considerando que mesmo ao longo de um mesmo semestre existem realocações de salas e professores dentro do contexto de um mesmo Centro, podemos entender que a realidade da UENF é de fato muito dinâmica, não se encaixando completamente na solução de alocação única inicial de salas e professores.
+
+Poderia-se alegar que tratar da variabilidade de alocações de salas de um mesmo Centro foge do escopo do trabalho, porém, para que o coordenador da Computação tenha fácil acesso aos dados de alocação de salas disponíveis, faz-se necessário que seu uso esteja compartilhado com o Diretor do Centro de Ciência e Tecnologia (CCT), visto que este é o responsável pela alocação de salas de todos os cursos do CCT.
+
+> [...] e as aulas que necessitam de salas com recursos especiais são geralmente já pré estabelecidas, não há necessidade de automatizar esta tarefa de distribuição de salas.
+
+Algumas turmas são historicamente alocadas à determinadas salas, mas isso não significa necessariamente que esta alocação é a mais adequada para a mesma. Então, todas as salas, mesmo que inicialmente pré-estabelecidas, devem estar passíveis de mudanças, mas com possibilidade de se fixar.
+
+> Outra tarefa que no presente cenário do curso de Ciência da Computação não viabiliza algum tipo de automatização é a distribuição de professores, pois além de um número muito pequeno destes, não há muitas alternativas de mudanças de suas respectivas disciplinas.
+
+Quanto à distribuição de professores, a realidade do curso de Ciência da Computação segue a mesma da que foi apontada em 2013 por Sânya. Entretanto, cada professor tem sua própria gama de disciplinas que se dispõe a ministrar, e a coordenação tende a distribuí-los de acordo com sua preferência. Entretanto, como a demanda dos alunos não se mostra linear como foi estudado, é possível que a distribuição de professores seja feita de forma mais eficiente, considerando a demanda dos alunos, ainda que não se descartem suas preferências pessoais.
+
+> Requisitos essenciais, ou seja, obrigatórios:
+>
+> RE1 - Um professor não pode lecionar aula em duas turmas diferentes no mesmo horário.
+> RE2 - Uma turma não pode ter aula em duas disciplinas no mesmo horário.
+>
+> Requisitos não essenciais, de qualidade:
+>
+> RNE1 - O ideal é que existam no máximo duas aulas consecutivas da mesma disciplina.
+> RNE2 - Não devem haver mais de duas aulas da mesma disciplina em um dia.
+> RNE3 - Não preencher os horários de 12h às 14h, pois se trata de horário de almoço.
+> RNE4 - Os professores associados, por terem exclusividade com a instituição, preferem espalhar os horários das aulas dadas, e não acumular todas no mesmo dia.
+> RNE5 - Os professores contratados, por outro lado, preferem que suas aulas sejam alocadas num mesmo dia, ou no menor número de dias possíveis.
+
+Quanto à citada RE2, a limitação deveria ser mais criteriosa, e se tratando de um requisito não essencial, pois, o conceito de turma é dado pela junção de estudantes que cursam a mesma disciplina, ministrada por um mesmo professor, em um mesmo semestre. Mas em seu trabalho, Sânya considera o conceito de turma como sendo o conjunto de estudantes que ingressaram em um mesmo ano, independente da consideração da existência de repetentes e de suas escolhas pessoais de inscrição.
+
+RNE1, RNE2 e RNE3: todas elas não consideram a existência de disciplinas que necessitam de um total de cinco tempos de aula semanais, sendo elas regularmente divididas em dois períodos, um de duas horas e outro de três horas. Que, em situações de necessidades, como é visto na entrevista com o diretor do CCT, acaba sim sendo necessária a sua alocação em período de almoço.
+
+RNE4 e RNE5: embora estajam direcionadas corretamente, ainda assim não engloba casos de preferência pessoal de cada um dos professores citados. Como por exemplo a possibilidade de não se ministrar aulas em determinados dias da semana por motivos religiosos, seja por parte do quadro permante, quanto de professores associados.
+
+---
+
+Outra considerável divergência entre o modelo e a realidade é a definição de que a cada semestre contém apenas 5 turmas de computação. Sendo estas compostas pelos estudantes ingressantes de 5 anos consecutivos, caso este que não se aplica à realidade da universidade, visto que a quantidade de turmas varia de acordo com a demanda semestral, que não necessariamente condiz com todos os estudantes ingressantes de um mesmo ano.
+
+O problema da programação de horário abordado considera um conjunto de aulas chamado eventos E e um conjunto de timeslots T onde T é igual ao número de dias vezes a quantidade de horas por dia, sendo portanto 50 timeslots, pois há 10 horários possíveis para 5 dias da semana. Este problema consiste em alocar as aulas do conjunto E aos timeslots do conjunto T, de maneira que todas as aulas sejam alocadas, respeitando todas as restrições fortes além de minimizar ao máximo possívei o núrnero de restrições fracas. Portanto, para cada timeslosts existem no máximo 5 opções de alocação de disciplinas, pois há no máximo 5 turmas por semestre, evitando a violação da restrição forte RE2. Uma solução ideal é aquela que não desrespeita nenhuma restrição. A representação dos timeslosts se encontra na figura 5.1.
+
+<!-- TABELA -->
+
+Figura 5.1 — Distribuição dos timeslots com relação aos horários e dias da semana.
+
+Uma solução para o problema é encontrada quando cada evento (aula) é alocado em um timeslost respeitando os requisitos essenciais. A qualidade da solução é por sua vez, determinada através do cumprimento dos requisitos não essenciais, ou também chamados requisitos de qualidade.
+
+Com isso, uma solução S para o problema pode ser medida através de uma função objetivo. A função objetivo f associa cada solução S do espaço de soluções a um numero real f(s), e deve ser minimizada.
+
+A criação de soluções neste presente projeto foi divida em 3 fases. A primeira é criação de solução construtiva, utilizando por tanto uma heurística construtiva. A segunda e a terceira fase são, respectivamente, uma heurística de melhoria e uma metaheurística Simulated Annealing, realizando movimentos de melhoria a partir da solução construtiva obtida na primeira fase. Essas fases são detalhadas nas seções a seguir.
 
 ## 3. Modelagem geral do sistema <!-- Modificar o texto para descrever o que o sistema de fato faz -->
 
@@ -814,6 +892,12 @@ Outros problemas encontrados, remetem à acomodação institucional de algumas p
 ### 4.3. Progressão usual da criação de grades horárias <!-- Estou com dúvida novamente de qual é a progressão e de quem faz o quê -->
 
 Ao somarmos o conhecimento presente no estatuto da UENF, com o conhecimento adquirido através das entrevistas, podemos ter uma visão geral de como se dá a criação das grades horárias na UENF. Assim, abaixo estão listados os passos que geralmente são seguidos para a criação das grades horárias.
+
+<!--
+Tendo obtido as informações dos \textit{stakeholders} primários, será então necessário modelar quais são as regras que ditam a estrutura organizacional em foco. Para este fim, serão utilizados diagramas conceituais utilizando softwares de suporte como o [Visual Paradigm][LinkVisualParadigm], [draw.io][LinkDrawio] e a [ferramenta Mermaid][LinkMermaid].
+
+Fazer um diagrama de... sei lá, aquele que tem barras retas. Diagrama de atividades?
+-->
 
 1. Período ocorrendo normalmente;
 2. Coordenadores enviam para Chefes de Laboratório uma demanda estimada de cada uma das disciplinas que serão ofertadas;
