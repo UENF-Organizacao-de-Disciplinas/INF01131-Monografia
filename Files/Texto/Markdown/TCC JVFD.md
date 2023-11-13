@@ -1126,9 +1126,47 @@ Apesar das possibilidades de meios legalmente válidos para a aquisição dos da
 
 ### 5.3. Protótipo
 
-Para protótipo foi usado o [Figma][LinkFigma]...
+A criação de protótipos, seguindo a abordagem tomada por \cite{andre_interaction_2018}, se mostra como essencial para que se mantenha a constante satisfação por parte dos _stakeholders_ e quais mudanças sugerem ao desenvolvimento do projeto, assim reduzindo a necessidade de retrabalho ou de não alcance das expectativas do projeto.
 
-[LinkFigma]: https://www.figma.com/
+Para este fim, foram feitos os designs iniciais usando o software de design [Figma][LinkFigma] para este fim. Algumas telas principais foram concebidas. A primeira e principal é a que permite que o usuário arraste a turma até o horário desejado. A turma ao qual este horário se refere pode ser definida na parte lateral direita.
+
+[LinkFigma]: figma.com
+
+![Alt text](img/Prototipo/main.png)
+
+Em seguida, temos a tela base para seleção de dados deseja-se modificar, podendo ser:
+
+- Salas
+- Disciplinas
+- Professores
+- Alunos
+- Turmas
+
+Cada um desses tendo sua própria página de criação, leitura, edição ou deleção de dados.
+
+![Alt text](img/Prototipo/CRUD_main.png)
+
+Quanto às salas, temos a sua alocação atual baseado no ano e semestre. Nessa página pode-se também registrar algumas características da sala, como a quantidade de cadeiras e computadores, e se possui monitor, projetos, quadro de giz e quadro branco.
+
+![Alt text](img/Prototipo/CRUD_salas-Vazia.png)
+
+Na página dos alunos, pode-se cadastrar novos alunos informando o seu ano de entrada e a sua matrícula. Abaixo temos a visualização da grade, onde pode-se classificar cada uma das disciplinas como aprovada, reprovada e cursando.
+
+![Alt text](img/Prototipo/CRUD_alunos.png)
+
+Podemos também definir nas disciplinas qual seu código e nome, e o seu período esperado segundo a ementa. Informamos quais cursos a possuem em suas ementas, quais seus pré-requisitos, os professores que a ministram e quais requisitos a mesma possui em relação à características de sala.
+
+![Alt text](img/Prototipo/CRUD_disciplinas.png)
+
+Na seção de professores, temos a relação de disciplinas que os mesmos estão passíveis de ministrar, e também quais são suas preferências de horários ao longo da semana.
+
+![Alt text](img/Prototipo/CRUD_professores.png)
+
+Por fim, temos a junção de todas as informações registradas acima. Nela, podemos informar em quais horários, dias e em que sala, a turma estará alocada, além de informar qual professor a lecionará e a qual disciplina ela se refere.
+
+Na imagem temos um exemplo das ilustrações de níveis de alerta, informando que o tempo de duração do segundo dia de aulas não condiz com a preferência pessoal do professor selecionado, e que na primeira sala estão ocorrendo conflitos. Conflitos esses ressaltados nos nomes dos alunos que demandam tal disciplina.
+
+![Alt text](img/Prototipo/CRUD_turmas.png)
 
 ### 5.4. Banco de Dados
 
