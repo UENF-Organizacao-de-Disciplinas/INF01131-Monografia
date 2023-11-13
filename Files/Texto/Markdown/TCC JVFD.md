@@ -1168,13 +1168,28 @@ Na imagem temos um exemplo das ilustrações de níveis de alerta, informando qu
 
 ![Alt text](img/Prototipo/CRUD_turmas.png)
 
-### 5.4. Banco de Dados
+### 5.4. Modelo de Banco de Dados
 
-Usando o mesmo banco de dados do Sistema Acadêmico, temos que...
+Considerando as informações necessárias para o presente trabalho, e também o preparo de campo para potenciais aplicações futuras, foi elaborado um diagrama conceitual de banco de dados, que pode ser visto abaixo:
 
-### 5.5. Front-end
+![Alt text](img/DiagramaConceitual/DiagramaConceitualBranco.png)
+<!-- ![Alt text](img/DiagramaConceitual/DiagramaConceitual.png) -->
 
-### 5.6. Back-end
+O diagrama conceitual foi elaborado utilizando a ferramenta [Draw.io][LinkDrawio] citada na metodologia e ilutra as relações entre diversas entidades presentes na realidade da UENF. O emaranhamento presente no diagrama ilustra a complexidade envolvida na criação de uma grade horária, onde diversas entidades se relacionam entre si.
+
+Como principais apontamentos, podemos citar a parte principal do modelo que é a alocação de turmas. Ela, como já descrito, envolve a correlação entre alunos de diferentes cursos, professores, disciplinas, salas e horários. Além disso, também é possível notar a presença de entidades que não são diretamente relacionadas à alocação de turmas, mas que podem se mostrar úteis, como a relação entre professores e laboratórios, e a de disciplinas e ementas.
+
+### 5.5. Desenvolvimento Web <!-- Entrar em contato com a G-Info -->
+
+Como forma de disponibilizar o acesso online, desenvolveu-se então, com os modelos elaborados um website utilizando do framework [React][LinkReact].
+
+[LinkReact]: react.com
+
+Buscou-se utilizar uma máquina virtual disponibilizada pela própria UENF, para evitar que houve problemas de conexão por parte dos servidores que em sua rede estivessem conectados.
+
+O bando de dados utilizado foi o [MySQL][LinkMySQL], visto que é o mesmo utilizado pelo Sistema Acadêmico, assim proporcionando uma possível maior facilidade em uma hipotética integração futura.
+
+[LinkMySQL]: sql.com
 
 ## 6. Resultado/Experimentos/Cenários
 
