@@ -1201,6 +1201,12 @@ O bando de dados utilizado foi o [MySQL][LinkMySQL], visto que é o mesmo utiliz
 
 ## 7. Resultado
 
+Como esperado, encontrar uma solução ótima para o problema de criação de grade horária tende à impraticabilidade, visto a dificuldade de se definir se de fato há tal solução a ser atingida. Mesmo assim, ao se utilizar de um método de manipulação manual dos dados, foi possível obter uma solução que se aproxima da ótima, e que pode ser utilizada na prática.
+
+Em termos quantitativos, o sistema desenvolvido apresenta uma redução de XX% de conflitos em relação à solução inicial. O que mostra um resultado satisfatório.
+
+Esse resultado entretanto não diz respeito à uma conclusão absoluta, visto que o sistema desenvolvido não foi testado em um ambiente real, e sim em um ambiente hipotético. Com isso, considerável parte de informações encontra-se faltante e foi substituída por dados aleatórios, o que pode ter influenciado no resultado final.
+
 ### 7.1. Soluções Burocráticas
 
 Além da busca pela solução ótima, o presente trabalho também se propõe a buscar métodos ainda mais alternativos para se amenizar a problemática abordada. Sendo, de forma simples, o uso de meios burocráticos disponíveis na instituição que abre alguns caminhos para a solução do problema. Entretanto, é necessário que se tenha em mente que a burocracia é um processo lento e que pode ser desgastante, sendo até mesmo esperado que não seja desejado por parte dos construtores da grade horária.
