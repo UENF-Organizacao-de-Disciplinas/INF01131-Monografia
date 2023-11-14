@@ -927,7 +927,7 @@ Precisa verificar manualmente quantos alunos foram aprovados em cada matéria. E
 
 Como forma de analisar também a perspectiva dos discentes quanto à problemática abordada, foi elaborado um formulário de pesquisa com o intuito de se confirmar ou não a hipótese de que em sua maioria os alunos também se encontram insatisfeitos com a atual conjuntura de distribuição e alocação de turmas.
 
-Para este fim, foi utilizado um formulário de pesquisa qualitativa dos alunos disponível no [Anexo 1](#anexo-1). O formulário foi divulgado através de um link disponibilizado no grupo de alunos do curso de Ciência da Computação no WhatsApp, e também através de um link distribuído pela Secretaria Acadêmica a todos os discentes da UENF. No link, os estudantes poderiam apenas responder ao formulário utilizando de seu e-mail institucional, que é um e-mail do Google disponibilizado apenas para estudantes da UENF.
+Para este fim, foi utilizado um formulário de pesquisa qualitativa dos alunos disponível no [Apêndice 1](#apendice-1). O formulário foi divulgado através de um link disponibilizado no grupo de alunos do curso de Ciência da Computação no WhatsApp, e também através de um link distribuído pela Secretaria Acadêmica a todos os discentes da UENF. No link, os estudantes poderiam apenas responder ao formulário utilizando de seu e-mail institucional, que é um e-mail do Google disponibilizado apenas para estudantes da UENF.
 
 A seguir, estão dispostos alguns resultados obtidos pelo formulário:
 
@@ -1299,56 +1299,149 @@ WREN, A. Scheduling, timetabling and rostering — A special relationship? In: O
 Sânya
 Ricardo
 
-## Anexo 1
+## Apêndice 1
 
-### Formulário de pesquisa qualitativa dos alunos
+### Formulário de pesquisa realizada com alunos da UENF
 
-Abaixo se encontram algumas perguntas feitas a discentes da UENF em relação à sua satisfação com a atual distribuição de disciplinas semestrais.
+Pesquisa quantitativa de alunos da UENF sobre distribuição e oferta de disciplinas
 
-### Introdução
+#### Seção 1: Pesquisa quantitativa de alunos da UENF sobre distribuição e oferta de disciplinas
 
-Olá! Desde já agradeço por ceder um pouco do seu tempo para responder a este formulário. Considerando que nosso tempo é valioso, vamos direto ao objetivo:
+Olá! Desde já agradeço por ceder em torno de 4 minutos do seu tempo para responder a este formulário usando o seu e-mail institucional. Considerando que nosso tempo é valioso, vamos direto ao objetivo:
 
-Me chamo João Vítor Fernandes Dias, estudante de Ciência da Computação na UENF, e estou fazendo minha Monografia. Ela trata sobre a elaboração de um sistema para a coordenação de curso poder analisar mais facilmente quais são as disciplinas que serão disponibilizadas a cada semestre e a quais salas e professores serão atribuídos.
+Me chamo João Vítor Fernandes Dias, estudante de Ciência da Computação na UENF, e estou fazendo minha Monografia. Ela trata da elaboração de um sistema para a coordenação de curso poder analisar mais facilmente quais são as disciplinas que serão disponibilizadas a cada semestre e a quais salas e professores serão atribuídas.
 
-O objetivo é que mais disciplinas possam ser oferecidas em horários que mais alunos possam se inscrever sem haver conflitos com outras disciplinas.
+O objetivo da minha monografia é conseguir tornar mais eficiente a distribuição das disciplinas, para que se resulte em um conjunto de disciplinas ofertadas com melhor qualidade. Espera-se com isso que as demandas de disciplina dos alunos sejam melhor atendidas, assim como as preferências de horários dos professores.
 
-Este formulário tem como objetivo avaliar a sua satisfação em relação a este processo de inscrição semestral nas disciplinas.
+Este formulário tem como objetivo avaliar a sua satisfação em relação ao processo de inscrição semestral nas disciplinas.
 
-### Perguntas
+#### Seção 2: Sobre você
 
-#### Objetivas
+Nesta seção, peço que informe algumas características suas para que a análise estatística se torne mais rica.
 
-- Pessoais
+- Pergunta
   - Qual o seu curso?
+- Opções de resposta
+  1. Administração Pública
+  2. Agronomia
+  3. Biologia (Licenciatura)
+  4. Ciência da Computação
+  5. Ciências Biológicas (bacharelado)
+  6. Ciências Sociais
+  7. Engenharia Civil
+  8. Engenharia de Exploração e Produção de Petróleo
+  9. Engenharia de Produção
+  10. Engenharia Metalúrgica
+  11. Engenharia Meteorológica
+  12. Física (licenciatura)
+  13. Matemática (Licenciatura)
+  14. Medicina Veterinária
+  15. Pedagogia (Licenciatura)
+  16. Química (Licenciatura)
+  17. Zootecnia
+  18. Outro
+
+- Pergunta:
   - Em que ano você ingressou na UENF?
-- Vagas
-  - Você já quis entrar em uma disciplina, mas ela não tinha vaga?
-  - Você já ficou acordado após meia-noite por medo de não ter vaga para as disciplinas que deseja cursar?
-- Conflitos
-  - Você já se deparou com duas ou mais disciplinas desejadas sendo ofertadas no mesmo horário?
-  - Você já teve que não se inscrever em uma disciplina por causa de conflito de horário?
-- Salas
-  - Você já se sentiu insatisfeito com a sala de aula atribuída a uma disciplina?
-  - Você já teve aula cuja sala não dispunha de cadeiras o suficiente?
-- Opiniões
-  - Você acha que a distribuição de disciplinas semestrais atende às necessidades dos alunos?
-  - Você acha que a universidade deveria oferecer mais horários para as disciplinas mais populares para evitar conflitos de horário?
+- Opções de resposta
+  1. 2023
+  2. 2022
+  3. 2021
+  4. 2020
+  5. 2019
+  6. 2018
+  7. 2017
+  8. 2016
+  9. 2015
+  10. 2014
+  11. 2013
+  12. Outro
 
-#### Multipla escolha
+#### Seção 3: Pesquisa de satisfação
 
-- Opiniões
-  - Você acha que a distribuição de disciplinas semestrais é...
-    - Justa: (feita de acordo a atender os desejos da maioria)
-    - Variada: (bem diversa e abrange diversos interesses)
-    - Contínua: (oferecida de forma a ter aulas sequenciais)
-    - Eficiente: (bem sucedida em atender aos desejos dos alunos)
-    - Distribuída: (bem espaçada ao longo da semana)
-    - Satisfatória: (agradável aos meus desejos pessoais)
-- Como você lida com conflitos de horário entre as disciplinas que deseja cursar?
-  - Escolho a mais difícil
-  - Escolho a mais fácil
-  - Escolho a que tem mais créditos
-  - Escolho a que prefiro
-  - Escolho a que prende mais matérias
+Agora serão feitas algumas perguntas em relação à sua satisfação com algumas características da Universidade.
+
+##### Abaixo, estão algumas perguntas gerais em relação à sua satisfação com a distribuição de disciplinas semestralmente.
+
+- Perguntas
+  1. Salas: Você já teve que mudar de sala por falta de algum acessório como quadro, projetor ou monitor?
+  2. Salas: Você já teve aula cuja sala não dispunha de carteiras o suficiente?
+  3. Vagas: Você já quis entrar em uma disciplina mas ela não tinha vaga?
+  4. Vagas: Você já ficou acordado após meia-noite por medo de não ter vaga para as disciplinas que deseja cursar?
+  5. Conflitos: Você já deixou de se inscrever em uma disciplina por causa de conflito de horário?
+  6. Preferências: Você já preferiu não se inscrever em uma disciplina para cursá-la em outro momento mais oportuno?
+  7. Opiniões: Você acha que a universidade deveria oferecer horários diferentes para as disciplinas mais demandadas para evitar conflitos com outras disciplinas?
+- Opções de resposta
+  - Sim
+  - Não
   - Outro
+
+#### Seção 4: Preferências pessoais
+
+Esta seção visa saber um pouco mais sobre as suas preferências pessois quanto a escolha das disciplinas ofertadas.
+
+- Pergunta
+  - Você prefere disciplinas distribuídas ao longo da semana ou acumuladas em poucos dias?
+- Opções de resposta
+  - 1. Distribuídas ao longo da semana
+  - 2.
+  - 3. Não tenho preferência
+  - 4.
+  - 5. Acumuladas em poucos dias
+
+- Pergunta
+  - Você prefere disciplinas na parte da manhã ou na parte da tarde?
+- Opções de resposta
+  - 1. na parte da manhã
+  - 2.
+  - 3. Não tenho preferência
+  - 4.
+  - 5. na parte da tarde
+
+- Pergunta
+  - Como você lida com conflitos de horário entre as disciplinas que deseja cursar?
+- Opções de resposta
+  - [ ] Escolho a mais difícil
+  - [ ] Escolho a mais fácil
+  - [ ] Escolho a que tem mais créditos
+  - [ ] Escolho a que prefiro
+  - [ ] Escolho a que "prende" mais matérias
+  - [ ] Escolho a disciplina mais concorrida
+
+#### Seção 5: Experiências passadas com atrasos e disciplinas
+
+Aqui estão algumas perguntas relacionadas à divergência entre o período esperado de conclusão das disciplinas VS o período em que elas de fato são realizadas.
+
+- Pergunta: Quanto tempo (em períodos) você já teve que esperar para fazer uma disciplina da sua grade? 
+- Descrição: Exemplo hipotético: estou no 6º período e estou desde o 4º período tentando me inscrever em uma disciplina, mas ela não foi oferecida ou não teve vaga, então tive que esperar 2 períodos.
+- Opções de resposta:
+  - 0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10
+
+- Pergunta: Qual foi a quantidade máxima de períodos que você se distanciou de uma disciplina de determinado período?
+- Descrição: Exemplo hipotético: estou no 6º período da faculdade mas ainda estou cursando uma disciplina do 3º período, pois escolhi não fazer antes, ou ainda não obtive a aprovação, logo, me distanciei 3 períodos do esperado.
+- Opções de resposta:
+  - 0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10
+
+#### Seção 6: Você acha que a distribuição de disciplinas semestrais é...
+
+- Classificações
+  - Justa (feita de acordo a atender os desejos da maioria)
+  - Variada (bem diversa e abrange diversos interesses)
+  - Contínua (oferecida de forma a ter aulas sequenciais)
+  - Eficiente (bem sucedida em atender aos desejos dos alunos)
+  - Distribuída (bem espaçada ao longo da semana)
+  - Satisfatória (agradável aos meus desejos pessoais)
+- Opções de resposta
+  - 1. Discordo completamente
+  - 2.
+  - 3.
+  - 4.
+  - 5. Concordo completamente
+
+#### Seção 7: Opcional
+
+Por fim, deixo aqui um espaço caso deseje compartilhar algum comentário, opinião ou sugestão quanto ao meu trabalho ou formulário.
+
+Escreva aqui caso haja algo que gostaria de comentar, opinar ou sugerir. Tudo bem deixar em branco, suas informações já foram de grande ajuda.
+
+- Campo de texto livre
