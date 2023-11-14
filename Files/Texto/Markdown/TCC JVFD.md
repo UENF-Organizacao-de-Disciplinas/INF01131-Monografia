@@ -1201,6 +1201,24 @@ O bando de dados utilizado foi o [MySQL][LinkMySQL], visto que é o mesmo utiliz
 
 ## 7. Resultado
 
+### 7.1. Soluções Burocráticas
+
+Além da busca pela solução ótima, o presente trabalho também se propõe a buscar métodos ainda mais alternativos para se amenizar a problemática abordada. Sendo, de forma simples, o uso de meios burocráticos disponíveis na instituição que abre alguns caminhos para a solução do problema. Entretanto, é necessário que se tenha em mente que a burocracia é um processo lento e que pode ser desgastante, sendo até mesmo esperado que não seja desejado por parte dos construtores da grade horária.
+
+#### 7.1.1. Tempo de elaboração das grades
+
+Durante as entrevistas, uma alternativa válida para a amenização da problemática abordada é a alteração da regulamentação da UENF que define férias de duas semanas entre os semestres. Caso essa regulamentação seja alterada para que as férias sejam de duas semanas, o problema de agendamento teria maior tempo para ser resolvido, assim fazendo com que a solução ótima seja provável de ser alcançada.
+
+Segundo o Artigo 28 do XXX, compete à secretaria acadêmica a elaboração da proposta de calendário escolar para que seja aprovado pelo Colegiado Acadêmico. Enquanto que o Artigo 63 da seção 2 do capítulo 1, informa que os calendários do curso de graduação devem ser aprovados pelas correspondentes câmaras, com observância do calendário da universidade.
+
+Logo, quanto à alteração do calendário acadêmico, a alteração mostra-se como possível, sendo necessário apenas que o processo burocrático necessário seja enfrentado.
+
+#### 7.1.2. Alteração forçada de horários
+
+Segundo o parágrafo primeiro do artigo 36 das Normas de Graduação, "qualquer alteração de horário/turno após o período de matrícula deverá ter a anuência por escrito de todos os discentes matriculados na turma". Seguindo ao segundo parágrafo do mesmo artigo, temos que "a alteração de horário das aulas da turma deverá ter a anuência da Coordenação de Curso e a ciência do Chefe do Laboratório responsável pela disciplina".
+
+Sendo assim possível alterar os horários de aula caso seja necessária para que haja uma melhora geral na distribuição das turmas na grade horária, mais uma vez sendo necessário superar o processo burocrático necessário.
+
 ## 8. Conclusões
 
 O problema de organização de grade horária no ensino superior tem sido amplamente estudada por diversos pesquisadores. Devido sua natureza multidimensional e com forte tendência à especificidades, este campo de estudo se mostra como amplo e complexo.
@@ -1293,31 +1311,3 @@ Este formulário tem como objetivo avaliar a sua satisfação em relação a est
   - Escolho a que prefiro
   - Escolho a que prende mais matérias
   - Outro
-
-## 999. ================================ Não sei onde colocar ================================   <!-- Organizar isso depois -->
-
-
-### 4.4 Solução Organizacional
-
-Durante as entrevistas, uma alternativa válida para a amenização da problemática abordada é a alteração da regulamentação da UENF que define férias de duas semanas entre os semestres. Caso essa regulamentação seja alterada para que as férias sejam de duas semanas, o problema de agendamento teria maior tempo para ser resolvido, assim fazendo com que a solução ótima seja provável de ser alcançada.
-
-Art. 28 - À Secretaria Acadêmica, órgão auxiliar da Reitoria, compete: II - elaborar a proposta de calendário escolar, ouvidas as respectivas Câmaras, para aprovação pelo Colegiado Acadêmico
-§ 8o - Compete ao Colegiado Acadêmico: X - aprovar o calendário escolar;
-
-TÍTULO III: DO REGIME ACADÊMICO
-CAPÍTULO I: DOS CURSOS, CURRÍCULOS E DISCIPLINAS
-SEÇÃO II: DO REGIME ESCOLAR
-Art. 63
-
-Os calendários dos cursos de graduação e programas de pós-graduação e extensão são aprovados pelas correspondentes Câmaras, com observância do calendário da Universidade.
-
-### 4.5. Alterações de horários
-
-Segundo as Normas de Graduação:
-
-> Art. 36 As aulas deverão ser ministradas pelo Docente responsável da disciplina nos horários designados pela Coordenação de Curso.
->
-> § 1º Qualquer alteração de horário/turno após o período de matrícula deverá ter a anuência por escrito de todos os discentes matriculados na turma.
-> § 2º º A alteração de horário das aulas da turma deverá ter a anuência da Coordenação de Curso e a ciência do Chefe do Laboratório responsável pela disciplina.
-
-Então é possível alterar os horários de aula caso desejado.
