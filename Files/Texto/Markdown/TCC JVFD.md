@@ -503,9 +503,9 @@ Abaixo são listados os trabalhos anteriores e suas respectivas abordagens, bem 
 
 #### 2.4.1. Sânya
 
-Em seu trabalho, Sânya aborda o problema de Programação de Horários de Disciplinas em Universidades, tendo como foco o curso de Ciência da Computação da UENF. Sua abordagem foi a de desenvolver um software que fosse capaz de gerar uma grade horária ótima para o curso, levando em conta as restrições impostas pelo curso. Para isso, Sânya explicou diversos métodos possíveis para se alcançar a solução desejada, passando inicialmente pelos métodos construtivos, seguido de métodos refinamento, podendo essas heurísticas serem utilizadas em conjunto com metaheurísticas.
+Em seu trabalho, Sânya aborda o problema de Programação de Horários de Disciplinas em Universidades, tendo como foco o curso de Ciência da Computação da UENF. Sua abordagem foi a de desenvolver um software que fosse capaz de gerar uma grade horária ótima para o curso, levando em conta as restrições impostas pelo curso. Para isso, Sânya explicou diversos métodos possíveis para se alcançar a solução desejada, passando inicialmente pelos métodos construtivos, seguido de métodos refinamento, podendo essas heurísticas serem utilizadas em conjunto com meta-heurísticas.
 
-Por fim, utilizou uma heurística que consistia em respeitar a uma matriz de preferência para a distribuição das disciplinas. Seguindo com o uso do Simulated Annealling para a otimização da solução inicial.
+Por fim, utilizou uma heurística que consistia em respeitar a uma matriz de preferência para a distribuição das disciplinas. Seguindo com o uso do _Simulated Annealing_ para a otimização da solução inicial.
 
 #### 2.4.2. Rodrigo
 
@@ -520,15 +520,9 @@ Por fim, utilizou uma heurística que consistia em respeitar a uma matriz de pre
 
 > Como possível trabalho futuro propõe-se o aperfeiçoamento da interface gráfica e do banco de dados da ferramenta desenvolvida para que seja possível armazenar um maior número de informações pertinentes ao problema de uma forma eficiente, para que o usuário possa realizar modificações no quadro de horários e a ferramenta seja capaz de informar se essas modificações são viáveis ou não e para que a escolha dos dados usados na resolução do problema tenha uma maior flexibilidade. Além disso, os mecanismos usados na implementação da Função Objetivo (função que avalia a qualidade das soluções obtidas) podem ser aperfeiçoados com o intuito de cada vez mais atender a um maior número de particularidades do dia a dia do curso de Ciência da Computação da UENF.
 
----
-
 #### 2.4.3. Divergências
 
 ##### Sânya
-
-- Sânya
-  - Conceito de turma
-  - Preferência de professores
 
 É dito por Sânya que:
 
@@ -536,9 +530,9 @@ Por fim, utilizou uma heurística que consistia em respeitar a uma matriz de pre
 
 Embora possamos entender o conceito de "variar muito" como subjetivo, considerando que mesmo ao longo de um mesmo semestre existem realocações de salas e professores dentro do contexto de um mesmo Centro, podemos entender que a realidade da UENF é de fato muito dinâmica, não se encaixando completamente na solução de alocação única inicial de salas e professores.
 
-Poderia-se alegar que tratar da variabilidade de alocações de salas de um mesmo Centro foge do escopo do trabalho, porém, para que o coordenador da Computação tenha fácil acesso aos dados de alocação de salas disponíveis, faz-se necessário que seu uso esteja compartilhado com o Diretor do Centro de Ciência e Tecnologia (CCT), visto que este é o responsável pela alocação de salas de todos os cursos do CCT.
+Pode-se alegar que tratar da variabilidade de alocações de salas de um mesmo Centro foge do escopo do trabalho, porém, para que o coordenador da Computação tenha fácil acesso aos dados de alocação de salas disponíveis, faz-se necessário que seu uso esteja compartilhado com o Diretor do Centro de Ciência e Tecnologia (CCT), visto que este é o responsável pela alocação de salas de todos os cursos do CCT.
 
-> [...] e as aulas que necessitam de salas com recursos especiais são geralmente já pré estabelecidas, não há necessidade de automatizar esta tarefa de distribuição de salas.
+> [...] e as aulas que necessitam de salas com recursos especiais são geralmente já preestabelecidas, não há necessidade de automatizar esta tarefa de distribuição de salas.
 
 Algumas turmas são historicamente alocadas à determinadas salas, mas isso não significa necessariamente que esta alocação é a mais adequada para a mesma. Então, todas as salas, mesmo que inicialmente pré-estabelecidas, devem estar passíveis de mudanças, mas com possibilidade de se fixar.
 
@@ -561,25 +555,12 @@ Quanto à distribuição de professores, a realidade do curso de Ciência da Com
 
 Quanto à citada RE2, a limitação deveria ser mais criteriosa, e se tratando de um requisito não essencial, pois, o conceito de turma é dado pela junção de estudantes que cursam a mesma disciplina, ministrada por um mesmo professor, em um mesmo semestre. Mas em seu trabalho, Sânya considera o conceito de turma como sendo o conjunto de estudantes que ingressaram em um mesmo ano, independente da consideração da existência de repetentes e de suas escolhas pessoais de inscrição.
 
-RNE1, RNE2 e RNE3: todas elas não consideram a existência de disciplinas que necessitam de um total de cinco tempos de aula semanais, sendo elas regularmente divididas em dois períodos, um de duas horas e outro de três horas. Que, em situações de necessidades, como é visto na entrevista com o diretor do CCT, acaba sim sendo necessária a sua alocação em período de almoço.
+RNE1, RNE2 e RNE3: todas elas não consideram a existência de disciplinas que necessitam de um total de cinco tempos de aula semanais, sendo elas regularmente divididas em dois períodos, um de duas horas e outro de três horas. Que, em situações de necessidades, como é visto na entrevista com o diretor do CCT, acaba sim sendo necessário que se aloque em período de almoço.
 
-RNE4 e RNE5: embora estajam direcionadas corretamente, ainda assim não engloba casos de preferência pessoal de cada um dos professores citados. Como por exemplo a possibilidade de não se ministrar aulas em determinados dias da semana por motivos religiosos, seja por parte do quadro permante, quanto de professores associados.
-
----
+RNE4 e RNE5: embora estejam direcionadas corretamente, ainda assim não engloba casos de preferência pessoal de cada um dos professores citados. Como por exemplo a possibilidade de não se ministrar aulas em determinados dias da semana por motivos religiosos, seja por parte do quadro permanente, quanto de professores associados.
 
 Outra considerável divergência entre o modelo e a realidade é a definição de que a cada semestre contém apenas 5 turmas de computação. Sendo estas compostas pelos estudantes ingressantes de 5 anos consecutivos, caso este que não se aplica à realidade da universidade, visto que a quantidade de turmas varia de acordo com a demanda semestral, que não necessariamente condiz com todos os estudantes ingressantes de um mesmo ano.
 
-O problema da programação de horário abordado considera um conjunto de aulas chamado eventos E e um conjunto de timeslots T onde T é igual ao número de dias vezes a quantidade de horas por dia, sendo portanto 50 timeslots, pois há 10 horários possíveis para 5 dias da semana. Este problema consiste em alocar as aulas do conjunto E aos timeslots do conjunto T, de maneira que todas as aulas sejam alocadas, respeitando todas as restrições fortes além de minimizar ao máximo possívei o núrnero de restrições fracas. Portanto, para cada timeslosts existem no máximo 5 opções de alocação de disciplinas, pois há no máximo 5 turmas por semestre, evitando a violação da restrição forte RE2. Uma solução ideal é aquela que não desrespeita nenhuma restrição. A representação dos timeslosts se encontra na figura 5.1.
-
-<!-- TABELA -->
-
-Figura 5.1 — Distribuição dos timeslots com relação aos horários e dias da semana.
-
-Uma solução para o problema é encontrada quando cada evento (aula) é alocado em um timeslost respeitando os requisitos essenciais. A qualidade da solução é por sua vez, determinada através do cumprimento dos requisitos não essenciais, ou também chamados requisitos de qualidade.
-
-Com isso, uma solução S para o problema pode ser medida através de uma função objetivo. A função objetivo f associa cada solução S do espaço de soluções a um numero real f(s), e deve ser minimizada.
-
-A criação de soluções neste presente projeto foi divida em 3 fases. A primeira é criação de solução construtiva, utilizando por tanto uma heurística construtiva. A segunda e a terceira fase são, respectivamente, uma heurística de melhoria e uma metaheurística Simulated Annealing, realizando movimentos de melhoria a partir da solução construtiva obtida na primeira fase. Essas fases são detalhadas nas seções a seguir.
 
 ## 3. Modelagem geral do sistema <!-- Modificar o texto para descrever o que o sistema de fato faz -->
 
@@ -651,9 +632,9 @@ A Figura \ref{fig:sistema} apresenta o comportamento geral do sistema, como seus
 
 ---
 
-### 3.4. Marco Teórico <!-- O que e de quais disciplinas tô usando? -->
+### 3.4. Marco Teórico <!-- O que e de quais disciplinas estou usando? -->
 
-Tendo em vista que o trabalho envolve uma pletora de conhecimento de diversas áres, é necessário que sejam definidos alguns conceitos que serão utilizados ao longo do trabalho.
+Tendo em vista que o trabalho envolve uma pletora de conhecimento de diversas áreas, é necessário que sejam definidos alguns conceitos que serão utilizados ao longo do trabalho.
 
 - Estruturas de dados
 - Algoritmos
@@ -680,9 +661,9 @@ Para que se possa entender melhor o problema, é necessário que se entenda a es
 
 Segundo o estatuto, a UENF compreende:
 
-- órgãos da Administração Superior de política, gestão e supervisão;
-- unidades universitárias de ensino, pesquisa e extensão;
-- órgãos e serviços especiais, destinados a auxiliar na administração e a suplementar as atividades de ensino, pesquisa, extensão e apoio técnico.
+- Órgãos da Administração Superior de política, gestão e supervisão;
+- Unidades universitárias de ensino, pesquisa e extensão;
+- Órgãos e serviços especiais, destinados a auxiliar na administração e a suplementar as atividades de ensino, pesquisa, extensão e apoio técnico.
 
 Quanto aos órgãos da Administração Superior devemos enfocar o órgão executivo, constituído unicamente pela reitoria, cujos órgãos auxiliares englobam a Secretaria Acadêmica, que por sua vez tem como algumas de suas atribuições as seguintes:
 
@@ -764,7 +745,7 @@ Um dos tópicos dialogados, foi quanto às categorias das disciplinas, ou seja, 
 - Ímpares: disciplinas que são ofertadas no primeiro semestre letivo.
 - Pares: disciplinas que são ofertadas no segundo semestre letivo.
 - De serviço: disciplinas ofertadas para mais de um curso simultaneamente
-- ciclo básico: disciplinas oferecidas para todas as engenharias
+- Ciclo básico: disciplinas oferecidas para todas as engenharias
 - Repetentes: turmas criadas especialmente para repetentes
 
 As disciplinas ímpares e pares geralmente estão atreladas à expectativa de que os alunos progredirão sequencialmente sem reprovação alguma. Entretanto, caso uma quantidade de alunos considerável de alunos reprove em determinada disciplina, é possível que estes se enquadrem na criação de uma turma especial para repetentes, ou não.
@@ -917,13 +898,13 @@ Fazer um diagrama de... sei lá, aquele que tem barras retas. Diagrama de ativid
 
 Entrando em detalhes ainda maiores, podemos citar uma das etapas de criação das grades horárias que é a coleta de uma demanda esperada. Nela, cada Coordenador elabora de seu próprio modo. Uma possibilidade seria analisar quantos alunos costumam reprovar em determinada disciplina pela visualização estatística anterior, somado aos que possivelmente aprovarão na disciplina que é pré-requisito. Porém, toda essa pesquisa e estimativa é dispendiosa e pode desagradar a alguns coordenadores, ou então gerar estimativas incondizentes com a realidade.
 
-### 4.3.1. Explicação do processo <!-- Isso fica aqui ou tá redundante? Checar depois -->
+### 4.3.1. Explicação do processo <!-- Isso fica aqui ou está redundante? Checar depois -->
 
 Dentro do contexto da universidade, o problema de agendamento se torna mais complexo pois um dos recursos que está relacionado com o problema é a existência de prazos em cada uma das etapas, assim fazendo com que uma solução ideal seja aquela que é capaz de ser executada dentro do prazo estipulado, mesmo que não seja ótima.
 
 Precisa verificar manualmente quantos alunos foram aprovados em cada matéria. Ele, então, precisa fazer uma estimativa de quantos alunos irão se inscrever nas matérias que ainda não foram abertas. Com isso, ele pode definir quantas turmas serão abertas para cada matéria. Entretanto, esse processo é muito trabalhoso e propenso a erros. Assim, foi pensado em uma forma de automatizar esse processo. Para isso, seria necessário obter os dados de quantos alunos estão inscritos em cada matéria e então calcular a demanda de cada uma. Com isso, o coordenador poderia ter uma visão geral de quantas turmas serão necessárias para cada matéria. Infelizmente esse projeto também não saiu do mundo das ideias. Entretanto, lá permaneceu sendo maturado.
 
-### 4.4. Formulário de pesquisa <!-- CORRIGIR FUTURAMENTE: Fill XXX --> <!-- Checar se as perguntas nas tabelas, prints e anexo são as mesmas -->
+### 4.4. Formulário de pesquisa <!-- CORRIGIR FUTURAMENTE - XXX --> <!-- Checar se as perguntas nas tabelas, prints e anexo são as mesmas -->
 
 Como forma de analisar também a perspectiva dos discentes quanto à problemática abordada, foi elaborado um formulário de pesquisa com o intuito de se confirmar ou não a hipótese de que em sua maioria os alunos também se encontram insatisfeitos com a atual conjuntura de distribuição e alocação de turmas.
 
@@ -1160,7 +1141,7 @@ Na página dos alunos, pode-se cadastrar novos alunos informando o seu ano de en
 
 ![Alt text](img/Prototipo/CRUD_alunos.png)
 
-Podemos também definir nas disciplinas qual seu código e nome, e o seu período esperado segundo a ementa. Informamos quais cursos a possuem em suas ementas, quais seus pré-requisitos, os professores que a ministram e quais requisitos a mesma possui em relação à características de sala.
+Podemos também definir nas disciplinas qual seu código e nome, e o seu período esperado segundo a ementa. Informamos quais cursos a possuem em suas ementas, quais seus pré-requisitos, os professores que a ministram e quais requisitos a mesma possui em relação às características de sala.
 
 ![Alt text](img/Prototipo/CRUD_disciplinas.png)
 
@@ -1181,11 +1162,11 @@ Considerando as informações necessárias para o presente trabalho, e também o
 ![Alt text](img/DiagramaConceitual/DiagramaConceitualBranco.png)
 <!-- ![Alt text](img/DiagramaConceitual/DiagramaConceitual.png) -->
 
-O diagrama conceitual foi elaborado utilizando a ferramenta [Draw.io][LinkDrawio] citada na metodologia e ilutra as relações entre diversas entidades presentes na realidade da UENF. O emaranhamento presente no diagrama ilustra a complexidade envolvida na criação de uma grade horária, onde diversas entidades se relacionam entre si.
+O diagrama conceitual foi elaborado utilizando a ferramenta [Draw.io][LinkDrawio] citada na metodologia e ilustra as relações entre diversas entidades presentes na realidade da UENF. O emaranhamento presente no diagrama ilustra a complexidade envolvida na criação de uma grade horária, onde diversas entidades se relacionam entre si.
 
 Como principais apontamentos, podemos citar a parte principal do modelo que é a alocação de turmas. Ela, como já descrito, envolve a correlação entre alunos de diferentes cursos, professores, disciplinas, salas e horários. Além disso, também é possível notar a presença de entidades que não são diretamente relacionadas à alocação de turmas, mas que podem se mostrar úteis, como a relação entre professores e laboratórios, e a de disciplinas e ementas.
 
-### 5.5. Desenvolvimento Web <!-- Entrar em contato com a G-Info -->
+### 5.5. Desenvolvimento Web <!-- Entrar em contato com a GINFO -->
 
 Como forma de disponibilizar o acesso online, desenvolveu-se então, com os modelos elaborados um website utilizando do framework [React][LinkReact].
 
@@ -1240,7 +1221,7 @@ Como esperado, encontrar uma solução ótima para o problema de criação de gr
 
 Em termos quantitativos, o sistema desenvolvido apresenta uma redução de XX% de conflitos em relação à solução inicial. O que mostra um resultado satisfatório.
 
-Esse resultado entretanto não diz respeito à uma conclusão absoluta, visto que o sistema desenvolvido não foi testado em um ambiente real, e sim em um ambiente hipotético. Com isso, considerável parte de informações encontra-se faltante e foi substituída por dados aleatórios, o que pode ter influenciado no resultado final.
+Esse resultado, entretanto, não diz respeito à uma conclusão absoluta, visto que o sistema desenvolvido não foi testado em um ambiente real, e sim em um ambiente hipotético. Com isso, considerável parte de informações encontra-se faltante e foi substituída por dados aleatórios, o que pode ter influenciado no resultado final.
 
 ### 7.1. Soluções Burocráticas
 
@@ -1262,11 +1243,11 @@ Sendo assim possível alterar os horários de aula caso seja necessária para qu
 
 ## 8. Conclusões
 
-O problema de organização de grade horária no ensino superior tem sido amplamente estudada por diversos pesquisadores. Devido sua natureza multidimensional e com forte tendência à especificidades, este campo de estudo se mostra como amplo e complexo.
+O problema de organização de grade horária no ensino superior tem sido amplamente estudado por diversos pesquisadores. Devido sua natureza multidimensional e com forte tendência a especificidades, este campo de estudo se mostra como amplo e complexo.
 
 Através da revisão bibliográfica, foi possível observar que a maioria dos trabalhos se foca em um método heurístico de solução, onde se busca uma solução ótima, ou próxima do ótimo, através de um método de busca. Entretanto, o presente trabalho se propõe a uma abordagem diferente, onde se busca uma solução boa o suficiente para que seja utilizada na prática, mesmo que não seja ótima, isso através do método de manipulação manual dos dados.
 
-Para este fim foi desenvolvido um sistema de suporte à decisão para auxilar os setores da Universidade Estadual do Norte Fluminense Darcy Ribeiro (UENF) responsáveis pela criação de grades horárias. O sistema foi desenvolvido com o intuito de ser utilizado como uma ferramenta auxiliar, onde os usuários possam manipular os dados de forma mais intuitiva e visual, assim reduzindo a necessidade de retrabalho e aumentando a produtividade.
+Para este fim foi desenvolvido um sistema de suporte à decisão para auxiliar os setores da Universidade Estadual do Norte Fluminense Darcy Ribeiro (UENF) responsáveis pela criação de grades horárias. O sistema foi desenvolvido com o intuito de ser utilizado como uma ferramenta auxiliar, onde os usuários possam manipular os dados de forma mais intuitiva e visual, assim reduzindo a necessidade de retrabalho e aumentando a produtividade.
 
 O sistema permite que as quatro operações básicas de armazenamento persistente, sendo elas a criação, leitura, edição e deleção de dados. Com isso, os usuários podem adicionar manualmente as informações referentes ao trabalho de criação de grade horária de forma centralizada, assim reduzindo a necessidade de se lidar com diversos arquivos e planilhas. Facilitando também a visualização de informações, como a alocação de turmas, que pode ser visualizada de forma gráfica, assim facilitando a identificação de conflitos e problemas. O que consequentemente tende a agilizar o processo de busca por novas soluções e a redução dos conflitos.
 
@@ -1278,7 +1259,7 @@ Como trabalhos futuros, vê-se uma ampla gama de pesquisa e aprimoramento ao pre
 
 Assim como os modelos anteriores apresentaram diversas incongruências com a realidade prática da universidade estudada, é esperado que este trabalho acabe por trilhar o mesmo caminho, visto que o problema em questão realmente apresenta grande parte de sua complexidade no entendimento e modelagem de como as diversas partes da instituição interagem entre si, porém, espera-se que este documento possa servir como uma boa base para o entendimento de sua estrutura.
 
-Quanto ao software, mesmo que o prioritário seja a sua funcionalidade, é esperado que o seu design seja o mais intuitivo, fluido e prático quanto for possível. Sendo esta tarefa direcionada mais à experiência do usuário, possivelmente tangenciando o problema central de contrução de grades horárias.
+Quanto ao software, mesmo que o prioritário seja a sua funcionalidade, é esperado que o seu design seja o mais intuitivo, fluido e prático quanto for possível. Sendo esta tarefa direcionada mais à experiência do usuário, possivelmente tangenciando o problema central de construção de grades horárias.
 
 Considerando que as duas tentativas anteriores resultaram em métodos que embora atingissem seu objetivo, não foram implementados na prática, tem-se como esperado que o mesmo ocorra com este trabalho. Com isso, espera-se que em trabalhos futuros se estude e analise os motivos de falha do uso prático do atual sistema.
 
@@ -1366,7 +1347,7 @@ Agora serão feitas algumas perguntas em relação à sua satisfação com algum
 - Perguntas
   1. Salas: Você já teve que mudar de sala por falta de algum acessório como quadro, projetor ou monitor?
   2. Salas: Você já teve aula cuja sala não dispunha de carteiras o suficiente?
-  3. Vagas: Você já quis entrar em uma disciplina mas ela não tinha vaga?
+  3. Vagas: Você já quis entrar em uma disciplina, mas ela não tinha vaga?
   4. Vagas: Você já ficou acordado após meia-noite por medo de não ter vaga para as disciplinas que deseja cursar?
   5. Conflitos: Você já deixou de se inscrever em uma disciplina por causa de conflito de horário?
   6. Preferências: Você já preferiu não se inscrever em uma disciplina para cursá-la em outro momento mais oportuno?
@@ -1378,7 +1359,7 @@ Agora serão feitas algumas perguntas em relação à sua satisfação com algum
 
 #### Seção 4: Preferências pessoais
 
-Esta seção visa saber um pouco mais sobre as suas preferências pessois quanto a escolha das disciplinas ofertadas.
+Esta seção visa saber um pouco mais sobre as suas preferências pessoais quanto a escolha das disciplinas ofertadas.
 
 - Pergunta
   - Você prefere disciplinas distribuídas ao longo da semana ou acumuladas em poucos dias?
@@ -1412,13 +1393,13 @@ Esta seção visa saber um pouco mais sobre as suas preferências pessois quanto
 
 Aqui estão algumas perguntas relacionadas à divergência entre o período esperado de conclusão das disciplinas VS o período em que elas de fato são realizadas.
 
-- Pergunta: Quanto tempo (em períodos) você já teve que esperar para fazer uma disciplina da sua grade? 
+- Pergunta: Quanto tempo (em períodos) você já teve que esperar para fazer uma disciplina da sua grade?
 - Descrição: Exemplo hipotético: estou no 6º período e estou desde o 4º período tentando me inscrever em uma disciplina, mas ela não foi oferecida ou não teve vaga, então tive que esperar 2 períodos.
 - Opções de resposta:
   - 0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10
 
 - Pergunta: Qual foi a quantidade máxima de períodos que você se distanciou de uma disciplina de determinado período?
-- Descrição: Exemplo hipotético: estou no 6º período da faculdade mas ainda estou cursando uma disciplina do 3º período, pois escolhi não fazer antes, ou ainda não obtive a aprovação, logo, me distanciei 3 períodos do esperado.
+- Descrição: Exemplo hipotético: estou no 6º período da faculdade, mas ainda estou cursando uma disciplina do 3º período, pois escolhi não fazer antes, ou ainda não obtive a aprovação, logo, me distanciei 3 períodos do esperado.
 - Opções de resposta:
   - 0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10
 
