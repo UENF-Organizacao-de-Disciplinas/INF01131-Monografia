@@ -1215,7 +1215,7 @@ Com algumas poucas alterações na tabela inicial de distribuição de disciplin
 
 ![Alt text](img/Experimentos/Aprimoramento.png)
 
-## 7. Resultado
+## 7. Resultados
 
 Como esperado, encontrar uma solução ótima para o problema de criação de grade horária tende à impraticabilidade, visto a dificuldade de se definir se de fato há tal solução a ser atingida. Mesmo assim, ao se utilizar de um método de manipulação manual dos dados, foi possível obter uma solução que se aproxima da ótima, e que pode ser utilizada na prática.
 
