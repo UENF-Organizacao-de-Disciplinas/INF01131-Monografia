@@ -1,6 +1,11 @@
-\chapter{Contexto acadêmico do \textit{Timetabling Problem}} % ## 2. Contexto do *Timetabling Problem* no meio acadêmico
+\chapter{Contexto acadêmico \textit{Timetabling Problem}} % ## 2. Contexto do _Timetabling Problem_ no meio acadêmico
 
 Antes de prosseguirmos com o desenrolar deste trabalho, é adequado que primeiro definamos alguns parâmetros para o melhor entendimento do que está por vir.
+
+% <!-- O Problema de Programação de Horários (Timetabling Problem) é um problema de grande relevância e amplamente estudado na área de Pesquisa Operacional. Um número significativo de trabalhos sobre esse problema foi publicado nos últimos anos e conferências regulares discutem o tema no meio científico [Splinder2010]. -->
+% <!-- Sânya -->
+% <!-- O Problema de Programação de Horário Escolar pode ser generalizado como o escalonamento semanal das aulas em uma escola sem que professores e alunos tenham mais de uma aula ao mesmo tempo (estudantes são agrupados em turmas com os mesmos planos de aula). Já o Problema de Programação de Horário de Disciplinas em Universidades como o escalonamento semestral das aulas de um conjunto de disciplinas de uma universidade de modo a evitar colisão de horários (estudantes geralmente são considerados individualmente) [Paim__2010]. -->
+% <!-- Sânya -->
 
 \section{Definição de termos} % ### 2.1 Definição de termos
 
@@ -11,6 +16,8 @@ Assim como feito por \cite{goos_scheduling_1996}, definiremos os conceitos dos t
 O termo "\textit{timetable}" tem o mesmo valor que "grade horária" e serão usadas como se fossem sinônimos mesmo sendo de línguas diferentes. Segundo \cite{goos_scheduling_1996}, podemos definir \textit{timetable} como uma estrutura que mostra quando que eventos ocorrerão, não havendo necessariamente a alocação de recursos.
 
 Vale ressaltar que este termo não tem seu uso limitado para os fins desta pesquisa, sendo também usado para problemas de alocação de enfermeiros, esportes, funcionários e transportes \cite{arratia-martinez_university_2021}. Entretanto, neste trabalho, abordaremos principalmente os termos relacionados ao que pode ser chamado de \textit{Educational Timetabling} (Ed-TT) \cite{alencar_visualization_2019}, que é o que tende a envolver um conjunto específico de recursos relacionados à educação.
+
+<!-- Sânya fala sobre International Timetabling Competition -->
 
 Wren também define os conceitos para \textit{class timetable}, \textit{university examination timetable} e \textit{university class timetable}, tendo relevância apenas o último, que considera a disponibilidade de professores e salas, a quantidade de alunos e os requisitos que determinada disciplina exige.
 
@@ -24,6 +31,8 @@ Para que esta alocação ocorra, é necessário atender a certos critérios, e a
     Resolver problemas práticos relacionados à alocação, sujeito a restrições, de recursos a objetos sendo colocados no espaço-tempo, usando ou desenvolvendo quaisquer ferramentas que possam ser apropriadas. Os problemas irão frequentemente se relacionar à satisfação de certos objetivos.
 \end{quote}
 
+% > Resolver problemas práticos relacionados à alocação, sujeito a restrições, de recursos a objetos sendo colocados no espaço-tempo, usando ou desenvolvendo quaisquer ferramentas que possam ser apropriadas. Os problemas irão frequentemente se relacionar à satisfação de certos objetivos.
+
 Outro termo relevante a se pontuar são as \textit{hard and soft constraints} que podemos chamar de restrições rígidas e flexíveis. \cite{alencar_visualization_2019} as define dizendo que as restrições rígidas são de atendimento obrigatório, enquanto as restrições flexíveis são opcionais, mas convenientes para melhorar a qualidade da solução obtida.
 
 Exemplo de restrição rígida: nem professores nem alunos podem ser alocados simultaneamente a duas salas ou disciplinas simultaneamente. Uma solução que viole esta restrição se torna automaticamente inviável.
@@ -32,7 +41,7 @@ Exemplo de restrição flexível: professor J. prefere não dar aulas nas tardes
 
 Alguns outros termos similares a este campo de pesquisa encontrados na literatura são \textit{periodic event scheduling problem}, \textit{timetable scheduling}, \textit{class scheduling}, \textit{student scheduling}, \textit{university course timetabling}, dentre outros.
 
-\section{Métodos de resolução} % ### 2.2. Métodos de resolução
+\section{ Métodos de resolução} % ### 2.2. Métodos de resolução
 
 % <!--
 % - O problema de timetabling   a
@@ -74,7 +83,9 @@ Alguns outros termos similares a este campo de pesquisa encontrados na literatur
 %   - estrutura organizacional semi-exclusiva
 % -->
 
-% <!-- Pesquisar posteriormente sobre imagens que ilustrem bem as diferentes sub categorias de scheduling -->
+% <!--
+% Pesquisar posteriormente sobre imagens que ilustrem bem as diferentes sub categorias de scheduling
+% -->
 
 Existem diversas implementações já realizadas, utilizando uma miríade de métodos. Em seu trabalho \cite{miranda_udpskeduler_2012}, J. Miranda informa sobre diversos sistemas baseados em computador para auxiliar na tarefa de agendamento. J. Miranda também cita um dos métodos de resolução como sendo o \textbf{modelo de programação inteira} e \textbf{heurísticas}.
 
@@ -82,7 +93,9 @@ Outros trabalhos buscaram condensar em forma de tabela as informações encontra
 
 Na figura \ref{Desenvolvimento}, \cite{alegre_desenvolvimento_2012} traça a relação entre os diversos autores, ano de sua publicação e seu país de origem com os dados encontrados em seus trabalhos quanto aos parâmetros utilizados na elaboração da grade horária, quão grandes eram cada um de seus parâmetros, quanto tempo foi necessário para achar uma solução e quais foram as técnicas utilizadas.
 
-% Entender o que tá dando errado aqui depois
+% <!-- % Entender o que está dando errado aqui depois -->
+
+% ![Resumo de trabalhos, parâmetros, dimensões, tempo e técnicas.](img/tabelas/Desenvolvimento.png)
 
 \begin{figure}[htbp]\centering
     \caption{\label{Desenvolvimento}Resumo de trabalhos, parâmetros, dimensões, tempo e técnicas.}
@@ -92,6 +105,8 @@ Na figura \ref{Desenvolvimento}, \cite{alegre_desenvolvimento_2012} traça a rel
 
 Na figura \ref{University}, \cite{arratia-martinez_university_2021}, apresenta uma comparação similar à anterior, porém não separada em categorias, apenas categorizando entre verdadeiro e falso algumas características como alocação de salas, professores, nível institucional e método exato ou inexato.
 
+% ![Comparação entre artigos que solucionam o problema de grade horária](img/tabelas/University.png)
+
 \begin{figure}[htbp]\centering
     \caption{\label{University}Comparação entre artigos que solucionam o problema de grade horária}
     \includegraphics[angle=0,scale=0.37]{files/img/tabelas/University.png}
@@ -100,13 +115,15 @@ Na figura \ref{University}, \cite{arratia-martinez_university_2021}, apresenta u
 
 Na figura \ref{Visualization}, \cite{alencar_visualization_2019} explora uma categoria mais específica do problema, que é a característica da interatividade das interfaces desenvolvidas. Este apresenta características qualitativas quanto aos métodos, os dados dispostos, as técnicas de interação e o método utilizado para solucionar o problema de grade horária educacional. Nesta figura, os autores usam "Y" para simbolizar "Sim", "N" para "Não" e "-" para "Inconclusivo".
 
+% ![Análise de publicações aceitas.](img/tabelas/Visualization.png)
+
 \begin{figure}[htbp]\centering
     \caption{\label{Visualization}Análise de publicações aceitas.}
     \includegraphics[angle=0,scale=0.7]{files/img/tabelas/Visualization.png}
     \legend{Fonte: \cite{alencar_visualization_2019} - editado}
 \end{figure}    % Visualization
 
-\section{Desafios recorrentes} % ### 2.3. Desafios recorrentes
+\section{ Desafios recorrentes} % ### 2.3. Desafios recorrentes
 
 Apesar da vasta quantidade de trabalhos realizados com este fim, o \textit{Timetabling Problem} segue sendo uma área sem uma solução definitiva.
 
@@ -125,3 +142,72 @@ Com isso, entramos também no ramo da Interação Homem-Máquina, ramo abordado 
 
 % - Falar sobre técnicas existentes e quem já fez. Tipo o que aquele artigo sem DOI fez
 % -->
+
+\section{ Trabalhos anteriores} % ### 2.4. Trabalhos anteriores
+
+Este trabalho não se mostra desprovido de histórico na tentativa de resolução do mesmo problema. Sânya e Ricardo, ambos estudantes de Ciência da Computação da UENF, já realizaram trabalhos com o mesmo fim, porém com abordagens diferentes da atual proposta.
+
+Tendo vista que atualmente o problema de Programação Horária da UENF ainda perdura, podemos considerar que embora os trabalhos anteriores tenham se mostrado importantes ao pavimentar o caminho em direção à resolução da problemática disposta, as soluções ótimas encontradas por ambos, embora ótimas para a modelagem proposta, não se mostraram ótimas para a realidade da universidade.
+
+Abaixo são listados os trabalhos anteriores e suas respectivas abordagens, bem como os apontamentos do que se mostrou inviável para a realidade da universidade.
+
+\subsection{Sânya} % #### 2.4.1. Sânya
+
+Em seu trabalho, Sânya aborda o problema de Programação de Horários de Disciplinas em Universidades, tendo como foco o curso de Ciência da Computação da UENF. Sua abordagem foi a de desenvolver um software que fosse capaz de gerar uma grade horária ótima para o curso, levando em conta as restrições impostas pelo curso. Para isso, Sânya explicou diversos métodos possíveis para se alcançar a solução desejada, passando inicialmente pelos métodos construtivos, seguido de métodos refinamento, podendo essas heurísticas serem utilizadas em conjunto com meta-heurísticas.
+
+Por fim, utilizou uma heurística que consistia em respeitar a uma matriz de preferência para a distribuição das disciplinas. Seguindo com o uso do _Simulated Annealing_ para a otimização da solução inicial.
+
+\subsection{Ricardo} % #### 2.4.2. Ricardo
+
+- Contato dele
+- Turma vs aluno
+- Fixo vs solto
+- Um professor por disciplina
+- Uma turma por disciplina
+- Disciplinas de um mesmo período não conflitando
+- Dois horários de aula no mesmo dia: hard x soft
+- Tamanha eficiência é de fato necessária?
+
+> Como possível trabalho futuro propõe-se o aperfeiçoamento da interface gráfica e do banco de dados da ferramenta desenvolvida para que seja possível armazenar um maior número de informações pertinentes ao problema de uma forma eficiente, para que o usuário possa realizar modificações no quadro de horários e a ferramenta seja capaz de informar se essas modificações são viáveis ou não e para que a escolha dos dados usados na resolução do problema tenha uma maior flexibilidade. Além disso, os mecanismos usados na implementação da Função Objetivo (função que avalia a qualidade das soluções obtidas) podem ser aperfeiçoados com o intuito de cada vez mais atender a um maior número de particularidades do dia a dia do curso de Ciência da Computação da UENF.
+
+\subsection{Divergências} % #### 2.4.3. Divergências
+
+\subsubsection{Sânya} % ##### Sânya
+
+É dito por Sânya que:
+
+> Como na UENF a tarefa de distribuição de sala não varia muito a cada período, sendo feito separadamente por cada centro [...]
+
+Embora possamos entender o conceito de "variar muito" como subjetivo, considerando que mesmo ao longo de um mesmo semestre existem realocações de salas e professores dentro do contexto de um mesmo Centro, podemos entender que a realidade da UENF é de fato muito dinâmica, não se encaixando completamente na solução de alocação única inicial de salas e professores.
+
+Pode-se alegar que tratar da variabilidade de alocações de salas de um mesmo Centro foge do escopo do trabalho, porém, para que o coordenador da Computação tenha fácil acesso aos dados de alocação de salas disponíveis, faz-se necessário que seu uso esteja compartilhado com o Diretor do Centro de Ciência e Tecnologia (CCT), visto que este é o responsável pela alocação de salas de todos os cursos do CCT.
+
+> [...] e as aulas que necessitam de salas com recursos especiais são geralmente já preestabelecidas, não há necessidade de automatizar esta tarefa de distribuição de salas.
+
+Algumas turmas são historicamente alocadas à determinadas salas, mas isso não significa necessariamente que esta alocação é a mais adequada para a mesma. Então, todas as salas, mesmo que inicialmente pré-estabelecidas, devem estar passíveis de mudanças, mas com possibilidade de se fixar.
+
+> Outra tarefa que no presente cenário do curso de Ciência da Computação não viabiliza algum tipo de automatização é a distribuição de professores, pois além de um número muito pequeno destes, não há muitas alternativas de mudanças de suas respectivas disciplinas.
+
+Quanto à distribuição de professores, a realidade do curso de Ciência da Computação segue a mesma da que foi apontada em 2013 por Sânya. Entretanto, cada professor tem sua própria gama de disciplinas que se dispõe a ministrar, e a coordenação tende a distribuí-los de acordo com sua preferência. Entretanto, como a demanda dos alunos não se mostra linear como foi estudado, é possível que a distribuição de professores seja feita de forma mais eficiente, considerando a demanda dos alunos, ainda que não se descartem suas preferências pessoais.
+
+> Requisitos essenciais, ou seja, obrigatórios:
+>
+> RE1 - Um professor não pode lecionar aula em duas turmas diferentes no mesmo horário.
+> RE2 - Uma turma não pode ter aula em duas disciplinas no mesmo horário.
+>
+> Requisitos não essenciais, de qualidade:
+>
+> RNE1 - O ideal é que existam no máximo duas aulas consecutivas da mesma disciplina.
+> RNE2 - Não devem haver mais de duas aulas da mesma disciplina em um dia.
+> RNE3 - Não preencher os horários de 12h às 14h, pois se trata de horário de almoço.
+> RNE4 - Os professores associados, por terem exclusividade com a instituição, preferem espalhar os horários das aulas dadas, e não acumular todas no mesmo dia.
+> RNE5 - Os professores contratados, por outro lado, preferem que suas aulas sejam alocadas num mesmo dia, ou no menor número de dias possíveis.
+
+Quanto à citada RE2, a limitação deveria ser mais criteriosa, e se tratando de um requisito não essencial, pois, o conceito de turma é dado pela junção de estudantes que cursam a mesma disciplina, ministrada por um mesmo professor, em um mesmo semestre. Mas em seu trabalho, Sânya considera o conceito de turma como sendo o conjunto de estudantes que ingressaram em um mesmo ano, independente da consideração da existência de repetentes e de suas escolhas pessoais de inscrição.
+
+RNE1, RNE2 e RNE3: todas elas não consideram a existência de disciplinas que necessitam de um total de cinco tempos de aula semanais, sendo elas regularmente divididas em dois períodos, um de duas horas e outro de três horas. Que, em situações de necessidades, como é visto na entrevista com o diretor do CCT, acaba sim sendo necessário que se aloque em período de almoço.
+
+RNE4 e RNE5: embora estejam direcionadas corretamente, ainda assim não engloba casos de preferência pessoal de cada um dos professores citados. Como por exemplo a possibilidade de não se ministrar aulas em determinados dias da semana por motivos religiosos, seja por parte do quadro permanente, quanto de professores associados.
+
+Outra considerável divergência entre o modelo e a realidade é a definição de que a cada semestre contém apenas 5 turmas de computação. Sendo estas compostas pelos estudantes ingressantes de 5 anos consecutivos, caso este que não se aplica à realidade da universidade, visto que a quantidade de turmas varia de acordo com a demanda semestral, que não necessariamente condiz com todos os estudantes ingressantes de um mesmo ano.
+

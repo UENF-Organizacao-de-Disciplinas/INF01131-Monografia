@@ -52,20 +52,21 @@ No ensino superior brasileiro, cada curso de uma instituição de ensino tem em 
 
 Embora haja este planejamento de duração do curso, diversos fatores podem influenciar esta previsão, dentre eles podemos citar eventos como:
 
-<!--
-\begin{itemize}
--->
+<!-- \begin{itemize}
+    \item Quebra de pré-requisitos: onde o discente solicita permissão para inscrição em uma disciplina cujos pré-requisitos não são completamente cumpridos por si;
+    \item Trancamento de matrícula: onde o discente suspende temporariamente seus estudos na instituição;
+    \item Transferência interna: onde o discente migra entre cursos dentro da mesma instituição;
+    \item Transferência externa: onde o discente migra entre cursos entre diferentes instituições;
+    \item Reprovações: onde o discente não cumpre com o mínimo desempenho esperado na disciplina, geralmente está associado a ausência nas aulas e/ou desempenho inferior ao mínimo esperado nas avaliações;
+    \item Disponibilidade de professores: onde os docentes não são suficientes para ministrar todas as disciplinas demandadas pelos discentes em um mesmo semestre.
+\end{itemize} -->
 
-- Quebra de pré-requisitos: onde o discente solicita permissão para inscrição em uma disciplina cujos pré-requisitos não são completamente cumpridos por si
-- Trancamento de matrícula: onde o discente suspende temporariamente seus estudos na instituição
-- Transferência interna: onde o discente migra entre cursos dentro da mesma instituição
-- Transferência externa: onde o discente migra entre cursos entre diferentes instituições
-- Reprovações: onde o discente não cumpre com o mínimo desempenho esperado na disciplina, geralmente está associado a ausência nas aulas e/ou desempenho inferior ao mínimo esperado nas avaliações.
+- Quebra de pré-requisitos: onde o discente solicita permissão para inscrição em uma disciplina cujos pré-requisitos não são completamente cumpridos por si;
+- Trancamento de matrícula: onde o discente suspende temporariamente seus estudos na instituição;
+- Transferência interna: onde o discente migra entre cursos dentro da mesma instituição;
+- Transferência externa: onde o discente migra entre cursos entre diferentes instituições;
+- Reprovações: onde o discente não cumpre com o mínimo desempenho esperado na disciplina, geralmente está associado a ausência nas aulas e/ou desempenho inferior ao mínimo esperado nas avaliações;
 - Disponibilidade de professores: onde os docentes não são suficientes para ministrar todas as disciplinas demandadas pelos discentes em um mesmo semestre.
-
-<!--
-\end{itemize}
--->
 
 Estes eventos tendem a, no geral, aumentar o tempo médio para conclusão do curso. Situação em sua maioria indesejada tanto pelos alunos, que mesmo durante seu estudo já visam o mercado de trabalho, quanto pelos professores e a instituição, visto que a evasão do ensino superior brasileiro é um problema existente e estudado a fim de ser minimizado.
 
@@ -162,19 +163,19 @@ Como objetivos mais específicos, podemos listar os seguintes:
 
 <!--
 \begin{itemize}
-    \item Entender de que forma os setores administrativos da UENF atualmente lidam com a questão do \textit{timetabling}
-    \item Obter as demandas de aprimoramentos desejadas pelos diferentes centros e laboratórios
-    \item Modelar o sistema de resolução de \textit{timetabling} de acordo com os requisitos demandados
-    \item Encontrar o que é necessário para a adoção da aplicação de tabelamento de horário
-    \item Incentivar o uso de uma ferramenta centralizada para a otimização do \textit{Timetabling Problem}
+    \item Entender de que forma os setores administrativos da UENF atualmente lidam com a questão do \textit{timetabling};
+    \item Obter as demandas de aprimoramentos desejadas pelos diferentes centros e laboratórios;
+    \item Modelar o sistema de resolução de \textit{timetabling} de acordo com os requisitos demandados;
+    \item Encontrar o que é necessário para a adoção da aplicação de tabelamento de horário;
+    \item Incentivar o uso de uma ferramenta centralizada para a otimização do \textit{Timetabling Problem}.
 \end{itemize}
 -->
 
-- Entender de que forma os setores administrativos da UENF atualmente lidam com a questão do \textit{timetabling}
-- Obter as demandas de aprimoramentos desejadas pelos diferentes centros e laboratórios
-- Modelar o sistema de resolução de \textit{timetabling} de acordo com os requisitos demandados
-- Encontrar o que é necessário para a adoção da aplicação de tabelamento de horário
-- Incentivar o uso de uma ferramenta centralizada para a otimização do \textit{Timetabling Problem}
+- Entender de que forma os setores administrativos da UENF atualmente lidam com a questão do \textit{timetabling};
+- Obter as demandas de aprimoramentos desejadas pelos diferentes centros e laboratórios;
+- Modelar o sistema de resolução de \textit{timetabling} de acordo com os requisitos demandados;
+- Encontrar o que é necessário para a adoção da aplicação de tabelamento de horário;
+- Incentivar o uso de uma ferramenta centralizada para a otimização do \textit{Timetabling Problem}.
 
 <!-- ## \section{Justificativas} -->
 
@@ -507,7 +508,7 @@ Em seu trabalho, Sânya aborda o problema de Programação de Horários de Disci
 
 Por fim, utilizou uma heurística que consistia em respeitar a uma matriz de preferência para a distribuição das disciplinas. Seguindo com o uso do _Simulated Annealing_ para a otimização da solução inicial.
 
-#### 2.4.2. Rodrigo
+#### 2.4.2. Ricardo
 
 - Contato dele
 - Turma vs aluno
@@ -733,20 +734,20 @@ Além disso, o LCMAT mantém dois cursos de graduação e um programa de pós-gr
 
 Como forma de entender melhor a percepção real daqueles que recorrentemente lidam com a tarefa de criação da grade horária, diversas entrevistas foram feitas com o intuito de analisar qualitativamente quais são as opiniões, pedidos, reclamações e pensamentos de diferentes níveis organizacionais da UENF.
 
-#### 4.2.1. Diretor do CCT - Oscar <!-- Devo omitir o nome dos entrevistados? -->
+#### 4.2.1. Diretor do CCT
 
-O primeiro entrevistado foi o <!-- Oscar, --> atual Diretor do CCT. Ele atualmente estrutura a relação de disciplinas ofertadas pelo CCT em Excel e as publica em formato PDF no [site do CCT][LinkCCTSalas]. Seu trabalho auxilia os Chefes de Laboratório e Coordenadores de Curso a visualizarem quais são as salas disponíveis e em quais horários cada professor está alocado.
+O primeiro entrevistado foi o atual Diretor do CCT. Ele atualmente estrutura a relação de disciplinas ofertadas pelo CCT em Excel e as publica em formato PDF no [site do CCT][LinkCCTSalas]. Seu trabalho auxilia os Chefes de Laboratório e Coordenadores de Curso a visualizarem quais são as salas disponíveis e em quais horários cada professor está alocado.
 
 [LinkCCTSalas]: https://uenf.br/cct/secretaria-academica/distribuicao-das-salas-de-aula-do-cct/
 
 Um dos tópicos dialogados, foi quanto às categorias das disciplinas, ou seja, quais características notáveis as disciplinas poderiam ter. Com isso podemos listar as seguintes categorias de disciplinas:
 
-- Anuais: disciplinas que ocorrem apenas uma vez no ano.
-- Ímpares: disciplinas que são ofertadas no primeiro semestre letivo.
-- Pares: disciplinas que são ofertadas no segundo semestre letivo.
-- De serviço: disciplinas ofertadas para mais de um curso simultaneamente
-- Ciclo básico: disciplinas oferecidas para todas as engenharias
-- Repetentes: turmas criadas especialmente para repetentes
+- Anuais: disciplinas que ocorrem apenas uma vez no ano;
+- Ímpares: disciplinas que são ofertadas no primeiro semestre letivo;
+- Pares: disciplinas que são ofertadas no segundo semestre letivo;
+- De serviço: disciplinas ofertadas para mais de um curso simultaneamente;
+- Ciclo básico: disciplinas oferecidas para todas as engenharias;
+- Repetentes: turmas criadas especialmente para repetentes.
 
 As disciplinas ímpares e pares geralmente estão atreladas à expectativa de que os alunos progredirão sequencialmente sem reprovação alguma. Entretanto, caso uma quantidade de alunos considerável de alunos reprove em determinada disciplina, é possível que estes se enquadrem na criação de uma turma especial para repetentes, ou não.
 
@@ -777,7 +778,7 @@ Algumas outras informações que ele elenca:
 - Teoricamente matérias de um mesmo período não devem conflitar
   - Isso se dá segundo a percepção de que a maioria dos alunos está seguindo a mesma linha sequencial de disciplinas, o que muitas das vezes não é a realidade.
 
-#### 4.2.2. Desenvolvedor do Sistema Acadêmico - Rodrigo
+#### 4.2.2. Desenvolvedor do Sistema Acadêmico
 
 Considerando que a integração do sistema proposto seria certamente mais eficiente se integrada ao sistema acadêmico, viu-se como apropriado entrevistar o desenvolvedor do Sistema Acadêmico para se ponderar sobre o uso dos dados e a possível integração.
 
@@ -806,15 +807,15 @@ Uma questão levantada pelo entrevistado diz respeito à manutenção do softwar
 
 Ele também sugere que, para evitar a complexidade de se trabalhar com dados reais de alunos, que sejam utilizados dados fictícios.
 
-#### 4.2.3. Chefe de Laboratório de Matemática - Annabell
+#### 4.2.3. Chefe de Laboratório de Matemática
 
-Considerando que um dos cargos relacionados com o processo de elaboração de grades horários é o de Chefe de Laboratório, foi entrevistada a atual Chefe de Laboratório de Matemática, Annabell.
+Considerando que um dos cargos relacionados com o processo de elaboração de grades horários é o de Chefe de Laboratório, foi entrevistada a atual Chefe de Laboratório de Matemática.
 
 Assim como sugerido pelo Desenvolvedor do Sistema Acadêmico, a Chefe também sugeriu que dados fictícios fossem utilizados. Sugeriu ainda que fosse utilizado o schema do banco de dados do sistema acadêmico como sua criação. Outra sugestão foi a solicitação ao Desenvolvedor do Sistema Acadêmico uma listagem de possíveis valores recorrentes no banco de dados.
 
 A entrevistada também relatou algumas problemáticas envolvendo a realocação dos horários das turmas. Segundo ela, qualquer alteração pode ser feita durante a semana anterior à matrícula, visto que, não havendo inscritos, não há problema na alteração. A partir do momento em que houver ao menos um aluno inscrito na disciplina, alterações só podem ser feitas caso não haja conflitos aparentes e preferencialmente com um documento assinado pelos alunos que estiverem inscritos.
 
-#### 4.2.4. Responsável pela Secretaria Acadêmica (SECACAD) - Gustavo
+#### 4.2.4. Responsável pela Secretaria Acadêmica (SECACAD)
 
 Inicialmente, alguns tópicos foram trazidos como ponto focal da entrevista, sendo alguns deles os seguintes:
 
@@ -842,9 +843,9 @@ Quanto ao tópico "ética VS eficiência", ele citou que embora o sistema acadê
 
 Uma ferramenta que o beneficiaria seria a análise dos alunos que estão à beira de perder o vínculo com a universidade, para que a Secretaria Acadêmica possa tomar as medidas cabíveis.
 
-#### 4.2.5. Coordenador de Computação - Tang
+#### 4.2.5. Coordenador de Computação
 
-Sendo o Coordenador de Computação o principal usuário do sistema, o atual Coordenador de Computação, Fermín Alfredo Tang Montané.
+Sendo o Coordenador de Computação o principal usuário do sistema, torna-se imprescindível a análise qualitativa de sua perspectiva.
 
 Seguindo o conceito de Design Iterativo utilizado também por \cite{andre_interaction_2018}, o Coordenador foi consultado em diversas etapas do desenvolvimento do sistema. Inicialmente, foi apresentado a ele o conceito do sistema, suas funcionalidades e possíveis benefícios. Em seguida, foi apresentado a ele um protótipo do sistema. Mas esta questão será melhor tratada em outro segmento deste mesmo trabalho, aqui será abordado apenas o conteúdo das entrevistas.
 
@@ -898,11 +899,7 @@ Fazer um diagrama de... sei lá, aquele que tem barras retas. Diagrama de ativid
 
 Entrando em detalhes ainda maiores, podemos citar uma das etapas de criação das grades horárias que é a coleta de uma demanda esperada. Nela, cada Coordenador elabora de seu próprio modo. Uma possibilidade seria analisar quantos alunos costumam reprovar em determinada disciplina pela visualização estatística anterior, somado aos que possivelmente aprovarão na disciplina que é pré-requisito. Porém, toda essa pesquisa e estimativa é dispendiosa e pode desagradar a alguns coordenadores, ou então gerar estimativas incondizentes com a realidade.
 
-### 4.3.1. Explicação do processo <!-- Isso fica aqui ou está redundante? Checar depois -->
-
-Dentro do contexto da universidade, o problema de agendamento se torna mais complexo pois um dos recursos que está relacionado com o problema é a existência de prazos em cada uma das etapas, assim fazendo com que uma solução ideal seja aquela que é capaz de ser executada dentro do prazo estipulado, mesmo que não seja ótima.
-
-Precisa verificar manualmente quantos alunos foram aprovados em cada matéria. Ele, então, precisa fazer uma estimativa de quantos alunos irão se inscrever nas matérias que ainda não foram abertas. Com isso, ele pode definir quantas turmas serão abertas para cada matéria. Entretanto, esse processo é muito trabalhoso e propenso a erros. Assim, foi pensado em uma forma de automatizar esse processo. Para isso, seria necessário obter os dados de quantos alunos estão inscritos em cada matéria e então calcular a demanda de cada uma. Com isso, o coordenador poderia ter uma visão geral de quantas turmas serão necessárias para cada matéria. Infelizmente esse projeto também não saiu do mundo das ideias. Entretanto, lá permaneceu sendo maturado.
+Entendemos então que dentro do contexto da universidade, o problema de agendamento se torna mais complexo pois um dos recursos que está relacionado com o problema é a existência de prazos em cada uma das etapas, assim fazendo com que uma solução ideal seja aquela que é capaz de ser executada dentro do prazo estipulado, mesmo que não seja ótima.
 
 ### 4.4. Formulário de pesquisa <!-- CORRIGIR FUTURAMENTE - XXX --> <!-- Checar se as perguntas nas tabelas, prints e anexo são as mesmas -->
 
@@ -1050,17 +1047,23 @@ Os interesses dos alunos se mostram em sua maioria alinhados com os interesses d
 
 ## 5. Desenvolvimento
 
-### 5.1. Pré desenvolvimento
+Para o desenvolvimento do presente trabalho, foram utilizadas diversas ferramentas, tanto para a elaboração do código, quanto para a elaboração do modelo de banco de dados e para a elaboração do protótipo. Todas elas com o intuito de implementar o software necessário para a criação de uma grade horária.
 
-- Projeto pessoal: Andamento dos alunos
+### 5.1. Projetos anteriores
+
+Antes do desenvolvimento do presente trabalho, foram feitos alguns projetos pessoais que, embora não tenham sido concluídos, serviram como base para o desenvolvimento do presente trabalho.
+
+#### 5.1.1. Projeto pessoal: Andamento dos alunos
 
 Como interesse próprio, cogitou-se o desenvolvimento de uma plataforma onde se pudesse ver em que ponto os alunos se encontram em relação ao andamento de seus cursos. Para isso, seria necessária a obtenção dos dados dos alunos, seja por parte dos mesmos, do coordenador ou por integração com o sistema acadêmico. Com estes dados, seria possível criar uma interface que mostrasse o andamento dos alunos, quais matérias já foram cursadas, quais estão sendo cursadas e quais ainda faltam. Além disso, seria possível mostrar quais matérias são pré-requisitos para outras. Assim, o aluno e a coordenação poderiam ter uma visão geral de seu andamento e de quais matérias ele precisará cursar para se formar. Infelizmente esse projeto não saiu do mundo das ideias. Entretanto, lá permaneceu sendo maturado.
 
-- Projeto pessoal: Cálculo de demanda
+#### 5.1.2. Projeto pessoal: Cálculo de demanda
 
 Ao longo dos semestres, foi percebido que durante o intervalo entre os semestres, os alunos precisam se inscrever nas matérias que desejam cursar no semestre seguinte. Para isso, é necessário que o coordenador saiba quantos alunos estão interessados em cada matéria para que ele possa definir quantas turmas serão abertas. Para isso, o coordenador dispõe de algumas alternativas como estimar quantos alunos se inscreverão em cada disciplina, checar manualmente no sistema acadêmico quais alunos podem fazer cada matéria, ou então obter diretamente dos alunos através de um formulário em quais disciplinas cada um dos alunos tem a intenção de cursar.
 
-O método que o Coordenador de Ciência da Computação realiza consiste em baixar o extrato de todos os alunos do curso, e tabelar no Excel qual é o andamento de cada um dos alunos, para que assim, através da análise manual pudesse ver qual é o andamento de cada um e de quantos alunos demandam quais disciplinas.
+O método que o Coordenador de Ciência da Computação realiza consiste em baixar o extrato de todos os alunos do curso, e tabelar no Excel qual é o andamento de cada um dos alunos, para que assim, através da análise manual, pudesse ver qual é o andamento de cada um e de quantos alunos demandam quais disciplinas.
+
+Além disso, estima também quantos são os alunos que em média reprovam em determinada disciplina, rendendo então uma estimativa bruta e ainda assim imprecisa de quantos alunos se inscreverão em cada disciplina.
 
 Entretanto, todas essas alternativas são trabalhosas e propensas a erros. Sendo assim, foi pensado em uma forma de automatizar esse processo. Para este fim, foi elaborado um código em [Python][LinkPython] que atualmente [se encontra no GitHub][LinkRepoDemanda]. Este código tem como entrada os extratos de matrícula dos alunos e como saída uma lista de disciplinas e a quantidade de alunos que estão matriculados em cada uma delas.
 
@@ -1253,7 +1256,7 @@ O sistema permite que as quatro operações básicas de armazenamento persistent
 
 <!-- Tendo atingido este objetivo, espera-se que o sistema possa ser utilizado na prática, e que possa ser aprimorado e melhorado com o tempo. -->
 
-### 7.1. Trabalhos futuros
+### 8.1. Trabalhos futuros
 
 Como trabalhos futuros, vê-se uma ampla gama de pesquisa e aprimoramento ao presente trabalho, visto que este busca um método alternativo de solução ao mesmo problema abordado por outros dois pesquisadores em tempos anteriores. Pode-se então elaborar uma conexão entre o atual sistema e modelos aos métodos heurísticos propostos, permitindo então uma abordagem híbrida humano-computador na busca da grade horária ótima. Sugere-se inclusive o estudo sobre a aplicação de métodos de programação inteira, visto que através da revisão bibliográfica este método apresentou consideráveis resultados.
 
