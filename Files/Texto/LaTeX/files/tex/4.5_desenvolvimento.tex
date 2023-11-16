@@ -6,139 +6,139 @@ Para o desenvolvimento do presente trabalho, foram utilizadas diversas ferrament
 
 \subsection{Projetos anteriores} % ### 5.1. Pré desenvolvimento
 
-Antes do desenvolvimento do presente trabalho, foram feitos alguns projetos pessoais que, embora não tenham sido concluídos, serviram como base para o desenvolvimento do presente trabalho.
+    Antes do desenvolvimento do presente trabalho, foram feitos alguns projetos pessoais que, embora não tenham sido concluídos, serviram como base para o desenvolvimento do presente trabalho.
 
-\subsubsection{Andamento dos alunos} % #### 5.1.1. Andamento dos alunos
+    \subsubsection{Andamento dos alunos} % #### 5.1.1. Andamento dos alunos
 
-Como interesse próprio, cogitou-se o desenvolvimento de uma plataforma onde se pudesse ver em que ponto os alunos se encontram em relação ao andamento de seus cursos. Para isso, seria necessária a obtenção dos dados dos alunos, seja por parte dos mesmos, do coordenador ou por integração com o sistema acadêmico. Com estes dados, seria possível criar uma interface que mostrasse o andamento dos alunos, quais matérias já foram cursadas, quais estão sendo cursadas e quais ainda faltam. Além disso, seria possível mostrar quais matérias são pré-requisitos para outras. Assim, o aluno e a coordenação poderiam ter uma visão geral de seu andamento e de quais matérias ele precisará cursar para se formar. Infelizmente esse projeto não saiu do mundo das ideias. Entretanto, lá permaneceu sendo maturado.
+        Como interesse próprio, cogitou-se o desenvolvimento de uma plataforma onde se pudesse ver em que ponto os alunos se encontram em relação ao andamento de seus cursos. Para isso, seria necessária a obtenção dos dados dos alunos, seja por parte dos mesmos, do coordenador ou por integração com o sistema acadêmico. Com estes dados, seria possível criar uma interface que mostrasse o andamento dos alunos, quais matérias já foram cursadas, quais estão sendo cursadas e quais ainda faltam. Além disso, seria possível mostrar quais matérias são pré-requisitos para outras. Assim, o aluno e a coordenação poderiam ter uma visão geral de seu andamento e de quais matérias ele precisará cursar para se formar. Infelizmente esse projeto não saiu do mundo das ideias. Entretanto, lá permaneceu sendo maturado.
 
-\subsubsection{Cálculo de demanda} % #### 5.1.2. Cálculo de demanda
+    \subsubsection{Cálculo de demanda} % #### 5.1.2. Cálculo de demanda
 
-Ao longo dos semestres, foi percebido que durante o intervalo entre os semestres, os alunos precisam se inscrever nas matérias que desejam cursar no semestre seguinte. Para isso, é necessário que o coordenador saiba quantos alunos estão interessados em cada matéria para que ele possa definir quantas turmas serão abertas. Para isso, o coordenador dispõe de algumas alternativas como estimar quantos alunos se inscreverão em cada disciplina, checar manualmente no sistema acadêmico quais alunos podem fazer cada matéria, ou então obter diretamente dos alunos através de um formulário em quais disciplinas cada um dos alunos tem a intenção de cursar.
+        Ao longo dos semestres, foi percebido que durante o intervalo entre os semestres, os alunos precisam se inscrever nas matérias que desejam cursar no semestre seguinte. Para isso, é necessário que o coordenador saiba quantos alunos estão interessados em cada matéria para que ele possa definir quantas turmas serão abertas. Para isso, o coordenador dispõe de algumas alternativas como estimar quantos alunos se inscreverão em cada disciplina, checar manualmente no sistema acadêmico quais alunos podem fazer cada matéria, ou então obter diretamente dos alunos através de um formulário em quais disciplinas cada um dos alunos tem a intenção de cursar.
 
-O método que o Coordenador de Ciência da Computação realiza consiste em baixar o extrato de todos os alunos do curso, e tabelar no Excel qual é o andamento de cada um dos alunos, para que assim, através da análise manual pudesse ver qual é o andamento de cada um e de quantos alunos demandam quais disciplinas.
+        O método que o Coordenador de Ciência da Computação realiza consiste em baixar o extrato de todos os alunos do curso, e tabelar no Excel qual é o andamento de cada um dos alunos, para que assim, através da análise manual pudesse ver qual é o andamento de cada um e de quantos alunos demandam quais disciplinas.
 
-Entretanto, todas essas alternativas são trabalhosas e propensas a erros. Sendo assim, foi pensado em uma forma de automatizar esse processo. Para este fim, foi elaborado um código em [Python][LinkPython] que atualmente [se encontra no GitHub][LinkRepoDemanda]. Este código tem como entrada os extratos de matrícula dos alunos e como saída uma lista de disciplinas e a quantidade de alunos que estão matriculados em cada uma delas.
+        Entretanto, todas essas alternativas são trabalhosas e propensas a erros. Sendo assim, foi pensado em uma forma de automatizar esse processo. Para este fim, foi elaborado um código em [Python][LinkPython] que atualmente [se encontra no GitHub][LinkRepoDemanda]. Este código tem como entrada os extratos de matrícula dos alunos e como saída uma lista de disciplinas e a quantidade de alunos que estão matriculados em cada uma delas.
 
-[LinkPython]: https://www.python.org/
-[LinkRepoDemanda]: https://github.com/jvfd3/university_demand
+        [LinkPython]: https://www.python.org/
+        [LinkRepoDemanda]: https://github.com/jvfd3/university_demand
 
-```python
+        ```python
 
-'''Obter demanda por extratos em PDF'''
-import code_1_set_working_directory     as swd
-import code_2_get_pdf_list              as gpl
-import code_3_get_string_from_pdf       as gsp
-import code_4_structure_data_from_text  as sdt
-import code_5_filter_structured_data    as fsd
-import code_6_get_demand_list           as gdl
-import code_7_merge_demands             as mgd
-import code_8_output_demand_as_txt      as odt
+        '''Obter demanda por extratos em PDF'''
+        import code_1_set_working_directory     as swd
+        import code_2_get_pdf_list              as gpl
+        import code_3_get_string_from_pdf       as gsp
+        import code_4_structure_data_from_text  as sdt
+        import code_5_filter_structured_data    as fsd
+        import code_6_get_demand_list           as gdl
+        import code_7_merge_demands             as mgd
+        import code_8_output_demand_as_txt      as odt
 
-swd.set_cwd()
-pdf_path_list           = gpl.get_pdf_list()
-text_list               = gsp.get_pdf_text(pdf_path_list)
-structured_data_list    = sdt.structure_data(text_list)
-approved_code_list      = fsd.get_approved_codes(structured_data_list)
-demand_list             = gdl.get_demand_list(approved_code_list)
-demand_and_values_list  = mgd.get_merged_demands(demand_list)
-odt.output_to_txt(demand_and_values_list)
-```
+        swd.set_cwd()
+        pdf_path_list           = gpl.get_pdf_list()
+        text_list               = gsp.get_pdf_text(pdf_path_list)
+        structured_data_list    = sdt.structure_data(text_list)
+        approved_code_list      = fsd.get_approved_codes(structured_data_list)
+        demand_list             = gdl.get_demand_list(approved_code_list)
+        demand_and_values_list  = mgd.get_merged_demands(demand_list)
+        odt.output_to_txt(demand_and_values_list)
+        ```
 
-Este código foi desenvolvido em 8 etapas, cada uma com um arquivo separado. Para alcançar a lista das demandas, é necessário primeiro obter a lista dos arquivos em formato PDF que serão processados, em seguida extrair seus dados com a biblioteca [PDFMiner][PDFMiner], estruturar os dados obtidos, filtrar os dados estruturados, obter a demanda de cada disciplina, juntar as demandas de cada disciplina e salvar os dados obtidos em um arquivo de texto.
+        Este código foi desenvolvido em 8 etapas, cada uma com um arquivo separado. Para alcançar a lista das demandas, é necessário primeiro obter a lista dos arquivos em formato PDF que serão processados, em seguida extrair seus dados com a biblioteca [PDFMiner][PDFMiner], estruturar os dados obtidos, filtrar os dados estruturados, obter a demanda de cada disciplina, juntar as demandas de cada disciplina e salvar os dados obtidos em um arquivo de texto.
 
-[PDFMiner]: https://pypi.org/project/pdfminer/
+        [PDFMiner]: https://pypi.org/project/pdfminer/
 
-Embora o código cumpra com seu objetivo, apresenta algumas características limitantes. A primeira é que os PDFs precisam ser obtidos manualmente, um por um, pelo coordenador, sendo ela por si só uma tarefa extenuante, o que não é desejado. Além disso, o seu uso não é muito intuitivo, sendo necessário que o usuário lide com o prompt de comando e instale as dependências necessárias, o que acaba trazendo uma dificuldade a mais ao usuário. O código também apresenta limitações por sistema operacional, não sendo garantido o seu funcionamento em sistemas operacionais diferentes do Windows.
+        Embora o código cumpra com seu objetivo, apresenta algumas características limitantes. A primeira é que os PDFs precisam ser obtidos manualmente, um por um, pelo coordenador, sendo ela por si só uma tarefa extenuante, o que não é desejado. Além disso, o seu uso não é muito intuitivo, sendo necessário que o usuário lide com o prompt de comando e instale as dependências necessárias, o que acaba trazendo uma dificuldade a mais ao usuário. O código também apresenta limitações por sistema operacional, não sendo garantido o seu funcionamento em sistemas operacionais diferentes do Windows.
 
-Com estes empecilhos, o código acabou abandonado, visto que apesar de útil, não era prático o suficiente para ser utilizado.
+        Com estes empecilhos, o código acabou abandonado, visto que apesar de útil, não era prático o suficiente para ser utilizado.
 
 \subsection{Dados pessoais e a LGPD} % ### 5.2. Dados pessoais e a LGPD
 
-Em sua concepção original, o presente trabalho visaria integrar o sistema desenvolvido com o atual sistema acadêmico da UENF. Essa abordagem foi descartada devido às dificuldades encontradas por parte do setor administrativo da UENF que, devido à [Lei Geral de Proteção dos Dados (LGPD)][LinkLGPD], não podem divulgar dados dos alunos, mesmo anonimizados.
+    Em sua concepção original, o presente trabalho visaria integrar o sistema desenvolvido com o atual sistema acadêmico da UENF. Essa abordagem foi descartada devido às dificuldades encontradas por parte do setor administrativo da UENF que, devido à [Lei Geral de Proteção dos Dados (LGPD)][LinkLGPD], não podem divulgar dados dos alunos, mesmo anonimizados.
 
-[LinkLGPD]: https://www.planalto.gov.br/ccivil_03/_ato2015-2018/2018/lei/l13709.htm
+    [LinkLGPD]: https://www.planalto.gov.br/ccivil_03/_ato2015-2018/2018/lei/l13709.htm
 
-Para confirmação das informações recebidas, a [LGPD][LinkLGPD] foi estudada e talvez o presente estudo recaísse na alínea b do inciso 2º do artigo 4º do capítulo 1 da Lei Nº 13.709, de 14 de agosto de 2018. Informando este que esta lei, a LGPD, não se aplica ao tratamento de dados pessoais realizado para fins exclusivamente acadêmicos.
+    Para confirmação das informações recebidas, a [LGPD][LinkLGPD] foi estudada e talvez o presente estudo recaísse na alínea b do inciso 2º do artigo 4º do capítulo 1 da Lei Nº 13.709, de 14 de agosto de 2018. Informando este que esta lei, a LGPD, não se aplica ao tratamento de dados pessoais realizado para fins exclusivamente acadêmicos.
 
-Segundo o [Estudo Técnico sobre o tratamento de dados pessoais para fins acadêmicos][LinkANPD], é reforçado que "o tratamento de dados pessoais para fins acadêmicos deve ser sempre lícito".
+    Segundo o [Estudo Técnico sobre o tratamento de dados pessoais para fins acadêmicos][LinkANPD], é reforçado que "o tratamento de dados pessoais para fins acadêmicos deve ser sempre lícito".
 
-[LinkANPD]: https://www.gov.br/anpd/pt-br/assuntos/noticias/sei_00261-000810_2022_17.pdf
+    [LinkANPD]: https://www.gov.br/anpd/pt-br/assuntos/noticias/sei_00261-000810_2022_17.pdf
 
-Apesar das possibilidades de meios legalmente válidos para a aquisição dos dados, optou-se por abandonar a integração com o Sistema Acadêmico e o uso de dados reais dos alunos já existentes na plataforma. Rumando-se então para uma abordagem mais manual de inserção de dados manualmente por parte dos usuários do sistema.
+    Apesar das possibilidades de meios legalmente válidos para a aquisição dos dados, optou-se por abandonar a integração com o Sistema Acadêmico e o uso de dados reais dos alunos já existentes na plataforma. Rumando-se então para uma abordagem mais manual de inserção de dados manualmente por parte dos usuários do sistema.
 
 \subsection{Protótipo} % ### 5.3. Protótipo
 
-A criação de protótipos, seguindo a abordagem tomada por \cite{andre_interaction_2018}, se mostra como essencial para que se mantenha a constante satisfação por parte dos _stakeholders_ e quais mudanças sugerem ao desenvolvimento do projeto, assim reduzindo a necessidade de retrabalho ou de não alcance das expectativas do projeto.
+    A criação de protótipos, seguindo a abordagem tomada por \cite{andre_interaction_2018}, se mostra como essencial para que se mantenha a constante satisfação por parte dos _stakeholders_ e quais mudanças sugerem ao desenvolvimento do projeto, assim reduzindo a necessidade de retrabalho ou de não alcance das expectativas do projeto.
 
-Para este fim, foram feitos os designs iniciais usando o software de design [Figma][LinkFigma] para este fim. Algumas telas principais foram concebidas. A primeira e principal é a que permite que o usuário arraste a turma até o horário desejado. A turma ao qual este horário se refere pode ser definida na parte lateral direita.
+    Para este fim, foram feitos os designs iniciais usando o software de design [Figma][LinkFigma] para este fim. Algumas telas principais foram concebidas. A primeira e principal é a que permite que o usuário arraste a turma até o horário desejado. A turma ao qual este horário se refere pode ser definida na parte lateral direita.
 
-[LinkFigma]: figma.com
+    [LinkFigma]: figma.com
 
-![Alt text](img/Prototipo/main.png)
+    ![Alt text](img/Prototipo/main.png)
 
-Em seguida, temos a tela base para seleção de dados deseja-se modificar, podendo ser:
+    Em seguida, temos a tela base para seleção de dados deseja-se modificar, podendo ser:
 
-/begin{itemize}
-    \item Turmas
-    \item Salas
-    \item Disciplinas
-    \item Professores
-    \item Alunos
-/end{itemize}
+    \begin{itemize}
+        \item Turmas
+        \item Salas
+        \item Disciplinas
+        \item Professores
+        \item Alunos
+    \end{itemize}
 
-% - Salas
-% - Disciplinas
-% - Professores
-% - Alunos
-% - Turmas
+    % - Salas
+    % - Disciplinas
+    % - Professores
+    % - Alunos
+    % - Turmas
 
-Cada um desses tendo sua própria página de criação, leitura, edição ou deleção de dados.
+    Cada um desses tendo sua própria página de criação, leitura, edição ou deleção de dados.
 
-![Alt text](img/Prototipo/CRUD_main.png)
+    ![Alt text](img/Prototipo/CRUD_main.png)
 
-Quanto às salas, temos a sua alocação atual baseado no ano e semestre. Nessa página pode-se também registrar algumas características da sala, como a quantidade de cadeiras e computadores, e se possui monitor, projetos, quadro de giz e quadro branco.
+    Quanto às salas, temos a sua alocação atual baseado no ano e semestre. Nessa página pode-se também registrar algumas características da sala, como a quantidade de cadeiras e computadores, e se possui monitor, projetos, quadro de giz e quadro branco.
 
-![Alt text](img/Prototipo/CRUD_salas-Vazia.png)
+    ![Alt text](img/Prototipo/CRUD_salas-Vazia.png)
 
-Na página dos alunos, pode-se cadastrar novos alunos informando o seu ano de entrada e a sua matrícula. Abaixo temos a visualização da grade, onde pode-se classificar cada uma das disciplinas como aprovada, reprovada e cursando.
+    Na página dos alunos, pode-se cadastrar novos alunos informando o seu ano de entrada e a sua matrícula. Abaixo temos a visualização da grade, onde pode-se classificar cada uma das disciplinas como aprovada, reprovada e cursando.
 
-![Alt text](img/Prototipo/CRUD_alunos.png)
+    ![Alt text](img/Prototipo/CRUD_alunos.png)
 
-Podemos também definir nas disciplinas qual seu código e nome, e o seu período esperado segundo a ementa. Informamos quais cursos a possuem em suas ementas, quais seus pré-requisitos, os professores que a ministram e quais requisitos a mesma possui em relação às características de sala.
+    Podemos também definir nas disciplinas qual seu código e nome, e o seu período esperado segundo a ementa. Informamos quais cursos a possuem em suas ementas, quais seus pré-requisitos, os professores que a ministram e quais requisitos a mesma possui em relação às características de sala.
 
-![Alt text](img/Prototipo/CRUD_disciplinas.png)
+    ![Alt text](img/Prototipo/CRUD_disciplinas.png)
 
-Na seção de professores, temos a relação de disciplinas que os mesmos estão passíveis de ministrar, e também quais são suas preferências de horários ao longo da semana.
+    Na seção de professores, temos a relação de disciplinas que os mesmos estão passíveis de ministrar, e também quais são suas preferências de horários ao longo da semana.
 
-![Alt text](img/Prototipo/CRUD_professores.png)
+    ![Alt text](img/Prototipo/CRUD_professores.png)
 
-Por fim, temos a junção de todas as informações registradas acima. Nela, podemos informar em quais horários, dias e em que sala, a turma estará alocada, além de informar qual professor a lecionará e a qual disciplina ela se refere.
+    Por fim, temos a junção de todas as informações registradas acima. Nela, podemos informar em quais horários, dias e em que sala, a turma estará alocada, além de informar qual professor a lecionará e a qual disciplina ela se refere.
 
-Na imagem temos um exemplo das ilustrações de níveis de alerta, informando que o tempo de duração do segundo dia de aulas não condiz com a preferência pessoal do professor selecionado, e que na primeira sala estão ocorrendo conflitos. Conflitos esses ressaltados nos nomes dos alunos que demandam tal disciplina.
+    Na imagem temos um exemplo das ilustrações de níveis de alerta, informando que o tempo de duração do segundo dia de aulas não condiz com a preferência pessoal do professor selecionado, e que na primeira sala estão ocorrendo conflitos. Conflitos esses ressaltados nos nomes dos alunos que demandam tal disciplina.
 
-![Alt text](img/Prototipo/CRUD_turmas.png)
+    ![Alt text](img/Prototipo/CRUD_turmas.png)
 
 \subsection{Modelo de Banco de Dados} % ### 5.4. Modelo de Banco de Dados
 
-Considerando as informações necessárias para o presente trabalho, e também o preparo de campo para potenciais aplicações futuras, foi elaborado um diagrama conceitual de banco de dados, que pode ser visto abaixo:
+    Considerando as informações necessárias para o presente trabalho, e também o preparo de campo para potenciais aplicações futuras, foi elaborado um diagrama conceitual de banco de dados, que pode ser visto abaixo:
 
-![Alt text](img/DiagramaConceitual/DiagramaConceitualBranco.png)
+    ![Alt text](img/DiagramaConceitual/DiagramaConceitualBranco.png)
 
-% <!-- ![Alt text](img/DiagramaConceitual/DiagramaConceitual.png) -->
+    % <!-- ![Alt text](img/DiagramaConceitual/DiagramaConceitual.png) -->
 
-O diagrama conceitual foi elaborado utilizando a ferramenta [Draw.io][LinkDrawio] citada na metodologia e ilustra as relações entre diversas entidades presentes na realidade da UENF. O emaranhamento presente no diagrama ilustra a complexidade envolvida na criação de uma grade horária, onde diversas entidades se relacionam entre si.
+    O diagrama conceitual foi elaborado utilizando a ferramenta [Draw.io][LinkDrawio] citada na metodologia e ilustra as relações entre diversas entidades presentes na realidade da UENF. O emaranhamento presente no diagrama ilustra a complexidade envolvida na criação de uma grade horária, onde diversas entidades se relacionam entre si.
 
-Como principais apontamentos, podemos citar a parte principal do modelo que é a alocação de turmas. Ela, como já descrito, envolve a correlação entre alunos de diferentes cursos, professores, disciplinas, salas e horários. Além disso, também é possível notar a presença de entidades que não são diretamente relacionadas à alocação de turmas, mas que podem se mostrar úteis, como a relação entre professores e laboratórios, e a de disciplinas e ementas.
+    Como principais apontamentos, podemos citar a parte principal do modelo que é a alocação de turmas. Ela, como já descrito, envolve a correlação entre alunos de diferentes cursos, professores, disciplinas, salas e horários. Além disso, também é possível notar a presença de entidades que não são diretamente relacionadas à alocação de turmas, mas que podem se mostrar úteis, como a relação entre professores e laboratórios, e a de disciplinas e ementas.
 
 \subsection{Desenvolvimento Web} % ### 5.5. Desenvolvimento Web <!-- Entrar em contato com a GINFO -->
 
-Como forma de disponibilizar o acesso online, desenvolveu-se então, com os modelos elaborados um website utilizando do framework [React][LinkReact].
+    Como forma de disponibilizar o acesso online, desenvolveu-se então, com os modelos elaborados um website utilizando do framework [React][LinkReact].
 
-[LinkReact]: react.com
+    [LinkReact]: react.com
 
-Buscou-se utilizar uma máquina virtual disponibilizada pela própria UENF, para evitar que houve problemas de conexão por parte dos servidores que em sua rede estivessem conectados.
+    Buscou-se utilizar uma máquina virtual disponibilizada pela própria UENF, para evitar que houve problemas de conexão por parte dos servidores que em sua rede estivessem conectados.
 
-O bando de dados utilizado foi o [MySQL][LinkMySQL], visto que é o mesmo utilizado pelo Sistema Acadêmico, assim proporcionando uma possível maior facilidade em uma hipotética integração futura.
+    O bando de dados utilizado foi o [MySQL][LinkMySQL], visto que é o mesmo utilizado pelo Sistema Acadêmico, assim proporcionando uma possível maior facilidade em uma hipotética integração futura.
 
-[LinkMySQL]: sql.com
+    [LinkMySQL]: sql.com
