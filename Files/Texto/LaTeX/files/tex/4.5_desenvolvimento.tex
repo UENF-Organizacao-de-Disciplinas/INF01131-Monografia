@@ -60,7 +60,11 @@ Para o desenvolvimento do presente trabalho, foram utilizadas diversas ferrament
 
     Para este fim, foram feitos os designs iniciais usando o software de design \href{https://www.figma.com/}{Figma} para este fim. Algumas telas principais foram concebidas. A primeira e principal é a que permite que o usuário arraste a turma até o horário desejado. A turma ao qual este horário se refere pode ser definida na parte lateral direita.
 
-    % ![Alt text](img/Prototipo/main.png)
+    \begin{figure}[htbp]\centering
+        \caption{\label{fig:main} main}
+        \includegraphics[scale=0.8]{files/img/Prototipo/main.png}
+        \legend{Fonte: o autor}
+    \end{figure} % Main
 
     Em seguida, temos a tela base para seleção de dados deseja-se modificar, podendo ser:
 
@@ -80,29 +84,53 @@ Para o desenvolvimento do presente trabalho, foram utilizadas diversas ferrament
 
     Cada um desses tendo sua própria página de criação, leitura, edição ou deleção de dados.
 
-    ![Alt text](img/Prototipo/CRUD_main.png)
+    \begin{figure}[htbp]\centering
+        \caption{\label{fig:CRUD_main} CRUD_main}
+        \includegraphics[scale=0.8]{files/img/Prototipo/CRUD_main.png}
+        \legend{Fonte: o autor}
+    \end{figure} % CRUD_main
 
     Quanto às salas, temos a sua alocação atual baseado no ano e semestre. Nessa página pode-se também registrar algumas características da sala, como a quantidade de cadeiras e computadores, e se possui monitor, projetos, quadro de giz e quadro branco.
 
-    ![Alt text](img/Prototipo/CRUD_salas-Vazia.png)
+    \begin{figure}[htbp]\centering
+        \caption{\label{fig:CRUD_salas-Vazia} CRUD_salas-Vazia}
+        \includegraphics[scale=0.8]{files/img/Prototipo/CRUD_salas-Vazia.png}
+        \legend{Fonte: o autor}
+    \end{figure} % CRUD_salas-Vazia
 
     Na página dos alunos, pode-se cadastrar novos alunos informando o seu ano de entrada e a sua matrícula. Abaixo temos a visualização da grade, onde pode-se classificar cada uma das disciplinas como aprovada, reprovada e cursando.
 
-    ![Alt text](img/Prototipo/CRUD_alunos.png)
+    \begin{figure}[htbp]\centering
+        \caption{\label{fig:CRUD_alunos} CRUD_alunos}
+        \includegraphics[scale=0.8]{files/img/Prototipo/CRUD_alunos.png}
+        \legend{Fonte: o autor}
+    \end{figure} % CRUD_alunos
 
     Podemos também definir nas disciplinas qual seu código e nome, e o seu período esperado segundo a ementa. Informamos quais cursos a possuem em suas ementas, quais seus pré-requisitos, os professores que a ministram e quais requisitos a mesma possui em relação às características de sala.
 
-    ![Alt text](img/Prototipo/CRUD_disciplinas.png)
+    \begin{figure}[htbp]\centering
+        \caption{\label{fig:CRUD_disciplinas} CRUD_disciplinas}
+        \includegraphics[scale=0.8]{files/img/Prototipo/CRUD_disciplinas.png}
+        \legend{Fonte: o autor}
+    \end{figure} % CRUD_disciplinas
 
     Na seção de professores, temos a relação de disciplinas que os mesmos estão passíveis de ministrar, e também quais são suas preferências de horários ao longo da semana.
 
-    ![Alt text](img/Prototipo/CRUD_professores.png)
+    \begin{figure}[htbp]\centering
+        \caption{\label{fig:CRUD_professores} CRUD_professores}
+        \includegraphics[scale=0.8]{files/img/Prototipo/CRUD_professores.png}
+        \legend{Fonte: o autor}
+    \end{figure} % CRUD_professores
 
     Por fim, temos a junção de todas as informações registradas acima. Nela, podemos informar em quais horários, dias e em que sala, a turma estará alocada, além de informar qual professor a lecionará e a qual disciplina ela se refere.
 
     Na imagem temos um exemplo das ilustrações de níveis de alerta, informando que o tempo de duração do segundo dia de aulas não condiz com a preferência pessoal do professor selecionado, e que na primeira sala estão ocorrendo conflitos. Conflitos esses ressaltados nos nomes dos alunos que demandam tal disciplina.
 
-    ![Alt text](img/Prototipo/CRUD_turmas.png)
+    \begin{figure}[htbp]\centering
+        \caption{\label{fig:CRUD_turmas} CRUD_turmas}
+        \includegraphics[scale=0.8]{files/img/Prototipo/CRUD_turmas.png}
+        \legend{Fonte: o autor}
+    \end{figure} % CRUD_turmas
 
 \section{Modelo de Banco de Dados} % ### 5.4. Modelo de Banco de Dados
 
