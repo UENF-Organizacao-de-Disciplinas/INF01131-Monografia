@@ -9,17 +9,16 @@
 % Capa
 \imprimircapa{}
 
-\imprimirfolhaderosto{}
 % Folha de rosto (o * indica que haverá a ficha bibliográfica)
+\imprimirfolhaderosto{}
 
-\include{files/tex/2_lista_de_ilustracoes}            % --- inserir lista de ilustrações --- % NÃO USADO
 % \include{files/tex/2.1_banca}
 % \include{files/tex/2.2_agradecimentos}
-\include{files/tex/2.3_resumo}
-\include{files/tex/2.4_abstract}
-\include{files/tex/3_sumario}
-\include{files/tex/3.1_lista_de_ilustracoes}
-\include{files/tex/3.2_lista_de_tabelas}
+% \include{files/tex/2.3_resumo}
+% \include{files/tex/2.4_abstract}
+% \include{files/tex/3_sumario}
+% \include{files/tex/3.1_lista_de_ilustracoes}
+% \include{files/tex/3.2_lista_de_tabelas}
 
 % --- INÍCIO DOS ELEMENTOS TEXTUAIS --- %
 \textual{}
@@ -35,9 +34,8 @@
 
 % --- INÍCIO DOS ELEMENTOS PÓS-TEXTUAIS --- %
 \postextual{}
-\bibliography{files/tex/5_referencias}      % --- Referências bibliográficas --- %
+
+\include{files/tex/5_referencias} % --- Referências bibliográficas --- %
 \include{files/tex/6_apendice}
-% \glossary                                 % --- Glossário --- % NÃO USADO
-% \include{files/tex/nao_usados/indice_remissivo}      % --- INDICE REMISSIVO --- %
 
 \end{document}
