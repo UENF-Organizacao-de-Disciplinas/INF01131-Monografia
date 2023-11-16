@@ -1,11 +1,14 @@
-\input{files/tex/structure}
+\input{files/tex/0_structure}
 \input{files/tex/1_capa_e_folha_de_rosto}
 
 \begin{document} % --- Início do documento --- %
 
-\pretextual                 % --- INÍCIO DOS ELEMENTOS PRÉ-TEXTUAIS --- %
+% --- INÍCIO DOS ELEMENTOS PRÉ-TEXTUAIS --- %
+\pretextual
 
-\imprimircapa           % Capa
+% Capa
+\imprimircapa
+
 \imprimirfolhaderosto   % Folha de rosto (o * indica que haverá a ficha bibliográfica)
 
 % \include{files/tex/nao_usados/ficha_catalografica}   % --- FICHA CATALOGRÁFICA --- % NÃO DEVE SER USADO
@@ -24,26 +27,30 @@
 % \include{files/tex/4_lista_de_tabelas}                % --- inserir lista de tabelas --- %
 \include{files/tex/5_sumario}
 
-\textual                                        % --- INÍCIO DOS ELEMENTOS TEXTUAIS --- %
+% --- INÍCIO DOS ELEMENTOS TEXTUAIS --- %
+\textual{}
 
-\include{files/tex/6_introducao}
-\include{files/tex/7_contexto}
-\include{files/tex/8_modelagem}
-
-% \include{files/tex/7_revisao_da_literatura}
-% \include{files/tex/8_objetivos}
-% \include{files/tex/9_metodologia}
-% \include{files/tex/10_cronograma}
+\include{files/tex/4.1_introducao}
+\include{files/tex/4.2_contexto}
+\include{files/tex/4.3_modelagem}
+\include{files/tex/4.4_organizacao}
+\include{files/tex/4.5_desenvolvimento}
+\include{files/tex/4.6_experimento}
+\include{files/tex/4.7_resultados}
+\include{files/tex/4.8_conclusoes}
+\include{files/tex/5_referencias}
 
 % \include{files/tex/nao_usados/referenciais_teoricos} % NÃO USADO
 % \include{files/tex/nao_usados/resultados}            % NÃO USADO
 % \include{files/tex/nao_usados/conclusao}             % --- CONCLUSÃO --- % NÃO USADO
 
-\postextual                                     % --- INÍCIO DOS ELEMENTOS PÓS-TEXTUAIS --- %
+% --- INÍCIO DOS ELEMENTOS PÓS-TEXTUAIS --- %
+\postextual{}
 
-\bibliography{files/referencias}      % --- Referências bibliográficas --- %
+\bibliography{files/tex/5_referencias}      % --- Referências bibliográficas --- %
 % \glossary                                 % --- Glossário --- % NÃO USADO
-% \include{files/tex/nao_usados/apendices}             % --- Inicia os apêndices --- % NÃO USADO
+% --- Inicia os apêndices --- % NÃO USADO
+\include{files/tex/6_apendice}
 % \include{files/tex/nao_usados/indice_remissivo}      % --- INDICE REMISSIVO --- %
 
 \end{document}
