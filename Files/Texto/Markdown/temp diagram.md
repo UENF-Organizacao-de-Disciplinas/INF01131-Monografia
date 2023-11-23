@@ -15,6 +15,7 @@ NumeroCPF
 <!-- Pesquisar sobre algum livro que informe sobre o uso do Id versus uso de chave composta -->
 <!-- ALUNOS EM VÁRIOS CURSOS -->
 <!-- PRESENTE VS VOZ PASSIVA -->
+## A
 
 ```mermaid
 erDiagram
@@ -168,6 +169,8 @@ erDiagram
   }
 ```
 
+## B
+
 ```mermaid
 erDiagram
   Aluno ||--|{ AlunoCurso : "cursa"
@@ -197,6 +200,8 @@ erDiagram
 
 ```
 
+## C
+
 ```mermaid
 graph TD
   A[Aluno]         -->|"(1:1)"| id1{cursa}                 -->|"(1:N)"| C[Curso]
@@ -220,3 +225,5 @@ graph TD
   Q                -->|"(1:1)"| id23{está em uma}          -->|"(1:N)"| S[Sala]
   Q                -->|"(1:N)"| id24{é ministrada por}     -->|"(1:1)"| F
 ```
+
+## D
