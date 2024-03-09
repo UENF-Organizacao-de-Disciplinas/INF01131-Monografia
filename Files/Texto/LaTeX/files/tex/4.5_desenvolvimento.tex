@@ -19,26 +19,25 @@ Para o desenvolvimento do presente trabalho, foram utilizadas diversas ferrament
         Entretanto, todas essas alternativas são trabalhosas e propensas a erros. Sendo assim, foi pensado em uma forma de automatizar esse processo. Para este fim, foi elaborado um código em \href{https://www.python.org/}{Python} que atualmente \href{https://github.com/jvfd3/university_demand}{se encontra no GitHub}. Este código tem como entrada os extratos de matrícula dos alunos e como saída uma lista de disciplinas e a quantidade de alunos que estão matriculados em cada uma delas.
 
         \begin{lstlisting}[language=Python, caption={Obter demanda por extratos em PDF}]
-            import code_1_set_working_directory     as swd
-            import code_2_get_pdf_list              as gpl
-            import code_3_get_string_from_pdf       as gsp
-            import code_4_structure_data_from_text  as sdt
-            import code_5_filter_structured_data    as fsd
-            import code_6_get_demand_list           as gdl
-            import code_7_merge_demands             as mgd
-            import code_8_output_demand_as_txt      as odt
-
-            swd.set_cwd()
-            pdf_paths          = gpl.get_pdf_list()
-            texts              = gsp.get_pdf_text(pdf_paths)
-            structured_data    = sdt.structure_data(texts)
-            approved_codes     = fsd.get_approved_codes(structured_data)
-            demands            = gdl.get_demand_list(approved_codes)
-            demands_and_values = mgd.get_merged_demands(demands)
-            odt.output_to_txt(demands_and_values)
+import code_1_set_working_directory     as swd
+import code_2_get_pdf_list              as gpl
+import code_3_get_string_from_pdf       as gsp
+import code_4_structure_data_from_text  as sdt
+import code_5_filter_structured_data    as fsd
+import code_6_get_demand_list           as gdl
+import code_7_merge_demands             as mgd
+import code_8_output_demand_as_txt      as odt
+swd.set_cwd()
+pdf_paths          = gpl.get_pdf_list()
+texts              = gsp.get_pdf_text(pdf_paths)
+structured_data    = sdt.structure_data(texts)
+approved_codes     = fsd.get_approved_codes(structured_data)
+demands            = gdl.get_demand_list(approved_codes)
+demands_and_values = mgd.get_merged_demands(demands)
+odt.output_to_txt(demands_and_values)
         \end{lstlisting}
 
-        Este código foi desenvolvido em 8 etapas, cada uma com um arquivo separado. Para alcançar a lista das demandas, é necessário primeiro obter a lista dos arquivos em formato PDF que serão processados, em seguida extrair seus dados com a biblioteca \href{PDFMiner}{https://pypi.org/project/pdfminer/}, estruturar os dados obtidos, filtrar os dados estruturados, obter a demanda de cada disciplina, juntar as demandas de cada disciplina e salvar os dados obtidos em um arquivo de texto.
+        Este código foi desenvolvido em 8 etapas, cada uma com um arquivo separado. Para alcançar a lista das demandas, é necessário primeiro obter a lista dos arquivos em formato PDF que serão processados, em seguida extrair seus dados com a biblioteca \href{https://pypi.org/project/pdfminer/}{PDFMiner}, estruturar os dados obtidos, filtrar os dados estruturados, obter a demanda de cada disciplina, juntar as demandas de cada disciplina e salvar os dados obtidos em um arquivo de texto.
 
         Embora o código cumpra com seu objetivo, apresenta algumas características limitantes. A primeira é que os PDFs precisam ser obtidos manualmente, um por um, pelo coordenador, sendo ela por si só uma tarefa extenuante, o que não é desejado. Além disso, o seu uso não é muito intuitivo, sendo necessário que o usuário lide com o prompt de comando e instale as dependências necessárias, o que acaba trazendo uma dificuldade a mais ao usuário. O código também apresenta limitações por sistema operacional, não sendo garantido o seu funcionamento em sistemas operacionais diferentes do Windows.
 
@@ -56,13 +55,13 @@ Para o desenvolvimento do presente trabalho, foram utilizadas diversas ferrament
 
 \section{Protótipo} % ### 5.3. Protótipo
 
-    A criação de protótipos, seguindo a abordagem tomada por \cite{andre_interaction_2018}, se mostra como essencial para que se mantenha a constante satisfação por parte dos _stakeholders_ e quais mudanças sugerem ao desenvolvimento do projeto, assim reduzindo a necessidade de retrabalho ou de não alcance das expectativas do projeto.
+    A criação de protótipos, seguindo a abordagem tomada por \cite{andre_interaction_2018}, se mostra como essencial para que se mantenha a constante satisfação por parte dos \textit{stakeholders} e quais mudanças sugerem ao desenvolvimento do projeto, assim reduzindo a necessidade de retrabalho ou de não alcance das expectativas do projeto.
 
     Para este fim, foram feitos os designs iniciais usando o software de design \href{https://www.figma.com/}{Figma} para este fim. Algumas telas principais foram concebidas. A primeira e principal é a ilustrada pela Figura \ref{fig:main} que permite que o usuário arraste a turma até o horário desejado. A turma ao qual este horário se refere pode ser definida na parte lateral direita.
 
     \begin{figure}[htbp]\centering
         \caption{\label{fig:main} Página principal do sistema}
-        \includegraphics[scale=0.8]{files/img/Prototipo/main.png}
+        \includegraphics[scale=0.6]{files/img/Prototipo/Medio/main.png}
         \legend{Fonte: o autor}
     \end{figure} % Main
 
@@ -86,7 +85,7 @@ Para o desenvolvimento do presente trabalho, foram utilizadas diversas ferrament
 
     \begin{figure}[htbp]\centering
         \caption{\label{fig:CRUD_main} Página principal de modificação dos dados}
-        \includegraphics[scale=0.8]{files/img/Prototipo/CRUD_main.png}
+        \includegraphics[scale=0.6]{files/img/Prototipo/Medio/CRUD_main.png}
         \legend{Fonte: o autor}
     \end{figure} % CRUD_main
 
@@ -94,7 +93,7 @@ Para o desenvolvimento do presente trabalho, foram utilizadas diversas ferrament
 
     \begin{figure}[htbp]\centering
         \caption{\label{fig:CRUD_salas-Vazia} Página de modificação das informações de salas}
-        \includegraphics[scale=0.8]{files/img/Prototipo/CRUD_salas-Vazia.png}
+        \includegraphics[scale=0.6]{files/img/Prototipo/Medio/CRUD_salas-Vazia.png}
         \legend{Fonte: o autor}
     \end{figure} % CRUD_salas-Vazia
 
@@ -102,7 +101,7 @@ Para o desenvolvimento do presente trabalho, foram utilizadas diversas ferrament
 
     \begin{figure}[htbp]\centering
         \caption{\label{fig:CRUD_alunos} Página de modificação das informações de alunos}
-        \includegraphics[scale=0.8]{files/img/Prototipo/CRUD_alunos.png}
+        \includegraphics[scale=0.6]{files/img/Prototipo/Medio/CRUD_alunos.png}
         \legend{Fonte: o autor}
     \end{figure} % CRUD_alunos
 
@@ -110,7 +109,7 @@ Para o desenvolvimento do presente trabalho, foram utilizadas diversas ferrament
 
     \begin{figure}[htbp]\centering
         \caption{\label{fig:CRUD_disciplinas} Página de modificação das informações de disciplinas}
-        \includegraphics[scale=0.8]{files/img/Prototipo/CRUD_disciplinas.png}
+        \includegraphics[scale=0.6]{files/img/Prototipo/Medio/CRUD_disciplinas.png}
         \legend{Fonte: o autor}
     \end{figure} % CRUD_disciplinas
 
@@ -118,7 +117,7 @@ Para o desenvolvimento do presente trabalho, foram utilizadas diversas ferrament
 
     \begin{figure}[htbp]\centering
         \caption{\label{fig:CRUD_professores} Página de modificação}
-        \includegraphics[scale=0.8]{files/img/Prototipo/CRUD_professores.png}
+        \includegraphics[scale=0.6]{files/img/Prototipo/Medio/CRUD_professores.png}
         \legend{Fonte: o autor}
     \end{figure} % CRUD_professores
 
@@ -128,7 +127,7 @@ Para o desenvolvimento do presente trabalho, foram utilizadas diversas ferrament
 
     \begin{figure}[htbp]\centering
         \caption{\label{fig:CRUD_turmas} Página de modificação das informações de turmas}
-        \includegraphics[scale=0.8]{files/img/Prototipo/CRUD_turmas.png}
+        \includegraphics[scale=0.6]{files/img/Prototipo/Medio/CRUD_turmas.png}
         \legend{Fonte: o autor}
     \end{figure} % CRUD_turmas
 
@@ -138,7 +137,7 @@ Para o desenvolvimento do presente trabalho, foram utilizadas diversas ferrament
 
     \begin{figure}[htbp]\centering
         \caption{\label{fig:DiagramConceitual} Diagrama Conceitual do banco de dados}
-        \includegraphics[scale=0.8]{files/img/DiagramaConceitual/DiagramaConceitualBranco.png}
+        \includegraphics[scale=0.2]{files/img/DiagramaConceitual/DiagramaConceitualBranco.png}
         \legend{Fonte: o autor}
     \end{figure} % Diagrama Conceitual
 

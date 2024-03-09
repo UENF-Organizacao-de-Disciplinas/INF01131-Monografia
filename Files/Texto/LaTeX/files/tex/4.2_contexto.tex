@@ -13,7 +13,7 @@ Antes de prosseguirmos com o desenrolar deste trabalho, é adequado que primeiro
 
     Assim como feito por \cite{goos_scheduling_1996}, definiremos os conceitos dos termos que serão usados ao longo deste trabalho.
 
-    O termo "\textit{timetable}" tem o mesmo valor que "grade horária" e serão usadas como se fossem sinônimos mesmo sendo de línguas diferentes. Segundo \cite{goos_scheduling_1996}, podemos definir \textit{timetable} como uma estrutura que mostra quando que eventos ocorrerão, não havendo necessariamente a alocação de recursos.
+    O termo \textit{timetable} tem o mesmo valor que "grade horária" e serão usadas como se fossem sinônimos mesmo sendo de línguas diferentes. Segundo \cite{goos_scheduling_1996}, podemos definir \textit{timetable} como uma estrutura que mostra quando que eventos ocorrerão, não havendo necessariamente a alocação de recursos.
 
     Vale ressaltar que este termo não tem seu uso limitado para os fins desta pesquisa, sendo também usado para problemas de alocação de enfermeiros, esportes, funcionários e transportes \cite{arratia-martinez_university_2021}. Entretanto, neste trabalho, abordaremos principalmente os termos relacionados ao que pode ser chamado de \textit{Educational Timetabling} (Ed-TT) \cite{alencar_visualization_2019}, que é o que tende a envolver um conjunto específico de recursos relacionados à educação.
 
@@ -99,7 +99,7 @@ Antes de prosseguirmos com o desenrolar deste trabalho, é adequado que primeiro
 
     \begin{figure}[htbp]\centering
         \caption{\label{Desenvolvimento}Resumo de trabalhos, parâmetros, dimensões, tempo e técnicas.}
-        \includegraphics[angle=0,scale=1]{files/img/tabelas/Desenvolvimento.png}
+        \includegraphics[angle=0,scale=1]{files/img/Tabelas/Desenvolvimento.png}
         \legend{Fonte: \cite{alegre_desenvolvimento_2012}}
     \end{figure}    % Desenvolvimento
 
@@ -109,7 +109,7 @@ Antes de prosseguirmos com o desenrolar deste trabalho, é adequado que primeiro
 
     \begin{figure}[htbp]\centering
         \caption{\label{University}Comparação entre artigos que solucionam o problema de grade horária}
-        \includegraphics[angle=0,scale=0.37]{files/img/tabelas/University.png}
+        \includegraphics[angle=0,scale=0.37]{files/img/Tabelas/University.png}
         \legend{Fonte: \cite{arratia-martinez_university_2021} - editado}
     \end{figure}    % University
 
@@ -119,7 +119,7 @@ Antes de prosseguirmos com o desenrolar deste trabalho, é adequado que primeiro
 
     \begin{figure}[htbp]\centering
         \caption{\label{Visualization}Análise de publicações aceitas.}
-        \includegraphics[angle=0,scale=0.7]{files/img/tabelas/Visualization.png}
+        \includegraphics[angle=0,scale=0.7]{files/img/Tabelas/Visualization.png}
         \legend{Fonte: \cite{alencar_visualization_2019} - editado}
     \end{figure}    % Visualization
 
@@ -155,13 +155,13 @@ Antes de prosseguirmos com o desenrolar deste trabalho, é adequado que primeiro
 
         Em seu trabalho, Sânya aborda o problema de Programação de Horários de Disciplinas em Universidades, tendo como foco o curso de Ciência da Computação da UENF. Sua abordagem foi a de desenvolver um software que fosse capaz de gerar uma grade horária ótima para o curso, levando em conta as restrições impostas pelo curso. Para isso, Sânya explicou diversos métodos possíveis para se alcançar a solução desejada, passando inicialmente pelos métodos construtivos, seguido de métodos refinamento, podendo essas heurísticas serem utilizadas em conjunto com meta-heurísticas.
 
-        Por fim, utilizou uma heurística que consistia em respeitar a uma matriz de preferência para a distribuição das disciplinas. Seguindo com o uso do _Simulated Annealing_ para a otimização da solução inicial.
+        Por fim, utilizou uma heurística que consistia em respeitar a uma matriz de preferência para a distribuição das disciplinas. Seguindo com o uso do \textit{Simulated Annealing} para a otimização da solução inicial.
 
     \subsection{Ricardo} % #### 2.4.2. Ricardo
 
-        Em seu trabalho, Ricardo aborda também o Problema de Programação de Horários (PPH) em instituições de ensino superior. Ele explora os diversos métodos heurísticos para resolução deste problema que visa encontrar a alocação ótima dos horários em suas grades. Ele teve como objetivo de seu trabalho a implementação de um software que fosse capaz de resolver o PPH do curso de Ciência da Computação da UENF, utilizando os métodos heurísticos Construção Gulosa (CG) e Busca Local (BL) e os métodos metaheurísticos Simulated Annealing (SA) e Busca Tabu (BT). Para este fim, ele utilizou a linguagem de programação C para a implementação dos métodos e a linguagem de programação Java para a implementação da interface gráfica do software. Com isso conseguiu elaborar uma ferramenta automatizada para a geração de quadros de horários, alocando aulas e professores em dias e horários disponíveis na semana.
+        Em seu trabalho, Ricardo aborda também o Problema de Programação de Horários (PPH) em instituições de ensino superior. Ele explora os diversos métodos heurísticos para resolução deste problema que visa encontrar a alocação ótima dos horários em suas grades. Ele teve como objetivo de seu trabalho a implementação de um software que fosse capaz de resolver o PPH do curso de Ciência da Computação da UENF, utilizando os métodos heurísticos Construção Gulosa (CG) e Busca Local (BL) e os métodos metaheurísticos \textit{Simulated Annealing} (SA) e Busca Tabu (BT). Para este fim, ele utilizou a linguagem de programação C para a implementação dos métodos e a linguagem de programação Java para a implementação da interface gráfica do software. Com isso conseguiu elaborar uma ferramenta automatizada para a geração de quadros de horários, alocando aulas e professores em dias e horários disponíveis na semana.
 
-        Ele descreve também como possiblidade de trabalho futuro o aperfeiçoamento do banco de dados da ferramenta desenvolvida para que se possa armazenar mais informações pertinentes ao problema, para que o usuário possa realizar modificações no quadro de horários, sendo guiado pelo retorno do Software que informa a viabilidade da alteração, assim gerando maior flexibilidade à aplicação.
+        Ele descreve também como possibilidade de trabalho futuro o aperfeiçoamento do banco de dados da ferramenta desenvolvida para que se possa armazenar mais informações pertinentes ao problema, para que o usuário possa realizar modificações no quadro de horários, sendo guiado pelo retorno do Software que informa a viabilidade da alteração, assim gerando maior flexibilidade à aplicação.
 
     \subsection{Divergências} % #### 2.4.3. Divergências
 
@@ -185,25 +185,25 @@ Antes de prosseguirmos com o desenrolar deste trabalho, é adequado que primeiro
                 \begin{itemize}
                     \item Requisitos essenciais, ou seja, obrigatórios:
                     \begin{itemize}
-                        \item RE1 - Um professor não pode lecionar aula em duas turmas diferentes no mesmo horário.
-                        \item RE2 - Uma turma não pode ter aula em duas disciplinas no mesmo horário.
+                        \item \textbf{RE1} - Um professor não pode lecionar aula em duas turmas diferentes no mesmo horário.
+                        \item \textbf{RE2} - Uma turma não pode ter aula em duas disciplinas no mesmo horário.
                     \end{itemize}
                     \item Requisitos não essenciais, de qualidade:
                     \begin{itemize}
-                        \item RNE1 - O ideal é que existam no máximo duas aulas consecutivas da mesma disciplina.
-                        \item RNE2 - Não devem haver mais de duas aulas da mesma disciplina em um dia.
-                        \item RNE3 - Não preencher os horários de 12h às 14h, pois se trata de horário de almoço.
-                        \item RNE4 - Os professores associados, por terem exclusividade com a instituição, preferem espalhar os horários das aulas dadas, e não acumular todas no mesmo dia.
-                        \item RNE5 - Os professores contratados, por outro lado, preferem que suas aulas sejam alocadas num mesmo dia, ou no menor número de dias possíveis.
+                        \item \textbf{RNE1} - O ideal é que existam no máximo duas aulas consecutivas da mesma disciplina.
+                        \item \textbf{RNE2} - Não devem haver mais de duas aulas da mesma disciplina em um dia.
+                        \item \textbf{RNE3} - Não preencher os horários de 12h às 14h, pois se trata de horário de almoço.
+                        \item \textbf{RNE4} - Os professores associados, por terem exclusividade com a instituição, preferem espalhar os horários das aulas dadas, e não acumular todas no mesmo dia.
+                        \item \textbf{RNE5} - Os professores contratados, por outro lado, preferem que suas aulas sejam alocadas num mesmo dia, ou no menor número de dias possíveis.
                     \end{itemize}
                 \end{itemize}
             \end{quote}
 
             Quanto à citada RE2, a limitação deveria ser mais criteriosa, e se tratando de um requisito não essencial, pois, o conceito de turma é dado pela junção de estudantes que cursam a mesma disciplina, ministrada por um mesmo professor, em um mesmo semestre. Mas em seu trabalho, Sânya considera o conceito de turma como sendo o conjunto de estudantes que ingressaram em um mesmo ano, independente da consideração da existência de repetentes e de suas escolhas pessoais de inscrição.
 
-            RNE1, RNE2 e RNE3: todas elas não consideram a existência de disciplinas que necessitam de um total de cinco tempos de aula semanais, sendo elas regularmente divididas em dois períodos, um de duas horas e outro de três horas. Que, em situações de necessidades, como é visto na entrevista com o diretor do CCT, acaba sim sendo necessário que se aloque em período de almoço.
+            \textbf{RNE1}, \textbf{RNE2} e \textbf{RNE3}: todas elas não consideram a existência de disciplinas que necessitam de um total de cinco tempos de aula semanais, sendo elas regularmente divididas em dois períodos, um de duas horas e outro de três horas. Que, em situações de necessidades, como é visto na entrevista com o diretor do CCT, acaba sim sendo necessário que se aloque em período de almoço.
 
-            RNE4 e RNE5: embora estejam direcionadas corretamente, ainda assim não engloba casos de preferência pessoal de cada um dos professores citados. Como por exemplo a possibilidade de não se ministrar aulas em determinados dias da semana por motivos religiosos, seja por parte do quadro permanente, quanto de professores associados.
+            \textbf{RNE4} e \textbf{RNE5}: embora estejam direcionadas corretamente, ainda assim não engloba casos de preferência pessoal de cada um dos professores citados. Como por exemplo a possibilidade de não se ministrar aulas em determinados dias da semana por motivos religiosos, seja por parte do quadro permanente, quanto de professores associados.
 
             Outra considerável divergência entre o modelo e a realidade é a definição de que a cada semestre contém apenas 5 turmas de computação. Sendo estas compostas pelos estudantes ingressantes de 5 anos consecutivos, caso este que não se aplica à realidade da universidade, visto que a quantidade de turmas varia de acordo com a demanda semestral, que não necessariamente condiz com todos os estudantes ingressantes de um mesmo ano.
 
@@ -215,7 +215,7 @@ Antes de prosseguirmos com o desenrolar deste trabalho, é adequado que primeiro
 
             Ele, assim com Sânya, também não considera a possibilidade de alocação de professores em mais de uma disciplina, múltiplas turmas de uma mesma disciplina, assim como não lida com a distribuição das salas. Ele também considera algumas disciplinas estão fixas, mesmo que pudessem sim ser modificadas por seu responsável, o Diretor do CCT.
 
-            Por fim, podemos citar um outro ponto que é a busca pela eficiência e baixo custo de tempo dos métodos utilizados. O que se mostra como ponto positivo, entretanto, mesmo com tamanha eficiencia ainda peca em atingir a praticabilidade da solução.
+            Por fim, podemos citar um outro ponto que é a busca pela eficiência e baixo custo de tempo dos métodos utilizados. O que se mostra como ponto positivo, entretanto, mesmo com tamanha eficiência ainda peca em atingir a praticabilidade da solução.
 
         \subsubsection{Parecer geral das divergências}
 
