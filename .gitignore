@@ -3,3 +3,6 @@
 *.fls
 *.log
 *.synctex.gz
+*.idx
+*.ind
+*.ilg
