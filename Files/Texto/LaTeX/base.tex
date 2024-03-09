@@ -3,8 +3,7 @@
 
 \begin{document} % --- Início do documento --- %
 
-% --- INÍCIO DOS ELEMENTOS PRÉ-TEXTUAIS --- %
-\pretextual{}
+\pretextual{} % --- INÍCIO DOS ELEMENTOS PRÉ-TEXTUAIS --- %
 
 % Capa
 \imprimircapa{}
@@ -12,16 +11,15 @@
 % Folha de rosto (o * indica que haverá a ficha bibliográfica)
 \imprimirfolhaderosto{}
 
-% \include{files/tex/2.1_banca}
-% \include{files/tex/2.2_agradecimentos}
-% \include{files/tex/2.3_resumo}
-% \include{files/tex/2.4_abstract}
-% \include{files/tex/3_sumario}
-% \include{files/tex/3.1_lista_de_ilustracoes}
-% \include{files/tex/3.2_lista_de_tabelas}
+\include{files/tex/2.1_banca}
+\include{files/tex/2.2_agradecimentos}
+\include{files/tex/2.3_resumo}
+\include{files/tex/2.4_abstract}
+\include{files/tex/3_sumario}
+\include{files/tex/3.1_lista_de_ilustracoes}
+\include{files/tex/3.2_lista_de_tabelas}
 
-% --- INÍCIO DOS ELEMENTOS TEXTUAIS --- %
-\textual{}
+\textual{} % --- INÍCIO DOS ELEMENTOS TEXTUAIS --- %
 
 \include{files/tex/4.1_introducao}
 \include{files/tex/4.2_contexto}
@@ -32,11 +30,9 @@
 \include{files/tex/4.7_resultados}
 \include{files/tex/4.8_conclusoes} % --- OK --- %
 
-% --- INÍCIO DOS ELEMENTOS PÓS-TEXTUAIS --- %
-\postextual{}
+\postextual{} % --- INÍCIO DOS ELEMENTOS PÓS-TEXTUAIS --- %
 
-% \include{files/tex/5_referencias} % --- Referências bibliográficas --- %
-% \bibliography{files/referencias}
+\include{files/tex/5_referencias} % --- Referências bibliográficas --- %
 \include{files/tex/6_apendice}
 
 \end{document}
