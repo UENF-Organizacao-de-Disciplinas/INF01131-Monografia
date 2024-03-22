@@ -24,3 +24,17 @@ Embora o diagrama apresente uma visão mais completa de todas as interconexões 
 
 Neste modelo, mais enxuto, temos apenas as entidades principais, onde temos uma turma de determinada disciplina, ministrada por um professor e que ocorre em uma sala em um determinado horário.
 
+\subsection{Diagrama de Entidade e relacionamento} % ### 5.4.1. Modelo Relacional
+
+% Com isso, restamos o diagrama de Entidade e Relacionamento (DER) que pode ser visto na Figura \ref{fig:DER}.
+
+% \begin{figure}[htbp]\centering
+%   \caption{\label{fig:DER} Diagrama de Entidade e Relacionamento}
+%   \includegraphics[scale=0.2]{files/img/DER/DERBranco.png}
+%   \legend{Fonte: o autor}
+% \end{figure} % Diagrama de Entidade e Relacionamento
+
+Neste diagrama vemos as entidades principais, que são \textit{Turmas}, \textit{Disciplinas}, \textit{Professores}, \textit{Horários} e \textit{Salas}. As propriedades escolhidas para cada entidade são compostas por uma mistura de critérios. Por exemplo, o nome do professor, o código da disciplina, e a junção de código e bloco auxiliam primordialmente na identificação real dos professores, disciplinas e salas. Já as informações ``período'', ``apelido'' e ``comment''...
+
+E também é notável a presença da entidade \textit{Alunos}, que se apresenta desacoplado das demais entidades. O motivo para isso é que, embora os alunos façam parte do processo de alocação de turmas, ao longo do desenvolvimento, o desenvolvimento de funcionalidades envolvendo os alunos...
+
