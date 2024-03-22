@@ -12,11 +12,15 @@ O diagrama conceitual foi elaborado utilizando a ferramenta \href{https://www.dr
 
 Como principais apontamentos, podemos citar a parte principal do modelo que é a alocação de turmas. Ela, como já descrito, envolve a correlação entre alunos de diferentes cursos, professores, disciplinas, salas e horários. Além disso, também é possível notar a presença de entidades que não são diretamente relacionadas à alocação de turmas, mas que podem se mostrar úteis, como a relação entre professores e laboratórios, e a de disciplinas e ementas.
 
-\section{Desenvolvimento Web} % ### 5.5. Desenvolvimento Web <!-- Entrar em contato com a GINFO -->
+Embora o diagrama apresente uma visão mais completa de todas as interconexões possíveis, é importante ressaltar que o presente trabalho foca primordialmente na alocação das turmas para o curso de Ciência da Computação, e que a implementação do banco de dados será feita de forma a atender a essas necessidades, fazendo então uso de uma parte do diagrama conceitual.
 
-Como forma de disponibilizar o acesso online, desenvolveu-se então, com os modelos elaborados um website utilizando do framework \href{https://react.dev/}{React}.
+% Tendo isso em vista, o modelo conceitual reduzido para o presente trabalho pode ser visto na Figura \ref{fig:DiagramConceitualReduzido}.
 
-Buscou-se utilizar uma máquina virtual disponibilizada pela própria UENF, para evitar que houve problemas de conexão por parte dos servidores que em sua rede estivessem conectados.
+% \begin{figure}[htbp]\centering
+%   \caption{\label{fig:DiagramConceitualReduzido} Diagrama Conceitual reduzido para o presente trabalho}
+%   \includegraphics[scale=0.2]{files/img/DiagramaConceitual/DiagramaConceitualReduzidoBranco.png}
+%   \legend{Fonte: o autor}
+% \end{figure} % Diagrama Conceitual reduzido
 
-O bando de dados utilizado foi o \href{https://dev.mysql.com/}{MySQL}, visto que é o mesmo utilizado pelo Sistema Acadêmico, assim proporcionando uma possível maior facilidade em uma hipotética integração futura.
+Neste modelo, mais enxuto, temos apenas as entidades principais, onde temos uma turma de determinada disciplina, ministrada por um professor e que ocorre em uma sala em um determinado horário.
 
