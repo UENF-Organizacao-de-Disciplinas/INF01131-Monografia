@@ -58,11 +58,13 @@ Além dessas funcionalidades que se mantiveram até a conclusão do sistema, tam
 
 Após o desenvolvimento local, como forma de viabilizar o acesso ao sistema por parte de outros usuários, foi feito o \textit{deploy}, ou seja, foi feito o upload do sistema para um servidor online. Para isso, foi utilizado o serviço GitHub Pages que, por ser gratuito e de fácil utilização, foi a escolha mais adequada para o momento. O sistema pode ser acessado através do link \url{https://jvfd3.github.io/timetabling-UENF/}.
 
-Nessa versão, também foi implementada uma checagem bruta de conflitos por alocação simultânea de professores em mais de uma turma e a checagem da quantidade de demanda de alunos em relação à capacidade das salas.
+Nessa versão, também foi implementada uma checagem bruta de conflitos por alocação simultânea de professores em mais de uma turma e a checagem da quantidade de demanda de alunos em relação à capacidade das salas. Uma descrição mais detalhada das funcionalidades de conflitos está presente \hyperref[Conflitos]{adiante}.
 
 \subsection{Segunda versão} % ### 5.5.3. Segunda versão
 
 Utilizando do feedback quanto aos resultados entregues na primeira versão, alguns pontos de melhoria foram identificados, sendo um deles, e o mais importante: o planejamento. Na primeira abordagem, o desenvolvimento foi feito seguindo notas e ideias soltas, sem um planejamento prévio, o que resultou em um sistema que, embora funcional, não atendia a todas as necessidades propostas. E ia além: exibia funcionalidades que não eram de todo necessárias, ou melhor dizendo, têm menor prioridade do que muitas outras.
+
+% Mesmo com esta nova dinâmica, outras funcionalidades foram deixadas de lado. Uma das que foram deixadas de lado foi a possibilidade de fixar certas informações. A proposta era que, certas disciplinas como Cálculo e Álgebra que são ofertadas para múltiplos cursos, pudessem ser fixadas em horários específicos, para que simplificasse aos coordenadores dos cursos a alocação de turmas.
 
 \subsubsection{GitHub Projects}
 
@@ -80,11 +82,9 @@ Tendo agora uma rota mais clara a ser seguida, o desenvolvimento foi retomado. U
 
 Mesmo cumprindo com o que promete, o JSONBin não se mostrou a melhor escolha para o sistema, visto que a sua utilização não performou tão bem quanto se esperava. Não se sabe se foi por inexperiência ou por limitações do próprio serviço, mas a utilização do JSONBin para a coleta dos dados, fazia com que a tela de carregamento do sistema demorasse alguns segundos para ser exibida, o que não é aceitável para o sistema proposto.
 
-\subsubsection{...}
+Embora houvesse o desejo do uso de informações em formato JSON, achou-se por bem utilizar um banco de dados mais usual, recorrendo então ao MySQL. Para isso, foi necessário reformatar os dados para que pudessem ser inseridos no banco de dados.
 
-Assim como na primeira versão, algumas funcionalidades foram desenvolvidas e outras foram deixadas de lado. Uma das que foram deixadas de lado são:
-
-\section{Conflitos}
+\section{Conflitos}\label{Conflitos} % ### 5.6. Conflitos
 
 Uma das principais funcionalidades do sistema é a detecção de conflitos. Seu objetivo é auxiliar ao usuário a identificar possíveis problemas na alocação das turmas, e assim, permitir que ele possa corrigí-los antes de finalizar a grade horária. Diversas situações podem ser consideradas conflitos, e cada uma delas é tratada de forma diferente.
 
