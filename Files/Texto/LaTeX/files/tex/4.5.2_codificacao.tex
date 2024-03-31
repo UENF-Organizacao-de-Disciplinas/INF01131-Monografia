@@ -140,10 +140,123 @@ O uso da AWS segue a mesma lógica do servidor local, com a diferença de que o 
 
 O uso desses três serviços permitiu a execução do backend do sistema em nuvem, e assim, atingindo a permanência dos dados. Com isso, o sistema passou a ser capaz de manter os dados mesmo após a recarga da página, e assim, atender a uma das principais necessidades do sistema.
 
-\paragraph*{CORS}
-\paragraph*{Lambda Layers}
+% \paragraph*{CORS} % Até agora não entendi direito pra que serve isso.
+
+\paragraph*{Implantação}
+
+O conjunto de funcionalidades da AWS envolve em grande parte o objetivo de manter um sistema constantemente acessível através da internet, ainda assim, durante o desenvolvimento, ou até mesmo durante o ciclo de vida do software, é esperado que ocorram manutenções períodicas nas quais é compreensível que o sistema fique fora do ar. Sendo assim, para manter-se visando ao máximo a acessibilidade do sistema, espera-se que o mesmo fique desconectado o mínimo possível.
+
+Tanto o API Gateway quanto as funções Lambda precisaram sofrer diversas modificações ao longo do desenvolvimento, e para que essas modificações fossem aplicadas. A aplicação dessas modificações é chamada de implantação (\textit{deploy}), onde a AWS substitui a versão atual do sistema pela nova versão. Essa aplicação de modificações foi inicialmente feita através da interface web da AWS, porém, com o tempo, foi percebido que essa abordagem era ineficiente. No caso do API Gateway, a ineficiência não era tão grande, visto que assim que as rotas estiverem configuradas, não há a necessidade de alterá-las. Já no caso das funções Lambda, cada mínima mudança no código requisitava um novo deploy para cada uma das funções alteradas.
+
+Outro detalhe percebido, foi que boa parte do código se repetia entre as funções que interagiam diretamente com o banco de dados. Sendo assim, passou-se a utilizar das Lambda Layers, que são camadas que podem ser compartilhadas entre diversas funções, e assim, diminuir a quantidade de código repetido. Essa nova abordagem permitiu que as funções fossem mais enxutas, e que as mudanças fossem aplicadas de forma mais rápida, visto que bibliotecas e funções comuns entre as funções eram compartilhadas entre elas.
+
+\paragraph*{AWS CLI}
+
+Nas primeiras tentativas de deploy, duas abordagens eram utilizadas: a primeira era a de copiar e colar o código diretamente na interface web da AWS, e a segunda era a de fazer o upload de um arquivo zip contendo o código. No segundo código, o código de deploy se assemelha ao seguinte.
+
+\begin{lstlisting}[caption={Código de deploy de Lambda},label={lst:lambda}]
+aws lambda create-function \
+--function-name createProfessor \
+--runtime nodejs20.x \
+--role arn:aws:iam::375423677214:role/LambdaRole \
+--handler index.handler \
+--zip-file fileb://Files/AWS/lambdas/createProfessor/createProfessor.zip \
+\end{lstlisting}
+
+Como mostrado no Código \ref{lst:lambda}, usa-se o software AWS CLI para criar uma função lambda. O comando \textit{create-function} é o comando que cria a função, e os argumentos que seguem são os parâmetros necessários para a criação da função. O \textit{function-name} é o nome da função, o \textit{runtime} é a versão do Node.js que a função utiliza, o \textit{role} é o conjunto de permissões criadas na seção AWS Identity and Access Management (IAM), o \textit{handler} é o nome do arquivo principal que contém a função, e o \textit{zip-file} é o arquivo zip que contém o código da função.
+
+Com isso, ao executar o comando, a função é criada, e então, a nova versão do código é aplicada. Com este fluxo de trabalho, embora permita o deploy sem a direta conexão ao sistema AWS, ainda assim é necessário executar comandos específicos para cada uma, tendo que manualmente compactar o código e fazer o upload de cada um dos arquivos das diversas funções coexistentes.
+
 \paragraph*{SAM}
-\subparagraph*{YAML}
+
+Como solução, foi utilizado o AWS SAM (Serverless Application Model), que é uma extensão do AWS CloudFormation que simplifica o desenvolvimento de aplicações sem servidor. O AWS SAM permite a definição de aplicações sem servidor de forma mais simples, e a partir disso, é possível fazer o deploy de toda a aplicação de uma vez só. O uso do AWS SAM foi feito através de um arquivo \textit{template.yaml}, que contém a definição de todas as funções Lambda, e de recursos necessários para o funcionamento do sistema.
+
+\begin{lstlisting}[caption={Exemplo de template.yaml},label={lst:template}]
+AWSTemplateFormatVersion: "2010-09-09"
+Transform: AWS::Serverless-2016-10-31
+Description: "OurClass>SAM>General>"
+
+Resources:
+  # LAYERS
+  dbFunctionLayer:
+    Type: AWS::Serverless::LayerVersion
+    Properties:
+      LayerName: dbFunctionSAM
+      Description: connect to db
+      ContentUri: ./layers/dbConnection
+      CompatibleRuntimes:
+        - nodejs14.x
+        - nodejs16.x
+        - nodejs18.x
+  # API GATEWAY
+  TimetablingAPI:
+    Type: AWS::Serverless::Api
+    Properties:
+      StageName: timetablingStage
+      EndpointConfiguration: REGIONAL
+      Cors:
+        AllowMethods: "'GET,POST,PUT,DELETE,OPTIONS'"
+        AllowHeaders: "'Content-Type,X-Amz-Date,Authorization,X-Api-Key,X-Amz-Security-Token'"
+        AllowOrigin: "'*'"
+
+  # LAMBDA FUNCTIONS
+  createProfessor:
+    Type: AWS::Serverless::Function
+    Properties:
+      FunctionName: createProfessor
+      CodeUri: ./lambdas/professor/createProfessor
+      Events:
+        ApiEvent:
+          Type: Api
+          Properties:
+            Path: /professor
+            Method: post
+            RestApiId: !Ref TimetablingAPI
+      Runtime: nodejs14.x
+      Handler: index.handler
+      Role:
+        Fn::Sub: arn:aws:iam::${AWS::AccountId}:role/LambdaRole
+      Layers:
+        - !Ref dbFunctionLayer
+      Environment:
+        Variables:
+          DB_HOST: ourclassuirds.cgsgwtemx5r8.us-east-2.rds.amazonaws.com
+          DB_NAME: OurClassDB
+          DB_USER: tang
+          DB_PSWD: annabell
+  readProfessor:
+  # [...]
+  updateProfessor:
+  # [...]
+  deleteClassTime:
+  Type: AWS::Serverless::Function
+  Properties:
+    FunctionName: deleteClassTime
+    CodeUri: ./lambdas/classTime/deleteClassTime
+    Events:
+      ApiEvent:
+        Type: Api
+        Properties:
+          Path: /classTime/{id}
+          Method: delete
+          RestApiId: !Ref TimetablingAPI
+    Runtime: nodejs14.x
+    Handler: index.handler
+    Role:
+      Fn::Sub: arn:aws:iam::${AWS::AccountId}:role/LambdaRole
+    Layers:
+      - !Ref dbFunctionLayer
+    Environment:
+      Variables:
+        DB_HOST: ourclassuirds.cgsgwtemx5r8.us-east-2.rds.amazonaws.com
+        DB_NAME: OurClassDB
+        DB_USER: tang
+        DB_PSWD: annabell
+\end{lstlisting}
+
+Como mostrado no Código \ref{lst:template}, o arquivo \textit{template.yaml} contém a definição de algumas das estruturas utilizadas para este sistema, principalmente as funções Lambda, visto que são quatro funções para cada uma das seis entidades, totalizando 24 funções. O arquivo contém a definição de cada uma das funções, e de cada uma das rotas que elas atendem. A partir disso, é possível fazer o deploy de todas as funções que foram alteradas de uma vez só, e assim, diminuir o tempo de deploy e a quantidade de comandos necessários.
+
+Após o preparativo do arquivo \textit{template.yaml}, o deploy é feito através do conjunto de comandos \textit{sam build; sam deploy}, que primeiro combina o \textit{CloudFormation Template} com o código da aplicação, e em seguida realiza o deploy de todas as funções definidas no arquivo. Com isso, o sistema passou a ser mais facilmente atualizável, e mais facilmente mantido.
 
 \subsubsection{Funcionalidades adicionais}
 
