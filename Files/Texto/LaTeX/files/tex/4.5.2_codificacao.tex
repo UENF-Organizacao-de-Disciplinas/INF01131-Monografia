@@ -140,6 +140,11 @@ O uso da AWS segue a mesma lógica do servidor local, com a diferença de que o 
 
 O uso desses três serviços permitiu a execução do backend do sistema em nuvem, e assim, atingindo a permanência dos dados. Com isso, o sistema passou a ser capaz de manter os dados mesmo após a recarga da página, e assim, atender a uma das principais necessidades do sistema.
 
+\paragraph*{CORS}
+\paragraph*{Lambda Layers}
+\paragraph*{SAM}
+\subparagraph*{YAML}
+
 \subsubsection{Funcionalidades adicionais}
 
 Acrescendo à visualização de conflitos desenvolvida na primeira versão, foi implementada a visualização de conflito por capacidade de salas, ao comparar com a quantidade de alunos estimados para a turma. Mais detalhes sobre os conflitos podem ser vistos mais adiante na \hyperref[Conflitos]{seção de conflitos}.
@@ -148,6 +153,41 @@ Adicionou-se também diversas filtragens, principalmente na página de \textbf{G
 
 Outra utilidade adicionada, agora na página \textbf{MultiTurmas}, foi a seção de ``Disciplinas ainda não oferecidas''. Sua funcionalidade consiste em dispor ao usuário uma lista de disciplinas que, segundo a ementa de Ciência da Computação, deveriam ser ofertadas naquele semestre. A partir disso, o usuário pode então selecionar o botão correspondente àquela disciplina e, a partir disso, uma turma para esta disciplina é adicionada à lista de turmas ofertadas. Há também um botão no topo que permite a adição de todas as disciplinas de uma vez.
 
+\subsection{Terceira versão} % ### 5.5.3. Terceira versão % https://github.com/jvfd3/timetabling-UENF/issues/348
+
+Considerando que a segunda versão já apresentava em sua maioria as funcionalidades mínimas desejadas, a terceira versão foi focada em melhorias de usabilidade e na correção de bugs.
+
+- Nova estrutura no GitHub Projects
+-- Charts GitHub
+- Layout de professor, disciplina, demanda e descrição de turma;
+- Criação de turma por disciplina plus: solução inicial;
+- Aumento na quantidade dados cadastrados;
+- Adição de disciplinas e professores;
+- Aprimoramento na forma de criação de itens: "usar os valores mudados anteriores como se fosse o novo item" vs "criar um novo item limpo"
+- Diversas melhorias de boas práticas de programação
+-- Repadronização de componentes
+--- Migração de código para inglês
+--- Padronização de cores de conflitos
+-- Remoção de "ordem"
+-- Cloudformation
+- Salas pouco usuais;
+- Aprimoramento dos ids identificadores dos conflitos
+- Correção dos delays e criação e deleção de turmas e horários
+-- Bug de deleção e criação sequenciais
+- Separando disciplinas por categoria
+-- Mostrar apenas turmas de CC por padrão
+
+- Multiturmas:
+1. Adição de filtros: disciplina, período esperado, professor, sala, categoria;
+2. Adição de ordenações por: ano, semestre, disciplina período, disciplina nome, etc.;
+3. Aprimoramento das labels dos selects.
+
+- CCTable:
+1. Ordenação por célula;
+2. Aprimoramento das labels das células.
+
+- CRUD (Turmas, Professores, Alunos, Salas, Disciplinas):
+1. Omitir o item quando a seleção for nula
 
 \section{Conflitos}\label{Conflitos} % ### 5.6. Conflitos
 
