@@ -291,6 +291,53 @@ Considerando que a segunda versão já apresentava em sua maioria as funcionalid
 -- Bug de deleção e criação sequenciais
 - Separando disciplinas por categoria
 -- Mostrar apenas turmas de CC por padrão
+\subsubsection{Mudanças no \textit{GitHub Projects}}
+
+O uso do GitHub Projects se provou como uma excelente forma de organização das tarefas, e assim, foi mantido para a terceira versão. Alguns novos detalhes foram adicionados em sua organização, como a adição da categorização de tarefas por \textbf{marcos} (\textit{milestones}) e \textbf{etiquetas} (\textit{labels}).
+
+\paragraph*{Marcos e Etiquetas}
+
+Os marcos visam distinguir as tarefas por suas versões, e também por seus tipos de funcionalidades futuras, assim, a medida em que surgiam novas ideias, elas eram adicionadas ao GitHub Projects. Então podemos considerar que cada um desses \textbf{marcos} teve tarefas atribuídas a si pois...
+
+\begin{enumerate}
+  \item \textbf{MVP 1}: foram concluídas na primeira versão;
+  \item \textbf{MVP 2}: foram concluídas na segunda versão;
+  \item \textbf{MVP 3}: foram concluídas na terceira versão;
+  \item \textbf{Future}: foram planejadas para o futuro do sistema;
+        \begin{enumerate}
+          \item \textbf{Demandas}: visam calcular a demanda dos alunos por disciplinas;
+          \item \textbf{Conflitos}: visam aprimorar a visualização, qualidade e/ou variedade de conflitos;
+          \item \textbf{Heurísticas}: visam aprimorar a alocação de turmas através de heurísticas;
+          \item \textbf{Arrasta e solta}: visam aprimorar a alocação de turmas através de um sistema de arrastar e soltar;
+          \item \textbf{Integração com o Sistema Acadêmico}: visam a integração do atual sistema com o sistema acadêmico da UENF.
+        \end{enumerate}
+\end{enumerate}
+
+No Projects, também foram adicionadas as \textbf{etiquetas} que distinguem as tarefas por seu intuito.
+
+\begin{enumerate}
+  \item \textbf{UX}: aprimoramento da experiência do usuário;
+  \item \textbf{Bug}: correção de bugs;
+  \item \textbf{Pergunta}: dúvidas sobre a validade da tarefa;
+  \item \textbf{Duplicada}: já foi criada antes e que foi descartada;
+  \item \textbf{Abandonada}: quando criada parecia interessante, mas que decidiu-se por não implementar;
+  \item \textbf{Qualidade de vida}: melhorias que não são necessárias, mas que aprimoram o processo de desenvolvimento;
+  \item \textbf{Nova funcionalidade}: funcionalidades que ainda não foram implementadas;
+\end{enumerate}
+
+\paragraph*{Gráficos}
+
+O GitHub Projects também oferece a possibilidade de visualização de gráficos, que mostram a quantidade de tarefas em cada uma das categorias. Esses gráficos são úteis para a visualização do andamento do projeto, e para a identificação de possíveis gargalos.
+
+Com eles, pode-se ter uma noção das métricas do projeto, como por exemplo:
+
+\begin{itemize}
+  \item Quantidade de tarefas por marco;
+  \item Quantidade de tarefas de determinada etiqueta a cada marco;
+  \item Quais páginas receberam tarefas de quais etiquetas;
+  \item Quantas são as tarefas em cada um de seus estados (Completas, em progresso, pendente).
+\end{itemize}
+
 
 - Multiturmas:
 1. Adição de filtros: disciplina, período esperado, professor, sala, categoria;
