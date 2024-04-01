@@ -268,29 +268,8 @@ Outra utilidade adicionada, agora na página \textbf{MultiTurmas}, foi a seção
 
 \subsection{Terceira versão} % ### 5.5.3. Terceira versão % https://github.com/jvfd3/timetabling-UENF/issues/348
 
-% Na programação como um todo, é comum que se busquem padrões durante o desenvolvimento, incluindo, mas não se limitando a, padrões
-
 Considerando que a segunda versão já apresentava em sua maioria as funcionalidades mínimas desejadas, a terceira versão foi focada em melhorias de usabilidade e na correção de bugs.
 
-- Nova estrutura no GitHub Projects
--- Charts GitHub
-- Layout de professor, disciplina, demanda e descrição de turma;
-- Criação de turma por disciplina plus: solução inicial;
-- Aumento na quantidade dados cadastrados;
-- Adição de disciplinas e professores;
-- Aprimoramento na forma de criação de itens: "usar os valores mudados anteriores como se fosse o novo item" vs "criar um novo item limpo"
-- Diversas melhorias de boas práticas de programação
--- Repadronização de componentes
---- Migração de código para inglês
---- Padronização de cores de conflitos
--- Remoção de "ordem"
--- Cloudformation
-- Salas pouco usuais;
-- Aprimoramento dos ids identificadores dos conflitos
-- Correção dos delays e criação e deleção de turmas e horários
--- Bug de deleção e criação sequenciais
-- Separando disciplinas por categoria
--- Mostrar apenas turmas de CC por padrão
 \subsubsection{Mudanças no \textit{GitHub Projects}}
 
 O uso do GitHub Projects se provou como uma excelente forma de organização das tarefas, e assim, foi mantido para a terceira versão. Alguns novos detalhes foram adicionados em sua organização, como a adição da categorização de tarefas por \textbf{marcos} (\textit{milestones}) e \textbf{etiquetas} (\textit{labels}).
@@ -338,18 +317,77 @@ Com eles, pode-se ter uma noção das métricas do projeto, como por exemplo:
   \item Quantas são as tarefas em cada um de seus estados (Completas, em progresso, pendente).
 \end{itemize}
 
+\subsubsection{Melhorias no sistema}
+
+O sistema passou por diversas pequenas mudanças, e algumas maiores. Uma considerável parte delas foi relacionada à forma com que as informações eram estruturadas internamente, mudanças essas feitas com o intuito de tornar o sistema mais fácil de ser mantido posteriormente. Em seguida estão listadas algumas das várias melhorias feitas no sistema.
+
+\paragraph*{Multiturmas}
+
+Dentre as tarefas realizadas, uma das páginas que mais sofreu alterações foi a página de \textbf{Multiturmas}. Nela, foram feitas diversas melhorias, como a adição de filtros, ordenações e aprimoramento das labels dos selects.
+
+\subparagraph*{Aprimoramento dos identificadores dos conflitos}
+
+Os conflitos ocorridos indicavam quais eram os identificadores (ids) das turmas que estavam em conflito, porém, esses ids eram os ids referentes ao banco de dados, sendo ele um valor numérico, não continha valor semântico suficiente para ser facilmente identificado. Com isso, foi feita a adição de um novo identificador, que é composto pelas informações contidas na turma, sendo elas o ano, semestre, nome da disciplina, nome do professor, e o código descritor da turma. A partir disso, tornou-se mais fácil identificar quais turmas estavam em conflito, e assim, corrigí-los. Essa identificação foi adicionada também aos horários, onde o identificador passou a ser composto pela sala, dia da semana, horário de início e fim.
+
+\subparagraph*{Criação e deleção de turmas e horários}
+
+Embora seja uma funcionalidade básica e existente desde a primeira versão, a criação e deleção de turmas apresentou diversos problemas ao longo do desenvolvimento. Um dos mais cruciais era devido à assincronicidade intrínseca ao uso de um banco de dados remoto. O problema era que durante a criação sequencial de duas turmas, apenas a segunda era mostrada, mesmo que ambas tivessem sido criadas.
+
+O que ocorria era que, ao começar com a lista de turmas $Turmas = [A, B]$ tenta-se adicionar a turma $C$ à $Turmas$, mas para isso, a requisição enviada ao banco de dados deve retornar com o status de sucesso, e para que, só assim, fosse adicionada à listagem apresentada no sistema. Então, caso fosse feita a tentativa de se adicionar a turma $D$ antes da confirmação anterior ser recebida, a adição seria realizada novamente na listagem inicial ($[A, B]$). Por fim, assim que a primeira requisição retornasse bem sucedida, por um breve instante a listagem seria $[A, B, C]$, e então, após a adição da turma $D$, a listagem seria $[A, B, D]$.
+
+Para resolver esse problema, foi feita a adição de uma função de \textit{callback} que passou a utilizar o estado mais atual da listagem de turmas, e não mais a listagem inicial.
+
+Outra característica aprimorada, foi a velocidade de adição e deleção, principalmente a de deleção. Antes, a aprovação do banco de dados era necessária para que a lista de turmas fosse atualizada, e isso tornava o processo de deleção lento. Para resolver isso, foi feita a adição de uma função de deleção que remove a turma da listagem de turmas antes mesmo da confirmação do banco de dados. Essa não se mostra como a solução mais adequada, visto que em caso de falha na deleção, a turma poderá ser restaurada com a simples atualização da página, os pontos positivos na usabilidade superam os negativos.
 
 - Multiturmas:
 1. Adição de filtros: disciplina, período esperado, professor, sala, categoria;
 2. Adição de ordenações por: ano, semestre, disciplina período, disciplina nome, etc.;
 3. Aprimoramento das labels dos selects.
 
-- CCTable:
+\textbf{Adição da propriedade descrição}
+\textbf{Redistribuição de informações}: disciplina, professor, demanda e descrição passaram a ser dispostos em conjuntos de dois elementos, ao invés de uma lista única;
+
+\subparagraph*{Solução inicial}
+
+\textbf{Solução inicial}: além viabilizar a criação de turma por disciplina, novas turmas são criadas baseados no histórico passado de criação de turmas.
+
+\paragraph*{Grade Horária}
+
 1. Ordenação por célula;
 2. Aprimoramento das labels das células.
 
+\paragraph*{Banco de dados}
+
+- Salas pouco usuais;
+
+\subparagraph*{Preenchimento de dados}
+\textbf{Preenchimento de dados}: foi feito o preenchimento de dados para as entidades de professores, disciplinas e salas;
+
+\paragraph*{Gerais}
+
+- Aprimoramento na forma de criação de itens: "usar os valores mudados anteriores como se fosse o novo item" vs "criar um novo item limpo"
+-- Bug de deleção e criação sequenciais
+- Separando disciplinas por categoria
+-- Mostrar apenas turmas de CC por padrão
 - CRUD (Turmas, Professores, Alunos, Salas, Disciplinas):
 1. Omitir o item quando a seleção for nula
+
+\textbf{Nova usabilidade na criação de itens}: Deixou de se usar os valores alterados anteriormente;
+
+\subparagraph*{Boas práticas}
+- Diversas melhorias de boas práticas de programação
+-- Repadronização de componentes
+--- Migração de código para inglês
+--- Padronização de cores de conflitos
+-- Remoção de "ordem"
+-- Cloudformation
+
+\subparagraph*{Maiores mudanças}
+
+- Text Label getter creations
+- Estados em classes
+- Multilevel sorting
+- Funções de label
 
 \section{Conflitos}\label{Conflitos} % ### 5.6. Conflitos
 
