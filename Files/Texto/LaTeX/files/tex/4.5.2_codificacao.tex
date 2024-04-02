@@ -402,29 +402,24 @@ Por fim, foi feita o \textit{web scraping} que consistiu na busca por informaç�
 
 \paragraph*{Gerais}
 
-- Aprimoramento na forma de criação de itens: "usar os valores mudados anteriores como se fosse o novo item" vs "criar um novo item limpo"
--- Bug de deleção e criação sequenciais
-- Separando disciplinas por categoria
--- Mostrar apenas turmas de CC por padrão
-- CRUD (Turmas, Professores, Alunos, Salas, Disciplinas):
-1. Omitir o item quando a seleção for nula
+Neste tópico estão descritas algumas melhorias gerais do sistema que não se enquadraram nos tópicos anteriores.
 
-\textbf{Nova usabilidade na criação de itens}: Deixou de se usar os valores alterados anteriormente;
+\subparagraph*{Aprimoramento na forma de criação de itens}
+
+Antes, ao acessar a página de criação de entidades, uma entidade era previamente selecionada. E para a criação de uma nova entidade, os valores da entidade anterior deveriam ser alterados, e, ao clicar em adicionar, esses valores alterados eram cadastrados no banco de dados. Essa sequência de ações apresentou intuitividade suficiente, e portanto, foi alterada.
+
+A versão atual passou a não selecionar previamente a entidade. Assim, ao clicar em adicionar um novo item, uma nova entidade é criada. No caso das turmas, a entidade é criada com os valores de ano e semestre predefinidos baseado na filtragem selecionada.
 
 \subparagraph*{Boas práticas}
-- Diversas melhorias de boas práticas de programação
--- Repadronização de componentes
---- Migração de código para inglês
---- Padronização de cores de conflitos
--- Remoção de "ordem"
--- Cloudformation
 
-\subparagraph*{Maiores mudanças}
+Além das funcionalidades voltadas para o usuário final, algumas mudanças classificadas como \textbf{Qualidade de vida} foram realizadas visando a manutenção do sistema. Dentre elas estão:
 
-- Text Label getter creations
-- Estados em classes
-- Multilevel sorting
-- Funções de label
+\begin{itemize}
+  \item \textbf{Repadronização de componentes}: como o conhecimento relacionado a boas práticas de programação foi adquirido ao longo do desenvolvimento, partes de componentes criados anteriormente foram reformulados para que estivessem estruturados de acordo com a estrutura recentemente desenvolvida no código.
+  \item \textbf{Externalização de informações}: algumas informações constantes como cores de fundo e textos foram externalizadas para variáveis, assim, caso haja a necessidade de alteração, não será necessário a busca manual por todas as ocorrências. Um outro caso desses é referente aos textos dispostos nas caixas de seleção, que foram convertidos em funções que retornam o texto desejado.
+  \item \textbf{Inglês}: como as linguagens de programação de modo geral se apresentam no idioma inglês, é considerado uma boa prática que as variáveis e funções também, o que não foi a abordagem inicialmente tomada. Assim, foi feita uma gradual migração para o inglês, e embora não tenha sido concluída, a maior parte do código já se encontra em inglês. Para facilitar essa migração, foi elaborado um sistema de ``\textit{getters}'' como forma de obter a propriedade de determinado objeto, independente de qual língua ele esteja.
+  \item \textbf{Remoção de estruturas obsoletas}: ao longo do desenvolvimento, algumas estruturas foram criadas e não utilizadas. Um exemplo dessas foi a propriedade ``Ordem'' que visava definir a ordem em que os horários da turma apareceriam, porém o resultado desta propriedade foi obtido com a ordenação dos horários por dia e em seguida por horário, não sendo então necessária. Ela então foi removida do sistema e do banco de dados.
+\end{itemize}
 
 \section{Conflitos}\label{Conflitos} % ### 5.6. Conflitos
 
