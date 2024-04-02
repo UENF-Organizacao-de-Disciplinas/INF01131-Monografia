@@ -356,17 +356,23 @@ Para resolver esse problema, foi feita a adição de uma função de \textit{cal
 
 Outra característica aprimorada, foi a velocidade de adição e deleção, principalmente a de deleção. Antes, a aprovação do banco de dados era necessária para que a lista de turmas fosse atualizada, e isso tornava o processo de deleção lento. Para resolver isso, foi feita a adição de uma função de deleção que remove a turma da listagem de turmas antes mesmo da confirmação do banco de dados. Essa não se mostra como a solução mais adequada, visto que em caso de falha na deleção, a turma poderá ser restaurada com a simples atualização da página, os pontos positivos na usabilidade superam os negativos.
 
-- Multiturmas:
-1. Adição de filtros: disciplina, período esperado, professor, sala, categoria;
-2. Adição de ordenações por: ano, semestre, disciplina período, disciplina nome, etc.;
-3. Aprimoramento das labels dos selects.
+\subparagraph*{Adição da propriedade descrição}
 
-\textbf{Adição da propriedade descrição}
-\textbf{Redistribuição de informações}: disciplina, professor, demanda e descrição passaram a ser dispostos em conjuntos de dois elementos, ao invés de uma lista única;
+Disciplinas oferecidas em um mesmo semestre por vezes são oferecidas para alunos demais para que uma única turma os comporte, e assim, é necessário a criação de mais de uma turma. Para que os alunos e professores possam identificar facilmente a qual turma pertencem, foi adicionada a propriedade descrição, que é uma breve descrição da turma. Essa característica já se encontra no sistema acadêmico, porém com a limitação de apenas 3 caracteres. No presente trabalho, a descrição pode conter até 255 caracteres.
+
+Adicionando esse campo, a visualização linear das informações da turma se tornou mais difícil de se manter na tela. Considerando que em sua maioria as turmas possuem dois horários, Dispôs-se então as informações em conjuntos de dois elementos, ao invés de uma lista única, tornando então a visualização mais densa.
 
 \subparagraph*{Solução inicial}
 
-\textbf{Solução inicial}: além viabilizar a criação de turma por disciplina, novas turmas são criadas baseados no histórico passado de criação de turmas.
+A funcionalidade anteriormente denominada ``Disciplinas ainda não oferecidas'' foi aprimorada de tal forma que agora, além de criar uma turma para a disciplina selecionada, o sistema automaticamente analisa o histórico de criação de turmas, definindo previamente o professor, a demanda estimada, e os horários, incluindo seus dias, horas de início e sala em que é alocada.
+
+O cálculo da demanda estimada é dado pela média de demandas de todas as turmas anteriores que possuem demanda estimada. Entretanto, atualmente apresenta-se desativada.
+
+% Lembrar de reativar essa funcionalidade.
+
+O botão de adição de todas as disciplinas foi mantido, e agora, ao ser clicado, cria as turmas com suas características já preenchidas, não considerando entretanto a descrição, visto que esta é uma característica única de cada turma e deve ser adicionada manualmente em caso de necessidade. Então, após a criação de todas as turmas referentes ao curso de Ciência da Computação, uma solução inicial foi obtida.
+
+É esperado, entretanto, que esta solução apresente problemas em sua execução, visto que nem todas as alocações de turmas apresentam um padrão. Então, fica a cargo do usuário a verificação e a correção dos possíveis erros alertados pelo sistema.
 
 \paragraph*{Grade Horária}
 
