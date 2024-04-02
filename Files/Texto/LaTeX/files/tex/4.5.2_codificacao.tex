@@ -321,6 +321,23 @@ Com eles, pode-se ter uma noção das métricas do projeto, como por exemplo:
 
 O sistema passou por diversas pequenas mudanças, e algumas maiores. Uma considerável parte delas foi relacionada à forma com que as informações eram estruturadas internamente, mudanças essas feitas com o intuito de tornar o sistema mais fácil de ser mantido posteriormente. Em seguida estão listadas algumas das várias melhorias feitas no sistema.
 
+\paragraph*{Filtros e ordenações}
+
+Levando em consideração a multidimensionalidade da estrutura dos dados, a possibilidade de realizar ``curvas de nível'' e as ordenar por diferentes critérios se mostrou uma funcionalidade essencial para a compreensão dos dados. Dessa forma, em diferentes páginas do sistema, foram adicionadas ordenações padrões e seletores de filtragem manual, assim permitindo ao usuário a visualização de dados específicos.
+
+Alguns exemplos de casos de uso dessas funcionalidades seria: ``Na página Multiturmas o Professor A está tendo conflitos em suas turmas, então o usuário pode filtrar as turmas do Professor A e visualizar apenas as suas turmas. Em seguida, o usuário percebe que o Professor A está em conflito com a Sala B123, então o usuário visualiza apenas as turmas da Sala B123. Por fim, o usuário encontra um outro horário disponível para o Professor A e a Sala B123, e então, o conflito é resolvido.''
+
+Uma das solicitações presentes ao final da versão anterior foi quanto a uma distinção mais clara entre disciplinas de Ciência da Computação e disciplinas de outros cursos. Para isso, embora não pareça apresentar grande robustez na forma como foi feito, apresenta suficiente clareza para o usuário final. A distinção foi feita ao utilizar o campo \textbf{Período Esperado} presente na entidade \textbf{Disciplina}, para definir que:
+
+\begin{itemize}
+  \item \textbf{1 $\leq$ Período Esperado $\leq$ 10}: Disciplina obrigatória de Ciência da Computação;
+  \item \textbf{Período Esperado = 11}: Disciplina eletiva optativa para Ciência da Computação;
+  \item \textbf{Período Esperado = 12}: Disciplina eletiva livre para Ciência da Computação;
+  \item \textbf{Período Esperado = 13}: Disciplina não ofertada para Ciência da Computação;
+\end{itemize}
+
+Com essa divisão, definiu-se o sistema para que, por padrão, apenas exibisse as turmas voltadas para Ciência da Computação, e que, caso o usuário desejasse, poderia visualizar as turmas de outros cursos.
+
 \paragraph*{Multiturmas}
 
 Dentre as tarefas realizadas, uma das páginas que mais sofreu alterações foi a página de \textbf{Multiturmas}. Nela, foram feitas diversas melhorias, como a adição de filtros, ordenações e aprimoramento das labels dos selects.
