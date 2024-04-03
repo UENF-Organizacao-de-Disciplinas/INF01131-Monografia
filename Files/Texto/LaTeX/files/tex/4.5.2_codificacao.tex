@@ -1,26 +1,28 @@
-\section{História do desenvolvimento} % ### 5.5.1. História do desenvolvimento
+\section{História do Desenvolvimento} % ### 5.5.1. História do desenvolvimento
 
 %% Acho que vai ficar mais fácil assim
 
-Após a elaboração dos protótipos com o Figma, e da conceitualização diagramática do banco de dados, o desenvolvimento do sistema foi iniciado. Por maior familiaridade com a linguagem e considerando que é uma das mais utilizadas no mercado para desenvolvimento web [buscar referência], foi escolhida a linguagem JavaScript, utilizando a biblioteca React para a criação dos componentes visuais, ou seja, o front-end, e o Node.js para a criação do back-end e a criação de um servidor local que permitiria visualizar as mudanças no código em tempo real.
+% considerando que é uma das mais utilizadas no mercado para desenvolvimento web [buscar referência]
 
-% Perguntar pra quem sabe, sobre qual é o real papel do Node.js
+Após a elaboração dos protótipos com o Figma, e da conceitualização diagramática do banco de dados, o desenvolvimento do sistema foi iniciado. Por maior familiaridade com a linguagem foi escolhida a linguagem JavaScript, utilizando a biblioteca React para a criação dos componentes visuais, ou seja, o \textit{frontend}, e o Node.js para a criação do \textit{backend} e a criação de um servidor local que permitiria visualizar as mudanças no código em tempo real.
 
-\subsection{Primeira versão} % ### 5.5.2. Primeira versão
+% Perguntar para quem sabe, sobre qual é o real papel do Node.js
 
-A primeira versão do sistema foi desenvolvida em um ambiente local, com o objetivo de se aproximar ao máximo das páginas previstas no protótipo. Para isso, foi utilizada a biblioteca React Router para a navegação entre as páginas, e a biblioteca React Select para as caixas de seleção.
+\subsection{Primeira Versão} % ### 5.5.2. Primeira versão
 
-\subsubsection{Banco de Dados primitivo}
+A primeira versão do sistema foi desenvolvida em um ambiente local, com o objetivo de se aproximar ao máximo das páginas previstas no protótipo. Para isso, foi utilizada a biblioteca \textit{React Router} para a navegação entre as páginas, e a biblioteca \textit{React Select} para as caixas de seleção.
+
+\subsubsection{Banco de Dados Primitivo}
 
 Os dados contidos no sistema foram inicialmente armazenados em arquivos JSON, que eram importados diretamente para o código. Isso foi feito para que fosse possível visualizar o funcionamento do sistema sem a necessidade de um banco de dados real. A partir disso, foi possível visualizar o funcionamento do sistema e realizar testes de usabilidade. Em contrapartida, os dados disponíveis não eram modificáveis, tendo apenas a possibilidade de leitura e mutação temporária, visto que após recarregar ou mudar de página, as mudanças eram perdidas.
 
 Nesse método, cada entidade era armazenada em um arquivo JSON separado, contendo esse um array de objetos, onde em cada objeto haviam as chaves, representando as propriedades da entidade, e os valores, representando os dados da entidade.
 
-Como nesta dinâmica não havia uma forte correlação entre os dados, o frontend acabava sendo o responsável por unir todas as informações. Assim, por exemplo, para se obter a lista de professores de uma turma, era necessário importar todos os professores, todas as turmas, e então, a partir do nome do professor alocado àquela turma, buscar na listagem dos professores qual era o professor que correspondia àquele nome, para então agregar as informações.
+Como nesta dinâmica não havia uma forte correlação entre os dados, o \textit{frontend} acabava sendo o responsável por unir todas as informações. Assim, por exemplo, para se obter a lista de professores de uma turma, era necessário importar todos os professores, todas as turmas, e então, a partir do nome do professor alocado àquela turma, buscar na listagem dos professores qual era o professor que correspondia àquele nome, para então agregar as informações.
 
-\subsubsection{Funcionalidades iniciais}
+\subsubsection{Funcionalidades Iniciais}
 
-Nessa primeira versão, algumas funcionalidades já começaram a ser esboçadas, principalmente as funcionalidades CRUD (Create, Read, Update, Delete) para as entidades principais do sistema. Embora, como já dito, os dados não fossem persistentes, foi possível visualizar o funcionamento das funcionalidades de criação e leitura de turmas, professores, disciplinas, salas e horários.
+Nessa primeira versão, algumas funcionalidades já começaram a ser esboçadas, principalmente as funcionalidades CRUD (\textit{Create}, \textit{Read}, \textit{Update}, \textit{Delete}) para as entidades principais do sistema. Embora, como já dito, os dados não fossem persistentes, foi possível visualizar o funcionamento das funcionalidades de criação e leitura de turmas, professores, disciplinas, salas e horários.
 
 Nessa versão, também foi implementada uma checagem bruta de conflitos por alocação simultânea de professores em mais de uma turma e a checagem da quantidade de demanda de alunos em relação à capacidade das salas. Uma descrição mais detalhada das funcionalidades de conflitos está presente \hyperref[Conflitos]{adiante}.
 
@@ -30,7 +32,7 @@ Além dessas funcionalidades que se mantiveram até a conclusão do sistema, tam
 
 Após o desenvolvimento local, como forma de viabilizar o acesso ao sistema por parte de outros usuários, foi feito o \textit{deploy}, ou seja, foi feito o upload do sistema para um servidor online. Para isso, foi utilizado o serviço GitHub Pages que, por ser gratuito e de fácil utilização, foi a escolha mais adequada para o momento. O sistema pode ser acessado através do link \url{https://jvfd3.github.io/timetabling-UENF/}.
 
-\subsection{Segunda versão} % ### 5.5.3. Segunda versão
+\subsection{Segunda Versão} % ### 5.5.3. Segunda versão
 
 Utilizando do feedback quanto aos resultados entregues na primeira versão, alguns pontos de melhoria foram identificados, sendo um deles, e o mais importante: o planejamento. Na primeira abordagem, o desenvolvimento foi feito seguindo notas e ideias soltas, sem um planejamento prévio, o que resultou em um sistema que, embora funcional, não atendia a todas as necessidades propostas. E ia além: exibia funcionalidades que não eram de todo necessárias, ou melhor dizendo, têm menor prioridade do que muitas outras.
 
@@ -46,33 +48,33 @@ Tendo este novo sistema de tarefas em prática, foi possível tranquilizar a men
 
 As tarefas foram inicialmente divididas em três principais categorias: \textit{Status}, \textit{Pages} e \textit{Sequence}. O \textit{Status} reflete o andamento da tarefa, se ela está disponível, em andamento, ou concluída. O \textit{Pages} reflete em qual página do sistema a tarefa se encontra, e o \textit{Sequence} reflete a ordem de prioridade da tarefa.
 
-\subsubsection{Permanência dos dados}
+\subsubsection{Permanência dos Dados}
 
-Tendo agora uma rota mais clara a ser seguida, o desenvolvimento foi retomado. Uma das características mais marcantes e ainda não atribuídas ao sistema era a manutenção dos dados. Para exemplificar o funcionamento geral da permanência dos dados, consideremos o uso de uma \textit{REST API} utilizando de 4 ``camadas'': A. o frontend; B. os endpoints; C. as funções de execução; D. o banco de dados.
+Tendo agora uma rota mais clara a ser seguida, o desenvolvimento foi retomado. Uma das características mais marcantes e ainda não atribuídas ao sistema era a manutenção dos dados. Para exemplificar o funcionamento geral da permanência dos dados, consideremos o uso de uma \textit{REST API} utilizando de 4 ``camadas'': A. o \textit{frontend}; B. os \textit{endpoints}; C. as funções de execução; D. o banco de dados.
 
 % [Usar diagrama para ilustrar]
 
-O \textbf{frontend} é a interface do sistema, onde o usuário interage com o sistema. Ele se encontra em duas formas: a primeira é o chamado ``em produção'', que é o sistema que o usuário final acessa, e a segunda é o chamado ``em desenvolvimento'', que é o sistema que o desenvolvedor acessa para realizar as modificações necessárias. Ambas precisam se comunicar com o backend para realizar as quatro operações básicas no banco de dados (criação, leitura, atualização e deleção) por sobre as entidades existentes (turmas, professores, disciplinas, salas, etc.). Elas assim o fazer ao enviar requisições HTTP (GET, POST, PUT e DELETE), contendo pacotes de informações em formato JSON para os \textbf{endpoints}.
+O \textbf{\textit{frontend}} é a interface do sistema, onde o usuário interage com o sistema. Ele se encontra em duas formas: a primeira é o chamado ``em produção'', que é o sistema que o usuário final acessa, e a segunda é o chamado ``em desenvolvimento'', que é o sistema que o desenvolvedor acessa para realizar as modificações necessárias. Ambas precisam se comunicar com o \textit{backend} para realizar as quatro operações básicas no banco de dados (criação, leitura, atualização e deleção) por sobre as entidades existentes (turmas, professores, disciplinas, salas, etc.). Elas assim o fazer ao enviar requisições HTTP (GET, POST, PUT e DELETE), contendo pacotes de informações em formato JSON para os \textbf{\textit{endpoints}}.
 
-Os \textbf{endpoints} são as rotas que o backend disponibiliza para a recepção das requisições HTTP. Eles são responsáveis por encaminhar as requisições recebidas. Se funcionamento é simples: rotear as requisições recebidas junto com sua carga útil. Para tanto, as rotas criadas refletem diretamente a qual entidade do banco de dados a requisição se refere, sendo então assim sabido qual \textbf{função} deve ser executada.
+Os \textbf{\textit{endpoints}} são as rotas que o \textit{backend} disponibiliza para a recepção das requisições HTTP. Eles são responsáveis por encaminhar as requisições recebidas. Se funcionamento é simples: rotear as requisições recebidas junto com sua carga útil. Para tanto, as rotas criadas refletem diretamente a qual entidade do banco de dados a requisição se refere, sendo então assim sabido qual \textbf{função} deve ser executada.
 
 As \textbf{funções} são as responsáveis por executar as operações no banco de dados. Elas processam o pacote de informações recebido, e então realizam a operação desejada no \textbf{banco de dados}.
 
-O \textbf{banco de dados} recebe a requisição, processa a operação, e então retorna o status da operação. Esse retorno é então repassado camada por camada, até chegar ao frontend, onde o usuário final pode visualizar o resultado da operação.
+O \textbf{banco de dados} recebe a requisição, processa a operação, e então retorna o status da operação. Esse retorno é então repassado camada por camada, até chegar ao \textit{frontend}, onde o usuário final pode visualizar o resultado da operação.
 
-\textbf{Resumidamente}: O \textbf{frontend} envia uma requisição HTTP com uma carga de informações a um \textbf{endpoint}, que encaminha a requisição a uma \textbf{função} específica que executa uma operação no \textbf{banco de dados}, assim retornando o status da operação ao frontend.
+\textbf{Resumidamente}: O \textbf{\textit{frontend}} envia uma requisição HTTP com uma carga de informações a um \textbf{\textit{endpoint}}, que encaminha a requisição a uma \textbf{função} específica que executa uma operação no \textbf{banco de dados}, assim retornando o status da operação ao \textit{frontend}.
 
 \paragraph*{\href{https://jsonbin.io/}{JSONBin}}
 
 Como até então os dados estavam armazenados em formato JSON, imaginou-se que a melhor forma de persistir os dados seria através de um banco de dados que lidasse com JSON, e o escolhido foi o JSONBin.
 
-Esta plataforma permite a criação de \textit{bins}, que são basicamente coleções de dados em formato JSON. A partir disso, é possível realizar requisições HTTP para a leitura, escrita, atualização e remoção dos dados. A utilização do JSONBin foi feita através de requisições HTTP usando o objeto \textit{XMLHttpRequest} do JavaScript, e a comunicação entre o frontend e o JSONBin foi feita através de \textit{tokens} de acesso.
+Esta plataforma permite a criação de \textit{bins}, que são basicamente coleções de dados em formato JSON. A partir disso, é possível realizar requisições HTTP para a leitura, escrita, atualização e remoção dos dados. A utilização do JSONBin foi feita através de requisições HTTP usando o objeto \textit{XMLHttpRequest} do JavaScript, e a comunicação entre o \textit{frontend} e o JSONBin foi feita através de \textit{tokens} de acesso.
 
 Com isso, se tornou possível ler e atualizar os dados de forma remota, e assim, manter os dados mesmo após a recarga da página. Embora cumprisse com o que promete e o que era desejado, o JSONBin não se mostrou a melhor escolha para o sistema, visto que a sua utilização não performou tão bem quanto se esperava. Não se sabe se foi por inexperiência ou por limitações do próprio serviço, mas a utilização do JSONBin para a coleta dos dados, fazia com que a tela de carregamento do sistema demorasse alguns segundos para ser exibida, o que não é apropriado para a usabilidade do sistema proposto.
 
 \paragraph*{MySQL}
 
-Embora houvesse o desejo do uso de informações em formato JSON, achou-se por bem utilizar um banco de dados mais usual, recorrendo então ao MySQL, sendo então necessário criar um banco de dados local que armazenasse os dados e que pudesse ser acessado pelo sistema. Essa configuração serviu para estabelecer a supracitada camada de Banco de Dados. E consistiu basicamente na instalação do MySQL Server.
+Embora houvesse o desejo do uso de informações em formato JSON, achou-se por bem utilizar um banco de dados mais usual, recorrendo então ao MySQL, sendo então necessário criar um banco de dados local que armazenasse os dados e que pudesse ser acessado pelo sistema. Essa configuração serviu para estabelecer a supracitada camada de banco de dados. E consistiu basicamente na instalação do MySQL Server.
 
 \subparagraph*{Migração dos dados}
 
@@ -86,35 +88,35 @@ Apesar da primeira tentativa de importação não ter sido completamente bem suc
 
 Seguindo a mesma sequência de camadas, o acesso ao banco de dados continua sendo feito através de requisições HTTP, porém, ao invés de serem enviadas ao JSONBin, são enviadas a um servidor local que executa as operações no banco de dados.
 
-No \textbf{frontend}, enquanto que para acessar a API já pronta do JSONBin foi utilizado o objeto \textit{XMLHttpRequest}, para a comunicação com o banco de dados local, foi utilizada a biblioteca \textit{Axios} para construir as requisições HTTP. E elas, ao invés de serem enviadas ao JSONBin, são enviadas ao \textbf{servidor local}.
+No \textit{frontend}, enquanto que para acessar a API já pronta do JSONBin foi utilizado o objeto \textit{XMLHttpRequest}, para a comunicação com o banco de dados local, foi utilizada a biblioteca \textit{Axios} para construir as requisições HTTP. E elas, ao invés de serem enviadas ao JSONBin, são enviadas ao \textbf{servidor local}.
 
-Na criação deste \textbf{servidor local} utilizou-se a biblioteca \textit{Express} em um código que era executado à parte do sistema principal. Essa biblioteca é responsável por criar todas as rotas necessárias para a comunicação entre o frontend e o banco de dados. A partir disso, foi possível criar rotas para cada uma das entidades, e para cada uma das operações CRUD. Com isso, cada operação CRUD em cada uma das rodas é encaminhada para uma \textbf{função específica} que executa a operação no banco de dados.
+Na criação deste \textbf{servidor local} utilizou-se a biblioteca \textit{Express} em um código que era executado à parte do sistema principal. Essa biblioteca é responsável por criar todas as rotas necessárias para a comunicação entre o \textit{frontend} e o banco de dados. A partir disso, foi possível criar rotas para cada uma das entidades, e para cada uma das operações CRUD. Com isso, cada operação CRUD em cada uma das rodas é encaminhada para uma \textbf{função específica} que executa a operação no banco de dados.
 
-Este uso, embora exemplifique a aplicação da permanência dos dados, ela está limitada por dois aspectos: em primeira instância, a permanência dos dados é limitada ao servidor local, não sendo este o desejo final do sistema. Em segunda instância, para haver o acesso aos dados, é necessário que, além do banco de dados, o backend também esteja em execução, entretanto, o GitHub Pages, onde o sistema está hospedado, não viabiliza essa execução. Com isso viu-se necessária a busca por um novo serviço de hospedagem.
+Este uso, embora exemplifique a aplicação da permanência dos dados, ela está limitada por dois aspectos: em primeira instância, a permanência dos dados é limitada ao servidor local, não sendo este o desejo final do sistema. Em segunda instância, para haver o acesso aos dados, é necessário que, além do banco de dados, o \textit{backend} também esteja em execução, entretanto, o GitHub Pages, onde o sistema está hospedado, não viabiliza essa execução. Com isso viu-se necessária a busca por um novo serviço de hospedagem.
 
 \subsubsection{Amazon Web Services}
 
-Para suprir a necessidade de um servidor que pudesse executar o backend do sistema em conjunto com o banco de dados, foi escolhido o Amazon Web Services (AWS). O AWS é um serviço de computação em nuvem que oferece uma ampla gama de serviços, entretanto, apenas alguns deles foram necessários para o sistema.
+Para suprir a necessidade de um servidor que pudesse executar o \textit{backend} do sistema em conjunto com o banco de dados, foi escolhido o Amazon Web Services (AWS). O AWS é um serviço de computação em nuvem que oferece uma ampla gama de serviços, entretanto, apenas alguns deles foram necessários para o sistema.
 
 O uso da AWS segue a mesma lógica do servidor local, com a diferença de que o servidor está em nuvem, e não localmente, assim resolvendo um dos dois problemas citados. Neste contexto, o uso da AWS foi feito através de três serviços principais: o \textit{API Gateway} para a recepção das requisições HTTP, o \textit{Lambda Functions} para a execução das funções que acessam o banco de dados, e o \textit{RDS} para o armazenamento dos dados; serviços estes que serão descritos mais detalhadamente a seguir.
 
-O uso desses três serviços permitiu a execução do backend do sistema em nuvem, e assim, atingindo a permanência dos dados. Com isso, o sistema passou a ser capaz de manter os dados mesmo após a recarga da página, e assim, atender a uma das principais necessidades do sistema.
+O uso desses três serviços permitiu a execução do \textit{backend} do sistema em nuvem, e assim, atingindo a permanência dos dados. Com isso, o sistema passou a ser capaz de manter os dados mesmo após a recarga da página, e assim, atender a uma das principais necessidades do sistema.
 
 % \paragraph*{CORS} % Até agora não entendi direito pra que serve isso.
 
 \paragraph*{Implantação}
 
-O conjunto de funcionalidades da AWS envolve em grande parte o objetivo de manter um sistema constantemente acessível através da internet, ainda assim, durante o desenvolvimento, ou até mesmo durante o ciclo de vida do software, é esperado que ocorram manutenções períodicas nas quais é compreensível que o sistema fique fora do ar. Sendo assim, para manter-se visando ao máximo a acessibilidade do sistema, espera-se que o mesmo fique desconectado o mínimo possível.
+O conjunto de funcionalidades da AWS envolve em grande parte o objetivo de manter um sistema constantemente acessível através da internet, ainda assim, durante o desenvolvimento, ou até mesmo durante o ciclo de vida do software, é esperado que ocorram manutenções periódicas nas quais é compreensível que o sistema fique fora do ar. Sendo assim, para manter-se visando ao máximo a acessibilidade do sistema, espera-se que o mesmo fique desconectado o mínimo possível.
 
-Tanto o API Gateway quanto as funções Lambda precisaram sofrer diversas modificações ao longo do desenvolvimento, e para que essas modificações fossem aplicadas. A aplicação dessas modificações é chamada de implantação (\textit{deploy}), onde a AWS substitui a versão atual do sistema pela nova versão. Essa aplicação de modificações foi inicialmente feita através da interface web da AWS, porém, com o tempo, foi percebido que essa abordagem era ineficiente. No caso do API Gateway, a ineficiência não era tão grande, visto que assim que as rotas estiverem configuradas, não há a necessidade de alterá-las. Já no caso das funções Lambda, cada mínima mudança no código requisitava um novo deploy para cada uma das funções alteradas.
+Tanto o API Gateway quanto as funções Lambda precisaram sofrer diversas modificações ao longo do desenvolvimento, e para que essas modificações fossem aplicadas. A aplicação dessas modificações é chamada de implantação (\textit{deploy}), onde a AWS substitui a versão atual do sistema pela nova versão. Essa aplicação de modificações foi inicialmente feita através da interface web da AWS, porém, com o tempo, foi percebido que essa abordagem era ineficiente. No caso do API Gateway, a ineficiência não era tão grande, visto que assim que as rotas estiverem configuradas, não há a necessidade de alterá-las. Já no caso das funções Lambda, cada mínima mudança no código requisitava um novo \textit{deploy} para cada uma das funções alteradas.
 
-Outro detalhe percebido, foi que boa parte do código se repetia entre as funções que interagiam diretamente com o banco de dados. Sendo assim, passou-se a utilizar das Lambda Layers, que são camadas que podem ser compartilhadas entre diversas funções, e assim, diminuir a quantidade de código repetido. Essa nova abordagem permitiu que as funções fossem mais enxutas, e que as mudanças fossem aplicadas de forma mais rápida, visto que bibliotecas e funções comuns entre as funções eram compartilhadas entre elas.
+Outro detalhe percebido, foi que boa parte do código se repetia entre as funções que interagiam diretamente com o banco de dados. Sendo assim, passou-se a utilizar das \textit{Lambda Layers}, que são camadas que podem ser compartilhadas entre diversas funções, e assim, diminuir a quantidade de código repetido. Essa nova abordagem permitiu que as funções fossem mais enxutas, e que as mudanças fossem aplicadas de forma mais rápida, visto que bibliotecas e funções comuns entre as funções eram compartilhadas entre elas.
 
 \paragraph*{AWS CLI}
 
-Nas primeiras tentativas de deploy, duas abordagens eram utilizadas: a primeira era a de copiar e colar o código diretamente na interface web da AWS, e a segunda era a de fazer o upload de um arquivo zip contendo o código. No segundo código, o código de deploy se assemelha ao seguinte.
+Nas primeiras tentativas de \textit{deploy}, duas abordagens eram utilizadas: a primeira era a de copiar e colar o código diretamente na interface web da AWS, e a segunda era a de fazer o upload de um arquivo zip contendo o código. No segundo código, o código de \textit{deploy} se assemelha ao seguinte.
 
-\begin{lstlisting}[caption={Código de deploy de Lambda},label={lst:lambda}]
+\begin{lstlisting}[caption={Código de \textit{deploy} de Lambda},label={lst:lambda}]
 aws lambda create-function \
 --function-name createProfessor \
 --runtime nodejs20.x \
@@ -123,13 +125,13 @@ aws lambda create-function \
 --zip-file fileb://Files/AWS/lambdas/createProfessor/createProfessor.zip \
 \end{lstlisting}
 
-Como mostrado no Código \ref{lst:lambda}, usa-se o software AWS CLI para criar uma função lambda. O comando \textit{create-function} é o comando que cria a função, e os argumentos que seguem são os parâmetros necessários para a criação da função. O \textit{function-name} é o nome da função, o \textit{runtime} é a versão do Node.js que a função utiliza, o \textit{role} é o conjunto de permissões criadas na seção AWS Identity and Access Management (IAM), o \textit{handler} é o nome do arquivo principal que contém a função, e o \textit{zip-file} é o arquivo zip que contém o código da função.
+Como mostrado no Código \ref{lst:lambda}, usa-se o software AWS CLI para criar uma função lambda. O comando \textit{create-function} é o comando que cria a função, e os argumentos que seguem são os parâmetros necessários para a criação da função. O \textit{function-name} é o nome da função, o \textit{runtime} é a versão do Node.js que a função utiliza, o \textit{role} é o conjunto de permissões criadas na seção \textit{AWS Identity and Access Management} (IAM), o \textit{handler} é o nome do arquivo principal que contém a função, e o \textit{zip-file} é o arquivo zip que contém o código da função.
 
-Com isso, ao executar o comando, a função é criada, e então, a nova versão do código é aplicada. Com este fluxo de trabalho, embora permita o deploy sem a direta conexão ao sistema AWS, ainda assim é necessário executar comandos específicos para cada uma, tendo que manualmente compactar o código e fazer o upload de cada um dos arquivos das diversas funções coexistentes.
+Com isso, ao executar o comando, a função é criada, e então, a nova versão do código é aplicada. Com este fluxo de trabalho, embora permita o \textit{deploy} sem a direta conexão ao sistema AWS, ainda assim é necessário executar comandos específicos para cada uma, tendo que manualmente compactar o código e fazer o upload de cada um dos arquivos das diversas funções coexistentes.
 
 \paragraph*{SAM}
 
-Como solução, foi utilizado o AWS SAM (Serverless Application Model), que é uma extensão do AWS CloudFormation que simplifica o desenvolvimento de aplicações sem servidor. O AWS SAM permite a definição de aplicações sem servidor de forma mais simples, e a partir disso, é possível fazer o deploy de toda a aplicação de uma vez só. O uso do AWS SAM foi feito através de um arquivo \textit{template.yaml}, que contém a definição de todas as funções Lambda, e de recursos necessários para o funcionamento do sistema.
+Como solução, foi utilizado o \textit{AWS SAM (Serverless Application Model)}, que é uma extensão do \textit{AWS CloudFormation} que simplifica o desenvolvimento de aplicações sem servidor. O AWS SAM permite a definição de aplicações sem servidor de forma mais simples, e a partir disso, é possível fazer o \textit{deploy} de toda a aplicação de uma vez só. O uso do AWS SAM foi feito através de um arquivo \textit{template.yaml}, que contém a definição de todas as funções Lambda, e de recursos necessários para o funcionamento do sistema.
 
 \begin{lstlisting}[caption={Exemplo de template.yaml},label={lst:template}]
 AWSTemplateFormatVersion: "2010-09-09"
@@ -214,11 +216,11 @@ Resources:
         DB_PSWD: annabell
 \end{lstlisting}
 
-Como mostrado no Código \ref{lst:template}, o arquivo \textit{template.yaml} contém a definição de algumas das estruturas utilizadas para este sistema, principalmente as funções Lambda, visto que são quatro funções para cada uma das seis entidades, totalizando 24 funções. O arquivo contém a definição de cada uma das funções, e de cada uma das rotas que elas atendem. A partir disso, é possível fazer o deploy de todas as funções que foram alteradas de uma vez só, e assim, diminuir o tempo de deploy e a quantidade de comandos necessários.
+Como mostrado no Código \ref{lst:template}, o arquivo \textit{template.yaml} contém a definição de algumas das estruturas utilizadas para este sistema, principalmente as funções Lambda, visto que são quatro funções para cada uma das seis entidades, totalizando 24 funções. O arquivo contém a definição de cada uma das funções, e de cada uma das rotas que elas atendem. A partir disso, é possível fazer o \textit{deploy} de todas as funções que foram alteradas de uma vez só, e assim, diminuir o tempo de \textit{deploy} e a quantidade de comandos necessários.
 
-Após o preparativo do arquivo \textit{template.yaml}, o deploy é feito através do conjunto de comandos \textit{sam build; sam deploy}, que primeiro combina o \textit{CloudFormation Template} com o código da aplicação, e em seguida realiza o deploy de todas as funções definidas no arquivo. Com isso, o sistema passou a ser mais facilmente atualizável, e mais facilmente mantido.
+Após o preparativo do arquivo \textit{template.yaml}, o \textit{deploy} é feito através do conjunto de comandos \textit{sam build; sam deploy}, que primeiro combina o \textit{CloudFormation Template} com o código da aplicação, e em seguida realiza o \textit{deploy} de todas as funções definidas no arquivo. Com isso, o sistema passou a ser mais facilmente atualizável, e mais facilmente mantido.
 
-\subsubsection{Funcionalidades adicionais}
+\subsubsection{Funcionalidades Adicionais}
 
 Acrescendo à visualização de conflitos desenvolvida na primeira versão, foi implementada a visualização de conflito por capacidade de salas, ao comparar com a quantidade de alunos estimados para a turma. Mais detalhes sobre os conflitos podem ser vistos mais adiante na \hyperref[Conflitos]{seção de conflitos}.
 
@@ -226,7 +228,7 @@ Adicionou-se também diversas filtragens, principalmente na página de \textbf{G
 
 Outra utilidade adicionada, agora na página \textbf{MultiTurmas}, foi a seção de ``Disciplinas ainda não oferecidas''. Sua funcionalidade consiste em dispor ao usuário uma lista de disciplinas que, segundo a ementa de Ciência da Computação, deveriam ser ofertadas naquele semestre. A partir disso, o usuário pode então selecionar o botão correspondente àquela disciplina e, a partir disso, uma turma para esta disciplina é adicionada à lista de turmas ofertadas. Há também um botão no topo que permite a adição de todas as disciplinas de uma vez.
 
-\subsection{Terceira versão} % ### 5.5.3. Terceira versão % https://github.com/jvfd3/timetabling-UENF/issues/348
+\subsection{Terceira Versão} % ### 5.5.3. Terceira versão % https://github.com/jvfd3/timetabling-UENF/issues/348
 
 Considerando que a segunda versão já apresentava em sua maioria as funcionalidades mínimas desejadas, a terceira versão foi focada em melhorias de usabilidade e na correção de bugs.
 
@@ -242,7 +244,7 @@ Os marcos visam distinguir as tarefas por suas versões, e também por seus tipo
   \item \textbf{MVP 1}: foram concluídas na primeira versão;
   \item \textbf{MVP 2}: foram concluídas na segunda versão;
   \item \textbf{MVP 3}: foram concluídas na terceira versão;
-  \item \textbf{Future}: foram planejadas para o futuro do sistema;
+  \item \textbf{Futuro}: foram planejadas para o futuro do sistema;
         \begin{enumerate}
           \item \textbf{Demandas}: visam calcular a demanda dos alunos por disciplinas;
           \item \textbf{Conflitos}: visam aprimorar a visualização, qualidade e/ou variedade de conflitos;
@@ -259,7 +261,7 @@ No Projects, também foram adicionadas as \textbf{etiquetas} que distinguem as t
   \item \textbf{Bug}: correção de bugs;
   \item \textbf{Pergunta}: dúvidas sobre a validade da tarefa;
   \item \textbf{Duplicada}: já foi criada antes e que foi descartada;
-  \item \textbf{Abandonada}: quando criada parecia interessante, mas que decidiu-se por não implementar;
+  \item \textbf{Abandonada}: quando criada parecia interessante, mas que se decidiu por não implementar;
   \item \textbf{Qualidade de vida}: melhorias que não são necessárias, mas que aprimoram o processo de desenvolvimento;
   \item \textbf{Nova funcionalidade}: funcionalidades que ainda não foram implementadas;
 \end{enumerate}
@@ -277,7 +279,7 @@ Com eles, pode-se ter uma noção das métricas do projeto, como por exemplo:
   \item Quantas são as tarefas em cada um de seus estados (Completas, em progresso, pendente).
 \end{itemize}
 
-\subsubsection{Melhorias no sistema}
+\subsubsection{Melhorias no Sistema}
 
 O sistema passou por diversas pequenas mudanças, e algumas maiores. Uma considerável parte delas foi relacionada à forma com que as informações eram estruturadas internamente, mudanças essas feitas com o intuito de tornar o sistema mais fácil de ser mantido posteriormente. Em seguida estão listadas algumas das várias melhorias feitas no sistema.
 
@@ -285,7 +287,7 @@ O sistema passou por diversas pequenas mudanças, e algumas maiores. Uma conside
 
 Levando em consideração a multidimensionalidade da estrutura dos dados, a possibilidade de realizar ``curvas de nível'' e as ordenar por diferentes critérios se mostrou uma funcionalidade essencial para a compreensão dos dados. Dessa forma, em diferentes páginas do sistema, foram adicionadas ordenações padrões e seletores de filtragem manual, assim permitindo ao usuário a visualização de dados específicos.
 
-Alguns exemplos de casos de uso dessas funcionalidades seria: ``Na página Multiturmas o Professor A está tendo conflitos em suas turmas, então o usuário pode filtrar as turmas do Professor A e visualizar apenas as suas turmas. Em seguida, o usuário percebe que o Professor A está em conflito com a Sala B123, então o usuário visualiza apenas as turmas da Sala B123. Por fim, o usuário encontra um outro horário disponível para o Professor A e a Sala B123, e então, o conflito é resolvido.''
+Alguns exemplos de casos de uso dessas funcionalidades seria: ``Na página \textbf{MultiTurmas} o Professor A está tendo conflitos em suas turmas, então o usuário pode filtrar as turmas do Professor A e visualizar apenas as suas turmas. Em seguida, o usuário percebe que o Professor A está em conflito com a Sala B123, então o usuário visualiza apenas as turmas da Sala B123. Por fim, o usuário encontra um outro horário disponível para o Professor A e a Sala B123, e então, o conflito é resolvido.''
 
 Uma das solicitações presentes ao final da versão anterior foi quanto a uma distinção mais clara entre disciplinas de Ciência da Computação e disciplinas de outros cursos. Para isso, embora não pareça apresentar grande robustez na forma como foi feito, apresenta suficiente clareza para o usuário final. A distinção foi feita ao utilizar o campo \textbf{Período Esperado} presente na entidade \textbf{Disciplina}, para definir que:
 
@@ -298,13 +300,13 @@ Uma das solicitações presentes ao final da versão anterior foi quanto a uma d
 
 Com essa divisão, definiu-se o sistema para que, por padrão, apenas exibisse as turmas voltadas para Ciência da Computação, e que, caso o usuário desejasse, poderia visualizar as turmas de outros cursos.
 
-\paragraph*{Multiturmas}
+\paragraph*{MultiTurmas}
 
-Dentre as tarefas realizadas, uma das páginas que mais sofreu alterações foi a página de \textbf{Multiturmas}. Nela, foram feitas diversas melhorias, como a adição de filtros, ordenações e aprimoramento das labels dos selects.
+Dentre as tarefas realizadas, uma das páginas que mais sofreu alterações foi a página de \textbf{MultiTurmas}. Nela, foram feitas diversas melhorias, como a adição de filtros, ordenações e aprimoramento dos textos contidos nas caixas de seleção.
 
 \subparagraph*{Aprimoramento dos identificadores dos conflitos}
 
-Os conflitos ocorridos indicavam quais eram os identificadores (ids) das turmas que estavam em conflito, porém, esses ids eram os ids referentes ao banco de dados, sendo ele um valor numérico, não continha valor semântico suficiente para ser facilmente identificado. Estes ids eram visualizados ao posicionar o ponteiro do mouse por sobre os componentes cujo conflito foi verificado. Com isso, foi feita a adição de um novo identificador, que é composto pelas informações contidas na turma, sendo elas o ano, semestre, nome da disciplina, nome do professor, e o código descritor da turma. A partir disso, tornou-se mais fácil identificar quais turmas estavam em conflito, e assim, corrigí-los. Essa identificação foi adicionada também aos horários, onde o identificador passou a ser composto pela sala, dia da semana, horário de início e fim.
+Os conflitos ocorridos indicavam quais eram os identificadores (ids) das turmas que estavam em conflito, porém, esses ids eram os ids referentes ao banco de dados, sendo ele um valor numérico, não continha valor semântico suficiente para ser facilmente identificado. Estes ids eram visualizados ao posicionar o ponteiro do mouse por sobre os componentes cujo conflito foi verificado. Com isso, foi feita a adição de um novo identificador, que é composto pelas informações contidas na turma, sendo elas o ano, semestre, nome da disciplina, nome do professor, e o código descritor da turma. A partir disso, tornou-se mais fácil identificar quais turmas estavam em conflito, e assim, corrigi-las. Essa identificação foi adicionada também aos horários, onde o identificador passou a ser composto pela sala, dia da semana, horário de início e fim.
 
 \subparagraph*{Criação e deleção de turmas e horários}
 
@@ -320,7 +322,7 @@ Outra característica aprimorada, foi a velocidade de adição e deleção, prin
 
 Disciplinas oferecidas em um mesmo semestre por vezes são oferecidas para alunos demais para que uma única turma os comporte, e assim, é necessário a criação de mais de uma turma. Para que os alunos e professores possam identificar facilmente a qual turma pertencem, foi adicionada a propriedade descrição, que é uma breve descrição da turma. Essa característica já se encontra no sistema acadêmico, porém com a limitação de apenas 3 caracteres. No presente trabalho, a descrição pode conter até 255 caracteres.
 
-Adicionando esse campo, a visualização linear das informações da turma se tornou mais difícil de se manter na tela. Considerando que em sua maioria as turmas possuem dois horários, Dispôs-se então as informações em conjuntos de dois elementos, ao invés de uma lista única, tornando então a visualização mais densa.
+Adicionando esse campo, a visualização linear das informações da turma se tornou mais difícil de se manter na tela. Considerando que em sua maioria as turmas possuem dois horários, dispôs-se então as informações em conjuntos de dois elementos, ao invés de uma lista única, tornando então a visualização mais densa.
 
 \subparagraph*{Solução inicial}
 
@@ -330,7 +332,7 @@ O cálculo da demanda estimada é dado pela média de demandas de todas as turma
 
 % Lembrar de reativar essa funcionalidade.
 
-O botão de adição de todas as disciplinas foi mantido, e agora, ao ser clicado, cria as turmas com suas características já preenchidas, não considerando entretanto a descrição, visto que esta é uma característica única de cada turma e deve ser adicionada manualmente em caso de necessidade. Então, após a criação de todas as turmas referentes ao curso de Ciência da Computação, uma solução inicial foi obtida.
+O botão de adição de todas as disciplinas foi mantido, e agora, ao ser clicado, cria as turmas com suas características já preenchidas, não considerando, entretanto, a descrição, visto que esta é uma característica única de cada turma e deve ser adicionada manualmente em caso de necessidade. Então, após a criação de todas as turmas referentes ao curso de Ciência da Computação, uma solução inicial foi obtida.
 
 É esperado, entretanto, que esta solução apresente problemas em sua execução, visto que nem todas as alocações de turmas apresentam um padrão. Então, fica a cargo do usuário a verificação e a correção dos possíveis erros alertados pelo sistema.
 
@@ -346,19 +348,19 @@ Quanto ao banco de dados, os dados antes desconexos passaram a ser interligados 
 
 \subparagraph*{Preenchimento de dados}
 
-Inicialmente, os dados dados adicionados faziam jus diretamente às disciplinas, professores, salas e turmas do curso de Ciência da Computação. Porém, como para a análise completa dos conflitos é necessário que seja feita também a adição das turmas de outros cursos, foi feito o preenchimento de dados para as entidades de professores, disciplinas e salas.
+Inicialmente, os dados adicionados faziam jus diretamente às disciplinas, professores, salas e turmas do curso de Ciência da Computação. Porém, como para a análise completa dos conflitos é necessário que seja feita também a adição das turmas de outros cursos, foi feito o preenchimento de dados para as entidades de professores, disciplinas e salas.
 
 Para acumular mais dados referentes às entidades do banco de dados, foram tomadas algumas abordagens: requisição dos dados diretamente do Sistema Acadêmico, processamento de tabelas e PDFs, \textit{web scraping}.
 
-A forma teoricamente mais direta e eficiente para se obter os dados das entitdades é a obtenção direta das informações contidas no banco de dados do sistema acadêmico. Para este fim, foi feita uma solicitação ao responsável pela Secretaria Acadêmica (SECACAD) da UENF, que direcionou a solicitação ao desenvolvedor do Sistema Acadêmico. A resposta obtida foi que a solicitação não poderia ser atendida, visto que ele não detinha a posse dos dados, e que para que ele pudesse fornecê-los, seria necessário uma solicitação formal à reitoria da UENF. Essa solicitação foi então passada ao Coordenador do curso de Ciência da Computação, com o qual fico decidido abandonar a ideia e buscar outras formas de obtenção dos dados.
+A forma teoricamente mais direta e eficiente para se obter os dados das entidades é a obtenção direta das informações contidas no banco de dados do sistema acadêmico. Para este fim, foi feita uma solicitação ao responsável pela Secretaria Acadêmica (SECACAD) da UENF, que direcionou a solicitação ao desenvolvedor do Sistema Acadêmico. A resposta obtida foi que a solicitação não poderia ser atendida, visto que ele não detinha a posse dos dados, e que para que ele pudesse fornecê-los, seria necessária uma solicitação formal à reitoria da UENF. Essa solicitação foi então passada ao Coordenador do curso de Ciência da Computação, com o qual fico decidido abandonar a ideia e buscar outras formas de obtenção dos dados.
 
 Paralelamente à abordagem anterior foram feitas tentativas individuais de obtenção dos dados. O processamento de tabelas e PDFs e o \textit{web scraping} foram as abordagens utilizadas. Inicialmente os dados foram coletados e armazenados em tabelas, e então, convertidos para o formato CSV. Os arquivos CSV, por sua vez, foram utilizados em \textit{scripts} Python que os convertiam em \textit{queries} SQL, para que assim então fossem adicionados ao banco de dados.
 
-Os PDFs analisados dispunham de tabelas referentes à oferta de turmas para o CCT, mas o processamento de dados advindos de PDF não são tão estruturados quanto a de uma tabela Excel, por este motivo, a primeira abordagem foi a solicitação dos arquivos tabulares para aquele que os produziu. Não havendo resposta favorável quanto a isso, diversos softwares de conversão de tabelas em PDF para Excel foram testados, porém, nenhum deles foi capaz de converter as tabelas de forma satisfatória. Um dos agravantes é a existência de células mescladas, o que torna mais complicada a conversão direta. Outra abordagem testada foi a de importação direta dos PDFs através do Excel e também o simples copiar e colar. Nenhum desses métodos foi eficiente, então com isso alguns dados foram coletados, mas sem certeza quanto à sua precisão. Deste método foram coletadas as informações referentes à nomes de professores e disciplinas, capacidades das salas, e horários de aulas.
+Os PDFs analisados dispunham de tabelas referentes à oferta de turmas para o CCT, mas os dados advindos do processamento de PDF não são tão estruturados quanto os de uma tabela Excel, por este motivo, a primeira abordagem foi a solicitação dos arquivos tabulares para aquele que os produziu. Não havendo resposta favorável quanto a isso, diversos softwares de conversão de tabelas em PDF para Excel foram testados, porém, nenhum deles foi capaz de converter as tabelas de forma satisfatória. Um dos agravantes é a existência de células mescladas, o que torna mais complicada a conversão direta. Outra abordagem testada foi a de importação direta dos PDFs através do Excel e também o simples copiar e colar. Nenhum desses métodos foi eficiente, então com isso alguns dados foram coletados, mas sem certeza quanto à sua precisão. Deste método foram coletadas as informações referentes à nomes de professores e disciplinas, capacidades das salas, e horários de aulas.
 
 Além dos PDFs anteriores, haviam também os arquivos referentes à oferta de turmas para o curso de Ciência da Computação. Estes sim dispunham também de sua versão em Excel, e assim, foram processados utilizando \textit{scripts} Python. A abordagem apresentou falhas, visto que a notação das informações não apresentava o mesmo padrão ao longo dos anos, então foi necessário fazer ajustes manuais, resultando em uma tabela normalizada com diversas pastas de trabalhos referentes a cada um dos semestres desde 2019, não considerando os semestres de verão. Deste método foram coletadas as informações referentes à nomes e apelidos de professores e disciplinas, demandas estimadas dos alunos pela turma, descrição da turma, e horários de aulas.
 
-Por fim, foi feita o \textit{web scraping} que consistiu na busca por informações em diversos sites, principalmente o \href{https://academico.uenf.br/usuarios/sign_in}{Sistema Acadêmico}, o \href{https://uenf.br/portal/}{site da UENF} e outros sites. Nessa etapa, foi possível encontrar lotes de informações estruturadas. Um dos lotes foi a listagem de disciplinas e suas características que se encontram disponíveis no Sistema Acadêmico da UENF, essas informações foram copiadas e coladas no arquivo Excel unificado. Outros lotes foram encontrados dispersos ao longo do site da UENF e consistiam basicamente em listagem de professores e seus respectivos laboratórios. Essas informações estavam dispersas dos sites dos diversos centros e cursos, alguns disponíveis no próprio site, outros em formato de arquivo. Deste método foram coletadas as informações referentes à nomes de professores, seus laboratórios e centros; e disciplinas e seus nomes, códigos e períodos de vigência. Além disso, foram encontrados documentos oficiais que referenciam a capacidade de ocupantes das ``salas'' disponíveis do Centro de Convenções, popularmente conhecido como Apitão que mesmo não sendo propriamente uma sala de aula, já foi utilizado previamente para tal fim. Outras salas já obtiveram alocações similares, assim como a Sala dos Professores.
+Por fim, foi feita o \textit{web scraping} que consistiu na busca por informações em diversos sites, principalmente o \href{https://academico.uenf.br/usuarios/sign_in}{Sistema Acadêmico}, o \href{https://uenf.br/portal/}{site da UENF} e outros sites. Nessa etapa, foi possível encontrar lotes de informações estruturadas. Um dos lotes foi a listagem de disciplinas e suas características que se encontram disponíveis no Sistema Acadêmico da UENF, essas informações foram copiadas e coladas no arquivo Excel unificado. Outros lotes foram encontrados dispersos ao longo do site da UENF e consistiam basicamente em listagem de professores e seus respectivos laboratórios. Essas informações estavam dispersas dos sites dos diversos centros e cursos, alguns disponíveis no próprio site, outros em formato de arquivo. Deste método foram coletadas as informações referentes à nomes de professores, seus laboratórios e centros; e disciplinas e seus nomes, códigos e períodos de vigência. Além disso, foram encontrados documentos oficiais que referenciam a capacidade de ocupantes das ``salas'' disponíveis do Centro de Convenções, popularmente conhecido como ``Apitão'' que mesmo não sendo propriamente uma sala de aula, já foi utilizado previamente para tal fim. Outras salas já obtiveram alocações similares, assim como a Sala dos Professores.
 
 \paragraph*{Gerais}
 
@@ -366,7 +368,7 @@ Neste tópico estão descritas algumas melhorias gerais do sistema que não se e
 
 \subparagraph*{Aprimoramento na forma de criação de itens}
 
-Antes, ao acessar a página de criação de entidades, uma entidade era previamente selecionada. E para a criação de uma nova entidade, os valores da entidade anterior deveriam ser alterados, e, ao clicar em adicionar, esses valores alterados eram cadastrados no banco de dados. Essa sequência de ações apresentou intuitividade suficiente, e portanto, foi alterada.
+Antes, ao acessar a página de criação de entidades, uma entidade era previamente selecionada. E para a criação de uma nova entidade, os valores da entidade anterior deveriam ser alterados, e, ao clicar em adicionar, esses valores alterados eram cadastrados no banco de dados. Essa sequência de ações apresentou intuitividade suficiente e, portanto, foi alterada.
 
 A versão atual passou a não selecionar previamente a entidade. Assim, ao clicar em adicionar um novo item, uma nova entidade é criada. No caso das turmas, a entidade é criada com os valores de ano e semestre predefinidos baseado na filtragem selecionada.
 
@@ -383,11 +385,11 @@ Além das funcionalidades voltadas para o usuário final, algumas mudanças clas
 
 \section{Conflitos}\label{Conflitos} % ### 5.6. Conflitos
 
-Uma das principais funcionalidades do sistema é a detecção de conflitos. Seu objetivo é auxiliar ao usuário a identificar possíveis problemas na alocação das turmas, e assim, permitir que ele possa corrigí-los antes de finalizar a grade horária. Diversas situações podem ser consideradas conflitos, e cada uma delas é tratada de forma diferente.
+Uma das principais funcionalidades do sistema é a detecção de conflitos. Seu objetivo é auxiliar ao usuário a identificar possíveis problemas na alocação das turmas, e assim, permitir que ele possa corrigi-los antes de finalizar a grade horária. Diversas situações podem ser consideradas conflitos, e cada uma delas é tratada de forma diferente.
 
 Deve-se ressaltar que o que aqui são chamados de conflitos, não são necessariamente o que são chamados de conflitos no contexto de programação linear. Aqui, conflitos são situações que podem ser consideradas inadequadas para a alocação de turmas, mas que ainda assim, não são completamente impeditivas para a alocação prática das turmas. Essa característica deve ser levada em consideração pois, apesar de geralmente retratar situações atípicas, é surpreendentemente recorrente a ocorrência de situações atípicas diversas.
 
-\subsection{Típicos conflitos atípicos}
+\subsection{Típicos Conflitos Atípicos}
 
 Para ilustração, abaixo estão descritos alguns exemplos de conflitos que poderiam ser alertadas pelo sistema, mas que não seriam realmente um restritor para a execução prática das alocações:
 
@@ -397,7 +399,7 @@ Outras situações que podem ocorrer revolvem em torno da alocação das salas. 
 
 Esses e outros são exemplos de situações recorrentes ao longo do processo flexível da organização da tabela horária.
 
-\subsection{Conflitos tratados pelo sistema}
+\subsection{Conflitos Tratados pelo Sistema}
 
 Para a implementação, primeiro visou-se a detecção de conflitos que poderiam ser considerados restritores para a alocação das turmas. Sendo eles os de alocação simultânea de salas e professores, visto que um professor não pode ministrar duas turmas simultaneamente, nem uma sala deve comportar duas turmas simultaneamente (embora este segundo seja teoricamente possível).
 
@@ -423,6 +425,6 @@ Além disso, também é feita a comparação entre a quantidade máxima de aluno
 
 \subsubsection{Disciplina}
 
-Além desses conflitos, outras características analisadas e representadas é quanto às disciplinas atribuídas às turmas, que, embora não representem necessariamente um \textit{conflito}, mas sim um indicativo, ainda assim serão tratatados como conflitos por motivos de simplificação. Esse indicativo leva em consideração o semestre selecionado e o período esperado da disciplina de certa turma. Utilizando de lógica similar, também é indicado caso não tenha sido atribuído um período à disciplina, e se, para o curso de Ciência da Computação, a disciplina é considerada como \textbf{Eletiva Livre}, \textbf{Eletiva Optativa}, ambas em tons azulados, ou se não é uma disciplina para o curso de Ciência da Computação, sendo então representada em tons alaranjados.
+Além desses conflitos, outras características analisadas e representadas se referem às disciplinas atribuídas às turmas, que, embora não representem necessariamente um \textit{conflito}, mas sim um indicativo, ainda assim serão tratados como conflitos por motivos de simplificação. Esse indicativo leva em consideração o semestre selecionado e o período esperado da disciplina de certa turma. Utilizando de lógica similar, também é indicado caso não tenha sido atribuído um período à disciplina, e se, para o curso de Ciência da Computação, a disciplina é considerada como \textbf{Eletiva Livre}, \textbf{Eletiva Optativa}, ambas em tons azulados, ou se não é uma disciplina para o curso de Ciência da Computação, sendo então representada em tons alaranjados.
 
 Os semestres possíveis são três: o primeiro semestre, o segundo semestre e o ``período de verão''. No caso do período de verão, as disciplinas que têm o seu período esperado neste semestre são marcadas com um tom amarelado, visto que não há relevância da sua paridade em um período de férias. Já nos casos das disciplinas de paridade ímpar (disciplinas dos períodos 1, 3, 5, 7 e 9) no primeiro semestre, ou as disciplinas de paridade par (disciplinas dos períodos 2, 4, 6, 8 e 10) no segundo semestre, estas são marcadas com um tom esverdeado, sendo aquelas referentes aos períodos finais do curso marcadas com um tom mais escuro. Já as disciplinas pares em semestres ímpares, ou as disciplinas ímpares em semestre pares, são ilustradas com a cor avermelhada, seguindo a mesma lógica de gradiente escuro nos últimos períodos.
