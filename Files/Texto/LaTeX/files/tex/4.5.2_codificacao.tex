@@ -60,7 +60,12 @@ Mesmo com esta nova dinâmica, outras funcionalidades foram deixadas de lado. Um
 
 Com isso, utilizando o GitHub Projects, foi organizado uma tabela de tarefas, onde foram unificadas as diversas anotações e ideias, antes soltas. A partir disso, foi possível visualizar o que era mais importante e o que poderia ser deixado de lado.
 
-% [ADICIONAR IMAGEM DA TABELA BONITINHA: https://github.com/users/jvfd3/projects/3]
+\begin{figure}[htbp]
+  \centering
+  \caption{\label{fig:GitHubProjectsTable} Tabela de tarefas do GitHub Projects}
+  \includegraphics[scale=0.3]{files/img/Codificacao/GitHubProjects - Table.png}
+  \legend{Fonte: autoria própria}
+\end{figure}
 
 Tendo este novo sistema de tarefas em prática, foi possível tranquilizar a mente quanto ao conflito entre as funcionalidades que precisavam ser desenvolvidas, as que já estavam prontas, as que poderiam ter melhorias e quais se desejava implementar no futuro.
 
@@ -79,6 +84,14 @@ Os \textbf{\textit{endpoints}} são as rotas que o \textit{backend} disponibiliz
 As \textbf{funções} são as responsáveis por executar as operações no banco de dados. Elas processam o pacote de informações recebido, e então realizam a operação desejada no \textbf{banco de dados}.
 
 O \textbf{banco de dados} recebe a requisição, processa a operação, e então retorna o status da operação. Esse retorno é então repassado camada por camada, até chegar ao \textit{frontend}, onde o usuário final pode visualizar o resultado da operação.
+
+
+\begin{figure}[htbp]
+  \centering
+  \caption{\label{fig:API} Diagrama da progressão funcionamento da permanência dos dados}
+  \includegraphics[scale=0.5]{files/img/Codificacao/API - com diagrama.png}
+  \legend{Fonte: autoria própria}
+\end{figure}
 
 \textbf{Resumidamente}: O \textbf{\textit{frontend}} envia uma requisição HTTP com uma carga de informações a um \textbf{\textit{endpoint}}, que encaminha a requisição a uma \textbf{função} específica que executa uma operação no \textbf{banco de dados}, assim retornando o status da operação ao \textit{frontend}.
 
@@ -260,6 +273,13 @@ O uso do GitHub Projects se provou como uma excelente forma de organização das
 
 Os marcos visam distinguir as tarefas por suas versões, e também por seus tipos de funcionalidades futuras, assim, a medida em que surgiam novas ideias, elas eram adicionadas ao GitHub Projects. Então podemos considerar que cada um desses \textbf{marcos} teve tarefas atribuídas a si pois...
 
+\begin{figure}[htbp]
+  \centering
+  \caption{\label{fig:ProjectsMilestones} Marcos do GitHub Projects}
+  \includegraphics[scale=0.6]{files/img/Codificacao/GitHubProjects - Open Milestones.png}
+  \legend{Fonte: autoria própria}
+\end{figure}
+
 \begin{enumerate}
   \item \textbf{MVP 1}: foram concluídas na primeira versão;
   \item \textbf{MVP 2}: foram concluídas na segunda versão;
@@ -276,6 +296,13 @@ Os marcos visam distinguir as tarefas por suas versões, e também por seus tipo
 
 No Projects, também foram adicionadas as \textbf{etiquetas} que distinguem as tarefas por seu intuito.
 
+\begin{figure}[htbp]
+  \centering
+  \caption{\label{fig:ProjectsLabels} Etiquetas do GitHub Projects}
+  \includegraphics[scale=0.6]{files/img/Codificacao/GitHubProjects - Labels.png}
+  \legend{Fonte: autoria própria}
+\end{figure}
+
 \begin{enumerate}
   \item \textbf{UX}: aprimoramento da experiência do usuário;
   \item \textbf{Bug}: correção de bugs;
@@ -289,6 +316,13 @@ No Projects, também foram adicionadas as \textbf{etiquetas} que distinguem as t
 \paragraph*{Gráficos}
 
 O GitHub Projects também oferece a possibilidade de visualização de gráficos, que mostram a quantidade de tarefas em cada uma das categorias. Esses gráficos são úteis para a visualização do andamento do projeto, e para a identificação de possíveis gargalos.
+
+\begin{figure}[htbp]
+  \centering
+  \caption{\label{fig:ProjectsInsights} Gráfico de Marco \textit{versus} quantidade de tarefas separadas por etiqueta}
+  \includegraphics[scale=0.6]{files/img/Codificacao/GitHubProjects - Insights - Stacked Line Milestone_Label.png}
+  \legend{Fonte: autoria própria}
+\end{figure}
 
 Com eles, pode-se ter uma noção das métricas do projeto, como por exemplo:
 
