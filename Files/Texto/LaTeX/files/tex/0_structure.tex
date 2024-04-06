@@ -102,16 +102,18 @@
 %\selectlanguage{english}
 \selectlanguage{brazil}
 \frenchspacing % Retira espaço extra obsoleto entre as frases.
-\makeindex % --- compila o indice --- %
+\makeindex % --- compila o índice --- %
 
 
 % ADIÇÕES FEITAS POR MIM (João Vítor Fernandes Dias)
 
-% \usepackage{fontspec} % Adicionar emoji
-% \usepackage{parskip} % Adicionar emoji?
 \usepackage{booktabs} % Necessários pra tabela
 \usepackage{multirow} % Necessários pra tabela
+\usepackage{animate} % Necessário para animações
 \usepackage{listings} % Necessário para código
+
+\renewcommand{\lstlistingname}{Código}% Listing -> Código
+\renewcommand{\lstlistlistingname}{Lista de \lstlistingname s} % List of Listings -> Lista de Códigos
 
 % Necessário para códigos bonitos
 
@@ -141,8 +143,5 @@
 
 \lstset{style=mystyle}
 
-\renewcommand{\lstlistingname}{Código}% Listing -> Código
-\renewcommand{\lstlistlistingname}{Lista de \lstlistingname s} % List of Listings -> Lista de Códigos
 \def\selfAuthor{Fonte: autoria própria}
 
-\usepackage{animate}
