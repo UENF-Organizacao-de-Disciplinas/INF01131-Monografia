@@ -60,7 +60,7 @@ Apesar das possibilidades de meios legalmente válidos para a aquisição dos da
 
 A criação de protótipos, seguindo a abordagem tomada por \cite{andre_interaction_2018}, se mostra como essencial para que se mantenha a constante satisfação por parte dos \textit{stakeholders} e quais mudanças sugerem ao desenvolvimento do projeto, assim reduzindo a necessidade de retrabalho ou de não alcance das expectativas do projeto.
 
-Para este fim, foram feitos os designs iniciais usando o software de design \href{https://www.figma.com/}{Figma}. Algumas telas principais foram concebidas. A primeira, e principal, é a ilustrada pela Figura \ref{fig:main} que permite que o usuário arraste a turma até o horário desejado. A turma ao qual este horário se refere pode ser definida na parte lateral direita.
+Para este fim, foram feitos os designs iniciais usando o software de design \href{https://www.figma.com/}{Figma}. Algumas telas principais foram concebidas. A primeira, e principal, é a ilustrada pela \autoref{fig:main} que permite que o usuário arraste a turma até o horário desejado. A turma ao qual este horário se refere pode ser definida na parte lateral direita.
 
 \begin{figure}[htbp]\centering
   \caption{\label{fig:main} Página principal do sistema}
@@ -68,7 +68,7 @@ Para este fim, foram feitos os designs iniciais usando o software de design \hre
   \legend{\selfAuthor}
 \end{figure} % Main
 
-Em seguida, temos a tela base para seleção de dados que deseja-se modificar, ilustrada pela Figura \ref{fig:CRUD_main}, podendo ser de turmas, salas, disciplinas, professores, alunos.
+Em seguida, temos a tela base para seleção de dados que deseja-se modificar, ilustrada pela \autoref{fig:CRUD_main}, podendo ser de turmas, salas, disciplinas, professores, alunos.
 
 Cada um desses tendo sua própria página de criação, leitura, edição ou deleção de dados.
 
@@ -78,7 +78,7 @@ Cada um desses tendo sua própria página de criação, leitura, edição ou del
   \legend{\selfAuthor}
 \end{figure} % CRUD_main
 
-Quanto às salas, temos a sua alocação atual baseado no ano e semestre. Nessa página pode-se também registrar algumas características da sala, como a quantidade de cadeiras e computadores, e se possui monitor, projetos, quadro de giz e quadro branco. Um exemplo de sala ainda sem turmas alocadas é representado na Figura \ref{fig:CRUD_salas-vazias}.
+Quanto às salas, temos a sua alocação atual baseado no ano e semestre. Nessa página pode-se também registrar algumas características da sala, como a quantidade de cadeiras e computadores, e se possui monitor, projetos, quadro de giz e quadro branco. Um exemplo de sala ainda sem turmas alocadas é representado na \autoref{fig:CRUD_salas-vazias}.
 
 \begin{figure}[htbp]\centering
   \caption{\label{fig:CRUD_salas-vazias} Página de modificação das informações de salas}
@@ -86,7 +86,7 @@ Quanto às salas, temos a sua alocação atual baseado no ano e semestre. Nessa 
   \legend{\selfAuthor}
 \end{figure} % CRUD_salas-vazias
 
-Na página dos alunos, pode-se cadastrar novos alunos informando o seu ano de entrada e a sua matrícula. Abaixo temos a visualização da grade, onde pode-se classificar cada uma das disciplinas como aprovada, reprovada e cursando. O exemplo da Figura \ref{fig:CRUD_alunos} mostra a grade de um aluno inscrito em 2019.1.
+Na página dos alunos, pode-se cadastrar novos alunos informando o seu ano de entrada e a sua matrícula. Abaixo temos a visualização da grade, onde pode-se classificar cada uma das disciplinas como aprovada, reprovada e cursando. O exemplo da \autoref{fig:CRUD_alunos} mostra a grade de um aluno inscrito em 2019.1.
 
 \begin{figure}[htbp]\centering
   \caption{\label{fig:CRUD_alunos} Página de modificação das informações de alunos}
@@ -94,7 +94,7 @@ Na página dos alunos, pode-se cadastrar novos alunos informando o seu ano de en
   \legend{\selfAuthor}
 \end{figure} % CRUD_alunos
 
-Podemos também definir nas disciplinas qual seu código e nome, e o seu período esperado segundo a ementa. Informamos quais cursos a possuem em suas ementas, quais seus pré-requisitos, os professores que a ministram e quais requisitos a mesma possui em relação às características de sala. A Figura \ref{fig:CRUD_disciplinas} mostra a página de modificação de disciplinas.
+Podemos também definir nas disciplinas qual seu código e nome, e o seu período esperado segundo a ementa. Informamos quais cursos a possuem em suas ementas, quais seus pré-requisitos, os professores que a ministram e quais requisitos a mesma possui em relação às características de sala. A \autoref{fig:CRUD_disciplinas} mostra a página de modificação de disciplinas.
 
 \begin{figure}[htbp]\centering
   \caption{\label{fig:CRUD_disciplinas} Página de modificação das informações de disciplinas}
@@ -102,7 +102,7 @@ Podemos também definir nas disciplinas qual seu código e nome, e o seu períod
   \legend{\selfAuthor}
 \end{figure} % CRUD_disciplinas
 
-Na seção de professores, temos a relação de disciplinas que os mesmos estão passíveis de ministrar, e também quais são suas preferências de horários ao longo da semana. A Figura \ref{fig:CRUD_professores} mostra a página de modificação de professores.
+Na seção de professores, temos a relação de disciplinas que os mesmos estão passíveis de ministrar, e também quais são suas preferências de horários ao longo da semana. A \autoref{fig:CRUD_professores} mostra a página de modificação de professores.
 
 \begin{figure}[htbp]\centering
   \caption{\label{fig:CRUD_professores} Página de modificação}
@@ -112,7 +112,7 @@ Na seção de professores, temos a relação de disciplinas que os mesmos estão
 
 Por fim, temos a junção de todas as informações registradas acima. Nela, podemos informar em quais horários, dias e em que sala, a turma estará alocada, além de informar qual professor a lecionará e a qual disciplina ela se refere.
 
-Na imagem temos um exemplo das ilustrações de níveis de alerta, informando que o tempo de duração do segundo dia de aulas não condiz com a preferência pessoal do professor selecionado, e que na primeira sala estão ocorrendo conflitos. Conflitos esses ressaltados nos nomes dos alunos que demandam tal disciplina, como pode ser visto na Figura \ref{fig:CRUD_turmas}.
+Na imagem temos um exemplo das ilustrações de níveis de alerta, informando que o tempo de duração do segundo dia de aulas não condiz com a preferência pessoal do professor selecionado, e que na primeira sala estão ocorrendo conflitos. Conflitos esses ressaltados nos nomes dos alunos que demandam tal disciplina, como pode ser visto na \autoref{fig:CRUD_turmas}.
 
 \begin{figure}[htbp]\centering
   \caption{\label{fig:CRUD_turmas} Página de modificação das informações de turmas}
