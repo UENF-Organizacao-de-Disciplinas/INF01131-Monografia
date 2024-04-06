@@ -62,7 +62,7 @@ Com isso, utilizando o GitHub Projects, foi organizado uma tabela de tarefas, on
 
 \begin{figure}[htbp]
   \centering
-  \caption{\label{fig:GitHubProjectsTable} Tabela de tarefas do GitHub Projects}
+  \caption{Tabela de tarefas do GitHub Projects\label{fig:GitHubProjectsTable}}
   \includegraphics[scale=0.3]{files/img/Codificacao/GitHubProjects - Table.png}
   \legend{Fonte: autoria própria}
 \end{figure}
@@ -88,7 +88,7 @@ O \textbf{banco de dados} recebe a requisição, processa a operação, e então
 
 \begin{figure}[htbp]
   \centering
-  \caption{\label{fig:API} Diagrama da progressão funcionamento da permanência dos dados}
+  \caption{Diagrama da progressão funcionamento da permanência dos dados\label{fig:API}}
   \includegraphics[scale=0.5]{files/img/Codificacao/API - com diagrama.png}
   \legend{Fonte: autoria própria}
 \end{figure}
@@ -166,7 +166,7 @@ Com isso, ao executar o comando, a função é criada, e então, a nova versão 
 
 Como solução, foi utilizado o \textit{AWS SAM (Serverless Application Model)}, que é uma extensão do \textit{AWS CloudFormation} que simplifica o desenvolvimento de aplicações sem servidor. O AWS SAM permite a definição de aplicações sem servidor de forma mais simples, e a partir disso, é possível fazer o \textit{deploy} de toda a aplicação de uma vez só. O uso do AWS SAM foi feito através de um arquivo \textit{template.yaml}, que contém a definição de todas as funções Lambda, e de recursos necessários para o funcionamento do sistema.
 
-\begin{lstlisting}[caption={Exemplo de template.yaml},label={lst:template}]
+\begin{lstlisting}[caption={\textit{Exemplo de template.yaml}},label={lst:template}]
 AWSTemplateFormatVersion: "2010-09-09"
 Transform: AWS::Serverless-2016-10-31
 Description: "OurClass>SAM>General>"
@@ -275,7 +275,7 @@ Os marcos visam distinguir as tarefas por suas versões, e também por seus tipo
 
 \begin{figure}[htbp]
   \centering
-  \caption{\label{fig:ProjectsMilestones} Marcos do GitHub Projects}
+  \caption{Marcos do GitHub Projects\label{fig:ProjectsMilestones}}
   \includegraphics[scale=0.6]{files/img/Codificacao/GitHubProjects - Open Milestones.png}
   \legend{Fonte: autoria própria}
 \end{figure}
@@ -298,7 +298,7 @@ No Projects, também foram adicionadas as \textbf{etiquetas} que distinguem as t
 
 \begin{figure}[htbp]
   \centering
-  \caption{\label{fig:ProjectsLabels} Etiquetas do GitHub Projects}
+  \caption{Etiquetas do GitHub Projects\label{fig:ProjectsLabels}}
   \includegraphics[scale=0.6]{files/img/Codificacao/GitHubProjects - Labels.png}
   \legend{Fonte: autoria própria}
 \end{figure}
@@ -319,7 +319,7 @@ O GitHub Projects também oferece a possibilidade de visualização de gráficos
 
 \begin{figure}[htbp]
   \centering
-  \caption{\label{fig:ProjectsInsights} Gráfico de Marco \textit{versus} quantidade de tarefas separadas por etiqueta}
+  \caption{Gráfico de Marco \textit{versus} quantidade de tarefas separadas por etiqueta\label{fig:ProjectsInsights}}
   \includegraphics[scale=0.6]{files/img/Codificacao/GitHubProjects - Insights - Stacked Line Milestone_Label.png}
   \legend{Fonte: autoria própria}
 \end{figure}
