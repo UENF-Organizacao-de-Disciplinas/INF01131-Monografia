@@ -151,7 +151,7 @@ Outro detalhe percebido, foi que boa parte do código se repetia entre as funç�
 
 Nas primeiras tentativas de \textit{deploy}, duas abordagens eram utilizadas: a primeira era a de copiar e colar o código diretamente na interface web da AWS, e a segunda era a de fazer o upload de um arquivo zip contendo o código. No segundo código, o código de \textit{deploy} se assemelha ao seguinte.
 
-\begin{lstlisting}[caption={Código de \textit{deploy} de Lambda},label={lst:lambda}]
+\begin{lstlisting}[caption={Código de \textit{deploy} de Lambda}, label={lst:lambda}]
 aws lambda create-function \
 --function-name createProfessor \
 --runtime nodejs20.x \
@@ -168,7 +168,7 @@ Com isso, ao executar o comando, a função é criada, e então, a nova versão 
 
 Como solução, foi utilizado o \textit{AWS SAM (Serverless Application Model)}, que é uma extensão do \textit{AWS CloudFormation} que simplifica o desenvolvimento de aplicações sem servidor. O AWS SAM permite a definição de aplicações sem servidor de forma mais simples, e a partir disso, é possível fazer o \textit{deploy} de toda a aplicação de uma vez só. O uso do AWS SAM foi feito através de um arquivo \textit{template.yaml}, que contém a definição de todas as funções Lambda, e de recursos necessários para o funcionamento do sistema.
 
-\begin{lstlisting}[caption={\textit{Exemplo de template.yaml}},label={lst:template}]
+\begin{lstlisting}[caption={\textit{Exemplo de template.yaml}}, label={lst:template}]
 AWSTemplateFormatVersion: "2010-09-09"
 Transform: AWS::Serverless-2016-10-31
 Description: "OurClass>SAM>General>"
