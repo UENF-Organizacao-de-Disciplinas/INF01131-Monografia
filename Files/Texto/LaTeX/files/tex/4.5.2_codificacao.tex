@@ -95,7 +95,7 @@ O \textbf{banco de dados} recebe a requisição, processa a operação, e então
 
 \textbf{Resumidamente}: O \textbf{\textit{frontend}} envia uma requisição HTTP com uma carga de informações a um \textbf{\textit{endpoint}}, que encaminha a requisição a uma \textbf{função} específica que executa uma operação no \textbf{banco de dados}, assim retornando o status da operação ao \textit{frontend}.
 
-\paragraph*{\href{https://jsonbin.io/}{JSONBin}}
+\subsubsubsection*{\href{https://jsonbin.io/}{JSONBin}}
 
 Como até então os dados estavam armazenados em formato JSON, imaginou-se que a melhor forma de persistir os dados seria através de um banco de dados que lidasse com JSON, e o escolhido foi o JSONBin.
 
@@ -103,11 +103,11 @@ Esta plataforma permite a criação de \textit{bins}, que são basicamente cole�
 
 Com isso, se tornou possível ler e atualizar os dados de forma remota, e assim, manter os dados mesmo após a recarga da página. Embora cumprisse com o que promete e o que era desejado, o JSONBin não se mostrou a melhor escolha para o sistema, visto que a sua utilização não performou tão bem quanto se esperava. Não se sabe se foi por inexperiência ou por limitações do próprio serviço, mas a utilização do JSONBin para a coleta dos dados, fazia com que a tela de carregamento do sistema demorasse alguns segundos para ser exibida, o que não é apropriado para a usabilidade do sistema proposto.
 
-\paragraph*{MySQL}
+\subsubsubsection*{MySQL}
 
 Embora houvesse o desejo do uso de informações em formato JSON, achou-se por bem utilizar um banco de dados mais usual, recorrendo então ao MySQL, sendo então necessário criar um banco de dados local que armazenasse os dados e que pudesse ser acessado pelo sistema. Essa configuração serviu para estabelecer a supracitada camada de banco de dados. E consistiu basicamente na instalação do MySQL Server.
 
-\subparagraph*{Migração dos dados}
+\paragraph*{Migração dos dados}
 
 Como os dados se encontravam em formato JSON, primariamente utilizou-se da ferramenta de importação de dados do próprio \textbf{MySQL Workbench}. Durante essa importação, o software automaticamente identifica os campos, criando a tabela e suas colunas. Porém, devido à quantidade dos dados, essa importação tendia a ser demorada, e por vezes, falhava, sem haver uma explicação clara do porquê.
 
@@ -117,7 +117,7 @@ Apesar da primeira tentativa de importação não ter sido completamente bem suc
 
 % \hyperref[ModelagemBD]{modelagem anteriormente citada}
 
-\subparagraph*{Acesso ao Banco de Dados}
+\paragraph*{Acesso ao Banco de Dados}
 
 Seguindo a mesma sequência de camadas, o acesso ao banco de dados continua sendo feito através de requisições HTTP, porém, ao invés de serem enviadas ao JSONBin, são enviadas a um servidor local que executa as operações no banco de dados.
 
@@ -135,9 +135,9 @@ O uso da AWS segue a mesma lógica do servidor local, com a diferença de que o 
 
 O uso desses três serviços permitiu a execução do \textit{backend} do sistema em nuvem, e assim, atingindo a permanência dos dados. Com isso, o sistema passou a ser capaz de manter os dados mesmo após a recarga da página, e assim, atender a uma das principais necessidades do sistema.
 
-% \paragraph*{CORS} % Até agora não entendi direito pra que serve isso.
+% \subsubsubsection*{CORS} % Até agora não entendi direito pra que serve isso.
 
-\paragraph*{Implantação}
+\subsubsubsection*{Implantação}
 
 O conjunto de funcionalidades da AWS envolve em grande parte o objetivo de manter um sistema constantemente acessível através da internet, ainda assim, durante o desenvolvimento, ou até mesmo durante o ciclo de vida do software, é esperado que ocorram manutenções periódicas nas quais é compreensível que o sistema fique fora do ar. Sendo assim, para manter-se visando ao máximo a acessibilidade do sistema, espera-se que o mesmo fique desconectado o mínimo possível.
 
@@ -145,7 +145,7 @@ Tanto o API Gateway quanto as funções Lambda precisaram sofrer diversas modifi
 
 Outro detalhe percebido, foi que boa parte do código se repetia entre as funções que interagiam diretamente com o banco de dados. Sendo assim, passou-se a utilizar das \textit{Lambda Layers}, que são camadas que podem ser compartilhadas entre diversas funções, e assim, diminuir a quantidade de código repetido. Essa nova abordagem permitiu que as funções fossem mais enxutas, e que as mudanças fossem aplicadas de forma mais rápida, visto que bibliotecas e funções comuns entre as funções eram compartilhadas entre elas.
 
-\paragraph*{AWS CLI}
+\subsubsubsection*{AWS CLI}
 
 Nas primeiras tentativas de \textit{deploy}, duas abordagens eram utilizadas: a primeira era a de copiar e colar o código diretamente na interface web da AWS, e a segunda era a de fazer o upload de um arquivo zip contendo o código. No segundo código, o código de \textit{deploy} se assemelha ao seguinte.
 
@@ -162,7 +162,7 @@ Como mostrado no \autoref{lst:lambda}, usa-se o software AWS CLI para criar uma 
 
 Com isso, ao executar o comando, a função é criada, e então, a nova versão do código é aplicada. Com este fluxo de trabalho, embora permita o \textit{deploy} sem a direta conexão ao sistema AWS, ainda assim é necessário executar comandos específicos para cada uma, tendo que manualmente compactar o código e fazer o upload de cada um dos arquivos das diversas funções coexistentes.
 
-\paragraph*{SAM}
+\subsubsubsection*{SAM}
 
 Como solução, foi utilizado o \textit{AWS SAM (Serverless Application Model)}, que é uma extensão do \textit{AWS CloudFormation} que simplifica o desenvolvimento de aplicações sem servidor. O AWS SAM permite a definição de aplicações sem servidor de forma mais simples, e a partir disso, é possível fazer o \textit{deploy} de toda a aplicação de uma vez só. O uso do AWS SAM foi feito através de um arquivo \textit{template.yaml}, que contém a definição de todas as funções Lambda, e de recursos necessários para o funcionamento do sistema.
 
@@ -269,7 +269,7 @@ Considerando que a segunda versão já apresentava em sua maioria as funcionalid
 
 O uso do GitHub Projects se provou como uma excelente forma de organização das tarefas, e assim, foi mantido para a terceira versão. Alguns novos detalhes foram adicionados em sua organização, como a adição da categorização de tarefas por \textbf{marcos} (\textit{milestones}) e \textbf{etiquetas} (\textit{labels}).
 
-\paragraph*{Marcos e Etiquetas}
+\subsubsubsection*{Marcos e Etiquetas}
 
 Os marcos visam distinguir as tarefas por suas versões, e também por seus tipos de funcionalidades futuras, assim, a medida em que surgiam novas ideias, elas eram adicionadas ao GitHub Projects. Então podemos considerar que cada um desses \textbf{marcos} teve tarefas atribuídas a si pois...
 
@@ -313,7 +313,7 @@ No Projects, também foram adicionadas as \textbf{etiquetas} que distinguem as t
   \item \textbf{Nova funcionalidade}: funcionalidades que ainda não foram implementadas;
 \end{enumerate}
 
-\paragraph*{Gráficos}
+\subsubsubsection*{Gráficos}
 
 O GitHub Projects também oferece a possibilidade de visualização de gráficos na seção \textit{Insights}, que mostram a quantidade de tarefas em cada uma das categorias. Esses gráficos são úteis para a visualização do andamento do projeto, e para a identificação de possíveis gargalos.
 
@@ -337,7 +337,7 @@ Com eles, pode-se ter uma noção das métricas do projeto, como por exemplo:
 
 O sistema passou por diversas pequenas mudanças, e algumas maiores. Uma considerável parte delas foi relacionada à forma com que as informações eram estruturadas internamente, mudanças essas feitas com o intuito de tornar o sistema mais fácil de ser mantido posteriormente. Em seguida estão listadas algumas das várias melhorias feitas no sistema.
 
-\paragraph*{Filtros e ordenações}
+\subsubsubsection*{Filtros e ordenações}
 
 Levando em consideração a multidimensionalidade da estrutura dos dados, a possibilidade de realizar ``curvas de nível'' e as ordenar por diferentes critérios se mostrou uma funcionalidade essencial para a compreensão dos dados. Dessa forma, em diferentes páginas do sistema, foram adicionadas ordenações padrões e seletores de filtragem manual, assim permitindo ao usuário a visualização de dados específicos.
 
@@ -354,15 +354,15 @@ Uma das solicitações presentes ao final da versão anterior foi quanto a uma d
 
 Com essa divisão, definiu-se o sistema para que, por padrão, apenas exibisse as turmas voltadas para Ciência da Computação, e que, caso o usuário desejasse, poderia visualizar as turmas de outros cursos.
 
-\paragraph*{MultiTurmas}
+\subsubsubsection*{MultiTurmas}
 
 Dentre as tarefas realizadas, uma das páginas que mais sofreu alterações foi a página de \textbf{MultiTurmas}. Nela, foram feitas diversas melhorias, como a adição de filtros, ordenações e aprimoramento dos textos contidos nas caixas de seleção.
 
-\subparagraph*{Aprimoramento dos identificadores dos conflitos}
+\paragraph*{Aprimoramento dos identificadores dos conflitos}
 
 Os conflitos ocorridos indicavam quais eram os identificadores (ids) das turmas que estavam em conflito, porém, esses ids eram os ids referentes ao banco de dados, sendo ele um valor numérico, não continha valor semântico suficiente para ser facilmente identificado. Estes ids eram visualizados ao posicionar o ponteiro do mouse por sobre os componentes cujo conflito foi verificado. Com isso, foi feita a adição de um novo identificador, que é composto pelas informações contidas na turma, sendo elas o ano, semestre, nome da disciplina, nome do professor, e o código descritor da turma. A partir disso, tornou-se mais fácil identificar quais turmas estavam em conflito, e assim, corrigi-las. Essa identificação foi adicionada também aos horários, onde o identificador passou a ser composto pela sala, dia da semana, horário de início e fim.
 
-\subparagraph*{Criação e deleção de turmas e horários}
+\paragraph*{Criação e deleção de turmas e horários}
 
 Embora seja uma funcionalidade básica e existente desde a primeira versão, a criação e deleção de turmas apresentou diversos problemas ao longo do desenvolvimento. Um dos mais cruciais era devido à assincronicidade intrínseca ao uso de um banco de dados remoto. O problema era que durante a criação sequencial de duas turmas, apenas a segunda era mostrada, mesmo que ambas tivessem sido criadas.
 
@@ -372,13 +372,13 @@ Para resolver esse problema, foi feita a adição de uma função de \textit{cal
 
 Outra característica aprimorada, foi a velocidade de adição e deleção, principalmente a de deleção. Antes, a aprovação do banco de dados era necessária para que a lista de turmas fosse atualizada, e isso tornava o processo de deleção lento. Para resolver isso, foi feita a adição de uma função de deleção que remove a turma da listagem de turmas antes mesmo da confirmação do banco de dados. Essa não se mostra como a solução mais adequada, visto que em caso de falha na deleção, a turma poderá ser restaurada com a simples atualização da página, os pontos positivos na usabilidade superam os negativos.
 
-\subparagraph*{Adição da propriedade descrição}
+\paragraph*{Adição da propriedade descrição}
 
 Disciplinas oferecidas em um mesmo semestre por vezes são oferecidas para alunos demais para que uma única turma os comporte, e assim, é necessário a criação de mais de uma turma. Para que os alunos e professores possam identificar facilmente a qual turma pertencem, foi adicionada a propriedade descrição, que é uma breve descrição da turma. Essa característica já se encontra no sistema acadêmico, porém com a limitação de apenas 3 caracteres. No presente trabalho, a descrição pode conter até 255 caracteres.
 
 Adicionando esse campo, a visualização linear das informações da turma se tornou mais difícil de se manter na tela. Considerando que em sua maioria as turmas possuem dois horários, dispôs-se então as informações em conjuntos de dois elementos, ao invés de uma lista única, tornando então a visualização mais densa.
 
-\subparagraph*{Solução inicial}
+\paragraph*{Solução inicial}
 
 A funcionalidade anteriormente denominada ``Disciplinas ainda não oferecidas'' foi aprimorada de tal forma que agora, além de criar uma turma para a disciplina selecionada, o sistema automaticamente analisa o histórico de criação de turmas, definindo previamente o professor, a demanda estimada, e os horários, incluindo seus dias, horas de início e sala em que é alocada.
 
@@ -390,17 +390,17 @@ O botão de adição de todas as disciplinas foi mantido, e agora, ao ser clicad
 
 É esperado, entretanto, que esta solução apresente problemas em sua execução, visto que nem todas as alocações de turmas apresentam um padrão. Então, fica a cargo do usuário a verificação e a correção dos possíveis erros alertados pelo sistema.
 
-\paragraph*{Grade Horária}
+\subsubsubsection*{Grade Horária}
 
 A página anteriormente denominada ``CCTable'' que visava apresentar exclusivamente as disciplinas do curso de Ciência da Computação, foi renomeada para ``Grade Horária'', e passou a ser possível de apresentar disciplinas de todos os cursos, embora ainda não seja possível distinguir as disciplinas de um curso para o outro.
 
 As células das turmas sofreram um ligeiro aprimoramento visual e foram ordenadas primariamente por seu período esperado.
 
-\paragraph*{Banco de dados}
+\subsubsubsection*{Banco de dados}
 
 Quanto ao banco de dados, os dados antes desconexos passaram a ser interligados apropriados adequadamente por chaves estrangeiras. Apresentando então restrições em casos de deleções inapropriadas no banco de dados. A API deixou de retornar as listas de turmas, professores, disciplinas e salas, e passou a retornar os dados de forma mais estruturada em formato JSON.
 
-\subparagraph*{Preenchimento de dados}
+\paragraph*{Preenchimento de dados}
 
 Inicialmente, os dados adicionados faziam jus diretamente às disciplinas, professores, salas e turmas do curso de Ciência da Computação. Porém, como para a análise completa dos conflitos é necessário que seja feita também a adição das turmas de outros cursos, foi feito o preenchimento de dados para as entidades de professores, disciplinas e salas.
 
@@ -416,17 +416,17 @@ Além dos PDFs anteriores, haviam também os arquivos referentes à oferta de tu
 
 Por fim, foi feita o \textit{web scraping} que consistiu na busca por informações em diversos sites, principalmente o \href{https://academico.uenf.br/usuarios/sign_in}{Sistema Acadêmico}, o \href{https://uenf.br/portal/}{site da UENF} e outros sites. Nessa etapa, foi possível encontrar lotes de informações estruturadas. Um dos lotes foi a listagem de disciplinas e suas características que se encontram disponíveis no Sistema Acadêmico da UENF, essas informações foram copiadas e coladas no arquivo Excel unificado. Outros lotes foram encontrados dispersos ao longo do site da UENF e consistiam basicamente em listagem de professores e seus respectivos laboratórios. Essas informações estavam dispersas dos sites dos diversos centros e cursos, alguns disponíveis no próprio site, outros em formato de arquivo. Deste método foram coletadas as informações referentes à nomes de professores, seus laboratórios e centros; e disciplinas e seus nomes, códigos e períodos de vigência. Além disso, foram encontrados documentos oficiais que referenciam a capacidade de ocupantes das ``salas'' disponíveis do Centro de Convenções, popularmente conhecido como ``Apitão'' que mesmo não sendo propriamente uma sala de aula, já foi utilizado previamente para tal fim. Outras salas já obtiveram alocações similares, assim como a Sala dos Professores.
 
-\paragraph*{Gerais}
+\subsubsubsection*{Gerais}
 
 Neste tópico estão descritas algumas melhorias gerais do sistema que não se enquadraram nos tópicos anteriores.
 
-\subparagraph*{Aprimoramento na forma de criação de itens}
+\paragraph*{Aprimoramento na forma de criação de itens}
 
 Antes, ao acessar a página de criação de entidades, uma entidade era previamente selecionada. E para a criação de uma nova entidade, os valores da entidade anterior deveriam ser alterados, e, ao clicar em adicionar, esses valores alterados eram cadastrados no banco de dados. Essa sequência de ações apresentou intuitividade suficiente e, portanto, foi alterada.
 
 A versão atual passou a não selecionar previamente a entidade. Assim, ao clicar em adicionar um novo item, uma nova entidade é criada. No caso das turmas, a entidade é criada com os valores de ano e semestre predefinidos baseado na filtragem selecionada.
 
-\subparagraph*{Boas práticas}
+\paragraph*{Boas práticas}
 
 Além das funcionalidades voltadas para o usuário final, algumas mudanças classificadas como \textbf{Qualidade de vida} foram realizadas visando a manutenção do sistema. Dentre elas estão:
 
