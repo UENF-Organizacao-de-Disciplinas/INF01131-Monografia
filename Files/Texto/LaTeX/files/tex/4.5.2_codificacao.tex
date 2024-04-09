@@ -169,7 +169,7 @@ aws lambda create-function \
 --runtime nodejs20.x \
 --role arn:aws:iam::375423677214:role/LambdaRole \
 --handler index.handler \
---zip-file fileb://Files/AWS/lambdas/createProfessor/createProfessor.zip \
+--zip-file fileb://Files/AWS/lambdas/createProfessor/createProfessor.zip
 \end{lstlisting}
 
 Como mostrado no \autoref{lst:lambda}, usa-se o software AWS CLI para criar uma função lambda. O comando \textit{create-function} é o comando que cria a função, e os argumentos que seguem são os parâmetros necessários para a criação da função. O \textit{function-name} é o nome da função, o \textit{runtime} é a versão do Node.js que a função utiliza, o \textit{role} é o conjunto de permissões criadas na seção \textit{AWS Identity and Access Management} (IAM), o \textit{handler} é o nome do arquivo principal que contém a função, e o \textit{zip-file} é o arquivo zip que contém o código da função.
