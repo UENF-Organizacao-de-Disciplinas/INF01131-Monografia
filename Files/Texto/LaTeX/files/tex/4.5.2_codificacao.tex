@@ -420,6 +420,14 @@ Inicialmente, os dados adicionados faziam jus diretamente às disciplinas, profe
 
 Para acumular mais dados referentes às entidades do banco de dados, foram tomadas algumas abordagens: requisição dos dados diretamente do Sistema Acadêmico, processamento de tabelas, processamento de PDFs e \textit{web scraping}.
 
+\begin{figure}[htbp]
+  \centering
+  \label{fig:DataFlow}
+  \caption{Diagrama do fluxo de obtenção de dados}
+  \includegraphics[scale=0.25]{files/img/Codificacao/Processamento de dados.drawio.png}
+  \legend{\selfAuthor}
+\end{figure}
+
 A forma teoricamente mais direta e eficiente para se obter os dados das entidades é a obtenção das informações contidas no banco de dados do sistema acadêmico. Para este fim, foi feita uma solicitação ao responsável pela Secretaria Acadêmica (SECACAD) da UENF, que direcionou a solicitação ao desenvolvedor do Sistema Acadêmico. A resposta obtida do desenvolvedor foi que a solicitação não poderia ser atendida, visto que não detinha a posse dos dados, e que para que pudesse fornecê-los, seria necessária uma solicitação formal à reitoria da UENF. Essa solicitação foi então passada à Coordenação do curso de Ciência da Computação, com o qual ficou decidido abandonar a ideia e buscar outras formas de obtenção dos dados.
 
 Paralelamente à abordagem anterior foram feitas tentativas individuais de obtenção dos dados. O processamento de tabelas e PDFs e o \textit{web scraping} foram as abordagens utilizadas. Inicialmente os dados foram coletados e armazenados em tabelas, e então, convertidos para o formato CSV. Os arquivos CSV, por sua vez, foram utilizados em \textit{scripts} Python que os convertiam em \textit{queries} SQL, para que assim então fossem adicionados ao banco de dados.
