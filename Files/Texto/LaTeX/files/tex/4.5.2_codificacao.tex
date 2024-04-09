@@ -151,6 +151,14 @@ Tanto o API Gateway quanto as funções Lambda precisaram sofrer diversas modifi
 
 Outro detalhe percebido, foi que boa parte do código se repetia entre as funções que interagiam diretamente com o banco de dados. Sendo assim, passou-se a utilizar das \textit{Lambda Layers}, que são camadas que podem ser compartilhadas entre diversas funções, e assim, diminuir a quantidade de código repetido. Essa nova abordagem permitiu que as funções fossem mais enxutas, e que as mudanças fossem aplicadas de forma mais rápida, visto que bibliotecas e funções comuns entre as funções eram compartilhadas entre elas.
 
+\begin{figure}[htbp]
+  \centering
+  \label{fig:APIAWS}
+  \caption{API REST no AWS}
+  \includegraphics[scale=0.55]{files/img/Codificacao/API-Funcionamento API.drawio.png}
+  \legend{\selfAuthor}
+\end{figure}
+
 \subsubsubsection*{AWS CLI}
 
 Nas primeiras tentativas de \textit{deploy}, duas abordagens eram utilizadas: a primeira era a de copiar e colar o código diretamente na interface web da AWS, e a segunda era a de fazer o upload de um arquivo zip contendo o código. No segundo código, o código de \textit{deploy} se assemelha ao seguinte.
