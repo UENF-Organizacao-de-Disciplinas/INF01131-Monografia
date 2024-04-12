@@ -498,11 +498,29 @@ Embora o sistema seja projetado para ser permissivo quanto a inexistência de ce
 
 O sistema contempla a checagem de conflitos de alocação simultânea de professores em mais de uma turma. Ou seja, considerando todas as turmas ao qual o professor está atribuído no ano e semestre selecionados, o sistema compara todos os horários das turmas deste professor, e verifica se há alguma interseção entre horários que estão no mesmo dia, levando em conta a duração da aula.
 
+\begin{figure}
+  \centering
+  \label{fig:conflitoAlocacaoProfessor}
+  \caption{Exemplo de conflito de alocação de professor}
+  \includegraphics[scale=0.45]{./files/img/Codificacao/Conflitos/Alocação de professores.png}
+  \legend{\selfAuthor}
+\end{figure}
+
 Caso haja algum conflito, o sistema destaca o professor em questão, tornando a sua cor de fundo avermelhada. Além disso, ao passar o mouse sobre o nome do professor, é exibido um alerta flutuante, informando que quais são as turmas e horários que estão em conflito.
 
 \subsubsection{Salas}
 
 As salas também apresentam a verificação do conflito de alocação simultânea. Porém, diferente dos professores, a checagem é feita conferindo todos os horários na qual a sala está alocada, e então é feita a mesma verificação de interseção citada anteriormente. Havendo o conflito, é exibida uma borda alaranjada na parte inferior das propriedades referentes ao conflito, além de, assim como no caso dos professores, exibir o alerta flutuante.
+
+\begin{figure}
+  \centering
+  \label{fig:conflitoAlocacaoSalas}
+  \caption{Exemplo de conflito de alocação de Salas}
+  \includegraphics[scale=0.7]{./files/img/Codificacao/Conflitos/Alocação de Salas - Sala.png}
+
+  \includegraphics[scale=0.7]{./files/img/Codificacao/Conflitos/Alocação de salas - Horários.png}
+  \legend{\selfAuthor}
+\end{figure}
 
 Além disso, também é feita a comparação entre a quantidade máxima de alunos comportados na sala e a quantidade de alunos estimados para a turma. Este conflito por sua vez é ilustrado tornando avermelhado o fundo da demanda estimada e da seleção de salas. Caso uma turma tenha mais de um horário, é calculada a quantidade remanescente dos alunos que demandam a disciplina com relação a cada uma das capacidades das salas destes horários, mostrando cada um deles no alerta flutuante.
 
