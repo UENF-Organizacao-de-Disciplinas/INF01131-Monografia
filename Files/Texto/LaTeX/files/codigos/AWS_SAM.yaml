@@ -1,0 +1,80 @@
+AWSTemplateFormatVersion: "2010-09-09"
+Transform: AWS::Serverless-2016-10-31
+Description: "OurClass>SAM>General>"
+
+Resources:
+  # LAYERS
+  dbFunctionLayer:
+    Type: AWS::Serverless::LayerVersion
+    Properties:
+      LayerName: dbFunctionSAM
+      Description: connect to db
+      ContentUri: ./layers/dbConnection
+      CompatibleRuntimes:
+        - nodejs14.x
+        - nodejs16.x
+        - nodejs18.x
+  # API GATEWAY
+  TimetablingAPI:
+    Type: AWS::Serverless::Api
+    Properties:
+      StageName: timetablingStage
+      EndpointConfiguration: REGIONAL
+      Cors:
+        AllowMethods: "'GET,POST,PUT,DELETE,OPTIONS'"
+        AllowHeaders: "'Content-Type,X-Amz-Date,Authorization,X-Api-Key,X-Amz-Security-Token'"
+        AllowOrigin: "'*'"
+
+  # LAMBDA FUNCTIONS
+  createProfessor:
+    Type: AWS::Serverless::Function
+    Properties:
+      FunctionName: createProfessor
+      CodeUri: ./lambdas/professor/createProfessor
+      Events:
+        ApiEvent:
+          Type: Api
+          Properties:
+            Path: /professor
+            Method: post
+            RestApiId: !Ref TimetablingAPI
+      Runtime: nodejs14.x
+      Handler: index.handler
+      Role:
+        Fn::Sub: arn:aws:iam::${AWS::AccountId}:role/LambdaRole
+      Layers:
+        - !Ref dbFunctionLayer
+      Environment:
+        Variables:
+          DB_HOST: ourclassuirds.cgsgwtemx5r8.us-east-2.rds.amazonaws.com
+          DB_NAME: OurClassDB
+          DB_USER: tang
+          DB_PSWD: annabell
+  readProfessor:
+  # [...]
+  updateProfessor:
+  # [...]
+  deleteClassTime:
+  Type: AWS::Serverless::Function
+  Properties:
+    FunctionName: deleteClassTime
+    CodeUri: ./lambdas/classTime/deleteClassTime
+    Events:
+      ApiEvent:
+        Type: Api
+        Properties:
+          Path: /classTime/{id}
+          Method: delete
+          RestApiId: !Ref TimetablingAPI
+    Runtime: nodejs14.x
+    Handler: index.handler
+    Role:
+      Fn::Sub: arn:aws:iam::${AWS::AccountId}:role/LambdaRole
+    Layers:
+      - !Ref dbFunctionLayer
+    Environment:
+      Variables:
+        DB_HOST: ourclassuirds.cgsgwtemx5r8.us-east-2.rds.amazonaws.com
+        DB_NAME: OurClassDB
+        DB_USER: tang
+        DB_PSWD: annabell
