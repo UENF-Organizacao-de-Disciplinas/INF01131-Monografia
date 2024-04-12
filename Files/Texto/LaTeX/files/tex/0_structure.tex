@@ -150,7 +150,6 @@
 
 \def\selfAuthor{Fonte: autoria própria} % Fonte padrão para figuras
 
-\newenvironment{CenteredFigure} % Figuras automaticamente centralizadas
-{\begin{figure}\centering}
-    {\end{figure}}
+% Figuras automaticamente centralizadas com fonte
+\newenvironment{MyCenteredFigure}{\begin{figure}[htbp]\centering}{\legend{\selfAuthor}\end{figure}}
 

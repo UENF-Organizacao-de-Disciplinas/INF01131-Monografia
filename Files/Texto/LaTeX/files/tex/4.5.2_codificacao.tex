@@ -6,10 +6,9 @@
 
 Após a elaboração dos protótipos com o Figma, e da conceitualização diagramática do banco de dados, o desenvolvimento do sistema foi iniciado. Por maior familiaridade com a linguagem foi escolhida a linguagem JavaScript, utilizando a biblioteca \textit{React} para a criação dos componentes visuais, ou seja, o \textit{frontend}, e o \textit{Node.js} para a criação do \textit{backend} e a criação de um servidor local que permitiria visualizar as mudanças no código em tempo real. Suas logos estão ilustrados na \autoref{fig:frontend}.
 
-\begin{figure}[htbp]
+\begin{MyCenteredFigure}
   \caption{Recursos usados para o desenvolvimento do \textit{Frontend}}
   \label{fig:frontend}
-  \centering
   \begin{animateinline}[loop,autoplay]{1}
     \includegraphics[scale=0.2]{./files/img/Codificacao/Animacao/JavaScript.png} % 1 JS
     \includegraphics[scale=0.2]{./files/img/Codificacao/Animacao/NodeJS.png}     % 2 Node
@@ -23,8 +22,7 @@ Após a elaboração dos protótipos com o Figma, e da conceitualização diagra
     \includegraphics[scale=0.2]{./files/img/Codificacao/Animacao/JavaScript.png} % 2 JS
     \includegraphics[scale=0.2]{./files/img/Codificacao/Animacao/NodeJS.png}     % 3 Node
   \end{animateinline}
-  \legend{\selfAuthor}
-\end{figure}
+\end{MyCenteredFigure}
 
 % Perguntar para quem sabe, sobre qual é o real papel do Node.js
 
@@ -62,13 +60,11 @@ Mesmo com esta nova dinâmica, outras funcionalidades foram deixadas de lado. Um
 
 Com isso, utilizando o GitHub Projects, foi organizado uma tabela de tarefas, onde foram unificadas as diversas anotações e ideias, antes soltas. A partir disso, foi possível visualizar o que era mais importante e o que poderia ser deixado de lado.
 
-\begin{figure}[htbp]
-  \centering
+\begin{MyCenteredFigure}
   \label{fig:GitHubProjectsTable}
   \caption{Tabela de tarefas do GitHub Projects}
   \includegraphics[scale=0.3]{files/img/Codificacao/GitHubProjects - Table.png}
-  \legend{\selfAuthor}
-\end{figure}
+\end{MyCenteredFigure}
 
 Tendo este novo sistema de tarefas em prática, foi possível tranquilizar a mente quanto ao conflito entre as funcionalidades que precisavam ser desenvolvidas, as que já estavam prontas, as que poderiam ter melhorias e quais se desejava implementar no futuro.
 
@@ -87,13 +83,11 @@ As \textbf{funções} são as responsáveis por executar as operações no banco
 O \textbf{banco de dados} recebe a requisição, processa a operação, e então retorna o status da operação. Esse retorno é então repassado camada por camada, até chegar ao \textit{frontend}, onde o usuário final pode visualizar o resultado da operação.
 
 
-\begin{figure}[htbp]
-  \centering
+\begin{MyCenteredFigure}
   \label{fig:API}
   \caption{Diagrama da progressão funcionamento da permanência dos dados}
   \includegraphics[scale=0.5]{files/img/Codificacao/API - com diagrama.png}
-  \legend{\selfAuthor}
-\end{figure}
+\end{MyCenteredFigure}
 
 \textbf{Resumidamente}: O \textbf{\textit{frontend}} envia uma requisição HTTP com uma carga de informações a um \textbf{\textit{endpoint}}, que encaminha a requisição a uma \textbf{função} específica que executa uma operação no \textbf{banco de dados}, assim retornando o status da operação ao \textit{frontend}.
 
@@ -117,13 +111,11 @@ Com isso, foi necessário recorrer a uma abordagem semimanual, sendo então dese
 
 Apesar da primeira tentativa de importação não ter sido completamente bem sucedida, foi desta forma que as tabelas foram inicialmente criadas. Não seguindo objetivamente a modelagem anteriormente citada. Isso gerou posteriormente a necessidade de ajustes manuais, como a adição de chaves primárias e estrangeiras, e a alteração de tipos de dados. Porém, como neste momento, o sistema visava apenas replicar o funcionamento do JSONBin, essas alterações não foram feitas de imediato.
 
-\begin{figure}[htbp]
-  \centering
+\begin{MyCenteredFigure}
   \label{fig:TabelasIniciais}
   \caption{Diagrama primitivo das tabelas de dados SQL}
   \includegraphics[scale=0.9]{files/img/Codificacao/DB inicial.png}
-  \legend{\selfAuthor}
-\end{figure}
+\end{MyCenteredFigure}
 
 \paragraph*{Acesso ao Banco de Dados}
 
@@ -153,13 +145,11 @@ Tanto o API Gateway quanto as funções Lambda precisaram sofrer diversas modifi
 
 Outro detalhe percebido, foi que boa parte do código se repetia entre as funções que interagiam diretamente com o banco de dados. Sendo assim, passou-se a utilizar das \textit{Lambda Layers}, que são camadas que podem ser compartilhadas entre diversas funções, e assim, diminuir a quantidade de código repetido. Essa nova abordagem permitiu que as funções fossem mais enxutas, e que as mudanças fossem aplicadas de forma mais rápida, visto que bibliotecas e funções comuns entre as funções eram compartilhadas entre elas.
 
-\begin{figure}[htbp]
-  \centering
+\begin{MyCenteredFigure}
   \label{fig:APIAWS}
   \caption{API REST no AWS}
   \includegraphics[scale=0.55]{files/img/Codificacao/API-Funcionamento API.drawio.png}
-  \legend{\selfAuthor}
-\end{figure}
+\end{MyCenteredFigure}
 
 \subsubsubsection*{AWS CLI}
 
@@ -289,13 +279,11 @@ O uso do GitHub Projects se provou como uma excelente forma de organização das
 
 Os marcos visam distinguir as tarefas por suas versões, e também por seus tipos de funcionalidades futuras, assim, a medida em que surgiam novas ideias, elas eram adicionadas ao GitHub Projects. Então podemos considerar que cada um desses \textbf{marcos} teve tarefas atribuídas a si pois...
 
-\begin{figure}[htbp]
-  \centering
+\begin{MyCenteredFigure}
   \label{fig:ProjectsMilestones}
   \caption{Marcos do GitHub Projects}
   \includegraphics[scale=0.6]{files/img/Codificacao/GitHubProjects - Open Milestones.png}
-  \legend{\selfAuthor}
-\end{figure}
+\end{MyCenteredFigure}
 
 \begin{enumerate}
   \item \textbf{MVP 1}: foram concluídas na primeira versão;
@@ -313,13 +301,11 @@ Os marcos visam distinguir as tarefas por suas versões, e também por seus tipo
 
 No Projects, também foram adicionadas as \textbf{etiquetas} que distinguem as tarefas por seu intuito.
 
-\begin{figure}[htbp]
-  \centering
+\begin{MyCenteredFigure}
   \label{fig:ProjectsLabels}
   \caption{Etiquetas do GitHub Projects}
   \includegraphics[scale=0.6]{files/img/Codificacao/GitHubProjects - Labels.png}
-  \legend{\selfAuthor}
-\end{figure}
+\end{MyCenteredFigure}
 
 \begin{enumerate}
   \item \textbf{UX}: aprimoramento da experiência do usuário;
@@ -335,13 +321,11 @@ No Projects, também foram adicionadas as \textbf{etiquetas} que distinguem as t
 
 O GitHub Projects também oferece a possibilidade de visualização de gráficos na seção \textit{Insights}, que mostram a quantidade de tarefas em cada uma das categorias. Esses gráficos são úteis para a visualização do andamento do projeto, e para a identificação de possíveis gargalos.
 
-\begin{figure}[htbp]
-  \centering
+\begin{MyCenteredFigure}
   \label{fig:ProjectsInsights}
   \caption{Gráfico de Marco \textit{versus} quantidade de tarefas separadas por etiqueta}
   \includegraphics[scale=0.6]{files/img/Codificacao/GitHubProjects - Insights - Stacked Line Milestone_Label.png}
-  \legend{\selfAuthor}
-\end{figure}
+\end{MyCenteredFigure}
 
 Com eles, pode-se ter uma noção das métricas do projeto, como por exemplo:
 
@@ -425,13 +409,11 @@ Inicialmente, os dados adicionados faziam jus diretamente às disciplinas, profe
 
 Para acumular mais dados referentes às entidades do banco de dados, foram tomadas algumas abordagens: requisição dos dados diretamente do Sistema Acadêmico, processamento de tabelas, processamento de PDFs e \textit{web scraping}.
 
-\begin{figure}[htbp]
-  \centering
+\begin{MyCenteredFigure}
   \label{fig:DataFlow}
   \caption{Diagrama do fluxo de obtenção de dados}
   \includegraphics[scale=0.25]{files/img/Codificacao/Processamento de dados.drawio.png}
-  \legend{\selfAuthor}
-\end{figure}
+\end{MyCenteredFigure}
 
 A forma teoricamente mais direta e eficiente para se obter os dados das entidades é a obtenção das informações contidas no banco de dados do sistema acadêmico. Para este fim, foi feita uma solicitação ao responsável pela Secretaria Acadêmica (SECACAD) da UENF, que direcionou a solicitação ao desenvolvedor do Sistema Acadêmico. A resposta obtida do desenvolvedor foi que a solicitação não poderia ser atendida, visto que não detinha a posse dos dados, e que para que pudesse fornecê-los, seria necessária uma solicitação formal à reitoria da UENF. Essa solicitação foi então passada à Coordenação do curso de Ciência da Computação, com o qual ficou decidido abandonar a ideia e buscar outras formas de obtenção dos dados.
 
@@ -498,13 +480,11 @@ Embora o sistema seja projetado para ser permissivo quanto a inexistência de ce
 
 O sistema contempla a checagem de conflitos de alocação simultânea de professores em mais de uma turma. Ou seja, considerando todas as turmas ao qual o professor está atribuído no ano e semestre selecionados, o sistema compara todos os horários das turmas deste professor, e verifica se há alguma interseção entre horários que estão no mesmo dia, levando em conta a duração da aula.
 
-\begin{figure}[htbp]
-  \centering
+\begin{MyCenteredFigure}
   \label{fig:conflitoAlocacaoProfessor}
   \caption{Exemplo de conflito de alocação de professor}
   \includegraphics[scale=0.45]{./files/img/Codificacao/Conflitos/Alocação de professores.png}
-  \legend{\selfAuthor}
-\end{figure}
+\end{MyCenteredFigure}
 
 Caso haja algum conflito, o sistema destaca o professor em questão, tornando a sua cor de fundo avermelhada. Além disso, ao passar o mouse sobre o nome do professor, é exibido um alerta flutuante, informando que quais são as turmas e horários que estão em conflito.
 
@@ -512,34 +492,28 @@ Caso haja algum conflito, o sistema destaca o professor em questão, tornando a 
 
 As salas também apresentam a verificação do conflito de alocação simultânea. Porém, diferente dos professores, a checagem é feita conferindo todos os horários na qual a sala está alocada, e então é feita a mesma verificação de interseção citada anteriormente. Havendo o conflito, é exibida uma borda alaranjada na parte inferior das propriedades referentes ao conflito, além de, assim como no caso dos professores, exibir o alerta flutuante.
 
-\begin{figure}[htbp]
-  \centering
+\begin{MyCenteredFigure}
   \label{fig:conflitoAlocacaoSalas}
   \caption{Exemplo de conflito de alocação de sala}
   \includegraphics[scale=0.7]{./files/img/Codificacao/Conflitos/Alocação de Salas - Sala.png}
-  \legend{\selfAuthor}
-\end{figure}
+\end{MyCenteredFigure}
 
 Além disso, também é feita a comparação entre a quantidade máxima de alunos comportados na sala e a quantidade de alunos estimados para a turma. Este conflito por sua vez é ilustrado tornando avermelhado o fundo da demanda estimada e da seleção de salas. Caso uma turma tenha mais de um horário, é calculada a quantidade remanescente dos alunos que demandam a disciplina com relação a cada uma das capacidades das salas destes horários, mostrando cada um deles no alerta flutuante.
 
 \subsubsection{Disciplina}
 
-\begin{figure}[htbp]
-  \centering
+\begin{MyCenteredFigure}
   \label{fig:conflitoDisciplinaPaleta}
   \caption{Paleta de cores do sistema}
   \includegraphics[scale=0.5]{./files/img/Codificacao/Conflitos/Paleta de Cores.png}
-  \legend{\selfAuthor}
-\end{figure}
+\end{MyCenteredFigure}
 
 Além desses conflitos, outras características analisadas e representadas se referem às disciplinas atribuídas às turmas, que, embora não representem necessariamente um \textit{conflito}, mas sim um indicativo, ainda assim serão tratados como conflitos por motivos de simplificação. Esse indicativo leva em consideração o semestre selecionado e o período esperado da disciplina de certa turma. Utilizando de lógica similar, também é indicado caso não tenha sido atribuído um período à disciplina, e se, para o curso de Ciência da Computação, a disciplina é considerada como \textbf{Eletiva Livre}, \textbf{Eletiva Optativa}, ambas em tons azulados, ou se não é uma disciplina para o curso de Ciência da Computação, sendo então representada em tons alaranjados.
 
-\begin{figure}[htbp]
-  \centering
+\begin{MyCenteredFigure}
   \label{fig:conflitoDisciplinaTitulos}
   \caption{Avisos flutuantes dos conflitos de disciplinas}
   \includegraphics[scale=0.27]{./files/img/Codificacao/Conflitos/Categorias Disciplinas.png}
-  \legend{\selfAuthor}
-\end{figure}
+\end{MyCenteredFigure}
 
 Os semestres possíveis são três: o primeiro semestre, o segundo semestre e o ``período de verão''. No caso do período de verão, as disciplinas que têm o seu período esperado neste semestre são marcadas com um tom amarelado, visto que não há relevância da sua paridade em um período de férias. Já nos casos das disciplinas de paridade ímpar (disciplinas dos períodos 1, 3, 5, 7 e 9) no primeiro semestre, ou as disciplinas de paridade par (disciplinas dos períodos 2, 4, 6, 8 e 10) no segundo semestre, estas são marcadas com um tom esverdeado, sendo aquelas referentes aos períodos finais do curso marcadas com um tom mais escuro. Já as disciplinas pares em semestres ímpares, ou as disciplinas ímpares em semestre pares, são ilustradas com a cor avermelhada, seguindo a mesma lógica de gradiente escuro nos últimos períodos.
