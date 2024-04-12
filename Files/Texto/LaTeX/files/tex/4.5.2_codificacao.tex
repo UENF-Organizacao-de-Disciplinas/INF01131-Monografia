@@ -132,6 +132,12 @@ Para suprir a necessidade de um servidor que pudesse executar o \textit{backend}
 
 O uso da AWS segue a mesma lógica do servidor local, com a diferença de que o servidor está em nuvem, e não localmente, assim resolvendo o primeiro dos dois problemas citados. Neste contexto, o uso da AWS foi feito através de três serviços principais: o \textit{API Gateway} para a recepção das requisições HTTP, o \textit{Lambda} para a execução das funções que acessam o banco de dados, e o \textit{RDS} para o armazenamento dos dados; serviços estes que serão descritos mais detalhadamente a seguir.
 
+\begin{MyCenteredFigure}
+  \caption{API REST no AWS}
+  \label{fig:APIAWS}
+  \includegraphics[width=\textwidth]{files/img/Codificacao/API-Funcionamento API.drawio.png}
+\end{MyCenteredFigure}
+
 O uso desses três serviços permitiu a execução do \textit{backend} do sistema em nuvem, e assim, atingindo a permanência dos dados. Com isso, o sistema passou a ser capaz de manter os dados mesmo após a recarga da página, e assim, atender a uma das principais necessidades do sistema.
 
 % \subsubsubsection*{CORS} % Até agora não entendi direito pra que serve isso.
@@ -143,12 +149,6 @@ O conjunto de funcionalidades da AWS envolve em grande parte o objetivo de mante
 Tanto o API Gateway quanto as funções Lambda precisaram sofrer diversas modificações ao longo do desenvolvimento, e para que essas modificações fossem aplicadas. A aplicação dessas modificações é chamada de implantação (\textit{deploy}), onde a AWS substitui a versão atual do sistema pela nova versão. Essa aplicação de modificações foi inicialmente feita através da interface web da AWS, porém, com o tempo, foi percebido que essa abordagem era ineficiente. No caso do API Gateway, a ineficiência não era tão grande, visto que assim que as rotas estiverem configuradas, não há a necessidade de alterá-las. Já no caso das funções Lambda, cada mínima mudança no código requisitava um novo \textit{deploy} para cada uma das funções alteradas.
 
 Outro detalhe percebido, foi que boa parte do código se repetia entre as funções que interagiam diretamente com o banco de dados. Sendo assim, passou-se a utilizar das \textit{Lambda Layers}, que são camadas que podem ser compartilhadas entre diversas funções, e assim, diminuir a quantidade de código repetido. Essa nova abordagem permitiu que as funções fossem mais enxutas, e que as mudanças fossem aplicadas de forma mais rápida, visto que bibliotecas e funções comuns entre as funções eram compartilhadas entre elas.
-
-\begin{MyCenteredFigure}
-  \caption{API REST no AWS}
-  \label{fig:APIAWS}
-  \includegraphics[width=\textwidth]{files/img/Codificacao/API-Funcionamento API.drawio.png}
-\end{MyCenteredFigure}
 
 \subsubsubsection*{AWS CLI}
 
@@ -393,6 +393,12 @@ Os conflitos calculados são representados de três formas diferentes. A primeir
 Embora o sistema seja projetado para ser permissivo quanto a inexistência de certas informações, é sempre esperado que a maior quantidade de informações possíveis seja inserida, assim, caso algum campo não tenha sido preenchido a cor de fundo do elemento será alterada para um tom acinzentado.
 
 % "propriedades conflituosas" é um bom termo?
+\begin{MyCenteredFigure}
+  \caption{Paleta de cores do sistema}
+  \label{fig:conflitoDisciplinaPaleta}
+  \includegraphics[width=\textwidth]{./files/img/Codificacao/Conflitos/Paleta de Cores.png}
+\end{MyCenteredFigure}
+
 
 \subsubsection{Professores}
 
@@ -421,9 +427,9 @@ Além disso, também é feita a comparação entre a quantidade máxima de aluno
 \subsubsection{Disciplina}
 
 \begin{MyCenteredFigure}
-  \caption{Paleta de cores do sistema}
-  \label{fig:conflitoDisciplinaPaleta}
-  \includegraphics[width=\textwidth]{./files/img/Codificacao/Conflitos/Paleta de Cores.png}
+  \caption{Exemplo de conflito de capacidade na sala}
+  \label{fig:conflitoAlocacaoSalasCapacidade}
+  \includegraphics[scale=0.7]{./files/img/Codificacao/Conflitos/Demanda X Capacidade.png}
 \end{MyCenteredFigure}
 
 Além desses conflitos, outras características analisadas e representadas se referem às disciplinas atribuídas às turmas, que, embora não representem necessariamente um \textit{conflito}, mas sim um indicativo, ainda assim serão tratados como conflitos por motivos de simplificação. Esse indicativo leva em consideração o semestre selecionado e o período esperado da disciplina de certa turma. Utilizando de lógica similar, também é indicado caso não tenha sido atribuído um período à disciplina, e se, para o curso de Ciência da Computação, a disciplina é considerada como \textbf{Eletiva Livre}, \textbf{Eletiva Optativa}, ambas em tons azulados, ou se não é uma disciplina para o curso de Ciência da Computação, sendo então representada em tons alaranjados.
