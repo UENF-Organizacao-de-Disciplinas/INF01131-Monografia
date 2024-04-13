@@ -1,11 +1,11 @@
-\chapter{Contexto acadêmico \textit{Timetabling Problem}} % ## 2. Contexto do _Timetabling Problem_ no meio acadêmico
+\chapter{Contexto acadêmico \textit{Timetabling Problem}} \label{chap:contexto}
 
 Antes de prosseguirmos com o desenrolar deste trabalho, é adequado que primeiro definamos alguns parâmetros para o melhor entendimento do que está por vir.
 
-% <!-- O Problema de Programação de Horários (Timetabling Problem) é um problema de grande relevância e amplamente estudado na área de Pesquisa Operacional. Um número significativo de trabalhos sobre esse problema foi publicado nos últimos anos e conferências regulares discutem o tema no meio científico [Splinder2010]. -->
-% <!-- Sânya -->
-% <!-- O Problema de Programação de Horário Escolar pode ser generalizado como o escalonamento semanal das aulas em uma escola sem que professores e alunos tenham mais de uma aula ao mesmo tempo (estudantes são agrupados em turmas com os mesmos planos de aula). Já o Problema de Programação de Horário de Disciplinas em Universidades como o escalonamento semestral das aulas de um conjunto de disciplinas de uma universidade de modo a evitar colisão de horários (estudantes geralmente são considerados individualmente) [Paim__2010]. -->
-% <!-- Sânya -->
+% O Problema de Programação de Horários (Timetabling Problem) é um problema de grande relevância e amplamente estudado na área de Pesquisa Operacional. Um número significativo de trabalhos sobre esse problema foi publicado nos últimos anos e conferências regulares discutem o tema no meio científico [Splinder2010].
+% Sânya
+% O Problema de Programação de Horário Escolar pode ser generalizado como o escalonamento semanal das aulas em uma escola sem que professores e alunos tenham mais de uma aula ao mesmo tempo (estudantes são agrupados em turmas com os mesmos planos de aula). Já o Problema de Programação de Horário de Disciplinas em Universidades como o escalonamento semestral das aulas de um conjunto de disciplinas de uma universidade de modo a evitar colisão de horários (estudantes geralmente são considerados individualmente) [Paim__2010].
+% Sânya
 
 \section{Definição de termos} % ### 2.1 Definição de termos
 
@@ -17,13 +17,13 @@ O termo \textit{timetable} tem o mesmo valor que ``grade horária'' e serão usa
 
 Vale ressaltar que este termo não tem seu uso limitado para os fins desta pesquisa, sendo também usado para problemas de alocação de enfermeiros, esportes, funcionários e transportes \cite{arratia-martinez_university_2021}. Entretanto, neste trabalho, abordaremos principalmente os termos relacionados ao que pode ser chamado de \textit{Educational Timetabling} (Ed-TT) \cite{alencar_visualization_2019}, que é o que tende a envolver um conjunto específico de recursos relacionados à educação.
 
-% <!-- Sânya fala sobre International Timetabling Competition -->
+% Sânya fala sobre International Timetabling Competition
 
 Wren também define os conceitos para \textit{class timetable}, \textit{university examination timetable} e \textit{university class timetable}, tendo relevância apenas o último, que considera a disponibilidade de professores e salas, a quantidade de alunos e os requisitos que determinada disciplina exige.
 
-Exemplo: Enquanto que a disciplina ``Laboratório de Física'' exige que a aula seja ministrada em um tipo de sala específica com os equipamentos necessários, a disciplina ``computação e sociedade'' não apresenta esta restrição, ficando limitada apenas à quantidade de pessoas na turma.
+Trazendo para a realidade do Curso de Ciência da Computação na UENF podemos exemplificar que enquanto que disciplina \textbf{laboratório de física} exige que a aula seja ministrada em um tipo de sala específica com os equipamentos necessários, já a disciplina \textbf{computação e sociedade} não apresenta esta restrição, ficando limitada apenas à quantidade de pessoas na turma.
 
-Aqui, visto que uma solução final envolverá várias dimensões (Professores x Disciplinas x Sala x Alunos x Horários x Dias), consideraremos \textit{timetable} como esse pacote de valores distribuídos em uma só estrutura. Para que esses valores sejam distribuídos, daremos o nome de \textbf{alocação} ao ato de criar qualquer relação entre as dimensões. Como a relação de horários e dias será considerada fixa, a \textbf{alocação} se referirá à atribuição como a de professores a disciplinas, disciplinas a salas, disciplinas a um determinado padrão de dias e horários, etc.
+Aqui, visto que uma solução final envolverá várias dimensões (Professores $\times$ Disciplinas $\times$ Sala $\times$ Alunos $\times$ Horários $\times$ Dias), consideraremos \textit{timetable} como esse pacote de valores distribuídos em uma só estrutura. Para que esses valores sejam distribuídos, daremos o nome de \textbf{alocação} ao ato de criar qualquer relação entre as dimensões. Como a relação de horários e dias será considerada fixa, a \textbf{alocação} se referirá à atribuição como a de professores a disciplinas, disciplinas a salas, disciplinas a um determinado padrão de dias e horários, etc.
 
 Para que esta alocação ocorra, é necessário atender a certos critérios, e aí entra o ``problema de organização de grade horária'', também chamado de \textit{timetabling problem}. Esta é uma subcategoria do \textbf{problema de agendamento} (\textit{scheduling Optimization Problem}) \cite{alencar_visualization_2019} que por sua vez é definido por \cite{goos_scheduling_1996} como sendo:
 
@@ -43,83 +43,76 @@ Alguns outros termos similares a este campo de pesquisa encontrados na literatur
 
 \section{Métodos de resolução} % ### 2.2. Métodos de resolução
 
-% <!--
 % - O problema de timetabling   a
-%   - Origem                    a
-%   - Repartições               a
-%   - Escopo maior              a
-%     - Scheduling              a
-%   - Escopo menor              a
-%     - Exam                    a
-%     - Class                   a
+%  - Origem                    a
+%  - Repartições               a
+%  - Escopo maior              a
+%    - Scheduling              a
+%  - Escopo menor              a
+%    - Exam                    a
+%    - Class                   a
 % - TT
-%   - Soluções
-%   - Desafios
-%   - Diversas formas de resolução
-%     - Graph Coloring
-%     - Heurísticas
-%     - Meta-heurísticas
-%     - IA
-%     - etc.
+%  - Soluções
+%  - Desafios
+%  - Diversas formas de resolução
+%    - Graph Coloring
+%    - Heurísticas
+%    - Meta-heurísticas
+%    - IA
+%    - etc.
 % - Visualização de informações
-%   - Benefícios
-%   - Motivações
-%   - Relação com timetabling
+%  - Benefícios
+%  - Motivações
+%  - Relação com timetabling
 % - Problema geral a ser resolvido
-%   - Multi dimensionalidade
-%     - Professores
-%     - Alunos
-%     - Salas
-%     - Departamentos
-%       - Preferências
-%       - Concorrências
-%   - Otimalidade
-%   - Erros humanos
-%   - Número de possibilidades
-%   - Interface intuitiva e relevante é um desafio com poucos estudos nos últimos anos
+%  - Multi dimensionalidade
+%    - Professores
+%    - Alunos
+%    - Salas
+%    - Departamentos
+%      - Preferências
+%      - Concorrências
+%  - Otimalidade
+%  - Erros humanos
+%  - Número de possibilidades
+%  - Interface intuitiva e relevante é um desafio com poucos estudos nos últimos anos
 % - Problemas específicos
-%   - Regras específicas
-%   - Prioridades diferentes
-%   - estrutura organizacional semi-exclusiva
-% -->
+%  - Regras específicas
+%  - Prioridades diferentes
+%  - estrutura organizacional semi-exclusiva
 
-% <!--
 % Pesquisar posteriormente sobre imagens que ilustrem bem as diferentes sub categorias de scheduling
-% -->
 
 Existem diversas implementações já realizadas, utilizando uma miríade de métodos. Em seu trabalho \cite{miranda_udpskeduler_2012}, J. Miranda informa sobre diversos sistemas baseados em computador para auxiliar na tarefa de agendamento. J. Miranda também cita um dos métodos de resolução como sendo o \textbf{modelo de programação inteira} e \textbf{heurísticas}.
 
 Outros trabalhos buscaram condensar em forma de tabela as informações encontradas. Abaixo estão dispostas algumas das tabelas encontradas durante o estudo bibliográfico e que foram elaboradas por diversos autores.
 
-Na \autoref{Desenvolvimento}, \cite{alegre_desenvolvimento_2012} traça a relação entre os diversos autores, ano de sua publicação e seu país de origem com os dados encontrados em seus trabalhos quanto aos parâmetros utilizados na elaboração da grade horária, quão grandes eram cada um de seus parâmetros, quanto tempo foi necessário para achar uma solução e quais foram as técnicas utilizadas.
+Na \autoref{fig:Desenvolvimento}, \citeonline{alegre_desenvolvimento_2012} traça a relação entre os diversos autores, ano de sua publicação e seu país de origem com os dados encontrados em seus trabalhos quanto aos parâmetros utilizados na elaboração da grade horária, quão grandes eram cada um de seus parâmetros, quanto tempo foi necessário para achar uma solução e quais foram as técnicas utilizadas.
 
-% <!-- % Entender o que está dando errado aqui depois -->
-
-% ![Resumo de trabalhos, parâmetros, dimensões, tempo e técnicas.](img/tabelas/Desenvolvimento.png)
+% Entender o que está dando errado aqui depois
 
 \begin{figure}[htbp]\centering
-  \caption{\label{Desenvolvimento}Resumo de trabalhos, parâmetros, dimensões, tempo e técnicas.}
-  \includegraphics[scale=1]{files/img/Tabelas/Desenvolvimento.png}
+  \caption{Resumo de trabalhos, parâmetros, dimensões, tempo e técnicas.}
+  \label{fig:Desenvolvimento}
+  \includegraphics[width=\textwidth]{files/img/Tabelas/Desenvolvimento}
   \legend{Fonte: \cite{alegre_desenvolvimento_2012}}
 \end{figure}    % Desenvolvimento
 
-Na \autoref{University}, \cite{arratia-martinez_university_2021}, apresenta uma comparação similar à anterior, porém não separada em categorias, apenas categorizando entre verdadeiro e falso algumas características como alocação de salas, professores, nível institucional e método exato ou inexato.
-
-% ![Comparação entre artigos que solucionam o problema de grade horária](img/tabelas/University.png)
+Na \autoref{fig:University}, \cite{arratia-martinez_university_2021}, apresenta uma comparação similar à anterior, porém não separada em categorias, apenas categorizando entre verdadeiro e falso algumas características como alocação de salas, professores, nível institucional e método exato ou inexato.
 
 \begin{figure}[htbp]\centering
-  \caption{\label{University}Comparação entre artigos que solucionam o problema de grade horária}
-  \includegraphics[scale=0.37]{files/img/Tabelas/University.png}
+  \caption{Comparação entre artigos que solucionam o problema de grade horária}
+  \label{fig:University}
+  \includegraphics[width=\textwidth]{files/img/Tabelas/University}
   \legend{Fonte: \cite{arratia-martinez_university_2021} - editado}
 \end{figure}    % University
 
-Na \autoref{Visualization}, \cite{alencar_visualization_2019} explora uma categoria mais específica do problema, que é a característica da interatividade das interfaces desenvolvidas. Este apresenta características qualitativas quanto aos métodos, os dados dispostos, as técnicas de interação e o método utilizado para solucionar o problema de grade horária educacional. Nesta figura, os autores usam ``Y'' para simbolizar ``Sim'', ``N'' para ``Não'' e ``-'' para ``Inconclusivo''.
-
-% ![Análise de publicações aceitas.](img/tabelas/Visualization.png)
+Na \autoref{fig:Visualization}, \cite{alencar_visualization_2019} explora uma categoria mais específica do problema, que é a característica da interatividade das interfaces desenvolvidas. Este apresenta características qualitativas quanto aos métodos, os dados dispostos, as técnicas de interação e o método utilizado para solucionar o problema de grade horária educacional. Nesta figura, os autores usam ``Y'' para simbolizar ``Sim'', ``N'' para ``Não'' e ``-'' para ``Inconclusivo''.
 
 \begin{figure}[htbp]\centering
-  \caption{\label{Visualization}Análise de publicações aceitas.}
-  \includegraphics[scale=0.7]{files/img/Tabelas/Visualization.png}
+  \caption{Análise de publicações aceitas}
+  \label{fig:Visualization}
+  \includegraphics[width=\textwidth]{files/img/Tabelas/Visualization}
   \legend{Fonte: \cite{alencar_visualization_2019} - editado}
 \end{figure}    % Visualization
 
@@ -133,7 +126,6 @@ Apesar do contrafluxo encontrado na resolução desse problema, Tomáš cita que
 
 Com isso, entramos também no ramo da Interação Homem-Máquina, ramo abordado por Dinata \cite{andre_interaction_2018} que visou em seu desenvolvimento a criação de uma interface focada no usuário. Assim minimizando o atrito na abordagem desse problema complexo. Também sendo área de enfoque de \cite{alencar_visualization_2019} em sua revisão literária
 
-% <!--
 % ### 2.5. Contexto histórico e origem
 
 % - Como surgiu essa área? Em que momento ela se dividiu? Devo falar sobre isso?
@@ -141,7 +133,6 @@ Com isso, entramos também no ramo da Interação Homem-Máquina, ramo abordado 
 % ### 2.6. Técnicas existentes(?)
 
 % - Falar sobre técnicas existentes e quem já fez. Tipo o que aquele artigo sem DOI fez
-% -->
 
 \section{Trabalhos anteriores} % ### 2.4. Trabalhos anteriores
 

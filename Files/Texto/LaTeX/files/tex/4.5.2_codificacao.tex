@@ -1,4 +1,4 @@
-\section{Desenvolvimento} % ### 5.5.1. História do desenvolvimento
+\section{Programação do sistema} % ### 5.5.1. História do desenvolvimento
 
 %% Acho que vai ficar mais fácil assim
 
@@ -63,7 +63,7 @@ Com isso, utilizando o GitHub Projects, foi organizado uma tabela de tarefas, vi
 \begin{MyCenteredFigure}
   \caption{Tabela de tarefas do GitHub Projects}
   \label{fig:GitHubProjectsTable}
-  \includegraphics[width=\textwidth]{files/img/Codificacao/GitHubProjects - Table.png}
+  \includegraphics[width=\textwidth]{files/img/Codificacao/GitHubProjects - Table}
 \end{MyCenteredFigure}
 
 Tendo este novo sistema de tarefas em prática, foi possível tranquilizar a mente quanto ao conflito entre as funcionalidades que precisavam ser desenvolvidas, as que já estavam prontas, as que poderiam ter melhorias e quais se desejava implementar no futuro.
@@ -85,7 +85,7 @@ O \textbf{banco de dados} recebe a requisição, processa a operação, e então
 \begin{MyCenteredFigure}
   \caption{Diagrama da progressão funcionamento da permanência dos dados}
   \label{fig:API}
-  \includegraphics[width=\textwidth]{files/img/Codificacao/API - com diagrama.png}
+  \includegraphics[width=\textwidth]{files/img/Codificacao/API - com diagrama}
 \end{MyCenteredFigure}
 
 \textbf{Resumidamente}: O \textbf{\textit{frontend}} envia uma requisição HTTP com uma carga de informações a um \textbf{\textit{endpoint}}, que encaminha a requisição a uma \textbf{função} específica que executa uma operação no \textbf{banco de dados}, assim retornando o status da operação ao \textit{frontend}. Essa sequência é ilustrada na \autoref{fig:API}.
@@ -113,7 +113,7 @@ Apesar da primeira tentativa de importação não ter sido completamente bem suc
 \begin{MyCenteredFigure}
   \caption{Diagrama primitivo das tabelas de dados SQL}
   \label{fig:TabelasIniciais}
-  \includegraphics[scale=0.7]{files/img/Codificacao/DB inicial.png}
+  \includegraphics[scale=0.7]{files/img/Codificacao/DB inicial}
 \end{MyCenteredFigure}
 
 \paragraph*{Acesso ao Banco de Dados}
@@ -135,7 +135,7 @@ O uso da AWS segue a mesma lógica do servidor local, com a diferença de que o 
 \begin{MyCenteredFigure}
   \caption{API REST no AWS}
   \label{fig:APIAWS}
-  \includegraphics[width=\textwidth]{files/img/Codificacao/API-Funcionamento API.drawio.png}
+  \includegraphics[width=\textwidth]{files/img/Codificacao/API-Funcionamento API.drawio}
 \end{MyCenteredFigure}
 
 O uso desses três serviços permitiu a execução do \textit{backend} do sistema em nuvem, e assim, atingindo a permanência dos dados. Com isso, o sistema passou a ser capaz de manter os dados mesmo após a recarga da página, e assim, atender a uma das principais necessidades do sistema.
@@ -154,7 +154,7 @@ Outro detalhe percebido, foi que boa parte do código se repetia entre as funç�
 
 Nas primeiras tentativas de \textit{deploy}, duas abordagens eram utilizadas: a primeira era a de copiar e colar o código diretamente na interface web da AWS, e a segunda era a de fazer o upload de um arquivo zip contendo o código.
 
-\begin{lstlisting}[caption={Código de \textit{deploy} de Lambda}, label={lst:lambda}]
+\begin{lstlisting}[caption={Código de \textit{deploy} de Lambda}, label={code:lambda}]
 aws lambda create-function \
 --function-name createProfessor \
 --runtime nodejs20.x \
@@ -163,7 +163,7 @@ aws lambda create-function \
 --zip-file fileb://Files/AWS/lambdas/createProfessor/createProfessor.zip
 \end{lstlisting}
 
-Como mostrado no \autoref{lst:lambda}, usa-se o software AWS CLI para criar uma função lambda. O comando \textit{create-function} é o comando que cria a função, e os argumentos que seguem são os parâmetros necessários para a criação da função. O \textit{function-name} é o nome da função, o \textit{runtime} é a versão do Node.js que a função utiliza, o \textit{role} é o conjunto de permissões criadas na seção \textit{AWS Identity and Access Management} (IAM), o \textit{handler} é o nome do arquivo principal que contém a função, e o \textit{zip-file} é o arquivo zip que contém o código da função.
+Como mostrado no \autoref{code:lambda}, usa-se o software AWS CLI para criar uma função lambda. O comando \textit{create-function} é o comando que cria a função, e os argumentos que seguem são os parâmetros necessários para a criação da função. O \textit{function-name} é o nome da função, o \textit{runtime} é a versão do Node.js que a função utiliza, o \textit{role} é o conjunto de permissões criadas na seção \textit{AWS Identity and Access Management} (IAM), o \textit{handler} é o nome do arquivo principal que contém a função, e o \textit{zip-file} é o arquivo zip que contém o código da função.
 
 Com isso, ao executar o comando, a função é criada, e então, a nova versão do código é aplicada. Com este fluxo de trabalho, embora permita o \textit{deploy} sem a direta conexão ao sistema AWS, ainda assim é necessário executar comandos específicos para cada uma, tendo que manualmente compactar o código e fazer o upload de cada um dos arquivos das diversas funções coexistentes.
 
@@ -171,9 +171,9 @@ Com isso, ao executar o comando, a função é criada, e então, a nova versão 
 
 Como solução, foi utilizado o AWS SAM (\textit{Serverless Application Model}), que é uma extensão do \textit{AWS CloudFormation} que simplifica o desenvolvimento de aplicações sem servidor. O AWS SAM permite a definição de aplicações sem servidor de forma mais simples, e a partir disso, é possível fazer o \textit{deploy} de toda a aplicação de uma vez só. O uso do AWS SAM foi feito através de um arquivo \textit{template.yaml}, que contém a definição de todas as funções Lambda, e de recursos necessários para o funcionamento do sistema.
 
-\lstinputlisting[language={YAML}, caption={\textit{Exemplo de template.yaml}}, label={lst:template}]{./files/codigos/AWS_SAM.yaml}
+\lstinputlisting[language={YAML}, caption={\textit{Exemplo de template.yaml}}, label={code:template}]{files/codigos/AWS_SAM.yaml}
 
-Como mostrado no \autoref{lst:template}, o arquivo \textit{template.yaml} contém a definição de algumas das estruturas utilizadas para este sistema, principalmente as funções Lambda, visto que são quatro funções para cada uma das seis entidades, totalizando 24 funções. O arquivo contém a definição de cada uma das funções, e de cada uma das rotas que elas atendem. A partir disso, é possível fazer o \textit{deploy} de todas as funções que foram alteradas de uma vez só, e assim, diminuir o tempo de \textit{deploy} e a quantidade de comandos necessários.
+Como mostrado no \autoref{code:template}, o arquivo \textit{template.yaml} contém a definição de algumas das estruturas utilizadas para este sistema, principalmente as funções Lambda, visto que são quatro funções para cada uma das seis entidades, totalizando 24 funções. O arquivo contém a definição de cada uma das funções, e de cada uma das rotas que elas atendem. A partir disso, é possível fazer o \textit{deploy} de todas as funções que foram alteradas de uma vez só, e assim, diminuir o tempo de \textit{deploy} e a quantidade de comandos necessários.
 
 Após o preparativo do arquivo \textit{template.yaml}, o \textit{deploy} é feito através do conjunto de comandos \textit{sam build; sam deploy}, que primeiro combina o \textit{CloudFormation Template} com o código da aplicação, e em seguida realiza o \textit{deploy} de todas as funções definidas no arquivo. Com isso, o sistema passou a ser mais facilmente atualizável, e mais facilmente mantido.
 
@@ -200,7 +200,7 @@ Os marcos visam distinguir as tarefas por suas versões, e também por seus tipo
 \begin{MyCenteredFigure}
   \caption{Marcos do GitHub Projects}
   \label{fig:ProjectsMilestones}
-  \includegraphics[scale=0.6]{files/img/Codificacao/GitHubProjects - Open Milestones.png}
+  \includegraphics[scale=0.6]{files/img/Codificacao/GitHubProjects - Open Milestones}
 \end{MyCenteredFigure}
 
 \begin{enumerate}
@@ -222,7 +222,7 @@ No Projects, também foram adicionadas as \textbf{etiquetas} que distinguem as t
 \begin{MyCenteredFigure}
   \caption{Etiquetas do GitHub Projects}
   \label{fig:ProjectsLabels}
-  \includegraphics[scale=0.6]{files/img/Codificacao/GitHubProjects - Labels.png}
+  \includegraphics[scale=0.6]{files/img/Codificacao/GitHubProjects - Labels}
 \end{MyCenteredFigure}
 
 \begin{enumerate}
@@ -242,7 +242,7 @@ O GitHub Projects também oferece a possibilidade de visualização de gráficos
 \begin{MyCenteredFigure}
   \caption{Gráfico de Marco \textit{versus} quantidade de tarefas separadas por etiqueta}
   \label{fig:ProjectsInsights}
-  \includegraphics[width=\textwidth]{files/img/Codificacao/GitHubProjects - Insights - Stacked Line Milestone_Label.png}
+  \includegraphics[width=\textwidth]{files/img/Codificacao/GitHubProjects - Insights - Stacked Line Milestone_Label}
 \end{MyCenteredFigure}
 
 Com eles, pode-se ter uma noção das métricas do projeto, como por exemplo:
@@ -330,14 +330,14 @@ Para acumular mais dados referentes às entidades do banco de dados, foram tomad
 \begin{MyCenteredFigure}
   \caption{Diagrama do fluxo de obtenção de dados}
   \label{fig:DataFlow}
-  \includegraphics[width=\textwidth]{files/img/Codificacao/Processamento de dados.drawio.png}
+  \includegraphics[width=\textwidth]{files/img/Codificacao/Processamento de dados.drawio}
 \end{MyCenteredFigure}
 
 A forma teoricamente mais direta e eficiente para se obter os dados das entidades é a obtenção das informações contidas no banco de dados do sistema acadêmico. Para este fim, foi feita uma solicitação ao responsável pela Secretaria Acadêmica (SECACAD) da UENF, que direcionou a solicitação ao desenvolvedor do Sistema Acadêmico. A resposta obtida do desenvolvedor foi que a solicitação não poderia ser atendida, visto que não detinha a posse dos dados, e que para que pudesse fornecê-los, seria necessária uma solicitação formal à reitoria da UENF. Essa solicitação foi então passada à Coordenação do curso de Ciência da Computação, com o qual ficou decidido abandonar a ideia e buscar outras formas de obtenção dos dados.
 
 Paralelamente à abordagem anterior foram feitas tentativas individuais de obtenção dos dados. O processamento de tabelas e PDFs e o \textit{web scraping} foram as abordagens utilizadas. Inicialmente os dados foram coletados e armazenados em tabelas, e então, convertidos para o formato CSV. Os arquivos CSV, por sua vez, foram utilizados em \textit{scripts} Python que os convertiam em \textit{queries} SQL, para que assim então fossem adicionados ao banco de dados.
 
-Os PDFs analisados dispunham de tabelas referentes à oferta de turmas para o CCT, mas os dados advindos do processamento de PDF não são tão estruturados quanto os de uma tabela Excel, por este motivo, a primeira abordagem foi a solicitação dos arquivos tabulares para aquele que os produziu. Não havendo resposta favorável quanto a isso, diversos softwares de conversão de tabelas em PDF para Excel foram testados, porém, nenhum deles foi capaz de converter as tabelas de forma satisfatória. Um dos agravantes é a existência de células mescladas, o que torna mais complicada a conversão direta. Outra abordagem testada foi a de importação direta dos PDFs através do Excel e também o simples copiar e colar. Nenhum desses métodos foi eficiente, então com isso alguns dados foram coletados, mas sem certeza quanto à sua precisão. Deste método foram coletadas as informações referentes à nomes de professores e disciplinas, capacidades das salas, e horários de aulas.
+Os PDFs analisados dispunham de tabelas referentes à oferta de turmas para o CCT, mas os dados advindos do processamento de PDF não são tão estruturados quanto os de uma tabela Excel, por este motivo, a primeira abordagem foi a solicitação dos arquivos tabulares para aquele que os produziu. Não havendo resposta favorável quanto a isso, diversos \textit{softwares} de conversão de tabelas em PDF para Excel foram testados, porém, nenhum deles foi capaz de converter as tabelas de forma satisfatória. Um dos agravantes é a existência de células mescladas, o que torna mais complicada a conversão direta. Outra abordagem testada foi a de importação direta dos PDFs através do Excel e também o simples copiar e colar. Nenhum desses métodos foi eficiente, então com isso alguns dados foram coletados, mas sem certeza quanto à sua precisão. Deste método foram coletadas as informações referentes à nomes de professores e disciplinas, capacidades das salas, e horários de aulas.
 
 Além dos PDFs anteriores, haviam também os arquivos referentes à oferta de turmas para o curso de Ciência da Computação. Estes sim dispunham também de sua versão em Excel, e assim, foram processados utilizando \textit{scripts} Python. A abordagem apresentou falhas, visto que a notação das informações não apresentava o mesmo padrão ao longo dos anos, então foi necessário fazer ajustes manuais, resultando em uma tabela normalizada com diversas pastas de trabalhos referentes a cada um dos semestres desde 2019, não considerando os semestres de verão. Deste método foram coletadas as informações referentes à nomes e apelidos de professores e disciplinas, demandas estimadas dos alunos pela turma, descrição da turma, e horários de aulas.
 
@@ -395,7 +395,7 @@ Embora o sistema seja projetado para ser permissivo quanto a inexistência de ce
 \begin{MyCenteredFigure}
   \caption{Paleta de cores do sistema}
   \label{fig:conflitoDisciplinaPaleta}
-  \includegraphics[width=\textwidth]{./files/img/Codificacao/Conflitos/Paleta de Cores.png}
+  \includegraphics[width=\textwidth]{files/img/Codificacao/Conflitos/Paleta de Cores}
 \end{MyCenteredFigure}
 
 Os conflitos que são representados por cores, têm sua paleta de cores representada na \autoref{fig:conflitoDisciplinaPaleta}. Nessa paleta, dispõe-se de 3 conjuntos principais: a distribuição de cores para as disciplinas obrigatórias do curso de Ciência da Computação, que variam de acordo com o semestre em que são ofertadas; a categoria das disciplinas não obrigatórias para o curso de Ciência da Computação; e os conflitos das outras entidades, que são classificados amplamente entre ``com conflito'', ``sem conflito'' e ``conflito nulo''.
@@ -407,7 +407,7 @@ O sistema contempla a checagem de conflitos de alocação simultânea de profess
 \begin{MyCenteredFigure}
   \caption{Exemplo de conflito de alocação de professor}
   \label{fig:conflitoAlocacaoProfessor}
-  \includegraphics[width=\textwidth]{./files/img/Codificacao/Conflitos/Alocação de professores.png}
+  \includegraphics[width=\textwidth]{files/img/Codificacao/Conflitos/Alocação de professores}
 \end{MyCenteredFigure}
 
 Caso haja algum conflito, o sistema destaca o professor em questão, tornando a sua cor de fundo avermelhada. Além disso, ao passar o mouse sobre o nome do professor, é exibido um alerta flutuante, informando que quais são as turmas e horários que estão em conflito. Esse comportamento é exemplificado na \autoref{fig:conflitoAlocacaoProfessor}, onde o professor Tang é alocado em duas turmas que ocorrem simultaneamente durante algum intervalo de tempo durante os horários de quarta e sexta-feira, assim informando no alerta flutuante quais são as turmas e horários que estão alocados simultaneamente.
@@ -419,7 +419,7 @@ As salas também apresentam a verificação do conflito de alocação simultâne
 \begin{MyCenteredFigure}
   \caption{Exemplo de conflito de alocação de sala}
   \label{fig:conflitoAlocacaoSalas}
-  \includegraphics[scale=0.7]{./files/img/Codificacao/Conflitos/Alocação de Salas - Sala.png}
+  \includegraphics[width=\textwidth]{files/img/Codificacao/Conflitos/Alocação de Salas - Sala}
 \end{MyCenteredFigure}
 
 Além disso, também é feita a comparação entre a quantidade máxima de alunos comportados na sala e a quantidade de alunos estimados para a turma. Este conflito por sua vez é ilustrado tornando avermelhado o fundo da demanda estimada e da seleção de salas. Caso uma turma tenha mais de um horário, é calculada a quantidade remanescente dos alunos que demandam a disciplina com relação a cada uma das capacidades das salas destes horários, mostrando cada um deles no alerta flutuante.
@@ -429,7 +429,7 @@ Então, como pode-se perceber na \autoref{fig:conflitoAlocacaoSalasCapacidade}, 
 \begin{MyCenteredFigure}
   \caption{Exemplo de conflito de capacidade na sala}
   \label{fig:conflitoAlocacaoSalasCapacidade}
-  \includegraphics[scale=0.7]{./files/img/Codificacao/Conflitos/Demanda X Capacidade.png}
+  \includegraphics[width=\textwidth]{files/img/Codificacao/Conflitos/Demanda X Capacidade}
 \end{MyCenteredFigure}
 
 \subsubsection{Disciplina}
@@ -439,7 +439,7 @@ Além desses conflitos, outras características analisadas e representadas se re
 \begin{MyCenteredFigure}
   \caption{Avisos flutuantes dos conflitos de disciplinas}
   \label{fig:conflitoDisciplinaTitulos}
-  \includegraphics[width=\textwidth]{./files/img/Codificacao/Conflitos/Categorias Disciplinas.png}
+  \includegraphics[width=\textwidth]{files/img/Codificacao/Conflitos/Categorias Disciplinas}
 \end{MyCenteredFigure}
 
 Já no lado esquerdo da \autoref{fig:conflitoDisciplinaTitulos}, vemos os conflitos que correlacionam os períodos esperados das disciplinas obrigatórias do curso de Ciência da Computação com o semestre em que foram ofertadas. Os semestres possíveis são três: o primeiro semestre, o segundo semestre e o ``período de verão''. No caso do período de verão, as disciplinas que têm o seu período esperado neste semestre são marcadas com um tom amarelado, visto que não há relevância da sua paridade em um período de férias. Já nos casos das disciplinas de paridade ímpar (disciplinas dos períodos 1, 3, 5, 7 e 9) no primeiro semestre, ou as disciplinas de paridade par (disciplinas dos períodos 2, 4, 6, 8 e 10) no segundo semestre, estas são marcadas com um tom esverdeado, sendo aquelas referentes aos períodos finais do curso marcadas com um tom mais escuro. Já as disciplinas pares em semestres ímpares, ou as disciplinas ímpares em semestre pares, são ilustradas com a cor avermelhada, seguindo a mesma lógica de gradiente escuro nos últimos períodos.

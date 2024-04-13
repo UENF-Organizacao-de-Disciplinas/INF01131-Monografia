@@ -1,4 +1,4 @@
-\chapter{Modelagem geral do sistema}
+\chapter{Modelagem geral do sistema} \label{chap:modelagem}
 
 Tendo esclarecido sobre as questões gerais do trabalho e da área de estudo. Agora nos aprofundaremos um pouco mais na modelagem e criação de diagramas que ilustrem o funcionamento geral do sistema e a forma como se dará a execução da metodologia proposta.
 
@@ -7,8 +7,9 @@ Tendo esclarecido sobre as questões gerais do trabalho e da área de estudo. Ag
 Em seu trabalho de aplicação prática, \cite{miranda_udpskeduler_2012} estruturou estágios que compõem o processo necessário para que enfim se alcance a definição de \textit{timetables} ótimas.
 
 \begin{figure}[htbp]\centering
-  \caption{\label{fig:geral} Estágios para a obtenção de grade horária ótima}
-  \includegraphics[scale=0.5]{files/img/Arquitetura/Arquitetura-UDP.png}
+  \caption{Estágios para a obtenção de grade horária ótima}
+  \label{fig:geral}
+  \includegraphics[width=\textwidth]{files/img/Arquitetura/Arquitetura-UDP}
   \legend{Fonte: \cite{miranda_udpskeduler_2012}}
 \end{figure}
 
@@ -19,8 +20,9 @@ Na \autoref{fig:geral}, estão dispostos 4 estágios principais. O primeiro disp
 Para se alcançar uma alta satisfação por parte dos \textit{stakeholders}, vê-se necessária a constante interação com os mesmos. Para isto, será seguida a estrutura utilizada por \cite{andre_interaction_2018}.
 
 \begin{figure}[htbp]\centering
-  \caption{\label{fig:IxD} Etapas do Design de Interação}
-  \includegraphics[scale=1]{files/img/Arquitetura/Arquitetura-IxD.png}
+  \caption{Etapas do Design de Interação}
+  \label{fig:IxD}
+  \includegraphics{files/img/Arquitetura/Arquitetura-IxD}
   \legend{\selfAuthor}
 \end{figure}    % University
 
@@ -31,22 +33,23 @@ Seguindo o conceito do Design de Interação, a \autoref{fig:IxD} ilustra o cicl
 O sistema final seguirá uma dinâmica similar à que foi ilustrada por \cite{bebis_information_2019} em seu trabalho sobre o uso da Visualização de Informações em relação às Ed-TTPs.
 
 \begin{figure}[htbp]\centering
-  \caption{\label{fig:sistema} Funcionamento geral do sistema}
-  \includegraphics[scale=0.6]{files/img/Arquitetura/Arquitetura_bebis_information_2019.png}
+  \caption{Funcionamento geral do sistema}
+  \label{fig:sistema}
+  \includegraphics[width=\textwidth]{files/img/Arquitetura/Arquitetura_bebis_information_2019}
   \legend{Fonte: \cite{bebis_information_2019}}
 \end{figure}
 
 A \autoref{fig:sistema} apresenta o comportamento geral do sistema, como seus diferentes segmentos interagem entre si e de que forma o usuário interage com o mesmo. O usuário poderá ajustar os objetivos da otimização e suas restrições, elas serão utilizadas nos métodos de otimização. Estes métodos serão utilizados para se alcançar soluções para estes critérios, as melhores serão então armazenadas. Em posso destes dados, a aplicação apresentará visualmente estas informações ao usuário, permitindo que ele interaja dinamicamente a fim de alcançar seus objetivos.
 
-\section{Modelo de Banco de Dados} \label{ModelagemBD} % ### 5.4. Modelo de Banco de Dados
+\section{Modelo de Banco de Dados} \label{sec:ModelagemBD} % ### 5.4. Modelo de Banco de Dados
 
 Considerando as informações necessárias para o presente trabalho, e também o preparo de campo para potenciais aplicações futuras, foi elaborado um diagrama conceitual de banco de dados, que pode ser visto na \autoref{fig:DiagramConceitual}.
 
-\begin{figure}[htbp]\centering
-  \caption{\label{fig:DiagramConceitual} Diagrama Conceitual do banco de dados}
-  \includegraphics[scale=0.2]{files/img/DiagramaConceitual/DiagramaConceitualBranco.png}
-  \legend{\selfAuthor}
-\end{figure} % Diagrama Conceitual
+\begin{MyCenteredFigure}
+  \caption{Diagrama Conceitual do banco de dados}
+  \label{fig:DiagramConceitual}
+  \includegraphics[width=\textwidth]{files/img/DiagramaConceitual/DiagramaConceitualBranco}
+\end{MyCenteredFigure} % Diagrama Conceitual
 
 O diagrama conceitual foi elaborado utilizando a ferramenta \href{https://www.drawio.com/}{draw.io} citada na metodologia e ilustra as relações entre diversas entidades presentes na realidade da UENF. O emaranhamento presente no diagrama ilustra a complexidade envolvida na criação de uma grade horária, onde diversas entidades se relacionam entre si.
 
@@ -56,11 +59,11 @@ Embora o diagrama apresente uma visão mais completa de todas as interconexões 
 
 % Tendo isso em vista, o modelo conceitual reduzido para o presente trabalho pode ser visto na \autoref{fig:DiagramConceitualReduzido}.
 
-% \begin{figure}[htbp]\centering
-%   \caption{\label{fig:DiagramConceitualReduzido} Diagrama Conceitual reduzido para o presente trabalho}
-%   \includegraphics[scale=0.2]{files/img/DiagramaConceitual/DiagramaConceitualReduzidoBranco.png}
-%   \legend{\selfAuthor}
-% \end{figure} % Diagrama Conceitual reduzido
+% \begin{MyCenteredFigure}
+%  \caption{Diagrama Conceitual reduzido para o presente trabalho}
+%  \label{fig:DiagramConceitualReduzido}
+%  \includegraphics[width=\textwidth]{files/img/DiagramaConceitual/DiagramaConceitualReduzidoBranco}
+% \end{MyCenteredFigure} % Diagrama Conceitual reduzido
 
 Neste modelo, mais enxuto, temos apenas as entidades principais, onde temos uma turma de determinada disciplina, ministrada por um professor e que ocorre em uma sala em um determinado horário.
 
@@ -68,11 +71,11 @@ Neste modelo, mais enxuto, temos apenas as entidades principais, onde temos uma 
 
 % Com isso, restamos o diagrama de Entidade e Relacionamento (DER) que pode ser visto na \autoref{fig:DER}.
 
-% \begin{figure}[htbp]\centering
-%   \caption{\label{fig:DER} Diagrama de Entidade e Relacionamento}
-%   \includegraphics[scale=0.2]{files/img/DER/DERBranco.png}
-%   \legend{\selfAuthor}
-% \end{figure} % Diagrama de Entidade e Relacionamento
+% \begin{MyCenteredFigure}
+%  \caption{Diagrama de Entidade e Relacionamento}
+%  \label{fig:DER}
+%  \includegraphics[width=\textwidth]{files/img/DER/DERBranco}
+% \end{MyCenteredFigure} % Diagrama de Entidade e Relacionamento
 
 Neste diagrama vemos as entidades principais, que são \textit{Turmas}, \textit{Disciplinas}, \textit{Professores}, \textit{Horários} e \textit{Salas}. As propriedades escolhidas para cada entidade são compostas por uma mistura de critérios. Por exemplo, o nome do professor, o código da disciplina, e a junção de código e bloco auxiliam primordialmente na identificação real dos professores, disciplinas e salas. Já as informações ``período'', ``apelido'' e ``comment''...
 
