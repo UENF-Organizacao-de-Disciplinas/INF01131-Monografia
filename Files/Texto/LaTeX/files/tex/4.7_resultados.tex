@@ -1,22 +1,39 @@
-\chapter{Resultados} \label{chap:resultados}
+\chapter{Resultados} \label{chap:resultados} % ### 7.
 
-% O sistema pode ser acessado através do link \url{https://jvfd3.github.io/timetabling-UENF/}.
+\section{Sistema} % ### 7.1.
 
-Como esperado, encontrar uma solução ótima para o problema de criação de grade horária tende à impraticabilidade, visto a dificuldade de se definir se de fato há tal solução a ser atingida. Mesmo assim, ao se utilizar de um método de manipulação manual dos dados, foi possível obter uma solução que se aproxima da ótima, e que pode ser utilizada na prática.
+O sistema desenvolvido atualmente pode ser acessado através \href{https://jvfd3.github.io/timetabling-UENF/}{deste link} \url{https://jvfd3.github.io/timetabling-UENF/}.
 
-Em termos quantitativos, o sistema desenvolvido apresenta uma redução de conflitos em relação à solução inicial. O que mostra um resultado satisfatório.
+\section{Solução Ótima} % ### 7.2.
 
-% Em termos quantitativos, o sistema desenvolvido apresenta uma redução de XX\% de conflitos em relação à solução inicial. O que mostra um resultado satisfatório.
+\section{Alternativas Burocráticas} % ### 7.2.
 
-Esse resultado, entretanto, não diz respeito à uma conclusão absoluta, visto que o sistema desenvolvido não foi testado em um ambiente real, e sim em um ambiente hipotético. Com isso, considerável parte de informações encontra-se faltante e foi substituída por dados aleatórios, o que pode ter influenciado no resultado final.
+Além da busca pela solução ótima, o presente trabalho também se propõe a buscar métodos ainda mais alternativos para se amenizar a problemática abordada. Sendo, de forma simples, o uso de meios burocráticos disponíveis na instituição que abre alguns caminhos para uma maior praticidade no processo de resolução do problema. Entretanto, é necessário que se tenha em mente que a burocracia é um processo lento e que pode ser desgastante, sendo até mesmo esperado que não seja desejado por parte dos construtores da grade horária.
 
-\section{Soluções Burocráticas} % ### 7.1. Soluções Burocráticas
+Essas alternativas não geram por si só uma solução para o problema, em termos metafóricos, se o sistema é a engrenagem que faz a máquina funcionar, as alternativas burocráticas são o óleo que pode fazer a engrenagem funcionar de forma mais suave, mesmo que não seja estritamente necessário.
 
-Além da busca pela solução ótima, o presente trabalho também se propõe a buscar métodos ainda mais alternativos para se amenizar a problemática abordada. Sendo, de forma simples, o uso de meios burocráticos disponíveis na instituição que abre alguns caminhos para a solução do problema. Entretanto, é necessário que se tenha em mente que a burocracia é um processo lento e que pode ser desgastante, sendo até mesmo esperado que não seja desejado por parte dos construtores da grade horária.
+\subsection{Tempo de elaboração das grades} % #### 7.1.1.
 
-\subsection{Tempo de elaboração das grades} % #### 7.1.1. Tempo de elaboração das grades
+Durante as entrevistas do \autoref{chap:instituicao} da \autoref{sec:entrevistas}, uma alternativa válida para a amenização da problemática abordada é a alteração do calendário anual da UENF que define férias de duas semanas entre os semestres. Caso seu calendário seja alterado para que as férias sejam de três semanas, o problema de agendamento teria maior tempo para ser resolvido, assim fazendo com que a solução ótima seja provável de ser alcançada.
 
-Durante as entrevistas, uma alternativa válida para a amenização da problemática abordada é a alteração do calendário anual da UENF que define férias de duas semanas entre os semestres. Caso seu calendário seja alterado para que as férias sejam de duas semanas, o problema de agendamento teria maior tempo para ser resolvido, assim fazendo com que a solução ótima seja provável de ser alcançada.
+Mais especificamente: no atual semestre (2024.1), o encerramento do semestre está previsto para o dia 6 de julho. Já o prazo limite para o cadastro de novas
+
+\begin{table}
+  \centering
+  \caption{Segmento do Calendário Acadêmico de 2024.1}
+  \label{tab:calendario}
+  \begin{tabular}{| l r |}
+    \hline
+    \textbf{Atividades}                                               & \textbf{Data} \\
+    \hline
+    Encerramento do 1º período letivo de 2024                         & 06/07         \\
+    Limite de cadastro de novas disciplinas a serem oferecidas 2024.2 & 12/07         \\
+    Limite de entrega dos resultados à SECACAD                        & 12/07         \\
+    Limite para criação de turmas a serem oferecidas 2024.2           & 19/07         \\
+    Renovação de matrícula do 2º período letivo/2024                  & 22 a 27/07    \\
+    \hline
+  \end{tabular}
+\end{table}
 
 % Citar o Estatuto da forma correta.
 
@@ -24,8 +41,10 @@ Segundo o Artigo 28 do Estatuto da UENF, compete à secretaria acadêmica a elab
 
 Logo, quanto à alteração do calendário acadêmico, a alteração mostra-se como possível, sendo necessário apenas que o processo burocrático necessário seja enfrentado.
 
-\subsection{Alteração forçada de horários} % #### 7.1.2. Alteração forçada de horários
+\subsection{Alteração forçada de horários} % #### 7.1.2.
 
 Segundo o parágrafo primeiro do artigo 36 das Normas de Graduação, ``qualquer alteração de horário/turno após o período de matrícula deverá ter a anuência por escrito de todos os discentes matriculados na turma''. Seguindo ao segundo parágrafo do mesmo artigo, temos que ``a alteração de horário das aulas da turma deverá ter a anuência da Coordenação de Curso e a ciência do Chefe do Laboratório responsável pela disciplina''.
+
+Outra alternativa que aproveita de uma brecha nas normas supracitadas é a possibilidade de se criar novas turmas para as disciplinas que possuem horários conflitantes, assim direcionando os alunos para que se desinscrevam da turma anterior.
 
 Sendo assim possível alterar os horários de aula caso seja necessária para que haja uma melhora geral na distribuição das turmas na grade horária, mais uma vez sendo necessário superar o processo burocrático necessário.
