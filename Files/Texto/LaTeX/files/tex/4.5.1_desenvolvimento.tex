@@ -3,16 +3,16 @@
 % Citar alguns códigos
 
 Para o desenvolvimento do presente trabalho, foram utilizadas diversas ferramentas, tanto para a elaboração do código, quanto para a elaboração do modelo de banco de dados e para a elaboração do protótipo. Todas elas com o intuito de implementar o software necessário para a criação de uma grade horária.
+\section{Projetos anteriores} % ### 5.1.
 
-\section{Projetos anteriores} % ### 5.1. Pré desenvolvimento
 
 Antes do desenvolvimento do presente trabalho, foram feitos alguns projetos pessoais que, embora não tenham sido concluídos, serviram como base para o desenvolvimento do presente trabalho.
-
-\subsection{Andamento dos alunos} % #### 5.1.1. Andamento dos alunos
+\subsection{Andamento dos alunos} % #### 5.1.1
 
 Como interesse próprio, cogitou-se o desenvolvimento de uma plataforma onde se pudesse ver em que ponto os alunos se encontram em relação ao andamento de seus cursos. Para isso, seria necessária a obtenção dos dados dos alunos, seja por parte dos mesmos, do coordenador ou por integração com o sistema acadêmico. Com estes dados, seria possível criar uma interface que mostrasse o andamento dos alunos, quais matérias já foram cursadas, quais estão sendo cursadas e quais ainda faltam. Além disso, seria possível mostrar quais matérias são pré-requisitos para outras. Assim, o aluno e a coordenação poderiam ter uma visão geral de seu andamento e de quais matérias ele precisará cursar para se formar. Infelizmente esse projeto não saiu do mundo das ideias. Entretanto, lá permaneceu sendo maturado.
 
-\subsection{Cálculo de demanda} % #### 5.1.2. Cálculo de demanda
+
+\subsection{Cálculo de demanda} % #### 5.1.2.
 
 Ao longo dos semestres, foi percebido que durante o intervalo entre os semestres, os alunos precisam se inscrever nas matérias que desejam cursar no semestre seguinte. Para isso, é necessário que o coordenador saiba quantos alunos estão interessados em cada matéria para que ele possa definir quantas turmas serão abertas. Com este fim em mente, o coordenador dispõe de algumas alternativas como estimar quantos alunos se inscreverão em cada disciplina, checar manualmente no sistema acadêmico quais alunos podem fazer cada matéria, ou então obter diretamente dos alunos através de um formulário em quais disciplinas cada um dos alunos tem a intenção de cursar.
 
@@ -28,7 +28,7 @@ Embora o código cumpra com seu objetivo, apresenta algumas características lim
 
 Com estes empecilhos, o código acabou abandonado, visto que apesar de útil, não era prático o suficiente para ser utilizado.
 
-\section{Dados pessoais e a LGPD} % ### 5.2. Dados pessoais e a LGPD
+\section{Dados pessoais e a LGPD} % ### 5.2.
 
 Em sua concepção original, o presente trabalho visaria integrar o sistema desenvolvido com o atual sistema acadêmico da UENF. Essa abordagem foi descartada devido às dificuldades encontradas por parte do setor administrativo da UENF que, devido à \href{https://www.planalto.gov.br/ccivil_03/_ato2015-2018/2018/lei/l13709.htm}{Lei Geral de Proteção dos Dados (LGPD)}, não podem divulgar dados dos alunos, mesmo anonimizados.
 
@@ -38,7 +38,8 @@ Segundo o \href{https://www.gov.br/anpd/pt-br/assuntos/noticias/sei_00261-000810
 
 Apesar das possibilidades de meios legalmente válidos para a aquisição dos dados, optou-se por abandonar a integração com o Sistema Acadêmico e o uso de dados reais dos alunos já existentes na plataforma. Rumando-se então para uma abordagem mais manual de inserção de dados manualmente por parte dos usuários do sistema.
 
-\section{Prototipagem} % ### 5.3. Protótipo
+\section{Prototipagem} % ### 5.3.
+
 \begin{MyCenteredFigure}
   \caption{Protótipos de cartões de turma}
   \label{fig:cartão_de_turma}
@@ -69,6 +70,8 @@ Apesar das possibilidades de meios legalmente válidos para a aquisição dos da
 A criação de protótipos, seguindo a abordagem tomada por \cite{andre_interaction_2018}, se mostra como essencial para que se mantenha a constante satisfação por parte dos \textit{stakeholders} e quais mudanças sugerem ao desenvolvimento do projeto, assim reduzindo a necessidade de retrabalho ou de não alcance das expectativas do projeto.
 
 Para este fim, foram feitos os designs iniciais usando o software de design \href{https://www.figma.com/}{Figma}. Algumas telas principais foram concebidas. A primeira, e principal, é a ilustrada pela \autoref{fig:main} que permite que o usuário arraste a turma até o horário desejado. A turma ao qual este horário se refere pode ser definida na parte lateral direita.
+\subsection{Protótipos de páginas} % #### 5.3.1.
+
 
 \begin{MyCenteredFigure}
   \caption{Página principal do sistema}
