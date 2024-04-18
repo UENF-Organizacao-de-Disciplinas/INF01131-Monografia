@@ -20,25 +20,7 @@ O método que o atual Coordenador de Ciência da Computação realiza consiste e
 
 Entretanto, todas essas alternativas são trabalhosas e propensas a erros. Sendo assim, foi pensado em uma forma de automatizar esse processo. Foi então elaborado um código em \href{https://www.python.org/}{Python} que atualmente \href{https://github.com/jvfd3/university_demand}{se encontra no \textit{GitHub}}. Este código tem como entrada os extratos de matrícula dos alunos e como saída a listagem das disciplinas demandadas e a listagem dos alunos que demandam cada disciplina.
 
-\begin{lstlisting}[language=Python, caption={Obter demanda por extratos em PDF}, label={code:demand}]
-import code_1_set_working_directory     as swd
-import code_2_get_pdf_list              as gpl
-import code_3_get_string_from_pdf       as gsp
-import code_4_structure_data_from_text  as sdt
-import code_5_filter_structured_data    as fsd
-import code_6_get_demand_list           as gdl
-import code_7_merge_demands             as mgd
-import code_8_output_demand_as_txt      as odt
-
-swd.set_cwd()
-pdf_paths          = gpl.get_pdf_list()
-texts              = gsp.get_pdf_text(pdf_paths)
-structured_data    = sdt.structure_data(texts)
-approved_codes     = fsd.get_approved_codes(structured_data)
-demands            = gdl.get_demand_list(approved_codes)
-demands_and_values = mgd.get_merged_demands(demands)
-odt.output_to_txt(demands_and_values)
-\end{lstlisting}
+\lstinputlisting[language={Python}, captionpos={t}, label={code:demand}, caption={Obter demanda por extratos em PDF}]{files/codigos/demanda.py}
 
 Este código foi desenvolvido em 8 etapas, vistas no \autoref{code:demand}, cada uma com um arquivo separado. Para alcançar a lista das demandas, é necessário primeiro obter a lista dos arquivos em formato PDF que serão processados, em seguida extrair seus dados com a biblioteca \href{https://pypi.org/project/pdfminer/}{\textit{PDFMiner}}, estruturar os dados obtidos, filtrar os dados estruturados, obter a demanda de cada disciplina, juntar as demandas de cada disciplina e salvar os dados obtidos em um arquivo de texto.
 

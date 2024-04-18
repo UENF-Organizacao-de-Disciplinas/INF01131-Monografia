@@ -154,14 +154,7 @@ Outro detalhe percebido, foi que boa parte do código se repetia entre as funç�
 
 Nas primeiras tentativas de \textit{deploy}, duas abordagens eram utilizadas: a primeira era a de copiar e colar o código diretamente na interface web da AWS, e a segunda era a de fazer o upload de um arquivo zip contendo o código.
 
-\begin{lstlisting}[caption={Código de \textit{deploy} de Lambda}, label={code:lambda}]
-aws lambda create-function \
---function-name createProfessor \
---runtime nodejs20.x \
---role arn:aws:iam::375423677214:role/LambdaRole \
---handler index.handler \
---zip-file fileb://Files/AWS/lambdas/createProfessor/createProfessor.zip
-\end{lstlisting}
+\lstinputlisting[captionpos={t}, label={code:lambda}, caption={Código de \textit{deploy} de Lambda}]{files/codigos/AWS_CLI.sh}
 
 Como mostrado no \autoref{code:lambda}, usa-se o software AWS CLI para criar uma função lambda. O comando \textit{create-function} é o comando que cria a função, e os argumentos que seguem são os parâmetros necessários para a criação da função. O \textit{function-name} é o nome da função, o \textit{runtime} é a versão do Node.js que a função utiliza, o \textit{role} é o conjunto de permissões criadas na seção \textit{AWS Identity and Access Management} (IAM), o \textit{handler} é o nome do arquivo principal que contém a função, e o \textit{zip-file} é o arquivo zip que contém o código da função.
 
