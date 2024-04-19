@@ -138,7 +138,8 @@
 \def\selfAuthor{Fonte: autoria própria} % Fonte padrão para figuras
 
 % Figuras automaticamente centralizadas com fonte
-\newenvironment{MyCenteredFigure}{\begin{figure}[htbp]\centering}{\legend{\selfAuthor}\end{figure}}
+\newenvironment{CenteredFigure}{\begin{figure}[htbp]\centering}{\end{figure}}
+\newenvironment{MyCenteredFigure}{\begin{CenteredFigure}}{\legend{\selfAuthor}\end{figure}}
 
 % Adicionar comando mais denso para adição da animação
 \newcommand{\myAnimation}[1]{\includegraphics[scale=0.2]{files/img/Codificacao/Animacao/#1}}
