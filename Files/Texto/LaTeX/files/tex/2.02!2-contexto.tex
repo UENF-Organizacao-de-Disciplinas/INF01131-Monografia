@@ -11,9 +11,9 @@ Antes de prosseguirmos com o desenrolar deste trabalho, é adequado que primeiro
 
 Ao longo dos anos de desenvolvimento acadêmico, diversos assuntos vão se aprofundando e se tornando mais específicos, assim, os estudiosos acabam cunhando novos termos que o auxiliam a desvencilhar as novas áreas específicas das suas áreas originárias. Porém, existe o potencial de que haja um crescimento desestruturado destes novos termos, assim vários termos diferentes podem se referir a um mesmo conceito, enquanto que um mesmo tempo pode se referir a vários conceitos diferentes de acordo com o autor.
 
-Assim como feito por \cite{goos_scheduling_1996}, definiremos os conceitos dos termos que serão usados ao longo deste trabalho.
+Assim como feito por \citeonline{goos_scheduling_1996}, definiremos os conceitos dos termos que serão usados ao longo deste trabalho.
 
-O termo \textit{timetable} tem o mesmo valor que ``grade horária'' e serão usadas como se fossem sinônimos mesmo sendo de línguas diferentes. Segundo \cite{goos_scheduling_1996}, podemos definir \textit{timetable} como uma estrutura que mostra quando que eventos ocorrerão, não havendo necessariamente a alocação de recursos.
+O termo \textit{timetable} tem o mesmo valor que ``grade horária'' e serão usadas como se fossem sinônimos mesmo sendo de línguas diferentes. Segundo \citeonline{goos_scheduling_1996}, podemos definir \textit{timetable} como uma estrutura que mostra quando que eventos ocorrerão, não havendo necessariamente a alocação de recursos.
 
 Vale ressaltar que este termo não tem seu uso limitado para os fins desta pesquisa, sendo também usado para problemas de alocação de enfermeiros, esportes, funcionários e transportes \cite{arratia-martinez_university_2021}. Entretanto, neste trabalho, abordaremos principalmente os termos relacionados ao que pode ser chamado de \textit{Educational Timetabling} (Ed-TT) \cite{alencar_visualization_2019}, que é o que tende a envolver um conjunto específico de recursos relacionados à educação.
 
@@ -25,7 +25,7 @@ Trazendo para a realidade do Curso de Ciência da Computação na UENF podemos e
 
 Aqui, visto que uma solução final envolverá várias dimensões (Professores $\times$ Disciplinas $\times$ Sala $\times$ Alunos $\times$ Horários $\times$ Dias), consideraremos \textit{timetable} como esse pacote de valores distribuídos em uma só estrutura. Para que esses valores sejam distribuídos, daremos o nome de \textbf{alocação} ao ato de criar qualquer relação entre as dimensões. Como a relação de horários e dias será considerada fixa, a \textbf{alocação} se referirá à atribuição como a de professores a disciplinas, disciplinas a salas, disciplinas a um determinado padrão de dias e horários, etc.
 
-Para que esta alocação ocorra, é necessário atender a certos critérios, e aí entra o ``problema de organização de grade horária'', também chamado de \textit{timetabling problem}. Esta é uma subcategoria do \textbf{problema de agendamento} (\textit{scheduling Optimization Problem}) \cite{alencar_visualization_2019} que por sua vez é definido por \cite{goos_scheduling_1996} como sendo:
+Para que esta alocação ocorra, é necessário atender a certos critérios, e aí entra o ``problema de organização de grade horária'', também chamado de \textit{timetabling problem}. Esta é uma subcategoria do \textbf{problema de agendamento} (\textit{scheduling Optimization Problem}) \cite{alencar_visualization_2019} que por sua vez é definido por \citeonline{goos_scheduling_1996} como sendo:
 
 \begin{quote}\footnotesize
   Resolver problemas práticos relacionados à alocação, sujeito a restrições, de recursos a objetos sendo colocados no espaço-tempo, usando ou desenvolvendo quaisquer ferramentas que possam ser apropriadas. Os problemas irão frequentemente se relacionar à satisfação de certos objetivos.
@@ -33,7 +33,7 @@ Para que esta alocação ocorra, é necessário atender a certos critérios, e a
 
 % > Resolver problemas práticos relacionados à alocação, sujeito a restrições, de recursos a objetos sendo colocados no espaço-tempo, usando ou desenvolvendo quaisquer ferramentas que possam ser apropriadas. Os problemas irão frequentemente se relacionar à satisfação de certos objetivos.
 
-Outro termo relevante a se pontuar são as \textit{hard and soft constraints} que podemos chamar de restrições rígidas e flexíveis. \cite{alencar_visualization_2019} as define dizendo que as restrições rígidas são de atendimento obrigatório, enquanto as restrições flexíveis são opcionais, mas convenientes para melhorar a qualidade da solução obtida.
+Outro termo relevante a se pontuar são as \textit{hard and soft constraints} que podemos chamar de restrições rígidas e flexíveis. \citeonline{alencar_visualization_2019} as define dizendo que as restrições rígidas são de atendimento obrigatório, enquanto as restrições flexíveis são opcionais, mas convenientes para melhorar a qualidade da solução obtida.
 
 Exemplo de restrição rígida: nem professores nem alunos podem ser alocados simultaneamente a duas salas ou disciplinas simultaneamente. Uma solução que viole esta restrição se torna automaticamente inviável.
 
@@ -83,7 +83,7 @@ Alguns outros termos similares a este campo de pesquisa encontrados na literatur
 
 % Pesquisar posteriormente sobre imagens que ilustrem bem as diferentes sub categorias de scheduling
 
-Existem diversas implementações já realizadas, utilizando uma miríade de métodos. Em seu trabalho \cite{miranda_udpskeduler_2012}, J. Miranda informa sobre diversos sistemas baseados em computador para auxiliar na tarefa de agendamento. J. Miranda também cita um dos métodos de resolução como sendo o \textbf{modelo de programação inteira} e \textbf{heurísticas}.
+Existem diversas implementações já realizadas, utilizando uma miríade de métodos. Em seu trabalho, \citeonline{miranda_udpskeduler_2012} informam sobre diversos sistemas baseados em computador para auxiliar na tarefa de agendamento. \citeonline{miranda_udpskeduler_2012} também citam um dos métodos de resolução como sendo o \textbf{modelo de programação inteira} e \textbf{heurísticas}.
 
 Outros trabalhos buscaram condensar em forma de tabela as informações encontradas. Abaixo estão dispostas algumas das tabelas encontradas durante o estudo bibliográfico e que foram elaboradas por diversos autores.
 
@@ -95,36 +95,36 @@ Na \autoref{fig:Desenvolvimento}, \citeonline{alegre_desenvolvimento_2012} traç
   \caption{Resumo de trabalhos, parâmetros, dimensões, tempo e técnicas.}
   \label{fig:Desenvolvimento}
   \includegraphics[width=\textwidth]{files/img/Tabelas/Desenvolvimento}
-  \legend{Fonte: \cite{alegre_desenvolvimento_2012}}
+  \legend{Fonte: \citeonline{alegre_desenvolvimento_2012}}
 \end{figure}    % Desenvolvimento
 
-Na \autoref{fig:University}, \cite{arratia-martinez_university_2021}, apresenta uma comparação similar à anterior, porém não separada em categorias, apenas categorizando entre verdadeiro e falso algumas características como alocação de salas, professores, nível institucional e método exato ou inexato.
+Na \autoref{fig:University}, \citeonline{arratia-martinez_university_2021}, apresentam uma comparação similar à anterior, porém não separada em categorias, apenas categorizando entre verdadeiro e falso algumas características como alocação de salas, professores, nível institucional e método exato ou inexato.
 
 \begin{figure}[htbp]\centering
   \caption{Comparação entre artigos que solucionam o problema de grade horária}
   \label{fig:University}
   \includegraphics[width=\textwidth]{files/img/Tabelas/University}
-  \legend{Fonte: \cite{arratia-martinez_university_2021} - editado}
+  \legend{Fonte: \citeonline{arratia-martinez_university_2021} - editado}
 \end{figure}    % University
 
-Na \autoref{fig:Visualization}, \cite{alencar_visualization_2019} explora uma categoria mais específica do problema, que é a característica da interatividade das interfaces desenvolvidas. Este apresenta características qualitativas quanto aos métodos, os dados dispostos, as técnicas de interação e o método utilizado para solucionar o problema de grade horária educacional. Nesta figura, os autores usam ``Y'' para simbolizar ``Sim'', ``N'' para ``Não'' e ``-'' para ``Inconclusivo''.
+Na \autoref{fig:Visualization}, \citeonline{alencar_visualization_2019} exploram uma categoria mais específica do problema, que é a característica da interatividade das interfaces desenvolvidas. Este apresenta características qualitativas quanto aos métodos, os dados dispostos, as técnicas de interação e o método utilizado para solucionar o problema de grade horária educacional. Nesta figura, os autores usam ``Y'' para simbolizar ``Sim'', ``N'' para ``Não'' e ``-'' para ``Inconclusivo''.
 
 \begin{figure}[htbp]\centering
   \caption{Análise de publicações aceitas}
   \label{fig:Visualization}
   \includegraphics[width=\textwidth]{files/img/Tabelas/Visualization}
-  \legend{Fonte: \cite{alencar_visualization_2019} - editado}
+  \legend{Fonte: \citeonline{alencar_visualization_2019} - editado}
 \end{figure}    % Visualization
 
 \section{Desafios recorrentes} % ### 2.3. Desafios recorrentes
 
 Apesar da vasta quantidade de trabalhos realizados com este fim, o \textit{Timetabling Problem} segue sendo uma área sem uma solução definitiva.
 
-Tomáš Müller \cite{burke_modeling_2007} traz a questão da modelagem como um dos maiores obstáculos. À medida em que a complexidade aumenta, se torna cada vez mais difícil desenvolver uma solução efetiva. Assim fazendo com que a solução para uma universidade possa não ter utilidade para outras, ou até mesmo não seja capaz de lidar com todos os problemas de uma mesma universidade.
+\citeonline{burke_modeling_2007} trazem a questão da modelagem como um dos maiores obstáculos. À medida em que a complexidade aumenta, se torna cada vez mais difícil desenvolver uma solução efetiva. Assim fazendo com que a solução para uma universidade possa não ter utilidade para outras, ou até mesmo não seja capaz de lidar com todos os problemas de uma mesma universidade.
 
-Apesar do contrafluxo encontrado na resolução desse problema, Tomáš cita que, apesar da complexidade, é sim possível desenvolver soluções que tenham uso prático, mesmo que não seja um processo fácil. As ferramentas existem e estão disponíveis. Restando então considerar e resolver as preocupações dos usuários às questões, visto que as técnicas de resolução já se encontram vastamente documentados.
+Apesar do contrafluxo encontrado na resolução desse problema, \citeonline{burke_modeling_2007} citam que, apesar da complexidade, é sim possível desenvolver soluções que tenham uso prático, mesmo que não seja um processo fácil. As ferramentas existem e estão disponíveis. Restando então considerar e resolver as preocupações dos usuários às questões, visto que as técnicas de resolução já se encontram vastamente documentados.
 
-Com isso, entramos também no ramo da Interação Homem-Máquina, ramo abordado por Dinata \cite{andre_interaction_2018} que visou em seu desenvolvimento a criação de uma interface focada no usuário. Assim minimizando o atrito na abordagem desse problema complexo. Também sendo área de enfoque de \cite{alencar_visualization_2019} em sua revisão literária
+Com isso, entramos também no ramo da Interação Homem-Máquina, ramo abordado por \citeonline{andre_interaction_2018} que visaram em seu desenvolvimento a criação de uma interface focada no usuário. Assim minimizando o atrito na abordagem desse problema complexo. Também sendo área de enfoque de \citeonline{alencar_visualization_2019} em sua revisão literária
 
 % ### 2.5. Contexto histórico e origem
 
@@ -212,4 +212,4 @@ Por fim, podemos citar um outro ponto que é a busca pela eficiência e baixo cu
 
 O entendimento das falhas passadas em se encontrar uma solução prática ao problema de Programação de Horários da UENF é de suma importância para que se possa evitar que os mesmos erros sejam cometidos novamente. Assim, é necessário que se tenha em mente que a realidade da universidade é dinâmica, e que a solução deve ser capaz de se adaptar a esta dinamicidade.
 
-Vale-se também relembrar o que é dito por Tomáš Müller \cite{burke_modeling_2007} que cita em seu trabalho justamente sobre a complexidade presente na modelagem do problema.
+Vale-se também relembrar o que é dito por \citeonline{burke_modeling_2007} que citam em seu trabalho justamente sobre a complexidade presente na modelagem do problema.
