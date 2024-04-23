@@ -215,7 +215,7 @@ Com isso, utilizando o GitHub Projects, foi organizado uma tabela de tarefas, vi
 \begin{MyCenteredFigure}
   \caption{Tabela de tarefas do GitHub Projects}
   \label{fig:GitHubProjectsTable}
-  \includegraphics[width=\textwidth]{files/img/2.02!5-desenvolvimento/2.02!5.1.4-sistema/GitHubProjects - Table}
+  \includegraphics[width=\textwidth]{files/img/2.02!5-desenvolvimento/2.02!5.1.4-sistema/GitHubProjects-Table}
 \end{MyCenteredFigure}
 
 Tendo este novo sistema de tarefas em prática, foi possível tranquilizar a mente quanto ao conflito entre as funcionalidades que precisavam ser desenvolvidas, as que já estavam prontas, as que poderiam ter melhorias e quais se desejava implementar no futuro.
@@ -237,7 +237,7 @@ O \textbf{banco de dados} recebe a requisição, processa a operação, e então
 \begin{MyCenteredFigure}
   \caption{Diagrama da progressão funcionamento da permanência dos dados}
   \label{fig:API}
-  \includegraphics[width=\textwidth]{files/img/2.02!5-desenvolvimento/2.02!5.1.4-sistema/API - com diagrama}
+  \includegraphics[width=\textwidth]{files/img/2.02!5-desenvolvimento/2.02!5.1.4-sistema/API-Progressão.drawio}
 \end{MyCenteredFigure}
 
 \textbf{Resumidamente}: O \textbf{\textit{frontend}} envia uma requisição HTTP com uma carga de informações a um \textbf{\textit{endpoint}}, que encaminha a requisição a uma \textbf{função} específica que executa uma operação no \textbf{banco de dados}, assim retornando o status da operação ao \textit{frontend}. Essa sequência é ilustrada na \autoref{fig:API}.
@@ -265,7 +265,7 @@ Apesar da primeira tentativa de importação não ter sido completamente bem suc
 \begin{MyCenteredFigure}
   \caption{Diagrama primitivo das tabelas de dados SQL}
   \label{fig:TabelasIniciais}
-  \includegraphics[scale=0.7]{files/img/2.02!5-desenvolvimento/2.02!5.1.4-sistema/DB inicial}
+  \includegraphics[width=0.7\textwidth]{files/img/2.02!5-desenvolvimento/2.02!5.1.4-sistema/Diagrama_ER-As_is.drawio}
 \end{MyCenteredFigure}
 
 \paragraph*{Acesso ao Banco de Dados}
@@ -369,7 +369,7 @@ Os marcos visam distinguir as tarefas por suas versões, e também por seus tipo
 \begin{MyCenteredFigure}
   \caption{Marcos do GitHub Projects}
   \label{fig:ProjectsMilestones}
-  \includegraphics[scale=0.6]{files/img/2.02!5-desenvolvimento/2.02!5.1.4-sistema/GitHubProjects - Open Milestones}
+  \includegraphics[width=0.6\textwidth]{files/img/2.02!5-desenvolvimento/2.02!5.1.4-sistema/GitHubProjects-Open_Milestones}
 \end{MyCenteredFigure}
 
 \begin{enumerate}
@@ -391,7 +391,7 @@ No Projects, também foram adicionadas as \textbf{etiquetas} que distinguem as t
 \begin{MyCenteredFigure}
   \caption{Etiquetas do GitHub Projects}
   \label{fig:ProjectsLabels}
-  \includegraphics[scale=0.6]{files/img/2.02!5-desenvolvimento/2.02!5.1.4-sistema/GitHubProjects - Labels}
+  \includegraphics[width=0.7\textwidth]{files/img/2.02!5-desenvolvimento/2.02!5.1.4-sistema/GitHubProjects-Labels}
 \end{MyCenteredFigure}
 
 \begin{enumerate}
@@ -411,7 +411,7 @@ O GitHub Projects também oferece a possibilidade de visualização de gráficos
 \begin{MyCenteredFigure}
   \caption{Gráfico de Marco \textit{versus} quantidade de tarefas separadas por etiqueta}
   \label{fig:ProjectsInsights}
-  \includegraphics[width=\textwidth]{files/img/2.02!5-desenvolvimento/2.02!5.1.4-sistema/GitHubProjects - Insights - Stacked Line Milestone_Label}
+  \includegraphics[width=\textwidth]{files/img/2.02!5-desenvolvimento/2.02!5.1.4-sistema/GitHubProjects-Insights-Stacked_Line-Milestone_Label}
 \end{MyCenteredFigure}
 
 Com eles, pode-se ter uma noção das métricas do projeto, como por exemplo:
