@@ -93,6 +93,25 @@
 \usepackage{adjustbox} % Adicionando Easter Eggs
 \usepackage{ulem} % Adicionado para cortar texto
 
+% Anexando código ao PDF
+% \usepackage{embedfile}
+% \usepackage{navigator}
+\usepackage{attachfile}
+\attachfilesetup{
+% color = {0 1 1}, % Cyan
+color = {.05 .55 .18},
+icon = Paperclip,
+timezone = {-03'00'},
+date={D:20240423173000000'00'},
+mimetype = {application/x-rar-compressed},
+% mimetype = {application/zip}
+author = {Jo\~{a}o V\'{i}tor Fernandes Dias},
+% author = {Joao Vitor Fernandes Dias},
+% author = {João Vítor Fernandes Dias},
+description = {Anexos da minha monografia},
+subject = {Anexos da minha monografia. Mais especificamente, o seu código fonte.},
+}
+
 \usepackage[table]{xcolor} % Adding color to table line
 \newcommand{\altered}{\cellcolor[HTML]{79b8ff}} % Define a cor desta célula
 \newcommand{\removeLine}{\rowcolor[HTML]{b31d28}} % Define a cor da próxima linha
