@@ -1,6 +1,22 @@
+\newcommand{\MyCheckbox}[2] {
+  \item \CheckBox[name=#2, checkboxsymbol=\ding{53}]{ } #1
+}
 
-  \chapter{Formulário de pesquisa quantitativa}
+\newcommand{\FormInNewLine}[1]{
+  \begin{description}
+    \item[] #1
+  \end{description}
+}
+
+\newcommand{\QuestionNameOptions}[3]{
+  \item #1
+  \FormInNewLine{\ChoiceMenu[print, combo, name=#2]{ }{#3}}
+}
+
 \begin{apendicesenv} % Imprime uma página indicando o início dos apêndices
+
+
+  \chapter{Formulário de pesquisa quantitativa} \label{apendice:B-FormularioPesquisaQuantitativa}
 
   \begin{Form}[action=mailto:joaovitorfd2000@gmai.com, encoding=html, method=post]
 
@@ -20,43 +36,31 @@
 
     Nesta seção, peço que informe algumas características suas para que a análise estatística se torne mais rica.
 
-    \ChoiceMenu[print, combo]{Qual o seu curso?}
-    {
-      1. Administração Pública,
-      2. Agronomia,
-      3. Biologia (Licenciatura),
-      4. Ciência da Computação,
-      5. Ciências Biológicas (bacharelado),
-      6. Ciências Sociais,
-      7. Engenharia Civil,
-      8. Engenharia de Exploração e Produção de Petróleo,
-      9. Engenharia de Produção,
-      10. Engenharia Metalúrgica,
-      11. Engenharia Meteorológica,
-      12. Física (licenciatura),
-      13. Matemática (Licenciatura),
-      14. Medicina Veterinária,
-      15. Pedagogia (Licenciatura),
-      16. Química (Licenciatura),
-      17. Zootecnia,
-      18. Outro,
-    }
-
-    \ChoiceMenu[print, combo]{Em que ano você ingressou na UENF?}
-    {
-      2023,
-      2022,
-      2021,
-      2020,
-      2019,
-      2018,
-      2017,
-      2016,
-      2015,
-      2014,
-      2013,
-      Outro,
-    }
+    \begin{enumerate}
+      \QuestionNameOptions{Qual o seu curso?}{curso}
+      {
+        1. Administração Pública,
+        2. Agronomia,
+        3. Biologia (Licenciatura),
+        4. Ciência da Computação,
+        5. Ciências Biológicas (bacharelado),
+        6. Ciências Sociais,
+        7. Engenharia Civil,
+        8. Engenharia de Exploração e Produção de Petróleo,
+        9. Engenharia de Produção,
+        10. Engenharia Metalúrgica,
+        11. Engenharia Meteorológica,
+        12. Física (licenciatura),
+        13. Matemática (Licenciatura),
+        14. Medicina Veterinária,
+        15. Pedagogia (Licenciatura),
+        16. Química (Licenciatura),
+        17. Zootecnia,
+        18. Outro,
+      }
+      \QuestionNameOptions{Em que ano você ingressou na UENF?}{anoIngresso}
+      { 2023, 2022, 2021, 2020, 2019, 2018, 2017, 2016, 2015, 2014, 2013, Outro }
+    \end{enumerate}
 
     \section*{Pesquisa de satisfação}
 
@@ -64,37 +68,110 @@
 
     Abaixo, estão algumas perguntas gerais em relação à sua satisfação com a distribuição de disciplinas semestralmente.
 
+    \newcommand{\ChoiceMenuPeriodos}[2]{
+      \QuestionNameOptions{#1}{#2}{ 0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10 }
+    }
+
+    \newcommand{\ChoiceMenuSNO}[2]{
+      \QuestionNameOptions{#1}{#2}{1. Sim, 2. Não, 3. Outro }
+    }
+
+    \newcommand{\ChoiceMenuDdNcC}[2]{
+      \QuestionNameOptions{#1}{#2}
+      {
+        1. Discordo completamente,
+        2. Discordo parcialmente,
+        3. Não tenho preferência,
+        4. Concordo parcialmente,
+        5. Concordo completamente
+      }
+    }
+
     \begin{enumerate}
-      \item \ChoiceMenu[print, combo]{\textbf{Salas}: Você já teve que mudar de sala por falta de algum acessório como quadro, projetor ou monitor?}
-            {Sim, Não, Outro}
-      \item \ChoiceMenu[print, combo]{\textbf{Salas}: Você já teve aula cuja sala não dispunha de carteiras o suficiente?}
-            {Sim, Não, Outro}
-      \item \ChoiceMenu[print, combo]{\textbf{Vagas}: Você já quis entrar em uma disciplina, mas ela não tinha vaga?}
-            {Sim, Não, Outro}
-      \item \ChoiceMenu[print, combo]{\textbf{Vagas}: Você já ficou acordado após meia-noite por medo de não ter vaga para as disciplinas que deseja cursar?}
-            {Sim, Não, Outro}
-      \item \ChoiceMenu[print, combo]{\textbf{Conflitos}: Você já deixou de se inscrever em uma disciplina por causa de conflito de horário?}
-            {Sim, Não, Outro}
-      \item \ChoiceMenu[print, combo]{\textbf{Preferências}: Você já preferiu não se inscrever em uma disciplina para cursá-la em outro momento mais oportuno?}
-            {Sim, Não, Outro}
-      \item \ChoiceMenu[print, combo]{\textbf{Opiniões}: Você acha que a universidade deveria oferecer horários diferentes para as disciplinas mais demandadas para evitar conflitos com outras disciplinas?}
-            {Sim, Não, Outro}
+      \ChoiceMenuSNO{\textbf{Salas}: Você já teve que mudar de sala por falta de algum acessório como quadro, projetor ou monitor?}{SalasAcessorios}
+      \ChoiceMenuSNO{\textbf{Salas}: Você já teve aula cuja sala não dispunha de carteiras o suficiente?}{SalasCarteiras}
+      \ChoiceMenuSNO{\textbf{Vagas}: Você já quis entrar em uma disciplina, mas ela não tinha vaga?}{VagasDisciplinas}
+      \ChoiceMenuSNO{\textbf{Vagas}: Você já ficou acordado após meia-noite por medo de não ter vaga para as disciplinas que deseja cursar?}{VagasNoite}
+      \ChoiceMenuSNO{\textbf{Conflitos}: Você já deixou de se inscrever em uma disciplina por causa de conflito de horário?}{Conflitos}
+      \ChoiceMenuSNO{\textbf{Preferências}: Você já preferiu não se inscrever em uma disciplina para cursá-la em outro momento mais oportuno?}{Preferências}
+      \ChoiceMenuSNO{\textbf{Opiniões}: Você acha que a universidade deveria oferecer horários diferentes para as disciplinas mais demandadas para evitar conflitos com outras disciplinas?}{Opiniões}
     \end{enumerate}
 
     \section*{Preferências pessoais}
 
     Esta seção visa saber um pouco mais sobre as suas preferências pessoais quanto a escolha das disciplinas ofertadas.
 
+    \begin{enumerate}
+      \item Você prefere disciplinas distribuídas ao longo da semana ou acumuladas em poucos dias?
+            \FormInNewLine{
+              \ChoiceMenu[print, combo, name=distribuiçãoDisciplinasNaSemana]{ }
+              {
+                1. Distribuídas ao longo da semana,
+                2. Preferencialmente ao longo da semana,
+                3. Não tenho preferência,
+                4. Preferencialmente acumulada em poucos dias,
+                5. Acumuladas em poucos dias,
+              }
+            }
 
+      \item Você prefere disciplinas na parte da manhã ou na parte da tarde?
+            \FormInNewLine{
+              \ChoiceMenu[print, combo, name=distribuiçãoDisciplinasNoDia]{ }
+              {
+                1. Na parte da manhã,
+                2. Preferencialmente na parte da manhã,
+                3. Não tenho preferência,
+                4. Preferencialmente na parte da tarde,
+                5. Na parte da tarde,
+              }
 
+            }
+      \item Como você lida com conflitos de horário entre as disciplinas que deseja cursar?
+            \begin{itemize}
+              \MyCheckbox{Escolho a mais difícil}{dificil}
+              \MyCheckbox{Escolho a mais fácil}{facil}
+              \MyCheckbox{Escolho a que tem mais créditos}{creditos}
+              \MyCheckbox{Escolho a que prefiro}{prefiro}
+              \MyCheckbox{Escolho a que ``prende'' mais matérias}{prende}
+              \MyCheckbox{Escolho a disciplina mais concorrida}{concorrida}
+              \item \TextField[name=ComentarioConflito, width=0.8\linewidth]{Outro...}
+            \end{itemize}
+    \end{enumerate}
 
+    \section*{Experiências passadas com atrasos e disciplinas}
 
+    Aqui estão algumas perguntas relacionadas à divergência entre o período esperado de conclusão das disciplinas VS o período em que elas de fato são realizadas.
+
+    \begin{enumerate}
+      \ChoiceMenuPeriodos{Quanto tempo (em períodos) você já teve que esperar para fazer uma disciplina da sua grade?}{TempoEspera}
+      \ChoiceMenuPeriodos{Qual foi a quantidade máxima de períodos que você se distanciou de uma disciplina de determinado período?}{DistanciaPeriodos}
+    \end{enumerate}
+
+    \section*{Você acha que a distribuição de disciplinas semestrais é...}
+
+    \begin{enumerate}
+      \ChoiceMenuDdNcC{Justa (feita de acordo a atender os desejos da maioria)}{Justa}
+      \ChoiceMenuDdNcC{Variada (bem diversa e abrange diversos interesses)}{Variada}
+      \ChoiceMenuDdNcC{Contínua (oferecida de forma a ter aulas sequenciais)}{Contínua}
+      \ChoiceMenuDdNcC{Eficiente (bem sucedida em atender aos desejos dos alunos)}{Eficiente}
+      \ChoiceMenuDdNcC{Distribuída (bem espaçada ao longo da semana)}{Distribuída}
+      \ChoiceMenuDdNcC{Satisfatória (agradável aos meus desejos pessoais)}{Satisfatória}
+    \end{enumerate}
+
+    \section*{Opcional}
+
+    Por fim, deixo aqui um espaço caso deseje compartilhar algum comentário, opinião ou sugestão quanto ao meu trabalho ou formulário.
+
+    Escreva aqui caso haja algo que gostaria de comentar, opinar ou sugerir. Tudo bem deixar em branco, suas informações já foram de grande ajuda.
+
+    \TextField[multiline=true, width=0.8\linewidth, name=comentario]{ }
+
+    \Reset{Resetar}
+    \Submit{Enviar}
 
   \end{Form}
 
-
-
-  \chapter{Formulário de pesquisa quantitativa}
+  \chapter{Formulário de pesquisa quantitativa 2} \label{apendice:C-FormularioPesquisaQuantitativa}
 
   Pesquisa quantitativa de alunos da UENF sobre distribuição e oferta de disciplinas
 
