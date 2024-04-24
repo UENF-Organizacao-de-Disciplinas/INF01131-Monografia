@@ -114,19 +114,25 @@ subject = {Anexos da minha monografia. Mais especificamente, o seu código fonte
 \newcommand{\removeLine}{\rowcolor[HTML]{b31d28}} % Define a cor da próxima linha
 \newcommand{\addLine}{\rowcolor[HTML]{22863a}} % Define a cor da próxima linha
 
-% \captionsetup[lstlisting]{position=t}
 % --- Configurações de aparência do PDF final: alterando o aspecto da cor azul
 \definecolor{hyperBlue}{HTML}{2905C3}
 
 \renewcommand{\lstlistingname}{Código}% Listing -> Código
 \renewcommand{\lstlistlistingname}{Lista de \lstlistingname s} % List of Listings -> Lista de códigos
+% Cores das tabelas em 2.02!7-resultados
 
-% Necessário para códigos bonitos
-
+% Cores das Listings
 \definecolor{codegreen}{HTML}{009900}
 \definecolor{codegray}{HTML}{808080}
 \definecolor{codepurple}{HTML}{9400D3}
 \definecolor{backcolour}{HTML}{F2F2EB}
+
+% Colore tabelas em 2.02!7-resultados
+
+% \captionsetup[lstlisting]{position=t}
+
+
+% Necessário para códigos bonitos
 
 \lstdefinestyle{mystyle}{
   backgroundcolor=\color{backcolour},
@@ -147,9 +153,7 @@ subject = {Anexos da minha monografia. Mais especificamente, o seu código fonte
   tabsize=2
 }
 
-% numberbychapter=⟨true|false⟩ true
-% If true, and \thechapter exists, listings are numbered by chapter. Otherwise, they are numbered sequentially from the beginning of the document.
-% This key can only be used before \begin{document}.
+% numberbychapter=⟨true|false⟩ true % If true, and \thechapter exists, listings are numbered by chapter. Otherwise, they are numbered sequentially from the beginning of the document. This key can only be used before \begin{document}.
 
 \lstset{style=mystyle}
 
@@ -162,7 +166,7 @@ subject = {Anexos da minha monografia. Mais especificamente, o seu código fonte
 % Adicionar comando mais denso para adição da animação
 \newcommand{\myAnimation}[1]{\includegraphics[scale=0.2]{files/img/2.02!5-desenvolvimento/2.02!5.1.4-sistema/Animacao/#1}}
 
-% Coloringo YAML: https://tex.stackexchange.com/questions/152829/how-can-i-highlight-yaml-code-in-a-pretty-way-with-listings
+% Coloring YAML: https://tex.stackexchange.com/questions/152829/how-can-i-highlight-yaml-code-in-a-pretty-way-with-listings
 
 % \definecolor{commentColor}{HTML}{54A668}
 % \definecolor{keyWordColor}{HTML}{569CD6}
@@ -214,7 +218,7 @@ literate =    {---}{{\ProcessThreeDashes}}3
 
 \newcommand{\LinkToURL}[2]{\href{#1}{#2}\footnote{\url{#1}}}
 
-% --- Comandos para criar as questões do formulário ---
+% --- COMANDOS PARA CRIAR AS QUESTÕES DO FORMULÁRIO ---
 
 \newcommand{\MyCheckbox}[2] {
   \item \CheckBox[name=#2, checkboxsymbol=\ding{53}]{ } #1
@@ -250,7 +254,7 @@ literate =    {---}{{\ProcessThreeDashes}}3
   }
 }
 
-% --- Definindo Links usados ao longo do documento
+% --- DEFININDO LINKS USADOS AO LONGO DO DOCUMENTO ---
 
 % 2.01!1-introducao
 \def\LinkDrawio{https://www.drawio.com} % 2.02!3-organizacao; 2.02!4-modelagem
