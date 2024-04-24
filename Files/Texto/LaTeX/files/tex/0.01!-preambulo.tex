@@ -110,16 +110,15 @@ description = {Anexos da minha monografia},
 subject = {Anexos da minha monografia. Mais especificamente, o seu código fonte.},
 }
 
-\newcommand{\altered}{\cellcolor[HTML]{79b8ff}} % Define a cor desta célula
-\newcommand{\removeLine}{\rowcolor[HTML]{b31d28}} % Define a cor da próxima linha
-\newcommand{\addLine}{\rowcolor[HTML]{22863a}} % Define a cor da próxima linha
 
 % --- Configurações de aparência do PDF final: alterando o aspecto da cor azul
 \definecolor{hyperBlue}{HTML}{2905C3}
 
-\renewcommand{\lstlistingname}{Código}% Listing -> Código
-\renewcommand{\lstlistlistingname}{Lista de \lstlistingname s} % List of Listings -> Lista de códigos
 % Cores das tabelas em 2.02!7-resultados
+\definecolor{myCellColor}{HTML}{79b8ff}
+\definecolor{myRemoveLineColor}{HTML}{b31d28}
+\definecolor{myAddLineColor}{HTML}{22863a}
+\definecolor{hyperBlue}{HTML}{2905C3}
 
 % Cores das Listings
 \definecolor{codegreen}{HTML}{009900}
@@ -128,9 +127,14 @@ subject = {Anexos da minha monografia. Mais especificamente, o seu código fonte
 \definecolor{backcolour}{HTML}{F2F2EB}
 
 % Colore tabelas em 2.02!7-resultados
+\newcommand{\altered}{\cellcolor{myCellColor}} % Define a cor desta célula
+\newcommand{\removeLine}{\rowcolor{myRemoveLineColor}} % Define a cor da próxima linha
+\newcommand{\addLine}{\rowcolor{myAddLineColor}} % Define a cor da próxima linha
 
 % \captionsetup[lstlisting]{position=t}
 
+\renewcommand{\lstlistingname}{Código}% Listing -> Código
+\renewcommand{\lstlistlistingname}{Lista de \lstlistingname s} % List of Listings -> Lista de códigos
 
 % Necessário para códigos bonitos
 
