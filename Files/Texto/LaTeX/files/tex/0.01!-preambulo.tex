@@ -216,3 +216,39 @@ literate =    {---}{{\ProcessThreeDashes}}3
 % \newcommand{\importTeX}[1]{\include{files/tex/#1}} % Importar arquivos tex de forma mais enxuta % contra: perde os hiperlinks do vscode
 
 \newcommand{\LinkToURL}[2]{\href{#1}{#2}\footnote{\url{#1}}}
+
+% --- Comandos para criar as questões do formulário ---
+
+\newcommand{\MyCheckbox}[2] {
+  \item \CheckBox[name=#2, checkboxsymbol=\ding{53}]{ } #1
+}
+
+\newcommand{\FormInNewLine}[1]{
+  \begin{description}
+    \item[] #1
+  \end{description}
+}
+
+\newcommand{\QuestionNameOptions}[3]{
+  \item #1
+  \FormInNewLine{\ChoiceMenu[print, combo, name=#2]{ }{#3}}
+}
+
+\newcommand{\ChoiceMenuPeriodos}[2]{
+  \QuestionNameOptions{#1}{#2}{ 0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10 }
+}
+
+\newcommand{\ChoiceMenuSNO}[2]{
+  \QuestionNameOptions{#1}{#2}{1. Sim, 2. Não, 3. Outro }
+}
+
+\newcommand{\ChoiceMenuDdNcC}[2]{
+  \QuestionNameOptions{#1}{#2}
+  {
+    1. Discordo completamente,
+    2. Discordo parcialmente,
+    3. Não tenho preferência,
+    4. Concordo parcialmente,
+    5. Concordo completamente
+  }
+}

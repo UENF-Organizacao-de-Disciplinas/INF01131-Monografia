@@ -1,18 +1,3 @@
-\newcommand{\MyCheckbox}[2] {
-  \item \CheckBox[name=#2, checkboxsymbol=\ding{53}]{ } #1
-}
-
-\newcommand{\FormInNewLine}[1]{
-  \begin{description}
-    \item[] #1
-  \end{description}
-}
-
-\newcommand{\QuestionNameOptions}[3]{
-  \item #1
-  \FormInNewLine{\ChoiceMenu[print, combo, name=#2]{ }{#3}}
-}
-
 \begin{apendicesenv} % Imprime uma página indicando o início dos apêndices
 
   \chapter{Código-Fonte da Monografia} \label{apendice:CodigoFonte}
@@ -74,25 +59,6 @@
     Agora serão feitas algumas perguntas em relação à sua satisfação com algumas características da Universidade.
 
     Abaixo, estão algumas perguntas gerais em relação à sua satisfação com a distribuição de disciplinas semestralmente.
-
-    \newcommand{\ChoiceMenuPeriodos}[2]{
-      \QuestionNameOptions{#1}{#2}{ 0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10 }
-    }
-
-    \newcommand{\ChoiceMenuSNO}[2]{
-      \QuestionNameOptions{#1}{#2}{1. Sim, 2. Não, 3. Outro }
-    }
-
-    \newcommand{\ChoiceMenuDdNcC}[2]{
-      \QuestionNameOptions{#1}{#2}
-      {
-        1. Discordo completamente,
-        2. Discordo parcialmente,
-        3. Não tenho preferência,
-        4. Concordo parcialmente,
-        5. Concordo completamente
-      }
-    }
 
     \begin{enumerate}
       \ChoiceMenuSNO{\textbf{Salas}: Você já teve que mudar de sala por falta de algum acessório como quadro, projetor ou monitor?}{SalasAcessorios}
