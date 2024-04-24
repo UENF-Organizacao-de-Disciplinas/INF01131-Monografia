@@ -92,11 +92,9 @@
 \usepackage{caption}  % Colocar caption em códigos na parte de cima
 \usepackage{adjustbox} % Adicionando Easter Eggs
 \usepackage{ulem} % Adicionado para cortar texto
+\usepackage{attachfile} % Anexando código ao PDF: alternativas: embedfile, navigator
+\usepackage[table, dvipsnames]{xcolor} % Adding color to table line. Não tenho certeza para que o dvipsnames serve
 
-% Anexando código ao PDF
-% \usepackage{embedfile}
-% \usepackage{navigator}
-\usepackage{attachfile}
 \attachfilesetup{
 % color = {0 1 1}, % Cyan
 color = {.05 .55 .18},
@@ -112,7 +110,6 @@ description = {Anexos da minha monografia},
 subject = {Anexos da minha monografia. Mais especificamente, o seu código fonte.},
 }
 
-\usepackage[table]{xcolor} % Adding color to table line
 \newcommand{\altered}{\cellcolor[HTML]{79b8ff}} % Define a cor desta célula
 \newcommand{\removeLine}{\rowcolor[HTML]{b31d28}} % Define a cor da próxima linha
 \newcommand{\addLine}{\rowcolor[HTML]{22863a}} % Define a cor da próxima linha
@@ -166,8 +163,6 @@ subject = {Anexos da minha monografia. Mais especificamente, o seu código fonte
 \newcommand{\myAnimation}[1]{\includegraphics[scale=0.2]{files/img/2.02!5-desenvolvimento/2.02!5.1.4-sistema/Animacao/#1}}
 
 % Coloringo YAML: https://tex.stackexchange.com/questions/152829/how-can-i-highlight-yaml-code-in-a-pretty-way-with-listings
-
-\usepackage[dvipsnames]{xcolor}
 
 % \definecolor{commentColor}{HTML}{54A668}
 % \definecolor{keyWordColor}{HTML}{569CD6}
