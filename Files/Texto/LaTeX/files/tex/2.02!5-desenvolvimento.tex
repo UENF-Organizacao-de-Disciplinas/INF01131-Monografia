@@ -225,7 +225,7 @@ Esta plataforma permite a criação de \textit{bins}, que são basicamente cole�
 
 Com isso, se tornou possível ler e atualizar os dados de forma remota, e assim, manter os dados mesmo após a recarga da página. Embora cumprisse com o que promete e o que era desejado, o JSONBin não se mostrou a melhor escolha para o sistema, visto que a sua utilização não performou tão bem quanto se esperava. Não se sabe se foi por inexperiência ou por limitações do próprio serviço, mas a utilização do JSONBin para a coleta dos dados, fazia com que a tela de carregamento do sistema demorasse alguns segundos para ser exibida, o que não é apropriado para a usabilidade do sistema proposto.
 
-\subsubsubsection*{MySQL} \label{MySQL}
+\subsubsubsection*{MySQL} \label{ssssec:MySQL}
 
 Embora houvesse o desejo do uso de informações em formato JSON, achou-se por bem utilizar um banco de dados mais usual, recorrendo então ao MySQL, sendo então necessário criar um banco de dados local que armazenasse os dados e que pudesse ser acessado pelo sistema. Essa configuração serviu para estabelecer a supracitada camada de banco de dados. E consistiu basicamente na instalação do MySQL Server.
 
@@ -265,7 +265,7 @@ O uso desses três serviços permitiu a execução do \textit{backend} do sistem
 
 % \subsubsubsection*{CORS} % Até agora não entendi direito pra que serve isso. \label{CORS}
 
-\subsubsubsection*{Implantação} \label{Implantação}
+\subsubsubsection*{Implantação} \label{ssssec:Implantação}
 
 O conjunto de funcionalidades da AWS envolve em grande parte o objetivo de manter um sistema constantemente acessível através da internet, ainda assim, durante o desenvolvimento, ou até mesmo durante o ciclo de vida do software, é esperado que ocorram manutenções periódicas nas quais é compreensível que o sistema fique fora do ar. Sendo assim, para manter-se visando ao máximo a acessibilidade do sistema, espera-se que o mesmo fique desconectado o mínimo possível.
 
@@ -273,7 +273,7 @@ Tanto o API Gateway quanto as funções Lambda precisaram sofrer diversas modifi
 
 Outro detalhe percebido, foi que boa parte do código se repetia entre as funções que interagiam diretamente com o banco de dados. Sendo assim, passou-se a utilizar das \textit{Lambda Layers}, que são camadas que podem ser compartilhadas entre diversas funções, e assim, diminuir a quantidade de código repetido. Essa nova abordagem permitiu que as funções fossem mais enxutas, e que as mudanças fossem aplicadas de forma mais rápida, visto que bibliotecas e funções comuns entre as funções eram compartilhadas entre elas.
 
-\subsubsubsection*{AWS CLI} \label{AWS CLI}
+\subsubsubsection*{AWS CLI} \label{ssssec:AWS CLI}
 
 Nas primeiras tentativas de \textit{deploy}, duas abordagens eram utilizadas: a primeira era a de copiar e colar o código diretamente na interface web da AWS, e a segunda era a de fazer o upload de um arquivo zip contendo o código.
 
@@ -283,7 +283,7 @@ Como mostrado no \autoref{code:lambda}, usa-se o software AWS CLI para criar uma
 
 Com isso, ao executar o comando, a função é criada, e então, a nova versão do código é aplicada. Com este fluxo de trabalho, embora permita o \textit{deploy} sem a direta conexão ao sistema AWS, ainda assim é necessário executar comandos específicos para cada uma, tendo que manualmente compactar o código e fazer o upload de cada um dos arquivos das diversas funções coexistentes.
 
-\subsubsubsection*{SAM} \label{SAM}
+\subsubsubsection*{SAM} \label{ssssec:SAM}
 
 Como solução, foi utilizado o AWS SAM (\textit{Serverless Application Model}), que é uma extensão do \textit{AWS CloudFormation} que simplifica o desenvolvimento de aplicações sem servidor. O AWS SAM permite a definição de aplicações sem servidor de forma mais simples, e a partir disso, é possível fazer o \textit{deploy} de toda a aplicação de uma vez só. O uso do AWS SAM foi feito através de um arquivo \textit{template.yaml}, que contém a definição de todas as funções Lambda, e de recursos necessários para o funcionamento do sistema.
 
@@ -327,7 +327,7 @@ Considerando que a segunda versão já apresentava em sua maioria as funcionalid
 
 O uso do GitHub Projects se provou como uma excelente forma de organização das tarefas, e assim, foi mantido para a terceira versão. Alguns novos detalhes foram adicionados em sua organização, como a adição da categorização de tarefas por \textbf{marcos} (\textit{milestones}, \autoref{fig:ProjectsMilestones}) e \textbf{etiquetas} (\textit{labels}, \autoref{fig:ProjectsLabels}).
 
-\subsubsubsection*{Marcos e Etiquetas} \label{Marcos e Etiquetas}
+\subsubsubsection*{Marcos e Etiquetas} \label{ssssec:Marcos e Etiquetas}
 
 Os marcos visam distinguir as tarefas por suas versões, e também por seus tipos de funcionalidades futuras, assim, a medida em que surgiam novas ideias, elas eram adicionadas ao GitHub Projects. Então podemos considerar que cada um desses \textbf{marcos} teve tarefas atribuídas a si pois...
 
@@ -365,7 +365,7 @@ No Projects, também foram adicionadas as \textbf{etiquetas} que distinguem as t
   \item \textbf{Nova funcionalidade}: funcionalidades que ainda não foram implementadas;
 \end{enumerate}
 
-\subsubsubsection*{Gráficos} \label{Gráficos}
+\subsubsubsection*{Gráficos} \label{ssssec:Gráficos}
 
 O GitHub Projects também oferece a possibilidade de visualização de gráficos na seção \textit{Insights}, que mostram a quantidade de tarefas em cada uma das categorias. Esses gráficos são úteis para a visualização do andamento do projeto, e para a identificação de possíveis gargalos.
 
@@ -386,7 +386,7 @@ Com eles, pode-se ter uma noção das métricas do projeto, como por exemplo:
 
 O sistema passou por diversas pequenas mudanças, e algumas maiores. Uma considerável parte delas foi relacionada à forma com que as informações eram estruturadas internamente, mudanças essas feitas com o intuito de tornar o sistema mais fácil de ser mantido posteriormente. Em seguida estão listadas algumas das várias melhorias feitas no sistema.
 
-\subsubsubsection*{Filtros e ordenações} \label{Filtros e ordenações}
+\subsubsubsection*{Filtros e ordenações} \label{ssssec:Filtros e ordenações}
 
 Levando em consideração a multidimensionalidade da estrutura dos dados, a possibilidade de realizar ``curvas de nível'' e as ordenar por diferentes critérios se mostrou uma funcionalidade essencial para a compreensão dos dados. Dessa forma, em diferentes páginas do sistema, foram adicionadas ordenações padrões e seletores de filtragem manual, assim permitindo ao usuário a visualização de dados específicos.
 
@@ -403,7 +403,7 @@ Uma das solicitações presentes ao final da versão anterior foi quanto a uma d
 
 Com essa divisão, definiu-se o sistema para que, por padrão, apenas exibisse as turmas voltadas para Ciência da Computação, e que, caso o usuário desejasse, poderia visualizar as turmas de outros cursos.
 
-\subsubsubsection*{MultiTurmas} \label{MultiTurmas}
+\subsubsubsection*{MultiTurmas} \label{ssssec:MultiTurmas}
 
 Dentre as tarefas realizadas, uma das páginas que mais sofreu alterações foi a página de \textbf{MultiTurmas}. Nela, foram feitas diversas melhorias, como a adição de filtros, ordenações e aprimoramento dos textos contidos nas caixas de seleção.
 
@@ -439,13 +439,13 @@ O botão de adição de todas as disciplinas foi mantido, e agora, ao ser clicad
 
 É esperado, entretanto, que esta solução apresente problemas em sua execução, visto que nem todas as alocações de turmas apresentam um padrão. Então, fica a cargo do usuário a verificação e a correção dos possíveis erros alertados pelo sistema.
 
-\subsubsubsection*{Grade Horária} \label{Grade Horária}
+\subsubsubsection*{Grade Horária} \label{ssssec:Grade Horária}
 
 A página que detinha o nome ``CCTable'' e que visava apresentar exclusivamente as disciplinas do curso de Ciência da Computação, foi renomeada para ``Grade Horária'', e passou a ser possível de apresentar disciplinas de todos os cursos, embora ainda não seja possível distinguir as disciplinas de um curso para o outro.
 
 As células das turmas sofreram um ligeiro aprimoramento visual e foram ordenadas primariamente por seu período esperado.
 
-\subsubsubsection*{Banco de dados} \label{Banco de dados}
+\subsubsubsection*{Banco de dados} \label{ssssec:Banco de dados}
 
 Quanto ao banco de dados, os dados antes desconexos passaram a ser interligados adequadamente por chaves estrangeiras. Apresentando então restrições em casos de deleções inapropriadas no banco de dados. A API, por sua vez, deixou de retornar as listas de turmas, professores, disciplinas e salas, e passou a retornar os dados de forma mais estruturada em formato JSON.
 
@@ -475,7 +475,7 @@ Além dos PDFs anteriores, haviam também os arquivos referentes à oferta de tu
 
 Por fim, foi feita o \textit{web scraping} que consistiu na busca por informações em diversos sites, principalmente o \LinkToURL{\LinkAcademicoUENF}{Sistema Acadêmico}, o \LinkToURL{\LinkSiteUENF}{site da UENF} e outros sites. Nessa etapa, foi possível encontrar lotes de informações estruturadas. Um dos lotes foi a listagem de disciplinas e suas características que se encontram disponíveis no Sistema Acadêmico da UENF, essas informações foram copiadas e coladas no arquivo Excel unificado. Outros lotes foram encontrados dispersos ao longo do site da UENF e consistiam basicamente em listagem de professores e seus respectivos laboratórios. Essas informações estavam dispersas dos sites dos diversos centros e cursos, alguns disponíveis no próprio site, outros em formato de arquivo. Deste método foram coletadas as informações referentes à nomes de professores, seus laboratórios e centros; e disciplinas e seus nomes, códigos e períodos de vigência. Além disso, foram encontrados documentos oficiais que referenciam a capacidade de ocupantes das ``salas'' disponíveis do Centro de Convenções, popularmente conhecido como ``Apitão'' que mesmo não sendo propriamente uma sala de aula, já foi utilizado previamente para tal fim. Outras salas já obtiveram alocações similares, assim como a Sala dos Professores.
 
-\subsubsubsection*{Gerais} \label{Gerais}
+\subsubsubsection*{Gerais} \label{ssssec:Gerais}
 
 Neste tópico estão descritas algumas melhorias gerais do sistema que não se enquadraram nos tópicos anteriores.
 
