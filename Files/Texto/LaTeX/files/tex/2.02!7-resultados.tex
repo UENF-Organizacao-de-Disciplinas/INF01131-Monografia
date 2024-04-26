@@ -6,7 +6,6 @@ Estando no início do fim, seguiremos agora numa jornada retroativa ao que foi f
 
 Pudemos ver através da pesquisa acadêmica aos artigos e trabalhos relacionados com a área da construção de grades horárias em específico, o \textit{university course timetabling}, que a área é vasta, tanto em quantidade de artigos publicados quanto com muitas possibilidades de pesquisa e desenvolvimento que pode ser visto na revisão literária realizada por \citeonline{Alencar2019}. Uma das principais questões que mantêm a área em constante inconclusão é o nível de especificidade que cada instituição de ensino possui, o desafio deixa de ser a implementação do método resolutivo, e passa a ser modelar o problema específico e lidar com as preocupações dos usuários, como é concluído por \citeonline{Murray2007}.
 
-
 A UENF não é diferente, já tendo sido alvo de pesquisas e desenvolvimentos de sistemas de otimização de grade horária em anos anteriores, em especial as monografias de \citeonline{Sanya2013} e \citeonline{Ricardo2014}, mas que não foram adotados pela instituição mesmo que representassem a eficiência da resolução do problema.
 
 Uma alternativa encontrada para contornar a dificuldade encontrada pelos trabalhos anteriores na UENF no campo da modelagem do problema foi utilizar de uma abordagem voltada para a Interação Humano-Computador, como feito por \citeonline{Andre2018}, para a construção de um sistema de otimização de grade horária, que permitisse a participação ativa dos usuários na construção da grade horária, o que poderia facilitar a aceitação do sistema pela instituição.
@@ -15,7 +14,32 @@ Uma alternativa encontrada para contornar a dificuldade encontrada pelos trabalh
 
 Visando enfrentar diretamente o problema da especificidade e modelagem do problema na UENF. Para tanto foi feito um estudo sobre a forma como os diversos setores relacionados à construção da grade horária interagem entre si, quais são os seus responsáveis e qual é a sequência de ações que cada setor realiza para a construção da grade horária.
 
-O primeiro passo foi a leitura do
+O primeiro passo foi a leitura dos documentos oficiais da UENF, como o Estatuto \cite{Estatuto2002}, Regimento \cite{Regimento2012}, Normas da Graduação \cite{Normas2012} e o Projeto Pedagógico do Curso de Ciência da Computação \cite{PPCCC2015}.
+
+% Não cito sobre todos eles na parte da organização, devo citar.
+
+Com base nos documentos oficiais da UENF, foi possível identificar os setores responsáveis pela construção da grade horária, que são a Secretaria Acadêmica, a Direção de Centro, a Chefia do Laboratório e a Coordenação do Curso. Também relacionado com o processo de oferecimento das turmas está o Sistema Acadêmico da UENF, não sendo ele recorrentemente citado nas documentações, mesmo que no presente momento esteja interligado entre esses setores.
+
+As atribuições de cada setor estão, em sua maioria, descritas nas documentações encontradas. De forma resumida, as atribuições de cada setor são:
+
+\begin{itemize}
+  \item \textbf{Secretaria Acadêmica}: elaborar e divulgar o Calendário Acadêmico; otimizar os recursos humanos; ampliar a oferta de disciplinas;
+  \item \textbf{Câmara de Graduação}: aprovar e modificar o calendário acadêmico; sugerir vagas de bolsistas;
+  \item \textbf{Direção de Centro}: designação semestral de professores responsáveis pelas disciplinas, após ouvir os Laboratórios, Colegiados e Coordenações;
+  \item \textbf{Chefia do Laboratório}: atribuir carga horária didática aos docentes do laboratório e aos bolsistas; designar docente responsável por disciplina ofertada;
+  \item \textbf{Coordenação do Curso}: coordenar a distribuição de estudantes do curso; indicar à chefia de laboratório as disciplinas a serem ofertadas ao curso coordenado;
+  \item \textbf{Sistema Acadêmico}: articula parcialmente as informações entre os setores, como a oferta de disciplinas e a distribuição de estudantes.
+\end{itemize}
+
+% Tá faltando comentar mais sobre as atribuições de cada setor lá na parte de estrutura.
+
+\subsection{Entrevistas}
+
+Como o sistema pretendido é voltado para se enquadrar no contexto prático, viu-se necessário a realização de pesquisas qualitativas em forma de entrevista com os responsáveis de cada setor para entender suas percepções pessoais à realidade prática recorrente na instituição. Com isto, pode-se obter informações mais detalhadas.
+
+Por parte da \textbf{Direção do CCT}, viu-se a existência de termos específicos para certos agrupamentos de disciplinas/turmas (anuais, ímpares, pares, ``de serviço'', ``Ciclo básico'', repetentes); a preferência por alocar disciplinas ofertadas a múltiplos cursos em horários fixos; a não preferência por horários casados (em um mesmo horário em dias de semana com um dia de distância entre si); recorrência majoritária de horários de turmas que duram 2 horas, mas regular necessidade de turmas com horários que durem 3 horas, sendo esses alocados preferencialmente às 10h da manhã; as alterações de alocação ocorrem até o final do período; alocar primeiro as disciplinas de serviço e que têm maior demanda encaminha os conflitos futuros a turmas menores de um mesmo curso, o que pode facilitar a resolução do conflito.
+
+Com o \textbf{desenvolvedor do Sistema Acadêmico}
 
 \section{Sistema}
 
