@@ -160,11 +160,11 @@ Após a elaboração dos protótipos com o Figma, e da conceitualização diagra
 
 % Perguntar para quem sabe, sobre qual é o real papel do Node.js
 
-\subsection{Primeira Versão} \label{subsec:MVP1} % ### 5.5.2. Primeira versão
+\subsection{Versão 1.0} \label{subsec:MVP1} % ### 5.5.2. Primeira versão
 
 A primeira versão do sistema foi desenvolvida em um ambiente local, com o objetivo de se aproximar ao máximo das páginas previstas no protótipo. Para isso, foi utilizada a biblioteca \textit{React Router} para a navegação entre as páginas, e a biblioteca \textit{React Select} para as caixas de seleção.
 
-\subsubsection{Banco de Dados Primitivo} \label{sssec:BDInicial}
+\subsubsection{Banco de Dados Inicial} \label{sssec:BDInicial}
 
 Os dados contidos no sistema foram inicialmente armazenados em arquivos JSON, que eram importados diretamente para o código. Isso foi feito para que fosse possível visualizar o funcionamento do sistema sem a necessidade de um banco de dados real. A partir disso, foi possível visualizar o funcionamento do sistema e realizar testes de usabilidade. Em contrapartida, os dados disponíveis não eram modificáveis, tendo apenas a possibilidade de leitura e mutação temporária, visto que após recarregar ou mudar de página, as mudanças eram perdidas.
 
@@ -172,7 +172,7 @@ Nesse método, cada entidade era armazenada em um arquivo JSON separado, contend
 
 Como nesta dinâmica não havia uma forte correlação entre os dados, o \textit{frontend} acabava sendo o responsável por unir todas as informações. Assim, por exemplo, para se obter a lista de professores de uma turma, era necessário importar todos os professores, todas as turmas, e então, a partir do nome do professor alocado àquela turma, buscar na listagem dos professores qual era o professor que correspondia àquele nome, para então agregar as informações.
 
-\subsubsection{Funcionalidades Iniciais} \label{sssec:Funcionalidades Iniciais}
+\subsubsection{Funcionalidades Iniciais: CRUD, primeiros conflitos e abandonadas} \label{sssec:Funcionalidades Iniciais}
 
 Nessa primeira versão, algumas funcionalidades já começaram a ser esboçadas, principalmente as funcionalidades CRUD (\textit{Create}, \textit{Read}, \textit{Update}, \textit{Delete}) para as entidades principais do sistema. Embora, como já dito, os dados não fossem persistentes, foi possível visualizar o funcionamento das funcionalidades de criação e leitura de turmas, professores, disciplinas, salas e horários.
 
@@ -184,7 +184,7 @@ Além dessas funcionalidades que se mantiveram até a conclusão do sistema, tam
 
 Após o desenvolvimento local, como forma de viabilizar o acesso ao sistema por parte de outros usuários, foi feito o \textit{deploy}, ou seja, foi feito o \textit{upload} do sistema para um servidor online. Para isso, foi utilizado o serviço GitHub Pages que, por ser gratuito e de fácil utilização, foi a escolha mais adequada para o momento.
 
-\subsection{Segunda Versão} \label{subsec:MVP2} % ### 5.5.3. Segunda versão
+\subsection{Versão 2.0} \label{subsec:MVP2} % ### 5.5.3. Segunda versão
 
 Utilizando do \textit{feedback} quanto aos resultados entregues na primeira versão, alguns pontos de melhoria foram identificados, sendo um deles, e o mais importante: o planejamento. Na primeira abordagem, o desenvolvimento foi feito seguindo notas e ideias soltas, sem um planejamento prévio, o que resultou em um sistema que, embora funcional, não atendia a todas as necessidades propostas. E ia além: dispunha de funcionalidades que não eram de todo necessárias, e, melhor dizendo, que tinham menor prioridade do que muitas outras.
 
@@ -314,7 +314,7 @@ Juntando o símbolo da ampulheta com o nome \textit{OurClass} e outros elementos
 
 Após analisar as possibilidades, foi escolhida a \autoref{fig:logomarca_oficial} como a logomarca oficial do sistema. A logomarca foi então adicionada ao sistema.
 
-\subsubsection{Funcionalidades Adicionais} \label{sssec:Funcionalidades Adicionais}
+\subsubsection{Funcionalidades Adicionais: conflitos, filtragem e disciplinas não oferecidas} \label{sssec:Funcionalidades Adicionais}
 
 Acrescendo à visualização de conflitos desenvolvida na primeira versão, foi implementada a visualização de conflito por capacidade de salas, ao comparar com a quantidade de alunos estimados para a turma. Mais detalhes sobre os conflitos podem ser vistos mais adiante na \autoref{sec:conflitos} denominada \nameref{sec:conflitos}.
 
@@ -322,7 +322,7 @@ Adicionou-se também diversas filtragens, principalmente na página de \textbf{G
 
 Outra utilidade adicionada, agora na página \textbf{MultiTurmas}, foi a seção de ``Disciplinas ainda não oferecidas''. Sua funcionalidade consiste em dispor ao usuário uma lista de disciplinas que, segundo a ementa de Ciência da Computação, deveriam ser ofertadas naquele semestre. A partir disso, o usuário pode então selecionar o botão correspondente àquela disciplina e, a partir disso, uma turma para esta disciplina é adicionada à lista de turmas ofertadas. Há também um botão no topo que permite a adição de todas as disciplinas de uma vez.
 
-\subsection{Terceira Versão} \label{subsec:MVP3} % ### 5.5.3.
+\subsection{Versão 3.0} \label{subsec:MVP3} % ### 5.5.3.
 
 Considerando que a segunda versão já apresentava em sua maioria as funcionalidades mínimas desejadas, a terceira versão foi focada em melhorias de usabilidade e na correção de bugs.
 
@@ -541,7 +541,7 @@ Os conflitos que são representados por cores, têm sua paleta de cores represen
 
 Os \textbf{conflitos nulos} representam a incompletude de informações, e como durante parte do processo de criação da grade não se tem todas as informações sobre as alocações das turmas, ele acaba por ser um dos conflitos mais comuns. Esse conflito, representado pela cor acinzentada, é detectado quando um dos campos não se encontra preenchido, como ilustrado na \autoref{fig:turmaVazia}.
 
-\subsubsection{Professores} \label{sssec:Professores}
+\subsubsection{Conflitos de Professores} \label{sssec:Professores}
 
 O sistema contempla a checagem de conflitos de alocação simultânea de professores em mais de uma turma. Ou seja, considerando todas as turmas ao qual o professor está atribuído no ano e semestre selecionados, o sistema compara todos os horários das turmas deste professor, e verifica se há alguma interseção entre horários que estão no mesmo dia, levando em conta a duração da aula.
 
@@ -551,7 +551,7 @@ O sistema contempla a checagem de conflitos de alocação simultânea de profess
 
 Caso haja algum conflito, o sistema destaca o professor em questão, tornando a sua cor de fundo avermelhada. Além disso, ao passar o mouse sobre o nome do professor, é exibido um alerta flutuante, informando que quais são as turmas e horários que estão em conflito. Esse comportamento é exemplificado na \autoref{fig:conflitoAlocacaoProfessor}, onde o professor Tang é alocado em duas turmas que ocorrem simultaneamente durante algum intervalo de tempo durante os horários de quarta e sexta-feira, assim informando no alerta flutuante quais são as turmas e horários que estão alocados simultaneamente.
 
-\subsubsection{Salas} \label{sssec:Salas}
+\subsubsection{Conflitos de Salas} \label{sssec:Salas}
 
 As salas também apresentam a verificação do conflito de alocação simultânea. Porém, diferente dos professores, a checagem é feita conferindo todos os horários na qual a sala está alocada, e então é feita a mesma verificação de interseção citada anteriormente. Havendo o conflito, é exibida uma borda alaranjada na parte inferior das propriedades referentes ao conflito, além de, assim como no caso dos professores, exibir o alerta flutuante. A \autoref{fig:conflitoAlocacaoSalas} representa um caso de conflito de alocação de salas.
 
@@ -567,7 +567,7 @@ Então, como pode-se perceber na \autoref{fig:conflitoAlocacaoSalasCapacidade}, 
   \includegraphics[width=\textwidth]{files/img/2.02!5-desenvolvimento/2.02!5.1.5-conflitos/Demanda X Capacidade}
 \end{MyCenteredFigure}
 
-\subsubsection{Disciplina} \label{sssec:Disciplina}
+\subsubsection{Conflitos de Disciplina} \label{sssec:Disciplina}
 
 Além desses conflitos, outras características analisadas e representadas se referem às disciplinas atribuídas às turmas, que, embora não representem necessariamente um \textit{conflito}, mas sim um indicativo, ainda assim serão tratados como conflitos por motivos de simplificação. Esse indicativo leva em consideração o semestre selecionado e o período esperado da disciplina de certa turma. Utilizando de lógica similar, também é indicado caso não tenha sido atribuído um período à disciplina, e se, para o curso de Ciência da Computação, a disciplina é considerada como \textbf{Eletiva Livre}, \textbf{Eletiva Optativa}, ambas em tons azulados, ou se não é uma disciplina para o curso de Ciência da Computação, sendo então representada em tons alaranjados. Estas características são ilustradas no lado direito da \autoref{fig:conflitoDisciplinaTitulos}.
 
