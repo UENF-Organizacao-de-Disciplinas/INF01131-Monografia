@@ -94,7 +94,7 @@ A primeira, e principal, é a ilustrada pela \autoref{fig:main} que permite que 
   \caption{Página principal do sistema}
   \label{fig:main}
   \includegraphics[width=0.8\textwidth]{files/img/2.02!5-desenvolvimento/2.02!5.1.3-prototipagem/2.02!5.1.3.2-paginas/main}
-\end{MyCenteredFigure} % Main
+\end{MyCenteredFigure}
 
 Em seguida, temos a tela de seleção da categoria dos dados que deseja-se modificar (\autoref{fig:CRUD_main}), podendo esses serem sobre as turmas, salas, disciplinas, professores ou alunos. Cada uma destas tendo a capacidade de criação, leitura, edição e deleção dos dados.
 
@@ -102,7 +102,7 @@ Em seguida, temos a tela de seleção da categoria dos dados que deseja-se modif
   \caption{Página de seleção}
   \label{fig:CRUD_main}
   \includegraphics[width=0.8\textwidth]{files/img/2.02!5-desenvolvimento/2.02!5.1.3-prototipagem/2.02!5.1.3.2-paginas/CRUD_main}
-\end{MyCenteredFigure} % CRUD_main
+\end{MyCenteredFigure}
 
 Quanto à página das salas, temos primeiro a seleção da sala na qual deseja-se fazer alterações de cadastro. Abaixo desta caixa de seleção única há um filtro de visualização das alocações de determinado ano e semestre. Nessa página pode-se também registrar algumas características da sala, como a quantidade de cadeiras e computadores, e se possui monitor, projetos, quadro de giz e quadro branco. Um exemplo de sala ainda sem turmas alocadas é representado na \autoref{fig:CRUD_salas-vazias}. Essas últimas informações, embora não sejam essenciais para a alocação das turmas, podem ser úteis como forma de filtragem para a alocação de turmas, visto que certas disciplinas demandam salas com características específicas.
 
@@ -110,7 +110,7 @@ Quanto à página das salas, temos primeiro a seleção da sala na qual deseja-s
   \caption{Página de modificação das informações de salas}
   \label{fig:CRUD_salas-vazias}
   \includegraphics[width=0.8\textwidth]{files/img/2.02!5-desenvolvimento/2.02!5.1.3-prototipagem/2.02!5.1.3.2-paginas/CRUD_salas-vazias}
-\end{MyCenteredFigure} % CRUD_salas-vazias
+\end{MyCenteredFigure}
 
 Na página dos alunos, pode-se cadastrar novos alunos informando o seu ano de entrada e a sua matrícula. Abaixo temos a visualização da grade, onde pode-se classificar cada uma das disciplinas como aprovada, reprovada e cursando. O exemplo da \autoref{fig:CRUD_alunos} mostra a grade de um aluno inscrito em 2019.1.
 
@@ -118,7 +118,7 @@ Na página dos alunos, pode-se cadastrar novos alunos informando o seu ano de en
   \caption{Página de modificação das informações de alunos}
   \label{fig:CRUD_alunos}
   \includegraphics[width=0.8\textwidth]{files/img/2.02!5-desenvolvimento/2.02!5.1.3-prototipagem/2.02!5.1.3.2-paginas/CRUD_alunos}
-\end{MyCenteredFigure} % CRUD_alunos
+\end{MyCenteredFigure}
 
 Podemos definir na página das disciplinas qual seu código, nome, e o seu período esperado segundo a ementa. Além dessas informações, pode-se cadastrar quais cursos a possuem em suas ementas, quais seus pré-requisitos, os professores que a ministram e quais requisitos a mesma possui em relação às características de sala. A \autoref{fig:CRUD_disciplinas} mostra a página de modificação de disciplinas.
 
@@ -126,7 +126,7 @@ Podemos definir na página das disciplinas qual seu código, nome, e o seu perí
   \caption{Página de modificação das informações de disciplinas}
   \label{fig:CRUD_disciplinas}
   \includegraphics[width=0.8\textwidth]{files/img/2.02!5-desenvolvimento/2.02!5.1.3-prototipagem/2.02!5.1.3.2-paginas/CRUD_disciplinas}
-\end{MyCenteredFigure} % CRUD_disciplinas
+\end{MyCenteredFigure}
 
 Na página de professores (\autoref{fig:CRUD_professores}), temos a relação de disciplinas que os mesmos estão passíveis de ministrar, e também quais são suas preferências de horários ao longo da semana. Embora não seja essencial, essa informação pode ser útil para a alocação de turmas, pois alguns professores podem ter preferência, ou até mesmo não estarem disponíveis para ministrar aulas em determinados horários. Um exemplo deste caso seriam os bolsistas para docência complementar, dado que os mesmos podem estar também vinculados a outras instituições. E nesses casos, aquele que estiver desenvolvendo a grade horária pode alocar as turmas de acordo com a disponibilidade dos professores.
 
@@ -134,7 +134,7 @@ Na página de professores (\autoref{fig:CRUD_professores}), temos a relação de
   \caption{Página de modificação das informações de professores}
   \label{fig:CRUD_professores}
   \includegraphics[width=0.8\textwidth]{files/img/2.02!5-desenvolvimento/2.02!5.1.3-prototipagem/2.02!5.1.3.2-paginas/CRUD_professores}
-\end{MyCenteredFigure} % CRUD_professores
+\end{MyCenteredFigure}
 
 Por fim, na \autoref{fig:CRUD_turmas}, temos a junção de todas as informações registradas acima. Nela, podemos informar o momento exato de sua execução, definindo o ano, semestre, dia, hora de início e duração em que será ministrada. Também é necessário que seja definido em que sala cada um de seus horários estará alocada. Além de informar, também, qual professor a lecionará e a qual disciplina ela se refere.
 
@@ -142,7 +142,7 @@ Por fim, na \autoref{fig:CRUD_turmas}, temos a junção de todas as informaçõe
   \caption{Página de modificação das informações de turmas}
   \label{fig:CRUD_turmas}
   \includegraphics[width=0.8\textwidth]{files/img/2.02!5-desenvolvimento/2.02!5.1.3-prototipagem/2.02!5.1.3.2-paginas/CRUD_turmas}
-\end{MyCenteredFigure} % CRUD_turmas
+\end{MyCenteredFigure}
 
 Na \autoref{fig:CRUD_turmas} temos alguns exemplos de conflitos percebidos. O primeiro, com a cor amarelada, informado que o tempo de duração do segundo horário da turma não condiz com a preferência pessoal do professor selecionado. Este conflito não é impeditivo, entretanto, se possível, um outro horário poderia ser encontrado para atender melhor às preferências do professor.
 
