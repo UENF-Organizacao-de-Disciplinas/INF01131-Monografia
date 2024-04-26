@@ -217,7 +217,7 @@ O \textbf{banco de dados} recebe a requisição, processa a operação, e então
 
 \textbf{Resumidamente}: O \textbf{\textit{frontend}} envia uma requisição HTTP com uma carga de informações a um \textbf{\textit{endpoint}}, que encaminha a requisição a uma \textbf{função} específica que executa uma operação no \textbf{banco de dados}, assim retornando o status da operação ao \textit{frontend}. Essa sequência é ilustrada na \autoref{fig:API}.
 
-\subsubsubsection*{\LinkToURL{\LinkJSONBin}{JSONBin}} \label{\LinkToURL{\LinkJSONBin}{JSONBin}}
+\subsubsubsection*{\LinkToURL{\LinkJSONBin}{JSONBin}} \label{ssssec:JSONBin}
 
 Como até então os dados estavam armazenados em formato JSON, imaginou-se que a melhor forma de persistir os dados seria através de um banco de dados que lidasse com JSON, e o escolhido foi o JSONBin.
 
@@ -251,7 +251,7 @@ Na criação deste \textbf{servidor local} utilizou-se a biblioteca \textit{Expr
 
 Este uso, embora exemplifique a aplicação da permanência dos dados, está limitado por dois aspectos: em primeira instância, a permanência dos dados é limitada ao servidor local, não sendo este o desejo final do sistema. Em segunda instância, para haver o acesso aos dados, é necessário que, além do banco de dados, o \textit{backend} também esteja em execução, entretanto, o GitHub Pages, onde o sistema está hospedado, não viabiliza essa execução. Com isso viu-se necessária a busca por um novo serviço de hospedagem.
 
-\subsubsection{\textit{Amazon Web Services}} \label{sssec:\textit{Amazon Web Services}}
+\subsubsection{\textit{Amazon Web Services}} \label{sssec:Amazon Web Services}
 
 Para suprir a necessidade de um servidor que pudesse executar o \textit{backend} do sistema em conjunto com o banco de dados, foi escolhido a \textit{Amazon Web Services} (AWS). A AWS é um serviço de computação em nuvem que oferece uma ampla gama de serviços, entretanto, apenas alguns deles foram necessários para o sistema.
 
