@@ -8,13 +8,13 @@ Sua \hyperref[sec:programação]{programação} foi repartida em três grandes c
 
 Por fim, será apresentado o cerne do sistema que é a \hyperref[sec:conflitos]{identificação e visualização de conflitos}, ou seja, os casos em que a alocação dos recursos gera algum comportamento minimamente indesejável como por exemplo a alocação de uma sala a duas turmas ao mesmo tempo. Serão apresentados os tipos de conflitos que o sistema é capaz de identificar, como eles são visualizados e como o sistema lida com cada um deles.
 
-\section{Projetos anteriores} \label{sec:projetos} % ### 5.1.
+\section{Projetos Anteriores} \label{sec:projetos} % ### 5.1.
 
 Antes do desenvolvimento do presente trabalho, outros projetos já foram idealizados e até mesmo desenvolvidos. Dentre eles, dois se destacam por terem sido os precursores do atual projeto. O primeiro deles, que foi idealizado, mas não desenvolvido, almejava apresentar uma \hyperref[subsec:andamento]{visualização da progressão dos alunos na grade curricular}. O segundo, que foi desenvolvido, realizava o \hyperref[subsec:demanda]{cálculo da demanda}, ou seja, calculava quantos e quais eram os alunos que poderiam se inscrever nas disciplinas. Ambos os projetos se mostram como abordagens paralelas de auxiliar no planejamento do curso de Ciência da Computação da UENF, sendo eles também sistemas de suporte à decisão, mesmo que em menor escala.
 
 Deve-se comentar também sobre os dois trabalhos anteriores desenvolvidos por \cite{Sanya2013} e \cite{Ricardo2014} que iniciaram os estudos sobre a alocação de turmas no curso de Ciência da Computação na UENF, mas que, como já foram \hyperref[sec:anteriores]{citados previamente}, não se mostra necessária a repetição.
 
-\subsection{Andamento dos alunos} \label{subsec:andamento} % #### 5.1.1
+\subsection{Andamento dos Alunos} \label{subsec:andamento} % #### 5.1.1
 
 Como interesse próprio, cogitou-se o desenvolvimento de uma plataforma onde se pudesse ver em que ponto os alunos se encontram em relação ao andamento de seus cursos. Para isso, seria necessária a obtenção dos dados dos alunos, seja por parte dos mesmos, do coordenador ou por integração com o sistema acadêmico. Com estes dados, seria possível criar uma interface que mostrasse o andamento dos alunos, quais matérias já foram cursadas, quais estão sendo cursadas e quais ainda faltam. Além disso, seria possível mostrar quais matérias são pré-requisitos para outras. Assim, o aluno e a coordenação poderiam ter uma visão geral de seu andamento e de quais matérias ele precisará cursar para se formar. Esse projeto não saiu do mundo das ideias, entretanto, lá permaneceu sendo maturado.
 
@@ -24,7 +24,7 @@ Como interesse próprio, cogitou-se o desenvolvimento de uma plataforma onde se 
 
 Anos após a idealização dessa funcionalidade, o Sistema Acadêmico da UENF passou a disponibilizar uma funcionalidade semelhante, como pode ser visto na \autoref{fig:andamento}. Nela, é possível ver o andamento do aluno por período, incluindo as disciplinas Eletivas Livres e Eletivas Optativas. Entretanto, essa visualização tabular não ilustra o andamento de todos os alunos simultaneamente, sendo necessário navegar individualmente por cada um deles.
 
-\subsection{Cálculo de demanda} \label{subsec:demanda} % #### 5.1.2.
+\subsection{Cálculo de Demanda} \label{subsec:demanda} % #### 5.1.2.
 
 Ao longo dos semestres, foi percebido que durante o intervalo entre os semestres, os alunos precisam se inscrever nas matérias que desejam cursar no semestre seguinte. Para isso, é necessário que o coordenador saiba quantos alunos estão interessados em cada matéria para que ele possa definir quantas turmas serão abertas. Com este fim em mente, o coordenador dispõe de algumas alternativas como estimar quantos alunos se inscreverão em cada disciplina, checar manualmente no sistema acadêmico quais alunos podem fazer cada matéria, ou então obter diretamente dos alunos através de um formulário em quais disciplinas cada um dos alunos tem a intenção de cursar.
 
@@ -52,7 +52,7 @@ Apesar das possibilidades de meios legalmente válidos para a aquisição dos da
 
 A criação de protótipos, seguindo a abordagem tomada por \citeonline{Andre2018}, se mostra como essencial para que se mantenha a constante satisfação por parte dos \textit{stakeholders} e quais mudanças sugerem ao desenvolvimento do projeto, assim reduzindo a necessidade de retrabalho ou de não alcance das expectativas do projeto. Para este fim, foram feitos os designs iniciais das telas do sistema usando o software de design \LinkToURL{\LinkFigma}{Figma}.
 
-\subsection{Protótipos de componentes} \label{subsec:componentes} % #### 5.3.1.
+\subsection{Protótipos de Componentes} \label{subsec:componentes} % #### 5.3.1.
 
 Antes de seguir com a descrição das telas, é válido descrever os componentes que foram utilizados na construção dos protótipos. A \autoref{fig:cartão_de_turma} mostra os cartões de turma que foram utilizados para representar as turmas criadas. O objetivo desses cartões é de apresentar de forma compacta o máximo possível de informações relevantes ao usuário.
 
@@ -86,7 +86,7 @@ Neste cartão, estão presentes também três botões: \textbf{travar}, \textbf{
 
 A \autoref{fig:selects} mostra os protótipos de caixas de seleção que foram utilizados para a seleção de dados. Na primeira caixa de seleção o usuário pode selecionar apenas uma opção. Já na segunda caixa de seleção o usuário pode selecionar várias opções.
 
-\subsection{Protótipos de páginas} \label{subsec:páginas} % #### 5.3.1.
+\subsection{Protótipos de Páginas} \label{subsec:páginas} % #### 5.3.1.
 
 A primeira, e principal, é a ilustrada pela \autoref{fig:main} que permite que o usuário arraste todas as turmas listadas até o horário desejado. A listagem das turmas a serem distribuídas é disposta em um painel à esquerda. Este painel tem como funcionalidade, fixar as turmas ainda não alocadas, como se estivessem presas por \LinkToURL{\LinkVelcro}{fechos de gancho e laço}. Assim, dispondo de um local para que turmas que turmas em processo de mudança de horário sejam armazenadas temporariamente sem que sejam perdidas.
 
@@ -136,7 +136,7 @@ Outro conflito exibido é que a sala em que está alocado o primeiro horário da
 
 Por último, na listagem dos alunos demandantes, temos quatro alunos marcados em vermelho. Estes alunos demandam outra disciplina no mesmo horário em que esta turma está alocada. Este conflito é impeditivo, mas apenas para os alunos, assim como no caso da preferência do professor, a turma pode ser realocada para outro horário para atender melhor às demandas dos alunos.
 
-\section{Programação do sistema} \label{sec:programação} % ### 5.5.1.
+\section{Programação do Sistema} \label{sec:programação} % ### 5.5.1.
 
 % considerando que é uma das mais utilizadas no mercado para desenvolvimento web [buscar referência]
 
