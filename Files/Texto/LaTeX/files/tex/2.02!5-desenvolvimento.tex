@@ -1,10 +1,10 @@
 \chapter{Desenvolvimento} \label{chap:desenvolvimento} % ### 5.
 
-Para o desenvolvimento do presente trabalho, foram utilizadas diversas ferramentas, tanto para a elaboração do código, quanto para a elaboração do modelo de banco de dados e do sistema de criação de tabelas horárias.
+Este capítulo visa apresentar todo o processo realizado para o desenvolvimento do sistema de suporte à decisão. Ao longo deste capítulo serão citados \hyperref[sec:projetos]{projetos anteriores} de sistemas de suporte à decisão que culminaram na motivação para a escolha do tema, a tentativa de coleta de dados reais e sua implicação na \hyperref[sec:LGPD]{Lei Geral de Proteção dos Dados}, a \hyperref[sec:prototipagem]{prototipagem} dos \hyperref[subsec:componentes]{componentes} e \hyperref[subsec:páginas]{páginas do sistema} e também a \hyperref[sec:programação]{programação do sistema}.
 
-\section{Projetos anteriores} % ### 5.1.
+Sua \hyperref[sec:programação]{programação} foi repartida em três grandes categorias que visavam entregar o sistema de forma gradual e funcional. A \hyperref[subsec:MVP1]{primeira versão do sistema} foi desenvolvida localmente, sem a necessidade de um banco de dados real, e com o objetivo de se aproximar ao máximo das páginas previstas no protótipo. A \hyperref[subsec:MVP2]{segunda versão do sistema} foi desenvolvida com a utilização duas abordagens distintas de bancos de dados para se obter a permanência dos dados. A \hyperref[subsec:MVP3]{terceira versão do sistema} foi desenvolvida de forma a estar completamente hospedada na nuvem, incluindo o seu banco de dados, sendo esse \hyperref[par:preenchimento]{preenchido com mais dados}.
 
-Antes do desenvolvimento do presente trabalho, foram feitos alguns projetos pessoais que serviram como base motivadora para o desenvolvimento do presente trabalho.
+Por fim, será apresentado o cerne do sistema que é a \hyperref[sec:conflitos]{identificação e visualização de conflitos}, ou seja, os casos em que a alocação dos recursos gera algum comportamento minimamente indesejável como por exemplo a alocação de uma sala a duas turmas ao mesmo tempo. Serão apresentados os tipos de conflitos que o sistema é capaz de identificar, como eles são visualizados e como o sistema lida com cada um deles.
 
 \subsection{Andamento dos alunos} % #### 5.1.1
 
