@@ -10,9 +10,7 @@ Por fim, será apresentado o cerne do sistema que é a \hyperref[sec:conflitos]{
 
 Como interesse próprio, cogitou-se o desenvolvimento de uma plataforma onde se pudesse ver em que ponto os alunos se encontram em relação ao andamento de seus cursos. Para isso, seria necessária a obtenção dos dados dos alunos, seja por parte dos mesmos, do coordenador ou por integração com o sistema acadêmico. Com estes dados, seria possível criar uma interface que mostrasse o andamento dos alunos, quais matérias já foram cursadas, quais estão sendo cursadas e quais ainda faltam. Além disso, seria possível mostrar quais matérias são pré-requisitos para outras. Assim, o aluno e a coordenação poderiam ter uma visão geral de seu andamento e de quais matérias ele precisará cursar para se formar. Infelizmente esse projeto não saiu do mundo das ideias. Entretanto, lá permaneceu sendo maturado.
 
-\begin{MyCenteredFigure}
-  \caption{Andamento do aluno no Sistema Acadêmico}
-  \label{fig:andamento}
+\begin{MyCenteredFigure} \caption{Andamento do aluno no Sistema Acadêmico} \label{fig:andamento}
   \includegraphics[width=\textwidth]{files/img/2.02!5-desenvolvimento/2.02!5.1.1-anteriores/Progressão}
 \end{MyCenteredFigure}
 
@@ -52,9 +50,7 @@ A criação de protótipos, seguindo a abordagem tomada por \citeonline{Andre201
 
 Antes de seguir com a descrição das telas, é válido descrever os componentes que foram utilizados na construção dos protótipos. A \autoref{fig:cartão_de_turma} mostra os cartões de turma que foram utilizados para representar as turmas criadas. O objetivo desses cartões é de apresentar de forma compacta o máximo possível de informações relevantes ao usuário.
 
-\begin{MyCenteredFigure}
-  \caption{Protótipos de cartões de turma}
-  \label{fig:cartão_de_turma}
+\begin{MyCenteredFigure} \caption{Protótipos de cartões de turma} \label{fig:cartão_de_turma}
   % \hfill
   \begin{minipage}{0.48\textwidth} \centering
     \includegraphics[width=\textwidth]{files/img/2.02!5-desenvolvimento/2.02!5.1.3-prototipagem/2.02!5.1.3.1-componentes/Cartões/PadraoClassCards}
@@ -73,9 +69,7 @@ Dentre essas informações, temos principalmente o código da disciplina e o nom
 
 Neste cartão, estão presentes também três botões: \textbf{travar}, \textbf{editar} e \textbf{expandir}/\textbf{recolher}. O botão de \textbf{travar} tem como função fixar a turma no horário em que ela se encontra, impedindo que ela seja movida. O botão de \textbf{editar} tem como função abrir um painel onde é possível alterar as informações da turma. O botão de \textbf{expandir}/\textbf{recolher} tem como função expandir ou recolher o cartão, mostrando ou escondendo informações adicionais.
 
-\begin{MyCenteredFigure}
-  \caption{Protótipos de caixas de seleção}
-  \label{fig:selects}
+\begin{MyCenteredFigure} \caption{Protótipos de caixas de seleção} \label{fig:selects}
   \begin{minipage}{0.48\textwidth} \centering
     \includegraphics[width=\textwidth]{files/img/2.02!5-desenvolvimento/2.02!5.1.3-prototipagem/2.02!5.1.3.1-componentes/SingleSelect}
   \end{minipage}
@@ -90,57 +84,43 @@ A \autoref{fig:selects} mostra os protótipos de caixas de seleção que foram u
 
 A primeira, e principal, é a ilustrada pela \autoref{fig:main} que permite que o usuário arraste todas as turmas listadas até o horário desejado. A listagem das turmas a serem distribuídas é disposta em um painel à esquerda. Este painel tem como funcionalidade, fixar as turmas ainda não alocadas, como se estivessem presas por \LinkToURL{\LinkVelcro}{fechos de gancho e laço}. Assim, dispondo de um local para que turmas que turmas em processo de mudança de horário sejam armazenadas temporariamente sem que sejam perdidas.
 
-\begin{MyCenteredFigure}
-  \caption{Página principal do sistema}
-  \label{fig:main}
+\begin{MyCenteredFigure} \caption{Página principal do sistema} \label{fig:main}
   \includegraphics[width=0.8\textwidth]{files/img/2.02!5-desenvolvimento/2.02!5.1.3-prototipagem/2.02!5.1.3.2-paginas/main}
 \end{MyCenteredFigure}
 
 Em seguida, temos a tela de seleção da categoria dos dados que deseja-se modificar (\autoref{fig:CRUD_main}), podendo esses serem sobre as turmas, salas, disciplinas, professores ou alunos. Cada uma destas tendo a capacidade de criação, leitura, edição e deleção dos dados.
 
-\begin{MyCenteredFigure}
-  \caption{Página de seleção}
-  \label{fig:CRUD_main}
+\begin{MyCenteredFigure} \caption{Página de seleção} \label{fig:CRUD_main}
   \includegraphics[width=0.8\textwidth]{files/img/2.02!5-desenvolvimento/2.02!5.1.3-prototipagem/2.02!5.1.3.2-paginas/CRUD_main}
 \end{MyCenteredFigure}
 
 Quanto à página das salas, temos primeiro a seleção da sala na qual deseja-se fazer alterações de cadastro. Abaixo desta caixa de seleção única há um filtro de visualização das alocações de determinado ano e semestre. Nessa página pode-se também registrar algumas características da sala, como a quantidade de cadeiras e computadores, e se possui monitor, projetos, quadro de giz e quadro branco. Um exemplo de sala ainda sem turmas alocadas é representado na \autoref{fig:CRUD_salas-vazias}. Essas últimas informações, embora não sejam essenciais para a alocação das turmas, podem ser úteis como forma de filtragem para a alocação de turmas, visto que certas disciplinas demandam salas com características específicas.
 
-\begin{MyCenteredFigure}
-  \caption{Página de modificação das informações de salas}
-  \label{fig:CRUD_salas-vazias}
+\begin{MyCenteredFigure} \caption{Página de modificação das informações de salas} \label{fig:CRUD_salas-vazias}
   \includegraphics[width=0.8\textwidth]{files/img/2.02!5-desenvolvimento/2.02!5.1.3-prototipagem/2.02!5.1.3.2-paginas/CRUD_salas-vazias}
 \end{MyCenteredFigure}
 
 Na página dos alunos, pode-se cadastrar novos alunos informando o seu ano de entrada e a sua matrícula. Abaixo temos a visualização da grade, onde pode-se classificar cada uma das disciplinas como aprovada, reprovada e cursando. O exemplo da \autoref{fig:CRUD_alunos} mostra a grade de um aluno inscrito em 2019.1.
 
-\begin{MyCenteredFigure}
-  \caption{Página de modificação das informações de alunos}
-  \label{fig:CRUD_alunos}
+\begin{MyCenteredFigure} \caption{Página de modificação das informações de alunos} \label{fig:CRUD_alunos}
   \includegraphics[width=0.8\textwidth]{files/img/2.02!5-desenvolvimento/2.02!5.1.3-prototipagem/2.02!5.1.3.2-paginas/CRUD_alunos}
 \end{MyCenteredFigure}
 
 Podemos definir na página das disciplinas qual seu código, nome, e o seu período esperado segundo a ementa. Além dessas informações, pode-se cadastrar quais cursos a possuem em suas ementas, quais seus pré-requisitos, os professores que a ministram e quais requisitos a mesma possui em relação às características de sala. A \autoref{fig:CRUD_disciplinas} mostra a página de modificação de disciplinas.
 
-\begin{MyCenteredFigure}
-  \caption{Página de modificação das informações de disciplinas}
-  \label{fig:CRUD_disciplinas}
+\begin{MyCenteredFigure} \caption{Página de modificação das informações de disciplinas} \label{fig:CRUD_disciplinas}
   \includegraphics[width=0.8\textwidth]{files/img/2.02!5-desenvolvimento/2.02!5.1.3-prototipagem/2.02!5.1.3.2-paginas/CRUD_disciplinas}
 \end{MyCenteredFigure}
 
 Na página de professores (\autoref{fig:CRUD_professores}), temos a relação de disciplinas que os mesmos estão passíveis de ministrar, e também quais são suas preferências de horários ao longo da semana. Embora não seja essencial, essa informação pode ser útil para a alocação de turmas, pois alguns professores podem ter preferência, ou até mesmo não estarem disponíveis para ministrar aulas em determinados horários. Um exemplo deste caso seriam os bolsistas para docência complementar, dado que os mesmos podem estar também vinculados a outras instituições. E nesses casos, aquele que estiver desenvolvendo a grade horária pode alocar as turmas de acordo com a disponibilidade dos professores.
 
-\begin{MyCenteredFigure}
-  \caption{Página de modificação das informações de professores}
-  \label{fig:CRUD_professores}
+\begin{MyCenteredFigure} \caption{Página de modificação das informações de professores} \label{fig:CRUD_professores}
   \includegraphics[width=0.8\textwidth]{files/img/2.02!5-desenvolvimento/2.02!5.1.3-prototipagem/2.02!5.1.3.2-paginas/CRUD_professores}
 \end{MyCenteredFigure}
 
 Por fim, na \autoref{fig:CRUD_turmas}, temos a junção de todas as informações registradas acima. Nela, podemos informar o momento exato de sua execução, definindo o ano, semestre, dia, hora de início e duração em que será ministrada. Também é necessário que seja definido em que sala cada um de seus horários estará alocada. Além de informar, também, qual professor a lecionará e a qual disciplina ela se refere.
 
-\begin{MyCenteredFigure}
-  \caption{Página de modificação das informações de turmas}
-  \label{fig:CRUD_turmas}
+\begin{MyCenteredFigure} \caption{Página de modificação das informações de turmas} \label{fig:CRUD_turmas}
   \includegraphics[width=0.8\textwidth]{files/img/2.02!5-desenvolvimento/2.02!5.1.3-prototipagem/2.02!5.1.3.2-paginas/CRUD_turmas}
 \end{MyCenteredFigure}
 
@@ -156,9 +136,7 @@ Por último, na listagem dos alunos demandantes, temos quatro alunos marcados em
 
 Após a elaboração dos protótipos com o Figma, e da conceitualização diagramática do banco de dados, o desenvolvimento do sistema foi iniciado. Por maior familiaridade com a linguagem foi escolhida a linguagem JavaScript, utilizando a biblioteca \textit{React} para a criação dos componentes visuais, ou seja, o \textit{frontend}, e o \textit{Node.js} para a criação do \textit{backend} e a criação de um servidor local que permitiria visualizar as mudanças no código em tempo real. Suas logos estão ilustrados na \autoref{fig:frontend}.
 
-\begin{MyCenteredFigure}
-  \caption{Recursos usados para o desenvolvimento do \textit{Frontend}}
-  \label{fig:frontend}
+\begin{MyCenteredFigure} \caption{Recursos usados para o desenvolvimento do \textit{Frontend}} \label{fig:frontend}
   \begin{animateinline}[loop,autoplay]{1}
     \myAnimation{JavaScript} % 1 JS
     \myAnimation{NodeJS}     % 2 Node
@@ -210,9 +188,7 @@ Mesmo com esta nova dinâmica, outras funcionalidades foram deixadas de lado. Um
 
 Com isso, utilizando o GitHub Projects, foi organizado uma tabela de tarefas, vista na \autoref{fig:GitHubProjectsTable}, onde foram unificadas as diversas anotações e ideias, antes soltas. A partir disso, foi possível visualizar o que era mais importante e o que poderia ser deixado de lado.
 
-\begin{MyCenteredFigure}
-  \caption{Tabela de tarefas do GitHub Projects}
-  \label{fig:GitHubProjectsTable}
+\begin{MyCenteredFigure} \caption{Tabela de tarefas do GitHub Projects} \label{fig:GitHubProjectsTable}
   \includegraphics[width=\textwidth]{files/img/2.02!5-desenvolvimento/2.02!5.1.4-sistema/GitHubProjects-Table}
 \end{MyCenteredFigure}
 
@@ -232,9 +208,7 @@ As \textbf{funções} são as responsáveis por executar as operações no banco
 
 O \textbf{banco de dados} recebe a requisição, processa a operação, e então retorna o status da operação. Esse retorno é então repassado camada por camada, até chegar ao \textit{frontend}, onde o usuário final pode visualizar o resultado da operação.
 
-\begin{MyCenteredFigure}
-  \caption{Diagrama da progressão funcionamento da permanência dos dados}
-  \label{fig:API}
+\begin{MyCenteredFigure} \caption{Diagrama da progressão funcionamento da permanência dos dados} \label{fig:API}
   \includegraphics[width=\textwidth]{files/img/2.02!5-desenvolvimento/2.02!5.1.4-sistema/API-Progressão.drawio}
 \end{MyCenteredFigure}
 
@@ -260,9 +234,7 @@ Com isso, foi necessário recorrer a uma abordagem semimanual, sendo então dese
 
 Apesar da primeira tentativa de importação não ter sido completamente bem sucedida, foi desta forma que as tabelas, representadas pela \autoref{fig:TabelasIniciais}, foram inicialmente criadas. Não seguindo objetivamente a modelagem anteriormente citada. Isso gerou posteriormente a necessidade de ajustes manuais, como a adição de chaves primárias e estrangeiras, e a alteração de tipos de dados. Porém, como neste momento, o sistema visava apenas replicar o funcionamento do JSONBin, essas alterações não foram feitas de imediato.
 
-\begin{MyCenteredFigure}
-  \caption{Diagrama primitivo das tabelas de dados SQL}
-  \label{fig:TabelasIniciais}
+\begin{MyCenteredFigure} \caption{Diagrama primitivo das tabelas de dados SQL} \label{fig:TabelasIniciais}
   \includegraphics[width=0.7\textwidth]{files/img/2.02!5-desenvolvimento/2.02!5.1.4-sistema/Diagrama_ER-As_is.drawio}
 \end{MyCenteredFigure}
 
@@ -282,9 +254,7 @@ Para suprir a necessidade de um servidor que pudesse executar o \textit{backend}
 
 O uso da AWS segue a mesma lógica do servidor local, com a diferença de que o servidor está em nuvem, e não localmente, assim resolvendo o primeiro dos dois problemas citados. Neste contexto o uso da AWS, representado pela \autoref{fig:APIAWS}, foi feito através de três serviços principais: o \textit{API Gateway} para a recepção das requisições HTTP, o \textit{Lambda} para a execução das funções que acessam o banco de dados, e o \textit{RDS} para o armazenamento dos dados; serviços estes que serão descritos mais detalhadamente a seguir.
 
-\begin{MyCenteredFigure}
-  \caption{API REST no AWS}
-  \label{fig:APIAWS}
+\begin{MyCenteredFigure} \caption{API REST no AWS} \label{fig:APIAWS}
   \includegraphics[width=\textwidth]{files/img/2.02!5-desenvolvimento/2.02!5.1.4-sistema/API-Funcionamento API.drawio}
 \end{MyCenteredFigure}
 
@@ -326,17 +296,13 @@ Porém, considerando que a junção dos nomes \textit{hour} e \textit{class} era
 
 Quanto ao nome, como o sistema visa a alocação de turmas, especificamente para o curso de Ciência da Computação na UENF, decidiu-se pela corruptela da palavra \textit{hour} para que se tornasse \textit{our}, que significa ``nosso'' em inglês, assim, remetendo ao sentido de individualidade do sistema. Com isso, o nome do sistema se tornou \textit{OurClass}.
 
-\begin{MyCenteredFigure}
-  \caption{Logomarcas do sistema}
-  \label{fig:Logomarcas}
+\begin{MyCenteredFigure} \caption{Logomarcas do sistema} \label{fig:Logomarcas}
   \includegraphics[width=\textwidth]{files/img/2.02!5-desenvolvimento/2.02!5.1.4-sistema/Logomarcas.drawio.pdf}
 \end{MyCenteredFigure}
 
 Juntando o símbolo da ampulheta com o nome \textit{OurClass} e outros elementos gráficos, como as tabelas horárias, foi criada a logomarca do sistema, que pode ser vista na \autoref{fig:Logomarcas}. A logomarca foi criada utilizando de inteligências artificiais generativas, principalmente o \textit{Bing}. A partir disso, foi possível criar uma logomarca que refletisse o propósito do sistema, e que fosse agradável visualmente.
 
-\begin{MyCenteredFigure}
-  \caption{Logomarca oficial}
-  \label{fig:logomarca_oficial}
+\begin{MyCenteredFigure} \caption{Logomarca oficial} \label{fig:logomarca_oficial}
   \includegraphics[]{files/img/2.02!5-desenvolvimento/2.02!5.1.4-sistema/OurClass.png}
 \end{MyCenteredFigure}
 
@@ -362,9 +328,7 @@ O uso do GitHub Projects se provou como uma excelente forma de organização das
 
 Os marcos visam distinguir as tarefas por suas versões, e também por seus tipos de funcionalidades futuras, assim, a medida em que surgiam novas ideias, elas eram adicionadas ao GitHub Projects. Então podemos considerar que cada um desses \textbf{marcos} teve tarefas atribuídas a si pois...
 
-\begin{MyCenteredFigure}
-  \caption{Marcos do GitHub Projects}
-  \label{fig:ProjectsMilestones}
+\begin{MyCenteredFigure} \caption{Marcos do GitHub Projects} \label{fig:ProjectsMilestones}
   \includegraphics[width=0.6\textwidth]{files/img/2.02!5-desenvolvimento/2.02!5.1.4-sistema/GitHubProjects-Open_Milestones}
 \end{MyCenteredFigure}
 
@@ -384,9 +348,7 @@ Os marcos visam distinguir as tarefas por suas versões, e também por seus tipo
 
 No Projects, também foram adicionadas as \textbf{etiquetas} que distinguem as tarefas por seu intuito.
 
-\begin{MyCenteredFigure}
-  \caption{Etiquetas do GitHub Projects}
-  \label{fig:ProjectsLabels}
+\begin{MyCenteredFigure} \caption{Etiquetas do GitHub Projects} \label{fig:ProjectsLabels}
   \includegraphics[width=0.7\textwidth]{files/img/2.02!5-desenvolvimento/2.02!5.1.4-sistema/GitHubProjects-Labels}
 \end{MyCenteredFigure}
 
@@ -404,9 +366,7 @@ No Projects, também foram adicionadas as \textbf{etiquetas} que distinguem as t
 
 O GitHub Projects também oferece a possibilidade de visualização de gráficos na seção \textit{Insights}, que mostram a quantidade de tarefas em cada uma das categorias. Esses gráficos são úteis para a visualização do andamento do projeto, e para a identificação de possíveis gargalos.
 
-\begin{MyCenteredFigure}
-  \caption{Gráfico de Marco \textit{versus} quantidade de tarefas separadas por etiqueta}
-  \label{fig:ProjectsInsights}
+\begin{MyCenteredFigure} \caption{Gráfico de Marco \textit{versus} quantidade de tarefas separadas por etiqueta} \label{fig:ProjectsInsights}
   \includegraphics[width=\textwidth]{files/img/2.02!5-desenvolvimento/2.02!5.1.4-sistema/GitHubProjects-Insights-Stacked_Line-Milestone_Label}
 \end{MyCenteredFigure}
 
@@ -486,9 +446,7 @@ As células das turmas sofreram um ligeiro aprimoramento visual e foram ordenada
 
 Quanto ao banco de dados, os dados antes desconexos passaram a ser interligados adequadamente por chaves estrangeiras. Apresentando então restrições em casos de deleções inapropriadas no banco de dados. A API, por sua vez, deixou de retornar as listas de turmas, professores, disciplinas e salas, e passou a retornar os dados de forma mais estruturada em formato JSON.
 
-\begin{MyCenteredFigure}
-  \caption{Novo Diagrama de Banco de Dados}
-  \label{fig:MVP3_BancoDeDados}
+\begin{MyCenteredFigure} \caption{Novo Diagrama de Banco de Dados} \label{fig:MVP3_BancoDeDados}
   \includegraphics[width=\textwidth]{files/img/2.02!5-desenvolvimento/2.02!5.1.4-sistema/Diagrama_ER-How_it_should_be.drawio}
 \end{MyCenteredFigure}
 
@@ -500,9 +458,7 @@ Inicialmente, os dados adicionados faziam jus diretamente às disciplinas, profe
 
 Para acumular mais dados referentes às entidades do banco de dados, foram tomadas algumas abordagens: requisição dos dados diretamente do Sistema Acadêmico, processamento de tabelas, processamento de PDFs e \textit{web scraping}, todos eles ilustrados pela \autoref{fig:DataFlow}.
 
-\begin{MyCenteredFigure}
-  \caption{Diagrama do fluxo de obtenção de dados}
-  \label{fig:DataFlow}
+\begin{MyCenteredFigure} \caption{Diagrama do fluxo de obtenção de dados} \label{fig:DataFlow}
   \includegraphics[width=\textwidth]{files/img/2.02!5-desenvolvimento/2.02!5.1.4-sistema/Processamento de dados.drawio}
 \end{MyCenteredFigure}
 
@@ -565,9 +521,7 @@ Os conflitos calculados são representados de três formas diferentes. A primeir
 
 Embora o sistema seja projetado para ser permissivo quanto a inexistência de certas informações, é sempre esperado que a maior quantidade de informações possíveis seja inserida, assim, caso algum campo não tenha sido preenchido a cor de fundo do elemento será alterada para um tom acinzentado.
 
-\begin{MyCenteredFigure}
-  \caption{Paleta de cores do sistema}
-  \label{fig:conflitoDisciplinaPaleta}
+\begin{MyCenteredFigure} \caption{Paleta de cores do sistema} \label{fig:conflitoDisciplinaPaleta}
   \includegraphics[width=\textwidth]{files/img/2.02!5-desenvolvimento/2.02!5.1.5-conflitos/Paleta de Cores}
 \end{MyCenteredFigure}
 
@@ -577,9 +531,7 @@ Os conflitos que são representados por cores, têm sua paleta de cores represen
 
 O sistema contempla a checagem de conflitos de alocação simultânea de professores em mais de uma turma. Ou seja, considerando todas as turmas ao qual o professor está atribuído no ano e semestre selecionados, o sistema compara todos os horários das turmas deste professor, e verifica se há alguma interseção entre horários que estão no mesmo dia, levando em conta a duração da aula.
 
-\begin{MyCenteredFigure}
-  \caption{Exemplo de conflito de alocação de professor}
-  \label{fig:conflitoAlocacaoProfessor}
+\begin{MyCenteredFigure} \caption{Exemplo de conflito de alocação de professor} \label{fig:conflitoAlocacaoProfessor}
   \includegraphics[width=\textwidth]{files/img/2.02!5-desenvolvimento/2.02!5.1.5-conflitos/Alocação de professores}
 \end{MyCenteredFigure}
 
@@ -589,9 +541,7 @@ Caso haja algum conflito, o sistema destaca o professor em questão, tornando a 
 
 As salas também apresentam a verificação do conflito de alocação simultânea. Porém, diferente dos professores, a checagem é feita conferindo todos os horários na qual a sala está alocada, e então é feita a mesma verificação de interseção citada anteriormente. Havendo o conflito, é exibida uma borda alaranjada na parte inferior das propriedades referentes ao conflito, além de, assim como no caso dos professores, exibir o alerta flutuante. A \autoref{fig:conflitoAlocacaoSalas} representa um caso de conflito de alocação de salas.
 
-\begin{MyCenteredFigure}
-  \caption{Exemplo de conflito de alocação de sala}
-  \label{fig:conflitoAlocacaoSalas}
+\begin{MyCenteredFigure} \caption{Exemplo de conflito de alocação de sala} \label{fig:conflitoAlocacaoSalas}
   \includegraphics[width=\textwidth]{files/img/2.02!5-desenvolvimento/2.02!5.1.5-conflitos/Alocação de Salas - Sala}
 \end{MyCenteredFigure}
 
@@ -599,9 +549,7 @@ Além disso, também é feita a comparação entre a quantidade máxima de aluno
 
 Então, como pode-se perceber na \autoref{fig:conflitoAlocacaoSalasCapacidade}, a turma fictícia que apresenta demanda estimada de 31 alunos não poderia ser adequadamente alocada às salas ``P5 - inf1'', nem na ``P3 - Bcct'', visto que a primeira apenas comporta 24 alunos e a segunda, 30 alunos. O alerta flutuante, ao ser acionado, informa ainda quantos são os alunos que não poderiam ser alocados em cada uma das salas.
 
-\begin{MyCenteredFigure}
-  \caption{Exemplo de conflito de capacidade na sala}
-  \label{fig:conflitoAlocacaoSalasCapacidade}
+\begin{MyCenteredFigure} \caption{Exemplo de conflito de capacidade na sala} \label{fig:conflitoAlocacaoSalasCapacidade}
   \includegraphics[width=\textwidth]{files/img/2.02!5-desenvolvimento/2.02!5.1.5-conflitos/Demanda X Capacidade}
 \end{MyCenteredFigure}
 
@@ -609,9 +557,7 @@ Então, como pode-se perceber na \autoref{fig:conflitoAlocacaoSalasCapacidade}, 
 
 Além desses conflitos, outras características analisadas e representadas se referem às disciplinas atribuídas às turmas, que, embora não representem necessariamente um \textit{conflito}, mas sim um indicativo, ainda assim serão tratados como conflitos por motivos de simplificação. Esse indicativo leva em consideração o semestre selecionado e o período esperado da disciplina de certa turma. Utilizando de lógica similar, também é indicado caso não tenha sido atribuído um período à disciplina, e se, para o curso de Ciência da Computação, a disciplina é considerada como \textbf{Eletiva Livre}, \textbf{Eletiva Optativa}, ambas em tons azulados, ou se não é uma disciplina para o curso de Ciência da Computação, sendo então representada em tons alaranjados. Estas características são ilustradas no lado direito da \autoref{fig:conflitoDisciplinaTitulos}.
 
-\begin{MyCenteredFigure}
-  \caption{Avisos flutuantes dos conflitos de disciplinas}
-  \label{fig:conflitoDisciplinaTitulos}
+\begin{MyCenteredFigure} \caption{Avisos flutuantes dos conflitos de disciplinas} \label{fig:conflitoDisciplinaTitulos}
   \includegraphics[width=\textwidth]{files/img/2.02!5-desenvolvimento/2.02!5.1.5-conflitos/Categorias Disciplinas}
 \end{MyCenteredFigure}
 
