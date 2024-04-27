@@ -185,7 +185,7 @@ Após a elaboração dos protótipos com o Figma, e da conceitualização diagra
 
 A primeira versão do sistema foi desenvolvida em um ambiente local, com o objetivo de se aproximar ao máximo das páginas previstas no protótipo. Para isso, foi utilizada a biblioteca \textit{React Router} para a navegação entre as páginas, e a biblioteca \textit{React Select} para as caixas de seleção.
 
-\subsubsection{Banco de Dados Inicial} \label{sssec:BDInicial}
+\subsubsection{Banco de Dados Preliminar} \label{sssec:BDInicial}
 
 Os dados contidos no sistema foram inicialmente armazenados em arquivos JSON, que eram importados diretamente para o código. Isso foi feito para que fosse possível visualizar o funcionamento do sistema sem a necessidade de um banco de dados real. A partir disso, foi possível visualizar o funcionamento do sistema e realizar testes de usabilidade. Em contrapartida, os dados disponíveis não eram modificáveis, tendo apenas a possibilidade de leitura e mutação temporária, visto que após recarregar ou mudar de página, as mudanças eram perdidas.
 
@@ -263,7 +263,7 @@ Com isso, foi necessário recorrer a uma abordagem semimanual, sendo então dese
 
 Apesar da primeira tentativa de importação não ter sido completamente bem sucedida, foi desta forma que as tabelas, representadas pela \autoref{fig:TabelasIniciais}, foram inicialmente criadas. Não seguindo objetivamente a modelagem anteriormente citada. Isso gerou posteriormente a necessidade de ajustes manuais, como a adição de chaves primárias e estrangeiras, e a alteração de tipos de dados. Porém, como neste momento, o sistema visava apenas replicar o funcionamento do JSONBin, essas alterações não foram feitas de imediato.
 
-\begin{MyCenteredFigure} \caption{Diagrama primitivo das tabelas de dados SQL} \label{fig:TabelasIniciais}
+\begin{MyCenteredFigure} \caption{Diagrama inicial das tabelas de dados SQL} \label{fig:TabelasIniciais}
   \includegraphics[width=0.7\textwidth]{files/img/2.02!5-desenvolvimento/2.02!5.1.4-sistema/Diagrama_ER-As_is.drawio}
 \end{MyCenteredFigure}
 
