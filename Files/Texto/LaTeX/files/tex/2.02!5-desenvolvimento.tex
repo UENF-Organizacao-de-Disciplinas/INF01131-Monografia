@@ -54,37 +54,56 @@ A criação de protótipos, seguindo a abordagem tomada por \citeonline{Andre201
 
 \subsection{Protótipos de Componentes} \label{subsec:componentes} % #### 5.3.1.
 
-Antes de seguir com a descrição das telas, é válido descrever os componentes que foram utilizados na construção dos protótipos. A \autoref{fig:cartão_de_turma} mostra os cartões de turma que foram utilizados para representar as turmas criadas. O objetivo desses cartões é de apresentar de forma compacta o máximo possível de informações relevantes ao usuário.
+Antes de seguir com a descrição das telas, é válido descrever os componentes que foram utilizados na construção dos protótipos. Os componentes principais são os cartões de turma (\autoref{fig:cartão_de_turma}) e as caixas de seleção (\autoref{fig:selects}).
+
+A \autoref{fig:cartão_de_turma} mostra os cartões de turma que foram utilizados para representar as turmas criadas. O objetivo desses cartões é de apresentar de forma compacta o máximo possível de informações relevantes ao usuário. Considerando o caráter iterativo do desenvolvimento, foram criados diversas versões dos cartões, todos eles visando a apresentação de informações de forma clara, objetiva e intuitiva por parte do usuário.
+
+Essas informasções relevantes são as informações relacionadas à identificação da disciplina, do professor e da sala. Além dessas, são apresentadas informações adicionais como a quantidade de alunos que podem se inscrever na disciplina e alertas de possíveis conflitos.
+
+Em todas as versões dos cartões de turma, o código da disciplina está no canto superior esquerdo. No canto inferior direito está a quantidade de alunos que podem se inscrever na disciplina e, à sua esquerda, aqueles alunos que apresentam algum tipo de impedimento, como por exemplo ter alguma outra turma que ele possa se inscrever no mesmo horário.
+\autoref{fig:TurmaColapsada}
 
 \begin{MyCenteredFigure} \caption{Protótipos de cartões de turma} \label{fig:cartão_de_turma}
-  % \hfill
-  \begin{minipage}{0.48\textwidth} \centering
+  \begin{subfigure}[b]{0.45\textwidth} \centering
     \includegraphics[width=\textwidth]{files/img/2.02!5-desenvolvimento/2.02!5.1.3-prototipagem/2.02!5.1.3.1-componentes/Cartões/PadraoClassCards}
-    \vspace{1mm} \vfill
-    \includegraphics[width=\textwidth]{files/img/2.02!5-desenvolvimento/2.02!5.1.3-prototipagem/2.02!5.1.3.1-componentes/Cartões/Smaller ColapsadaClassCards}
-  \end{minipage}
+    \caption{Turma padrão} \label{fig:TurmaPadrão}
+  \end{subfigure}
   \hfill
-  \begin{minipage}{0.48\textwidth} \centering
+  \begin{subfigure}[b]{0.45\textwidth} \centering
     \includegraphics[width=\textwidth]{files/img/2.02!5-desenvolvimento/2.02!5.1.3-prototipagem/2.02!5.1.3.1-componentes/Cartões/Professor SuperiorClassCards}
-    \vspace{1mm} \vfill
+    \caption{Turma com professor no topo} \label{fig:TurmaTopo}
+  \end{subfigure}
+
+  \begin{subfigure}[b]{0.45\textwidth} \centering
+    \includegraphics[width=\textwidth]{files/img/2.02!5-desenvolvimento/2.02!5.1.3-prototipagem/2.02!5.1.3.1-componentes/Cartões/Smaller ColapsadaClassCards}
+    \caption{Turma colapsadas} \label{fig:TurmaColapsada}
+  \end{subfigure}
+  \hfill
+  \begin{subfigure}[b]{0.45\textwidth} \centering
     \includegraphics[width=\textwidth]{files/img/2.02!5-desenvolvimento/2.02!5.1.3-prototipagem/2.02!5.1.3.1-componentes/Cartões/SmallestClassCards}
-  \end{minipage}
+    \caption{Turma com tamanho reduzido} \label{fig:TurmaColapsadaReduzida}
+  \end{subfigure}
 \end{MyCenteredFigure}
 
-Dentre essas informações, temos principalmente o código da disciplina e o nome do professor. Quando alocada à uma sala, temos também o código da sala acrescida do prédio onde a sala se encontra. Além disso, no canto inferior direito, temos a quantidade de alunos que demandam a disciplina, ou seja, aqueles que a podem cursar de acordo com seus requisitos. Ao seu lado, caso ocorram, estão indicados o alerta de alunos conflituosos, sendo esses os alunos que demandam outra disciplina no mesmo horário em que esta turma está alocada.
+Nestes cartões, estão presentes também três botões: \textbf{travar}, \textbf{editar} e \textbf{expandir}/\textbf{recolher}. O botão de \textbf{travar} tem como função fixar a turma no horário em que ela se encontra, impedindo que ela seja movida. O botão de \textbf{editar} tem como função abrir um painel onde é possível alterar as informações da turma. O botão de \textbf{expandir}/\textbf{recolher} tem como função expandir ou recolher o cartão, mostrando ou escondendo informações adicionais. Em cada uma das versões dos cartões, a posição dos botões foram alteradas.
 
-Neste cartão, estão presentes também três botões: \textbf{travar}, \textbf{editar} e \textbf{expandir}/\textbf{recolher}. O botão de \textbf{travar} tem como função fixar a turma no horário em que ela se encontra, impedindo que ela seja movida. O botão de \textbf{editar} tem como função abrir um painel onde é possível alterar as informações da turma. O botão de \textbf{expandir}/\textbf{recolher} tem como função expandir ou recolher o cartão, mostrando ou escondendo informações adicionais.
+Outras informaçõe que também tiveram sua posição alterada foram o nome do professor, o nome da disciplina e o código da sala.
+
+Cada uma dessas versões dos cartões de turma se mostra com um propósito específico. O cartão padrão (\autoref{fig:TurmaPadrão}) é um dos maiores cartões, o que facilita a visualização do usuário às informações importantes, o mesmo pode ser dito para o cartão com o professor no topo (\autoref{fig:TurmaTopo}), esse, por sua vez, distribui a posição dos botões. Já os botões colapsados (\autoref{fig:TurmaColapsada}) e o cartão com tamanho reduzido (\autoref{fig:TurmaColapsadaReduzida}) prezam por uma maior economia de espaço, sendo úteis para quando o usuário deseja visualizar mais turmas ao mesmo tempo, como é o caso da visualização da grade horária, e por isso informam também o código da sala em que estão alocados.
 
 \begin{MyCenteredFigure} \caption{Protótipos de caixas de seleção} \label{fig:selects}
-  \begin{minipage}{0.48\textwidth} \centering
-    \includegraphics[width=\textwidth]{files/img/2.02!5-desenvolvimento/2.02!5.1.3-prototipagem/2.02!5.1.3.1-componentes/SingleSelect}
-  \end{minipage}
-  \begin{minipage}{0.48\textwidth} \centering
+  \begin{subfigure}[b]{0.45\textwidth} \centering
+    \includegraphics[width=0.8\textwidth]{files/img/2.02!5-desenvolvimento/2.02!5.1.3-prototipagem/2.02!5.1.3.1-componentes/SingleSelect}
+    \caption{Caixa de seleção única} \label{fig:SingleSelect}
+  \end{subfigure}
+  \hfill
+  \begin{subfigure}[b]{0.45\textwidth} \centering
     \includegraphics[width=\textwidth]{files/img/2.02!5-desenvolvimento/2.02!5.1.3-prototipagem/2.02!5.1.3.1-componentes/MultiSelect}
-  \end{minipage}
+    \caption{Caixa de seleção múltipla} \label{fig:MultiSelect}
+  \end{subfigure}
 \end{MyCenteredFigure}
 
-A \autoref{fig:selects} mostra os protótipos de caixas de seleção que foram utilizados para a seleção de dados. Na primeira caixa de seleção o usuário pode selecionar apenas uma opção. Já na segunda caixa de seleção o usuário pode selecionar várias opções.
+A \autoref{fig:selects} mostra os protótipos de caixas de seleção que foram utilizados para a seleção de dados. Na \autoref{fig:SingleSelect} está a caixa de seleção onde o usuário pode selecionar apenas uma opção. Já na \autoref{fig:MultiSelect} a caixa de seleção permite ao usuário selecionar várias opções.
 
 \subsection{Protótipos de Páginas} \label{subsec:páginas} % #### 5.3.1.
 
