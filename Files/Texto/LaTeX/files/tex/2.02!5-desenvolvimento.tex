@@ -1,12 +1,10 @@
 \chapter{Desenvolvimento do Sistema de Suporte à Decisão} \label{chap:desenvolvimento} % ### 5.
 
-Este capítulo visa apresentar todo o processo realizado para o desenvolvimento do sistema de suporte à decisão. O propósito desta aplicação é auxiliar o coordenador do curso de Ciência da Computação da UENF na alocação interativa de turmas, professores e salas. O auxílio é dado através de duas formas: a primeira é a criação automatizada da grade baseada no histórico das grades anteriores, a segunda é a identificação de conflitos, como a alocação de uma turma grande demais para a capacidade da turma, com o objetivo de auxiliar no aprimoramento da grade inicialmente gerada.
+Este capítulo visa apresentar todo o processo realizado para o desenvolvimento do sistema de suporte à decisão. O propósito desta aplicação é auxiliar o coordenador do curso de Ciência da Computação da UENF na alocação interativa de turmas, professores e salas. O auxílio é dado através de duas formas: a primeira é a \hyperref[par:Solução inicial]{criação automatizada da grade baseada no histórico das grades anteriores}, a segunda é a \hyperref[sec:conflitos]{identificação de conflitos}, como a alocação de uma turma grande demais para a capacidade da turma, com o objetivo de auxiliar no aprimoramento da grade inicialmente gerada.
 
-Ao longo deste capítulo serão citados \hyperref[sec:projetos]{projetos anteriores} de sistemas de suporte à decisão que culminaram na motivação para a escolha do tema, a tentativa de coleta de dados reais e sua implicação na \hyperref[sec:LGPD]{Lei Geral de Proteção dos Dados}, a \hyperref[sec:prototipagem]{prototipagem} dos \hyperref[subsec:componentes]{componentes} e \hyperref[subsec:páginas]{páginas do sistema} e também a \hyperref[sec:programação]{programação do sistema}.
+Inicia-se com a apresentação de \hyperref[sec:projetos]{projetos anteriores} que serviram de base para o desenvolvimento do presente trabalho. Em seguida, será apresentado o \hyperref[sec:LGPD]{acesso aos dados acadêmicos da instituição} e as dificuldades encontradas para a sua obtenção. Posteriormente, será apresentado o processo de \hyperref[sec:prototipagem]{prototipagem} do sistema, onde foram criados os designs iniciais das telas do sistema. Em seguida, será apresentado o processo de \hyperref[sec:programação]{programação do sistema}, que foi dividido em três grandes categorias que visavam entregar o sistema de forma gradual e funcional.
 
-Sua \hyperref[sec:programação]{programação} foi repartida em três grandes categorias que visavam entregar o sistema de forma gradual e funcional. A \hyperref[subsec:MVP1]{primeira versão do sistema} foi desenvolvida localmente, sem a necessidade de um banco de dados real, e com o objetivo de se aproximar ao máximo das páginas previstas no protótipo. A \hyperref[subsec:MVP2]{segunda versão do sistema} foi desenvolvida com a utilização duas abordagens distintas de bancos de dados para se obter a permanência dos dados. A \hyperref[subsec:MVP3]{terceira versão do sistema} foi desenvolvida de forma a estar completamente hospedada na nuvem, incluindo o seu banco de dados, sendo esse \hyperref[par:preenchimento]{preenchido com mais dados}.
-
-Por fim, será apresentado o cerne do sistema que é a \hyperref[sec:conflitos]{identificação e visualização de conflitos}, ou seja, os casos em que a alocação dos recursos gera algum comportamento minimamente indesejável como por exemplo a alocação de uma sala a duas turmas ao mesmo tempo. Serão apresentados os tipos de conflitos que o sistema é capaz de identificar, como eles são visualizados e como o sistema lida com cada um deles.
+Por fim, será apresentado o cerne do sistema que é a \hyperref[sec:conflitos]{identificação e visualização de conflitos}, ou seja, os casos em que a alocação dos recursos gera algum comportamento minimamente indesejável como por exemplo a alocação de uma sala a duas turmas ao mesmo tempo. Serão apresentados os tipos de conflitos que o sistema é capaz de identificar, como eles são visualizados e como o sistema lida com cada um deles. Conclui-se então com a apresentação do \hyperref[sec:preenchimento]{preenchimento do banco de dados} com dados reais.
 
 \section{Projetos Anteriores} \label{sec:projetos} % ### 5.1.
 
@@ -181,6 +179,8 @@ Após a elaboração dos protótipos com o Figma, e da conceitualização diagra
 
 % Perguntar para quem sabe, sobre qual é o real papel do Node.js
 
+Sua \hyperref[sec:programação]{programação} foi repartida em três grandes categorias que visavam entregar o sistema de forma gradual e funcional. A \hyperref[subsec:MVP1]{primeira versão do sistema} foi desenvolvida localmente com o objetivo de se aproximar ao máximo das páginas previstas no protótipo, sem a necessidade de um banco de dados que permitisse alterações. A \hyperref[subsec:MVP2]{segunda versão do sistema} contou com a utilização de duas abordagens distintas de bancos de dados para se obter a permanência dos dados. Já a \hyperref[subsec:MVP3]{terceira versão do sistema} foi desenvolvida de forma a estar completamente hospedada na nuvem, incluindo o seu banco de dados, sendo então \hyperref[sec:preenchimento]{preenchido com mais dados}.
+
 \begin{MyCenteredFigure} \caption{Diagrama da progressão funcionamento da permanência dos dados} \label{fig:API}
   \includegraphics[width=\textwidth]{files/img/2.02!5-desenvolvimento/2.02!5.1.4-sistema/diagramas/API/API-Progressão}
 \end{MyCenteredFigure}
@@ -218,9 +218,11 @@ Após o desenvolvimento local, como forma de viabilizar o acesso ao sistema por 
 
 \subsection{Versão 2.0} \label{subsec:MVP2} % ### 5.5.3. Segunda versão
 
-Utilizando do \textit{feedback} quanto aos resultados entregues na primeira versão, alguns pontos de melhoria foram identificados, sendo um deles, e o mais importante: o planejamento. Na primeira abordagem, o desenvolvimento foi feito seguindo notas e ideias soltas, sem um planejamento prévio, o que resultou em um sistema que, embora funcional, não atendia a todas as necessidades propostas. Também dispunha de funcionalidades que não eram de todo necessárias, ou, melhor dizendo, que tinham menor prioridade do que muitas outras.
+Utilizando do \textit{feedback} quanto aos resultados entregues na primeira versão, alguns pontos de melhoria foram identificados, sendo um deles, e o mais importante: o planejamento. Na primeira abordagem, o desenvolvimento foi feito seguindo notas e ideias soltas, sem um planejamento prévio, o que resultou em um sistema que, embora funcional, não atendia a todas as necessidades propostas. Também dispunha de funcionalidades que não eram de todo necessárias, ou, melhor dizendo, que tinham menor prioridade do que muitas outras. Como solução, foi utilizado o \hyperref[sssec:GitHub Projects]{GitHub Projects} para organizar as tarefas e priorizá-las.
 
 Mesmo com esta nova dinâmica, outras funcionalidades foram deixadas de lado. Uma das que foram deixadas de lado foi a possibilidade de fixar certas informações. A proposta era que, certas disciplinas como os Cálculos e Álgebra Linear que são ofertadas para múltiplos cursos, pudessem ser fixadas em horários específicos, para que simplificasse aos coordenadores dos cursos a alocação de turmas.
+
+Nessa versão, também foram utilizados dois métodos de manutenção dos dados o \hyperref[ssssec:JSONBin]{JSONBin} que não atingiu às expectativas e o \hyperref[ssssec:MySQL]{MySQL} que serviu para a criação de um banco de dados local, já emulando o \hyperref[sssec:Amazon Web Services]{posterior uso de um banco de dados hospedado na nuvem}.
 
 \subsubsection{GitHub Projects} \label{sssec:GitHub Projects}
 
@@ -471,7 +473,7 @@ Para resolver esse problema, foi feita a adição de uma função de \textit{cal
 
 Outra característica aprimorada, foi a velocidade de adição e deleção, principalmente a de deleção. Antes, a aprovação do banco de dados era necessária para que a lista de turmas fosse atualizada, e isso tornava o processo de deleção lento. Para resolver isso, foi feita a adição de uma função de deleção que remove a turma da listagem de turmas antes mesmo da confirmação do banco de dados. Essa não se mostra como a solução mais adequada, visto que em caso de falha na deleção, a turma poderá ser restaurada com a simples atualização da página, os pontos positivos na usabilidade superam os negativos.
 
-\paragraph*{Solução inicial}
+\paragraph*{Solução inicial} \label{par:Solução inicial}
 
 A funcionalidade anteriormente denominada ``Disciplinas ainda não oferecidas'' foi aprimorada de tal forma que agora, além de criar uma turma para a disciplina selecionada, o sistema automaticamente analisa o histórico de criação de turmas, definindo previamente o professor, a demanda estimada, e os horários, incluindo seus dias, horas de início e sala em que é alocada.
 
