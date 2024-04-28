@@ -175,7 +175,7 @@ Após a conceitualização diagramática do banco de dados e a elaboração dos 
   \end{animateinline}
 \end{MyCenteredFigure}
 
-% Perguntar para quem sabe, sobre qual é o real papel do Node.js
+Seguindo constantemente o conceito de iteratividade da apresentação do sistema, a programação foi marcada por dois conceitos: blocos de funcionalidade marcas e blocos de funcionalidade apresentadas. O primeiro conceito se refere à grandes grupos de mudanças que estavam relacionadas a um mesmo conceito. O segundo conceito se refere à apresentação esporádica da situação atual do sistema para quem o iria utilizar. Nesta seção serão apresentadas as versões do sistema de acordo com a sua repartição em mudanças relacionadas e sequenciais.
 
 Sua \hyperref[sec:programação]{programação} foi repartida em três grandes categorias que visavam entregar o sistema de forma gradual e funcional. A \hyperref[subsec:MVP1]{primeira versão do sistema} foi desenvolvida localmente com o objetivo de se aproximar ao máximo das páginas previstas no protótipo, sem a necessidade de um banco de dados que permitisse alterações. A \hyperref[subsec:MVP2]{segunda versão do sistema} contou com a utilização de duas abordagens distintas de bancos de dados para se obter a permanência dos dados. Já a \hyperref[subsec:MVP3]{terceira versão do sistema} foi desenvolvida de forma a estar completamente hospedada na nuvem, incluindo o seu banco de dados, sendo então \hyperref[sec:preenchimento]{preenchido com mais dados}.
 
@@ -183,6 +183,7 @@ Sua \hyperref[sec:programação]{programação} foi repartida em três grandes c
   \includegraphics[width=\textwidth]{files/img/2.02!5-desenvolvimento/2.02!5.1.4-sistema/diagramas/API/API-Progressão}
 \end{MyCenteredFigure}
 
+Ao longo da implementação dessas versões, diversos métodos de manutenção dos dados foram utilizados, como a importação de arquivos JSON, a utilização de um banco de dados local e a utilização de um banco de dados hospedado na nuvem. A \autoref{fig:API} ilustra a progressão do funcionamento da permanência dos dados ao longo das versões do sistema. Os pormenores de cada versão serão descritos adiante.
 
 \subsection{Versão 1.0} \label{subsec:MVP1} % ### 5.5.2. Primeira versão
 
