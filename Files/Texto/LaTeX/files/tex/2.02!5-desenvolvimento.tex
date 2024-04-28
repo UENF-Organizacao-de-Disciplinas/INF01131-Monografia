@@ -163,23 +163,28 @@ Por último, na listagem dos alunos que podem se inscrever, no canto inferior di
 
 Após a elaboração dos protótipos com o Figma, e da conceitualização diagramática do banco de dados, o desenvolvimento do sistema foi iniciado. Por maior familiaridade com a linguagem foi escolhida a linguagem JavaScript, utilizando a biblioteca \textit{React} para a criação dos componentes visuais, ou seja, o \textit{frontend}, e o \textit{Node.js} para a criação do \textit{backend} e a criação de um servidor local que permitiria visualizar as mudanças no código em tempo real. Suas logos estão ilustrados na \autoref{fig:frontend}.
 
-\begin{MyCenteredFigure} \caption{Recursos usados para o desenvolvimento do \textit{Frontend}} \label{fig:frontend}
+\begin{MyCenteredFigure} \caption{Recursos usados para o desenvolvimento do sistema} \label{fig:sistemas}
   \begin{animateinline}[loop,autoplay]{1}
     \myAnimation{JavaScript} % 1 JS
-    \myAnimation{NodeJS}     % 2 Node
-    \myAnimation{React}      % 3 React
-    \newframe
-    \myAnimation{NodeJS}     % 1 Node
     \myAnimation{React}      % 2 React
-    \myAnimation{JavaScript} % 3 JS
-    \newframe
-    \myAnimation{React}      % 1 React
-    \myAnimation{JavaScript} % 2 JS
     \myAnimation{NodeJS}     % 3 Node
+    \newframe
+    \myAnimation{React}      % 2 React
+    \myAnimation{NodeJS}     % 3 Node
+    \myAnimation{JavaScript} % 1 JS
+    \newframe
+    \myAnimation{NodeJS}     % 3 Node
+    \myAnimation{JavaScript} % 1 JS
+    \myAnimation{React}      % 2 React
   \end{animateinline}
 \end{MyCenteredFigure}
 
 % Perguntar para quem sabe, sobre qual é o real papel do Node.js
+
+\begin{MyCenteredFigure} \caption{Diagrama da progressão funcionamento da permanência dos dados} \label{fig:API}
+  \includegraphics[width=\textwidth]{files/img/2.02!5-desenvolvimento/2.02!5.1.4-sistema/diagramas/API/API-Progressão}
+\end{MyCenteredFigure}
+
 
 \subsection{Versão 1.0} \label{subsec:MVP1} % ### 5.5.2. Primeira versão
 
@@ -188,6 +193,10 @@ A primeira versão do sistema foi desenvolvida em um ambiente local, com o objet
 \subsubsection{Banco de Dados Preliminar} \label{sssec:BDInicial}
 
 Os dados contidos no sistema foram inicialmente armazenados em arquivos JSON, que eram importados diretamente para o código. Isso foi feito para que fosse possível visualizar o funcionamento do sistema sem a necessidade de um banco de dados real. A partir disso, foi possível visualizar o funcionamento do sistema e realizar testes de usabilidade. Em contrapartida, os dados disponíveis não eram modificáveis, tendo apenas a possibilidade de leitura e mutação temporária, visto que após recarregar ou mudar de página, as mudanças eram perdidas.
+
+\begin{MyCenteredFigure} \caption{Diagrama da progressão funcionamento da permanência dos dados} \label{fig:API_MVP1}
+  \includegraphics[width=\textwidth]{files/img/2.02!5-desenvolvimento/2.02!5.1.4-sistema/diagramas/API/API_MVP1}
+\end{MyCenteredFigure}
 
 Nesse método, cada entidade era armazenada em um arquivo JSON separado, contendo esse um array de objetos, onde em cada objeto haviam as chaves, representando as propriedades da entidade, e os valores, representando os dados da entidade.
 
@@ -229,6 +238,11 @@ As tarefas foram inicialmente divididas em três principais categorias: \textit{
 
 Tendo agora uma rota mais clara a ser seguida, o desenvolvimento foi retomado. Uma das características mais marcantes e ainda não atribuídas ao sistema era a manutenção dos dados. Para exemplificar o funcionamento geral da permanência dos dados, consideremos o uso de uma \textit{REST API} utilizando de 4 ``camadas'': o \textbf{\textit{frontend}}, os \textbf{\textit{endpoints}}, as \textbf{funções} de execução e o \textbf{banco de dados}.
 
+\begin{MyCenteredFigure} \caption{Diagrama da progressão funcionamento da permanência dos dados} \label{fig:API_MVP2}
+  \includegraphics[width=\textwidth]{files/img/2.02!5-desenvolvimento/2.02!5.1.4-sistema/diagramas/API/API_MVP2}
+\end{MyCenteredFigure}
+
+
 O \textbf{\textit{frontend}} é a interface do sistema, onde o usuário interage com o sistema. Ele se encontra em duas formas: a primeira é o chamado ``em produção'', que é o sistema que o usuário final acessa, e a segunda é o chamado ``em desenvolvimento'', que é o sistema que o desenvolvedor acessa para realizar as modificações necessárias. Ambas precisam se comunicar com o \textit{backend} para realizar as quatro operações básicas no banco de dados (criação, leitura, atualização e deleção) por sobre as entidades existentes (turmas, professores, disciplinas, salas, etc.). Elas assim o fazer ao enviar requisições HTTP (\textit{GET}, \textit{POST}, \textit{PUT} e \textit{DELETE}), contendo pacotes de informações em formato JSON para os \textbf{\textit{endpoints}}.
 
 Os \textbf{\textit{endpoints}} são as rotas que o \textit{backend} disponibiliza para a recepção das requisições HTTP. Eles são responsáveis por encaminhar as requisições recebidas. Seu funcionamento consiste em rotear as requisições recebidas junto com sua carga útil. Para tanto, as rotas criadas refletem diretamente a qual entidade do banco de dados a requisição se refere, sendo então assim sabido qual \textbf{função} deve ser executada.
@@ -236,10 +250,6 @@ Os \textbf{\textit{endpoints}} são as rotas que o \textit{backend} disponibiliz
 As \textbf{funções} são as responsáveis por executar as operações no banco de dados. Elas processam o pacote de informações recebido, e então realizam a operação desejada no \textbf{banco de dados}.
 
 O \textbf{banco de dados} recebe a requisição, processa a operação, e então retorna o status da operação. Esse retorno é então repassado camada por camada, até chegar ao \textit{frontend}, onde o usuário final pode visualizar o resultado da operação.
-
-\begin{MyCenteredFigure} \caption{Diagrama da progressão funcionamento da permanência dos dados} \label{fig:API}
-  \includegraphics[width=\textwidth]{files/img/2.02!5-desenvolvimento/2.02!5.1.4-sistema/API-Progressão.drawio}
-\end{MyCenteredFigure}
 
 \textbf{Resumidamente}: O \textbf{\textit{frontend}} envia uma requisição HTTP com uma carga de informações a um \textbf{\textit{endpoint}}, que encaminha a requisição a uma \textbf{função} específica que executa uma operação no \textbf{banco de dados}, assim retornando o status da operação ao \textit{frontend}. Essa sequência é ilustrada na \autoref{fig:API}.
 
@@ -268,7 +278,7 @@ Com isso, foi necessário recorrer a uma abordagem semimanual, sendo então dese
 Apesar da primeira tentativa de importação não ter sido completamente bem sucedida, foi desta forma que as tabelas, representadas pela \autoref{fig:TabelasIniciais}, foram inicialmente criadas. Não seguindo objetivamente a modelagem anteriormente citada. Isso gerou posteriormente a necessidade de ajustes manuais, como a adição de chaves primárias e estrangeiras, e a alteração de tipos de dados. Porém, como neste momento, o sistema visava apenas replicar o funcionamento do JSONBin, essas alterações não foram feitas de imediato.
 
 \begin{MyCenteredFigure} \caption{Diagrama inicial das tabelas de dados SQL} \label{fig:TabelasIniciais}
-  \includegraphics[width=0.7\textwidth]{files/img/2.02!5-desenvolvimento/2.02!5.1.4-sistema/Diagrama_ER-As_is.drawio}
+  \includegraphics[width=0.7\textwidth]{files/img/2.02!5-desenvolvimento/2.02!5.1.4-sistema/diagramas/Diagrama_ER-As_is}
 \end{MyCenteredFigure}
 
 \paragraph*{Acesso ao Banco de Dados}
@@ -330,7 +340,7 @@ Porém, considerando que a junção dos nomes \textit{hour} e \textit{class} era
 Quanto ao nome, como o sistema visa a alocação de turmas, especificamente para o curso de Ciência da Computação na UENF, decidiu-se pela corruptela da palavra \textit{hour} para que se tornasse \textit{our}, que significa ``nosso'' em inglês, assim, remetendo ao sentido de individualidade do sistema. Com isso, o nome do sistema se tornou \textit{OurClass}.
 
 \begin{MyCenteredFigure} \caption{Logomarcas do sistema} \label{fig:Logomarcas}
-  \includegraphics[width=\textwidth]{files/img/2.02!5-desenvolvimento/2.02!5.1.4-sistema/Logomarcas.drawio.pdf}
+  \includegraphics[width=\textwidth]{files/img/2.02!5-desenvolvimento/2.02!5.1.4-sistema/Logomarcas}
 \end{MyCenteredFigure}
 
 Juntando o símbolo da ampulheta com o nome \textit{OurClass} e outros elementos gráficos, como as tabelas horárias, foi criada a logomarca do sistema, que pode ser vista na \autoref{fig:Logomarcas}. A logomarca foi criada utilizando de inteligências artificiais generativas, principalmente o \textit{Bing}. A partir disso, foi possível criar uma logomarca que refletisse o propósito do sistema, e que fosse agradável visualmente.
@@ -412,6 +422,16 @@ Com eles, pode-se ter uma noção das métricas do projeto, como por exemplo:
   \item Quantas são as tarefas em cada um de seus estados (\textbf{completa}, \textbf{em progresso} ou \textbf{pendente}).
 \end{itemize}
 
+
+\begin{MyCenteredFigure} \caption{Diagrama da progressão funcionamento da permanência dos dados} \label{fig:API_MVP3}
+  \includegraphics[width=\textwidth]{files/img/2.02!5-desenvolvimento/2.02!5.1.4-sistema/diagramas/API/API_MVP3}
+\end{MyCenteredFigure}
+
+
+\begin{MyCenteredFigure} \caption{API REST no AWS} \label{fig:APIAWS}
+  \includegraphics[width=\textwidth]{files/img/2.02!5-desenvolvimento/2.02!5.1.4-sistema/diagramas/API/API-Funcionamento}
+\end{MyCenteredFigure}
+
 \subsubsection{Melhorias no Sistema} \label{sssec:Melhorias no Sistema}
 
 O sistema passou por diversas pequenas mudanças, e algumas maiores. Uma considerável parte delas foi relacionada à forma com que as informações eram estruturadas internamente, mudanças essas feitas com o intuito de tornar o sistema mais fácil de ser mantido posteriormente. Em seguida estão listadas algumas das várias melhorias feitas no sistema.
@@ -480,7 +500,7 @@ As células das turmas sofreram um ligeiro aprimoramento visual e foram ordenada
 Quanto ao banco de dados, os dados antes desconexos passaram a ser interligados adequadamente por chaves estrangeiras. Apresentando então restrições em casos de deleções inapropriadas no banco de dados. A API, por sua vez, deixou de retornar as listas de turmas, professores, disciplinas e salas, e passou a retornar os dados de forma mais estruturada em formato JSON.
 
 \begin{MyCenteredFigure} \caption{Novo Diagrama de Banco de Dados} \label{fig:MVP3_BancoDeDados}
-  \includegraphics[width=\textwidth]{files/img/2.02!5-desenvolvimento/2.02!5.1.4-sistema/Diagrama_ER-How_it_should_be.drawio}
+  \includegraphics[width=\textwidth]{files/img/2.02!5-desenvolvimento/2.02!5.1.4-sistema/diagramas/Diagrama_ER-How_it_should_be}
 \end{MyCenteredFigure}
 
 Na \autoref{fig:MVP3_BancoDeDados} vemos as inter-relação entre as propriedades das entidades do banco de dados. Com o uso mais apropriado das chaves estrangeiras, o anterior uso dos nomes das disciplinas e professores como elementos de identificação foi substituído pelo uso de seus respectivos códigos identificadores. Houve também o surgimento da entidade \textbf{Horarios}, que interliga as turmas às salas.
