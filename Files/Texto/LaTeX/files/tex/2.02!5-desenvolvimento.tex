@@ -191,7 +191,7 @@ A primeira versão do sistema foi desenvolvida em um ambiente local, com o objet
 
 \subsubsection{Banco de Dados Preliminar} \label{sssec:BDInicial}
 
-Os dados contidos no sistema foram inicialmente armazenados em arquivos JSON, que eram importados diretamente para o código. Isso foi feito para que fosse possível visualizar o funcionamento do sistema sem a necessidade de um banco de dados real. A partir disso, foi possível visualizar o funcionamento do sistema e realizar testes de usabilidade. Em contrapartida, os dados disponíveis não eram modificáveis, tendo apenas a possibilidade de leitura e mutação temporária, visto que após recarregar ou mudar de página, as mudanças eram perdidas.
+Os dados contidos no sistema foram inicialmente armazenados em arquivos JSON, que eram importados diretamente para o código (\autoref{fig:API_MVP1}). Isso foi feito para que fosse possível visualizar o funcionamento do sistema sem a necessidade de um banco de dados real. A partir disso, foi possível visualizar o funcionamento do sistema e realizar testes de usabilidade. Em contrapartida, os dados disponíveis não eram modificáveis, tendo apenas a possibilidade de leitura e mutação temporária, visto que após recarregar ou mudar de página, as mudanças eram perdidas.
 
 \begin{MyCenteredFigure} \caption{Diagrama da progressão funcionamento da permanência dos dados} \label{fig:API_MVP1}
   \includegraphics[width=\textwidth]{files/img/2.02!5-desenvolvimento/2.02!5.1.4-sistema/diagramas/API/API_MVP1}
@@ -225,7 +225,7 @@ Nessa versão, também foram utilizados dois métodos de manutenção dos dados 
 
 \subsubsection{GitHub Projects} \label{sssec:GitHub Projects}
 
-Com isso, utilizando o GitHub Projects, foi organizado uma tabela de tarefas, vista na \autoref{fig:GitHubProjectsTable}, onde foram unificadas as diversas anotações e ideias, antes soltas. A partir disso, foi possível visualizar o que era mais importante e o que poderia ser deixado de lado.
+Utilizando o GitHub Projects, foi organizado uma tabela de tarefas, vista na \autoref{fig:GitHubProjectsTable}, onde foram unificadas as diversas anotações e ideias, antes soltas. A partir disso, foi possível visualizar o que era mais importante e o que poderia ser deixado de lado.
 
 \begin{MyCenteredFigure} \caption{Tabela de tarefas do GitHub Projects} \label{fig:GitHubProjectsTable}
   \includegraphics[width=\textwidth]{files/img/2.02!5-desenvolvimento/2.02!5.1.4-sistema/GitHubProjects-Table}
@@ -235,7 +235,7 @@ Tendo este novo sistema de tarefas em prática, foi possível planejar melhor qu
 
 As tarefas foram inicialmente divididas em três principais categorias: \textit{Status}, \textit{Pages} e \textit{Sequence}. O \textit{Status} reflete o andamento da tarefa, se ela está disponível, em andamento, ou concluída. O \textit{Pages} reflete em qual página do sistema a tarefa se encontra, e o \textit{Sequence} reflete a ordem de prioridade da tarefa.
 
-\subsubsection{Permanência dos Dados} \label{sssec:Permanência dos Dados}
+\subsubsection{Permanência na Alteração dos Dados} \label{sssec:Permanência dos Dados}
 
 Tendo agora uma rota mais clara a ser seguida, o desenvolvimento foi retomado. Uma das características mais marcantes e ainda não atribuídas ao sistema era a manutenção das modificações feitas nos dados. Para exemplificar o funcionamento geral da permanência dos dados, consideremos o uso de uma \textit{REST API}, representada pela \autoref{fig:API_MVP2}, utilizando de 4 ``camadas'': o \textbf{\textit{frontend}}, os \textbf{\textit{endpoints}}, as \textbf{funções} de execução e o \textbf{banco de dados}.
 
