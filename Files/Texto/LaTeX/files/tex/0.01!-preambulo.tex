@@ -111,7 +111,6 @@ description = {Anexos da minha monografia},
 subject = {Anexos da minha monografia. Mais especificamente, o seu código fonte.},
 }
 
-
 % --- Configurações de aparência do PDF final: alterando o aspecto da cor azul
 \definecolor{hyperBlue}{HTML}{2905C3}
 
@@ -258,6 +257,16 @@ literate =    {---}{{\ProcessThreeDashes}}3
     5. Concordo completamente
   }
 }
+
+% Seguindo a NBR 6023
+\makeatletter
+\@ifpackageloaded{url}{%
+  \addtociteoptionlist{abnt-url-package=url}
+  \def\UrlLeft{}
+  \def\UrlRight{}
+  \urlstyle{same}}
+\makeatother
+% Seguindo a NBR 6023
 
 % --- DEFININDO LINKS USADOS AO LONGO DO DOCUMENTO ---
 

@@ -1,14 +1,26 @@
 % # Testando LaTeX
 
-\chapter{Teste RGB}
+\chapter{Removendo <> da URL}
 
-Teste pra saber de que forma que o filtro de cor cinza no vscode tá afetando a visualização das minhas imagens.
+\def\LinkTest{https://www.example.com/page.html}
 
-\begin{MyCenteredFigure} \caption{Teste de RGB}
-  \includegraphics[width=0.5\textwidth]{files/img/unused/teste RGB.png}
-\end{MyCenteredFigure}
+\begin{enumerate}
+  \item LinkToURL: \LinkToURL{\LinkTest}{Exemplo}
+  \item URL: \url{\LinkTest}
+  \item \cite{test1}
+  \item \cite{test2}
+  \item \cite{test3}
+\end{enumerate}
 
-\chapter{Embedding}
+% \chapter{Teste RGB}
+
+% Teste pra saber de que forma que o filtro de cor cinza no vscode tá afetando a visualização das minhas imagens.
+
+% \begin{MyCenteredFigure} \caption{Teste de RGB}
+%   \includegraphics[width=0.5\textwidth]{files/img/unused/teste RGB.png}
+% \end{MyCenteredFigure}
+
+% \chapter{Embedding}
 
 ATACHING
 
@@ -33,7 +45,7 @@ ATACHING
 % \openfilelink{files/codigos/EMBED2.txt}{Clique aqui para abrir o arquivo}
 
 
-\chapter{Easter Egg}
+% \chapter{Easter Egg}
 
 % \begin{MyCenteredFigure}
 %   \caption{Teste de Easter Egg}
@@ -42,7 +54,7 @@ ATACHING
 %   \adjustbox{trim={.25\width} {.25\height} {.25\width} {.25\height},clip}{\includegraphics[width=0.5\textwidth]{files/img/unused/teste}}
 % \end{MyCenteredFigure}
 
-\chapter{Build}
+% \chapter{Build}
 
 1
 
