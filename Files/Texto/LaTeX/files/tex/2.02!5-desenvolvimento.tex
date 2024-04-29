@@ -1,4 +1,4 @@
-\chapter{Desenvolvimento do Sistema de Suporte à Decisão} \label{chap:desenvolvimento} % ### 5.
+\chapter{DESENVOLVIMENTO DO SISTEMA DE SUPORTE À DECISÃO} \label{chap:desenvolvimento} % ### 5.
 
 Este capítulo visa apresentar todo o processo realizado para o desenvolvimento do sistema de suporte à decisão. O propósito desta aplicação é auxiliar o coordenador do curso de Ciência da Computação da UENF na alocação interativa de turmas, professores e salas. O auxílio é dado através de duas formas: a primeira é a \hyperref[par:Solução inicial]{criação automatizada da grade baseada no histórico das grades anteriores}, a segunda é a \hyperref[sec:conflitos]{identificação de conflitos}, como a alocação de uma turma grande demais para a capacidade da turma, com o objetivo de auxiliar no aprimoramento da grade inicialmente gerada.
 
@@ -6,13 +6,13 @@ Inicia-se com a apresentação de \hyperref[sec:projetos]{projetos anteriores} q
 
 Por fim, será apresentado o cerne do sistema que é a \hyperref[sec:conflitos]{identificação e visualização de conflitos}, ou seja, os casos em que a alocação dos recursos gera algum comportamento minimamente indesejável como por exemplo a alocação de uma sala a duas turmas ao mesmo tempo. Serão apresentados os tipos de conflitos que o sistema é capaz de identificar, como eles são visualizados e como o sistema lida com cada um deles. Conclui-se então com a apresentação do \hyperref[sec:preenchimento]{preenchimento do banco de dados} com dados reais.
 
-\section{Projetos Anteriores} \label{sec:projetos} % ### 5.1.
+\section{Projetos anteriores} \label{sec:projetos} % ### 5.1.
 
 Antes do desenvolvimento do presente trabalho, outros projetos já foram idealizados e até mesmo desenvolvidos. Dentre eles, dois se destacam por terem sido os precursores do atual projeto. O primeiro deles, que foi idealizado, mas não desenvolvido, almejava apresentar uma \hyperref[subsec:andamento]{visualização da progressão dos alunos na grade curricular}. O segundo, que foi desenvolvido, realizava o \hyperref[subsec:demanda]{cálculo da demanda}, ou seja, calculava quantos e quais eram os alunos que poderiam se inscrever nas disciplinas. Ambos os projetos se mostram como abordagens paralelas de auxiliar no planejamento do curso de Ciência da Computação da UENF, sendo eles também sistemas de suporte à decisão, mesmo que em menor escala.
 
 Deve-se comentar também sobre os dois trabalhos anteriores desenvolvidos por \citeonline{Sanya2013} e \citeonline{Ricardo2014} que iniciaram os estudos sobre a alocação de turmas no curso de Ciência da Computação na UENF, mas que, como já foram \hyperref[sec:anteriores]{citados previamente}, não se mostra necessária a repetição.
 
-\subsection{Andamento dos Alunos} \label{subsec:andamento} % #### 5.1.1
+\subsection{Andamento dos alunos} \label{subsec:andamento} % #### 5.1.1
 
 Como interesse próprio, cogitou-se o desenvolvimento de uma plataforma onde se pudesse ver em que ponto os alunos se encontram em relação ao andamento de seus cursos. Para isso, seria necessária a obtenção dos dados dos alunos, seja por parte dos mesmos, do coordenador ou por integração com o sistema acadêmico. Com estes dados, seria possível criar uma interface que mostrasse o andamento dos alunos, quais matérias já foram cursadas, quais estão sendo cursadas e quais ainda faltam. Além disso, seria possível mostrar quais matérias são pré-requisitos para outras. Assim, o aluno e a coordenação poderiam ter uma visão geral de seu andamento e de quais matérias ele precisará cursar para se formar. Esse projeto não saiu do mundo das ideias, entretanto, lá permaneceu sendo maturado.
 
@@ -22,7 +22,7 @@ Como interesse próprio, cogitou-se o desenvolvimento de uma plataforma onde se 
 
 Anos após a idealização dessa funcionalidade, o Sistema Acadêmico da UENF passou a disponibilizar uma funcionalidade semelhante, como pode ser visto na \autoref{fig:andamento}. Nela, é possível ver o andamento do aluno por período, incluindo as disciplinas Eletivas Livres e Eletivas Optativas. Entretanto, essa visualização tabular não ilustra o andamento de todos os alunos simultaneamente, sendo necessário navegar individualmente por cada um deles.
 
-\subsection{Cálculo de Demanda} \label{subsec:demanda} % #### 5.1.2.
+\subsection{Cálculo de demanda} \label{subsec:demanda} % #### 5.1.2.
 
 Ao longo dos semestres, foi percebido que durante o intervalo entre os semestres, os alunos precisam se inscrever nas matérias que desejam cursar no semestre seguinte. Para isso, é necessário que o coordenador saiba quantos alunos estão interessados em cada matéria para que ele possa definir quantas turmas serão abertas. Com este fim em mente, o coordenador dispõe de algumas alternativas como estimar quantos alunos se inscreverão em cada disciplina, checar manualmente no sistema acadêmico quais alunos podem fazer cada matéria, ou então obter diretamente dos alunos através de um formulário em quais disciplinas cada um dos alunos tem a intenção de cursar.
 
@@ -36,7 +36,7 @@ Este código foi desenvolvido em 8 etapas, vistas no \autoref{code:demand}, cada
 
 Embora o código cumpra com seu objetivo, apresenta algumas características limitantes. A primeira é que os PDFs precisam ser obtidos manualmente, um por um, pelo coordenador, sendo ela por si só uma tarefa extenuante, o que não é desejado. Além disso, o seu uso não é muito intuitivo, sendo necessário que o usuário lide com o prompt de comando e instale as dependências necessárias, o que acaba trazendo uma dificuldade a mais ao usuário. O código também apresenta limitações por sistema operacional, não sendo garantido o seu funcionamento em sistemas operacionais diferentes do Windows.
 
-\section{Acesso aos Dados Acadêmicos da Instituição} \label{sec:LGPD} % ### 5.2.
+\section{Acesso aos dados acadêmicos da instituição} \label{sec:LGPD} % ### 5.2.
 
 Em sua concepção original, o presente trabalho visaria integrar o sistema desenvolvido com o atual sistema acadêmico da UENF. Essa abordagem foi descartada devido às dificuldades encontradas por parte do setor administrativo da UENF que, devido à \LinkToURL{\LinkLGPD}{Lei Geral de Proteção dos Dados (LGPD)}, não podem divulgar dados dos alunos, mesmo anonimizados.
 
@@ -50,7 +50,7 @@ Apesar das possibilidades de meios legalmente válidos para a aquisição dos da
 
 A criação de protótipos, seguindo a abordagem tomada por \citeonline{Andre2018}, se mostra como essencial para que se mantenha a constante satisfação por parte dos \textit{stakeholders} e quais mudanças sugerem ao desenvolvimento do projeto, assim reduzindo a necessidade de retrabalho e de não alcançar as expectativas do projeto. Para este fim, foram feitos os designs iniciais das telas do sistema usando o software de design \LinkToURL{\LinkFigma}{Figma}, designs esses que representam apenas o esboço, e não um sistema funcional. Esse esboço serviu como uma base visual de como o sistema estaria no final.
 
-\subsection{Protótipos de Componentes} \label{subsec:componentes} % #### 5.3.1.
+\subsection{Protótipos de componentes} \label{subsec:componentes} % #### 5.3.1.
 
 Antes de seguir com a descrição das telas, é válido descrever os componentes que foram utilizados na construção dos protótipos. Os componentes principais são os cartões de turma (\autoref{fig:cartão_de_turma}) e as caixas de seleção (\autoref{fig:selects}).
 
@@ -103,7 +103,7 @@ Cada uma dessas versões dos cartões de turma se mostra com um propósito espec
 
 A \autoref{fig:selects} mostra os protótipos de caixas de seleção que foram utilizados para a seleção de dados. Na \autoref{fig:SingleSelect} está a caixa de seleção onde o usuário pode selecionar apenas uma opção. Já na \autoref{fig:MultiSelect} a caixa de seleção permite ao usuário selecionar várias opções.
 
-\subsection{Protótipos de Páginas} \label{subsec:páginas} % #### 5.3.1.
+\subsection{Protótipos de páginas} \label{subsec:páginas} % #### 5.3.1.
 
 Aqui serão elecadas as sete páginas esboçadas para o sistema. Sendo elas a \hyperref[fig:main]{página principal}, a \hyperref[fig:CRUD_main]{página de seleção}, a \hyperref[fig:CRUD_salas_vazias]{página de salas}, a \hyperref[fig:CRUD_alunos]{página de alunos}, a \hyperref[fig:CRUD_disciplinas]{página de disciplinas}, a \hyperref[fig:CRUD_professores]{página de professores} e a \hyperref[fig:CRUD_turmas]{página de turmas}.
 
@@ -155,7 +155,7 @@ Outro conflito exibido é que a sala em que está alocado o primeiro horário da
 
 Por último, na listagem dos alunos que podem se inscrever, no canto inferior direito, há quatro alunos marcados em vermelho. Estes alunos poderiam se inscrever em outra turma no mesmo horário em que esta turma está alocada. Este conflito é impeditivo, mas apenas para os alunos, assim como no caso da preferência do professor, a turma pode ser realocada para outro horário para atender melhor às demandas dos alunos.
 
-\section{Programação do Sistema} \label{sec:programação} % ### 5.5.1.
+\section{Programação do sistema} \label{sec:programação} % ### 5.5.1.
 
 Após a conceitualização diagramática do banco de dados e a elaboração dos protótipos com o Figma, o desenvolvimento do sistema foi iniciado. Por maior familiaridade com a linguagem foi escolhida a linguagem \textbf{\textit{JavaScript}}, utilizando a biblioteca \textbf{\textit{React}} para a criação dos componentes visuais, ou seja, o \textit{frontend}, e o \textbf{\textit{Node.js}} para a criação do \textit{backend} e a criação de um servidor local que permite visualizar as mudanças no código em tempo real. Suas logos estão ilustrados na \autoref{fig:sistemas}.
 
@@ -189,7 +189,7 @@ Ao longo da implementação dessas versões, diversos métodos de manutenção d
 
 A primeira versão do sistema foi desenvolvida em um ambiente local, com o objetivo de se aproximar ao máximo das páginas previstas no protótipo. Para isso, foi utilizada a biblioteca \LinkToURL{\LinkReactRouter}{\textit{React Router}} para a navegação entre as páginas, e a biblioteca \LinkToURL{\LinkReactSelect}{\textit{React Select}} para as caixas de seleção.
 
-\subsubsection{Banco de Dados Preliminar} \label{sssec:BDInicial}
+\subsubsection*{Banco de dados preliminar} \label{sssec:BDInicial}
 
 Os dados contidos no sistema foram inicialmente armazenados em arquivos JSON, que eram importados diretamente para o código (\autoref{fig:API_MVP1}). Isso foi feito para que fosse possível visualizar o funcionamento do sistema sem a necessidade de um banco de dados real. A partir disso, foi possível visualizar o funcionamento do sistema e realizar testes de usabilidade. Em contrapartida, os dados disponíveis não eram modificáveis, tendo apenas a possibilidade de leitura e mutação temporária, visto que após recarregar ou mudar de página, as mudanças eram perdidas.
 
@@ -201,7 +201,7 @@ Nesse método, cada entidade era armazenada em um arquivo JSON separado, contend
 
 Como nesta dinâmica não havia uma forte correlação entre os dados, o \textit{frontend} acabava sendo o responsável por unir todas as informações. Assim, por exemplo, para se obter a lista de professores de uma turma, era necessário importar todos os professores, todas as turmas, e então, a partir do nome do professor alocado àquela turma, buscar na listagem dos professores qual era o professor que correspondia àquele nome, para então agregar as informações.
 
-\subsubsection{Funcionalidades Iniciais: CRUD e primeiros conflitos} \label{sssec:Funcionalidades Iniciais}
+\subsubsection*{Funcionalidades Iniciais: CRUD e primeiros conflitos} \label{sssec:Funcionalidades Iniciais}
 
 Nessa primeira versão, algumas funcionalidades já começaram a ser esboçadas, principalmente as funcionalidades CRUD (\textit{Create}, \textit{Read}, \textit{Update}, \textit{Delete}) para as entidades principais do sistema. Embora, como já dito, os dados não fossem persistentes, foi possível visualizar o funcionamento das funcionalidades de criação e leitura de turmas, professores, disciplinas, salas e horários.
 
@@ -209,7 +209,7 @@ Nessa versão, também foi implementada uma checagem bruta de conflitos por aloc
 
 Além dessas funcionalidades que se mantiveram até a conclusão do sistema, também foram desenvolvidas funcionalidades que não obtiveram o mesmo êxito e que foram deixadas de lado. Dentre elas, podemos citar a definição de níveis de preferência de horários para professores, a definição das características especiais das salas, e o andamento dos alunos em relação às disciplinas. Houveram também outras que nem chegaram a ser desenvolvidas, como a realocação de turmas através de um sistema de arrastar e soltar e o uso de heurísticas para a realocação de turmas.
 
-\subsubsection{GitHub Pages} \label{sssec:GitHub Pages}
+\subsubsection*{GitHub Pages} \label{sssec:GitHub Pages}
 
 Após o desenvolvimento local, como forma de viabilizar o acesso ao sistema por parte de outros usuários, foi feito o \textit{deploy}, ou seja, foi feito o \textit{upload} do sistema para um servidor online. Para isso, foi utilizado o serviço GitHub Pages que, por ser gratuito e de fácil utilização, foi a escolha mais adequada para o momento.
 
@@ -225,7 +225,7 @@ Utilizando do \textit{feedback} quanto aos resultados entregues na \hyperref[sub
 
 Seguindo o planejamento feito, uma das primeiras tarefas foi a implementação do banco de dados que permitisse a \hyperref[sssec:Permanência dos Dados]{permanência dos dados}, para isso, foram utilizados dois métodos de manutenção dos dados: o \hyperref[ssssec:JSONBin]{JSONBin} e o \hyperref[ssssec:MySQL]{MySQL}. Outro ponto foi a criação da \hyperref[sssec:Logomarca]{logomarca} do sistema, que foi feita para que o sistema tivesse uma identidade visual própria. Foram desenvolvidas também \hyperref[sssec:Funcionalidades Adicionais]{algumas outras funcionalidades}, como a análise de mais conflitos, a possibilidade de se filtrar as turmas e a visualização de disciplinas que ainda não têm uma turma criada no presente semestre.
 
-\subsubsection{GitHub Projects} \label{sssec:GitHub Projects}
+\subsubsection*{GitHub Projects} \label{sssec:GitHub Projects}
 
 Utilizando o \LinkToURL{\LinkGitHubProjects}{GitHub Projects}, foi organizada uma tabela de tarefas, vista na \autoref{fig:GitHubProjectsTable}, onde foram unificadas as diversas anotações e ideias, antes soltas. A partir disso, foi possível visualizar o que era mais importante e o que poderia ser deixado de lado.
 
@@ -239,11 +239,11 @@ As tarefas foram inicialmente divididas em três principais categorias: \textit{
 
 Citando mais detalhes da \autoref{fig:GitHubProjectsTable}, temos à esquerda a numeração das tarefas, seguido do título da tarefa que descreve em poucas palavras sobre o que se trata. ao final do título há uma combinação do símbolo ``\#'' e uma numeração. Essa numeração representa a sequência de criação das tarefas, código esse que pode ser usado como referência entre as tarefas, assim permitindo que tarefas correlacionadas tenham um link direto entre elas. Na próxima coluna está o \textit{Status} da tarefa, seguido de duas colunas, \textbf{\textit{Milestone}} e \textbf{\textit{Labels}} que só foram criadas \hyperref[ssssec:Marcos e Etiquetas]{posteriormente}. Finalizando temos a coluna \textbf{Página} que primariamente distingue em qual página do sistema a tarefa se encontra, mas que também contém algumas categorias que fogem do conceito de página, como por exemplo é o caso das categorias ``Componente'', ``Sistema'' e ``Banco de Dados''. Por último há a coluna \textit{Assignees} que indica quem é o responsável pela tarefa; nesse caso, todas as tarefas que estão em andamento ou concluídas foram atribuídas ao mesmo responsável.
 
-\subsubsection{Permanência na Alteração dos Dados} \label{sssec:Permanência dos Dados}
+\subsubsection*{Permanência na alteração dos dados} \label{sssec:Permanência dos Dados}
 
 Tendo agora uma rota mais clara a ser seguida, o desenvolvimento foi retomado. Uma das características mais marcantes e ainda não atribuídas ao sistema era a manutenção das modificações feitas nos dados. Nesta etapa, foram utilizados dois métodos de se manter as alterações feitas aos dados. Com esse intuito foram utilizados dois métodos de manutenção dos dados o \hyperref[ssssec:JSONBin]{JSONBin} que não atingiu às expectativas e o \hyperref[ssssec:MySQL]{MySQL} que serviu para a criação de um banco de dados local, já emulando o posterior uso de um \hyperref[sssec:Amazon Web Services]{banco de dados hospedado na nuvem}. Como nessa etapa houveram esses dois métodos de manutenção dos dados, a \autoref{fig:API_MVP2} ilustra o paralelo entre os dois métodos.
 
-\subsubsubsection*{Funcionamento Geral da Permanência dos Dados usando API REST} \label{ssssec:Funcionamento Geral}
+\subsubsubsection*{Funcionamento geral da permanência dos dados usando API REST} \label{ssssec:Funcionamento Geral}
 
 Para exemplificar o funcionamento geral da permanência dos dados, consideremos o uso de uma \textit{API REST}, representada pela \autoref{fig:API_MVP2}, utilizando de 4 ``camadas'': o \textbf{\textit{frontend}}, os \textbf{\textit{endpoints}}, as \textbf{funções} de execução e o \textbf{banco de dados}.
 
@@ -302,7 +302,7 @@ Na criação deste \textbf{servidor local} utilizou-se a biblioteca \LinkToURL{\
 
 Este uso, embora exemplifique a aplicação da permanência dos dados, está limitado por dois aspectos: em primeira instância, a permanência dos dados é limitada ao servidor local, não sendo este o desejo final do sistema. Em segunda instância, para haver o acesso aos dados, é necessário que, além do banco de dados, o \textit{backend} também esteja em execução, entretanto, o GitHub Pages, onde o sistema está hospedado, não viabiliza essa execução. Com isso viu-se necessária a busca por um serviço de hospedagem que disponibilizasse a execução do \textit{backend}.
 
-\subsubsection{Logomarca} \label{sssec:Logomarca}
+\subsubsection*{Logomarca} \label{sssec:Logomarca}
 
 Um dia após o Natal, foi criado um dos arquivo do sistema chamado ``hourclassMagic.js'', este arquivo agrupava funções que consistiam basicamente em adicionar e remover horários (\textit{hour}) e turmas (\textit{class}) da listagem de turmas e horários.
 
@@ -322,7 +322,7 @@ Juntando o símbolo da ampulheta com o nome \textit{OurClass} e outros elementos
 
 Após analisar as possibilidades, foi escolhida a \autoref{fig:logomarca_oficial} como a logomarca oficial do sistema. A logomarca foi então adicionada ao sistema.
 
-\subsubsection{Funcionalidades Adicionais: conflitos, filtragem e disciplinas não oferecidas} \label{sssec:Funcionalidades Adicionais}
+\subsubsection*{Funcionalidades adicionais: conflitos, filtragem e disciplinas não oferecidas} \label{sssec:Funcionalidades Adicionais}
 
 Acrescendo à visualização de conflitos desenvolvida na primeira versão, foi implementada a visualização de conflito por capacidade de salas, ao comparar com a quantidade de alunos estimados para a turma. Mais detalhes sobre os conflitos podem ser vistos mais adiante na \autoref{sec:conflitos} denominada \nameref{sec:conflitos}.
 
@@ -334,7 +334,7 @@ Outra utilidade adicionada, agora na página \textbf{MultiTurmas}, foi a seção
 
 Considerando que a segunda versão já apresentava em sua maioria as funcionalidades mínimas desejadas, a terceira versão foi focada em melhorias de usabilidade e na correção de bugs.
 
-\subsubsection{Mudanças no GitHub Projects} \label{sssec:Mudanças no GitHub Projects}
+\subsubsection*{Mudanças no GitHub Projects} \label{sssec:Mudanças no GitHub Projects}
 
 O uso do GitHub Projects se provou como uma excelente forma de organização das tarefas, e assim, foi mantido para a terceira versão. Alguns novos detalhes foram adicionados em sua organização, como a adição da categorização de tarefas por \textbf{Marcos} (\textit{Milestones}, \autoref{fig:ProjectsClosedMilestones} e \autoref{fig:ProjectsOpenMilestones}) e \textbf{Etiquetas} (\textit{Labels}, \autoref{fig:ProjectsLabels}).
 
@@ -344,7 +344,7 @@ Os \textbf{Marcos} visam distinguir as tarefas por suas versões, e também por 
 
 Enquanto a \autoref{fig:ProjectsClosedMilestones} mostra os marcos que já foram concluídos, sendo eles as três versões desenvolvidas, a \autoref{fig:ProjectsOpenMilestones} mostra os marcos que ainda estão em aberto, podendo ser retomadas no futuro.
 
-\begin{MyCenteredFigure} \caption{Marcos Concluídos do GitHub Projects} \label{fig:ProjectsClosedMilestones}
+\begin{MyCenteredFigure} \caption{Marcos concluídos do GitHub Projects} \label{fig:ProjectsClosedMilestones}
   \includegraphics[width=0.6\textwidth]{files/img/2.02!5-desenvolvimento/2.02!5.1.4-sistema/GitHub Projects/GitHubProjects-Closed_Milestones}
 \end{MyCenteredFigure}
 
@@ -362,7 +362,7 @@ Enquanto a \autoref{fig:ProjectsClosedMilestones} mostra os marcos que já foram
         \end{enumerate}
 \end{enumerate}
 
-\begin{MyCenteredFigure} \caption{Marcos Abertos do GitHub Projects} \label{fig:ProjectsOpenMilestones}
+\begin{MyCenteredFigure} \caption{Marcos abertos do GitHub Projects} \label{fig:ProjectsOpenMilestones}
   \includegraphics[width=0.6\textwidth]{files/img/2.02!5-desenvolvimento/2.02!5.1.4-sistema/GitHub Projects/GitHubProjects-Open_Milestones}
 \end{MyCenteredFigure}
 
@@ -399,7 +399,7 @@ Com eles, pode-se ter uma noção das métricas do projeto, como por exemplo:
   \item Quantas são as tarefas em cada um de seus estados (\textbf{completa}, \textbf{em progresso} ou \textbf{pendente}).
 \end{itemize}
 
-\subsubsection{\textit{Amazon Web Services}} \label{sssec:Amazon Web Services}
+\subsubsection*{\textit{Amazon Web Services}} \label{sssec:Amazon Web Services}
 
 Para suprir a necessidade de um servidor que pudesse executar o \textit{backend} do sistema em conjunto com o banco de dados, foi escolhido a \textit{Amazon Web Services} (AWS). A AWS é um serviço de computação em nuvem que oferece uma ampla gama de serviços, entretanto, apenas alguns deles foram necessários para o sistema.
 
@@ -443,7 +443,7 @@ Como mostrado no \autoref{code:template} disposto no \autoref{apendice:ExemploTe
 
 Após o preparativo do arquivo \textit{template.yaml}, o \textit{deploy} é feito através do conjunto de comandos \textit{sam build; sam deploy}, que primeiro combina o \textit{CloudFormation Template} com o código da aplicação, e em seguida realiza o \textit{deploy} de todas as funções definidas no arquivo. Com isso, o sistema passou a ser mais facilmente atualizável, e mais facilmente mantido.
 
-\subsubsection{Melhorias no Sistema} \label{sssec:Melhorias no Sistema}
+\subsubsection*{Melhorias no sistema} \label{sssec:Melhorias no Sistema}
 
 O sistema passou por diversas pequenas mudanças, e algumas maiores. Uma considerável parte delas foi relacionada à forma com que as informações eram estruturadas internamente, mudanças essas feitas com o intuito de tornar o sistema mais fácil de ser mantido posteriormente. Em seguida estão listadas algumas das várias melhorias feitas no sistema.
 
@@ -498,7 +498,7 @@ O botão de adição de todas as disciplinas foi mantido, e agora, ao ser clicad
 
 É esperado, entretanto, que esta solução apresente problemas em sua execução, visto que nem todas as alocações de turmas apresentam um padrão. Então, fica a cargo do usuário a verificação e a correção dos possíveis erros alertados pelo sistema.
 
-\subsubsubsection*{Grade Horária} \label{ssssec:Grade Horária}
+\subsubsubsection*{Grade horária} \label{ssssec:Grade Horária}
 
 A página que detinha o nome ``CCTable'' e que visava apresentar exclusivamente as disciplinas do curso de Ciência da Computação, foi renomeada para ``Grade Horária'', e passou a ser possível de apresentar disciplinas de todos os cursos, embora ainda não seja possível distinguir as disciplinas de um curso para o outro.
 
@@ -508,7 +508,7 @@ As células das turmas sofreram um ligeiro aprimoramento visual e foram ordenada
 
 Quanto ao banco de dados, os dados antes desconexos passaram a ser interligados adequadamente por chaves estrangeiras. Apresentando então restrições em casos de deleções inapropriadas no banco de dados. A API, por sua vez, deixou de retornar as listas de turmas, professores, disciplinas e salas, e passou a retornar os dados de forma mais estruturada em formato JSON.
 
-\begin{MyCenteredFigure} \caption{Novo Diagrama de Banco de Dados} \label{fig:MVP3_BancoDeDados}
+\begin{MyCenteredFigure} \caption{Novo diagrama de banco de dados} \label{fig:MVP3_BancoDeDados}
   \includegraphics[width=\textwidth]{files/img/2.02!5-desenvolvimento/2.02!5.1.4-sistema/diagramas/Diagrama_ER-How_it_should_be}
 \end{MyCenteredFigure}
 
@@ -535,7 +535,7 @@ Além das funcionalidades voltadas para o usuário final, algumas mudanças clas
   \item \textbf{Remoção de estruturas obsoletas}: ao longo do desenvolvimento, algumas estruturas foram criadas e não utilizadas. Um exemplo dessas foi a propriedade ``Ordem'' que visava definir a ordem em que os horários da turma apareceriam, porém o resultado desta propriedade foi obtido com a ordenação dos horários por dia e em seguida por horário, não sendo então necessária. Ela então foi removida do sistema e do banco de dados.
 \end{itemize}
 
-\section{Detecção e Alerta dos Conflitos} \label{sec:conflitos} % ### 5.6.
+\section{Detecção e alerta dos conflitos} \label{sec:conflitos} % ### 5.6.
 
 Uma das principais funcionalidades do sistema é a detecção de conflitos. Seu objetivo é auxiliar ao usuário a identificar possíveis problemas na alocação das turmas, e assim, permitir que ele possa corrigi-los antes de finalizar a grade horária. Diversas situações podem ser consideradas como conflitos, e cada uma delas é tratada de forma diferente.
 
@@ -545,7 +545,7 @@ Essa flexibilização das restrições que poderiam ser tidas como rígidas em u
 
 Além disso, diversos casos atípicos acabam por ocorrer na realidade da universidade, e que, embora possam não ser aconselháveis ou até mesmo tidos como conflituosos pelo sistema, não seriam de fato um problema para a execução prática das alocações.
 
-\subsection{Típicos Conflitos Atípicos}
+\subsection{Típicos conflitos atípicos}
 
 Para ilustração, abaixo estão descritos alguns exemplos de conflitos que poderiam ser alertadas pelo sistema, mas que não seriam realmente um restritor para a execução prática das alocações:
 
@@ -555,7 +555,7 @@ Outras situações que podem ocorrer giram em torno da alocação das salas. Dua
 
 Esses e outros são exemplos de situações recorrentes ao longo do processo flexível da organização da tabela horária.
 
-\subsection{Conflitos Tratados pelo Sistema}
+\subsection{Conflitos tratados pelo sistema}
 
 Para a implementação, primeiro visou-se a detecção de conflitos que poderiam ser considerados restritores para a alocação das turmas. Sendo eles os de alocação simultânea de salas e professores, visto que um professor não pode ministrar duas turmas simultaneamente, nem uma sala deve comportar duas turmas simultaneamente (embora ambos sejam teoricamente possíveis).
 
@@ -579,7 +579,7 @@ Cinco campos se encontram sem cores, sendo eles a \textbf{Disciplina sem conflit
 
 A \autoref{fig:turmaVazia} ilustra os \textbf{conflitos nulos}. Esse tipo de conflito representa a incompletude de informações, e como durante parte do processo de criação da grade não se tem todas as informações sobre as alocações das turmas, ele acaba por ser um dos conflitos mais comuns. Esse conflito, representado pela cor acinzentada, é detectado quando um dos campos não se encontra preenchido.
 
-\subsubsection{Conflitos de Professores} \label{sssec:Professores}
+\subsubsection*{Conflitos de professores} \label{sssec:Professores}
 
 O sistema contempla a checagem de conflitos de alocação simultânea de professores em mais de uma turma. Ou seja, considerando todas as turmas ao qual o professor está atribuído no ano e semestre selecionados, o sistema compara todos os horários das turmas deste professor, e verifica se há alguma interseção entre horários que estão no mesmo dia, levando em conta a duração da aula.
 
@@ -589,7 +589,7 @@ O sistema contempla a checagem de conflitos de alocação simultânea de profess
 
 Caso haja algum conflito, o sistema destaca o professor em questão, tornando a sua cor de fundo avermelhada. Além disso, ao passar o mouse sobre o nome do professor, é exibido um alerta flutuante, informando que quais são as turmas e horários que estão em conflito. Esse comportamento é exemplificado na \autoref{fig:conflitoAlocacaoProfessor}, onde o professor Tang é alocado em duas turmas que ocorrem simultaneamente durante algum intervalo de tempo durante os horários de quarta e sexta-feira, assim informando no alerta flutuante quais são as turmas e horários que estão alocados simultaneamente.
 
-\subsubsection{Conflitos de Salas} \label{sssec:Salas}
+\subsubsection*{Conflitos de salas} \label{sssec:Salas}
 
 As salas também apresentam a verificação do conflito de alocação simultânea. Porém, diferente dos professores, a checagem é feita conferindo todos os horários na qual a sala está alocada, e então é feita a mesma verificação de interseção citada anteriormente. Havendo o conflito, é exibida uma borda alaranjada na parte inferior das propriedades referentes ao conflito, além de, assim como no caso dos professores, exibir o alerta flutuante. A \autoref{fig:conflitoAlocacaoSalas} representa um caso de conflito de alocação de salas.
 
@@ -605,7 +605,7 @@ Então, como pode-se perceber na \autoref{fig:conflitoAlocacaoSalasCapacidade}, 
   \includegraphics[width=\textwidth]{files/img/2.02!5-desenvolvimento/2.02!5.1.5-conflitos/Demanda X Capacidade}
 \end{MyCenteredFigure}
 
-\subsubsection{Conflitos de Disciplina} \label{sssec:Disciplina}
+\subsubsection*{Conflitos de disciplina} \label{sssec:Disciplina}
 
 Além desses conflitos, outras características analisadas e representadas se referem às disciplinas atribuídas às turmas, que, embora não representem necessariamente um \textit{conflito}, mas sim um indicativo, ainda assim serão tratados como conflitos por motivos de simplificação. Esse indicativo leva em consideração o semestre selecionado e o período esperado da disciplina de certa turma. Utilizando de lógica similar, também é indicado caso não tenha sido atribuído um período à disciplina, e se, para o curso de Ciência da Computação, a disciplina é considerada como \textbf{Eletiva Livre}, \textbf{Eletiva Optativa}, ambas em tons azulados, ou se não é uma disciplina para o curso de Ciência da Computação, sendo então representada em tons alaranjados. Estas características são ilustradas no lado direito da \autoref{fig:conflitoDisciplinaTitulos}.
 
