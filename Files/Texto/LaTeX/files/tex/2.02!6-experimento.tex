@@ -20,6 +20,25 @@ Abaixo estão descritas com um pouco mais de detalhes sobre as atividades a sere
   \item \textbf{Resolução de conflitos}: resolução de conflitos entre as grades horárias.
 \end{enumerate}
 
+\subsection{Limitações}
+
+Embora o experimento vise representar o tempo gasto em um cenário próximo do real, diversas implicações impedem que esta métrica seja uma representação fiel da realidade. Dentre as limitações, destacam-se:
+Embora este experimento vise ilustrar o funcionamento do sistema desenvolvido, deve-se ressaltar as aproximações realizadas e as limitações do experimento, visto que podem interferir na precisão e confiabilidade dos resultados obtidos. Dentre as limitações e ressalvas, destacam-se:
+
+\begin{enumerate}
+  \item \textbf{Iteratividade}: o processo de criação de uma grade horária é iterativo, sendo necessárias diversas mudanças durante o processo, o que não será refletido no experimento que medirá apenas um ciclo dessa iteratividade. Essa situação é refletida tanto durante a alocação inicial das turmas que têm informações incompletas, quanto nos resultantes conflitos que surgem com a então alocação;
+  \item \textbf{Familiaridade com o sistema}: o desenvolvedor do sistema é quem realizará o experimento, o que interfere diretamente com o nível de familiaridade com o sistema, consequentemente influenciando também na velocidade de uso;
+  \item \textbf{Preferências}: embora em teoria não haja preferência por horários e salas, a coordenação do curso, com o tempo, passa a perceber os padrões e preferências dos professores e alunos, o que pode influenciar na alocação das turmas, o que não será refletido no experimento;
+  \item \textbf{Variabilidade dos dados semestrais}: os dados utilizados para a realização do experimento são referentes ao ano anterior, o que pode não refletir a realidade do semestre seguinte, visto que a disponibilidade de professores, salas e disciplinas pode variar de um semestre para o outro;
+        \begin{enumerate}
+          \item \textbf{Professores temporários}: serão considerados que os mesmos professores temporários disponíveis no ano anterior estarão também disponíveis no ano seguinte, mesmo que, considerando a
+                \hyperref[chap:instituicao]{realidade da instituição},
+                isso não seja uma verdade absoluta;
+          \item \textbf{Dados estruturados}: os dados utilizados já estão estruturados e organizados, então, não será computado o tempo que se levaria para assimilar e organizar as diversas informações advindas de diversas fontes, reduzindo também as esperadas faltas de informações e inconsistências nos dados;
+          \item \textbf{Demandas imprecisas}: cada turma criada para o curso de Ciência da Computação tem seu valor de demanda estimada, e que, como o próprio nome descreve, é uma estimativa. Em sua criação, o valor de demanda é definido através das médias de demandas anteriores para determinada disciplina, o que pode não ser uma representação fiel da realidade, visto que diversos outros fatores influem no valor da demanda. Como consequência, os conflitos gerados talvez não sejam os mesmos que seriam gerados com a demanda real, podendo ser tanto mais simples quanto mais complexos;
+        \end{enumerate}
+\end{enumerate}
+
 \subsection{Expectativa de resultado}
 
 \begin{enumerate}
@@ -105,15 +124,3 @@ Assim como estimado, a etapa mais demorada foi a alocação das turmas do CCT, q
 Também esperado foi a ocorrência de conflitos, que foram resolvidos sem maiores problemas e em um espaço de tempo agradável.
 
 \section{Conclusões}
-
-\subsection{Limitações e ressalvas}
-
-Embora este experimento vise ilustrar o funcionamento do sistema desenvolvido, deve-se ressaltar as aproximações realizadas e as limitações do experimento, visto que podem interferir na precisão e confiabilidade dos resultados obtidos. Dentre as limitações e ressalvas, destacam-se:
-
-\begin{enumerate}
-  \item \textbf{Variabilidade dos dados semestrais}: os dados utilizados para a realização do experimento são referentes ao ano anterior, isso leva em conta o fato da estimativa de que o ano posterior não tenha grande distinção na alocação e distribuição das disciplinas, salas e professores, o que pode não ser uma verdade absoluta;
-  \item \textbf{Indisponibilidade de certos professores}: em conjunto com a questão abordada anteriormente, acrescido da situação apontada no \autoref{chap:instituicao} quanto aos professores temporários, a alocação de turmas pode ser prejudicada pela indisponibilidade de certos professores que estavam disponíveis no ano anterior;
-  \item \textbf{Demandas imprecisas}: cada turma criada para o curso de Ciência da Computação tem seu valor de demanda estimada, e que, como o próprio nome descreve, é uma estimativa. Em sua criação, o valor de demanda é definido através das médias de demandas anteriores para determinada disciplina, o que pode não ser uma representação fiel da realidade, visto que diversos outros fatores influem no valor da demanda. Como consequência, os conflitos gerados talvez não sejam os mesmos que seriam gerados com a demanda real, podendo ser tanto mais simples quanto mais complexos;
-  \item \textbf{Informações incompletas}: a junção dos dois pontos anteriores alertam o ponto principal do problema, que é a incompletude das informações, com isso é esperado que mesmo que após a resolução de todos os conflitos, ainda sejam necessárias diversos outros ajustes finos;
-  \item \textbf{Uso do sistema pelo desenvolvedor e não pelo stakeholder}: o sistema foi utilizado pelo desenvolvedor e não pelo stakeholder, o que interfere diretamente com o nível de familiaridade com o sistema, consequentemente influenciando também na velocidade de uso;
-\end{enumerate}
