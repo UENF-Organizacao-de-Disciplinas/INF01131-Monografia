@@ -1,6 +1,4 @@
-\chapter{Contexto acadêmico} \label{chap:contexto}
-%  do Problema de Tabela Horária
-% Underfull \hbox (badness 2460)
+\chapter{Contexto acadêmico} \label{chap:contexto} % ## 2. do Problema de Tabela Horária % Underfull \hbox (badness 2460)
 
 Antes de prosseguirmos com o desenrolar deste trabalho, é adequado que primeiro definamos alguns parâmetros para o melhor entendimento do que está por vir.
 
@@ -9,7 +7,7 @@ Antes de prosseguirmos com o desenrolar deste trabalho, é adequado que primeiro
 % O Problema de Programação de Horário Escolar pode ser generalizado como o escalonamento semanal das aulas em uma escola sem que professores e alunos tenham mais de uma aula ao mesmo tempo (estudantes são agrupados em turmas com os mesmos planos de aula). Já o Problema de Programação de Horário de Disciplinas em Universidades como o escalonamento semestral das aulas de um conjunto de disciplinas de uma universidade de modo a evitar colisão de horários (estudantes geralmente são considerados individualmente) [Paim__2010].
 % Sânya
 
-\section{Definição de termos} % ### 2.1 Definição de termos
+\section{Definição de termos} \label{sec:termos} % ### 2.1
 
 Ao longo dos anos de desenvolvimento acadêmico, diversos assuntos vão se aprofundando e se tornando mais específicos, assim, os estudiosos acabam cunhando novos termos que o auxiliam a desvencilhar as novas áreas específicas das suas áreas originárias. Porém, existe o potencial de que haja um crescimento desestruturado destes novos termos, assim vários termos diferentes podem se referir a um mesmo conceito, enquanto que um mesmo tempo pode se referir a vários conceitos diferentes de acordo com o autor.
 
@@ -43,7 +41,7 @@ Exemplo de restrição flexível: professor J. prefere não dar aulas nas tardes
 
 Alguns outros termos similares a este campo de pesquisa encontrados na literatura são \textit{periodic event scheduling problem}, \textit{timetable scheduling}, \textit{class scheduling}, \textit{student scheduling}, \textit{university course timetabling}, dentre outros.
 
-\section{Métodos de resolução} % ### 2.2. Métodos de resolução
+\section{Métodos de resolução} \label{sec:resolucao}  % ### 2.2
 
 % - O problema de timetabling   a
 %  - Origem                    a
@@ -118,7 +116,7 @@ Na \autoref{fig:Visualization}, \citeonline{Alencar2019} exploram uma categoria 
   \legend{Fonte: \citeonline{Alencar2019} - editado}
 \end{figure}    % Visualization
 
-\section{Desafios recorrentes} % ### 2.3. Desafios recorrentes
+\section{Desafios recorrentes} \label{sec:desafios}   % ### 2.3
 
 Apesar da vasta quantidade de trabalhos realizados com este fim, o \textit{Timetabling Problem} segue sendo uma área sem uma solução definitiva.
 
@@ -136,7 +134,7 @@ Com isso, entramos também no ramo da Interação Homem-Máquina, ramo abordado 
 
 % - Falar sobre técnicas existentes e quem já fez. Tipo o que aquele artigo sem DOI fez
 
-\section{Trabalhos anteriores} \label{sec:anteriores} % ### 2.4. Trabalhos anteriores
+\section{Trabalhos anteriores} \label{sec:anteriores} % ### 2.4
 
 Este trabalho não se mostra desprovido de histórico na tentativa de resolução do mesmo problema. Sânya e Ricardo, ambos estudantes de Ciência da Computação da UENF, já realizaram trabalhos com o mesmo fim, porém com abordagens diferentes da atual proposta.
 
@@ -144,23 +142,23 @@ Tendo vista que atualmente o problema de Programação Horária da UENF ainda pe
 
 Abaixo são listados os trabalhos anteriores e suas respectivas abordagens, bem como os apontamentos do que se mostrou inviável para a realidade da universidade.
 
-\subsection{Sânya Carvalho dos Santos} % #### 2.4.1. Sânya
+\subsection{Sânya Carvalho dos Santos} \label{subsec:sanya} % #### 2.4.1
 
 Em seu trabalho, \citeonline{Sanya2013} aborda o problema de Programação de Horários de Disciplinas em Universidades, tendo como foco o curso de Ciência da Computação da UENF. Sua abordagem foi a de desenvolver um software que fosse capaz de gerar uma grade horária ótima para o curso, levando em conta as restrições impostas pelo curso. Para isso, Sânya explicou diversos métodos possíveis para se alcançar a solução desejada, passando inicialmente pelos métodos construtivos, seguido de métodos refinamento, podendo essas heurísticas serem utilizadas em conjunto com meta-heurísticas.
 
 Por fim, utilizou uma heurística que consistia em respeitar a uma matriz de preferência para a distribuição das disciplinas. Seguindo com o uso do \textit{Simulated Annealing} para a otimização da solução inicial.
 
-\subsection{Ricardo Couto da Silveira} % #### 2.4.2. Ricardo
+\subsection{Ricardo Couto da Silveira} \label{subsec:ricardo} % #### 2.4.2
 
 Em seu trabalho, \citeonline{Ricardo2014} aborda também o Problema de Programação de Horários (PPH) em instituições de ensino superior. Ele explora os diversos métodos heurísticos para resolução deste problema que visa encontrar a alocação ótima dos horários em suas grades. Ele teve como objetivo de seu trabalho a implementação de um software que fosse capaz de resolver o PPH do curso de Ciência da Computação da UENF, utilizando os métodos heurísticos Construção Gulosa e Busca Local e os métodos metaheurísticos \textit{Simulated Annealing} e Busca Tabu. Para este fim, ele utilizou a linguagem de programação C para a implementação dos métodos e a linguagem de programação Java para a implementação da interface gráfica do software. Com isso conseguiu elaborar uma ferramenta automatizada para a geração de quadros de horários, alocando aulas e professores em dias e horários disponíveis na semana.
 
 Ele descreve também como possibilidade de trabalho futuro o aperfeiçoamento do banco de dados da ferramenta desenvolvida para que se possa armazenar mais informações pertinentes ao problema, para que o usuário possa realizar modificações no quadro de horários, sendo guiado pelo retorno do Software que informa a viabilidade da alteração, assim gerando maior flexibilidade à aplicação.
 
-\subsection{Divergências} % #### 2.4.3. Divergências
+\subsection{Divergências} \label{subsec:divergencias} % #### 2.4.3
 
 Embora ambos os trabalhos tenham sido de grande valia ao rumarem na direção de uma solução para este amplo e complexo problema, percebe-se que o problema que buscaram solucionar ainda se encontra em aberto. Não tendo suas ferramentas alçado voos altos o suficiente para que se tornassem soluções definitivas para o problema no contexto da UENF.
 
-\subsubsection*{Sânya} % ##### Sânya
+\subsubsection*{Sânya} \label{subsubsec:sanya} % ##### 2.4.1.1
 
 É dito por \citeonline{Sanya2013} que ``[...] Como na UENF a tarefa de distribuição de sala não varia muito a cada período, sendo feito separadamente por cada centro [...]''. Embora possamos entender o conceito de ``variar muito'' como subjetivo, considerando que mesmo ao longo de um mesmo semestre existem realocações de salas e professores dentro do contexto de um mesmo Centro, podemos entender que a realidade da UENF é de fato muito dinâmica, não se encaixando completamente na solução de alocação única inicial de salas e professores.
 
@@ -202,7 +200,7 @@ Outra considerável divergência entre o modelo e a realidade é a definição d
 
 Por fim, Sânya não considera a possibilidade de alocação de professores em mais de uma disciplina, o que é uma realidade na universidade, visto que alguns professores ministram aulas em mais de um curso, e em mais de uma disciplina.
 
-\subsubsection*{Ricardo}
+\subsubsection*{Ricardo} \label{subsubsec:ricardo} % ##### 2.4.1.2
 
 \citeonline{Ricardo2014}, em seu trabalho, apresenta alguns conceitos que se mostraram limitantes em sua modelagem conceitual do problema na UENF. Em sua monografia, ele aborda as turmas como sendo compostas por alunos que ingressaram no mesmo ano, independente de suas escolhas, da demanda, e de possíveis defasagens na progressão do curso. O que não se mostra condizente com a realidade da universidade atualmente, então, mesmo que em 2014, quando o trabalho foi realizado, a realidade fosse esta, não se mostra condizente com a realidade atual, havendo então a necessidade de uma reformulação conceitual.
 
@@ -210,7 +208,7 @@ Ele, assim com \citeonline{Sanya2013}, também não considera a possibilidade de
 
 Por fim, podemos citar um outro ponto que é a busca pela eficiência e baixo custo de tempo dos métodos utilizados. O que se mostra como ponto positivo, entretanto, mesmo com tamanha eficiência ainda peca em atingir a praticabilidade da solução.
 
-\subsubsection*{Parecer geral das divergências}
+\subsubsection*{Parecer geral das divergências} \label{subsubsec:divergencias} % ##### 2.4.1.3
 
 O entendimento das falhas passadas em se encontrar uma solução prática ao problema de Programação de Horários da UENF é de suma importância para que se possa evitar que os mesmos erros sejam cometidos novamente. Assim, é necessário que se tenha em mente que a realidade da universidade é dinâmica, e que a solução deve ser capaz de se adaptar a esta dinamicidade.
 
