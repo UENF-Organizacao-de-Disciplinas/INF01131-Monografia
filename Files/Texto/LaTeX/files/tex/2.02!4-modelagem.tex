@@ -6,11 +6,9 @@ Tendo esclarecido sobre as questões gerais do trabalho e da área de estudo. Ag
 
 Em seu trabalho de aplicação prática, \citeonline{miranda_udpskeduler_2012} estruturaram estágios que compõem o processo necessário para que enfim se alcance a definição de tabelas horárias finais.
 
-\begin{CenteredFigure}
-  \caption{Estágios para a obtenção de grade horária ótima}
-  \label{fig:geral}
-  \includegraphics[width=\textwidth]{files/img/2.02!4-modelagem/Arquitetura-UDP}
-  \legend{Fonte: \citeonline{miranda_udpskeduler_2012}}
+\begin{CenteredFigure} \caption{Estágios para a obtenção de grade horária ótima} \label{fig:geral}
+  \includegraphics[width=\textwidth]{files/img/2.02!4-modelagem/Estágios Grade Final}
+  \legend{Fonte: \citeonline{miranda_udpskeduler_2012} - adaptado}
 \end{CenteredFigure}
 
 Na \autoref{fig:geral}, estão dispostos 4 estágios principais. O primeiro dispõe da aquisição de informações, sendo elas a disponibilidade do profesor, os recuresos da infraestrutura, as grades dos cursos, as estimativas de demanda e as políticas internas. No segundo estágio são definidas grades horárias preliminares com atribuição preliminar das salas. No terceiro, os alunos se inscrevem e a demanda é ajustada, por fim, no quarto estágio, ocorre a alocação final das salas. Com sua conclusão, são definidos as grades horárias finais junto com as respectivas salas.
@@ -21,11 +19,10 @@ A sequência geral condiz com o processo de criação das grades horárias, por�
 
 Para se alcançar uma alta satisfação por parte dos \textit{stakeholders}, vê-se necessária a constante interação com os mesmos. Para isto, será seguida a estrutura utilizada por \citeonline{Andre2018}.
 
-\begin{MyCenteredFigure}
-  \caption{Etapas do Design de Interação}
-  \label{fig:IxD}
-  \includegraphics{files/img/2.02!4-modelagem/Arquitetura-IxD.drawio}
-\end{MyCenteredFigure}
+\begin{CenteredFigure} \caption{Etapas do Design de Interação} \label{fig:IxD}
+  \includegraphics{files/img/2.02!4-modelagem/Arquitetura-IxD}
+  \legend{Fonte: \citeonline{Andre2018} - adaptado}
+\end{CenteredFigure}
 
 Seguindo o conceito do Design de Interação, a \autoref{fig:IxD} ilustra o ciclo de ações a serem tomadas durante o desenvolvimento do sistema, caso este venha a ser necessário. Nesse modelo de pesquisa, os \textit{stakeholders} serão consultados continuamente enquanto lhes for apresentados protótipos do sistema, para que assim informem quanto às suas percepções. Esta dinâmica tem como finalidade encontrar um design tal que seja adequado aos desejos e necessidades de seus usuários. Pois, considerando que para que o sistema seja efetivo, é necessário que ele seja aceito e utilizado pelos usuários finais.
 
@@ -49,10 +46,8 @@ Dispondo de todas essas funcionalidades, o sistema deverá ser capaz de gerar um
 
 Considerando as informações necessárias para o presente trabalho, e também o preparo de campo para potenciais aplicações futuras, foi elaborado um diagrama conceitual parcial do banco de dados (\autoref{fig:DiagramConceitual}).
 
-\begin{MyCenteredFigure}
-  \caption{Diagrama Conceitual do banco de dados}
-  \label{fig:DiagramConceitual}
-  \includegraphics[width=\textwidth]{files/img/2.02!4-modelagem/Diagrama ER-Conc. Card.drawio}
+\begin{MyCenteredFigure} \caption{Diagrama Conceitual do banco de dados} \label{fig:DiagramConceitual}
+  \includegraphics[width=\textwidth]{files/img/2.02!4-modelagem/Diagrama ER-Conc. Card}
 \end{MyCenteredFigure}
 
 O diagrama conceitual foi desenvolvido utilizando a ferramenta \LinkToURL{\LinkDrawio}{draw.io} citada na metodologia e ilustra as relações entre diversas entidades presentes na realidade da UENF. O emaranhamento presente no diagrama ilustra a complexidade envolvida na criação de uma grade horária, onde diversas entidades se relacionam entre si.
