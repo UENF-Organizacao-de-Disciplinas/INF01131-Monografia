@@ -2,16 +2,7 @@
 
 No ensino superior brasileiro, cada curso de uma instituição de ensino tem em seu projeto pedagógico, ou seja, no documento que rege quais as atribuições e justificativas de existência do curso, uma listagem de disciplinas a serem ministradas em cada semestre ao longo de sua duração esperada. Disciplinas estas que para serem cursadas os discentes precisam cumprir determinados requisitos. Por exemplo, é esperado que o discente apenas curse a disciplina Cálculo 2 após haver obtido a aprovação prévia na disciplina Cálculo 1.
 
-Embora haja este planejamento de duração do curso, diversos fatores podem influenciar esta previsão, dentre eles podemos citar eventos como:
-
-\begin{itemize}
-  \item \textbf{Quebra de pré-requisitos}: onde o discente solicita permissão para inscrição em uma disciplina cujos pré-requisitos não são completamente cumpridos por si;
-  \item \textbf{Trancamento de matrícula}: onde o discente suspende temporariamente seus estudos na instituição;
-  \item \textbf{Transferência interna}: onde o discente migra entre cursos dentro da mesma instituição;
-  \item \textbf{Transferência externa}: onde o discente migra entre cursos entre diferentes instituições;
-  \item \textbf{Reprovações}: onde o discente não cumpre com o mínimo desempenho esperado na disciplina, geralmente está associado a ausência nas aulas e/ou desempenho inferior ao mínimo esperado nas avaliações;
-  \item \textbf{Disponibilidade de professores}: onde os docentes não são suficientes para ministrar todas as disciplinas demandadas pelos discentes em um mesmo semestre.
-\end{itemize}
+Embora haja este planejamento de duração do curso, diversos fatores podem influenciar esta previsão, dentre eles podemos citar eventos como: quebra de pré-requisitos, trancamento de matrícula, transferências, reprovações, indisponibilidade de professores, greves, dentre tantos outros.
 
 Estes eventos tendem a, no geral, aumentar o tempo médio para conclusão do curso. Situação em sua maioria indesejada tanto pelos alunos, que mesmo durante seu estudo já visam o mercado de trabalho, quanto pelos professores e a instituição, visto que a evasão do ensino superior brasileiro é um problema existente e estudado a fim de ser minimizado.
 
@@ -73,34 +64,7 @@ Questionamentos similares também serão realizados com alunos, porém em format
 
 Tendo obtido as informações dos \textit{stakeholders} primários, será então necessário modelar quais são as regras que ditam a estrutura organizacional em foco. Para este fim, serão utilizados diagramas conceituais utilizando \textit{softwares} de suporte como o \LinkToURL{\LinkDrawio}{draw.io} e o \LinkToURL{\LinkMermaid}{Mermaid}.
 
-Esta etapa será de grande importância pois guiará a pesquisa para quais serão os detalhes dos módulos existentes durante o desenvolvimento do projeto, bem como esclarecerá visualmente quais são as informações sobre os recursos que são necessárias para se calcular a grade ótima. Como por exemplo:
-
-\begin{enumerate}
-  \item Salas
-        \begin{enumerate}
-          \item Quais são as salas disponíveis?
-          \item Quais as capacidades de cada um?
-          \item Em quais horários estão disponíveis?
-          \item Quais são suas peculiaridades?
-                \begin{enumerate}
-                  \item Têm computadores?
-                  \item Têm quadro?
-                  \item Têm televisão?
-                  \item Têm projetor?
-                \end{enumerate}
-        \end{enumerate}
-  \item Alunos
-        \begin{enumerate}
-          \item Quantos são?
-          \item Quais matérias demandam?
-        \end{enumerate}
-  \item Professores
-        \begin{enumerate}
-          \item Quais disciplinas ministram?
-          \item Quantas disciplinas podem ministrar?
-          \item Quais seus horários de preferência?
-        \end{enumerate}
-\end{enumerate}
+Esta etapa será de grande importância pois guiará a pesquisa para quais serão os detalhes dos módulos existentes durante o desenvolvimento do projeto, bem como esclarecerá visualmente quais são as informações sobre os recursos que são necessárias para se calcular a grade ótima. Quanto às \textbf{salas}: quais são as disponíveis? Quais suas capacidades? Em quais horários estão disponíveis? Quais são suas peculiaridades? Têm quantos computadores, quadros, televisores e projetores?; Quanto aos \textbf{alunos}: quantos são? Quais matérias precisam cursas?; Quanto aos \textbf{professores}: quais disciplinas ministram? Quantas disciplinas podem ministrar? Quais seus horários de preferência?
 
 Com as regras organizacionais e variáveis bem definidas, serão testados alguns \textit{softwares} que visam a criação de grades horárias para confirmar se há a real necessidade de se desenvolver um \textit{software} específico para a instituição. Após realizados os testes, caso os \textit{softwares} existentes supram as necessidades, este será utilizado nos passos seguintes. De outro modo, haverá a necessidade de desenvolvimento de um sistema de suporte à decisão como ferramenta centralizada para este fim.
 
