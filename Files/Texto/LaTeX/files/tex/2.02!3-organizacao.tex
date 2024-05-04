@@ -248,54 +248,34 @@ A criação de grades horárias é um problema complexo, que envolve uma grande 
 
 Esta seção visa a análise das relações entre estas variáveis, buscando entender como elas se relacionam e como estas relações podem ser utilizadas para a criação de uma grade horária mais eficiente.
 
-\subsection{Turmas}         % ### 3.4.1
-
-As turmas são a base da grade horária, sendo ela a representação da união entre professor, disciplina, alunos, horário e sala. A turma é a representação da oferta de uma disciplina em um determinado horário e local, com um determinado professor e para um determinado grupo de alunos. A turma é a unidade básica da grade horária, e é a partir dela que a grade é construída.
-
-\subsection{Laboratórios}   % ### 3.4.2
-
-Os laboratórios são estruturas organizacionais que englobam professores, disciplinas e cursos. Em sua maioria, os laboratórios estão associados a um único curso, entretanto, existem casos em que um laboratório está associado a mais de um curso, como é o caso do LCMAT, que está associado aos cursos de Matemática e de Ciência da Computação.
-
-%- Laboratório percente aos centros
-% - Geralmente (o normal é que) cada laboratório tem um único curso
-% - LCMAT é o único laboratório que tem dois cursos associados
-% - Mas existem vários laboratórios que alimentam um único curso
-% - O curso tá associado a 1:n laboratórios
-% - O laboratório tá associado a 1:n cursos
-
-\subsection{Professores}    % ### 3.4.3
-
-%- Professor pertence ao laboratório
-% - Tang: professor do LCMAT
-
-\subsection{Centros}        % ### 3.4.4
-
-\subsection{Salas}          % ### 3.4.5
-
-\subsection{Cursos}         % ### 3.4.6
-
-\subsection{Alunos}         % ### 3.4.7
-
-\subsection{Disciplinas}    % ### 3.4.8
-
-Um dos pontos principais na criação de uma grade horária é a alocação das disciplinas. As disciplinas são a base da grade horária,
-
-%- disciplina
-% - A disciplina é oferecida pelos laboratórios
-% - o curso tem aquela disciplina na grade
-% - A disciplina pode ser demandada por 1:n cursos
-% - As disciplinas tem as siglas INF de cc/informática e MAT de matemática
-% - as siglas das disciplinas são por laboratório, ou em casos específicos, são do centro, CCT/CCH, etc
-
-\subsection{Blocos}         % ### 3.4.9
-
-%- Físico
-% - Blocos contém salas
-% - Salas são administradas por centros
-% - Centros não estão limitados por blocos
-
-\subsection{Pactos Sociais} % ### 3.4.10
-
-%- Pactos sociais
-% - São entendidos que certas salas têm por padrão uma certa preferência por certos cursos
-% - Assim como as disciplinas também são usualmente designadas aos mesmos professores historicamentes
+\begin{itemize}
+  \item \textbf{Turmas}: as turmas são a base da grade horária, sendo ela a representação da união entre professor, disciplina, alunos, horário e sala. A turma é a representação da oferta de uma disciplina em um determinado horário e local, com um determinado professor e para um determinado grupo de alunos. A turma é a unidade básica da grade horária, e é a partir dela que a grade é construída.
+  \item \textbf{Laboratórios}: os laboratórios são estruturas organizacionais que englobam professores, disciplinas e cursos. Em sua maioria, os laboratórios estão associados a um único curso, entretanto, existem casos em que um laboratório está associado a mais de um curso, como é o caso do LCMAT, que está associado aos cursos de Matemática e de Ciência da Computação.
+        %- Laboratório percente aos centros
+        % - Geralmente (o normal é que) cada laboratório tem um único curso
+        % - LCMAT é o único laboratório que tem dois cursos associados
+        % - Mas existem vários laboratórios que alimentam um único curso
+        % - O curso tá associado a 1:n laboratórios
+        % - O laboratório tá associado a 1:n cursos
+  \item \textbf{Professores}
+        %- Professor pertence ao laboratório
+        % - Tang: professor do LCMAT
+  \item \textbf{Centros}
+  \item \textbf{Salas}
+  \item \textbf{Cursos}
+  \item \textbf{Alunos}
+  \item \textbf{Disciplinas}: um dos pontos principais na criação de uma grade horária é a alocação das disciplinas. As disciplinas são a base da grade horária,
+        % - A disciplina é oferecida pelos laboratórios
+        % - o curso tem aquela disciplina na grade
+        % - A disciplina pode ser demandada por 1:n cursos
+        % - As disciplinas tem as siglas INF de cc/informática e MAT de matemática
+        % - as siglas das disciplinas são por laboratório, ou em casos específicos, são do centro, CCT/CCH, etc
+  \item \textbf{Blocos}
+        %- Físico
+        % - Blocos contém salas
+        % - Salas são administradas por centros
+        % - Centros não estão limitados por blocos
+  \item \textbf{Pactos Sociais}
+        % - São entendidos que certas salas têm por padrão uma certa preferência por certos cursos
+        % - Assim como as disciplinas também são usualmente designadas aos mesmos professores historicamentes
+\end{itemize}
