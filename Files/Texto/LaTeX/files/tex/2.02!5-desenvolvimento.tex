@@ -238,7 +238,7 @@ Tendo este novo sistema de tarefas em prática, foi possível planejar melhor qu
 
 As tarefas foram inicialmente divididas em três principais categorias: \textit{Status}, \textit{Página} e \textit{Sequência}. O \textit{Status} reflete o andamento do código da tarefa, podendo ser este andamento \textbf{Pendente}, \textbf{Desenvolvendo}, ou \textbf{Concluído}. A \textit{Página} reflete em qual página do sistema a tarefa se encontra, e a \textit{Sequência} reflete a ordem de prioridade da tarefa.
 
-Citando mais detalhes da \autoref{fig:GitHubProjectsTable}, temos à esquerda a numeração das tarefas, seguido do título da tarefa que descreve em poucas palavras sobre o que se trata. ao final do título há uma combinação do símbolo ``\#'' e uma numeração. Essa numeração representa a sequência de criação das tarefas, código esse que pode ser usado como referência entre as tarefas, assim permitindo que tarefas correlacionadas tenham um link direto entre elas. Na próxima coluna está o \textit{Status} da tarefa, seguido de duas colunas, \textbf{\textit{Milestone}} e \textbf{\textit{Labels}} que só foram criadas \hyperref[ssssec:Marcos e Etiquetas]{posteriormente}. Finalizando temos a coluna \textbf{Página} que primariamente distingue em qual página do sistema a tarefa se encontra, mas que também contém algumas categorias que fogem do conceito de página, como por exemplo é o caso das categorias ``Componente'', ``Sistema'' e ``Banco de Dados''. Por último há a coluna \textit{Assignees} que indica quem é o responsável pela tarefa; nesse caso, todas as tarefas que estão em andamento ou concluídas foram atribuídas ao mesmo responsável.
+Citando mais detalhes da \autoref{fig:GitHubProjectsTable}, temos à esquerda a numeração das tarefas, seguido do título da tarefa que descreve em poucas palavras sobre o que se trata. ao final do título há uma combinação do símbolo ``\#'' e uma numeração. Essa numeração representa a sequência de criação das tarefas, código esse que pode ser usado como referência entre as tarefas, assim permitindo que tarefas correlacionadas tenham um link direto entre elas. Na próxima coluna está o \textit{Status} da tarefa, seguido de duas colunas, \textbf{\textit{Milestone}} e \textbf{\textit{Labels}} que só foram criadas \hyperref[ssssec:Marcos e Etiquetas]{posteriormente}. Finalizando temos a coluna \textbf{Página} que primariamente distingue em qual página do sistema a tarefa se encontra, mas que também contém algumas categorias que fogem do conceito de página, como por exemplo é o caso das categorias ``Componente'', ``Sistema'' e ``Banco de Dados''. Por último há a coluna \textit{Assignees} que indica quem é o responsável pela tarefa; nesse caso, todas as tarefas que estão em andamento ou que já se encontram concluídas foram atribuídas ao mesmo responsável.
 
 \subsubsection*{Permanência na alteração dos dados} \label{sssec:Permanência dos Dados}
 
@@ -336,13 +336,14 @@ Enquanto a \autoref{fig:ProjectsClosedMilestones} mostra os marcos que já foram
   \item \textbf{MVP 1}: foram concluídas na primeira versão;
   \item \textbf{MVP 2}: foram concluídas na segunda versão;
   \item \textbf{MVP 3}: foram concluídas na terceira versão;
+  \item \textbf{MVP 4}: planejadas para a próxima versão a ser desenvolvida;
   \item \textbf{Futuro}: foram planejadas para o futuro do sistema;
         \begin{enumerate}
-          \item \textbf{Demandas}: visam calcular a demanda dos alunos por disciplinas;
-          \item \textbf{Conflitos}: visam aprimorar a visualização, qualidade e/ou variedade de conflitos;
           \item \textbf{Heurísticas}: visam aprimorar a alocação de turmas através de heurísticas;
+          \item \textbf{Conflitos}: visam aprimorar a visualização, qualidade e/ou variedade de conflitos;
+          \item \textbf{Integração com o Sistema Acadêmico UENF}: visam a integração do atual sistema com o sistema acadêmico da UENF.
           \item \textbf{Arrasta e solta}: visam aprimorar a alocação de turmas através de um sistema de arrastar e soltar;
-          \item \textbf{Integração com o Sistema Acadêmico}: visam a integração do atual sistema com o sistema acadêmico da UENF.
+          \item \textbf{Demandas}: visam calcular a demanda dos alunos por disciplinas;
         \end{enumerate}
 \end{enumerate}
 
@@ -357,13 +358,13 @@ No Projects, também foram adicionadas as \textbf{etiquetas} que distinguem as t
 \end{MyCenteredFigure}
 
 \begin{enumerate}
+  \item \textbf{Nova função}: funcionalidades que ainda não foram implementadas;
+  \item \textbf{Qualidade de vida}: melhorias que não são necessárias, mas que aprimoram o processo de desenvolvimento;
   \item \textbf{UX}: aprimoramento da experiência do usuário;
   \item \textbf{Bug}: correção de bugs;
   \item \textbf{Pergunta}: dúvidas sobre a validade da tarefa;
-  \item \textbf{Duplicada}: já foi criada antes e que foi descartada;
   \item \textbf{Abandonada}: quando criada parecia interessante, mas que se decidiu por não implementar;
-  \item \textbf{Qualidade de vida}: melhorias que não são necessárias, mas que aprimoram o processo de desenvolvimento;
-  \item \textbf{Nova funcionalidade}: funcionalidades que ainda não foram implementadas;
+  \item \textbf{Duplicata}: já foi criada antes e que foi descartada;
 \end{enumerate}
 
 \subsubsubsection*{Gráficos} \label{ssssec:Gráficos}
