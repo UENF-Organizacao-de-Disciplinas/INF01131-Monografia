@@ -428,6 +428,18 @@ Como mostrado no \autoref{code:template} disposto no \autoref{apendice:ExemploTe
 
 Após o preparativo do arquivo \textit{template.yaml}, o \textit{deploy} é feito através do conjunto de comandos \textit{sam build; sam deploy}, que primeiro combina o \textit{CloudFormation Template} com o código da aplicação, e em seguida realiza o \textit{deploy} de todas as funções definidas no arquivo. Com isso, o sistema passou a ser mais facilmente atualizável, e mais facilmente mantido.
 
+\subsubsubsection*{Outros serviços da AWS} \label{ssssec:Outros serviços da AWS}
+
+Os serviços listados até então foram os principais utilizados para a execução do \textit{backend} do sistema, entretanto, diversos outros serviços foram utilizados para a manutenção do sistema como um todo e para a execução de tarefas secundárias. Abaixo estão listados alguns desses serviços.
+
+\begin{itemize}
+  \item \textbf{S3}: serviço de armazenamento de objetos, utilizado para armazenar os objetos gerados pelo CloudFormation;
+  \item \textbf{CloudWatch} e \textbf{CloudTrail}: serviço de monitoramento, utilizado para a visualização de métricas do sistema;
+  \item \textbf{IAM}: serviço de gerenciamento de permissões, utilizado para a definição de permissões para as funções Lambda;
+  \item \textbf{VPC}: serviço de rede privada virtual, utilizado para a definição de uma rede privada para o sistema;
+  \item \textbf{Cost Explorer}: serviço de visualização de custos, utilizado para a visualização dos custos do sistema;
+\end{itemize}
+
 \subsubsection*{Melhorias no sistema} \label{sssec:Melhorias no Sistema}
 
 O sistema passou por diversas pequenas mudanças, e algumas maiores. Uma considerável parte delas foi relacionada à forma com que as informações eram estruturadas internamente, mudanças essas feitas com o intuito de tornar o sistema mais fácil de ser mantido posteriormente. Em seguida estão listadas algumas das várias melhorias feitas no sistema.
