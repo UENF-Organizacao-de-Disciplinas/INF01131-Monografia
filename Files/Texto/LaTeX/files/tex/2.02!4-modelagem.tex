@@ -1,6 +1,8 @@
 \chapter{Modelagem geral do sistema} \label{chap:modelagem} % 4
 
-Tendo esclarecido sobre as \hyperref[chap:marco]{questões gerais da área de estudo} e de \hyperref[chap:instituicao]{como se estrutura a instituição} agora nos aprofundaremos na conceitualização do funcionamento geral do sistema e a forma como se dará a execução da \hyperref[sec:Metodologia]{metodologia proposta}.
+Tendo esclarecido sobre as \hyperref[chap:marco]{questões gerais da área de estudo} e de \hyperref[chap:instituicao]{como se estrutura a instituição} agora nos aprofundaremos na conceitualização do funcionamento geral do sistema e a forma como se dará a execução da \hyperref[sec:Metodologia]{metodologia proposta} apresentando o funcionamento geral de como o sistema será estruturado e de como foi desenvolvido.
+
+Ao longo deste capítulos serão abordados os \hyperref[sec:estagios]{estágios de execução} sobre como se dão as etapas de criações de grade horária no geral, a \hyperref[sec:iteracao]{iteração} com os \textit{stakeholders}, o \hyperref[sec:funcionamento]{funcionamento} do sistema, o \hyperref[sec:ModelagemBD]{modelo de banco de dados} e a \hyperref[sec:REST]{API REST} que será utilizada para a comunicação entre o \textit{frontend} e o \textit{backend} do sistema.
 
 \section{Estágios de execução} \label{sec:estagios} % 4.1
 
@@ -64,7 +66,7 @@ Embora o diagrama apresente uma visão mais completa das interconexões possíve
 
 % E também é notável a presença da entidade \textbf{Alunos}, que se apresenta desacoplado das demais entidades. O motivo para isso é que, embora os alunos façam parte do processo de alocação de turmas, ao longo do desenvolvimento, o desenvolvimento de funcionalidades envolvendo os alunos...
 
-\section{API REST} \label{sec:Funcionamento Geral} % 4.5
+\section{API REST} \label{sec:REST} % 4.5
 
 Para exemplificar o funcionamento geral da permanência dos dados, consideremos o uso de uma \textit{API REST} utilizando de 4 ``camadas'': o \textbf{\textit{frontend}}, os \textbf{\textit{endpoints}}, as \textbf{funções} de execução e o \textbf{banco de dados}.
 
