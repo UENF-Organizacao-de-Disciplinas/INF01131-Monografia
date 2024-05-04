@@ -1,4 +1,4 @@
-\chapter{DESENVOLVIMENTO DO SISTEMA DE SUPORTE À DECISÃO} \label{chap:desenvolvimento} % ### 5.
+\chapter{DESENVOLVIMENTO DO SISTEMA DE SUPORTE À DECISÃO} \label{chap:desenvolvimento} % ### 5
 
 Este capítulo visa apresentar todo o processo realizado para o desenvolvimento do sistema de suporte à decisão. O propósito desta aplicação é auxiliar o coordenador do curso de Ciência da Computação da UENF na alocação interativa de turmas, professores e salas. O auxílio é dado através de duas formas: a primeira é a \hyperref[par:Solução inicial]{criação automatizada da grade baseada no histórico das grades anteriores}, a segunda é a \hyperref[sec:conflitos]{identificação de conflitos}, como a alocação de uma turma grande demais para a capacidade da turma, com o objetivo de auxiliar no aprimoramento da grade inicialmente gerada.
 
@@ -6,7 +6,7 @@ Inicia-se com a apresentação de \hyperref[sec:projetos]{projetos anteriores} q
 
 Por fim, será apresentado o cerne do sistema que é a \hyperref[sec:conflitos]{identificação e visualização de conflitos}, ou seja, os casos em que a alocação dos recursos gera algum comportamento minimamente indesejável como por exemplo a alocação de uma sala a duas turmas ao mesmo tempo. Serão apresentados os tipos de conflitos que o sistema é capaz de identificar, como eles são visualizados e como o sistema lida com cada um deles. Conclui-se então com a apresentação do \hyperref[sec:preenchimento]{preenchimento do banco de dados} com dados reais.
 
-\section{Projetos anteriores} \label{sec:projetos} % ### 5.1.
+\section{Projetos anteriores} \label{sec:projetos} % ### 5.1
 
 Antes do desenvolvimento do presente trabalho, outros projetos já foram idealizados e até mesmo desenvolvidos. Dentre eles, dois se destacam por terem sido os precursores do atual projeto. O primeiro deles, que foi idealizado, mas não desenvolvido, almejava apresentar uma \hyperref[subsec:andamento]{visualização da progressão dos alunos na grade curricular}. O segundo, que foi desenvolvido, realizava o \hyperref[subsec:demanda]{cálculo da demanda}, ou seja, calculava quantos e quais eram os alunos que poderiam se inscrever nas disciplinas. Ambos os projetos se mostram como abordagens paralelas de auxiliar no planejamento do curso de Ciência da Computação da UENF, sendo eles também sistemas de suporte à decisão, mesmo que em menor escala.
 
@@ -22,7 +22,7 @@ Como interesse próprio, cogitou-se o desenvolvimento de uma plataforma onde se 
 
 Anos após a idealização dessa funcionalidade, o Sistema Acadêmico da UENF passou a disponibilizar uma funcionalidade semelhante, como pode ser visto na \autoref{fig:andamento}. Nela, é possível ver o andamento do aluno por período, incluindo as disciplinas Eletivas Livres e Eletivas Optativas. Entretanto, essa visualização tabular não ilustra o andamento de todos os alunos simultaneamente, sendo necessário navegar individualmente por cada um deles.
 
-\subsection{Cálculo de demanda} \label{subsec:demanda} % #### 5.1.2.
+\subsection{Cálculo de demanda} \label{subsec:demanda} % #### 5.1.2
 
 Ao longo dos semestres, foi percebido que durante o intervalo entre os semestres, os alunos precisam se inscrever nas matérias que desejam cursar no semestre seguinte. Para isso, é necessário que o coordenador saiba quantos alunos estão interessados em cada matéria para que ele possa definir quantas turmas serão abertas. Com este fim em mente, o coordenador dispõe de algumas alternativas como estimar quantos alunos se inscreverão em cada disciplina, checar manualmente no sistema acadêmico quais alunos podem fazer cada matéria, ou então obter diretamente dos alunos através de um formulário em quais disciplinas cada um dos alunos tem a intenção de cursar.
 
@@ -36,7 +36,7 @@ Este código foi desenvolvido em 8 etapas, vistas no \autoref{code:demand}, cada
 
 Embora o código cumpra com seu objetivo, apresenta algumas características limitantes. A primeira é que os PDFs precisam ser obtidos manualmente, um por um, pelo coordenador, sendo ela por si só uma tarefa extenuante, o que não é desejado. Além disso, o seu uso não é muito intuitivo, sendo necessário que o usuário lide com o prompt de comando e instale as dependências necessárias, o que acaba trazendo uma dificuldade a mais ao usuário. O código também apresenta limitações por sistema operacional, não sendo garantido o seu funcionamento em sistemas operacionais diferentes do Windows.
 
-\section{Acesso aos dados acadêmicos da instituição} \label{sec:LGPD} % ### 5.2.
+\section{Acesso aos dados acadêmicos da instituição} \label{sec:LGPD} % ### 5.2
 
 Em sua concepção original, o presente trabalho visaria integrar o sistema desenvolvido com o atual sistema acadêmico da UENF. Essa abordagem foi descartada devido às dificuldades encontradas por parte do setor administrativo da UENF que, devido à \LinkToURL{\LinkLGPD}{Lei Geral de Proteção dos Dados (LGPD)}, não podem divulgar dados dos alunos, mesmo anonimizados.
 
@@ -46,11 +46,11 @@ Segundo o \LinkToURL{\LinkLGPDEstudoTécnico}{Estudo Técnico sobre o tratamento
 
 Apesar das possibilidades de meios legalmente válidos para a aquisição dos dados, optou-se por abandonar a integração com o Sistema Acadêmico e o uso de dados reais dos alunos já existentes na plataforma. Rumando-se então para uma abordagem de inserção de dados manual por parte dos usuários do sistema.
 
-\section{Prototipagem} \label{sec:prototipagem} % ### 5.3.
+\section{Prototipagem} \label{sec:prototipagem} % ### 5.3
 
 A criação de protótipos, seguindo a abordagem tomada por \citeonline{Andre2018}, se mostra como essencial para que se mantenha a constante satisfação por parte dos \textit{stakeholders} e quais mudanças sugerem ao desenvolvimento do projeto, assim reduzindo a necessidade de retrabalho e de não alcançar as expectativas do projeto. Para este fim, foram feitos os designs iniciais das telas do sistema usando o software de design \LinkToURL{\LinkFigma}{Figma}, designs esses que representam apenas o esboço, e não um sistema funcional. Esse esboço serviu como uma base visual de como o sistema estaria no final.
 
-\subsection{Protótipos de componentes} \label{subsec:componentes} % #### 5.3.1.
+\subsection{Protótipos de componentes} \label{subsec:componentes} % #### 5.3.1
 
 Antes de seguir com a descrição das telas, é válido descrever os componentes que foram utilizados na construção dos protótipos. Os componentes principais são os cartões de turma (\autoref{fig:cartão_de_turma}) e as caixas de seleção (\autoref{fig:selects}).
 
@@ -103,7 +103,7 @@ Cada uma dessas versões dos cartões de turma se mostra com um propósito espec
 
 A \autoref{fig:selects} mostra os protótipos de caixas de seleção que foram utilizados para a seleção de dados. Na \autoref{fig:SingleSelect} está a caixa de seleção onde o usuário pode selecionar apenas uma opção. Já na \autoref{fig:MultiSelect} a caixa de seleção permite ao usuário selecionar várias opções.
 
-\subsection{Protótipos de páginas} \label{subsec:páginas} % #### 5.3.1.
+\subsection{Protótipos de páginas} \label{subsec:páginas} % #### 5.3.1
 
 Aqui serão elecadas as sete páginas esboçadas para o sistema. Sendo elas a \hyperref[fig:main]{página principal}, a \hyperref[fig:CRUD_main]{página de seleção}, a \hyperref[fig:CRUD_salas_vazias]{página de salas}, a \hyperref[fig:CRUD_alunos]{página de alunos}, a \hyperref[fig:CRUD_disciplinas]{página de disciplinas}, a \hyperref[fig:CRUD_professores]{página de professores} e a \hyperref[fig:CRUD_turmas]{página de turmas}.
 
@@ -155,7 +155,7 @@ Outro conflito exibido é que a sala em que está alocado o primeiro horário da
 
 Por último, na listagem dos alunos que podem se inscrever, no canto inferior direito, há quatro alunos marcados em vermelho. Estes alunos poderiam se inscrever em outra turma no mesmo horário em que esta turma está alocada. Este conflito é impeditivo, mas apenas para os alunos, assim como no caso da preferência do professor, a turma pode ser realocada para outro horário para atender melhor às demandas dos alunos.
 
-\section{Programação do sistema} \label{sec:programação} % ### 5.5.1.
+\section{Programação do sistema} \label{sec:programação} % ### 5.5.1
 
 Após a conceitualização diagramática do banco de dados e a elaboração dos protótipos com o Figma, o desenvolvimento do sistema foi iniciado. Por maior familiaridade com a linguagem foi escolhida a linguagem \textbf{\textit{JavaScript}}, utilizando a biblioteca \textbf{\textit{React}} para a criação dos componentes visuais, ou seja, o \textit{frontend}, e o \textbf{\textit{Node.js}} para a criação do \textit{backend} e a criação de um servidor local que permite visualizar as mudanças no código em tempo real. Suas logos estão ilustrados na \autoref{fig:sistemas}.
 
@@ -186,7 +186,7 @@ Sua \hyperref[sec:programação]{programação} foi repartida em três grandes c
 
 Ao longo da implementação dessas versões, diversos métodos de manutenção dos dados foram utilizados, como a importação de arquivos JSON, a utilização de um banco de dados local e a utilização de um banco de dados hospedado na nuvem. A \autoref{fig:API} ilustra a progressão do funcionamento da permanência dos dados ao longo das versões do sistema. Os pormenores de cada versão serão descritos adiante.
 
-\subsection{Versão 1.0} \label{subsec:MVP1} % ### 5.5.2. Primeira versão
+\subsection{Versão 1.0} \label{subsec:MVP1} % ### 5.5.2
 
 A primeira versão do sistema foi desenvolvida em um ambiente local, com o objetivo de se aproximar ao máximo das páginas previstas no protótipo. Para isso, foi utilizada a biblioteca \LinkToURL{\LinkReactRouter}{\textit{React Router}} para a navegação entre as páginas, e a biblioteca \LinkToURL{\LinkReactSelect}{\textit{React Select}} para as caixas de seleção.
 
@@ -216,7 +216,7 @@ Após o desenvolvimento local, como forma de viabilizar o acesso ao sistema por 
 
 % Explicar isso daqui melhor
 
-\subsection{Versão 2.0} \label{subsec:MVP2} % ### 5.5.3. Segunda versão
+\subsection{Versão 2.0} \label{subsec:MVP2} % ### 5.5.3
 
 Utilizando do \textit{feedback} quanto aos resultados entregues na \hyperref[subsec:MVP1]{primeira versão}, alguns pontos de melhoria foram identificados, sendo um deles, e o mais importante: o planejamento. Na primeira abordagem, o desenvolvimento foi feito seguindo notas e ideias soltas, sem um planejamento prévio, o que resultou em um sistema que, embora funcional, não atendia a todas as necessidades propostas. Também dispunha de funcionalidades que não eram de todo necessárias, ou, melhor dizendo, que tinham menor prioridade do que muitas outras. Como solução, foi utilizado o \hyperref[sssec:GitHub Projects]{GitHub Projects} para organizar as tarefas e priorizá-las.
 
@@ -314,7 +314,7 @@ Adicionou-se também diversas filtragens, principalmente na página de \textbf{G
 
 Outra utilidade adicionada, agora na página \textbf{MultiTurmas}, foi a seção de ``Disciplinas ainda não oferecidas''. Sua funcionalidade consiste em dispor ao usuário uma lista de disciplinas que, segundo a ementa de Ciência da Computação, deveriam ser ofertadas naquele semestre. A partir disso, o usuário pode então selecionar o botão correspondente àquela disciplina e, a partir disso, uma turma para esta disciplina é adicionada à lista de turmas ofertadas. Há também um botão no topo que permite a adição de todas as disciplinas de uma vez.
 
-\subsection{Versão 3.0} \label{subsec:MVP3} % ### 5.5.3.
+\subsection{Versão 3.0} \label{subsec:MVP3} % ### 5.5.3
 
 Considerando que a segunda versão já apresentava em sua maioria as funcionalidades mínimas desejadas, a terceira versão foi focada em melhorias de usabilidade e na correção de bugs.
 
@@ -519,7 +519,7 @@ Além das funcionalidades voltadas para o usuário final, algumas mudanças clas
   \item \textbf{Remoção de estruturas obsoletas}: ao longo do desenvolvimento, algumas estruturas foram criadas e não utilizadas. Um exemplo dessas foi a propriedade ``Ordem'' que visava definir a ordem em que os horários da turma apareceriam, porém o resultado desta propriedade foi obtido com a ordenação dos horários por dia e em seguida por horário, não sendo então necessária. Ela então foi removida do sistema e do banco de dados.
 \end{itemize}
 
-\section{Detecção e alerta dos conflitos} \label{sec:conflitos} % ### 5.6.
+\section{Detecção e alerta dos conflitos} \label{sec:conflitos} % ### 5.6
 
 Uma das principais funcionalidades do sistema é a detecção de conflitos. Seu objetivo é auxiliar ao usuário a identificar possíveis problemas na alocação das turmas, e assim, permitir que ele possa corrigi-los antes de finalizar a grade horária. Diversas situações podem ser consideradas como conflitos, e cada uma delas é tratada de forma diferente.
 
