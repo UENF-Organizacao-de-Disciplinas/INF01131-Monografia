@@ -171,6 +171,23 @@ subject = {Anexos da minha monografia. Mais especificamente, o seu código fonte
 % Adicionar comando mais denso para adição da animação
 \newcommand{\myAnimation}[1]{\includegraphics[scale=0.2]{files/img/2.02!5-desenvolvimento/2.02!5.1.4-sistema/Animacao/#1}}
 
+% --- CONFIGURANDO LISTING JAVASCRIPT ---
+\lstdefinelanguage{JavaScript}{
+  keywords={typeof, new, true, false, catch, function, return, null, catch, switch, var, if, in, while, do, else, case, break},
+  keywordstyle=\color{blue}\bfseries,
+  ndkeywords={class, export, boolean, throw, implements, import, this},
+  ndkeywordstyle=\color{darkgray}\bfseries,
+  identifierstyle=\color{black},
+  sensitive=false,
+  comment=[l]{//},
+  morecomment=[s]{/*}{*/},
+  commentstyle=\color{purple}\ttfamily,
+  stringstyle=\color{red}\ttfamily,
+  morestring=[b]',
+  morestring=[b]"
+}
+% --- CONFIGURANDO LISTING JAVASCRIPT ---
+
 % Coloring YAML: https://tex.stackexchange.com/questions/152829/how-can-i-highlight-yaml-code-in-a-pretty-way-with-listings
 
 % \definecolor{commentColor}{HTML}{54A668}
@@ -186,7 +203,6 @@ subject = {Anexos da minha monografia. Mais especificamente, o seu código fonte
 \newcommand{\YAMLvaluestyle}{\color{blue}\mdseries}
 
 \makeatletter
-
 % here is a macro expanding to the name of the language
 % (handy if you decide to change it further down the road)
 \newcommand\language@yaml{yaml}
