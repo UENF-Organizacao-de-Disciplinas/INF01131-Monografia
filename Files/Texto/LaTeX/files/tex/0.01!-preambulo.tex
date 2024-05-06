@@ -95,6 +95,11 @@
 \usepackage{attachfile} % Anexando código ao PDF: alternativas: embedfile, navigator
 \usepackage[table, dvipsnames]{xcolor} % Adding color to table line. Não tenho certeza para que o dvipsnames serve
 \usepackage{subcaption} % Adicionar subfiguras
+\usepackage{chngcntr} % Para resetar o contador de figuras
+
+\counterwithin{figure}{chapter}   % Resetar o contador de figuras a cada capítulo {chngcntr}
+\counterwithin{table}{chapter}    % Resetar o contador de tabelas a cada capítulo {chngcntr}
+% \counterwithin{lstlisting}{chapter} % Resetar o contador de tabelas a cada capítulo {chngcntr}
 
 \attachfilesetup{
 % color = {0 1 1}, % Cyan
