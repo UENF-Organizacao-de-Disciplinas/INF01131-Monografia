@@ -290,7 +290,7 @@ Costa [Costa2003] apresentou uma técnica híbrida com base nas metaheurísticas
 
 Santos [Santos2007] aplicou em sua pesquisa três metodologias de solução. A primeira, uma nova heurística híbrida, baseada em Busca Tabu, onde os experimentos computacionais demonstraram melhoras dos resultados da literatura, apresentando um desempenho consistentemente superior em todos os problemas teste. A segunda foi usando técnicas de Programação Linear Inteira Mista, no qual permitiu a obtenção de limites inferiores bastante fortes, os quais permitiram a prova da otimalidade para 3 instâncias da literatura. E a terceira foi explorar a sinergia entre heurísticas e métodos exatos. Esses algoritmos híbridos ofereceram os melhores limites superiores disponíveis.
 
-Com o objetivo de comparar três técnicas (método matemático, abordagem heurística e método misto) Góes et al [Góes__2010] desenvolveram um protótipo para a construção da grade horária escolar obtendo a programação de horários de professores/turmas para uma instituição de ensino municipal. O modelo matemático gerou o melhor resultado chegando a solução ótima, porém com um tempo computacional alto em relação aos outros métodos. A abordagem heurística baseada em Algoritmos Genéticos apesar de nem sempre apresentar a melhor solução, retomou um resultado mais rápido do que o modelo matemático. Com o menor tempo computacional o método misto resolve primeiramente o problema através do modelo matemático sem adicionar restrições de preferência (ou não) por aulas geminadas, que juntas compõem mais de 50% das restrições geradas, na sequência, aplica-se urna heurística de melhoramento com relação à preferência de aulas geminadas. Todos os três métodos utilizados apresentaram resultados melhores do que o gerado manualmente para o estudo de caso abordado.
+Com o objetivo de comparar três técnicas (método matemático, abordagem heurística e método misto) Góes et al [Góes__2010] desenvolveram um protótipo para a construção da grade horária escolar obtendo a programação de horários de professores/turmas para uma instituição de ensino municipal. O modelo matemático gerou o melhor resultado chegando a solução ótima, porém com um tempo computacional alto em relação aos outros métodos. A abordagem heurística baseada em Algoritmos Genéticos apesar de nem sempre apresentar a melhor solução, retomou um resultado mais rápido do que o modelo matemático. Com o menor tempo computacional o método misto resolve primeiramente o problema através do modelo matemático sem adicionar restrições de preferência (ou não) por aulas geminadas, que juntas compõem mais de 50% das restrições geradas, na sequência, aplica-se uma heurística de melhoramento com relação à preferência de aulas geminadas. Todos os três métodos utilizados apresentaram resultados melhores do que o gerado manualmente para o estudo de caso abordado.
 
 Com relação ao Problema de Programação de Horário em Universidades Vieira [Vieira__2011] apresenta um estudo de caso no Departamento de Computação (DCOMP) da Universidade Federal de Sergipe (UFS), em particular do curso de Sistemas de Informação. A abordagem proposta foi uma metaheurfstica com base em Algoritmos Genéticos. Tais algoritmos realizam um processo de busca inspirado nos princípios da seleção natural e evolução para que a melhor solução seja gerada ao final do processo. A abordagem adotada permite a reprodução da solução de forma a atender restrições de outros cursos e de outras instituições. Os experimentos realizados e as análises feitas deram validade a modelagem apresentada, mostrando que a solução é viável, porém com relação à restrições soft, nem todas foram plenamente atendidas, mesmo na melhor solução encontrada.
 
@@ -449,15 +449,37 @@ O algoritmo, então, simula este processo substituindo a solução atual por uma
 
 À medida que o algoritmo progride a temperatura vai resfriando, ou seja, o valor de T vai decrescendo, e a probabilidade de aceitação de uma solução pior também, fazendo com que o algoritmo converta para uma solução ótima local. O procedimento é finalizado quando a temperatura chega a um valor próximo de zero e nenhuma solução que piore o valor da melhor solução seja mais aceita, ou seja, quando o sistema estiver estável. A solução obtida quando o sistema encontra-se nesta situação evidencia o encontro de um mínimo local. Na figura 4.9 se encontra o pseudocódigo no algoritmo Simulated Annealing.
 
-```c
-CÓDIGO
-```
+$$
+procedimento SA(f(.),N(.),\alpha,SAmax,T_0,s)
+    s^* \leftarrow s;       \text{{Melhor solução obtida até então}}
+    IterT \leftarrow 0;             \text{{Número de iterações na temperatura T}}
+    T \leftarrow T_0;               \text{{Temperatura corrente}}
+    \text{Enquanto} (T > 0) \text{faça}
+        \text{Enquanto} (IterT < SAmax) \text{faça}
+            IterT \leftarrow IterT + 1;
+            \text{Gere um vizinho qualquer} s' \in N(s);
+            \delta = f(s') - f(s);
+            \text{Se} (\delta < 0) \text{Então}
+                s \leftarrow s';
+                \text{Se} (f(s') < f(s^*)) \text{então} s^* \leftarrow s';
+            \text{Senão}
+                \text{Tome} x \in [0,1];
+                \text{Se} (x < e^{-\delta/T}) \text{Então} s \leftarrow s';
+            \text{Fim Se}
+        \text{Fim Enquanto}
+        T \leftarrow \alpha \times T;
+        IterT \leftarrow 0;
+    \text{Fim Enquanto}
+    s \leftarrow s^*;
+    \text{Retorne} s;
+fim SA;
+$$
 
 Figura 4.9 - Algoritmo Simulated Annealing.
 
-O procedimento começa na linha 1, com a inicialização da melhor solução conhecida s *, calculada previamente por métodos de construção e refinamento. Nas linhas 2 e 3, inicializam-se o contador de iterações para sustentação de temperatura constante, IterT, e a temperatura inicial, T, respectivamente. Enquanto a temperatura corrente T for maior que zero e o contador IterT for menor que o número máximo de iterações, um vizinho de s é gerado, denotado como s' (linha 7). Na linha 8, calcula-se A como a diferença entre os valores das funções objetivo correspondentes às soluções s' e s, solução vizinha e solução atual, respectivamente. Nas linhas de 9 a 15, o valor de A será avaliado para verificação de aceitação da solução vizinha como solução atual. Na linha 9 verifica-se se A<O, a solução vizinha é melhor que a solução atual, neste caso a solução vizinha substitui a solução atual (linha 10). Verifica-se também se essa solução vizinha é melhor que a melhor solução s* (linha I l). Caso A 0, a solução vizinha s' (que é pior que a solução atual s) só será aceita como a solução atual de acordo com um critério de aceitação de piora. Esse critério é avaliado nas linhas 13 e 14. Na linha 13 um número de O a 1 é gerado aleatoriamente, já na linha 14, se este número for menor que uma função conhecida por fator de Boltzrnann, que é dada por e¯Ô/T, a piora da solução será aceita. Nesta função a temperatura Té usada como parâmetro. Inicialmente quando a temperatura está alta a probabilidade de aceitação de piora é maior. Após um número fixo de iterações a temperatura T é gradativamente diminuída por uma taxa de resfriamento a, sendo 0 < a < 1 (linha 17). Conforme a temperatura for caindo a probabilidade de aceitação de piora também será menor. O algoritrno termina quando a temperatura T for suficientemente próxima de zero, retornando a melhor solução s* (linha 21).
+O procedimento começa na linha 1, com a inicialização da melhor solução conhecida $s^*$, calculada previamente por métodos de construção e refinamento. Nas linhas 2 e 3, inicializam-se o contador de iterações para sustentação de temperatura constante, $\text{IterT}$, e a temperatura inicial, $T$, respectivamente. Enquanto a temperatura corrente $T$ for maior que zero e o contador $IterT$ for menor que o número máximo de iterações, um vizinho de $s$ é gerado, denotado como $s'$ (linha 7). Na linha 8, calcula-se $\delta$ como a diferença entre os valores das funções objetivo correspondentes às soluções $s'$ e $s$, solução vizinha e solução atual, respectivamente. Nas linhas de 9 a 15, o valor de $\delta$ será avaliado para verificação de aceitação da solução vizinha como solução atual. Na linha 9 verifica-se se $\delta<0$, a solução vizinha é melhor que a solução atual, neste caso a solução vizinha substitui a solução atual (linha 10). Verifica-se também se essa solução vizinha é melhor que a melhor solução $s^*$ (linha 11). Caso $\delta \geq 0$, a solução vizinha $s'$ (que é pior que a solução atual s) só será aceita como a solução atual de acordo com um critério de aceitação de piora. Esse critério é avaliado nas linhas 13 e 14. Na linha 13 um número de 0 a 1 é gerado aleatoriamente, já na linha 14, se este número for menor que uma função conhecida por fator de Boltzmann, que é dada por $e^{-\delta/T}$, a piora da solução será aceita. Nesta função a temperatura Té usada como parâmetro. Inicialmente quando a temperatura está alta a probabilidade de aceitação de piora é maior. Após um número fixo de iterações a temperatura $T$ é gradativamente diminuída por uma taxa de resfriamento $\alpha$, sendo $0 < \alpha < 1$ (linha 17). Conforme a temperatura for caindo a probabilidade de aceitação de piora também será menor. O algoritmo termina quando a temperatura $T$ for suficientemente próxima de zero, retornando a melhor solução $s*$ (linha 21).
 
-Algoritrnos baseados em Simulated Annealing com frequência consideram o princípio de reaquecimento, reinicialização do valor da temperatura T, seguido de um novo processo de resfriamento, utilizado quando a quantidade de movimentos consecutivamente rejeitados é alta. É também comum trabalhar nas temperaturas mais altas com taxa de resfriamento baixa e aumentar essa taxa quando a temperatura diminuir.
+Algoritmos baseados em Simulated Annealing com frequência consideram o princípio de reaquecimento, reinicialização do valor da temperatura $T$, seguido de um novo processo de resfriamento, utilizado quando a quantidade de movimentos consecutivamente rejeitados é alta. É também comum trabalhar nas temperaturas mais altas com taxa de resfriamento baixa e aumentar essa taxa quando a temperatura diminuir.
 
 ## 5. Aplicação da Metodologia ao Problema de Programação de Horários
 
@@ -653,7 +675,7 @@ As penalizações são calculadas para cada dia, onde para cada requisito quebra
 
 Como o requisito não essencial RNE3, que diz que nao é permitido preencher os horários de 12h às 14h, pois se trata de horário de almoço, já foi atendido através da heurística melhoria, não foi permitida também este tipo de piora. Assim não é permitida uma solução vizinha que quebre esta regra, por isso este requisito não foi avaliado na função objetivo também.
 
-O pseudocódigo do algoritmo Simulated Annealing utilizado neste projeto é apresentado no algoritrno 5.3. Os identificadores utiliados são:
+O pseudocódigo do algoritmo Simulated Annealing utilizado neste projeto é apresentado no algoritmo 5.3. Os identificadores utilizados são:
 
 - So -+ Solução Inicial;
 - Si -Y Solução da Iteração i;
@@ -681,14 +703,14 @@ l* Inicialiaçao das variáveis*/
 Se-So;
 5: 6: Té-To•,
 7: Loop principal - verifica se foram atendidas as condições de término do
-8: algoritrno*/
+8: algoritmo*/
 9: Repita
 II:
 Loop Interno - Realização de perturbação em uma iteraçao
 12:
 Repita
 13:
-Teste de aceitação de urna soluçao 8/
+Teste de aceitação de uma soluçao 8/
 16:
 se (AFi O) ou (exp(-AfifD > Randomiza()) entao
 17:
@@ -780,7 +802,7 @@ Foram necessários testes computacionais para se chegar aos melhores valores par
 
 Tabela 6.3 - Dados das disciplinas de períodos pares.
 
-De acordo com os códigos das disciplinas para os períodos ímpares apresentados na tabela 6.1, o resultado da solução construtiva é apresentado na figura 6.4. A figura 6.5 por sua vez, apresenta a distribuição das disciplinas de acordo com a heurística de melhoria. Para ambas as soluções o valor da função objetivo foi de 206, ou seja, perrnaneceu o mesmo, já que a função objetivo não penalizou horários de almoço.
+De acordo com os códigos das disciplinas para os períodos ímpares apresentados na tabela 6.1, o resultado da solução construtiva é apresentado na figura 6.4. A figura 6.5 por sua vez, apresenta a distribuição das disciplinas de acordo com a heurística de melhoria. Para ambas as soluções o valor da função objetivo foi de 206, ou seja, permaneceu o mesmo, já que a função objetivo não penalizou horários de almoço.
 
 Figura 6.4 - Solução construtiva: Caso perfodos ímpares.
 Figura 6.5 - Solução da Heurística de mehoria: Caso períodos ímpares.
@@ -804,7 +826,7 @@ A fim de automatimr o processo de verificação das soluções obtidas em cada h
 
 ### 6.4 Análise da qualidade dos resultados
 
-Após a análise dos resultados da solução construtiva podemos perceber que o resultado se encontra dentro do esperado. As disciplinas foram distribuídas duas a duas sequencialmente, e em dias diferentes e com um intervalo de um dia pelo menos entre elas. Isso era de se esperar pelas sequencias de preferências da matriz de preferência. Como também era de se esperar, as disciplinas se acumularam na segunda e quarta, já que a forrna de inserção do algoritmo é sequencial por período e sempre começa pela segunda-feira. A pesar disso, ainda sim os resultados foram satisfatórios por se tratar da solução inicial.
+Após a análise dos resultados da solução construtiva podemos perceber que o resultado se encontra dentro do esperado. As disciplinas foram distribuídas duas a duas sequencialmente, e em dias diferentes e com um intervalo de um dia pelo menos entre elas. Isso era de se esperar pelas sequencias de preferências da matriz de preferência. Como também era de se esperar, as disciplinas se acumularam na segunda e quarta, já que a forma de inserção do algoritmo é sequencial por período e sempre começa pela segunda-feira. A pesar disso, ainda sim os resultados foram satisfatórios por se tratar da solução inicial.
 
 A heurística de melhoria obteve o resultado desejado, também como se esperava, já que seu objetivo era apenas a retirada das disciplinas que estavam no horário do almoço, e este propósito foi atingido. Contudo, a melhoria na solução objetivo não ocorreu devido a não avaliação do requisito RNE3.
 
