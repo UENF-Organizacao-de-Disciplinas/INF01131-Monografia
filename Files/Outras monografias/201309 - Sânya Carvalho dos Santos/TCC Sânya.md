@@ -119,9 +119,9 @@ O Problema de Programação de Horários (PPH), que na literatura é referenciad
 
 Uma categoria deste problema é o Problema de Programação de Horários Professor x Turma com Capacidade (PPTC), neste problema, cada professor deve lecionar um determinado número de aulas para cada turma em um conjunto de períodos [Santos2007]. Outra categoria é o Problema de Alocação de Aulas a Salas (PAAS). Este problema consiste em alocar aulas, com horários de início e término previamente programados, a um número fixo de salas, tal como abordados por Subramanian et al [Subramanian__2011].
 
-O PPH é um problema de dificil generalização, sendo desenvolvido na maioria das vezes, para atender a uma instituição específica, dado que há uma diversidade de regimes que variam de instituição para instituição [Silva__2005]. Sua solução manual geralmente não gera soluções ótimas, demandam muito tempo e esforço, e muita das vezes não atendem aos requisitos essenciais, causando muito transtorno no início do período letivo.
+O PPH é um problema de difícil generalização, sendo desenvolvido na maioria das vezes, para atender a uma instituição específica, dado que há uma diversidade de regimes que variam de instituição para instituição [Silva__2005]. Sua solução manual geralmente não gera soluções ótimas, demandam muito tempo e esforço, e muita das vezes não atendem aos requisitos essenciais, causando muito transtorno no início do período letivo.
 
-Por ser um problema NP-Dificil a solução ótima para grandes instâncias não é possível de ser encontrada em tempo razoável usando métodos de programação matemática (métodos exatos). O problema é então normalmente tratado através de técnicas heurísticas, que apesar de não encontrarem soluções ótimas são capazes de retomar soluções de qualidade em um tempo adequado para as necessidades da aplicação.
+Por ser um problema NP-Difícil a solução ótima para grandes instâncias não é possível de ser encontrada em tempo razoável usando métodos de programação matemática (métodos exatos). O problema é então normalmente tratado através de técnicas heurísticas, que apesar de não encontrarem soluções ótimas são capazes de retomar soluções de qualidade em um tempo adequado para as necessidades da aplicação.
 
 Entre as técnicas heurísticas destacam-se as chamadas metaheurísticas porque são providas de mecanismos para escapar de ótimos locais. Em geral, no entanto, as metaheurísticas sofrem grande influência das soluções iniciais, isto é, uma solução inicial de boa qualidade induz a um processo de busca mais rápida, com produção de soluções finais melhores [Souza__2002]. Entre as metaheurísticas mais utilizadas para resolver o problema estão: Simulated Annealing, Algoritmos Genéticos, Colônia de Formigas, Busca Tabu, entre outros.
 
@@ -135,7 +135,7 @@ O objetivo, portanto, é resolver o problema de alocação de horários de disci
 
 O PPH por ser um problema NP-Difícil, na medida que os dados de entrada crescem, também cresce sua complexidade, dificultando a obtenção de soluções ótimas. Suas aplicações em diversos contextos, e o grande esforço para encontrar soluções viáveis de alta qualidade vêm atraindo pesquisadores, incluindo uma competição em 2007, a International Timetabling Competition.
 
-Na literatura é possível encontrar diversos trabalhos e abordagens de solução para o PPH, porém, desenvolvidas para instituições especificas. Devido às particularidades de cada instituição não é possível generalizar os requisitos do problema, e fazer um único software generalizado, o que justifica a busca por implementações de métodos de solução automáticos para o curso de Ciência da Computação na UENF , onde já é encontrada dificuldade pelos professores responsáveis de gerar a grade de todos os períodos em cada semestre,
+Na literatura é possível encontrar diversos trabalhos e abordagens de solução para o PPH, porém, desenvolvidas para instituições especificas. Devido às particularidades de cada instituição não é possível generalizar os requisitos do problema, e fazer um único software generalizado, o que justifica a busca por implementações de métodos de solução automáticos para o curso de Ciência da Computação na UENF, onde já é encontrada dificuldade pelos professores responsáveis de gerar a grade de todos os períodos em cada semestre,
 
 ### 1.3 Estrutura do trabalho
 
@@ -212,7 +212,7 @@ De modo geral, um problema de OC pode ser formulado como um problema de _PI_ ou 
 
 Dentre os métodos mais bem sucedidos para resolver problemas genéricos de programação inteira estão os baseados nos enfoques de enumeração implícita, ou _branch-and-bound_, e de planos de corte, presentes nos pacotes comerciais de otimização, tais como CPLEX, XPRESS e LINDO. Diversos problemas de programação de horário podem ser fielmente modelados utilizando a Programação Linear Inteira Mista, e estes podem ser resolvidos através desses softwares [ArenaIes__2007].
 
-Uma descrição de um problema clássico de PPH, o Problema de Programação de Horários Professor x Turma (PPT), onde cada professor deve lecionar um determinado números de aulas para cada turma em um conjunto de períodos foi modelado por Santos [Santos 2007]. O modelo é o seguinte:
+Uma descrição de um problema clássico de PPH, o Problema de Programação de Horários Professor x Turma (PPT), onde cada professor deve lecionar um determinado números de aulas para cada turma em um conjunto de períodos foi modelado por Santos [Santos2007]. O modelo é o seguinte:
 
 $$
 \text{encontre } x_{ptdh}
@@ -278,7 +278,7 @@ As diversas variantes do Problema de Horário Educacional podem ser classificada
 
 O Problema de Programação de Horário Escolar pode ser generalizado como o escalonamento semanal das aulas em uma escola sem que professores e alunos tenham mais de uma aula ao mesmo tempo (estudantes são agrupados em turmas com os mesmos planos de aula). Já o Problema de Programação de Horário de Disciplinas em Universidades como o escalonamento semestral das aulas de um conjunto de disciplinas de uma universidade de modo a evitar colisão de horários (estudantes geralmente são considerados individualmente) [Paim__2010].
 
-Como em todo PPH existem diversas variações, e em cada instituição o problema assume particularidades, surgem muitas outras classificações, tratando apenas alguma dessas particularidades como, por exemplo, o Problema de Alocação de Salas, o Problema de Programação Turma com Capacidade, o Problema de Horário Professor/Turma, etc. Tamanha é a abrangência e o número de variantes que Gomes [Gomes2006] listou as seguintes denominações para os problemas de timetabling: _nurse rostering , university timetabling , exam timetabling, sport timetabling, railway timetabling school timetabling course timetabling class-teacher timetabling, student scheduling, teacher assignment, project sheduling, busscheduling, airflight schedules_.
+Como em todo PPH existem diversas variações, e em cada instituição o problema assume particularidades, surgem muitas outras classificações, tratando apenas alguma dessas particularidades como, por exemplo, o Problema de Alocação de Salas, o Problema de Programação Turma com Capacidade, o Problema de Horário Professor/Turma, etc. Tamanha é a abrangência e o número de variantes que Gomes [Gomes2006] listou as seguintes denominações para os problemas de timetabling: _nurse rostering, university timetabling, exam timetabling, sport timetabling, railway timetabling school timetabling course timetabling class-teacher timetabling, student scheduling, teacher assignment, project sheduling, busscheduling, airflight schedules_.
 
 Este capítulo apresenta alguns dos casos mais estudados encontrados na literatura, onde podem ser observados diferentes variantes do problema PPH e métodos de resolução adotadas em cada caso.
 
@@ -292,7 +292,7 @@ Santos [Santos2007] aplicou em sua pesquisa três metodologias de solução. A p
 
 Com o objetivo de comparar três técnicas (método matemático, abordagem heurística e método misto) Góes et al [Góes__2010] desenvolveram um protótipo para a construção da grade horária escolar obtendo a programação de horários de professores/turmas para uma instituição de ensino municipal. O modelo matemático gerou o melhor resultado chegando a solução ótima, porém com um tempo computacional alto em relação aos outros métodos. A abordagem heurística baseada em Algoritmos Genéticos apesar de nem sempre apresentar a melhor solução, retomou um resultado mais rápido do que o modelo matemático. Com o menor tempo computacional o método misto resolve primeiramente o problema através do modelo matemático sem adicionar restrições de preferência (ou não) por aulas geminadas, que juntas compõem mais de 50% das restrições geradas, na sequência, aplica-se urna heurística de melhoramento com relação à preferência de aulas geminadas. Todos os três métodos utilizados apresentaram resultados melhores do que o gerado manualmente para o estudo de caso abordado.
 
-Com relação ao Problema de Programação de Horário em Universidades Vieria [Vieira__2011] apresenta um estudo de caso no Departamento de Computação (DCOMP) da Universidade Federal de Sergipe (UFS), em particular do curso de Sistemas de Informação. A abordagem proposta foi uma metaheurfstica com base em Algoritmos Genéticos. Tais algoritmos realizam um processo de busca inspirado nos princípios da seleção natural e evolução para que a melhor solução seja gerada ao final do processo. A abordagem adotada permite a reprodução da solução de forma a atender restrições de outros cursos e de outras instituições. Os experimentos realizados e as análises feitas deram validade a modelagem apresentada, mostrando que a solução é viável, porém com relação à restrições soft, nem todas foram plenamente atendidas, mesmo na melhor solução encontrada.
+Com relação ao Problema de Programação de Horário em Universidades Vieira [Vieira__2011] apresenta um estudo de caso no Departamento de Computação (DCOMP) da Universidade Federal de Sergipe (UFS), em particular do curso de Sistemas de Informação. A abordagem proposta foi uma metaheurfstica com base em Algoritmos Genéticos. Tais algoritmos realizam um processo de busca inspirado nos princípios da seleção natural e evolução para que a melhor solução seja gerada ao final do processo. A abordagem adotada permite a reprodução da solução de forma a atender restrições de outros cursos e de outras instituições. Os experimentos realizados e as análises feitas deram validade a modelagem apresentada, mostrando que a solução é viável, porém com relação à restrições soft, nem todas foram plenamente atendidas, mesmo na melhor solução encontrada.
 
 Splinder [Splinder2010] propôs uma solução para o Problema de Horário Educacional utilizando um algoritmo de Busca Dispersa (Scatter Search) que utiliza o método de Reconexão por Caminhos como estratégia de intensificação de busca da solução ótima. O autor frisa que não foram encontrados trabalhos que reportem a utilização desta técnica para a solução deste tipo de problema anteriormente ao seu trabalho. Para testar a eficiência da abordagem proposta, foram considerados dois estudos de casos: o primeiro referente ao problema de programação de cursos pós matrícula, abordado na International Timetabling Competition, e o segundo, referente a problemas encontrados no cenário de uma instituição de ensino brasileira, do tipo universidade. A implementação do modelo e sua execução sobre os dados da International Timetabling Competition proporcionaram a comprovação de sua aplicabilidade, mesmo que com resultados inferiores aos registrados anteriormente por outros métodos de solução. Apesar do tempo computacional elevado que demanda a aplicação da técnica utilizada, as grades de horário geradas atenderam a todas as restrições consideradas gerando grades de horário de boa qualidade. A forma em que o método foi implementado apresenta uma grande dificuldade de escapar de regiões representando ótimos locais. Outra dificuldade foi a validação da eficiência de estruturas de vizinhança para o problema abordado.
 
@@ -318,7 +318,7 @@ Na seção 4.2, descreve-se três tipos específicos de heurísticas: heurístic
 
 ### 4.2 Métodos construtivos (Solução Inicial)
 
-Heurísticas consü•utivas constroem uma solução a partir da instância do problema, ou seja, constroem a solução de forma incremental escolhendo passo a passo o melhor candidato de acordo com algum critério inserindo-o na solução até gerar uma solução completa. São geralmente mais simples e fáceis de implementar se comparadas às metaheurísticas. A principal utilidade dos algoritrnos construtivos é ser entrada dos algoritmos iterativos.
+Heurísticas construtivas constroem uma solução a partir da instância do problema, ou seja, constroem a solução de forma incremental escolhendo passo a passo o melhor candidato de acordo com algum critério inserindo-o na solução até gerar uma solução completa. São geralmente mais simples e fáceis de implementar se comparadas às metaheurísticas. A principal utilidade dos algoritmos construtivos é ser entrada dos algoritmos iterativos.
 
 A forma de escolha de cada elemento a ser inserido a cada passo varia de acordo com a função de avaliação adotada, a qual, por sua vez, depende do problema abordado. Dois métodos construtivos comuns na geração de solução inicial são: Construção Aleatória e Construção Gulosa.
 
@@ -353,7 +353,7 @@ Em linhas gerais, essa classe de heurísticas partem de uma solução inicial qu
 
 #### 4.3.1 Conceito de Vizinhança
 
-Fraga [Fraga2006] define a vizinhança de uma solução da seguinte forma: seja S o conjunto de todas as soluções possíveis para um determinado problema de otimização e f a função objetivo a minimizar. Uma função g, que varia com a estrutura do problema tratado, associa cada solução s e S a uma vizinhança N(s) ç S. Um movimento m transforma uma solução s em uma outra solução s' , que esteja em sua vizinhança. Logo, s' e N(s) é chamado de vizinho de s. A operação da aplicação do movimento m em s gerando o elemento s' pode ser representada da seguinte forma: s' s m.
+Fraga [Fraga2006] define a vizinhança de uma solução da seguinte forma: seja S o conjunto de todas as soluções possíveis para um determinado problema de otimização e f a função objetivo a minimizar. Uma função g, que varia com a estrutura do problema tratado, associa cada solução s e S a uma vizinhança N(s) ç S. Um movimento m transforma uma solução s em uma outra solução s', que esteja em sua vizinhança. Logo, s' e N(s) é chamado de vizinho de s. A operação da aplicação do movimento m em s gerando o elemento s' pode ser representada da seguinte forma: s' s m.
 
 A figura 4.2 demonstra o pseudocódigo de um algoritmo de refinamento que recebe uma solução qualquer e retoma o melhor vizinho da mesma, caso exista.
 
@@ -375,7 +375,7 @@ Figura 4.3 - Ilustração de buscas locais parindo de soluçaes aleatórias.
 
 #### 4.3.2 Método de Descida Clássico
 
-O mais antigo método de procura em vizinhança é o método da descida. Seja f uma frnção que avalia uma solução. O método da descida consiste em 3 passos apresentados na figura 4.4.
+O mais antigo método de procura em vizinhança é o método da descida. Seja $f$ uma função que avalia uma solução. O método da descida consiste em 3 passos apresentados na figura 4.4.
 
 ```c
 procedimento Método da Descida
@@ -427,7 +427,7 @@ Simulated Annealing (SA), um método de otimização bastante geral, se destaca 
 
 #### 4.5.1 Analogia Física
 
-"Annealing é o processo utilizado para fiadir um metal, onde este é aquecido a uma temperatura elevada e em seguida é resfriado lentamente, de modo que o produto final seja uma massa homogênea" [Haeser__2008].
+"Annealing é o processo utilizado para fundir um metal, onde este é aquecido a uma temperatura elevada e em seguida é resfriado lentamente, de modo que o produto final seja uma massa homogênea" [Haeser__2008].
 
 A ideia fundamental do SA está baseada nesta observação fisica da matéria: a obtenção de estruturas cristalinas é feita através do super aquecimento e resfriamento lento da substância, o que induz o sistema a atingir o nível mais baixo de energia possível. Quanto mais organizada a esü•utura cristalina de um material, menor sua energia.
 
@@ -479,7 +479,7 @@ e
 
 $Q(s) = \sum_{Q^n}^{i=Q_1} \alpha_j q_j $ (5.3)
 
-em que é o números de vezes que a restrição i E {RI ...Rn} , e qj(s) os requisitos de qualidade j c (Ql Qn) não são atendidos na solução s. M é um parâmetro de penalidade associado ao não atendimento das restrições, enquanto aj O é a penalidade associada ao requisito de qualidade qj. A ideia de Subramanian et al [Subramanian__2011], foi permitir ao usuário atribuir valores às penalimções referentes aos requisitos de qualidade diretamente proporcionais às suas respectivas relevâncias, permitindo este gerar diferentes soluçOes, por meio da variação de tais penalidades.
+em que é o números de vezes que a restrição i E {RI ...Rn}, e qj(s) os requisitos de qualidade j c (Ql Qn) não são atendidos na solução s. M é um parâmetro de penalidade associado ao não atendimento das restrições, enquanto aj O é a penalidade associada ao requisito de qualidade qj. A ideia de Subramanian et al [Subramanian__2011], foi permitir ao usuário atribuir valores às penalimções referentes aos requisitos de qualidade diretamente proporcionais às suas respectivas relevâncias, permitindo este gerar diferentes soluçOes, por meio da variação de tais penalidades.
 
 Uma solução viável para este modelo só ocorre quando R(s) assume valor. zero, isto ocorre quando cada termo se anula. Para alcançar este objetivo, o parâmetro de penalidade M deve ter um valor suficientemente elevado na função de
 avaliação.
@@ -585,7 +585,7 @@ inicio
     fim-enquanto;
 ```
 
-O algoritmo, na linha 2 se inicia recebendo o número de horas/aulas da disciplina a ter seus horários alocados na matriz timeslot. Esses horários são alocados dois a dois enquanto possível nas linhas de 7 a 11, ou seja, somente no caso de disciplinas com número de horas/aulas ímpar, que um horário apenas será alocado sozinho, nunca três horários seguidos. A primeira alocação é feita nas linhas 12 a 22. Na linha 15 a variável itd recebe o dia de preferência da primeira alocação de acordo com a matriz de preferência. Na linha 17 a função BuscaNoDia verifica se é viável a alocação desses horários no dia desejado. Se for possível é feita a alocação, caso contrário, um próximo dia de acordo com a matriz de preferência será avaliado. Após a primeira alocação a segunda alocação é feita nas linhas 24 a 31 , seguindo o mesmo procedimento da primeira alocação através da função BuscaNoDia. O que difere nos dois blocos de alocação é maneira como a matriz de preferência é percorrida para obtenção do índice da próxima preferência. Na primeira alocação percorre-se a primeira coluna da matriz. Na segunda alocação percorre-se a linha correspondente ao índice da primeira alocação.
+O algoritmo, na linha 2 se inicia recebendo o número de horas/aulas da disciplina a ter seus horários alocados na matriz timeslot. Esses horários são alocados dois a dois enquanto possível nas linhas de 7 a 11, ou seja, somente no caso de disciplinas com número de horas/aulas ímpar, que um horário apenas será alocado sozinho, nunca três horários seguidos. A primeira alocação é feita nas linhas 12 a 22. Na linha 15 a variável itd recebe o dia de preferência da primeira alocação de acordo com a matriz de preferência. Na linha 17 a função BuscaNoDia verifica se é viável a alocação desses horários no dia desejado. Se for possível é feita a alocação, caso contrário, um próximo dia de acordo com a matriz de preferência será avaliado. Após a primeira alocação a segunda alocação é feita nas linhas 24 a 31, seguindo o mesmo procedimento da primeira alocação através da função BuscaNoDia. O que difere nos dois blocos de alocação é maneira como a matriz de preferência é percorrida para obtenção do índice da próxima preferência. Na primeira alocação percorre-se a primeira coluna da matriz. Na segunda alocação percorre-se a linha correspondente ao índice da primeira alocação.
 
 Esta função Alocar Disciplina é chamado através do procedimento Alocação Inicial (algoritmo 5.2). No algoritmo 5.2, o primeiro passo para se iniciar a construção de uma solução é carregar todos os dados para o programa. Para este projeto os dados a serem inseridos são os professores e as disciplinas. Como não é feita a alocação de professor, cada disciplina já é inserida com seu respectivo professor, assim como também suas horas/aulas e o período no qual pertence.
 
@@ -794,7 +794,7 @@ O resultado da solução construtiva com os códigos das disciplinas dos períod
 Figura 6.7 - Soluçao construtiva: Caso perfodos pares.
 Figura 6.8 - Solução da Heurística de melhoria: Caso períodos pares.
 
-A figura 6.9, é apresentada a solução para o melhor resultado da função objetivo encontrado para os dados dos períodos pares após a aplicação da metaheurística Simulated Anneling. Assim como no exemplo anterior, não houve registro de piora da frnção objetivo e nem de seu valor ter chegado a zero. O valor menor encontrado foi 15.
+A figura 6.9, é apresentada a solução para o melhor resultado da função objetivo encontrado para os dados dos períodos pares após a aplicação da metaheurística Simulated Anneling. Assim como no exemplo anterior, não houve registro de piora da função objetivo e nem de seu valor ter chegado a zero. O valor menor encontrado foi 15.
 
 Figura 6.9 - Solução da metaheurística Simulated Annealing: Caso períodos pares.
 
