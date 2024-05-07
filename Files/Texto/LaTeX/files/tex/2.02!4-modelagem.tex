@@ -82,3 +82,13 @@ As \textbf{funções} são as responsáveis por executar as operações no banco
 O \textbf{banco de dados} recebe a requisição, processa a operação, e então retorna o status da operação. Esse retorno é então repassado camada por camada, até chegar ao \textit{frontend}, onde o usuário final pode visualizar o resultado da operação.
 
 \textbf{Resumidamente}: O \textbf{\textit{frontend}} envia uma requisição HTTP com uma carga de informações a um \textbf{\textit{endpoint}}, que encaminha a requisição a uma \textbf{função} específica que executa uma operação no \textbf{banco de dados}, assim retornando o status da operação ao \textit{frontend}.
+
+\section{Diferença dos trabalhos anteriores} \label{sec:diferenca} % 4.6
+
+Os trabalhos mais próximos ao presente, quanto a instituição são os trabalhos feitos por \citeonline{Sanya2013} e \citeonline{Ricardo2014}, porém, o presente trabalho se distingue em algumas questões.
+
+Talvez uma das mais marcantes distinções é a visualização presente nos dois trabalhos anteriores onde são considerados um limite de cinco disciplinas por horário, pois ambos consideram em seus trabalhos que o curso de computação está dividido entre as cinco turmas de cada grupo de períodos, sejam as do semestre ímpar (1, 3, 5, 7 e 9) ou as do semestre par (2, 4, 6, 8 e 10). No entanto, o presente trabalho avalia que, é mais condizente com a realidade da instituição se for considerado que os alunos tendem a não seguir completamente essa subdivisão, tendendo a ficar com disciplinas de semestres diferentes geralmente aquém do esperado, mas também podendo estar além do que se espera.
+
+Outra característica marcante é a dependência de salas disponíveis que comportem o número de alunos esperados para a turma, o que não é considerado pelos autores, visto que esta característica não é vista como pertencente ao escopo da Coordenação do Curso de Ciência da Computação. Já neste trabalho, considera-se que esta informação é essencial para que haja a confirmação da validade da alocação da turma. Além disso, como existem diversos outros cursos que utilizam as salas do CCT, é importante que a coordenação tenha conhecimento sobre a disponibilidade das salas para que possa alocar as turmas de forma eficiente, sendo então necessário o preenchimento de informações sobre as disciplinas necessárias para os outros cursos.
+
+Existem também alguns critérios usados por \citeonline{Sanya2013} e \citeonline{Ricardo2014} que não são considerados no presente trabalho, como a preferência de professores associados e professores contratados, e o desejo por se evitar alocar disciplinas que possuam aulas em horários próximos ou que sobreponham o horário de almoço.
