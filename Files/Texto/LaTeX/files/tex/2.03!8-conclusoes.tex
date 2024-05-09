@@ -1,45 +1,38 @@
-\chapter{Conclusões} \label{chap:conclusoes}
+\chapter{Conclusões} \label{chap:conclusoes} % CONCLUIR CAPÍTULO POR CAPÍTULO
 
-% CONCLUIR CAPÍTULO POR CAPÍTULO
+Estando no início do fim, seguiremos agora numa jornada retrospectiva ao que foi abordado no corrente trabalho.
 
-O problema de organização de grade horária no ensino superior tem sido amplamente estudado por diversos pesquisadores. Devido sua natureza multidimensional e com forte tendência a especificidades, este campo de estudo se mostra como amplo e complexo.
+% \section{Contexto acadêmico}
 
-Através da revisão bibliográfica, foi possível observar que a maioria dos trabalhos se foca em um método heurístico de solução, onde se busca uma solução ótima, ou próxima do ótimo, através de um método de busca. Entretanto, o presente trabalho se propõe a uma abordagem diferente, onde se busca uma solução boa o suficiente para que seja utilizada na prática, mesmo que não seja ótima, isso através do método de manipulação manual dos dados.
+Pudemos ver através da \hyperref[chap:marco]{pesquisa acadêmica} aos artigos e trabalhos relacionados com a área da construção de grades horárias em específico, o \textit{university course timetabling}, que a área é vasta, tanto em quantidade de artigos publicados quanto às suas possibilidades de pesquisa e desenvolvimento. Uma das principais questões que mantêm a área em constante inconclusão é o nível de especificidade que cada instituição de ensino possui, o desafio deixa de ser a implementação do método resolutivo, e passa a ser modelar o problema específico e lidar com as preocupações dos usuários. A UENF não é diferente, já tendo sido alvo de pesquisas e desenvolvimentos de sistemas de otimização de grade horária em anos anteriores.
 
-Para este fim foi desenvolvido um sistema de suporte à decisão para auxiliar os setores da Universidade Estadual do Norte Fluminense Darcy Ribeiro (UENF) responsáveis pela criação de grades horárias. O sistema foi desenvolvido com o intuito de ser utilizado como uma ferramenta auxiliar, onde os usuários possam manipular os dados de forma mais intuitiva e visual, assim reduzindo a necessidade de retrabalho e aumentando a produtividade.
+% \section{Estrutura da instituição}
 
-O sistema permite que as quatro operações básicas de armazenamento persistente, sendo elas a criação, leitura, edição e deleção de dados. Com isso, os usuários podem adicionar manualmente as informações referentes ao trabalho de criação de grade horária de forma centralizada, assim reduzindo a necessidade de se lidar com diversos arquivos e planilhas. Facilitando também a visualização de informações, como a alocação de turmas, que pode ser visualizada de forma gráfica, assim facilitando a identificação de conflitos e problemas. O que consequentemente tende a agilizar o processo de busca por novas soluções e a redução dos conflitos.
+Visando enfrentar diretamente o problema da especificidade e modelagem do problema na UENF \hyperref[chap:instituicao]{foi feito um estudo sobre como os diversos setores relacionados à construção da grade horária interagem entre si}, quais são os seus responsáveis e qual é a sequência de ações que cada setor realiza para a construção da grade horária. Essa pesquisa exploratória foi realizada através de buscas por documentos oficiais da UENF e entrevistas com os responsáveis de cada setor.
 
-% Tendo atingido este objetivo, espera-se que o sistema possa ser utilizado na prática, e que possa ser aprimorado e melhorado com o tempo.
+% Talvez eu deveria enxugar mais todo o capítulo em um só parágrafo
 
+% \subsection{Documentos Oficiais}
 
-Estando no início do fim, seguiremos agora numa jornada retroativa ao que foi feito até então e os resultados obtidos.
+Com base nos \hyperref[sec:estatuto]{documentos oficiais da UENF}, foi possível identificar os setores responsáveis pela construção da grade horária, que são a Secretaria Acadêmica, a Direção de Centro, a Chefia do Laboratório e a Coordenação do Curso. Também relacionado com o processo de oferecimento das turmas está o Sistema Acadêmico da UENF, não sendo ele recorrentemente citado nas documentações, mesmo que no presente momento seja um dos elementos de interligação entre os setores.
 
-\section{Contexto acadêmico} % ### 7.1.
+% \subsection{Entrevistas}
 
-Pudemos ver através da pesquisa acadêmica aos artigos e trabalhos relacionados com a área da construção de grades horárias em específico, o \textit{university course timetabling}, que a área é vasta, tanto em quantidade de artigos publicados quanto com muitas possibilidades de pesquisa e desenvolvimento que pode ser visto na revisão literária realizada por \citeonline{Alencar2019}. Uma das principais questões que mantêm a área em constante inconclusão é o nível de especificidade que cada instituição de ensino possui, o desafio deixa de ser a implementação do método resolutivo, e passa a ser modelar o problema específico e lidar com as preocupações dos usuários, como é concluído por \citeonline{Murray2007}.
+Como o sistema pretendido é voltado para se enquadrar no contexto prático e não apenas no teórico visto previamente, viu-se necessário a realização de pesquisas qualitativas em forma de \hyperref[sec:entrevistas]{entrevista} com os responsáveis de cada setor para entender suas percepções pessoais à realidade prática recorrente na instituição. Com isto, pode-se obter informações mais detalhadas da realidade prática da UENF, que muitas vezes se encontra além daquilo que é descrito nos documentos oficiais.
 
-A UENF não é diferente, já tendo sido alvo de pesquisas e desenvolvimentos de sistemas de otimização de grade horária em anos anteriores, em especial as monografias de \citeonline{Sanya2013} e \citeonline{Ricardo2014}, mas que não foram adotados pela instituição mesmo que representassem a eficiência da resolução do problema.
+% \subsection{Formulário}
 
-Uma alternativa encontrada para contornar a dificuldade encontrada pelos trabalhos anteriores na UENF no campo da modelagem do problema foi utilizar de uma abordagem voltada para a Interação Humano-Computador, como feito por \citeonline{Andre2018}, para a construção de um sistema de otimização de grade horária, que permitisse a participação ativa dos usuários na construção da grade horária, o que poderia facilitar a aceitação do sistema pela instituição.
+Para avaliar a percepção dos alunos quanto à construção da grade horária, foi elaborado um \hyperref[sec:formulario]{formulário} com perguntas abertas e fechadas, respondido por mais de 200 alunos da UENF. Com isso, constatando considerável insatisfação dos alunos com o processo de construção da grade horária, cabendo assim um aprimoramento no processo.
 
-\section{Estrutura da instituição}
+% \section{Modelagem}
 
-Visando enfrentar diretamente o problema da especificidade e modelagem do problema na UENF. Para tanto foi feito um estudo sobre a forma como os diversos setores relacionados à construção da grade horária interagem entre si, quais são os seus responsáveis e qual é a sequência de ações que cada setor realiza para a construção da grade horária.
+Uma alternativa encontrada para contornar a dificuldade encontrada pelos trabalhos anteriores na UENF no campo da \hyperref[chap:modelagem]{modelagem do problema} foi utilizar uma abordagem diferente, onde se busca uma solução boa o suficiente para que seja utilizada na prática, mesmo que não seja ótima, isso através do método de manipulação manual dos dados, assim permitindo a participação ativa dos usuários na construção da grade horária, o que poderia facilitar a aceitação do sistema pela instituição.
 
-% Não cito sobre todos eles na parte da organização, devo citar.
+% \section{Desenvolvimento}
 
-Com base nos documentos oficiais da UENF, foi possível identificar os setores responsáveis pela construção da grade horária, que são a Secretaria Acadêmica, a Direção de Centro, a Chefia do Laboratório e a Coordenação do Curso. Também relacionado com o processo de oferecimento das turmas está o Sistema Acadêmico da UENF, não sendo ele recorrentemente citado nas documentações, mesmo que no presente momento esteja interligado entre esses setores.
+Para este fim foi \hyperref[chap:desenvolvimento]{desenvolvido um sistema de suporte à decisão} para auxiliar os setores da Universidade Estadual do Norte Fluminense Darcy Ribeiro (UENF) responsáveis pela criação de grades horárias. O sistema foi desenvolvido com o intuito de ser utilizado como uma ferramenta auxiliar, onde os usuários possam manipular os dados de forma mais intuitiva e visual, assim reduzindo a necessidade de retrabalho e aumentando a produtividade.
 
 O sistema permite que as \hyperref[sssec:Funcionalidades Iniciais]{quatro operações básicas de armazenamento persistente}, com isso, os usuários podem adicionar manualmente as informações referentes ao trabalho de criação de grade horária de forma centralizada, assim reduzindo a necessidade de se lidar com diversos arquivos e planilhas. Facilitando também a visualização de informações, como a alocação de turmas, que pode ser \hyperref[fig:multiFiltros]{visualizada de forma gráfica}, assim facilitando a \hyperref[sec:conflitos]{identificação de conflitos}. O que consequentemente tende a agilizar o processo de busca por novas soluções e a redução dos conflitos.
-
-\subsection{Entrevistas}
-
-Como o sistema pretendido é voltado para se enquadrar no contexto prático, viu-se necessário a realização de pesquisas qualitativas em forma de entrevista com os responsáveis de cada setor para entender suas percepções pessoais à realidade prática recorrente na instituição. Com isto, pode-se obter informações mais detalhadas.
-
-Por parte da \textbf{Direção do CCT}, viu-se a existência de termos específicos para certos agrupamentos de disciplinas/turmas (anuais, ímpares, pares, ``de serviço'', ``Ciclo básico'', repetentes); a preferência por alocar disciplinas ofertadas a múltiplos cursos em horários fixos; a não preferência por horários casados (em um mesmo horário em dias de semana com um dia de distância entre si); recorrência majoritária de horários de turmas que duram 2 horas, mas regular necessidade de turmas com horários que durem 3 horas, sendo esses alocados preferencialmente às 10h da manhã; as alterações de alocação ocorrem até o final do período; alocar primeiro as disciplinas de serviço e que têm maior demanda encaminha os conflitos futuros a turmas menores de um mesmo curso, o que pode facilitar a resolução do conflito.
-
-Com o \textbf{desenvolvedor do Sistema Acadêmico}
 
 O código-fonte para o sistema desenvolvido está disponível no \hyperref[apendice:CodigoFonte]{apêndice}.
 
@@ -47,30 +40,20 @@ O código-fonte para o sistema desenvolvido está disponível no \hyperref[apend
 
 Como trabalhos futuros, vê-se uma ampla gama de pesquisa e aprimoramento ao presente trabalho, visto que este busca um método alternativo de solução ao mesmo problema abordado por outros dois pesquisadores em tempos anteriores. Pode-se então elaborar uma conexão entre o atual sistema e modelos aos métodos heurísticos propostos, permitindo então uma abordagem híbrida humano-computador na busca da grade horária ótima. Sugere-se inclusive o estudo sobre a aplicação de métodos de programação inteira, visto que através da revisão bibliográfica este método apresentou consideráveis resultados.
 
-Assim como os modelos anteriores apresentaram diversas incongruências com a realidade prática da universidade estudada, é esperado que este trabalho acabe por trilhar o mesmo caminho, visto que o problema em questão realmente apresenta grande parte de sua complexidade no entendimento e modelagem de como as diversas partes da instituição interagem entre si, porém, espera-se que este documento possa servir como uma boa base para o entendimento de sua estrutura.
+Quanto ao \textit{software}, mesmo que o prioritário seja a sua funcionalidade, é esperado que o seu design seja o mais intuitivo, fluido e prático quanto for possível. Sendo esta tarefa direcionada mais à experiência do usuário, possivelmente tangenciando o problema central de construção de grades horárias. Quanto às tarefas indicadas para este processo, atualmente seu projeto conta com \LinkToURL{\LinkIssues}{261 \textit{issues} abertas} no \LinkToURL{\LinkProjects}{projeto} do \LinkToURL{\LinkRepo}{repositório do \textit{GitHub}}, podendo ser um bom ponto de partida para futuros desenvolvedores.
 
-Quanto ao software, mesmo que o prioritário seja a sua funcionalidade, é esperado que o seu design seja o mais intuitivo, fluido e prático quanto for possível. Sendo esta tarefa direcionada mais à experiência do usuário, possivelmente tangenciando o problema central de construção de grades horárias.
+Como um dos principais desafios na área de construção de grade horária é a modelagem do problema, assim como ocorreu com os modelos anteriores, é esperado que este trabalho acabe por trilhar o mesmo caminho, visto que o problema em questão realmente apresenta grande parte de sua complexidade no entendimento e modelagem de como as diversas partes da instituição interagem entre si, porém, espera-se que este documento possa servir como uma boa base para o entendimento de sua estrutura.
 
-Considerando que as duas tentativas anteriores resultaram em métodos que embora atingissem seu objetivo, não foram implementados na prática, tem-se como esperado que o mesmo ocorra com este trabalho. Com isso, espera-se que em trabalhos futuros se estude e analise os motivos de falha do uso prático do atual sistema.
-
-% EVERYTHING IS A DRAFT
-
-% O TEU TRABALHO É APENAS UM PASSO, NÃO O FIM. Não queira fazer tudo, foque em fazer o máximo que você puder para que o trabalho possa ser melhor desenvolvido por outros.
-
-\subsection{Aprimorando o experimento}
-
-% \dots
-
-Aumento de conflitos a serem resolvidos
+Assim como ocorrido anteriormente, é esperado que por diversos motivos este trabalho também não implementados na prática. Tendo isso em vista, se o indesejado ocorrer, espera-se que a principal linha de prosseguimento deste trabalho seja pesquisar, descobrir, analise e corrigir os motivos de falha do uso prático do atual sistema.
 
 \subsection*{Apelo}
 
 Eu gostaria de deixar aqui um alerta para quem for utilizar este documento como base para futuros trabalhos: a maior dificuldade a ser superada é o fator organizacional. A minha percepção é de que a UENF atualmente se encontra tal qual um osso quebrado que se regenerou sem o uso de gesso para o fixar no local certo: funciona, mas não tão bem quanto seria capaz. E, assim como no caso ósseo, para que você atinja um resultado ótimo, certamente terá que quebrar algumas estruturas já consolidadas para que possa reorganizá-las de forma mais eficiente.
 
-Neste trabalho tentei pavimentar o caminho na direção que acredito ser a mais apropriada para a adoção do sistema. Nesse caminho, acabei abrindo mão de meus desejos pessoais que envolviam o sistema direcionado às demandas dos alunos, visto que, mesmo que atingisse um resultado ótimo aos alunos, nada adiantaria se o sistema não fosse adequado àqueles que o usarão. Eu espero que este trabalho não se torne apenas mais uma monografia que será esquecida em uma prateleira, mas sim que ele possa ser utilizado como um guia para a construção do sistema que um dia sonhei em desenvolver.
+Neste trabalho tentei pavimentar o caminho na direção que acredito ser a mais apropriada para a adoção do sistema. Nesse caminho, acabei abrindo mão de meus desejos pessoais que envolviam o sistema direcionado às demandas dos alunos, visto que, mesmo que atingisse um resultado ótimo aos alunos, nada adiantaria se o sistema não fosse adequado àqueles que o usarão. Eu espero que este trabalho não se torne apenas mais uma monografia que será esquecida em uma prateleira, mas sim que ele possa ser utilizado como um guia para a construção do sistema que um dia sonhei em desenvolver. Por isso se lembre: o teu trabalho é apenas um passo, não o fim. Não queira fazer tudo, foque em fazer o máximo que você puder para que o trabalho atinja seu objetivo e se torne o melhor possível para que seja desenvolvido por outros. Afinal, \textbf{\textit{everything if a draft}} \cite{TheCultOfDone2016}.
 
 Se você chegou até aqui, eu agradeço por ter lido este trabalho. E, se você for um estudante da UENF, eu peço que você não desista de lutar por um ensino melhor. A UENF é uma instituição que tem um grande potencial, e eu acredito que ela pode ser muito mais do que é hoje. Eu espero que este trabalho possa ser um pequeno passo na direção de um futuro melhor para a nossa universidade.
 
 Caso o sistema ainda esteja em funcionamento, excelente, isso significa que consegui atingir um de meus objetivos, então, continue a aprimorá-lo. Caso contrário, torne como seu objetivo consertar os meus erros. Descubra o motivo da não adoção do sistema e corrija-o. E, se possível, me avise, eu adoraria saber que o meu trabalho não foi em vão.
 
-Além do desenvolvimento da monografia como objetivo para a conclusão do curso, o que desejo é conseguir auxiliar as pessoas em suas atividades diárias. Ainda mais se considerarmos que este sistema, se bem executado, tende a ajudar semestralmente centenas, senão milhares, de alunos e professores semestralmente.
+Além do desenvolvimento da monografia como objetivo para a conclusão do curso, o que desejo é conseguir auxiliar as pessoas em suas atividades diárias. Ainda mais se considerarmos que este sistema, se bem executado, tende a ajudar semestralmente centenas, senão milhares, de alunos e professores. Por isso, se não sendo adotado atualmente, espera-se que o sistema possa ser aprimorado e posto em prática no futuro.
