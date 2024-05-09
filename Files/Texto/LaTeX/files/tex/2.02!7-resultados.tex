@@ -69,21 +69,26 @@ A página \textbf{Alunos} (\autoref{fig:alunos}), por fim, apresenta a possibili
 
 \subsection{Funcionalidades} \label{ssec:funcionalidades}
 
-X funcionalidades principais, com hyperlinks
-
-\hyperref[sssec:CRUD]{CRUD}
-\hyperref[sssec:Análise histórica]{Análise histórica}
-\hyperref[sssec:Criação de grade inicial]{Criação de grade inicial}
-\hyperref[sssec:Visualização de conflitos]{Visualização de conflitos}
-\hyperref[sssec:Visualização de tabelas horárias]{Visualização de tabelas horárias}
-
+Nas páginas apresentadas, foram implementadas diversas funcionalidades que permitem a interação do usuário com o sistema. Dentre elas, destacam-se as \hyperref[sssec:CRUD]{quatro operações básicas de armazenamento persistente}, a \hyperref[sssec:Análise histórica]{análise histórica}, a \hyperref[sssec:Criação de grade inicial]{criação de grade inicial}, a \hyperref[sssec:Visualização de conflitos]{Visualização de conflitos} e a \hyperref[sssec:Visualização de tabelas horárias]{visualização das tabelas horárias}.
 
 \subsubsection{CRUD} \label{sssec:CRUD}
 
+Com exceção da página inicial e da página de grade de horários, todas as páginas apresentam as operações de criação, leitura, atualização e exclusão de seus respectivos itens. Isso se dá pois esta é a função básica de um sistema de gerenciamento de banco de dados, sendo necessária para que todas as outras funcionalidades possam ser implementadas e utilizáveis.
+
 \subsubsection{Análise histórica} \label{sssec:Análise histórica}
+
+O conceito da \textbf{Análise Histórica} é a capacidade de visualizar quais foram todos os horários em que um determinado item foi alocado. Isso é útil para avaliar os padrões emergentes nas alocações dos recursos.
 
 \subsubsection{Criação de grade inicial} \label{sssec:Criação de grade inicial}
 
+A \textbf{Criação de Grade Inicial}, já descritas no \hyperref[ssec:Heurística]{segmento sobre heurística de criação de grade}, é uma funcionalidade que permite a criação de uma grade de horários inicial através da avaliação das alocações anteriores para determinada disciplina. Através dela é possível criar uma grade de horários inicial para o curso de Ciência da Computação em poucos segundos.
+
 \subsubsection{Visualização de conflitos} \label{sssec:Visualização de conflitos}
 
+Na página \textbf{Turmas} e principalmente na página \textbf{MultiTurmas}, é possível visualizar os conflitos existentes entre as turmas. Os \hyperref[sec:conflitos]{conflitos} são apresentados de forma clara e objetiva, permitindo a rápida identificação e posterior resolução.
+
 \subsubsection{Visualização de tabelas horárias} \label{sssec:Visualização de tabelas horárias}
+
+Por fim, especificamente na página \textbf{Grade de Horários}, é possível visualizar as tabelas horárias de todas as turmas cadastradas, podendo haver também a filtragem por ano, semestre, categoria, disciplina, professor e sala. Com esta visualização tabular, pode-se gerar as grades de horários específicas das turmas de disciplinas de cada um dos períodos letivos, bem como distingue as turmas entre as que pertencem à ementa do Curso de Ciência da Computação e as que não pertencem.
+
+Assim como no caso da \hyperref[sssec:Análise histórica]{análise histórica}, a visualização das tabelas horárias é uma funcionalidade que permite a visualização de padrões emergentes nas alocações dos recursos.
