@@ -14,20 +14,14 @@ O sistema foi desenvolvido utilizando a linguagem de programação JavaScript em
 
 \subsection{Páginas} \label{ssec:paginas}
 
-\autoref{fig:main}
-\autoref{fig:multiFiltros}
-\autoref{fig:multiConflitos}
-\autoref{fig:multiDisciplinas}
-\autoref{fig:grade}
-\autoref{fig:turmas}
-\autoref{fig:professores}
-\autoref{fig:salas}
-\autoref{fig:disciplinas}
-\autoref{fig:alunos}
+A página inicial (\autoref{fig:main}) apresenta um resumo do objetivo e seu funcionamento básico, informa também sobre atalhos possíveis para uso mais dinâmico do sistema.
+básica de dados, se mostra como uma página importante para futuros desenvolvimentos no campo de alocação de alunos em turmas.
 
 \begin{MyCenteredFigure} \caption{Página inicial do sistema} \label{fig:main}
   \includegraphics[width=\textwidth]{files/img/2.02!7-resultados/1-Main.png}
 \end{MyCenteredFigure}
+
+A página \textbf{MultiTurmas} é repartida em três partes principais: a primeira, com filtros para a seleção das turmas mostradas (\autoref{fig:multiFiltros}); a segunda, com a visualização dos conflitos de horários entre as turmas selecionadas (\autoref{fig:multiConflitos}); e a terceira, com a visualização das disciplinas pendentes de alocação nas turmas selecionadas (\autoref{fig:multiDisciplinas}).
 
 \begin{MyCenteredFigure} \caption{Página de multiturmas com filtros} \label{fig:multiFiltros}
   \includegraphics[width=\textwidth]{files/img/2.02!7-resultados/2-Multiturmas-Filtros.png}
@@ -41,13 +35,19 @@ O sistema foi desenvolvido utilizando a linguagem de programação JavaScript em
   \includegraphics[width=\textwidth]{files/img/2.02!7-resultados/4-Multiturmas-DisciplinasPendentes.png}
 \end{MyCenteredFigure}
 
+A página \textbf{Grade de Horários} (\autoref{fig:grade}) apresenta a grade de horários de todas as turmas, podendo também haver a filtragem de quais turmas serão mostradas.
+
 \begin{MyCenteredFigure} \caption{Página de grade de horários} \label{fig:grade}
   \includegraphics[width=\textwidth]{files/img/2.02!7-resultados/5-Grade de Horários.png}
 \end{MyCenteredFigure}
 
+A página \textbf{Turmas} (\autoref{fig:turmas}) apresenta todas as turmas cadastradas, podendo ser feita a edição ou exclusão individual de cada uma delas. Embora ela apresente um funcionamento similar à página MultiTurmas, tem potencial para trabalhar posteriormente com um ajuste fino específico de cada turma.
+
 \begin{MyCenteredFigure} \caption{Página de turmas} \label{fig:turmas}
   \includegraphics[width=\textwidth]{files/img/2.02!7-resultados/6-Turmas.png}
 \end{MyCenteredFigure}
+
+As páginas \textbf{Professores} (\autoref{fig:professores}), \textbf{Salas} (\autoref{fig:salas}) e \textbf{Disciplinas} (\autoref{fig:disciplinas}) apresentam um funcionamento muito similar entre si. Todas elas permitem as operações de criação, leitura, atualização e exclusão de seus respectivos itens. Além de apresentar também uma tabela inferior onde são listadas os horários histórias em que cada um desses itens foi alocado, podendo haver também a filtragem por ano, semestre, dia e hora.
 
 \begin{MyCenteredFigure} \caption{Página de professores} \label{fig:professores}
   \includegraphics[width=\textwidth]{files/img/2.02!7-resultados/7-Professores.png}
@@ -60,6 +60,8 @@ O sistema foi desenvolvido utilizando a linguagem de programação JavaScript em
 \begin{MyCenteredFigure} \caption{Página de disciplinas} \label{fig:disciplinas}
   \includegraphics[width=\textwidth]{files/img/2.02!7-resultados/9-Disciplinas.png}
 \end{MyCenteredFigure}
+
+A página \textbf{Alunos} (\autoref{fig:alunos}), por fim, apresenta a possibilidade de visualização de todos os alunos cadastrados. Mesmo não possuindo funcionalidades além da manipulação 
 
 \begin{MyCenteredFigure} \caption{Página de alunos} \label{fig:alunos}
   \includegraphics[width=\textwidth]{files/img/2.02!7-resultados/10-Aluno.png}
