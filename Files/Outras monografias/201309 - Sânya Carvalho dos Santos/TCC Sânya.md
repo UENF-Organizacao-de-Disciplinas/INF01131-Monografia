@@ -429,7 +429,7 @@ Simulated Annealing (SA), um método de otimização bastante geral, se destaca 
 
 "Annealing é o processo utilizado para fundir um metal, onde este é aquecido a uma temperatura elevada e em seguida é resfriado lentamente, de modo que o produto final seja uma massa homogênea" [Haeser__2008].
 
-A ideia fundamental do SA está baseada nesta observação fisica da matéria: a obtenção de estruturas cristalinas é feita através do super aquecimento e resfriamento lento da substância, o que induz o sistema a atingir o nível mais baixo de energia possível. Quanto mais organizada a esü•utura cristalina de um material, menor sua energia.
+A ideia fundamental do SA está baseada nesta observação fisica da matéria: a obtenção de estruturas cristalinas é feita através do super aquecimento e resfriamento lento da substância, o que induz o sistema a atingir o nível mais baixo de energia possível. Quanto mais organizada a estrutura cristalina de um material, menor sua energia.
 
 No princípio fisico descrito, quando há o super aquecimento o cristal é levado a sua temperatura de fusão, neste momento as moléculas estão em um estado muito desordenado e se agitam livremente como descrito por Noronha na figura 4.6.
 
@@ -694,41 +694,36 @@ O pseudocódigo do algoritmo Simulated Annealing utilizado neste projeto é apre
 
 Como na literatura as metodologias adotadas são muito distintas para cada SA os parâmetros variam muito, portanto, os valores utilizados para nos parâmetros M, P, L, To e a foram obtidos através de testes computacionais, como será explicado na próxima seção.
 
-``` {Algoritmo 5.3 Simulated Annealing}
-I: Inicio
-2:
-Ler (So, M, P, L, To, a); // Entrada do Algoritmo
-l* Inicialiaçao das variáveis*/
-3:
-Se-So;
-5: 6: Té-To•,
-7: Loop principal - verifica se foram atendidas as condições de término do
-8: algoritmo*/
-9: Repita
-II:
-Loop Interno - Realização de perturbação em uma iteraçao
-12:
-Repita
-13:
-Teste de aceitação de uma soluçao 8/
-16:
-se (AFi O) ou (exp(-AfifD > Randomiza()) entao
-17:
-SeSi,•
-nSucesso 4- nSucesso + 1 ;
-19:
-fim-se
-21:
-Até (nSucesso L) ou (i > P)
-22:
-Atualização da Temperatura t/
-23:
-j «3+1 ; P Atualização do Contador de iterações
-Até (nSucesso=O) ou )
-25:
-26: Retorne(S)
-27: Fim
-```
+**Algoritmo 5.3 Simulated Annealing**
+
+$
+\text{INÍCIO}\\
+\text{LER} (S_0, M, P, L, T_0, \alpha); \text{//Entrada do Algoritmo}\\
+\text{/*Inicialização das variáveis*/}\\
+S \leftarrow S_0;\\
+T \leftarrow T_0;\\
+j \leftarrow 1;\\
+\text{/* Loop principal - verifica se foram atendidas as condições de término do algoritmo */}\\
+\text{REPITA}\\
+\text{⠀⠀⠀} i \leftarrow 1;\\
+\text{⠀⠀⠀} nSucesso \leftarrow 0;\\
+\text{⠀⠀⠀} \text{/* Loop Interno - Realização de perturbação em uma iteração */}\\
+\text{⠀⠀⠀} \text{REPITA}\\
+\text{⠀⠀⠀⠀⠀⠀} S_i \leftarrow Perturba(S);\\
+\text{⠀⠀⠀⠀⠀⠀} \delta F_i \leftarrow f(S_i) - f(S);\\
+\text{⠀⠀⠀⠀⠀⠀} \text{/* Teste de aceitação de uma solução */}\\
+\text{⠀⠀⠀⠀⠀⠀} \text{SE} (\delta F_i \leq 0) \text{ou} (exp(-\delta F_i/T) > Randomiza()) \text{ENTÃO}\\
+\text{⠀⠀⠀⠀⠀⠀⠀⠀⠀} S \leftarrow S_i;\\
+\text{⠀⠀⠀⠀⠀⠀⠀⠀⠀} nSucesso \leftarrow nSucesso + 1;\\
+\text{⠀⠀⠀⠀⠀⠀} \text{FIM-SE}\\
+\text{⠀⠀⠀⠀⠀⠀} i \leftarrow i + 1;\\
+\text{⠀⠀⠀} \text{ATÉ} (nSucesso \geq L) \text{ou} (i > P);\\
+\text{⠀⠀⠀} T \leftarrow \alpha \times T;\\
+\text{⠀⠀⠀} j \leftarrow j + 1;\\
+\text{ATÉ} (nSucesso = 0) \text{ou} (j > M);\\
+\text{RETORNE}(S);\\
+\text{FIM}
+$
 
 ## 6. Resultados computacionais
 
@@ -792,11 +787,11 @@ Após a obtenção da primeira solução, esta se torna um dado de entrada para 
 
 Foram necessários testes computacionais para se chegar aos melhores valores para os parâmetros M, P, L, TO e a. A tabela 6.3 mostra os resultados dos testes. Os valores escolhidos foram determinados observando-se a média e o desvio padrão do valor da função objetivo, considerando-se 10 execuções da heurística para certas combinações dos parâmetros. Os testes foram feitos com os dados dos períodos ímpares, porém foram usados como padrão para qualquer teste, incluindo para os períodos pares. De acordo com os testes os valores escolhidos para foram:
 
-- M = 5000
-- P = 100
-- L- 1000
-- a = 0.2
-- T0 =200
+- $M = 5000$
+- $P = 100$
+- $L = 1000$
+- $\alpha = 0.2$
+- $T_0 =200$
 
 <!-- Tabela 6.3 -->
 
