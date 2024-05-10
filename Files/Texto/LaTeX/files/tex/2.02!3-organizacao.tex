@@ -264,33 +264,14 @@ A criação de grades horárias é um problema complexo, que envolve uma grande 
 Esta seção visa a análise das relações entre estas variáveis, buscando entender como elas se relacionam e como estas relações podem ser utilizadas para a criação de uma grade horária mais eficiente.
 
 \begin{itemize}
-  \item \textbf{Turmas}: as turmas são a base da grade horária, sendo ela a representação da união entre professor, disciplina, alunos, horário e sala. A turma é a representação da oferta de uma disciplina em um determinado horário e local, com um determinado professor e para um determinado grupo de alunos. A turma é a unidade básica da grade horária, e é a partir dela que a grade é construída.
-  \item \textbf{Laboratórios}: os laboratórios são estruturas organizacionais que englobam professores, disciplinas e cursos. Em sua maioria, os laboratórios estão associados a um único curso, entretanto, existem casos em que um laboratório está associado a mais de um curso, como é o caso do LCMAT, que está associado aos cursos de Matemática e de Ciência da Computação.
-        %- Laboratório percente aos centros
-        % - Geralmente (o normal é que) cada laboratório tem um único curso
-        % - LCMAT é o único laboratório que tem dois cursos associados
-        % - Mas existem vários laboratórios que alimentam um único curso
-        % - O curso tá associado a 1:n laboratórios
-        % - O laboratório tá associado a 1:n cursos
-  \item \textbf{Professores}
-        %- Professor pertence ao laboratório
-        % - Tang: professor do LCMAT
-  \item \textbf{Centros}
-  \item \textbf{Salas}
-  \item \textbf{Cursos}
-  \item \textbf{Alunos}
-  \item \textbf{Disciplinas}: um dos pontos principais na criação de uma grade horária é a alocação das disciplinas. As disciplinas são a base da grade horária,
-        % - A disciplina é oferecida pelos laboratórios
-        % - o curso tem aquela disciplina na grade
-        % - A disciplina pode ser demandada por 1:n cursos
-        % - As disciplinas tem as siglas INF de cc/informática e MAT de matemática
-        % - as siglas das disciplinas são por laboratório, ou em casos específicos, são do centro, CCT/CCH, etc
-  \item \textbf{Blocos}
-        %- Físico
-        % - Blocos contém salas
-        % - Salas são administradas por centros
-        % - Centros não estão limitados por blocos
-  \item \textbf{Pactos Sociais}
-        % - São entendidos que certas salas têm por padrão uma certa preferência por certos cursos
-        % - Assim como as disciplinas também são usualmente designadas aos mesmos professores historicamentes
+  \item \textbf{Blocos}: são estruturas físicas que abrigam salas de aula. Cada bloco possui uma quantidade de salas, que são utilizadas para a realização das aulas;
+  \item \textbf{Salas}: são estruturas físicas que abrigam as turmas. Cada sala possui uma capacidade máxima de alunos. Esse limite geralmente está atrelado à quantidade de carteiras disponíveis aos alunos, não sendo então necessariamente fixo, havendo geralmente a possibilidade de solicitar algumas carteiras de salas próximas. Elas estão teoricamente associadas aos blocos, visto que a compõem fisicamente, e são geridas pelos centros, que são responsáveis por distribuí-las. Na prática, algumas salas são preferencialmente utilizadas por determinados cursos, ficando então subgeridas pelos laboratórios;
+  \item \textbf{Centros}: são estruturas organizacionais que gerem os laboratórios e diversas salas. Embora cada centro geralmente esteja associado a um bloco específico, os centros não estão limitados a gerir as salas apenas deste prédio;
+  \item \textbf{Laboratórios}: os laboratórios são estruturas organizacionais que englobam professores, disciplinas e cursos. Em sua maioria, os laboratórios estão associados a um único curso, entretanto, existem casos em que um laboratório está associado a mais de um curso, como é o caso do LCMAT, que está associado aos cursos de Matemática e de Ciência da Computação. Existe também o caso contrário, onde um curso está associado a mais de um laboratório, como é o do Bacharelado em Biologia que está associado a seis laboratórios;
+  \item \textbf{Cursos}: são estruturas organizacionais nos quais os alunos estão matriculados;
+  \item \textbf{Projeto Pedagógico do Curso (PPC)}: é o documento que define a estrutura curricular do curso, contendo as disciplinas obrigatórias, optativas e eletivas, bem como a quantidade de créditos necessários para a conclusão do curso;
+  \item \textbf{Turmas}: as turmas são a base da grade horária, sendo ela a representação da união entre professor, disciplina, alunos, horário e sala. A turma é a representação da oferta de uma disciplina em um determinado horário e local, com um determinado professor e para um determinado grupo de alunos. Mesmo que em sua maioria as disciplinas sejam ofertadas em apenas uma turma, existem casos em que uma disciplina é ofertada em mais de uma turma. Situação essa que ocorre também com a atribuição de professores, havendo então casos em que vários professores estão responsáveis por uma só turma;
+  \item \textbf{Professores}: os professores são aqueles que ministram as disciplinas. Teoricamente professor está vinculado a um laboratório, entretanto, na prática, os professores geralmente são associados aos cursos que geralmente ministram disciplinas. Teoricamente cada professor está passível de ministrar qualquer disciplina de seu laboratório, entretanto, na prática, os professores geralmente têm um conjunto de disciplinas que mais usualmente ministram;
+  \item \textbf{Alunos}: os alunos são aqueles que frequentam as turmas. Cada aluno geralmente está vinculado ao PPC vigente para seu curso no ano de sua matrícula, havendo casos em que se é permitida a mudança de PPC. Segundo o PPC estão definidas quais são as disciplinas que o aluno deve cursar para integralizar o curso;
+  \item \textbf{Disciplinas}: um dos pontos principais na criação de uma grade horária. As disciplinas são ofertadas pelos laboratórios em turmas, que são alocadas em salas pelos Centros. Cada PPC define quais são as disciplinas e pré-requisitos que os alunos precisarão cursar. Uma mesma disciplina pode constar no PPC de diversos cursos. Cada disciplina possui uma carga horária, uma ementa, um nome e um código. Este código é composto por três letras, geralmente indicando o laboratório que o oferta, mas, em casos específicos, está associado a centros;
 \end{itemize}
