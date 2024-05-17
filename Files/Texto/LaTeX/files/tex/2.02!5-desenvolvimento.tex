@@ -1,4 +1,4 @@
-\chapter{Desenvolvimento do sistema de suporte à decisão} \label{chap:desenvolvimento} % ### 5
+\chapter{Desenvolvimento do sistema de suporte à decisão} \label{chap:desenvolvimento}  % ##   5
 
 Este capítulo visa apresentar todo o processo realizado para o desenvolvimento do sistema de suporte à decisão. O propósito desta aplicação é auxiliar o coordenador do curso de Ciência da Computação da UENF na alocação interativa de turmas, professores e salas. O auxílio é dado através de duas formas: a primeira é a \hyperref[par:Solução inicial]{criação automatizada da grade baseada no histórico das grades anteriores}, a segunda é a \hyperref[sec:conflitos]{identificação de conflitos}, como a alocação de uma turma grande demais para a capacidade da turma, com o objetivo de auxiliar no aprimoramento da grade inicialmente gerada.
 
@@ -6,13 +6,13 @@ Inicia-se com a apresentação de \hyperref[sec:projetos]{projetos anteriores} q
 
 Por fim, será apresentado o cerne do sistema que é a \hyperref[sec:conflitos]{identificação e visualização de conflitos}, ou seja, os casos em que a alocação dos recursos gera algum comportamento minimamente indesejável como por exemplo a alocação de uma sala a duas turmas ao mesmo tempo. Serão apresentados os tipos de conflitos que o sistema é capaz de identificar, como eles são visualizados e como o sistema lida com cada um deles. Conclui-se então com a apresentação do \hyperref[sec:preenchimento]{preenchimento do banco de dados} com dados reais.
 
-\section{Projetos anteriores} \label{sec:projetos} % ### 5.1
+\section{Projetos anteriores} \label{sec:projetos}                                      % ###  5.1
 
 Antes do desenvolvimento do presente trabalho, outros projetos já foram idealizados e até mesmo desenvolvidos. Dentre eles, dois se destacam por terem sido os precursores do atual projeto. O primeiro deles, que foi idealizado, mas não desenvolvido, almejava apresentar uma \hyperref[ssec:andamento]{visualização da progressão dos alunos na grade curricular}. O segundo, que foi desenvolvido, realizava o \hyperref[ssec:demanda]{cálculo da demanda}, ou seja, calculava quantos e quais eram os alunos que poderiam se inscrever nas disciplinas. Ambos os projetos se mostram como abordagens paralelas de auxiliar no planejamento do curso de Ciência da Computação da UENF, sendo eles também sistemas de suporte à decisão, mesmo que em menor escala.
 
 Deve-se comentar também sobre os dois trabalhos anteriores desenvolvidos por \citeonline{Sanya2013} e \citeonline{Ricardo2014} que iniciaram os estudos sobre a alocação de turmas no curso de Ciência da Computação na UENF, mas que, como já foram \hyperref[sec:anteriores]{citados previamente}, não se mostra necessária a repetição.
 
-\subsection{Andamento dos alunos} \label{ssec:andamento} % #### 5.1.1
+\subsection{Andamento dos alunos} \label{ssec:andamento}                                % #### 5.1.1
 
 Como interesse próprio, cogitou-se o desenvolvimento de uma plataforma onde se pudesse ver em que ponto os alunos se encontram em relação ao andamento de seus cursos. Para isso, seria necessária a obtenção dos dados dos alunos, seja por parte dos mesmos, do coordenador ou por integração com o sistema acadêmico. Com estes dados, seria possível criar uma interface que mostrasse o andamento dos alunos, quais matérias já foram cursadas, quais estão sendo cursadas e quais ainda faltam. Além disso, seria possível mostrar quais matérias são pré-requisitos para outras. Assim, o aluno e a coordenação poderiam ter uma visão geral de seu andamento e de quais matérias ele precisará cursar para se formar. Esse projeto não saiu do mundo das ideias, entretanto, lá permaneceu sendo maturado.
 
@@ -22,7 +22,7 @@ Como interesse próprio, cogitou-se o desenvolvimento de uma plataforma onde se 
 
 Anos após a idealização dessa funcionalidade, o Sistema Acadêmico da UENF passou a disponibilizar uma funcionalidade semelhante, como pode ser visto na \autoref{fig:andamento}. Nela, é possível ver o andamento do aluno por período, incluindo as disciplinas Eletivas Livres e Eletivas Optativas. Entretanto, essa visualização tabular não ilustra o andamento de todos os alunos simultaneamente, sendo necessário navegar individualmente por cada um deles.
 
-\subsection{Cálculo de demanda} \label{ssec:demanda} % #### 5.1.2
+\subsection{Cálculo de demanda} \label{ssec:demanda}                                    % #### 5.1.2
 
 Ao longo dos semestres, foi percebido que durante o intervalo entre os semestres, os alunos precisam se inscrever nas matérias que desejam cursar no semestre seguinte. Para isso, é necessário que o coordenador saiba quantos alunos estão interessados em cada matéria para que ele possa definir quantas turmas serão abertas. Com este fim em mente, o coordenador dispõe de algumas alternativas como estimar quantos alunos se inscreverão em cada disciplina, checar manualmente no sistema acadêmico quais alunos podem fazer cada matéria, ou então obter diretamente dos alunos através de um formulário em quais disciplinas cada um dos alunos tem a intenção de cursar.
 
@@ -36,7 +36,7 @@ Este código foi desenvolvido em 8 etapas, vistas no \autoref{code:demand}, cada
 
 Embora o código cumpra com seu objetivo, apresenta algumas características limitantes. A primeira é que os PDFs precisam ser obtidos manualmente, um por um, pelo coordenador, sendo ela por si só uma tarefa extenuante, o que não é desejado. Além disso, o seu uso não é muito intuitivo, sendo necessário que o usuário lide com o prompt de comando e instale as dependências necessárias, o que acaba trazendo uma dificuldade a mais ao usuário. O código também apresenta limitações por sistema operacional, não sendo garantido o seu funcionamento em sistemas operacionais diferentes do Windows.
 
-\section{Acesso aos dados acadêmicos da instituição} \label{sec:LGPD} % ### 5.2
+\section{Acesso aos dados acadêmicos da instituição} \label{sec:LGPD}                   % ###  5.2
 
 Em sua concepção original, o presente trabalho visaria integrar o sistema desenvolvido com o atual sistema acadêmico da UENF. Essa abordagem foi descartada devido às dificuldades encontradas por parte do setor administrativo da UENF que, devido à \LinkToURL{\LinkLGPD}{Lei Geral de Proteção dos Dados (LGPD)}, não podem divulgar dados dos alunos, mesmo anonimizados.
 
@@ -46,11 +46,11 @@ Segundo o \LinkToURL{\LinkLGPDEstudoTécnico}{Estudo Técnico sobre o tratamento
 
 Apesar das possibilidades de meios legalmente válidos para a aquisição dos dados, optou-se por abandonar a integração com o Sistema Acadêmico e o uso de dados reais dos alunos já existentes na plataforma. Rumando-se então para uma abordagem de inserção manual de dados por parte dos usuários do sistema.
 
-\section{Prototipagem} \label{sec:prototipagem} % ### 5.3
+\section{Prototipagem} \label{sec:prototipagem}                                         % ###  5.3
 
 A criação de protótipos, seguindo a abordagem tomada por \citeonline{Andre2018}, se mostra como essencial para que se mantenha a constante satisfação por parte dos \textit{stakeholders} e quais mudanças sugerem ao desenvolvimento do projeto, assim reduzindo a necessidade de retrabalho e de não alcançar as expectativas do projeto. Para este fim, foram feitos os designs iniciais das telas do sistema usando o software de design \LinkToURL{\LinkFigma}{Figma}, designs esses que representam apenas o esboço, e não um sistema funcional. Esse esboço serviu como uma base visual de como o sistema estaria no final.
 
-\subsection{Protótipos de componentes} \label{ssec:componentes} % #### 5.3.1
+\subsection{Protótipos de componentes} \label{ssec:componentes}                         % #### 5.3.1
 
 Antes de seguir com a descrição das telas, é válido descrever os componentes que foram utilizados na construção dos protótipos. Os componentes principais são os cartões de turma (\autoref{fig:cartão_de_turma}) e as caixas de seleção (\autoref{fig:selects}).
 
@@ -103,7 +103,7 @@ Cada uma dessas versões dos cartões de turma se mostra com um propósito espec
 
 A \autoref{fig:selects} mostra os protótipos de caixas de seleção que foram utilizados para a seleção de dados. Na \autoref{fig:SingleSelect} está a caixa de seleção onde o usuário pode selecionar apenas uma opção. Já na \autoref{fig:MultiSelect} a caixa de seleção permite ao usuário selecionar várias opções.
 
-\subsection{Protótipos de páginas} \label{ssec:páginas} % #### 5.3.1
+\subsection{Protótipos de páginas} \label{ssec:páginas}                                 % #### 5.3.2
 
 Aqui serão elecadas as sete páginas esboçadas para o sistema. Sendo elas a \hyperref[fig:main]{página principal}, a \hyperref[fig:CRUD_main]{página de seleção}, a \hyperref[fig:CRUD_salas]{página de salas}, a \hyperref[fig:CRUD_alunos]{página de alunos}, a \hyperref[fig:CRUD_disciplinas]{página de disciplinas}, a \hyperref[fig:CRUD_professores]{página de professores} e a \hyperref[fig:CRUD_turmas]{página de turmas}.
 
@@ -155,7 +155,7 @@ Outro conflito exibido é que a sala em que está alocado o primeiro horário da
 
 Por último, na listagem dos alunos que podem se inscrever, no canto inferior direito, há quatro alunos marcados em vermelho. Estes alunos poderiam se inscrever em outra turma no mesmo horário em que esta turma está alocada. Este conflito é impeditivo, mas apenas para os alunos, assim como no caso da preferência do professor, a turma pode ser realocada para outro horário para atender melhor às demandas dos alunos.
 
-\section{Programação do sistema} \label{sec:programação} % ### 5.5.1
+\section{Programação do sistema} \label{sec:programação}                                % ###  5.4
 
 Após a conceitualização diagramática do banco de dados e a elaboração dos protótipos com o Figma, o desenvolvimento do sistema foi iniciado. Por maior familiaridade com a linguagem foi escolhida a linguagem \textbf{\textit{JavaScript}}, utilizando a biblioteca \textbf{\textit{React}} para a criação dos componentes visuais, ou seja, o \textit{frontend}, e o \textbf{\textit{Node.js}} para a criação do \textit{backend} e a criação de um servidor local que permite visualizar as mudanças no código em tempo real. Suas logos estão ilustrados na \autoref{fig:sistemas}.
 
@@ -186,7 +186,7 @@ Sua \hyperref[sec:programação]{programação} foi repartida em três grandes c
 
 Ao longo da implementação dessas versões, diversos métodos de manutenção dos dados foram utilizados, como a importação de arquivos JSON, a utilização de um banco de dados local e a utilização de um banco de dados hospedado na nuvem. A \autoref{fig:API} ilustra a progressão do funcionamento da permanência dos dados ao longo das versões do sistema. Os pormenores de cada versão serão descritos adiante.
 
-\subsection{Versão 1.0} \label{ssec:MVP1} % ### 5.5.2
+\subsection{Versão 1.0} \label{ssec:MVP1}                                               % #### 5.4.1
 
 A primeira versão do sistema foi desenvolvida em um ambiente local, com o objetivo de se aproximar ao máximo das páginas previstas no protótipo. Para isso, foi utilizada a biblioteca \LinkToURL{\LinkReactRouter}{\textit{React Router}} para a navegação entre as páginas, e a biblioteca \LinkToURL{\LinkReactSelect}{\textit{React Select}} para as caixas de seleção.
 
@@ -220,7 +220,7 @@ Após o desenvolvimento local foi feita a implementação da interface do sistem
 
 Para implantar no GitHub Pages o código desenvolvido, utilizou-se da \LinkToURL{\LinkBibliotecaGHPages}{biblioteca gh-pages}, que viabiliza a publicação de um site diretamente do repositório do GitHub. A partir disso, o sistema foi disponibilizado para acesso público, permitindo que qualquer pessoa pudesse acessar o sistema e testar suas funcionalidades.
 
-\subsection{Versão 2.0} \label{ssec:MVP2} % ### 5.5.3
+\subsection{Versão 2.0} \label{ssec:MVP2}                                               % #### 5.4.2
 
 Utilizando do \textit{feedback} quanto aos resultados entregues na \hyperref[ssec:MVP1]{primeira versão}, alguns pontos de melhoria foram identificados, sendo um deles, e o mais importante: o planejamento. Na primeira abordagem, o desenvolvimento foi feito seguindo notas e ideias soltas, sem um planejamento prévio, o que resultou em um sistema que, embora funcional, não atendia a todas as necessidades propostas. Também dispunha de funcionalidades que não eram de todo necessárias, ou, melhor dizendo, que tinham menor prioridade do que muitas outras. Como solução, foi utilizado o \hyperref[sssec:GitHub Projects]{GitHub Projects} para organizar as tarefas e priorizá-las.
 
@@ -318,7 +318,7 @@ Adicionou-se também diversas filtragens, principalmente na página de \textbf{G
 
 Outra utilidade adicionada, agora na página \textbf{MultiTurmas}, foi a seção de ``Disciplinas ainda não oferecidas''. Sua funcionalidade consiste em dispor ao usuário uma lista de disciplinas que, segundo a ementa de Ciência da Computação, deveriam ser ofertadas naquele semestre. A partir disso, o usuário pode então selecionar o botão correspondente àquela disciplina e, a partir disso, uma turma para esta disciplina é adicionada à lista de turmas ofertadas. Há também um botão no topo que permite a adição de todas as disciplinas de uma vez.
 
-\subsection{Versão 3.0} \label{ssec:MVP3} % ### 5.5.3
+\subsection{Versão 3.0} \label{ssec:MVP3}                                               % #### 5.4.3
 
 A primeira versão trouxe a possibilidade de se visualizar o sistema, a segunda trouxe a possibilidade de se manter os dados. A terceira e última versão do sistema foi desenvolvida de forma a estar completamente hospedada na nuvem, incluindo o seu banco de dados.
 
@@ -532,7 +532,7 @@ Além das funcionalidades voltadas para o usuário final, algumas mudanças clas
   \item \textbf{Remoção de estruturas obsoletas}: ao longo do desenvolvimento, algumas estruturas foram criadas e não utilizadas. Um exemplo dessas foi a propriedade ``Ordem'' que visava definir a ordem em que os horários da turma apareceriam, porém o resultado desta propriedade foi obtido com a ordenação dos horários por dia e em seguida por horário, não sendo então necessária. Ela então foi removida do sistema e do banco de dados.
 \end{itemize}
 
-\section{Solução inicial} \label{sec:Solução inicial}
+\section{Solução inicial} \label{sec:Solução inicial}                                   % ###  5.5 
 
 A funcionalidade anteriormente denominada ``Disciplinas ainda não oferecidas'', que consistia na exibição de uma lista de disciplinas do curso de Ciência da Computação que espera-se que sejam oferecidas naquele semestre, foi aprimorada de tal forma que agora, além de criar uma turma para a disciplina selecionada, o sistema automaticamente analisa o histórico de criação de turmas, definindo previamente o professor, a demanda estimada, e os horários, incluindo seus dias, horas de início e sala em que é alocada.
 
@@ -581,7 +581,7 @@ Como a heurística é baseada no histórico de criação de turmas, ela é capaz
 
 As limitações da heurística encarregam então ao usuário a verificação e a correção dos possíveis conflitos gerados durante a criação da solução inicial. Essa correção se dá através da análise do sistema de \hyperref[sec:conflitos]{detecção e alerta dos conflitos}.
 
-\section{Detecção e alerta dos conflitos} \label{sec:conflitos} % ### 5.6
+\section{Detecção e alerta dos conflitos} \label{sec:conflitos}                         % ###  5.6
 
 Uma das principais funcionalidades do sistema é a detecção de conflitos. Seu objetivo é auxiliar ao usuário a identificar possíveis problemas na alocação das turmas, e assim, permitir que ele possa corrigi-los antes de finalizar a grade horária. Diversas situações podem ser consideradas como conflitos, e cada uma delas é tratada de forma diferente.
 
@@ -601,7 +601,7 @@ Outras situações que podem ocorrer giram em torno da alocação das salas. Dua
 
 Esses e outros são exemplos de situações recorrentes ao longo do processo flexível da organização da tabela horária.
 
-\subsection{Conflitos tratados pelo sistema}
+\subsection{Conflitos tratados pelo sistema} \label{ssec:ConflitosTratados}
 
 Para a implementação, primeiro visou-se a detecção de conflitos que poderiam ser considerados restritores para a alocação das turmas. Sendo eles os de alocação simultânea de salas e professores, visto que um professor não pode ministrar em duas turmas simultaneamente, nem uma sala deve comportar duas turmas simultaneamente (embora ambos sejam teoricamente possíveis).
 
@@ -612,7 +612,7 @@ Os conflitos calculados são representados de três formas diferentes. A primeir
 Embora o sistema seja projetado para ser permissivo quanto a inexistência de certas informações, é sempre esperado que a maior quantidade de informações possíveis seja inserida, assim, caso algum campo não tenha sido preenchido a cor de fundo do elemento será alterada para um tom acinzentado.
 
 \begin{MyCenteredFigure} \caption{Paleta de cores do sistema} \label{fig:conflitoDisciplinaPaleta}
-  \includegraphics[width=\textwidth]{files/img/2.02!5-desenvolvimento/2.02!5.1.5-conflitos/Paleta de Cores}
+  \includegraphics[width=\textwidth]{files/img/2.02!5-desenvolvimento/2.02!5.6-conflitos/Paleta de Cores}
 \end{MyCenteredFigure}
 
 Os conflitos que são representados por cores, têm sua paleta de cores representada na \autoref{fig:conflitoDisciplinaPaleta}. Nessa paleta, dispõe-se 3 conjuntos principais: a distribuição de cores para as disciplinas obrigatórias do curso de Ciência da Computação, que variam de acordo com o semestre em que são ofertadas; a categoria das disciplinas não obrigatórias para o curso de Ciência da Computação; e os conflitos das outras entidades, que são classificados amplamente entre ``com conflito'', ``sem conflito'' e ``conflito nulo''.
@@ -620,7 +620,7 @@ Os conflitos que são representados por cores, têm sua paleta de cores represen
 Cinco campos se encontram sem cores, sendo eles a \textbf{Disciplina sem conflito}, \textbf{Disciplina com conflito}, \textbf{Dia com conflito}, \textbf{Hora com conflito} e \textbf{Duração com conflito}. No caso dois dois primeiros, melhor explicado \hyperref[sssec:Disciplina]{a seguir}, a representação dos conflitos é substituída pela representação de seu período esperado e de suas categorias. Já os três últimos também não possuem conflitos por si só, o que ocorre é que herdam a cor de fundo das entidades que têm conflito em determinado dia, hora e duração, como é o caso da alocação múltipla de turmas em uma mesma sala ou de professores em turmas simultâneas.
 
 \begin{MyCenteredFigure} \caption{Exemplo de conflito nulo} \label{fig:turmaVazia}
-  \includegraphics[width=\textwidth]{files/img/2.02!5-desenvolvimento/2.02!5.1.5-conflitos/Incompletude de informações}
+  \includegraphics[width=\textwidth]{files/img/2.02!5-desenvolvimento/2.02!5.6-conflitos/Incompletude de informações}
 \end{MyCenteredFigure}
 
 A \autoref{fig:turmaVazia} ilustra os \textbf{conflitos nulos}. Esse tipo de conflito representa a incompletude de informações, e como durante parte do processo de criação da grade não se tem todas as informações sobre as alocações das turmas, ele acaba por ser um dos conflitos mais comuns. Esse conflito, representado pela cor acinzentada, é detectado quando um dos campos não se encontra preenchido.
@@ -630,7 +630,7 @@ A \autoref{fig:turmaVazia} ilustra os \textbf{conflitos nulos}. Esse tipo de con
 O sistema contempla a checagem de conflitos de alocação simultânea de professores em mais de uma turma. Ou seja, considerando todas as turmas ao qual o professor está atribuído no ano e semestre selecionados, o sistema compara todos os horários das turmas deste professor, e verifica se há alguma interseção entre horários que estão no mesmo dia, levando em conta a duração da aula.
 
 \begin{MyCenteredFigure} \caption{Exemplo de conflito de alocação de professor} \label{fig:conflitoAlocacaoProfessor}
-  \includegraphics[width=\textwidth]{files/img/2.02!5-desenvolvimento/2.02!5.1.5-conflitos/Alocação de professores}
+  \includegraphics[width=\textwidth]{files/img/2.02!5-desenvolvimento/2.02!5.6-conflitos/Alocação de professores}
 \end{MyCenteredFigure}
 
 Caso haja algum conflito, o sistema destaca o professor em questão, tornando a sua cor de fundo avermelhada. Além disso, ao passar o mouse sobre o nome do professor, é exibido um alerta flutuante, informando que quais são as turmas e horários que estão em conflito. Esse comportamento é exemplificado na \autoref{fig:conflitoAlocacaoProfessor}, onde o professor Tang é alocado em duas turmas que ocorrem simultaneamente durante algum intervalo de tempo durante os horários de quarta e sexta-feira, assim informando no alerta flutuante quais são as turmas e horários que estão alocados simultaneamente.
@@ -640,7 +640,7 @@ Caso haja algum conflito, o sistema destaca o professor em questão, tornando a 
 As salas também apresentam a verificação do conflito de alocação simultânea. Porém, diferente dos professores, a checagem é feita conferindo todos os horários na qual a sala está alocada, e então é feita a mesma verificação de interseção citada anteriormente. Havendo o conflito, é exibida uma borda alaranjada na parte inferior das propriedades referentes ao conflito, além de, assim como no caso dos professores, exibir o alerta flutuante. A \autoref{fig:conflitoAlocacaoSalas} representa um caso de conflito de alocação de salas.
 
 \begin{MyCenteredFigure} \caption{Exemplo de conflito de alocação de sala} \label{fig:conflitoAlocacaoSalas}
-  \includegraphics[width=\textwidth]{files/img/2.02!5-desenvolvimento/2.02!5.1.5-conflitos/Alocação de Salas - Sala}
+  \includegraphics[width=\textwidth]{files/img/2.02!5-desenvolvimento/2.02!5.6-conflitos/Alocação de Salas - Sala}
 \end{MyCenteredFigure}
 
 Além disso, também é feita a comparação entre a quantidade máxima de alunos comportados na sala e a quantidade de alunos estimados para a turma. Este conflito por sua vez é ilustrado tornando avermelhado o fundo da demanda estimada e da seleção de salas. Caso uma turma tenha mais de um horário, é calculada a quantidade remanescente dos alunos que demandam a disciplina com relação a cada uma das capacidades das salas destes horários, mostrando cada um deles no alerta flutuante.
@@ -648,7 +648,7 @@ Além disso, também é feita a comparação entre a quantidade máxima de aluno
 Então, como pode-se perceber na \autoref{fig:conflitoAlocacaoSalasCapacidade}, a turma ilustrada apresenta demanda estimada de 31 alunos não poderia ser adequadamente alocada às salas ``P5 - inf1'', nem na ``P3 - Bcct'', visto que a primeira apenas comporta 24 alunos e a segunda, 30 alunos. O alerta flutuante, ao ser acionado, informa ainda quantos são os alunos que não poderiam ser alocados em cada uma das salas.
 
 \begin{MyCenteredFigure} \caption{Exemplo de conflito de capacidade na sala} \label{fig:conflitoAlocacaoSalasCapacidade}
-  \includegraphics[width=\textwidth]{files/img/2.02!5-desenvolvimento/2.02!5.1.5-conflitos/Demanda X Capacidade}
+  \includegraphics[width=\textwidth]{files/img/2.02!5-desenvolvimento/2.02!5.6-conflitos/Demanda X Capacidade}
 \end{MyCenteredFigure}
 
 \subsubsection*{Conflitos de disciplina} \label{sssec:Disciplina}
@@ -656,19 +656,19 @@ Então, como pode-se perceber na \autoref{fig:conflitoAlocacaoSalasCapacidade}, 
 Além desses conflitos, outras características analisadas e representadas se referem às disciplinas atribuídas às turmas, que, embora não representem necessariamente um \textit{conflito}, mas sim um indicativo, ainda assim serão tratados como conflitos por motivos de simplificação. Esse indicativo leva em consideração o semestre selecionado e o período esperado da disciplina de certa turma. Utilizando de lógica similar, também é indicado caso não tenha sido atribuído um período à disciplina, e se, para o curso de Ciência da Computação, a disciplina é considerada como \textbf{Eletiva Livre}, \textbf{Eletiva Optativa}, ambas em tons azulados, ou se não é uma disciplina para o curso de Ciência da Computação, sendo então representada em tons alaranjados. Estas características são ilustradas no lado direito da \autoref{fig:conflitoDisciplinaTitulos}.
 
 \begin{MyCenteredFigure} \caption{Avisos flutuantes dos conflitos de disciplinas} \label{fig:conflitoDisciplinaTitulos}
-  \includegraphics[width=\textwidth]{files/img/2.02!5-desenvolvimento/2.02!5.1.5-conflitos/Categorias Disciplinas}
+  \includegraphics[width=\textwidth]{files/img/2.02!5-desenvolvimento/2.02!5.6-conflitos/Categorias Disciplinas}
 \end{MyCenteredFigure}
 
 Já no lado esquerdo da \autoref{fig:conflitoDisciplinaTitulos}, vemos os conflitos que correlacionam os períodos esperados das disciplinas obrigatórias do curso de Ciência da Computação com o semestre em que foram ofertadas. Os semestres possíveis são três: o primeiro semestre, o segundo semestre e o ``período de verão''. No caso do período de verão, as disciplinas que têm o seu período esperado neste semestre são marcadas com um tom amarelado, visto que não há relevância da sua paridade em um período de férias. Já nos casos das disciplinas de paridade ímpar (disciplinas dos períodos 1, 3, 5, 7 e 9) no primeiro semestre, ou as disciplinas de paridade par (disciplinas dos períodos 2, 4, 6, 8 e 10) no segundo semestre, estas são marcadas com um tom esverdeado, sendo aquelas referentes aos períodos finais do curso marcadas com um tom mais escuro. Já as disciplinas pares em semestres ímpares, ou as disciplinas ímpares em semestre pares, são ilustradas com a cor avermelhada, seguindo a mesma lógica de gradiente escuro nos últimos períodos.
 
-\section{Preenchimento de dados} \label{sec:preenchimento}
+\section{Preenchimento de dados} \label{sec:preenchimento}                              % ###  5.7
 
 Inicialmente, os dados adicionados faziam jus diretamente às disciplinas, professores, salas e turmas do curso de Ciência da Computação. Porém, como para a análise completa dos conflitos é necessário que seja feita também a adição das turmas de outros cursos, foi feito o preenchimento de dados para as entidades de professores, disciplinas e salas.
 
 Para acumular mais dados referentes às entidades do banco de dados, foram tomadas algumas abordagens: requisição dos dados diretamente do Sistema Acadêmico, processamento de tabelas, processamento de PDFs e \textit{web scraping}, todos eles ilustrados pela \autoref{fig:DataFlow}.
 
 \begin{MyCenteredFigure} \caption{Diagrama do fluxo de obtenção de dados} \label{fig:DataFlow}
-  \includegraphics[width=\textwidth]{files/img/2.02!5-desenvolvimento/2.02!5.1.6-preenchimento/Processamento de dados}
+  \includegraphics[width=\textwidth]{files/img/2.02!5-desenvolvimento/2.02!5.7-preenchimento/Processamento de dados}
 \end{MyCenteredFigure}
 
 A forma teoricamente mais direta e eficiente para se obter os dados das entidades é a obtenção das informações contidas no banco de dados do sistema acadêmico. Para este fim, foi feita uma solicitação ao responsável pela Secretaria Acadêmica (SECACAD) da UENF, que direcionou a solicitação ao desenvolvedor do Sistema Acadêmico. A resposta obtida do desenvolvedor foi que a solicitação não poderia ser atendida, visto que não detinha a posse dos dados, e que para que pudesse fornecê-los, seria necessária uma solicitação formal à reitoria da UENF. Essa solicitação foi então passada à Coordenação do curso de Ciência da Computação, com o qual ficou decidido abandonar a ideia e buscar outras formas de obtenção dos dados.
@@ -681,7 +681,7 @@ Além dos PDFs anteriores, haviam também os arquivos referentes à oferta de tu
 
 Por fim, foi feita o \textit{web scraping} que consistiu na busca por informações em diversos sites, principalmente o \LinkToURL{\LinkAcademicoUENF}{Sistema Acadêmico}, o \LinkToURL{\LinkSiteUENF}{site da UENF} e outros sites. Nessa etapa, foi possível encontrar lotes de informações estruturadas. Um dos lotes foi a listagem de disciplinas e suas características que se encontram disponíveis no Sistema Acadêmico da UENF, essas informações foram copiadas e coladas no arquivo Excel unificado. Outros lotes foram encontrados dispersos ao longo do site da UENF e consistiam basicamente em listagem de professores e seus respectivos laboratórios. Essas informações estavam dispersas dos sites dos diversos centros e cursos, alguns disponíveis no próprio site, outros em formato de arquivo. Deste método foram coletadas as informações referentes à nomes de professores, seus laboratórios e centros; e disciplinas e seus nomes, códigos e períodos de vigência. Além disso, foram encontrados documentos oficiais que referenciam a capacidade de ocupantes das ``salas'' disponíveis do Centro de Convenções, popularmente conhecido como ``Apitão'' que mesmo não sendo propriamente uma sala de aula, já foi utilizado previamente para tal fim. Outras salas já obtiveram alocações similares, assim como a Sala dos Professores.
 
-\section{Próximos desenvolvimentos} \label{sec:proximos}
+\section{Próximos desenvolvimentos} \label{sec:proximos}                                % ###  5.8
 
 Ao longo de todo o desenvolvimento, podemos dividir as funcionalidades em quatro categorias: as que foram \textbf{implementadas e se mantiveram}, as que foram \textbf{implementadas e descartadas}, as que \textbf{não foram implementadas} e as que foram \textbf{preparadas} para próximos desenvolvimentos.
 
@@ -700,7 +700,7 @@ Dentre as funcionalidades preparadas temos o sistema de cadastro de alunos, que 
 Além dos alunos, outras entidades também foram estruturadas, sendo elas os centros e laboratórios. Isso se deu com o objetivo de estruturar mais objetivamente as informações referentes aos professores e disciplinas, visto que os professores são vinculados a um centro e a um laboratório, assim tendo a tendência a reduzir a necessidade de repetição de informações.
 
 \begin{MyCenteredFigure} \caption{Diagrama entidade relacionamento final} \label{fig:DER final}
-  \includegraphics[width=\textwidth]{files/img/2.02!5-desenvolvimento/2.02!5.1.4-sistema/diagramas/Diagrama ER-Final}
+  \includegraphics[width=\textwidth]{files/img/2.02!5-desenvolvimento/2.02!5.4-sistema/diagramas/Diagrama ER-Final}
 \end{MyCenteredFigure}
 
 Nota-se que na \autoref{fig:DER final}, alguns atributos encontram-se em inglês e outros em português. Isso se dá pelo fato de que a transição para o inglês foi feita de forma gradual, e embora a maior parte do sistema já esteja em inglês, ainda há partes que se encontram em português. A decisão pela migração para o inglês se deu pelo fato de que na programação de modo geral, as variáveis e funções são escritas em inglês, e embora não seja uma regra, torna o código mais consistente em sua linguagem.
