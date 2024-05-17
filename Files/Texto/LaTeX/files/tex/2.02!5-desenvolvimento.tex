@@ -17,7 +17,7 @@ Deve-se comentar também sobre os dois trabalhos anteriores desenvolvidos por \c
 Como interesse próprio, cogitou-se o desenvolvimento de uma plataforma onde se pudesse ver em que ponto os alunos se encontram em relação ao andamento de seus cursos. Para isso, seria necessária a obtenção dos dados dos alunos, seja por parte dos mesmos, do coordenador ou por integração com o sistema acadêmico. Com estes dados, seria possível criar uma interface que mostrasse o andamento dos alunos, quais matérias já foram cursadas, quais estão sendo cursadas e quais ainda faltam. Além disso, seria possível mostrar quais matérias são pré-requisitos para outras. Assim, o aluno e a coordenação poderiam ter uma visão geral de seu andamento e de quais matérias ele precisará cursar para se formar. Esse projeto não saiu do mundo das ideias, entretanto, lá permaneceu sendo maturado.
 
 \begin{MyCenteredFigure} \caption{Andamento do aluno no Sistema Acadêmico} \label{fig:andamento}
-  \includegraphics[width=\textwidth]{files/img/2.02!5-desenvolvimento/2.02!5.1.1-anteriores/Progressão}
+  \includegraphics[width=\textwidth]{files/img/2.02!5-desenvolvimento/2.02!5.1-anteriores/Progressão}
 \end{MyCenteredFigure}
 
 Anos após a idealização dessa funcionalidade, o Sistema Acadêmico da UENF passou a disponibilizar uma funcionalidade semelhante, como pode ser visto na \autoref{fig:andamento}. Nela, é possível ver o andamento do aluno por período, incluindo as disciplinas Eletivas Livres e Eletivas Optativas. Entretanto, essa visualização tabular não ilustra o andamento de todos os alunos simultaneamente, sendo necessário navegar individualmente por cada um deles.
@@ -63,22 +63,22 @@ Em todas as versões dos cartões de turma, o código da disciplina está no can
 
 \begin{MyCenteredFigure} \caption{Protótipos de cartões de turma} \label{fig:cartão_de_turma}
   \begin{subfigure}[b]{0.45\textwidth} \centering
-    \includegraphics[width=\textwidth]{files/img/2.02!5-desenvolvimento/2.02!5.1.3-prototipagem/2.02!5.1.3.1-componentes/Cartões/PadraoClassCards}
+    \includegraphics[width=\textwidth]{files/img/2.02!5-desenvolvimento/2.02!5.3-prototipagem/5.3.1-componentes/Cartões/PadraoClassCards}
     \caption{Turma padrão} \label{fig:TurmaPadrão}
   \end{subfigure}
   \hfill
   \begin{subfigure}[b]{0.45\textwidth} \centering
-    \includegraphics[width=\textwidth]{files/img/2.02!5-desenvolvimento/2.02!5.1.3-prototipagem/2.02!5.1.3.1-componentes/Cartões/Professor SuperiorClassCards}
+    \includegraphics[width=\textwidth]{files/img/2.02!5-desenvolvimento/2.02!5.3-prototipagem/5.3.1-componentes/Cartões/Professor SuperiorClassCards}
     \caption{Turma com professor no topo} \label{fig:TurmaTopo}
   \end{subfigure}
 
   \begin{subfigure}[b]{0.45\textwidth} \centering
-    \includegraphics[width=\textwidth]{files/img/2.02!5-desenvolvimento/2.02!5.1.3-prototipagem/2.02!5.1.3.1-componentes/Cartões/Smaller ColapsadaClassCards}
+    \includegraphics[width=\textwidth]{files/img/2.02!5-desenvolvimento/2.02!5.3-prototipagem/5.3.1-componentes/Cartões/Smaller ColapsadaClassCards}
     \caption{Turma colapsadas} \label{fig:TurmaColapsada}
   \end{subfigure}
   \hfill
   \begin{subfigure}[b]{0.45\textwidth} \centering
-    \includegraphics[width=\textwidth]{files/img/2.02!5-desenvolvimento/2.02!5.1.3-prototipagem/2.02!5.1.3.1-componentes/Cartões/SmallestClassCards}
+    \includegraphics[width=\textwidth]{files/img/2.02!5-desenvolvimento/2.02!5.3-prototipagem/5.3.1-componentes/Cartões/SmallestClassCards}
     \caption{Turma com tamanho reduzido} \label{fig:TurmaColapsadaReduzida}
   \end{subfigure}
 \end{MyCenteredFigure}
@@ -91,12 +91,12 @@ Cada uma dessas versões dos cartões de turma se mostra com um propósito espec
 
 \begin{MyCenteredFigure} \caption{Protótipos de caixas de seleção} \label{fig:selects}
   \begin{subfigure}[b]{0.45\textwidth} \centering
-    \includegraphics[width=0.8\textwidth]{files/img/2.02!5-desenvolvimento/2.02!5.1.3-prototipagem/2.02!5.1.3.1-componentes/SingleSelect}
+    \includegraphics[width=0.8\textwidth]{files/img/2.02!5-desenvolvimento/2.02!5.3-prototipagem/5.3.1-componentes/SingleSelect}
     \caption{Caixa de seleção única} \label{fig:SingleSelect}
   \end{subfigure}
   \hfill
   \begin{subfigure}[b]{0.45\textwidth} \centering
-    \includegraphics[width=\textwidth]{files/img/2.02!5-desenvolvimento/2.02!5.1.3-prototipagem/2.02!5.1.3.1-componentes/MultiSelect}
+    \includegraphics[width=\textwidth]{files/img/2.02!5-desenvolvimento/2.02!5.3-prototipagem/5.3.1-componentes/MultiSelect}
     \caption{Caixa de seleção múltipla} \label{fig:MultiSelect}
   \end{subfigure}
 \end{MyCenteredFigure}
@@ -110,43 +110,43 @@ Aqui serão elecadas as sete páginas esboçadas para o sistema. Sendo elas a \h
 A primeira, e principal, é a ilustrada pela \autoref{fig:main} que permite que o usuário arraste todas as turmas listadas até o horário desejado. A listagem das turmas a serem distribuídas é disposta em um painel à esquerda. Este painel tem como funcionalidade, fixar as turmas ainda não alocadas, como se estivessem presas por \LinkToURL{\LinkVelcro}{fechos de gancho e laço}. Assim, dispondo de um local para que turmas que turmas em processo de mudança de horário sejam armazenadas temporariamente sem que sejam perdidas.
 
 \begin{MyCenteredFigure} \caption{Protótipo da página principal do sistema} \label{fig:main}
-  \includegraphics[width=\textwidth]{files/img/2.02!5-desenvolvimento/2.02!5.1.3-prototipagem/2.02!5.1.3.2-paginas/main}
+  \includegraphics[width=\textwidth]{files/img/2.02!5-desenvolvimento/2.02!5.3-prototipagem/5.3.2-paginas/1-main}
 \end{MyCenteredFigure}
 
 Em seguida, temos a tela de seleção da categoria dos dados que deseja-se modificar (\autoref{fig:CRUD_main}), podendo esses serem sobre as turmas, salas, disciplinas, professores ou alunos. Cada uma destas tendo a capacidade de criação, leitura, edição e deleção dos dados.
 
 \begin{MyCenteredFigure} \caption{Protótipo da página de seleção} \label{fig:CRUD_main}
-  \includegraphics[width=0.8\textwidth]{files/img/2.02!5-desenvolvimento/2.02!5.1.3-prototipagem/2.02!5.1.3.2-paginas/CRUD_main}
+  \includegraphics[width=0.8\textwidth]{files/img/2.02!5-desenvolvimento/2.02!5.3-prototipagem/5.3.2-paginas/2-CRUD_main}
 \end{MyCenteredFigure}
 
 Quanto à página das salas, temos primeiro a seleção da sala na qual deseja-se fazer alterações de cadastro. Abaixo desta caixa de seleção única há um filtro de visualização das alocações de determinado ano e semestre. Nessa página pode-se também registrar algumas características da sala, como a quantidade de cadeiras e computadores, e se possui monitor, projetos, quadro de giz e quadro branco. Um exemplo de sala ainda sem turmas alocadas é representado na \autoref{fig:CRUD_salas}. Essas últimas informações, embora não sejam essenciais para a alocação das turmas, podem ser úteis como forma de filtragem para a alocação de turmas, visto que certas disciplinas demandam salas com características específicas.
 
 \begin{MyCenteredFigure} \caption{Protótipo da página de salas} \label{fig:CRUD_salas}
-  \includegraphics[width=0.8\textwidth]{files/img/2.02!5-desenvolvimento/2.02!5.1.3-prototipagem/2.02!5.1.3.2-paginas/crud_salas}
+  \includegraphics[width=0.8\textwidth]{files/img/2.02!5-desenvolvimento/2.02!5.3-prototipagem/5.3.2-paginas/3-CRUD_salas}
 \end{MyCenteredFigure}
 
 Na página dos alunos, pode-se cadastrar novos alunos informando o seu ano de entrada e a sua matrícula. Abaixo temos a visualização da grade, onde pode-se classificar cada uma das disciplinas como aprovada, reprovada e cursando. O exemplo da \autoref{fig:CRUD_alunos} mostra a grade de um aluno inscrito em 2019.1.
 
 \begin{MyCenteredFigure} \caption{Protótipo da página de alunos} \label{fig:CRUD_alunos}
-  \includegraphics[width=0.8\textwidth]{files/img/2.02!5-desenvolvimento/2.02!5.1.3-prototipagem/2.02!5.1.3.2-paginas/CRUD_alunos}
+  \includegraphics[width=0.8\textwidth]{files/img/2.02!5-desenvolvimento/2.02!5.3-prototipagem/5.3.2-paginas/4-CRUD_alunos}
 \end{MyCenteredFigure}
 
 Podemos definir na página das disciplinas qual seu código, nome, e o seu período esperado segundo a ementa. Além dessas informações, pode-se cadastrar quais cursos a possuem em suas ementas, quais seus pré-requisitos, os professores que a ministram e quais requisitos a mesma possui em relação às características de sala. A \autoref{fig:CRUD_disciplinas} mostra a página de modificação de disciplinas.
 
 \begin{MyCenteredFigure} \caption{Protótipo da página de disciplinas} \label{fig:CRUD_disciplinas}
-  \includegraphics[width=0.8\textwidth]{files/img/2.02!5-desenvolvimento/2.02!5.1.3-prototipagem/2.02!5.1.3.2-paginas/CRUD_disciplinas}
+  \includegraphics[width=0.8\textwidth]{files/img/2.02!5-desenvolvimento/2.02!5.3-prototipagem/5.3.2-paginas/5-CRUD_disciplinas}
 \end{MyCenteredFigure}
 
 Na página de professores (\autoref{fig:CRUD_professores}), temos a relação de disciplinas que os mesmos estão passíveis de ministrar, e também quais são suas preferências de horários ao longo da semana. Embora não seja essencial, essa informação pode ser útil para a alocação de turmas, pois alguns professores podem ter preferência, ou até mesmo não estarem disponíveis para ministrar aulas em determinados horários. Um exemplo deste caso seriam os bolsistas para docência complementar, dado que os mesmos podem estar também vinculados a outras instituições. E nesses casos, aquele que estiver desenvolvendo a grade horária pode alocar as turmas de acordo com a disponibilidade dos professores.
 
 \begin{MyCenteredFigure} \caption{Protótipo da página de professores} \label{fig:CRUD_professores}
-  \includegraphics[width=0.8\textwidth]{files/img/2.02!5-desenvolvimento/2.02!5.1.3-prototipagem/2.02!5.1.3.2-paginas/CRUD_professores}
+  \includegraphics[width=0.8\textwidth]{files/img/2.02!5-desenvolvimento/2.02!5.3-prototipagem/5.3.2-paginas/6-CRUD_professores}
 \end{MyCenteredFigure}
 
 Por fim, na \autoref{fig:CRUD_turmas}, temos a junção de todas as informações registradas acima. Nela, podemos alocar os seus horários, definindo o ano, semestre, dia, hora de início e duração em que será ministrada. Também é necessário que seja definido em que sala cada um de seus horários estará alocada. Além de informar, também, qual professor a lecionará e a qual disciplina ela se refere.
 
 \begin{MyCenteredFigure} \caption{Protótipo da página de turmas} \label{fig:CRUD_turmas}
-  \includegraphics[width=\textwidth]{files/img/2.02!5-desenvolvimento/2.02!5.1.3-prototipagem/2.02!5.1.3.2-paginas/CRUD_turmas}
+  \includegraphics[width=\textwidth]{files/img/2.02!5-desenvolvimento/2.02!5.3-prototipagem/5.3.2-paginas/7-CRUD_turmas}
 \end{MyCenteredFigure}
 
 Ainda na \autoref{fig:CRUD_turmas} temos alguns exemplos de conflitos percebidos. O primeiro, com a cor amarelada, informado que o tempo de duração do segundo horário da turma não condiz com a preferência pessoal do professor selecionado. Este conflito não é impeditivo, entretanto, se possível, um outro horário poderia ser encontrado para atender melhor às preferências do professor.
@@ -160,7 +160,7 @@ Por último, na listagem dos alunos que podem se inscrever, no canto inferior di
 Após a conceitualização diagramática do banco de dados e a elaboração dos protótipos com o Figma, o desenvolvimento do sistema foi iniciado. Por maior familiaridade com a linguagem foi escolhida a linguagem \textbf{\textit{JavaScript}}, utilizando a biblioteca \textbf{\textit{React}} para a criação dos componentes visuais, ou seja, o \textit{frontend}, e o \textbf{\textit{Node.js}} para a criação do \textit{backend} e a criação de um servidor local que permite visualizar as mudanças no código em tempo real. Suas logos estão ilustrados na \autoref{fig:sistemas}.
 
 \begin{MyCenteredFigure} \caption{Recursos usados para o desenvolvimento do sistema} \label{fig:sistemas}
-  \begin{animateinline}[loop,autoplay]{1}
+  \begin{animateinline}[loop, autoplay]{1}
     \myAnimation{JavaScript} % 1 JS
     \myAnimation{React}      % 2 React
     \myAnimation{NodeJS}     % 3 Node
@@ -181,7 +181,7 @@ Seguindo constantemente o conceito de iteratividade da apresentação do sistema
 Sua \hyperref[sec:programação]{programação} foi repartida em três grandes categorias que visavam entregar o sistema de forma gradual e funcional. A \hyperref[ssec:MVP1]{primeira versão do sistema} foi desenvolvida localmente com o objetivo de se aproximar ao máximo das páginas previstas no protótipo, sem a necessidade de um banco de dados que permitisse alterações. A \hyperref[ssec:MVP2]{segunda versão do sistema} contou com a utilização de duas abordagens distintas de bancos de dados para se obter a permanência dos dados. Já a \hyperref[ssec:MVP3]{terceira versão do sistema} foi desenvolvida de forma a estar completamente hospedada na nuvem, incluindo o seu banco de dados, sendo então \hyperref[sec:preenchimento]{preenchido com mais dados}.
 
 \begin{MyCenteredFigure} \caption{Diagrama da progressão funcionamento da permanência dos dados} \label{fig:API}
-  \includegraphics[width=\textwidth]{files/img/2.02!5-desenvolvimento/2.02!5.1.4-sistema/diagramas/API/API-Progressão}
+  \includegraphics[width=\textwidth]{files/img/2.02!5-desenvolvimento/2.02!5.4-sistema/5.4.0-programacao/API-Progressão}
 \end{MyCenteredFigure}
 
 Ao longo da implementação dessas versões, diversos métodos de manutenção dos dados foram utilizados, como a importação de arquivos JSON, a utilização de um banco de dados local e a utilização de um banco de dados hospedado na nuvem. A \autoref{fig:API} ilustra a progressão do funcionamento da permanência dos dados ao longo das versões do sistema. Os pormenores de cada versão serão descritos adiante.
@@ -195,7 +195,7 @@ A primeira versão do sistema foi desenvolvida em um ambiente local, com o objet
 Os dados contidos no sistema foram inicialmente armazenados em arquivos JSON, que eram importados diretamente para o código (\autoref{fig:API_MVP1}). Isso foi feito para que fosse possível visualizar o funcionamento do sistema sem a necessidade de um banco de dados real. A partir disso, foi possível visualizar o funcionamento do sistema e realizar testes de usabilidade. Em contrapartida, os dados disponíveis não eram modificáveis, tendo apenas a possibilidade de leitura e mutação temporária, visto que após recarregar ou mudar de página, as mudanças eram perdidas.
 
 \begin{MyCenteredFigure} \caption{Diagrama do armazenamento preliminar dos dados} \label{fig:API_MVP1}
-  \includegraphics[width=\textwidth]{files/img/2.02!5-desenvolvimento/2.02!5.1.4-sistema/diagramas/API/API_MVP1}
+  \includegraphics[width=\textwidth]{files/img/2.02!5-desenvolvimento/2.02!5.4-sistema/5.4.1-MVP1/API_MVP1}
 \end{MyCenteredFigure}
 
 Nesse método, cada entidade era armazenada em um arquivo JSON separado, contendo esse um array de objetos, onde em cada objeto haviam as chaves, representando as propriedades da entidade, e os valores, representando os dados da entidade.
@@ -235,7 +235,7 @@ Seguindo o planejamento feito, uma das primeiras tarefas foi a implementação d
 Utilizando o \LinkToURL{\LinkGitHubProjects}{GitHub Projects}, foi organizada uma tabela de tarefas, vista na \autoref{fig:GitHubProjectsTable}, onde foram unificadas as diversas anotações e ideias, antes soltas. A partir disso, foi possível visualizar o que era mais importante e o que poderia ser deixado de lado.
 
 \begin{MyCenteredFigure} \caption{Tabela de tarefas do GitHub Projects} \label{fig:GitHubProjectsTable}
-  \includegraphics[width=\textwidth]{files/img/2.02!5-desenvolvimento/2.02!5.1.4-sistema/GitHub Projects/GitHubProjects-Table}
+  \includegraphics[width=\textwidth]{files/img/2.02!5-desenvolvimento/2.02!5.4-sistema/5.4.2-MVP2/GitHubProjects-Table}
 \end{MyCenteredFigure}
 
 Tendo este novo sistema de tarefas em prática, foi possível planejar melhor quais eram as funcionalidades que precisavam ser desenvolvidas, as que já estavam prontas, as que poderiam ter melhorias e quais se desejava implementar no futuro.
@@ -249,7 +249,7 @@ Citando mais detalhes da \autoref{fig:GitHubProjectsTable}, temos à esquerda a 
 Tendo agora uma rota mais clara a ser seguida, o desenvolvimento foi retomado. Uma das características mais marcantes e ainda não atribuídas ao sistema era a manutenção das modificações feitas nos dados. Nesta etapa, foram utilizados dois métodos de se manter as alterações feitas aos dados. Com esse intuito foram utilizados dois métodos de manutenção dos dados o \hyperref[ssssec:JSONBin]{JSONBin} que não atingiu às expectativas e o \hyperref[ssssec:MySQL]{MySQL} que serviu para a criação de um banco de dados local, já emulando o posterior uso de um \hyperref[sssec:Amazon Web Services]{banco de dados hospedado na nuvem}. Como nessa etapa houveram esses dois métodos de manutenção dos dados, a \autoref{fig:API_MVP2} ilustra o paralelo entre os dois métodos.
 
 \begin{MyCenteredFigure} \caption{Comparação entre bancos de bados da Versão 2.0} \label{fig:API_MVP2}
-  \includegraphics[width=\textwidth]{files/img/2.02!5-desenvolvimento/2.02!5.1.4-sistema/diagramas/API/API_MVP2}
+  \includegraphics[width=\textwidth]{files/img/2.02!5-desenvolvimento/2.02!5.4-sistema/5.4.2-MVP2/API_MVP2}
 \end{MyCenteredFigure}
 
 \subsubsubsection*{\LinkToURL{\LinkJSONBin}{JSONBin}} \label{ssssec:JSONBin}
@@ -277,7 +277,7 @@ Com isso, foi necessário recorrer a uma abordagem semimanual, sendo então dese
 Apesar da primeira tentativa de importação não ter sido completamente bem sucedida, foi desta forma que as tabelas, representadas pela \autoref{fig:TabelasIniciais}, foram inicialmente criadas. Não seguindo objetivamente a modelagem anteriormente citada. Isso gerou posteriormente a necessidade de ajustes manuais, como a adição de chaves primárias e estrangeiras, e a alteração de tipos de dados. Porém, como neste momento, o sistema visava apenas replicar o funcionamento do JSONBin, essas alterações não foram feitas de imediato.
 
 \begin{MyCenteredFigure} \caption{Diagrama inicial das tabelas de dados SQL} \label{fig:TabelasIniciais}
-  \includegraphics[width=0.7\textwidth]{files/img/2.02!5-desenvolvimento/2.02!5.1.4-sistema/diagramas/Diagrama_ER-As_is}
+  \includegraphics[width=0.7\textwidth]{files/img/2.02!5-desenvolvimento/2.02!5.4-sistema/5.4.2-MVP2/Diagrama_ER-As_is}
 \end{MyCenteredFigure}
 
 \paragraph*{Acesso ao Banco de Dados}
@@ -299,13 +299,13 @@ Porém, considerando que a junção dos nomes \textit{hour} e \textit{class} era
 Quanto ao nome, como o sistema visa a alocação de turmas, especificamente para o curso de Ciência da Computação na UENF, decidiu-se pela corruptela da palavra \textit{hour} para que se tornasse \textit{our}, que significa ``nosso'' em inglês, assim, remetendo ao sentido de individualidade do sistema. Com isso, o nome do sistema se tornou \textit{OurClass}.
 
 \begin{MyCenteredFigure} \caption{Logomarcas do sistema} \label{fig:Logomarcas}
-  \includegraphics[width=\textwidth]{files/img/2.02!5-desenvolvimento/2.02!5.1.4-sistema/Logos/Logomarcas}
+  \includegraphics[width=\textwidth]{files/img/2.02!5-desenvolvimento/2.02!5.4-sistema/5.4.2-MVP2/Logomarcas}
 \end{MyCenteredFigure}
 
 Juntando o símbolo da ampulheta com o nome \textit{OurClass} e outros elementos gráficos, como as tabelas horárias, foi criada a logomarca do sistema, que pode ser vista na \autoref{fig:Logomarcas}. A logomarca foi criada utilizando de inteligências artificiais generativas, principalmente o \textit{Bing}. A partir disso, foi possível criar uma logomarca que refletisse o propósito do sistema, e que fosse agradável visualmente.
 
 \begin{MyCenteredFigure} \caption{Logomarca oficial} \label{fig:logomarca_oficial}
-  \includegraphics[width=0.5\textwidth]{files/img/2.02!5-desenvolvimento/2.02!5.1.4-sistema/Logos/OurClass}
+  \includegraphics[width=0.5\textwidth]{files/img/2.02!5-desenvolvimento/2.02!5.4-sistema/5.4.2-MVP2/OurClass}
 \end{MyCenteredFigure}
 
 Após analisar as possibilidades, foi escolhida a \autoref{fig:logomarca_oficial} como a logomarca oficial do sistema. A logomarca foi então adicionada ao sistema.
@@ -335,7 +335,7 @@ Os \textbf{Marcos} visam distinguir as tarefas por suas versões, e também por 
 Enquanto a \autoref{fig:ProjectsClosedMilestones} mostra os marcos que já foram concluídos, sendo eles as três versões desenvolvidas, a \autoref{fig:ProjectsOpenMilestones} mostra os marcos que ainda estão em aberto, podendo ser retomadas no futuro.
 
 \begin{MyCenteredFigure} \caption{Marcos concluídos do GitHub Projects} \label{fig:ProjectsClosedMilestones}
-  \includegraphics[width=0.6\textwidth]{files/img/2.02!5-desenvolvimento/2.02!5.1.4-sistema/GitHub Projects/GitHubProjects-Closed_Milestones}
+  \includegraphics[width=0.6\textwidth]{files/img/2.02!5-desenvolvimento/2.02!5.4-sistema/5.4.3-MVP3/GitHubProjects-Closed_Milestones}
 \end{MyCenteredFigure}
 
 \begin{enumerate}
@@ -354,13 +354,13 @@ Enquanto a \autoref{fig:ProjectsClosedMilestones} mostra os marcos que já foram
 \end{enumerate}
 
 \begin{MyCenteredFigure} \caption{Marcos abertos do GitHub Projects} \label{fig:ProjectsOpenMilestones}
-  \includegraphics[width=0.6\textwidth]{files/img/2.02!5-desenvolvimento/2.02!5.1.4-sistema/GitHub Projects/GitHubProjects-Open_Milestones}
+  \includegraphics[width=0.6\textwidth]{files/img/2.02!5-desenvolvimento/2.02!5.4-sistema/5.4.3-MVP3/GitHubProjects-Open_Milestones}
 \end{MyCenteredFigure}
 
 No Projects, também foram adicionadas as \textbf{etiquetas} que distinguem as tarefas por seu intuito.
 
 \begin{MyCenteredFigure} \caption{Etiquetas do GitHub Projects} \label{fig:ProjectsLabels}
-  \includegraphics[width=0.7\textwidth]{files/img/2.02!5-desenvolvimento/2.02!5.1.4-sistema/GitHub Projects/GitHubProjects-Labels}
+  \includegraphics[width=0.7\textwidth]{files/img/2.02!5-desenvolvimento/2.02!5.4-sistema/5.4.3-MVP3/GitHubProjects-Labels}
 \end{MyCenteredFigure}
 
 \begin{enumerate}
@@ -378,7 +378,7 @@ No Projects, também foram adicionadas as \textbf{etiquetas} que distinguem as t
 O GitHub Projects também oferece a possibilidade de visualização de gráficos na seção \textit{Insights}, que mostram a quantidade de tarefas em cada uma das categorias. Esses gráficos são úteis para a visualização do andamento do projeto, e para a identificação de possíveis gargalos.
 
 \begin{MyCenteredFigure} \caption{Gráfico de Marco \textit{versus} quantidade de tarefas separadas por etiqueta} \label{fig:ProjectsInsights}
-  \includegraphics[width=\textwidth]{files/img/2.02!5-desenvolvimento/2.02!5.1.4-sistema/GitHub Projects/GitHubProjects-Insights-Stacked_Line-Milestone_Label}
+  \includegraphics[width=\textwidth]{files/img/2.02!5-desenvolvimento/2.02!5.4-sistema/5.4.3-MVP3/GitHubProjects-Insights-Stacked_Line-Milestone_Label}
 \end{MyCenteredFigure}
 
 Com eles, pode-se ter uma noção das métricas do projeto, como por exemplo:
@@ -395,13 +395,13 @@ Com eles, pode-se ter uma noção das métricas do projeto, como por exemplo:
 Para suprir a necessidade de um servidor que pudesse executar o \textit{backend} do sistema em conjunto com o banco de dados, foi escolhido a \textit{Amazon Web Services} (AWS). A AWS é um serviço de computação em nuvem que oferece uma ampla gama de serviços, entretanto, apenas alguns deles foram necessários para o sistema.
 
 \begin{MyCenteredFigure} \caption{Diagrama da progressão funcionamento da permanência dos dados} \label{fig:API_MVP3}
-  \includegraphics[width=\textwidth]{files/img/2.02!5-desenvolvimento/2.02!5.1.4-sistema/diagramas/API/API_MVP3}
+  \includegraphics[width=\textwidth]{files/img/2.02!5-desenvolvimento/2.02!5.4-sistema/5.4.3-MVP3/API_MVP3}
 \end{MyCenteredFigure}
 
 O uso da AWS segue a mesma lógica do servidor local, com a diferença de que o servidor está em nuvem, e não localmente, assim resolvendo o primeiro dos dois problemas citados. Neste contexto o uso da AWS, representado pela \autoref{fig:APIAWS}, foi feito através de três serviços principais: o \textit{API Gateway} para a recepção das requisições HTTP, o \textit{Lambda} para a execução das funções que acessam o banco de dados, e o \textit{RDS} para o armazenamento dos dados; serviços estes que serão descritos mais detalhadamente a seguir.
 
 \begin{MyCenteredFigure} \caption{API REST no AWS} \label{fig:APIAWS}
-  \includegraphics[width=\textwidth]{files/img/2.02!5-desenvolvimento/2.02!5.1.4-sistema/diagramas/API/API-Funcionamento}
+  \includegraphics[width=\textwidth]{files/img/2.02!5-desenvolvimento/2.02!5.4-sistema/5.4.3-MVP3/API-Funcionamento}
 \end{MyCenteredFigure}
 
 O uso desses três serviços permitiu a execução do \textit{backend} do sistema em nuvem, e assim, atingindo a permanência dos dados. Com isso, o sistema passou a ser capaz de manter os dados mesmo após a recarga da página, e assim, atender a uma das principais necessidades do sistema.
@@ -506,7 +506,7 @@ As células das turmas sofreram um ligeiro aprimoramento visual e foram ordenada
 Quanto ao banco de dados, os dados antes desconexos passaram a ser interligados adequadamente por chaves estrangeiras. Apresentando então restrições em casos de deleções inapropriadas no banco de dados. A API, por sua vez, deixou de retornar as listas de turmas, professores, disciplinas e salas, e passou a retornar os dados de forma mais estruturada em formato JSON.
 
 \begin{MyCenteredFigure} \caption{Novo diagrama de banco de dados} \label{fig:MVP3_BancoDeDados}
-  \includegraphics[width=\textwidth]{files/img/2.02!5-desenvolvimento/2.02!5.1.4-sistema/diagramas/Diagrama_ER-How_it_should_be}
+  \includegraphics[width=\textwidth]{files/img/2.02!5-desenvolvimento/2.02!5.4-sistema/5.4.3-MVP3/Diagrama_ER-How_it_should_be}
 \end{MyCenteredFigure}
 
 Na \autoref{fig:MVP3_BancoDeDados} vemos as inter-relação entre as propriedades das entidades do banco de dados. Com o uso mais apropriado das chaves estrangeiras, o anterior uso dos nomes das disciplinas e professores como elementos de identificação foi substituído pelo uso de seus respectivos códigos identificadores. Houve também o surgimento da entidade \textbf{Horarios}, que interliga as turmas às salas.
@@ -693,14 +693,14 @@ As funcionalidades que não foram implementadas são aquelas que, devido a prior
 
 As funcionalidades que foram preparadas mas não implementadas são aquelas que, por conveniência ou por praticidade do momento, foram parcialmente desenvolvidas, mesmo que não tenham grande participação no sistema final. Dentre elas, podemos citar a funcionalidade de adição de alunos, e diversas tabelas e colunas no banco de dados que foram criadas e preenchidas mas não utilizadas.
 
-\subsection{Funcionalidades preparadas} \label{ssec:Funcionalidades preparadas}
+\subsection{Funcionalidades preparadas} \label{ssec:Funcionalidades preparadas}         % ###  5.8.1
 
 Dentre as funcionalidades preparadas temos o sistema de cadastro de alunos, que consiste basicamente na adição das informações básicas dos alunos, como ano de entrada, curso, matrícula e nome como é visto em sua tabela no canto inferior direito na \autoref{fig:DER final}. Seus dados podem ser armazenados no banco de dados junto com os outros dados das entidades que são mais diretamente relacionadas à grade horária, como as turmas, professores, disciplinas e salas.
 
 Além dos alunos, outras entidades também foram estruturadas, sendo elas os centros e laboratórios. Isso se deu com o objetivo de estruturar mais objetivamente as informações referentes aos professores e disciplinas, visto que os professores são vinculados a um centro e a um laboratório, assim tendo a tendência a reduzir a necessidade de repetição de informações.
 
 \begin{MyCenteredFigure} \caption{Diagrama entidade relacionamento final} \label{fig:DER final}
-  \includegraphics[width=\textwidth]{files/img/2.02!5-desenvolvimento/2.02!5.4-sistema/diagramas/Diagrama ER-Final}
+  \includegraphics[width=\textwidth]{files/img/2.02!5-desenvolvimento/2.02!5.8-proximos/Diagrama ER-Final}
 \end{MyCenteredFigure}
 
 Nota-se que na \autoref{fig:DER final}, alguns atributos encontram-se em inglês e outros em português. Isso se dá pelo fato de que a transição para o inglês foi feita de forma gradual, e embora a maior parte do sistema já esteja em inglês, ainda há partes que se encontram em português. A decisão pela migração para o inglês se deu pelo fato de que na programação de modo geral, as variáveis e funções são escritas em inglês, e embora não seja uma regra, torna o código mais consistente em sua linguagem.
