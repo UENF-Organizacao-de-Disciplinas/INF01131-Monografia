@@ -635,7 +635,7 @@ O sistema contempla a checagem de conflitos de alocação simultânea de profess
 
 Caso haja algum conflito, o sistema destaca o professor em questão, tornando a sua cor de fundo avermelhada. Além disso, ao passar o mouse sobre o nome do professor, é exibido um alerta flutuante, informando que quais são as turmas e horários que estão em conflito. Esse comportamento é exemplificado na \autoref{fig:conflitoAlocacaoProfessor}, onde o professor Tang é alocado em duas turmas que ocorrem simultaneamente durante algum intervalo de tempo durante os horários de quarta e sexta-feira, assim informando no alerta flutuante quais são as turmas e horários que estão alocados simultaneamente.
 
-\subsubsection*{Conflitos de salas} \label{sssec:Salas}
+\subsubsection*{Conflitos de salas} \label{sssec:Salas}                                 % #### 5.6.1
 
 As salas também apresentam a verificação do conflito de alocação simultânea. Porém, diferente dos professores, a checagem é feita conferindo todos os horários na qual a sala está alocada, e então é feita a mesma verificação de interseção citada anteriormente. Havendo o conflito, é exibida uma borda alaranjada na parte inferior das propriedades referentes ao conflito, além de, assim como no caso dos professores, exibir o alerta flutuante. A \autoref{fig:conflitoAlocacaoSalas} representa um caso de conflito de alocação de salas.
 
@@ -651,7 +651,7 @@ Então, como pode-se perceber na \autoref{fig:conflitoAlocacaoSalasCapacidade}, 
   \includegraphics[width=\textwidth]{files/img/2.02!5-desenvolvimento/2.02!5.6-conflitos/Demanda X Capacidade}
 \end{MyCenteredFigure}
 
-\subsubsection*{Conflitos de disciplina} \label{sssec:Disciplina}
+\subsubsection*{Conflitos de disciplina} \label{sssec:Disciplina}                       % #### 5.6.2
 
 Além desses conflitos, outras características analisadas e representadas se referem às disciplinas atribuídas às turmas, que, embora não representem necessariamente um \textit{conflito}, mas sim um indicativo, ainda assim serão tratados como conflitos por motivos de simplificação. Esse indicativo leva em consideração o semestre selecionado e o período esperado da disciplina de certa turma. Utilizando de lógica similar, também é indicado caso não tenha sido atribuído um período à disciplina, e se, para o curso de Ciência da Computação, a disciplina é considerada como \textbf{Eletiva Livre}, \textbf{Eletiva Optativa}, ambas em tons azulados, ou se não é uma disciplina para o curso de Ciência da Computação, sendo então representada em tons alaranjados. Estas características são ilustradas no lado direito da \autoref{fig:conflitoDisciplinaTitulos}.
 
