@@ -33,9 +33,11 @@ Para que esta alocação ocorra, é necessário atender a certos critérios, e a
   Resolver problemas práticos relacionados à alocação, sujeito a restrições, de recursos a objetos sendo colocados no espaço-tempo, usando ou desenvolvendo quaisquer ferramentas que possam ser apropriadas. Os problemas irão frequentemente se relacionar à satisfação de certos objetivos. \cite{Wren1996}
 \end{quote}
 
-Outro termo relevante a se pontuar são as \textit{hard and soft constraints} que podemos chamar de restrições rígidas e flexíveis. \citeonline{Alencar2019} as define dizendo que as restrições rígidas são de atendimento obrigatório, enquanto as restrições flexíveis são opcionais, mas convenientes para melhorar a qualidade da solução obtida.
+Outro termo relevante a se pontuar são as \textit{hard and soft constraints} que podemos chamar de restrições rígidas e flexíveis. \citeonline{Alencar2019} as define dizendo que as restrições rígidas são de atendimento obrigatório para que a solução seja considerada viável, enquanto as restrições flexíveis são opcionais, mas convenientes para melhorar a qualidade da solução obtida.
 
-Ambos os tipos de restrições são importantes para a resolução do problema, e são altamente dependentes do contexto em que estão inseridas. Em determinada instituição de ensino. Por exemplo: uma restrição rígida onde uma disciplina não possa durar mais do que três horas pode ser considerada flexível em outra instituição.
+Ambos os tipos de restrições são importantes para a resolução do problema, e são altamente dependentes do contexto em que estão inseridas. Em determinada instituição de ensino. Por exemplo: uma restrição rígida onde uma disciplina não possa durar mais do que três horas pode ser considerada flexível em outra instituição. Sendo então, também dependente do contexto de cada instituição a definição das regras de viabilidade e inviabilidade de soluções.
+
+Em seu trabalho, \citeonline{Marcone2000} distingue entre viabilidade e otimalidade. Para ele, no primeiro caso, a solução do problema consiste basicamente em encontrar um conjunto de alocações tal que satisfaça a todas as restrições impostas. Já no segundo caso, após encontrar-se diversas soluções viáveis, busca-se dentre elas aquelas que melhor atendam às soluções flexíveis baseado em critérios de avaliação de uma função objetivo. \citeonline{dunke_matheuristic_2023} comenta que existem algoritmos que consideram as restrições rígidas e flexíveis de forma simultânea, enquanto outros resolvem primeiro as restrições rígidas e depois as flexíveis.
 
 Alguns outros termos similares a este campo de pesquisa encontrados na literatura são \textit{periodic event scheduling problem}, \textit{timetable scheduling}, \textit{class scheduling}, \textit{student scheduling}, \textit{university course timetabling}, dentre outros.
 
@@ -226,15 +228,29 @@ Nestas imagens, fica exemplificado um dos possíveis problemas que podem ocorrer
 
 \section{Teorias utilizadas} \label{sec:teorias}              % ###  2.6
 
+\subsection{Relaxar restrições para encontrar soluções} \label{ssec:relaxar} % #### 2.6.1
+
+Uma das formas de se encontrar soluções para problemas complexos é a de relaxar restrições. Ao utilizar do método da programação inteira, \cite{dunke_matheuristic_2023} flexibiliza as restrições de seu modelo de programação linear, porém utilizando de uma heurística que corrige as soluções encontradas. De forma similar, \citeonline{Marcone2000} menciona o uso de Algoritmos Genéticos que gera frequentemente soluções inviáveis, sendo utilizado então um filtro para que as inviabilidades sejam reparadas.
+
+Com isso, entende-se que a flexibilização das restrições pode ser uma forma de se encontrar soluções viáveis. Ao permitir que esta categoria de soluções seja percorrida, abre-se a possibilidade de se encontrar outras soluções potencialmente viáveis que poderiam não ser encontradas de outra forma.
+
+\subsection{Pontos de vista das dimensões do problema} \label{ssec:pontos} % #### 2.6.2
+
+\cite{Piechowiak2004} lida com a busca por uma solução para o problema de alocação de horários em universidades, utilizando de um sistema de suporte à decisão. Seu enfoque é em auxiliar o usuário em suas decisões, visando a interatividade, adptabilidade e qualidades ergonômicas. Nele, o autor aborda a importância de se considerar que diferentes usuários têm diferentes pontos de vista e que devem cada um resolver sua parte local do problema em questão. O problema global é o \textit{design} e gestão das grades horárias de todos os recursos, entretanto, cada um dos ``gestores educacionais'' apenas veem uma parte do problema, porém, como os recursos são compartilhados, diversos conflitos acabam ocorrendo.
+
+\subsection{Uso de soluções anteriores, soluções parciais e desvio de conflitos} \label{ssec:parciais} % #### 2.6.3
+
+\cite{Burke2000} consideram em seu trabalho o uso de casos preexistentes para que o problema encontre uma solução similar às anteriores. É visto com otimismo o uso da análise de grafos e sub-grafos como forma de se encontrar soluções parciais para o problema, pois permite a reutilização de soluções já processadas previamente. Em seu algoritmo, ao encontrar um sub-grafo similares ao problema atual, a solução é então adaptada para o problema atual. No caso da solução parcial encontrada apresentar conflitos, então as partes conflituosas são desalocadas, ordenadas da mais conflituosa pra menos conflituosa e então são realoacadas no primeiro horário viável.
+
+\cite{arratia-martinez_university_2021, miranda_udpskeduler_2012, Piechowiak2004, Burke2000} apontam a recorrência de instituições de ensino que utilizam as soluções anteriores como base para a criação de novas grades horárias. Pois, devido à similaridade do problema ao longo dos anos, é esperado que parte da busca por soluções seja facilitada pela reutilização de soluções anteriores.
+
 \begin{comment}
 - Adicionar marco teórico que uso no meu sistema (0/8)
-- [ ]  Definir o que é viabilidade e inviabilidade de soluções
-- [ ]  Comentar sobre começar na inviabilidade e rumar para viabilidade
-- [ ]  Falar sobre soluções parciais
-- [ ]  Heurísticas históricas similares às minhas
-- [ ]  Remover imagem de métodos de visualização. Sinto que tá contribuindo quase nada
-- [ ]  Ao explicar sobre otimização, explicar sobre alocar as variáveis evitando conflitos; Comentar também que é difícil ter a visualização completa de todos os impeditivos e que uma ferramenta de visualização vem a calhar
-- - [ ]  Minimizar os conflitos
+- [X]  Definir o que é viabilidade e inviabilidade de soluções
+- [X]  Comentar sobre começar na inviabilidade e rumar para viabilidade
+- [X]  Falar sobre soluções parciais
+- [X]  Heurísticas históricas similares às minhas
+- [vou deixar]  Remover imagem de métodos de visualização. Sinto que tá contribuindo quase nada
+- [X]  Ao explicar sobre otimização, explicar sobre alocar as variáveis evitando conflitos; Comentar também que é difícil ter a visualização completa de todos os impeditivos e que uma ferramenta de visualização vem a calhar
 - - - [ ]  Descrever de forma algorítimica a sequência de minização de conflitos
 \end{comment}
-
