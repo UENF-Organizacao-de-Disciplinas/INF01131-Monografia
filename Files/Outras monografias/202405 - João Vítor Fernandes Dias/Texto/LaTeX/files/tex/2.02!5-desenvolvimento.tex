@@ -661,6 +661,40 @@ Além desses conflitos, outras características analisadas e representadas se re
 
 Já no lado esquerdo da \autoref{fig:conflitoDisciplinaTitulos}, vemos os conflitos que correlacionam os períodos esperados das disciplinas obrigatórias do curso de Ciência da Computação com o semestre em que foram ofertadas. Os semestres possíveis são três: o primeiro semestre, o segundo semestre e o ``período de verão''. No caso do período de verão, as disciplinas que têm o seu período esperado neste semestre são marcadas com um tom amarelado, visto que não há relevância da sua paridade em um período de férias. Já nos casos das disciplinas de paridade ímpar (disciplinas dos períodos 1, 3, 5, 7 e 9) no primeiro semestre, ou as disciplinas de paridade par (disciplinas dos períodos 2, 4, 6, 8 e 10) no segundo semestre, estas são marcadas com um tom esverdeado, sendo aquelas referentes aos períodos finais do curso marcadas com um tom mais escuro. Já as disciplinas pares em semestres ímpares, ou as disciplinas ímpares em semestre pares, são ilustradas com a cor avermelhada, seguindo a mesma lógica de gradiente escuro nos últimos períodos.
 
+\subsection{Resolução dos conflitos} \label{ssec:Resolução}                             % #### 5.6.3
+
+A resolução dos conflitos é feita de forma manual, e o sistema não apresenta uma funcionalidade que permita a resolução automática dos conflitos. A resolução é feita através da análise dos alertas flutuantes e das cores identificadoras dos conflitos, e então, a partir disso, o usuário pode tomar a ação necessária para a resolução dos conflitos. A sequência de ações necessária para a resolução dos conflitos é arbitrária aos gostos do usuário, sendo fortemente dependente da subárea do problema que o usuário deseja resolver. Ainda assim, de forma geral é listado na \autoref{code:pseudo} um pseudo-algoritmo que descreve uma possível sequência para a resolução dos conflitos.
+
+\begin{lstlisting}[language=Python, caption={Pseudo-algoritmo para a resolução de conflitos}, label={code:pseudo}]
+def resolveConflitos():
+  while ha_informacoes_faltantes():
+    adicione_informacoes_faltantes()
+    while ha_conflitos():
+      ordene_tipos_de_conflitos_por_prioridade()
+      for tipo_de_conflito in tipos_de_conflitos:
+        conflitos_selecionados = selecione_conflitos(tipo_de_conflito)
+        for conflito in conflitos_selecionados:
+          analise_grade_horaria_da_entidade_em_questao(conflito)
+          realocar_entidade_para_onde_nao_haja_conflito()
+\end{lstlisting}
+
+\begin{comment}
+Início
+  Enquanto (a grade estiver incompleta) faça:
+    Adicione as informações faltantes
+    Enquanto (houver conflitos) faça:
+      Ordenar tipos de conflitos por prioridade
+      Para cada (tipo de conflito) faça:
+        Selecionar todos os conflitos desse tipo
+        Para cada (conflito) faça:
+          Analisar a grade horária da entidade em questão
+          Alocar a entidade a um novo conjunto de variáveis que não gere conflito
+      Fim Para
+    Fim Enquanto
+  Fim Enquanto
+Fim
+\end{comment}
+
 \section{Preenchimento de dados} \label{sec:preenchimento}                              % ###  5.7
 
 Inicialmente, os dados adicionados faziam jus diretamente às disciplinas, professores, salas e turmas do curso de Ciência da Computação. Porém, como para a análise completa dos conflitos é necessário que seja feita também a adição das turmas de outros cursos, foi feito o preenchimento de dados para as entidades de professores, disciplinas e salas.
