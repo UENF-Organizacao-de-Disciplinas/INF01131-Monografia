@@ -1,8 +1,8 @@
 \chapter{Modelagem geral do sistema} \label{chap:modelagem} % 4
 
-Tendo esclarecido sobre as \hyperref[chap:marco]{questões gerais da área de estudo} e de \hyperref[chap:instituicao]{como se estrutura a instituição} agora nos aprofundaremos na conceitualização do funcionamento geral do sistema e a forma como se dará a execução da \hyperref[sec:Metodologia]{metodologia proposta} apresentando o funcionamento geral de como o sistema será estruturado e de como foi desenvolvido.
+% Tendo esclarecido sobre as \hyperref[chap:marco]{questões gerais da área de estudo} e de \hyperref[chap:instituicao]{como se estrutura a instituição} agora nos aprofundaremos na conceitualização do funcionamento geral do sistema e a forma como se dará a execução da \hyperref[sec:Metodologia]{metodologia proposta} apresentando o funcionamento geral de como o sistema será estruturado e de como foi desenvolvido.
 
-Ao longo deste capítulos serão abordados os \hyperref[sec:estagios]{estágios de execução} sobre como se dão as etapas de criações de grade horária no geral, a \hyperref[sec:iteracao]{iteração} com os \textit{stakeholders}, o \hyperref[sec:funcionamento]{funcionamento} do sistema, o \hyperref[sec:ModelagemBD]{modelo de banco de dados} e a \hyperref[sec:REST]{API REST} que será utilizada para a comunicação entre o \textit{frontend} e o \textit{backend} do sistema.
+Ao longo deste capítulo serão abordados os \hyperref[sec:estagios]{estágios de execução} sobre como se dão as etapas de criações de grade horária no geral, a \hyperref[sec:interacao]{interação} com os \textit{stakeholders}, o \hyperref[sec:funcionamento]{funcionamento} do sistema, o \hyperref[sec:ModelagemBD]{modelo de banco de dados} e a \hyperref[sec:REST]{API REST} que será utilizada para a comunicação entre o \textit{frontend} e o \textit{backend} do sistema.
 
 \section{Estágios de execução} \label{sec:estagios} % 4.1
 
@@ -13,11 +13,11 @@ Em seu trabalho de aplicação prática, \citeonline{miranda_udpskeduler_2012} e
   \legend{Fonte: \citeonline{miranda_udpskeduler_2012} - adaptado}
 \end{CenteredFigure}
 
-Na \autoref{fig:geral}, estão dispostos 4 estágios principais. O primeiro dispõe da aquisição de informações, sendo elas a disponibilidade do profesor, os recuresos da infraestrutura, as grades dos cursos, as estimativas de demanda e as políticas internas. No segundo estágio são definidas grades horárias preliminares com atribuição preliminar das salas. No terceiro, os alunos se inscrevem e a demanda é ajustada, por fim, no quarto estágio, ocorre a alocação final das salas. Com sua conclusão, são definidos as grades horárias finais junto com as respectivas salas.
+Na \autoref{fig:geral}, estão dispostos 4 estágios principais. O primeiro dispõe da aquisição de informações, sendo elas a disponibilidade do profesor, os recursos da infraestrutura, as grades dos cursos, as estimativas de demanda e as políticas internas. No segundo estágio são definidas grades horárias preliminares com atribuição preliminar das salas. No terceiro, os alunos se inscrevem e a demanda é ajustada, por fim, no quarto estágio, ocorre a alocação final das salas. Com sua conclusão, são definidos as grades horárias finais junto com as respectivas salas.
 
-A sequência geral condiz com o processo de criação das grades horárias, porém é necessário adaptar a metodologia para o contexto da UENF, e também ao escopo do trabalho. Sendo assim, no primeiro estágio a coleta de informações sobre a disponibilidade dos professores e as matrizes curriculares dos cursos não será necessária. Os recursos de infraestrutura serão coletados dos histórico de alocação das turmas, a estimativa de demandas será obtida através da média histórica de alunos inscritos nas turmas e as políticas internas serão compreendidas através da revisão documental e entrevistas com os \textit{stakeholders}. O segundo tem caráter iterativo entre as coordenações e a diretoria do CCT. Os outros estágios não se distanciarão de forma significativa do que foi proposto.
+A sequência geral condiz com o processo de criação das grades horárias, porém é necessário adaptar a metodologia para o contexto da UENF, e também ao escopo do trabalho. Os recursos de infraestrutura serão coletados dos histórico de alocação das turmas, a estimativa de demandas será obtida através da média histórica de alunos inscritos nas turmas e as políticas internas serão compreendidas através da revisão documental e entrevistas com os \textit{stakeholders}. O segundo tem caráter iterativo entre as coordenações e a diretoria do CCT. Os outros estágios não se distanciarão de forma significativa do que foi proposto.
 
-\section{Iteração} \label{sec:iteracao} % 4.2
+\section{Interação} \label{sec:interacao} % 4.2
 
 Para se alcançar uma alta satisfação por parte dos \textit{stakeholders}, vê-se necessária a constante interação com os mesmos. Para isto, será seguida a estrutura utilizada por \citeonline{Andre2018}.
 
@@ -46,17 +46,21 @@ Dispondo de todas essas funcionalidades, o sistema deverá ser capaz de gerar um
 
 \section{Modelo de banco de dados} \label{sec:ModelagemBD} % 4.4
 
-Considerando as informações necessárias para o presente trabalho, e também o preparo de campo para potenciais aplicações futuras, foi elaborado um diagrama conceitual parcial do banco de dados (\autoref{fig:DiagramConceitual}).
+Considerando as informações necessárias para o presente trabalho, e também o preparo de campo para potenciais aplicações futuras, foi elaborado um diagrama conceitual parcial do banco de dados (\autoref{fig:DiagramConceitual}). Seu intuito foi trazer uma visualização mais clara das relações entre as entidades presentes no processo de criação de uma grade horária, e assim auxiliar na definição das tabelas que serão criadas no banco de dados \hyperref[ssssec:MySQL]{posteriormente}.
 
 \begin{MyCenteredFigure} \caption{Diagrama Conceitual do banco de dados} \label{fig:DiagramConceitual}
   \includegraphics[width=\textwidth]{files/img/2.02!4-modelagem/Diagrama Conceitual}
 \end{MyCenteredFigure}
 
-O diagrama conceitual foi desenvolvido utilizando a ferramenta \LinkToURL{\LinkDrawio}{draw.io} citada na metodologia e ilustra as relações entre diversas entidades presentes na realidade da UENF. O emaranhamento presente no diagrama ilustra a complexidade envolvida na criação de uma grade horária, onde diversas entidades se relacionam entre si.
+O diagrama conceitual foi desenvolvido utilizando a ferramenta \LinkToURL{\LinkDrawio}{draw.io} e ilustra as relações entre diversas entidades presentes na realidade da UENF. O emaranhamento presente no diagrama ilustra a complexidade envolvida na criação de uma grade horária, onde diversas entidades se relacionam entre si.
 
 Como principais apontamentos, podemos citar a parte principal do modelo que é a alocação de turmas. Ela, como já descrito, envolve a correlação entre alunos de diferentes cursos, professores, disciplinas, salas e horários. Além disso, também é possível notar a presença de entidades que não são diretamente relacionadas à alocação de turmas, mas que podem se mostrar úteis no futuro, como a relação entre professores e laboratórios; e a de disciplinas e ementas.
 
-Embora o diagrama apresente uma visão mais completa das interconexões possíveis, é importante ressaltar que o presente trabalho foca primordialmente na alocação das turmas para o curso de Ciência da Computação, e que a implementação do banco de dados será feita de forma a atender a essas necessidades, fazendo então uso de apenas uma parte do diagrama conceitual apresentado pela \autoref{fig:DiagramConceitual}. Sendo posteriormente ilustrado (\autoref{fig:TabelasIniciais}, \autoref{fig:MVP3_BancoDeDados} e \autoref{fig:DER final}).
+Embora o diagrama apresente uma visão mais completa das interconexões possíveis, é importante ressaltar que o presente trabalho foca primordialmente na alocação das turmas para o curso de Ciência da Computação, e que a implementação do banco de dados será feita de forma a atender a essas necessidades, fazendo então uso de apenas uma parte do diagrama conceitual apresentado pela \autoref{fig:DiagramConceitual}.
+Sendo posteriormente ilustrados na \autoref{ssec:MVP2} pela \autoref{fig:TabelasIniciais}, na \autoref{ssec:MVP3} pela \autoref{fig:MVP3_BancoDeDados} e na \autoref{ssec:Funcionalidades preparadas} pela \autoref{fig:DER final}.
+% Sendo posteriormente ilustrados na \hyperref[ssec:MVP2]{subseção ``Versão 2.0''} pela \autoref{fig:TabelasIniciais}, na \hyperref[ssec:MVP3]{subseção ``Versão 3.0''} pela \autoref{fig:MVP3_BancoDeDados} e na \hyperref[ssec:Funcionalidades preparadas]{subseção ``Funcionalidades preparadas''} pela \autoref{fig:DER final}.
+
+% DEIXAR MAIS DESCRITO EM QUE SEÇÃO ESSAS FIGURAS ESTÃO.
 
 % \subsection{Diagrama de Entidade e Relacionamento} % 4.4.1
 
@@ -73,7 +77,7 @@ Para exemplificar o funcionamento geral da permanência dos dados, consideremos 
 % Essa parte sobre Dev e Prod tá muito deslocada
 % Ele se encontra em duas formas: a primeira é o chamado ``em produção'', que é o sistema que o usuário final acessa, e a segunda é o chamado ``em desenvolvimento'', que é o sistema que o desenvolvedor acessa para realizar as modificações necessárias. Ambas precisam
 
-O \textbf{\textit{frontend}} é a interface do sistema, onde o usuário interage com o sistema. Essa interface precisa se comunicar com o \textit{backend} para realizar as quatro operações básicas no banco de dados (criação, leitura, atualização e deleção) por sobre as entidades existentes (turmas, professores, disciplinas, salas, etc.). Elas assim o fazer ao enviar requisições HTTP (\textit{GET}, \textit{POST}, \textit{PUT} e \textit{DELETE}), contendo pacotes de informações em formato JSON para os \textbf{\textit{endpoints}}.
+O \textbf{\textit{frontend}} é a interface do sistema, onde o usuário interage com o sistema. Essa interface precisa se comunicar com o \textit{backend} para realizar as quatro operações básicas no banco de dados (criação, leitura, atualização e deleção) por sobre as entidades existentes (turmas, professores, disciplinas, salas, etc.). Elas assim o fazem ao enviar requisições HTTP (\textit{GET}, \textit{POST}, \textit{PUT} e \textit{DELETE}), contendo pacotes de informações em formato JSON para os \textbf{\textit{endpoints}}.
 
 Os \textbf{\textit{endpoints}} são as rotas que o \textit{backend} disponibiliza para a recepção das requisições HTTP. Eles são responsáveis por encaminhar as requisições recebidas. Seu funcionamento consiste em rotear as requisições recebidas junto com sua carga útil. Para tanto, as rotas criadas refletem diretamente a qual entidade do banco de dados a requisição se refere, sendo então assim sabido qual \textbf{função} deve ser executada.
 

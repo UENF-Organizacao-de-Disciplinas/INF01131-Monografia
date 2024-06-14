@@ -15,7 +15,7 @@ básica de dados, se mostra como uma página importante para futuros desenvolvim
   \includegraphics[width=\textwidth]{files/img/2.02!7-resultados/1-Main.png}
 \end{MyCenteredFigure}
 
-A página \textbf{MultiTurmas} é repartida em três partes principais: a primeira, com filtros para a seleção das turmas mostradas (\autoref{fig:pagina_multiFiltros}); a segunda, com a visualização dos conflitos de horários entre as turmas selecionadas (\autoref{fig:pagina_multiConflitos}); e a terceira, com a visualização das disciplinas pendentes de alocação nas turmas selecionadas (\autoref{fig:pagina_multiDisciplinas}).
+A página \textbf{MultiTurmas} é repartida em três partes principais: a superior, com filtros para a seleção das turmas mostradas (\autoref{fig:pagina_multiFiltros}); a central, com a visualização dos conflitos de horários entre as turmas selecionadas (\autoref{fig:pagina_multiConflitos}); e a inferior, com a visualização das disciplinas pendentes de alocação nas turmas selecionadas (\autoref{fig:pagina_multiDisciplinas}).
 
 \begin{MyCenteredFigure} \caption{Página de multiturmas com filtros} \label{fig:pagina_multiFiltros}
   \includegraphics[width=\textwidth]{files/img/2.02!7-resultados/2-Multiturmas-Filtros.png}
@@ -41,7 +41,7 @@ A página \textbf{Turmas} (\autoref{fig:pagina_turmas}) apresenta todas as turma
   \includegraphics[width=\textwidth]{files/img/2.02!7-resultados/6-Turmas.png}
 \end{MyCenteredFigure}
 
-As páginas \textbf{Professores} (\autoref{fig:pagina_professores}), \textbf{Salas} (\autoref{fig:pagina_salas}) e \textbf{Disciplinas} (\autoref{fig:pagina_disciplinas}) apresentam um funcionamento muito similar entre si. Todas elas permitem as operações de criação, leitura, atualização e exclusão de seus respectivos itens. Além de apresentar também uma tabela inferior onde são listadas os horários histórias em que cada um desses itens foi alocado, podendo haver também a filtragem por ano, semestre, dia e hora.
+As páginas \textbf{Professores} (\autoref{fig:pagina_professores}), \textbf{Salas} (\autoref{fig:pagina_salas}) e \textbf{Disciplinas} (\autoref{fig:pagina_disciplinas}) apresentam um funcionamento muito similar entre si. Todas elas permitem as operações de criação, leitura, atualização e exclusão de seus respectivos itens. Além de apresentar também uma tabela inferior onde são listadas os horários históricos em que cada um desses itens foi alocado, podendo haver também a filtragem por ano, semestre, dia e hora.
 
 \begin{MyCenteredFigure} \caption{Página de professores} \label{fig:pagina_professores}
   \includegraphics[width=\textwidth]{files/img/2.02!7-resultados/7-Professores.png}
@@ -65,31 +65,31 @@ A página \textbf{Alunos} (\autoref{fig:pagina_alunos}), por fim, apresenta a po
 
 Nas páginas apresentadas, foram implementadas diversas funcionalidades que permitem a interação do usuário com o sistema. Dentre elas, destacam-se as \hyperref[sssec:CRUD]{quatro operações básicas de armazenamento persistente}, a \hyperref[sssec:Análise histórica]{análise histórica}, a \hyperref[sssec:Criação de grade inicial]{criação de grade inicial}, a \hyperref[sssec:Visualização de conflitos]{Visualização de conflitos} e a \hyperref[sssec:Visualização de tabelas horárias]{visualização das tabelas horárias}.
 
-\subsubsection*{CRUD} \label{sssec:CRUD}
+\subsubsection*{\textbf{CRUD}} \label{sssec:CRUD}
 
 Com exceção da página inicial e da página de grade de horários, todas as páginas apresentam as operações de criação, leitura, atualização e exclusão de seus respectivos itens. Isso se dá pois esta é a função básica de um sistema de gerenciamento de banco de dados, sendo necessária para que todas as outras funcionalidades possam ser implementadas e utilizáveis.
 
-\subsubsection*{Análise histórica} \label{sssec:Análise histórica}
+\subsubsection*{\textbf{Análise histórica}} \label{sssec:Análise histórica}
 
 O conceito da \textbf{Análise Histórica} é a capacidade de visualizar quais foram todos os horários em que um determinado item foi alocado. Isso é útil para avaliar os padrões emergentes nas alocações dos recursos.
 
-\subsubsection*{Criação de grade inicial} \label{sssec:Criação de grade inicial}
+\subsubsection*{\textbf{Criação de grade inicial}} \label{sssec:Criação de grade inicial}
 
 A \textbf{Criação de Grade Inicial}, já descritas no \hyperref[ssec:Heurística]{segmento sobre heurística de criação de grade}, é uma funcionalidade que permite a criação de uma grade de horários inicial através da avaliação das alocações anteriores para determinada disciplina. Através dela é possível criar uma grade de horários inicial para o curso de Ciência da Computação em poucos segundos.
 
-\subsubsection*{Visualização de conflitos} \label{sssec:Visualização de conflitos}
+\subsubsection*{\textbf{Visualização de conflitos}} \label{sssec:Visualização de conflitos}
 
 Na página \textbf{Turmas} e principalmente na página \textbf{MultiTurmas}, é possível visualizar os conflitos existentes entre as turmas. Os \hyperref[sec:conflitos]{conflitos} são apresentados de forma clara e objetiva, permitindo a rápida identificação e posterior resolução.
 
-\subsubsection*{Visualização de tabelas horárias} \label{sssec:Visualização de tabelas horárias}
+\subsubsection*{\textbf{Visualização de tabelas horárias}} \label{sssec:Visualização de tabelas horárias}
 
-Por fim, especificamente na página \textbf{Grade de Horários}, é possível visualizar as tabelas horárias de todas as turmas cadastradas, podendo haver também a filtragem por ano, semestre, categoria, disciplina, professor e sala. Com esta visualização tabular, pode-se gerar as grades de horários específicas das turmas de disciplinas de cada um dos períodos letivos, bem como distingue as turmas entre as que pertencem à ementa do Curso de Ciência da Computação e as que não pertencem.
+Por fim, especificamente na página \textbf{Grade de Horários}, é possível visualizar as tabelas horárias de todas as turmas cadastradas, podendo haver também a filtragem por ano, semestre, disciplina, professor, sala e categoria. Com esta visualização tabular, pode-se gerar as grades de horários específicas das turmas de disciplinas de cada um dos períodos letivos, bem como distingue as turmas entre as que pertencem à matriz curricular do Curso de Ciência da Computação e as que não pertencem.
 
 Assim como no caso da \hyperref[sssec:Análise histórica]{análise histórica}, a visualização das tabelas horárias é uma funcionalidade que permite a visualização de padrões emergentes nas alocações dos recursos.
 
 \section{Ferramentas disponíveis para gestão dos horários} % ### 7.2.
 
-Além do desenvolvimento para auxílio na criação da grade horária, ao longo do estudo, o presente trabalho também encontrou métodos alternativos para se amenizar a problemática abordada. Sendo, de forma simples, o uso de ferramentas burocráticas disponíveis na instituição que abrem alguns caminhos para uma maior maleabilidade no processo de resolução do problema. Entretanto, é necessário que se tenha em mente que a burocracia é um processo lento e que pode ser desgastante, sendo até mesmo esperado que não seja desejado por parte dos construtores da grade horária.
+Além do desenvolvimento para auxílio na criação da grade horária, ao longo do estudo, o presente trabalho também propõe práticas de gestão para se amenizar a problemática abordada. Sendo, de forma simples, o uso de práticas administrativas disponíveis na instituição que abrem alguns caminhos para uma maior maleabilidade no processo de resolução do problema. Entretanto, é necessário que se tenha em mente que seguir o protocolo é um processo lento e que pode ser desgastante, sendo até mesmo esperado que não seja desejado por parte dos construtores da grade horária.
 
 Essas alternativas não geram por si só uma solução para o problema, mas servem como meios possíveis para se realizar mudanças além das usuais.
 
@@ -103,7 +103,7 @@ Segundo o Artigo 28 do Estatuto da UENF \cite{Estatuto2002}, compete à secretar
 
 Logo, quanto à alteração do calendário acadêmico, a alteração mostra-se como possível, sendo necessário apenas que o processo burocrático necessário seja enfrentado, o que pode acabar não sendo do desejo daqueles que constroem a grade horária.
 
-\subsection{Alteração forçada de horários} \label{ssec:burocracia-troca} % #### 7.1.2.
+\subsection{Alteração de horários posterior à matrícula dos alunos} \label{ssec:burocracia-troca} % #### 7.1.2.
 
 Segundo o parágrafo primeiro do artigo 36 das Normas de Graduação \cite{Normas2012}, ``qualquer alteração de horário/turno após o período de matrícula deverá ter a anuência por escrito de todos os discentes matriculados na turma''. Seguindo ao segundo parágrafo do mesmo artigo, temos que ``a alteração de horário das aulas da turma deverá ter a anuência da Coordenação de Curso e a ciência do Chefe do Laboratório responsável pela disciplina''.
 
@@ -120,7 +120,7 @@ Ambas as alternativas supracitadas visam a alteração dos horários das turmas 
 % Coordenação de Curso e a ciência do Chefe do Laboratório responsável pela
 % disciplina.
 
-\subsection{Aplicação prática dos métodos burocráticos} \label{ssec:aplicacaoDasMudancas} % #### 7.1.3.
+\subsection{Proposta de mudança na gestão de horários} \label{ssec:aplicacaoDasMudancas} % #### 7.1.3.
 
 % O QUE DEVERIA TER INTERVALO É ENTRE O FIM DAS INSCRIÇÕES E O INÍCIO DAS AULAS
 
@@ -239,7 +239,7 @@ Com objetivo de tormar a visualização das informações mais coesa, a \autoref
   \end{tabular}
 \end{table}
 
-Levando em consideração as ações sugeridas na \autoref{ssec:burocracia-férias} e na \autoref{ssec:burocracia-troca}, um cronograma alterado seria o disposto na \autoref{tab:calendario_2023-Alterado}, onde as ações sugeridas foram aplicadas. Essas ações incluem a alteração do calendário acadêmico para que todo o primeiro semestre comece suas atividades uma semana antes. Além disso, define-se que o período final de criação de turmas não é efetivamente finalizado no antes da renovação de matrícula, mas sim após a finalização da inclusão e exclusão de disciplinas.
+Levando em consideração as ações sugeridas na \autoref{ssec:burocracia-férias} e na \autoref{ssec:burocracia-troca}, um cronograma alterado seria o disposto na \autoref{tab:calendario_2023-Alterado}, onde as ações sugeridas foram aplicadas. Essas ações incluem a alteração do calendário acadêmico para que todo o primeiro semestre comece suas atividades uma semana antes. Além disso, define-se que o período final de criação de turmas não é efetivamente finalizado antes da renovação de matrícula, mas sim após a finalização da inclusão e exclusão de disciplinas.
 
 Nota-se que o único caso em que não foi feita a migração exata de uma semana foi na renovação de matrícula, visto que caso fosse alterada para uma semana exata, a renovação de matrícula seria feita no período de carnaval, o que não é desejado. Assim, foi mantido o mesmo intervalo de tempo, porém, começando após o feriado nacional ``Quarta-feira de Cinzas''.
 
@@ -275,4 +275,4 @@ Nota-se que o único caso em que não foi feita a migração exata de uma semana
   \end{tabular}
 \end{table}
 
-Com a utilização desses dois métodos burocráticos, aqueles encarregados de realizar a criação e alocação das turmas nos devido horários disporá de uma semana extra no segmento entre os semestres, assim abrindo uma janela de tempo maior para a manipulação dos horários, e consequentemente, ampliando possibilidade de se alcançar uma solução ótima.
+Com a mudança dessas duas práticas de gestão, aqueles encarregados de realizar a criação e alocação das turmas nos devido horários disporá de uma semana extra no segmento entre os semestres, assim abrindo uma janela de tempo maior para a manipulação dos horários, e consequentemente, ampliando possibilidade de se alcançar uma solução mais eficiente.

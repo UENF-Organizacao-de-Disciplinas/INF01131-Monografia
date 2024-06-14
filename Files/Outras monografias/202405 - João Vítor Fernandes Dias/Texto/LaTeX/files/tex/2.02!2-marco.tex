@@ -1,6 +1,6 @@
 \chapter{Marco teórico} \label{chap:marco}                                                              % ##   2.
 
-Antes de prosseguirmos com o desenrolar deste trabalho, é adequado que primeiro definamos alguns parâmetros para o melhor entendimento do que está por vir.
+Antes de prosseguirmos com o desenrolar deste trabalho, é adequado que primeiro definamos alguns conceitos para o melhor entendimento do trabalho como um todo. Iniciaremos com a definição do \hyperref[sec:termos]{Problema de \textit{Timetabling}}, suas subdivisões, \hyperref[ssec:desafios]{suas complexidades} e \hyperref[ssec:erros]{possíveis errosna gestão das informações}. Em seguida, abordaremos os \hyperref[sec:resolucao]{métodos de resolução} para o problema, nos baseando em compilados de informações sobre os trabalhos anteriores. Especifica-se também como que se dá o \hyperref[sec:anteriores]{Problema de \textit{Timetabling na UENF (PTT-UENF)}}, com base nos trabalhos anteriores. Por fim, são apresentadas diversas \hyperref[sec:teorias]{estratégias de solução baseadas na otimização}, que serão utilizadas conceitualmente durante o desenvolvimento deste trabalho.
 
 % O Problema de Programação de Horários (Timetabling Problem) é um problema de grande relevância e amplamente estudado na área de Pesquisa Operacional. Um número significativo de trabalhos sobre esse problema foi publicado nos últimos anos e conferências regulares discutem o tema no meio científico [Splinder2010].
 % Sânya
@@ -15,9 +15,9 @@ Antes de prosseguirmos com o desenrolar deste trabalho, é adequado que primeiro
 
 \section{Problema de \textit{Timetabling}} \label{sec:termos}                                                        % ###  2.1
 
-Ao longo dos anos de desenvolvimento acadêmico, diversos assuntos vão se aprofundando e se tornando mais específicos, assim, os estudiosos acabam cunhando novos termos que o auxiliam a desvencilhar as novas áreas específicas das suas áreas originárias. Porém, existe o potencial de que haja um crescimento desestruturado destes novos termos, assim vários termos diferentes podem se referir a um mesmo conceito, enquanto que um mesmo termo pode se referir a vários conceitos diferentes de acordo com o autor.
+% Ao longo dos anos de desenvolvimento acadêmico, diversos assuntos vão se aprofundando e se tornando mais específicos, assim, os estudiosos acabam cunhando novos termos que o auxiliam a desvencilhar as novas áreas específicas das suas áreas originárias. Porém, existe o potencial de que haja um crescimento desestruturado destes novos termos, assim vários termos diferentes podem se referir a um mesmo conceito, enquanto que um mesmo termo pode se referir a vários conceitos diferentes de acordo com o autor.
 
-Segundo \citeonline{Wren1996}, podemos definir \textit{timetable} como uma estrutura que mostra quando que eventos ocorrerão, não havendo necessariamente a alocação de recursos. Vale ressaltar que este termo não tem seu uso limitado para os fins desta pesquisa, sendo também usado para problemas de alocação de enfermeiros, esportes, funcionários e transportes \cite{arratia-martinez_university_2021}. Entretanto, neste trabalho, abordaremos principalmente os termos relacionados ao que pode ser chamado de \textit{Educational Timetabling} (Ed-TT) \cite{Alencar2019}, que é o que tende a envolver um conjunto específico de recursos relacionados à educação.
+Segundo \citeonline{Wren1996}, podemos definir \textit{timetable} como uma estrutura que mostra quando eventos ocorrerão, não havendo necessariamente a alocação de recursos. Vale ressaltar que este termo não tem seu uso limitado para os fins desta pesquisa, sendo também usado para problemas de alocação de enfermeiros, esportes, funcionários e transportes \cite{arratia-martinez_university_2021}. Entretanto, neste trabalho, abordaremos principalmente os termos relacionados ao que pode ser chamado de \textit{Educational Timetabling} (Ed-TT) \cite{Alencar2019}, que é o que tende a envolver um conjunto específico de recursos relacionados à educação.
 
 \citeonline{Wren1996} também define os conceitos para \textit{class timetable}, \textit{university examination timetable} e \textit{university class timetable}, tendo relevância apenas o último, que considera a disponibilidade de professores e salas, a quantidade de alunos e os requisitos que determinada disciplina exige.
 
@@ -33,11 +33,11 @@ Para que esta alocação ocorra, é necessário atender a certos critérios, e a
   Resolver problemas práticos relacionados à alocação, sujeito a restrições, de recursos a objetos sendo colocados no espaço-tempo, usando ou desenvolvendo quaisquer ferramentas que possam ser apropriadas. Os problemas irão frequentemente se relacionar à satisfação de certos objetivos. \cite{Wren1996}
 \end{quote}
 
-Outro termo relevante a se pontuar são as \textit{hard and soft constraints} que podemos chamar de restrições rígidas e flexíveis. \citeonline{Alencar2019} as define dizendo que as restrições rígidas são de atendimento obrigatório para que a solução seja considerada viável, enquanto as restrições flexíveis são opcionais, mas convenientes para melhorar a qualidade da solução obtida.
+Outro termo relevante a se pontuar são as \textit{hard and soft constraints} que podemos chamar de restrições rígidas e flexíveis. \citeonline{Alencar2019} as definem dizendo que as restrições rígidas são de atendimento obrigatório para que a solução seja considerada viável, enquanto as restrições flexíveis são opcionais, mas convenientes para melhorar a qualidade da solução obtida.
 
 Ambos os tipos de restrições são importantes para a resolução do problema, e são altamente dependentes do contexto em que estão inseridas. Em determinada instituição de ensino. Por exemplo: uma restrição rígida onde uma disciplina não possa durar mais do que três horas pode ser considerada flexível em outra instituição. Sendo então, também dependente do contexto de cada instituição a definição das regras de viabilidade e inviabilidade de soluções.
 
-Em seu trabalho, \citeonline{Souza2000} distingue entre viabilidade e otimalidade. Para ele, no primeiro caso, a solução do problema consiste basicamente em encontrar um conjunto de alocações tal que satisfaça a todas as restrições impostas. Já no segundo caso, após encontrar-se diversas soluções viáveis, busca-se dentre elas aquelas que melhor atendam às soluções flexíveis baseado em critérios de avaliação de uma função objetivo. \citeonline{dunke_matheuristic_2023} comenta que existem algoritmos que consideram as restrições rígidas e flexíveis de forma simultânea, enquanto outros resolvem primeiro as restrições rígidas e depois as flexíveis.
+Em seu trabalho, \citeonline{Souza2000} distingue entre viabilidade e otimalidade. Para ele, no primeiro caso, a solução do problema consiste basicamente em encontrar um conjunto de alocações tal que satisfaça a todas as restrições impostas. Já no segundo caso, após encontrar-se diversas soluções viáveis, busca-se dentre elas aquelas que melhor atendam às soluções flexíveis baseado em critérios de avaliação de uma função objetivo. \citeonline{dunke_matheuristic_2023} comentam que existem algoritmos que consideram as restrições rígidas e flexíveis de forma simultânea, enquanto outros resolvem primeiro as restrições rígidas e depois as flexíveis.
 
 Alguns outros termos similares a este campo de pesquisa encontrados na literatura são \textit{periodic event scheduling problem}, \textit{timetable scheduling}, \textit{class scheduling}, \textit{student scheduling}, \textit{university course timetabling}, dentre outros.
 
@@ -51,9 +51,9 @@ Apesar do contrafluxo encontrado na resolução desse problema, \citeonline{Murr
 
 Com isso, entramos também no ramo da Interação Homem-Máquina, ramo abordado por \citeonline{Andre2018} que visaram em seu desenvolvimento a criação de uma interface focada no usuário. Assim minimizando o atrito na abordagem desse problema complexo. Também sendo área de enfoque de \citeonline{Alencar2019} em sua revisão literária
 
-\subsection{Exemplo de erros humanos} \label{ssec:erros}                                                    % ###  2.5
+\subsection{Possíveis erros na gestão das informações} \label{ssec:erros}                                                    % ###  2.5
 
-Dada a grande quantidade de variáveis interconectadas e as características específicas de cada instituição \cite{miranda_udpskeduler_2012}, a organização destas informações buscando a melhor solução possível apresenta-se como um desafio. Principalmente se considerarmos que esta solução é, muitas vezes, buscada manualmente, estando também passível de erros humanos como ilustram a \autoref{fig:Academico} e \autoref{fig:CCT}.
+Dada a grande quantidade de variáveis interconectadas e as características específicas de cada instituição \cite{miranda_udpskeduler_2012}, a organização destas informações buscando a melhor solução possível apresenta-se como um desafio. Principalmente se considerarmos que esta solução é, muitas vezes, procurada manualmente, estando também passível de erros humanos como ilustram a \autoref{fig:Academico} e \autoref{fig:CCT}.
 
 \begin{MyCenteredFigure} \caption{Disciplina atribuída no sistema acadêmico à determinada hora e local} \label{fig:Academico}
   \includegraphics[width=0.8\textwidth]{files/img/2.02!2-marco/Metodologia-Quinta}
@@ -63,7 +63,7 @@ Dada a grande quantidade de variáveis interconectadas e as características esp
   \includegraphics[width=0.8\textwidth]{files/img/2.02!2-marco/Aulas-CCT-105-2023_1}
 \end{MyCenteredFigure}
 
-Nestas imagens, fica exemplificado um dos possíveis problemas que podem ocorrer durante a criação de grades horárias, que é, mesmo quando uma seção da universidade (o Sistema Acadêmico, ilustrado pela \autoref{fig:Academico}) aloca uma turma a uma determinada sala, outra seção da mesma instituição (o Centro de Ciência e Tecnologia, ilustrado pela \autoref{fig:CCT}) pode não estar ciente do mesmo, ou, mesmo estando ciente, pode acabar não delimitando aquela lacuna de tempo como ocupada, assim estando passível de uma segunda alocação naquele período de tempo naquela sala, assim gerando problemas.
+Nestas imagens, fica exemplificado um dos possíveis problemas que podem ocorrer durante a criação de grades horárias, devido à falta de integração das informações em um sistema únco. Situação essa que ocorre quando uma seção da universidade (o Sistema Acadêmico, ilustrado pela \autoref{fig:Academico}) aloca uma turma a uma determinada sala, outra seção da mesma instituição (o Centro de Ciência e Tecnologia, ilustrado pela \autoref{fig:CCT}) pode não estar ciente do mesmo, ou, mesmo estando ciente, pode acabar não delimitando aquela lacuna de tempo como ocupada, assim estando passível de uma segunda alocação naquele período de tempo naquela sala, assim gerando problemas.
 
 \section{Métodos de resolução para o problema de \textit{timetabling}} \label{sec:resolucao}                                                    % ###  2.2
 
@@ -107,11 +107,11 @@ Nestas imagens, fica exemplificado um dos possíveis problemas que podem ocorrer
 
 % Pesquisar posteriormente sobre imagens que ilustrem bem as diferentes sub categorias de scheduling
 
-Existem diversas implementações já realizadas, utilizando uma miríade de métodos. Em seu trabalho, \citeonline{miranda_udpskeduler_2012} informam sobre diversos sistemas baseados em computador para auxiliar na tarefa de agendamento. \citeonline{miranda_udpskeduler_2012} também citam um dos métodos de resolução como sendo o \textbf{modelo de programação inteira} e \textbf{heurísticas}.
+Existem diversas implementações já realizadas, utilizando uma miríade de métodos. Em seu trabalho, \citeonline{miranda_udpskeduler_2012} informam sobre diversos sistemas baseados em computador para auxiliar na tarefa de agendamento. \citeonline{miranda_udpskeduler_2012} também citam dois possíveis métodos de resolução, sendo eles o \textbf{modelo de programação inteira} e os \textbf{métodos heurísticos}.
 
-Outros trabalhos buscaram condensar em forma de tabela as informações encontradas. Abaixo estão dispostas algumas das tabelas encontradas durante o estudo bibliográfico e que foram elaboradas por diversos autores.
+Outros trabalhos buscaram condensar em forma de tabela as informações encontradas. À seguir estão dispostas as tabelas mais relevantes e que compilam diversos  encontradas durante o estudo bibliográfico e que foram elaboradas por diversos autores.
 
-Na \autoref{fig:Desenvolvimento}, \citeonline{alegre_desenvolvimento_2012} traça a relação entre os diversos autores, ano de sua publicação e seu país de origem com os dados encontrados em seus trabalhos quanto aos parâmetros utilizados na elaboração da grade horária, quão grandes eram cada um de seus parâmetros, quanto tempo foi necessário para achar uma solução e quais foram as técnicas utilizadas.
+Na \autoref{fig:Desenvolvimento}, \citeonline{alegre_desenvolvimento_2012} traçam a relação entre os diversos autores, ano de sua publicação e seu país de origem com os dados encontrados em seus trabalhos quanto aos parâmetros utilizados na elaboração da grade horária, quão grandes eram cada um de seus parâmetros, quanto tempo foi necessário para achar uma solução e quais foram as técnicas utilizadas.
 
 % Entender o que está dando errado aqui depois
 
@@ -120,7 +120,7 @@ Na \autoref{fig:Desenvolvimento}, \citeonline{alegre_desenvolvimento_2012} traç
   \legend{Fonte: \citeonline{alegre_desenvolvimento_2012}}
 \end{CenteredFigure}    % Desenvolvimento
 
-Na \autoref{fig:University}, \citeonline{arratia-martinez_university_2021}, apresentam uma comparação similar à anterior, porém não separada em categorias, apenas categorizando entre verdadeiro e falso algumas características como alocação de salas, professores, nível institucional e método exato ou inexato.
+Na \autoref{fig:University}, \citeonline{arratia-martinez_university_2021}, apresentam uma comparação similar à anterior, porém não separada em categorias, apenas categorizando entre verdadeiro e falso algumas características como alocação de salas, professores, nível institucional e método de solução exato ou aproximado.
 
 \begin{CenteredFigure} \caption{Comparação entre artigos que solucionam o problema de grade horária} \label{fig:University}
   \includegraphics[width=\textwidth]{files/img/2.02!2-marco/University}
@@ -155,7 +155,7 @@ Ele descreve também como possibilidade de trabalho futuro o aperfeiçoamento do
 
 Ambos os trabalhos têm sido de grande valia ao rumarem na direção de uma solução para este amplo e complexo problema, percebe-se que o problema que buscaram solucionar ainda se encontra em aberto. Não tendo suas ferramentas alçado voos altos o suficiente para que se tornassem soluções definitivas para o problema no contexto da UENF.
 
-\subsubsection*{Sânya} \label{sssec:sanya} % ##### 2.4.1.1
+\subsubsection*{\textbf{Sânya}} \label{sssec:sanya} % ##### 2.4.1.1
 
 É dito por \citeonline{Sanya2013} que ``[...] Como na UENF a tarefa de distribuição de sala não varia muito a cada período, sendo feito separadamente por cada centro [...]''. Embora possamos entender o conceito de ``variar muito'' como subjetivo, considerando que mesmo ao longo de um mesmo semestre existem realocações de salas e professores dentro do contexto de um mesmo Centro, podemos entender que a realidade da UENF é de fato muito dinâmica, não se encaixando completamente na solução de alocação única inicial de salas e professores.
 
@@ -197,7 +197,7 @@ Outra considerável divergência entre o modelo e a realidade é a definição d
 
 Por fim, Sânya não considera a possibilidade de alocação de professores em mais de uma disciplina, o que é uma realidade na universidade, visto que alguns professores ministram aulas em mais de um curso, e em mais de uma disciplina.
 
-\subsubsection*{Ricardo} \label{sssec:ricardo} % ##### 2.4.1.2
+\subsubsection*{\textbf{Ricardo}} \label{sssec:ricardo} % ##### 2.4.1.2
 
 \citeonline{Ricardo2014}, em seu trabalho, apresenta alguns conceitos que se mostraram limitantes em sua modelagem conceitual do problema na UENF. Em sua monografia, ele aborda as turmas como sendo compostas por alunos que ingressaram no mesmo ano, independente de suas escolhas, da demanda, e de possíveis defasagens na progressão do curso. O que não se mostra condizente com a realidade da universidade atualmente, então, mesmo que em 2014, quando o trabalho foi realizado, a realidade fosse esta, não se mostra condizente com a realidade atual, havendo então a necessidade de uma reformulação conceitual.
 
@@ -205,15 +205,14 @@ Ele, assim com \citeonline{Sanya2013}, também não considera a possibilidade de
 
 Por fim, podemos citar um outro ponto que é a busca pela eficiência e baixo custo de tempo dos métodos utilizados. O que se mostra como ponto positivo, entretanto, mesmo com tamanha eficiência ainda peca em atingir a praticabilidade da solução.
 
-\subsubsection*{Parecer geral das divergências} \label{sssec:divergencias} % ##### 2.4.1.3
+\subsubsection*{\textbf{Parecer geral das divergências}} \label{sssec:divergencias} % ##### 2.4.1.3
 
 O entendimento das falhas passadas em se encontrar uma solução prática ao problema de Programação de Horários da UENF é de suma importância para que se possa evitar que os mesmos erros sejam cometidos novamente. Assim, é necessário que se tenha em mente que a realidade da universidade é dinâmica, e que a solução deve ser capaz de se adaptar a esta dinamicidade.
 
 Vale-se também relembrar o que é dito por \citeonline{Murray2007} que citam em seu trabalho justamente sobre a complexidade presente na modelagem do problema.
-
 \end{comment}
 
-\subsection{LECIV} \label{ssec:leciv}                         % #### 2.4.3
+\subsection{Grade horária do curso de Engenharia Civil da UENF} \label{ssec:leciv}                        % #### 2.4.3
 
 Através de pesquisas no \LinkToURL{\LinkSiteUENF}{site oficial da UENF}, mais especificamente na página de horários do LECIV para 2017.2 e 2018.2 foram encontrados alguns PDFs que continha a grade horária do curso de Engenharia Civil para o período de 2017 e 2018. A \autoref{fig:LECIV} ilustra a página referente às disciplinas do sexto período.
 
@@ -226,26 +225,26 @@ Quanto a análise desses documentos sobre esta grade algumas conclusões podem s
 
 Conclui-se então que esforços para se criar formas grades horárias intuitivas e maleáveis não estão limitados apenas ao curso de Ciência da Computação, também se estendendo a outros cursos da UENF.
 
-\section{Teorias utilizadas} \label{sec:teorias}                                                          % ###  2.6
+\section{Estratégias de solução baseadas na otimização} \label{sec:teorias}                               % ###  2.5
 
 Dentro do corrente trabalho, algumas teorias e métodos de resolução de problemas foram utilizados, sendo estes embasados por pesquisas anteriores.
 
-\subsection{Relaxar restrições para encontrar soluções} \label{ssec:relaxar}                              % #### 2.6.1
+\subsection{Relaxar restrições para encontrar soluções} \label{ssec:relaxar}                              % #### 2.5.1
 
 Uma das formas de se encontrar soluções para problemas complexos é a de relaxar restrições. Ao utilizar do método da programação inteira, \cite{dunke_matheuristic_2023} flexibiliza as restrições de seu modelo de programação linear, porém utilizando de uma heurística que corrige as soluções encontradas. De forma similar, \citeonline{Souza2000} menciona o uso de Algoritmos Genéticos que gera frequentemente soluções inviáveis, sendo utilizado então um filtro para que as inviabilidades sejam reparadas.
 
 Com isso, entende-se que a flexibilização das restrições pode ser uma forma de se encontrar soluções viáveis. Ao permitir que esta categoria de soluções seja percorrida, abre-se a possibilidade de se encontrar outras soluções potencialmente viáveis que poderiam não ser encontradas de outra forma.
 
-\subsection{Pontos de vista das dimensões do problema} \label{ssec:pontos}                                % #### 2.6.2
+\subsection{Pontos de vista das dimensões do problema} \label{ssec:pontos}                                % #### 2.5.2
 
-\citeonline{Piechowiak2004} lida com a busca por uma solução para o problema de alocação de horários em universidades, utilizando de um sistema de suporte à decisão. Seu enfoque é em auxiliar o usuário em suas decisões, visando a interatividade, adptabilidade e qualidades ergonômicas. Nele, o autor aborda a importância de se considerar que diferentes usuários têm diferentes pontos de vista e que devem cada um resolver sua parte local do problema em questão. O problema global é o \textit{design} e gestão das grades horárias de todos os recursos, entretanto, cada um dos ``gestores educacionais'' apenas veem uma parte do problema, porém, como os recursos são compartilhados, diversos conflitos acabam ocorrendo.
+\citeonline{Piechowiak2004} lidam com a busca por uma solução para o problema de alocação de horários em universidades, utilizando de um sistema de suporte à decisão. Seu enfoque é em auxiliar o usuário em suas decisões, visando a interatividade, adaptabilidade e qualidades ergonômicas. Nele, o autor aborda a importância de se considerar que diferentes usuários têm diferentes pontos de vista e que devem cada um resolver sua parte local do problema em questão. O problema global é o \textit{design} e gestão das grades horárias de todos os recursos, entretanto, cada um dos ``gestores educacionais'' apenas veem uma parte do problema, porém, como os recursos são compartilhados, diversos conflitos acabam ocorrendo.
 
-\subsection{Uso de soluções anteriores, soluções parciais e desvio de conflitos} \label{ssec:parciais}    % #### 2.6.3
+\subsection{Uso de soluções anteriores, soluções parciais e desvio de conflitos} \label{ssec:parciais}    % #### 2.5.3
 
-\citeonline{Burke2000} consideram em seu trabalho o uso de casos preexistentes para que o problema encontre uma solução similar às anteriores. É visto com otimismo o uso da análise de grafos e sub-grafos como forma de se encontrar soluções parciais para o problema, pois permite a reutilização de soluções já processadas previamente. Em seu algoritmo, ao encontrar um sub-grafo similares ao problema atual, a solução é então adaptada para o problema atual. No caso da solução parcial encontrada apresentar conflitos, então as partes conflituosas são desalocadas, ordenadas da mais conflituosa pra menos conflituosa e então são realoacadas no primeiro horário viável.
+\citeonline{Burke2000} consideram em seu trabalho o uso de casos preexistentes para que o problema encontre uma solução similar às anteriores. É visto com otimismo o uso da análise de grafos e sub-grafos como forma de se encontrar soluções parciais para o problema, pois permite a reutilização de soluções já processadas previamente. Em seu algoritmo, ao encontrar um sub-grafo similar ao problema atual, a solução é então adaptada para o problema atual. No caso da solução parcial encontrada apresentar conflitos, então as partes conflituosas são desalocadas, ordenadas da mais conflituosa pra menos conflituosa e então são realoacadas no primeiro horário viável.
 
 \citeonline{arratia-martinez_university_2021, miranda_udpskeduler_2012, Piechowiak2004, Burke2000} apontam a recorrência de instituições de ensino que utilizam as soluções anteriores como base para a criação de novas grades horárias. Pois, devido à similaridade do problema ao longo dos anos, é esperado que parte da busca por soluções seja facilitada pela reutilização de soluções anteriores.
 
-\subsection{Informações ausentes e professores faltantes}
+\subsection{Informações ausentes e professores faltantes} \label{ssec:ausentes}                            % #### 2.5.4
 
-\citeonline{arratia-martinez_university_2021} também cita em sua pesquisa a possibilidade de existirem turmas de determinadas disciplinas que não apresentam professores suficientes para ministrá-las. Neste caso, esta alocação é então marcada para que seja feita a distinção das demais. Assim gerando uma solução parcial para o problema, que pode ser resolvida posteriormente com a contratação de professores para ministrar as disciplinas faltantes.
+\citeonline{arratia-martinez_university_2021} também citam em sua pesquisa a possibilidade de existirem turmas de determinadas disciplinas que não apresentam professores suficientes para ministrá-las. Neste caso, esta alocação é então marcada para que seja feita a distinção das demais. Assim gerando uma solução parcial para o problema, que pode ser resolvida posteriormente com a contratação de professores para ministrar as disciplinas faltantes.
