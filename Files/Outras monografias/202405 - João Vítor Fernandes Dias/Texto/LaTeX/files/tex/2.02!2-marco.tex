@@ -1,6 +1,6 @@
 \chapter{Marco teórico} \label{chap:marco}                                                              % ##   2.
 
-Antes de prosseguirmos com o desenrolar deste trabalho, é adequado que primeiro definamos alguns conceitos para o melhor entendimento do trabalho como um todo. Iniciaremos com a definição do \hyperref[sec:termos]{Problema de \textit{Timetabling}}, suas subdivisões, \hyperref[ssec:desafios]{suas complexidades} e \hyperref[ssec:erros]{possíveis errosna gestão das informações}. Em seguida, abordaremos os \hyperref[sec:resolucao]{métodos de resolução} para o problema, nos baseando em compilados de informações sobre os trabalhos anteriores. Especifica-se também como que se dá o \hyperref[sec:anteriores]{Problema de \textit{Timetabling na UENF (PTT-UENF)}}, com base nos trabalhos anteriores. Por fim, são apresentadas diversas \hyperref[sec:teorias]{estratégias de solução baseadas na otimização}, que serão utilizadas conceitualmente durante o desenvolvimento deste trabalho.
+Antes de prosseguirmos com o desenrolar deste trabalho, é adequado que primeiro definamos alguns conceitos para o melhor entendimento do trabalho como um todo. Iniciaremos com a definição do \hyperref[sec:termos]{Problema de \textit{timetabling}}, suas subdivisões, \hyperref[ssec:desafios]{suas complexidades} e \hyperref[ssec:erros]{possíveis errosna gestão das informações}. Em seguida, abordaremos os \hyperref[sec:resolucao]{métodos de resolução} para o problema, nos baseando em compilados de informações sobre os trabalhos anteriores. Especifica-se também como que se dá o \hyperref[sec:anteriores]{Problema de \textit{Timetabling na UENF (PTT-UENF)}}, com base nos trabalhos anteriores. Por fim, são apresentadas diversas \hyperref[sec:teorias]{estratégias de solução baseadas na otimização}, que serão utilizadas conceitualmente durante o desenvolvimento deste trabalho.
 
 % O Problema de Programação de Horários (Timetabling Problem) é um problema de grande relevância e amplamente estudado na área de Pesquisa Operacional. Um número significativo de trabalhos sobre esse problema foi publicado nos últimos anos e conferências regulares discutem o tema no meio científico [Splinder2010].
 % Sânya
@@ -13,7 +13,7 @@ Antes de prosseguirmos com o desenrolar deste trabalho, é adequado que primeiro
 % O school timetabling possui uma quantidade de recursos menor, pois uma turma já possui uma sala especificada e seu grupo de alunos, em sua maioria, é predeterminado, o que faz com que a complexidade seja reduzida. Em problemas de course timetabling existe um grande conjunto de restrições: disciplinas de uma mesma turma podem ser alocadas em salas diferentes, cada disciplina é constituída por alunos de diversos cursos, professores possuem restrições de horário por desempenharem outras atividades na instituição, cada disciplina possui conjuntos de pré-requisitos que devem ser respeitados, entre outras.
 % F. Vieira & H. Macedo, Scientia Plena 7, 039901 (2011) 
 
-\section{Problema de \textit{Timetabling}} \label{sec:termos}                                                        % ###  2.1
+\section{Problema de \textit{timetabling}} \label{sec:termos}                                                        % ###  2.1
 
 % Ao longo dos anos de desenvolvimento acadêmico, diversos assuntos vão se aprofundando e se tornando mais específicos, assim, os estudiosos acabam cunhando novos termos que o auxiliam a desvencilhar as novas áreas específicas das suas áreas originárias. Porém, existe o potencial de que haja um crescimento desestruturado destes novos termos, assim vários termos diferentes podem se referir a um mesmo conceito, enquanto que um mesmo termo pode se referir a vários conceitos diferentes de acordo com o autor.
 
@@ -134,7 +134,7 @@ Na \autoref{fig:Visualization}, \citeonline{Alencar2019} exploram uma categoria 
   \legend{Fonte: \citeonline{Alencar2019} - editado}
 \end{CenteredFigure}    % Visualization
 
-\section{Problema de \textit{Timetabling} na UENF (PTT-UENF)} \label{sec:anteriores}                               % ###  2.4
+\section{Problema de \textit{timetabling} na UENF (PTT-UENF)} \label{sec:anteriores}                               % ###  2.4
 
 Como visto nas seções anteriores, cada instituição de ensino possui suas próprias características e particularidades. E para a UENF não é diferente. O PTT-UENF apresenta características que tornam o seu problema único, e que, portanto, necessita de uma solução específica. A instituição não se mostra desprovida de histórico na tentativa de resolução deste problema. \hyperref[ssec:sanya]{Sânya} e \hyperref[ssec:ricardo]{Ricardo}, ambos estudantes de Ciência da Computação na UENF, já realizaram trabalhos com o mesmo fim, porém com abordagens diferentes da atual proposta. Em seus trabalhos, \citeonline{SanyaSantos2013} e \citeonline{RicardoSilveira2014} abordaram a criação de tabelas horárias através de métodos de otimização, utilizando heurísticas e meta-heurísticas para este fim. A seguir são descritos seus trabalhos anteriores e suas respectivas abordagens.
 
@@ -231,7 +231,7 @@ Dentro do corrente trabalho, algumas teorias e métodos de resolução de proble
 
 \subsection{Relaxar restrições para encontrar soluções} \label{ssec:relaxar}                              % #### 2.5.1
 
-Uma das formas de se encontrar soluções para problemas complexos é a de relaxar restrições. Ao utilizar do método da programação inteira, \cite{dunke_matheuristic_2023} flexibiliza as restrições de seu modelo de programação linear, porém utilizando de uma heurística que corrige as soluções encontradas. De forma similar, \citeonline{Souza2000} menciona o uso de Algoritmos Genéticos que gera frequentemente soluções inviáveis, sendo utilizado então um filtro para que as inviabilidades sejam reparadas.
+Uma das formas de se encontrar soluções para problemas complexos é a de relaxar restrições. Ao utilizar do método da programação inteira, \citeonline{Dunke2023} flexibilizam as restrições de seu modelo de programação linear, porém utilizam de uma heurística que corrige as soluções encontradas. De forma similar, \citeonline{Souza2000} menciona o uso de Algoritmos Genéticos que gera frequentemente soluções inviáveis, sendo utilizado então um filtro para que as inviabilidades sejam reparadas.
 
 Com isso, entende-se que a flexibilização das restrições pode ser uma forma de se encontrar soluções viáveis. Ao permitir que esta categoria de soluções seja percorrida, abre-se a possibilidade de se encontrar outras soluções potencialmente viáveis que poderiam não ser encontradas de outra forma.
 
