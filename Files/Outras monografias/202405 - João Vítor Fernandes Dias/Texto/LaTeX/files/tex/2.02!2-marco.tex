@@ -17,7 +17,7 @@ Antes de prosseguirmos com o desenrolar deste trabalho, é adequado que primeiro
 
 % Ao longo dos anos de desenvolvimento acadêmico, diversos assuntos vão se aprofundando e se tornando mais específicos, assim, os estudiosos acabam cunhando novos termos que o auxiliam a desvencilhar as novas áreas específicas das suas áreas originárias. Porém, existe o potencial de que haja um crescimento desestruturado destes novos termos, assim vários termos diferentes podem se referir a um mesmo conceito, enquanto que um mesmo termo pode se referir a vários conceitos diferentes de acordo com o autor.
 
-Segundo \citeonline{Wren1996}, podemos definir \textit{timetable} como uma estrutura que mostra quando eventos ocorrerão, não havendo necessariamente a alocação de recursos. Vale ressaltar que este termo não tem seu uso limitado para os fins desta pesquisa, sendo também usado para problemas de alocação de enfermeiros, esportes, funcionários e transportes \cite{arratia-martinez_university_2021}. Entretanto, neste trabalho, abordaremos principalmente os termos relacionados ao que pode ser chamado de \textit{Educational Timetabling} (Ed-TT) \cite{Alencar2019}, que é o que tende a envolver um conjunto específico de recursos relacionados à educação.
+Segundo \citeonline{Wren1996}, podemos definir \textit{timetable} como uma estrutura que mostra quando eventos ocorrerão, não havendo necessariamente a alocação de recursos. Vale ressaltar que este termo não tem seu uso limitado para os fins desta pesquisa, sendo também usado para problemas de alocação de enfermeiros, esportes, funcionários e transportes \cite{Arratia2021}. Entretanto, neste trabalho, abordaremos principalmente os termos relacionados ao que pode ser chamado de \textit{Educational Timetabling} (Ed-TT) \cite{Alencar2019}, que é o que tende a envolver um conjunto específico de recursos relacionados à educação.
 
 \citeonline{Wren1996} também define os conceitos para \textit{class timetable}, \textit{university examination timetable} e \textit{university class timetable}, tendo relevância apenas o último, que considera a disponibilidade de professores e salas, a quantidade de alunos e os requisitos que determinada disciplina exige.
 
@@ -37,7 +37,7 @@ Outro termo relevante a se pontuar são as \textit{hard and soft constraints} qu
 
 Ambos os tipos de restrições são importantes para a resolução do problema, e são altamente dependentes do contexto em que estão inseridas. Em determinada instituição de ensino. Por exemplo: uma restrição rígida onde uma disciplina não possa durar mais do que três horas pode ser considerada flexível em outra instituição. Sendo então, também dependente do contexto de cada instituição a definição das regras de viabilidade e inviabilidade de soluções.
 
-Em seu trabalho, \citeonline{Souza2000} distingue entre viabilidade e otimalidade. Para ele, no primeiro caso, a solução do problema consiste basicamente em encontrar um conjunto de alocações tal que satisfaça a todas as restrições impostas. Já no segundo caso, após encontrar-se diversas soluções viáveis, busca-se dentre elas aquelas que melhor atendam às soluções flexíveis baseado em critérios de avaliação de uma função objetivo. \citeonline{dunke_matheuristic_2023} comentam que existem algoritmos que consideram as restrições rígidas e flexíveis de forma simultânea, enquanto outros resolvem primeiro as restrições rígidas e depois as flexíveis.
+Em seu trabalho, \citeonline{Souza2000} distingue entre viabilidade e otimalidade. Para ele, no primeiro caso, a solução do problema consiste basicamente em encontrar um conjunto de alocações tal que satisfaça a todas as restrições impostas. Já no segundo caso, após encontrar-se diversas soluções viáveis, busca-se dentre elas aquelas que melhor atendam às soluções flexíveis baseado em critérios de avaliação de uma função objetivo. \citeonline{Dunke2023} comentam que existem algoritmos que consideram as restrições rígidas e flexíveis de forma simultânea, enquanto outros resolvem primeiro as restrições rígidas e depois as flexíveis.
 
 Alguns outros termos similares a este campo de pesquisa encontrados na literatura são \textit{periodic event scheduling problem}, \textit{timetable scheduling}, \textit{class scheduling}, \textit{student scheduling}, \textit{university course timetabling}, dentre outros.
 
@@ -53,7 +53,7 @@ Com isso, entramos também no ramo da Interação Homem-Máquina, ramo abordado 
 
 \subsection{Possíveis erros na gestão das informações} \label{ssec:erros}                                                    % ###  2.5
 
-Dada a grande quantidade de variáveis interconectadas e as características específicas de cada instituição \cite{miranda_udpskeduler_2012}, a organização destas informações buscando a melhor solução possível apresenta-se como um desafio. Principalmente se considerarmos que esta solução é, muitas vezes, procurada manualmente, estando também passível de erros humanos como ilustram a \autoref{fig:Academico} e \autoref{fig:CCT}.
+Dada a grande quantidade de variáveis interconectadas e as características específicas de cada instituição \cite{Miranda2012}, a organização destas informações buscando a melhor solução possível apresenta-se como um desafio. Principalmente se considerarmos que esta solução é, muitas vezes, procurada manualmente, estando também passível de erros humanos como ilustram a \autoref{fig:Academico} e \autoref{fig:CCT}.
 
 \begin{MyCenteredFigure} \caption{Disciplina atribuída no sistema acadêmico à determinada hora e local} \label{fig:Academico}
   \includegraphics[width=0.8\textwidth]{files/img/2.02!2-marco/Metodologia-Quinta}
@@ -107,24 +107,24 @@ Nestas imagens, fica exemplificado um dos possíveis problemas que podem ocorrer
 
 % Pesquisar posteriormente sobre imagens que ilustrem bem as diferentes sub categorias de scheduling
 
-Existem diversas implementações já realizadas, utilizando uma miríade de métodos. Em seu trabalho, \citeonline{miranda_udpskeduler_2012} informam sobre diversos sistemas baseados em computador para auxiliar na tarefa de agendamento. \citeonline{miranda_udpskeduler_2012} também citam dois possíveis métodos de resolução, sendo eles o \textbf{modelo de programação inteira} e os \textbf{métodos heurísticos}.
+Existem diversas implementações já realizadas, utilizando uma miríade de métodos. Em seu trabalho, \citeonline{Miranda2012} informam sobre diversos sistemas baseados em computador para auxiliar na tarefa de agendamento. \citeonline{Miranda2012} também citam dois possíveis métodos de resolução, sendo eles o \textbf{modelo de programação inteira} e os \textbf{métodos heurísticos}.
 
 Outros trabalhos buscaram condensar em forma de tabela as informações encontradas. À seguir estão dispostas as tabelas mais relevantes e que compilam diversos  encontradas durante o estudo bibliográfico e que foram elaboradas por diversos autores.
 
-Na \autoref{fig:Desenvolvimento}, \citeonline{alegre_desenvolvimento_2012} traçam a relação entre os diversos autores, ano de sua publicação e seu país de origem com os dados encontrados em seus trabalhos quanto aos parâmetros utilizados na elaboração da grade horária, quão grandes eram cada um de seus parâmetros, quanto tempo foi necessário para achar uma solução e quais foram as técnicas utilizadas.
+Na \autoref{fig:Desenvolvimento}, \citeonline{Poulsen2012} traçam a relação entre os diversos autores, ano de sua publicação e seu país de origem com os dados encontrados em seus trabalhos quanto aos parâmetros utilizados na elaboração da grade horária, quão grandes eram cada um de seus parâmetros, quanto tempo foi necessário para achar uma solução e quais foram as técnicas utilizadas.
 
 % Entender o que está dando errado aqui depois
 
 \begin{CenteredFigure} \caption{Resumo de trabalhos, parâmetros, dimensões, tempo e técnicas.} \label{fig:Desenvolvimento}
   \includegraphics[width=\textwidth]{files/img/2.02!2-marco/Desenvolvimento}
-  \legend{Fonte: \citeonline{alegre_desenvolvimento_2012}}
+  \legend{Fonte: \citeonline{Poulsen2012}}
 \end{CenteredFigure}    % Desenvolvimento
 
-Na \autoref{fig:University}, \citeonline{arratia-martinez_university_2021}, apresentam uma comparação similar à anterior, porém não separada em categorias, apenas categorizando entre verdadeiro e falso algumas características como alocação de salas, professores, nível institucional e método de solução exato ou aproximado.
+Na \autoref{fig:University}, \citeonline{Arratia2021}, apresentam uma comparação similar à anterior, porém não separada em categorias, apenas categorizando entre verdadeiro e falso algumas características como alocação de salas, professores, nível institucional e método de solução exato ou aproximado.
 
 \begin{CenteredFigure} \caption{Comparação entre artigos que solucionam o problema de grade horária} \label{fig:University}
   \includegraphics[width=\textwidth]{files/img/2.02!2-marco/University}
-  \legend{Fonte: \citeonline{arratia-martinez_university_2021} - editado}
+  \legend{Fonte: \citeonline{Arratia2021} - editado}
 \end{CenteredFigure}    % University
 
 Na \autoref{fig:Visualization}, \citeonline{Alencar2019} exploram uma categoria mais específica do problema, que é a característica da interatividade das interfaces desenvolvidas. Este apresenta características qualitativas quanto aos métodos, os dados dispostos, as técnicas de interação e o método utilizado para solucionar o problema de grade horária educacional. Nesta figura, os autores usam ``Y'' para simbolizar ``Sim'', ``N'' para ``Não'' e ``-'' para ``Inconclusivo''.
@@ -136,17 +136,17 @@ Na \autoref{fig:Visualization}, \citeonline{Alencar2019} exploram uma categoria 
 
 \section{Problema de \textit{Timetabling} na UENF (PTT-UENF)} \label{sec:anteriores}                               % ###  2.4
 
-Como visto nas seções anteriores, cada instituição de ensino possui suas próprias características e particularidades. E para a UENF não é diferente. O PTT-UENF apresenta características que tornam o seu problema único, e que, portanto, necessita de uma solução específica. A instituição não se mostra desprovida de histórico na tentativa de resolução deste problema. \hyperref[ssec:sanya]{Sânya} e \hyperref[ssec:ricardo]{Ricardo}, ambos estudantes de Ciência da Computação na UENF, já realizaram trabalhos com o mesmo fim, porém com abordagens diferentes da atual proposta. Em seus trabalhos, \citeonline{Sanya2013} e \citeonline{Ricardo2014} abordaram a criação de tabelas horárias através de métodos de otimização, utilizando heurísticas e meta-heurísticas para este fim. A seguir são descritos seus trabalhos anteriores e suas respectivas abordagens.
+Como visto nas seções anteriores, cada instituição de ensino possui suas próprias características e particularidades. E para a UENF não é diferente. O PTT-UENF apresenta características que tornam o seu problema único, e que, portanto, necessita de uma solução específica. A instituição não se mostra desprovida de histórico na tentativa de resolução deste problema. \hyperref[ssec:sanya]{Sânya} e \hyperref[ssec:ricardo]{Ricardo}, ambos estudantes de Ciência da Computação na UENF, já realizaram trabalhos com o mesmo fim, porém com abordagens diferentes da atual proposta. Em seus trabalhos, \citeonline{SanyaSantos2013} e \citeonline{RicardoSilveira2014} abordaram a criação de tabelas horárias através de métodos de otimização, utilizando heurísticas e meta-heurísticas para este fim. A seguir são descritos seus trabalhos anteriores e suas respectivas abordagens.
 
 \subsection{Heurística construtiva para o PTT-UENF} \label{ssec:sanya}     % #### 2.4.1
 
-Em seu trabalho, \citeonline{Sanya2013} aborda o problema de Programação de Horários de Disciplinas em Universidades, tendo como foco o curso de Ciência da Computação da UENF. Sua abordagem foi a de desenvolver um software que fosse capaz de gerar uma grade horária ótima para o curso, levando em conta as restrições impostas pelo curso. Para isso, Sânya explicou diversos métodos possíveis para se alcançar a solução desejada, passando inicialmente pelos métodos construtivos, seguido de métodos refinamento, podendo essas heurísticas serem utilizadas em conjunto com meta-heurísticas.
+Em seu trabalho, \citeonline{SanyaSantos2013} aborda o problema de Programação de Horários de Disciplinas em Universidades, tendo como foco o curso de Ciência da Computação da UENF. Sua abordagem foi a de desenvolver um software que fosse capaz de gerar uma grade horária ótima para o curso, levando em conta as restrições impostas pelo curso. Para isso, Sânya explicou diversos métodos possíveis para se alcançar a solução desejada, passando inicialmente pelos métodos construtivos, seguido de métodos refinamento, podendo essas heurísticas serem utilizadas em conjunto com meta-heurísticas.
 
 Por fim, utilizou uma heurística que consistia em respeitar a uma matriz de preferência para a distribuição das disciplinas. Seguindo com o uso do \textit{Simulated Annealing} para a otimização da solução inicial.
 
 \subsection{Metaheurísticas para o PTT-UENF} \label{ssec:ricardo}   % #### 2.4.2
 
-Em seu trabalho, \citeonline{Ricardo2014} aborda também o Problema de Programação de Horários (PPH) em instituições de ensino superior. Ele explora os diversos métodos heurísticos para resolução deste problema que visa encontrar a alocação ótima dos horários em suas grades. Ele teve como objetivo de seu trabalho a implementação de um software que fosse capaz de resolver o PPH do curso de Ciência da Computação da UENF, utilizando os métodos heurísticos Construção Gulosa e Busca Local e os métodos metaheurísticos \textit{Simulated Annealing} e Busca Tabu. Para este fim, ele utilizou a linguagem de programação C para a implementação dos métodos e a linguagem de programação Java para a implementação da interface gráfica do software. Com isso conseguiu elaborar uma ferramenta automatizada para a geração de quadros de horários, alocando aulas e professores em dias e horários disponíveis na semana.
+Em seu trabalho, \citeonline{RicardoSilveira2014} aborda também o Problema de Programação de Horários (PPH) em instituições de ensino superior. Ele explora os diversos métodos heurísticos para resolução deste problema que visa encontrar a alocação ótima dos horários em suas grades. Ele teve como objetivo de seu trabalho a implementação de um software que fosse capaz de resolver o PPH do curso de Ciência da Computação da UENF, utilizando os métodos heurísticos Construção Gulosa e Busca Local e os métodos metaheurísticos \textit{Simulated Annealing} e Busca Tabu. Para este fim, ele utilizou a linguagem de programação C para a implementação dos métodos e a linguagem de programação Java para a implementação da interface gráfica do software. Com isso conseguiu elaborar uma ferramenta automatizada para a geração de quadros de horários, alocando aulas e professores em dias e horários disponíveis na semana.
 
 Ele descreve também como possibilidade de trabalho futuro o aperfeiçoamento do banco de dados da ferramenta desenvolvida para que se possa armazenar mais informações pertinentes ao problema, para que o usuário possa realizar modificações no quadro de horários, sendo guiado pelo retorno do Software que informa a viabilidade da alteração, assim gerando maior flexibilidade à aplicação.
 
@@ -157,7 +157,7 @@ Ambos os trabalhos têm sido de grande valia ao rumarem na direção de uma solu
 
 \subsubsection*{\textbf{Sânya}} \label{sssec:sanya} % ##### 2.4.1.1
 
-É dito por \citeonline{Sanya2013} que ``[...] Como na UENF a tarefa de distribuição de sala não varia muito a cada período, sendo feito separadamente por cada centro [...]''. Embora possamos entender o conceito de ``variar muito'' como subjetivo, considerando que mesmo ao longo de um mesmo semestre existem realocações de salas e professores dentro do contexto de um mesmo Centro, podemos entender que a realidade da UENF é de fato muito dinâmica, não se encaixando completamente na solução de alocação única inicial de salas e professores.
+É dito por \citeonline{SanyaSantos2013} que ``[...] Como na UENF a tarefa de distribuição de sala não varia muito a cada período, sendo feito separadamente por cada centro [...]''. Embora possamos entender o conceito de ``variar muito'' como subjetivo, considerando que mesmo ao longo de um mesmo semestre existem realocações de salas e professores dentro do contexto de um mesmo Centro, podemos entender que a realidade da UENF é de fato muito dinâmica, não se encaixando completamente na solução de alocação única inicial de salas e professores.
 
 Pode-se alegar que tratar da variabilidade de alocações de salas de um mesmo Centro foge do escopo do trabalho, porém, para que o coordenador da Computação tenha fácil acesso aos dados de alocação de salas disponíveis, faz-se necessário que seu uso esteja compartilhado com o Diretor do Centro de Ciência e Tecnologia (CCT), visto que este é o responsável pela alocação de salas de todos os cursos do CCT.
 
@@ -165,7 +165,7 @@ Em outro segmento ela diz que ``[...] as aulas que necessitam de salas com recur
 
 Ela diz também que ``Outra tarefa que no presente cenário do curso de Ciência da Computação não viabiliza algum tipo de automatização é a distribuição de professores, pois além de um número muito pequeno destes, não há muitas alternativas de mudanças de suas respectivas disciplinas.''
 
-Quanto à distribuição de professores, a realidade do curso de Ciência da Computação segue a mesma da que foi apontada por \citeonline{Sanya2013}. Entretanto, cada professor tem sua própria gama de disciplinas que se dispõe a ministrar, e a coordenação tende a distribuí-los de acordo com sua preferência. Entretanto, como a demanda dos alunos não se mostra linear como foi estudado, é possível que a distribuição de professores seja feita de forma mais eficiente, considerando a demanda dos alunos, ainda que não se descartem suas preferências pessoais.
+Quanto à distribuição de professores, a realidade do curso de Ciência da Computação segue a mesma da que foi apontada por \citeonline{SanyaSantos2013}. Entretanto, cada professor tem sua própria gama de disciplinas que se dispõe a ministrar, e a coordenação tende a distribuí-los de acordo com sua preferência. Entretanto, como a demanda dos alunos não se mostra linear como foi estudado, é possível que a distribuição de professores seja feita de forma mais eficiente, considerando a demanda dos alunos, ainda que não se descartem suas preferências pessoais.
 
 Sânya apresenta em seu trabalho uma série de requisitos essenciais e não essenciais para a resolução do problema. Porém, alguns deles não se mostram condizentes com a realidade da universidade. São eles:
 
@@ -199,9 +199,9 @@ Por fim, Sânya não considera a possibilidade de alocação de professores em m
 
 \subsubsection*{\textbf{Ricardo}} \label{sssec:ricardo} % ##### 2.4.1.2
 
-\citeonline{Ricardo2014}, em seu trabalho, apresenta alguns conceitos que se mostraram limitantes em sua modelagem conceitual do problema na UENF. Em sua monografia, ele aborda as turmas como sendo compostas por alunos que ingressaram no mesmo ano, independente de suas escolhas, da demanda, e de possíveis defasagens na progressão do curso. O que não se mostra condizente com a realidade da universidade atualmente, então, mesmo que em 2014, quando o trabalho foi realizado, a realidade fosse esta, não se mostra condizente com a realidade atual, havendo então a necessidade de uma reformulação conceitual.
+\citeonline{RicardoSilveira2014}, em seu trabalho, apresenta alguns conceitos que se mostraram limitantes em sua modelagem conceitual do problema na UENF. Em sua monografia, ele aborda as turmas como sendo compostas por alunos que ingressaram no mesmo ano, independente de suas escolhas, da demanda, e de possíveis defasagens na progressão do curso. O que não se mostra condizente com a realidade da universidade atualmente, então, mesmo que em 2014, quando o trabalho foi realizado, a realidade fosse esta, não se mostra condizente com a realidade atual, havendo então a necessidade de uma reformulação conceitual.
 
-Ele, assim com \citeonline{Sanya2013}, também não considera a possibilidade de alocação de professores em mais de uma disciplina, múltiplas turmas de uma mesma disciplina, assim como não lida com a distribuição das salas. Ele também considera algumas disciplinas estão fixas, mesmo que pudessem sim ser modificadas por seu responsável, o Diretor do CCT.
+Ele, assim com \citeonline{SanyaSantos2013}, também não considera a possibilidade de alocação de professores em mais de uma disciplina, múltiplas turmas de uma mesma disciplina, assim como não lida com a distribuição das salas. Ele também considera algumas disciplinas estão fixas, mesmo que pudessem sim ser modificadas por seu responsável, o Diretor do CCT.
 
 Por fim, podemos citar um outro ponto que é a busca pela eficiência e baixo custo de tempo dos métodos utilizados. O que se mostra como ponto positivo, entretanto, mesmo com tamanha eficiência ainda peca em atingir a praticabilidade da solução.
 
@@ -218,7 +218,7 @@ Através de pesquisas no \LinkToURL{\LinkSiteUENF}{site oficial da UENF}, mais e
 
 \begin{CenteredFigure} \caption{Grade horária do LECIV para 2017.2 e 2018.2} \label{fig:LECIV}
   \includegraphics[width=\textwidth]{files/img/2.02!2-marco/GradeHoráriaLECIV}
-  \legend{Fonte: \citeonline{Neiva2018}}
+  \legend{Fonte: \citeonline{Haddad2018}}
 \end{CenteredFigure}
 
 Quanto a análise desses documentos sobre esta grade algumas conclusões podem ser obtidas: 1. Esta forma de criação de grade foi mantida até no mínimo a data de 31/08/18 que consta no nome de um dos arquivos; 2. Foi utilizado o conceito de curva de nível com uma barra deslizante para visualizar a grade horária de cada período; 3. Com a legenda, entende-se que já se trabalhava com a ideia de maleabilidade de horários e também a ideia de alteração iterativa da grade; 4. Não se sabe ao certo se esta grade fora criada através de um software de criação de planilhas ou se foi criado através de um site.
@@ -243,8 +243,8 @@ Com isso, entende-se que a flexibilização das restrições pode ser uma forma 
 
 \citeonline{Burke2000} consideram em seu trabalho o uso de casos preexistentes para que o problema encontre uma solução similar às anteriores. É visto com otimismo o uso da análise de grafos e sub-grafos como forma de se encontrar soluções parciais para o problema, pois permite a reutilização de soluções já processadas previamente. Em seu algoritmo, ao encontrar um sub-grafo similar ao problema atual, a solução é então adaptada para o problema atual. No caso da solução parcial encontrada apresentar conflitos, então as partes conflituosas são desalocadas, ordenadas da mais conflituosa pra menos conflituosa e então são realoacadas no primeiro horário viável.
 
-\citeonline{arratia-martinez_university_2021, miranda_udpskeduler_2012, Piechowiak2004, Burke2000} apontam a recorrência de instituições de ensino que utilizam as soluções anteriores como base para a criação de novas grades horárias. Pois, devido à similaridade do problema ao longo dos anos, é esperado que parte da busca por soluções seja facilitada pela reutilização de soluções anteriores.
+\citeonline{Arratia2021, Miranda2012, Piechowiak2004, Burke2000} apontam a recorrência de instituições de ensino que utilizam as soluções anteriores como base para a criação de novas grades horárias. Pois, devido à similaridade do problema ao longo dos anos, é esperado que parte da busca por soluções seja facilitada pela reutilização de soluções anteriores.
 
 \subsection{Informações ausentes e professores faltantes} \label{ssec:ausentes}                            % #### 2.5.4
 
-\citeonline{arratia-martinez_university_2021} também citam em sua pesquisa a possibilidade de existirem turmas de determinadas disciplinas que não apresentam professores suficientes para ministrá-las. Neste caso, esta alocação é então marcada para que seja feita a distinção das demais. Assim gerando uma solução parcial para o problema, que pode ser resolvida posteriormente com a contratação de professores para ministrar as disciplinas faltantes.
+\citeonline{Arratia2021} também citam em sua pesquisa a possibilidade de existirem turmas de determinadas disciplinas que não apresentam professores suficientes para ministrá-las. Neste caso, esta alocação é então marcada para que seja feita a distinção das demais. Assim gerando uma solução parcial para o problema, que pode ser resolvida posteriormente com a contratação de professores para ministrar as disciplinas faltantes.
