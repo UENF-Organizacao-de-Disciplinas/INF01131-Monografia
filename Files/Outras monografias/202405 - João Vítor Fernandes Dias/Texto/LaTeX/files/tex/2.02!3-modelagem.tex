@@ -1,10 +1,10 @@
-\chapter{Modelagem geral do sistema} \label{chap:modelagem} % 4
+\chapter{Modelagem geral do sistema} \label{chap:modelagem} % 3
 
 % Tendo esclarecido sobre as \hyperref[chap:marco]{questões gerais da área de estudo} e de \hyperref[chap:instituicao]{como se estrutura a instituição} agora nos aprofundaremos na conceitualização do funcionamento geral do sistema e a forma como se dará a execução da \hyperref[sec:Metodologia]{metodologia proposta} apresentando o funcionamento geral de como o sistema será estruturado e de como foi desenvolvido.
 
 Ao longo deste capítulo serão abordados os \hyperref[sec:estagios]{estágios de execução} sobre como se dão as etapas de criações de grade horária no geral, a \hyperref[sec:interacao]{interação} com os \textit{stakeholders}, o \hyperref[sec:funcionamento]{funcionamento} do sistema, o \hyperref[sec:ModelagemBD]{modelo de banco de dados} e a \hyperref[sec:REST]{API REST} que será utilizada para a comunicação entre o \textit{frontend} e o \textit{backend} do sistema.
 
-\section{Estágios de execução} \label{sec:estagios} % 4.1
+\section{Estágios de execução} \label{sec:estagios} % 3.1
 
 Em seu trabalho de aplicação prática, \citeonline{miranda_udpskeduler_2012} estruturaram estágios que compõem o processo necessário para que enfim se alcance a definição de tabelas horárias finais.
 
@@ -17,7 +17,7 @@ Na \autoref{fig:geral}, estão dispostos 4 estágios principais. O primeiro disp
 
 A sequência geral condiz com o processo de criação das grades horárias, porém é necessário adaptar a metodologia para o contexto da UENF, e também ao escopo do trabalho. Os recursos de infraestrutura serão coletados dos histórico de alocação das turmas, a estimativa de demandas será obtida através da média histórica de alunos inscritos nas turmas e as políticas internas serão compreendidas através da revisão documental e entrevistas com os \textit{stakeholders}. O segundo tem caráter iterativo entre as coordenações e a diretoria do CCT. Os outros estágios não se distanciarão de forma significativa do que foi proposto.
 
-\section{Interação} \label{sec:interacao} % 4.2
+\section{Interação} \label{sec:interacao} % 3.2
 
 Para se alcançar uma alta satisfação por parte dos \textit{stakeholders}, vê-se necessária a constante interação com os mesmos. Para isto, será seguida a estrutura utilizada por \citeonline{Andre2018}.
 
@@ -28,7 +28,7 @@ Para se alcançar uma alta satisfação por parte dos \textit{stakeholders}, vê
 
 Seguindo o conceito do Design de Interação, a \autoref{fig:IxD} ilustra o ciclo de ações a serem tomadas durante o desenvolvimento do sistema, caso este venha a ser necessário. Nesse modelo de pesquisa, os \textit{stakeholders} serão consultados continuamente enquanto lhes for apresentados protótipos do sistema, para que assim informem quanto às suas percepções. Esta dinâmica tem como finalidade encontrar um design tal que seja adequado aos desejos e necessidades de seus usuários. Pois, considerando que para que o sistema seja efetivo, é necessário que ele seja aceito e utilizado pelos usuários finais.
 
-\section{Funcionamento} \label{sec:funcionamento} % 4.3
+\section{Funcionamento} \label{sec:funcionamento} % 3.3
 
 O sistema proposto funcionará de forma a auxiliar a coordenação do curso de Ciência da Computação da UENF criação de grades horárias para os semestres letivos. Para isso, o sistema deverá ser capaz de gerenciar as informações referentes às disciplinas, professores, salas e horários disponíveis.
 
@@ -44,7 +44,7 @@ Por fim, o sistema viabiliza também um método de rápida criação de turmas p
 
 Dispondo de todas essas funcionalidades, o sistema deverá ser capaz de gerar uma grade horária final, que será utilizada como base para a criação da grade horária oficial do curso de Ciência da Computação da UENF.
 
-\section{Modelo de banco de dados} \label{sec:ModelagemBD} % 4.4
+\section{Modelo de banco de dados} \label{sec:ModelagemBD} % 3.4
 
 Considerando as informações necessárias para o presente trabalho, e também o preparo de campo para potenciais aplicações futuras, foi elaborado um diagrama conceitual parcial do banco de dados (\autoref{fig:DiagramConceitual}). Seu intuito foi trazer uma visualização mais clara das relações entre as entidades presentes no processo de criação de uma grade horária, e assim auxiliar na definição das tabelas que serão criadas no banco de dados \hyperref[ssssec:MySQL]{posteriormente}.
 
@@ -62,7 +62,7 @@ Sendo posteriormente ilustrados na \autoref{ssec:MVP2} pela \autoref{fig:Tabelas
 
 % DEIXAR MAIS DESCRITO EM QUE SEÇÃO ESSAS FIGURAS ESTÃO.
 
-% \subsection{Diagrama de Entidade e Relacionamento} % 4.4.1
+% \subsection{Diagrama de Entidade e Relacionamento} % 3.4.1
 
 % Neste modelo, mais enxuto, temos apenas as entidades principais, onde temos uma turma de determinada disciplina, ministrada por um professor e que ocorre em uma sala em um determinado horário.
 
@@ -70,7 +70,7 @@ Sendo posteriormente ilustrados na \autoref{ssec:MVP2} pela \autoref{fig:Tabelas
 
 % E também é notável a presença da entidade \textbf{Alunos}, que se apresenta desacoplado das demais entidades. O motivo para isso é que, embora os alunos façam parte do processo de alocação de turmas, ao longo do desenvolvimento, o desenvolvimento de funcionalidades envolvendo os alunos...
 
-\section{API REST} \label{sec:REST} % 4.5
+\section{API REST} \label{sec:REST} % 3.5
 
 Para exemplificar o funcionamento geral da permanência dos dados, consideremos o uso de uma \textit{API REST} utilizando de 4 ``camadas'': o \textbf{\textit{frontend}}, os \textbf{\textit{endpoints}}, as \textbf{funções} de execução e o \textbf{banco de dados}.
 
@@ -87,7 +87,7 @@ O \textbf{banco de dados} recebe a requisição, processa a operação, e então
 
 \textbf{Resumidamente}: O \textbf{\textit{frontend}} envia uma requisição HTTP com uma carga de informações a um \textbf{\textit{endpoint}}, que encaminha a requisição a uma \textbf{função} específica que executa uma operação no \textbf{banco de dados}, assim retornando o status da operação ao \textit{frontend}.
 
-\section{Diferença dos trabalhos anteriores} \label{sec:diferenca} % 4.6
+\section{Diferença dos trabalhos anteriores} \label{sec:diferenca} % 3.6
 
 Os trabalhos mais próximos ao presente, quanto a instituição são os trabalhos feitos por \citeonline{Sanya2013} e \citeonline{Ricardo2014}, porém, o presente trabalho se distingue em algumas questões.
 
