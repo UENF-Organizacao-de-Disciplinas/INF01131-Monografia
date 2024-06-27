@@ -3,13 +3,13 @@
 ## De fato alterar
 
 - [X] Cadê o 4.2?
-- [ ] Diagrama Conceitual: trocar de "ementa" por "Grade Curricular"
-- [ ] 5.3: checar se faz sentido o (5.6 .8 .9. 10)
-- [ ] Trancamento -> trancamentos
-- [ ] empregos, professores -> empregos, falta de professor
-- [ ] São alguns -> são alguns exemplos
-- [ ] 1.(2, 3, 4) Numerar ou itemizar tudo
-- [ ] Metodologia: tela com muito espaço vazio
+- [X] Diagrama Conceitual: trocar de "ementa" por "Grade Curricular"
+- [X] 5.3: checar se faz sentido o (5.6 .8 .9. 10)
+- [X] Trancamento -> trancamentos
+- [X] empregos, professores -> empregos, falta de professor
+- [X] São alguns -> são alguns exemplos
+- [X] 1.(2, 3, 4) Numerar ou itemizar tudo
+- [X] Metodologia: tela com muito espaço vazio
 - [ ] Não colocar muito texto de uma vez só
 - [ ] Reduzir os itens das entrevistas
 - [ ] FER: separar andamento do aluno do cálculo de demanda
