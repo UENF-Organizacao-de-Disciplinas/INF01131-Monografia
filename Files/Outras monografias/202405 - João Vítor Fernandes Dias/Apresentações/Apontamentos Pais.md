@@ -10,27 +10,36 @@
 - [X] São alguns -> são alguns exemplos
 - [X] 1.(2, 3, 4) Numerar ou itemizar tudo
 - [X] Metodologia: tela com muito espaço vazio
-- [ ] Não colocar muito texto de uma vez só
-- [ ] Reduzir os itens das entrevistas
+- [X] Não colocar muito texto de uma vez só
+- [X] Reduzir os itens das entrevistas
+  - Reduzi o volume de informações da SECACAD
 - [ ] FER: separar andamento do aluno do cálculo de demanda
-- [ ] FER: tornar mais sucinta a parte das leis
-- [ ] FER: Dar um enfoque para cada um dos protótipos por vez
-- [ ] FER: Semestre Errado -> Semestre atípico
+  - Não vou alterar. Ficaria muito vazio.
+- [X] FER: tornar mais sucinta a parte das leis
+- [X] FER: Dar um enfoque para cada um dos protótipos por vez
+- [X] FER: Semestre Errado -> Semestre atípico
 - [ ] 5.2 e 5.7: eu poderia colocar uma sequência da aquisição dos dados.
-- [ ] 7.2: Trabalhos futuros - Fazer resumido
+  - Fugiria muito da sequência
+- [X] 7.2: Trabalhos futuros - Fazer resumido
+  - Dei uma enxugadinha
 - Objetivos
-  - [ ] Sempre com verbos (?)
-  - [ ] Geral: aumentar eficiência, eficácia e efetividade... De quê?
+  - [X] Sempre com verbos (?)
+  - [X] Geral: aumentar eficiência, eficácia e efetividade... De quê?
 - Imagens
   - [ ] FER: Aumentar figura 6; Colocar cores melhores ao invés do cinza
-  - [ ] Separar prototipagem em 4
+    - Não é muito relevante no momento. Tá legível.
+  - [X] Separar prototipagem em 4
   - [ ] Imagens ilegíveis
-    - [ ] Imagens muito no canto
-    - [ ] - 5.4: Figura 11 muito escura
+    - [X] Imagens muito no canto
+    - [X] - 5.4: Figura 11 muito escura
     - [ ] - 5.4.1: Figura 12 pequena e sem cor. tem que estar mais alegre
-    - [ ] - 5.6: Figura 24 - Importante mas muito pequeno
+      - Parece legível, deixarei assim.
+    - [X] - 5.6: Figura 24 - Importante mas muito pequeno
+      - Dividi em dois slides
     - [ ] Mostrar o erro humano através de algo pulsante ou dinâmico
+      - Acho que não precisa disso no momento. Eu teria que alterar a imagem pra isso e prefiro deixar como está no documento.
     - [ ] Dar zoom nos alertas flutuantes
+      - Tentei dar um zoom geral nas imagens.
 
 ### Perguntar pra Tang
 
