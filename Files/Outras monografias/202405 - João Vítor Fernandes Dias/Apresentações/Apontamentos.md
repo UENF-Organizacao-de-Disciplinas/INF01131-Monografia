@@ -1,6 +1,60 @@
 # Apontamentos
 
-## Tang
+## De fato alterar
+
+### Alterações Tang
+
+### Pais
+
+- [X] Cadê o 4.2?
+- [X] Diagrama Conceitual: trocar de "ementa" por "Grade Curricular"
+- [X] 5.3: checar se faz sentido o (5.6 .8 .9. 10)
+- [X] Trancamento -> trancamentos
+- [X] empregos, professores -> empregos, falta de professor
+- [X] São alguns -> são alguns exemplos
+- [X] 1.(2, 3, 4) Numerar ou itemizar tudo
+- [X] Metodologia: tela com muito espaço vazio
+- [X] Não colocar muito texto de uma vez só
+- [X] Reduzir os itens das entrevistas
+  - Reduzi o volume de informações da SECACAD
+- [ ] FER: separar andamento do aluno do cálculo de demanda
+  - Não vou alterar. Ficaria muito vazio.
+- [X] FER: tornar mais sucinta a parte das leis
+- [X] FER: Dar um enfoque para cada um dos protótipos por vez
+- [X] FER: Semestre Errado -> Semestre atípico
+- [ ] 5.2 e 5.7: eu poderia colocar uma sequência da aquisição dos dados.
+  - Fugiria muito da sequência
+- [X] 7.2: Trabalhos futuros - Fazer resumido
+  - Dei uma enxugadinha
+- Objetivos
+  - [X] Sempre com verbos (?)
+  - [X] Geral: aumentar eficiência, eficácia e efetividade... De quê?
+- Imagens
+  - [ ] FER: Aumentar figura 6; Colocar cores melhores ao invés do cinza
+    - Não é muito relevante no momento. Tá legível.
+  - [X] Separar prototipagem em 4
+  - [ ] Imagens ilegíveis
+    - [X] Imagens muito no canto
+    - [X] - 5.4: Figura 11 muito escura
+    - [ ] - 5.4.1: Figura 12 pequena e sem cor. tem que estar mais alegre
+      - Parece legível, deixarei assim.
+    - [X] - 5.6: Figura 24 - Importante mas muito pequeno
+      - Dividi em dois slides
+    - [ ] Mostrar o erro humano através de algo pulsante ou dinâmico
+      - Acho que não precisa disso no momento. Eu teria que alterar a imagem pra isso e prefiro deixar como está no documento.
+    - [ ] Dar zoom nos alertas flutuantes
+      - Tentei dar um zoom geral nas imagens.
+
+## Perguntar pra Tang
+
+- [ ] Objetivos sempre com verbos (?)
+- [ ] Aumentar o tamanho da fonte quando tem mais espaço na tela (?)
+- [ ] Mudar símbolos dos subtópicos (?)
+- [ ] Fundo branco nas imagens (?)
+
+## Comentários
+
+### Tang
 
 - Não preciso apresentar parte por parte.
 - Quanto tempo quero gastar com cada parte?
@@ -65,60 +119,14 @@
 - Evitar quantidade de subtópicos
 - Analisar o uso da fonte com cor branca
 
+### JV com Tang
+
 - Não separar necessariamente nas versões
 - Descartar 2.1 parte 1
 - na figura 11, tá com 8 pessoas com conflito. Deveriam ser só 4.
 - Verificar o uso do bege das páginas nas outras imagens
 
-## De fato alterar
-
-- [X] Cadê o 4.2?
-- [X] Diagrama Conceitual: trocar de "ementa" por "Grade Curricular"
-- [X] 5.3: checar se faz sentido o (5.6 .8 .9. 10)
-- [X] Trancamento -> trancamentos
-- [X] empregos, professores -> empregos, falta de professor
-- [X] São alguns -> são alguns exemplos
-- [X] 1.(2, 3, 4) Numerar ou itemizar tudo
-- [X] Metodologia: tela com muito espaço vazio
-- [X] Não colocar muito texto de uma vez só
-- [X] Reduzir os itens das entrevistas
-  - Reduzi o volume de informações da SECACAD
-- [ ] FER: separar andamento do aluno do cálculo de demanda
-  - Não vou alterar. Ficaria muito vazio.
-- [X] FER: tornar mais sucinta a parte das leis
-- [X] FER: Dar um enfoque para cada um dos protótipos por vez
-- [X] FER: Semestre Errado -> Semestre atípico
-- [ ] 5.2 e 5.7: eu poderia colocar uma sequência da aquisição dos dados.
-  - Fugiria muito da sequência
-- [X] 7.2: Trabalhos futuros - Fazer resumido
-  - Dei uma enxugadinha
-- Objetivos
-  - [X] Sempre com verbos (?)
-  - [X] Geral: aumentar eficiência, eficácia e efetividade... De quê?
-- Imagens
-  - [ ] FER: Aumentar figura 6; Colocar cores melhores ao invés do cinza
-    - Não é muito relevante no momento. Tá legível.
-  - [X] Separar prototipagem em 4
-  - [ ] Imagens ilegíveis
-    - [X] Imagens muito no canto
-    - [X] - 5.4: Figura 11 muito escura
-    - [ ] - 5.4.1: Figura 12 pequena e sem cor. tem que estar mais alegre
-      - Parece legível, deixarei assim.
-    - [X] - 5.6: Figura 24 - Importante mas muito pequeno
-      - Dividi em dois slides
-    - [ ] Mostrar o erro humano através de algo pulsante ou dinâmico
-      - Acho que não precisa disso no momento. Eu teria que alterar a imagem pra isso e prefiro deixar como está no documento.
-    - [ ] Dar zoom nos alertas flutuantes
-      - Tentei dar um zoom geral nas imagens.
-
-### Perguntar pra Tang
-
-- [ ] Objetivos sempre com verbos (?)
-- [ ] Aumentar o tamanho da fonte quando tem mais espaço na tela (?)
-- [ ] Mudar símbolos dos subtópicos (?)
-- [ ] Fundo branco nas imagens (?)
-
-## Papai
+### Papai
 
 - Tô explicando muito os pontos.
 - muitas imagens ilegíveis
@@ -133,7 +141,7 @@
 - Dar mais foco pros alertas flutuantes
 - Fazer um zoom com o Slide nos alertas flutuantes
 
-## Mamãe
+### Mamãe
 
 - Objetivos: sempre com verbos
 - Objetivo geral: aumentar eficiência, eficácia e efetividade, de quê?
@@ -174,13 +182,13 @@
 - 5.8 Figura 26 ilegível
 - 7.2: Trabalhos futuros - Fazer resumido
 
-## JV
+### JV
 
 - Cadê o 4.2?
 - Diagrama Conceitual: trocar de "ementa" por "Grade Curricular"
 - 5.3: checar se faz sentido o (5.6 .8 .9. 10)
 
-## Ambos
+### Ambos
 
 - Imagens muito no canto
 - Separar prototipagem em 4
