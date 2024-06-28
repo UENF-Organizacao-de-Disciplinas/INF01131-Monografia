@@ -4,6 +4,55 @@
 
 ### Alterações Tang
 
+- [ ] Definir quanto tempo gastar em cada parte
+  - [ ] É importante gastar mais tempo nessa parte de conflitos e resultados
+- [ ] Reduzir a figura 2: removendo algumas entradas do centro e removendo a legenda
+- [ ] Todas imagens devem ter fundos com cores sólidas que gerem um bom contraste com o texto
+- [ ] Tornar texto mais sucinto, podendo ser ligeiramente mais informal
+- [ ] Partir a sequência de criação de grade horária em 2 para tornar mais legível
+- [ ] No slide 35 tornar mais explicativo o meu slide
+- [ ] Remover referência aos números das figuras do texto
+- [ ] Não se limitar à sequência do texto
+- [ ] 5.4.2 ao invés de tópico e subtópico, falar em textinho que foi a migração de json pra sql
+- [ ] 5.5 (slide 47): explicar qual é o conceito da minha heurística
+- [ ] Tornar o slide o mais autoexplicativo possível, sem me estender muito
+- [ ] Colocar um texto que ilustre o algoritmo ao invés do código
+- [ ] 5.8 - Próximos desenvolvimentos (slide 57): faz mais sentido colocar nos trabalhos futuros
+- [ ] Slide 60 a 62: no título colocar um "seção de" Para esclarecer que são várias partes de um mesmo tópico
+- [ ] Aumentar figura 31 (slide 69) - Figura 31 – (Tabela 6.4) Calendário Acadêmico de 2023 - Alterado
+  - [ ] Talvez eu possa fazer aquela dinâmica que fiz com Ausberto de correr a imagem no slide
+- Conclusões (slide 70): Geralmente em tempo passado e isar verbo para descrever as ações
+  - [ ] Conclui-se que
+  - [ ] Foi realizado um estudo sobre a sequência...
+  - [ ] criou-se um modelo do problema de **timetabling**
+  - [ ] Foi desenvolvido um sistema de suporte...
+  - [ ] Criar
+  - [ ] analisar
+  - [ ] analisar conflitos
+- Trabalhos futuros: Ajudar todos os envolvidos no processo decisório
+- Letras
+  - [ ] Colocar uma letra com mais contraste; O importante é que esteja legível.
+  - [ ] Definir tamanho legível de fonte, entre 16 e 22
+    - [ ] Ampliar texto 5.3
+  - [ ] Tentar manter o mesmo tamanho de título entre slide 14 e 17
+  - [ ] Se tem espaço em branco, aumentar a fonte (ou a imagem)
+  - [ ] Talvez usar uma fonte mais gordinha, com negrito ou sombreado
+  - [ ] Testar cores de fonte que sejam mais legíveis
+- Tirar
+  - [ ] Subseções
+  - (JV) Evitar tópicos de três níveis
+- Reduzir
+  - [ ] Protótipo
+  - [ ] Textos em slides (ninguém vai ler)
+  - [ ] Menções a entrevistas e formulário "Dá pra resumir sobre as entrevistas e formulário em poucos tópicos, sem elaborar muito"
+  - [ ] Acesso aos dados acadêmicos (Slide 34): se resume a "não foi possível acessar os dados acadêmicos"
+  - [ ] (JV) Como Tang disse que o Slide 40 resume bem, posso remover a menção da progressão da API direto ali, junto com a explicação sobre a API REST
+  - [ ] Menção ao GitHub Projects
+- Remover
+  - [ ] Resumo (Slide 2)
+  - [ ] Documentos oficiais lidos (Slide 25)
+  - [ ] Projetos anteriores (Slide 33)
+
 ### Pais
 
 - [X] Cadê o 4.2?
@@ -54,6 +103,8 @@
 
 ## Comentários
 
+### Resumo alterações Tang
+
 ### Tang
 
 - Não preciso apresentar parte por parte.
@@ -69,7 +120,7 @@
 - Slide 14 escolher o que mostrar sobre a figura
 - Figura 2, dar uma recortada na legenda e tornar mais retangular para tirar mais proveito do tamanho dela
 - Tentar manter o mesmo tamanho de título entre slide 14 e 17
-- Slide 19
+- Slide 19 está ok
 - Imagens com fundo branco ou ao menos que destaquem do fundo azul
 - Cortar 25
 - Não tem porque ter muito texto no slide porque ninguém vai ler.
@@ -86,38 +137,38 @@
 - Colocar uma letra com mais contraste; O importante é que esteja legível.
 - Em 35, antes dos 3 tópicos, explicar sobre o que tô pra falar.
 - Posso juntar ideias próximas mesmo que não estejam juntas no texto
-- É a melhor maneira de você passar o recado, não precisa estar limitado à estrutura do texto e às seções
-- Tudo depende de como vc tira proveito do slide
+  - É a melhor maneira de você passar o recado, não precisa estar limitado à estrutura do texto e às seções
+  - Tudo depende de como vc tira proveito do slide
 - Slide 40: resume bem.
 - Colocar fundos com cores sólidas que gerem um bom contrate com o texto.
-- 5.4.2 ao invés de tópico e subtópico, falar em textinho que foi a migraçã ode json pra sql
+- 5.4.2 ao invés de tópico e subtópico, falar em textinho que foi a migração de json pra sql
 - Aumentar letra em slide 44
 - reduzir as menções ao projects
 - 5.5, slide 47: "o que que ela faz?" Não informei o que ela faz no slide.
-- "O slide deveria ser autoexplicativo e ter um grau de ser autoexplicativo"
+- Mais coisas autoexplicativas se possível
+- "O slide deveria ter um grau de ser autoexplicativo"
 - Posso colocar a apresentação dos conflitos no resultado junto com a apresentação das telas
 - É importante gastar mais tempo nessa parte de conflitos e resultados
 - Geralmente 40 minutos são 40 slides
-- Colocar um resuminho da ideia do algortimo em texto, ao invés do código. Talvez.
-- slide 57) 5.8 - Próximos desenvolvimentos: faz mais sentido colocar nos trabalhos futuros
+- Colocar um resuminho da ideia do algoritmo em texto, ao invés do código. Talvez.
+- (slide 57) 5.8 - Próximos desenvolvimentos: faz mais sentido colocar nos trabalhos futuros
 - Slide 60 a 62: no título colocar um "seção de"
 - Talvez usar uma fonte mais gordinha
-- Aumentar fitura 31 slide 69
+- Aumentar figura 31 slide 69
 - Fonte 20 pelo menos, 16 no mínimo
+- Evitar quantidade de subtópicos
+- Analisar o uso da fonte com cor branca
 - Conclusões, 70: Geralmente em tempo passado
   - Usar verbo para descrever as ações
     - Conclui-se que
-    - Foi realizado um estudo sobre a sequ...
+    - Foi realizado um estudo sobre a sequência...
     - criou-se um modelo do problema de **timetabling**
-    - Foi desenvolvido um sistema de sup
-      - Criaar
+    - Foi desenvolvido um sistema de suporte...
+      - Criar
       - analisar
-      - analisar confltios
+      - analisar conflitos
 - Trabalhos futuros
   - Ajudar todos os envolvidos no processo decisório
-- Mais coisas autoexplicativas se possível
-- Evitar quantidade de subtópicos
-- Analisar o uso da fonte com cor branca
 
 ### JV com Tang
 
