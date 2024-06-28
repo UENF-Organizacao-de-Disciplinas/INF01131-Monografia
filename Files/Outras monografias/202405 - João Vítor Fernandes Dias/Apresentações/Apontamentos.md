@@ -1,5 +1,75 @@
 # Apontamentos
 
+## Tang
+
+- Não preciso apresentar parte por parte.
+- Quanto tempo quero gastar com cada parte?
+- Me limitar a 30 minutos
+- Gastar mais tempo no sistema
+- Não ficar com pena de "não vou falar disso"
+- Cortar resumo
+- Elucide algumas partes mais importantes do texto
+- Não preciso gastar tempo com os protótipos
+- Contraproducente colocar as seções
+- Na tabela ler um pouco sobre o que tem
+- Slide 14 escolher o que mostrar sobre a figura
+- Figura 2, dar uma recortada na legenda e tornar mais retangular para tirar mais proveito do tamanho dela
+- Tentar manter o mesmo tamanho de título entre slide 14 e 17
+- Slide 19
+- Imagens com fundo branco ou ao menos que destaquem do fundo azul
+- Cortar 25
+- Não tem porque ter muito texto no slide porque ninguém vai ler.
+- Melhor explicar falando do que ter escrito, do jeito que tô fazendo
+- Preciso definir um tamanho legível de letra
+- Tornar um texto mais sucinto, podendo ser ligeiramente mais informal
+- Dar um corte na menção de entrevistas e formulário
+- Dá pra resumir sobre as entrevistas e formulário em poucos tópicos, sem elaborar muito
+- Posso partir a sequência de criação de grade horária em 2
+- Descartar 33: projetos anteriores
+- Slide 34: se resume a "não foi possível acessar os dados acadêmicos"
+- Ampliar texto 5.3
+- Só figura, ou só conteúdo, letra pequena não.
+- Colocar uma letra com mais contraste; O importante é que esteja legível.
+- Em 35, antes dos 3 tópicos, explicar sobre o que tô pra falar.
+- Posso juntar ideias próximas mesmo que não estejam juntas no texto
+- É a melhor maneira de você passar o recado, não precisa estar limitado à estrutura do texto e às seções
+- Tudo depende de como vc tira proveito do slide
+- Slide 40: resume bem.
+- Colocar fundos com cores sólidas que gerem um bom contrate com o texto.
+- 5.4.2 ao invés de tópico e subtópico, falar em textinho que foi a migraçã ode json pra sql
+- Aumentar letra em slide 44
+- reduzir as menções ao projects
+- 5.5, slide 47: "o que que ela faz?" Não informei o que ela faz no slide.
+- "O slide deveria ser autoexplicativo e ter um grau de ser autoexplicativo"
+- Posso colocar a apresentação dos conflitos no resultado junto com a apresentação das telas
+- É importante gastar mais tempo nessa parte de conflitos e resultados
+- Geralmente 40 minutos são 40 slides
+- Colocar um resuminho da ideia do algortimo em texto, ao invés do código. Talvez.
+- slide 57) 5.8 - Próximos desenvolvimentos: faz mais sentido colocar nos trabalhos futuros
+- Slide 60 a 62: no título colocar um "seção de"
+- Talvez usar uma fonte mais gordinha
+- Aumentar fitura 31 slide 69
+- Fonte 20 pelo menos, 16 no mínimo
+- Conclusões, 70: Geralmente em tempo passado
+  - Usar verbo para descrever as ações
+    - Conclui-se que
+    - Foi realizado um estudo sobre a sequ...
+    - criou-se um modelo do problema de **timetabling**
+    - Foi desenvolvido um sistema de sup
+      - Criaar
+      - analisar
+      - analisar confltios
+- Trabalhos futuros
+  - Ajudar todos os envolvidos no processo decisório
+- Mais coisas autoexplicativas se possível
+- Evitar quantidade de subtópicos
+- Analisar o uso da fonte com cor branca
+
+- Não separar necessariamente nas versões
+- Descartar 2.1 parte 1
+- na figura 11, tá com 8 pessoas com conflito. Deveriam ser só 4.
+- Verificar o uso do bege das páginas nas outras imagens
+
 ## De fato alterar
 
 - [X] Cadê o 4.2?
