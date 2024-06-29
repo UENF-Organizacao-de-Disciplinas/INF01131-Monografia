@@ -55,7 +55,7 @@
 - Reduzir
   - [X] Protótipo
   - [ ] Textos em slides (ninguém vai ler)
-  - [ ] Menções a entrevistas e formulário "Dá pra resumir sobre as entrevistas e formulário em poucos tópicos, sem elaborar muito"
+  - [X] Menções a entrevistas e formulário "Dá pra resumir sobre as entrevistas e formulário em poucos tópicos, sem elaborar muito"
   - [ ] Acesso aos dados acadêmicos (Slide 34): se resume a "não foi possível acessar os dados acadêmicos"
   - [ ] (JV) Como Tang disse que o Slide 40 resume bem, posso remover a menção da progressão da API direto ali, junto com a explicação sobre a API REST
     - Não entendi direito o que eu deveria mudar aqui.
