@@ -42,10 +42,10 @@
   - [X] Analisar conflitos
   - [X] Trabalhos futuros: Ajudar todos os envolvidos no processo decisório
 - Letras
-  - [ ] Colocar uma letra com mais contraste; O importante é que esteja legível.
-  - [ ] Definir tamanho legível de fonte, entre 16 e 22
-    - [ ] Ampliar texto 5.3
-  - [ ] Tentar manter o mesmo tamanho de título entre slide 14 e 17
+  - [X] Colocar uma letra com mais contraste; O importante é que esteja legível.
+  - [X] Definir tamanho legível de fonte, entre 16 e 22
+    - [X] Ampliar texto 5.3
+  - [X] Tentar manter o mesmo tamanho de título entre slide 14 e 17
   - [ ] Se tem espaço em branco, aumentar a fonte (ou a imagem)
   - [ ] Talvez usar uma fonte mais gordinha, com negrito ou sombreado
   - [ ] Testar cores de fonte que sejam mais legíveis
@@ -58,6 +58,7 @@
   - [ ] Menções a entrevistas e formulário "Dá pra resumir sobre as entrevistas e formulário em poucos tópicos, sem elaborar muito"
   - [ ] Acesso aos dados acadêmicos (Slide 34): se resume a "não foi possível acessar os dados acadêmicos"
   - [ ] (JV) Como Tang disse que o Slide 40 resume bem, posso remover a menção da progressão da API direto ali, junto com a explicação sobre a API REST
+    - Não entendi direito o que eu deveria mudar aqui.
   - [X] Menção ao GitHub Projects
 - Remover
   - [X] Resumo (Slide 2)
