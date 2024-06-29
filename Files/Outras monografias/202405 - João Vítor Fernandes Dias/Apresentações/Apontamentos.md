@@ -30,7 +30,7 @@
 - [ ] Tornar texto mais sucinto, podendo ser ligeiramente mais informal
 - [ ] Tornar o slide o mais autoexplicativo possível, sem me estender muito
 - [ ] Não se limitar à sequência do texto
-- [ ] Aumentar figura 31 (slide 69) - Figura 31 – (Tabela 6.4) Calendário Acadêmico de 2023 - Alterado
+- [X] Aumentar figura 31 (slide 69) - Figura 31 – (Tabela 6.4) Calendário Acadêmico de 2023 - Alterado
   - [ ] Talvez eu possa fazer aquela dinâmica que fiz com Ausberto de correr a imagem no slide
 - Conclusões (slide 70): Geralmente em tempo passado e isar verbo para descrever as ações
   - [ ] Conclui-se que
@@ -40,7 +40,7 @@
   - [ ] Criar
   - [ ] analisar
   - [ ] analisar conflitos
-- Trabalhos futuros: Ajudar todos os envolvidos no processo decisório
+  - Trabalhos futuros: Ajudar todos os envolvidos no processo decisório
 - Letras
   - [ ] Colocar uma letra com mais contraste; O importante é que esteja legível.
   - [ ] Definir tamanho legível de fonte, entre 16 e 22
