@@ -50,8 +50,8 @@
   - [ ] Talvez usar uma fonte mais gordinha, com negrito ou sombreado
   - [ ] Testar cores de fonte que sejam mais legíveis
 - Tirar
-  - [ ] Subseções
-  - (JV) Evitar tópicos de três níveis
+  - [X] Subseções
+    - (JV) Evitar tópicos de três níveis
 - Reduzir
   - [ ] Protótipo
   - [ ] Textos em slides (ninguém vai ler)
