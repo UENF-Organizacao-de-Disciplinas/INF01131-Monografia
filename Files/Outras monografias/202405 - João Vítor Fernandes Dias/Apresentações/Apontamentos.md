@@ -24,11 +24,11 @@
 - [X] Remover referência aos números das figuras do texto
 - [X] 5.4.2 ao invés de tópico e subtópico, falar em textinho que foi a migração de json pra sql
 - [X] 5.5 (slide 47): explicar qual é o conceito da minha heurística
-- [ ] Tornar o slide o mais autoexplicativo possível, sem me estender muito
-- [ ] Colocar um texto que ilustre o algoritmo ao invés do código
+- [X] Colocar um texto que ilustre o algoritmo ao invés do código
 - [ ] 5.8 - Próximos desenvolvimentos (slide 57): faz mais sentido colocar nos trabalhos futuros
 - [ ] Slide 60 a 62: no título colocar um "seção de" Para esclarecer que são várias partes de um mesmo tópico
 - [ ] Tornar texto mais sucinto, podendo ser ligeiramente mais informal
+- [ ] Tornar o slide o mais autoexplicativo possível, sem me estender muito
 - [ ] Não se limitar à sequência do texto
 - [ ] Aumentar figura 31 (slide 69) - Figura 31 – (Tabela 6.4) Calendário Acadêmico de 2023 - Alterado
   - [ ] Talvez eu possa fazer aquela dinâmica que fiz com Ausberto de correr a imagem no slide
