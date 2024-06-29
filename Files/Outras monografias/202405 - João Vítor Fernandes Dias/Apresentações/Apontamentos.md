@@ -46,7 +46,7 @@
   - [X] Definir tamanho legível de fonte, entre 16 e 22
     - [X] Ampliar texto 5.3
   - [X] Tentar manter o mesmo tamanho de título entre slide 14 e 17
-  - [ ] Se tem espaço em branco, aumentar a fonte (ou a imagem)
+  - [X] Se tem espaço em branco, aumentar a fonte (ou a imagem)
   - [ ] Talvez usar uma fonte mais gordinha, com negrito ou sombreado
   - [ ] Testar cores de fonte que sejam mais legíveis
 - Tirar
