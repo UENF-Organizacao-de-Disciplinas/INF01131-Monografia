@@ -20,7 +20,8 @@
 - [X] Reduzir a figura 2: removendo algumas entradas do centro e removendo a legenda
 - [X] Todas imagens devem ter fundos com cores sólidas que gerem um bom contraste com o texto
 - [X] Partir a sequência de criação de grade horária em 2 para tornar mais legível
-  - [ ] Talvez eu possa fazer aquela dinâmica que fiz com Ausberto de correr a imagem no slide
+  - Talvez eu possa fazer aquela dinâmica que fiz com Ausberto de correr a imagem no slide
+    - Não sinto que vá ficar muito alinhado bonitinho
 - [X] No slide 35 tornar mais explicativo o meu slide
 - [X] Remover referência aos números das figuras do texto
 - [X] 5.4.2 ao invés de tópico e subtópico, falar em textinho que foi a migração de json pra sql
@@ -47,8 +48,9 @@
     - [X] Ampliar texto 5.3
   - [X] Tentar manter o mesmo tamanho de título entre slide 14 e 17
   - [X] Se tem espaço em branco, aumentar a fonte (ou a imagem)
-  - [ ] Talvez usar uma fonte mais gordinha, com negrito ou sombreado
-  - [ ] Testar cores de fonte que sejam mais legíveis
+  - Como aumentei as fontes, acho que não vou precisar mais
+    - [X] Talvez usar uma fonte mais gordinha, com negrito ou sombreado
+    - [X] Testar cores de fonte que sejam mais legíveis
 - Tirar
   - [X] Subseções
     - (JV) Evitar tópicos de três níveis
@@ -57,8 +59,8 @@
   - [ ] Textos em slides (ninguém vai ler)
   - [X] Menções a entrevistas e formulário "Dá pra resumir sobre as entrevistas e formulário em poucos tópicos, sem elaborar muito"
   - [X] Acesso aos dados acadêmicos (Slide 34): se resume a "não foi possível acessar os dados acadêmicos"
-  - [ ] (JV) Como Tang disse que o Slide 40 resume bem, posso remover a menção da progressão da API direto ali, junto com a explicação sobre a API REST
-    - Não entendi direito o que eu deveria mudar aqui.
+  - Não entendi direito o que eu deveria mudar aqui.
+    - [X] (JV) Como Tang disse que o Slide 40 resume bem, posso remover a menção da progressão da API direto ali, junto com a explicação sobre a API REST
   - [X] Menção ao GitHub Projects
 - Remover
   - [X] Resumo (Slide 2)
