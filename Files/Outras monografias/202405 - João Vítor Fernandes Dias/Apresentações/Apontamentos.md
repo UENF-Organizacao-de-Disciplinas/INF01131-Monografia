@@ -31,7 +31,7 @@
 - [X] Slide 60 a 62: no título colocar um "seção de" Para esclarecer que são várias partes de um mesmo tópico
 - [ ] Tornar texto mais sucinto, podendo ser ligeiramente mais informal
 - [ ] Tornar o slide o mais autoexplicativo possível, sem me estender muito
-- [ ] Não se limitar à sequência do texto
+- [X] Não se limitar à sequência do texto
 - [X] Aumentar figura 31 (slide 69) - Figura 31 – (Tabela 6.4) Calendário Acadêmico de 2023 - Alterado
 - Conclusões (slide 70): Geralmente em tempo passado e visar verbo para descrever as ações
   - [X] Conclui-se que
