@@ -22,7 +22,7 @@
 - [X] Partir a sequência de criação de grade horária em 2 para tornar mais legível
 - [X] No slide 35 tornar mais explicativo o meu slide
 - [X] Remover referência aos números das figuras do texto
-- [ ] 5.4.2 ao invés de tópico e subtópico, falar em textinho que foi a migração de json pra sql
+- [X] 5.4.2 ao invés de tópico e subtópico, falar em textinho que foi a migração de json pra sql
 - [ ] 5.5 (slide 47): explicar qual é o conceito da minha heurística
 - [ ] Tornar o slide o mais autoexplicativo possível, sem me estender muito
 - [ ] Colocar um texto que ilustre o algoritmo ao invés do código
