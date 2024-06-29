@@ -4,10 +4,21 @@
 
 ### Alterações Tang
 
-- [ ] Definir quanto tempo gastar em cada parte
-  - [ ] É importante gastar mais tempo nessa parte de conflitos e resultados
-- [ ] Reduzir a figura 2: removendo algumas entradas do centro e removendo a legenda
-- [ ] Todas imagens devem ter fundos com cores sólidas que gerem um bom contraste com o texto
+- [X] Definir quanto tempo gastar em cada parte
+  - 5 minutos - Introdução
+  - 3 minutos - Marco
+  - 7 minutos - Modelagem
+  - 3 minutos - Estrutura da Instituição
+  - 10 minutos - Desenvolvimento
+    - 1 minutos - API Rest
+    - 2 minutos - Versões
+    - 2 minutos - Heurítica
+    - 2 minutos - Conflitos
+    - 1 minuto - Telas
+  - 2 minutos - Conclusões
+  - [X] É importante gastar mais tempo nessa parte de conflitos e resultados
+- [X] Reduzir a figura 2: removendo algumas entradas do centro e removendo a legenda
+- [X] Todas imagens devem ter fundos com cores sólidas que gerem um bom contraste com o texto
 - [ ] Tornar texto mais sucinto, podendo ser ligeiramente mais informal
 - [ ] Partir a sequência de criação de grade horária em 2 para tornar mais legível
 - [ ] No slide 35 tornar mais explicativo o meu slide
