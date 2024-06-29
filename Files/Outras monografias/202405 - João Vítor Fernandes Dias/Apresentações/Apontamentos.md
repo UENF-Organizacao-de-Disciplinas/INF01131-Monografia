@@ -29,8 +29,8 @@
 - [X] Colocar um texto que ilustre o algoritmo ao invés do código
 - [X] 5.8 - Próximos desenvolvimentos (slide 57): faz mais sentido colocar nos trabalhos futuros
 - [X] Slide 60 a 62: no título colocar um "seção de" Para esclarecer que são várias partes de um mesmo tópico
-- [ ] Tornar texto mais sucinto, podendo ser ligeiramente mais informal
-- [ ] Tornar o slide o mais autoexplicativo possível, sem me estender muito
+- [X] Tornar texto mais sucinto, podendo ser ligeiramente mais informal
+- [X] Tornar o slide o mais autoexplicativo possível, sem me estender muito
 - [X] Não se limitar à sequência do texto
 - [X] Aumentar figura 31 (slide 69) - Figura 31 – (Tabela 6.4) Calendário Acadêmico de 2023 - Alterado
 - Conclusões (slide 70): Geralmente em tempo passado e visar verbo para descrever as ações
