@@ -20,7 +20,7 @@
 - [X] Reduzir a figura 2: removendo algumas entradas do centro e removendo a legenda
 - [X] Todas imagens devem ter fundos com cores sólidas que gerem um bom contraste com o texto
 - [ ] Tornar texto mais sucinto, podendo ser ligeiramente mais informal
-- [ ] Partir a sequência de criação de grade horária em 2 para tornar mais legível
+- [X] Partir a sequência de criação de grade horária em 2 para tornar mais legível
 - [ ] No slide 35 tornar mais explicativo o meu slide
 - [ ] Remover referência aos números das figuras do texto
 - [ ] Não se limitar à sequência do texto
