@@ -21,8 +21,8 @@
 - [X] Todas imagens devem ter fundos com cores sólidas que gerem um bom contraste com o texto
 - [ ] Tornar texto mais sucinto, podendo ser ligeiramente mais informal
 - [X] Partir a sequência de criação de grade horária em 2 para tornar mais legível
-- [ ] No slide 35 tornar mais explicativo o meu slide
-- [ ] Remover referência aos números das figuras do texto
+- [X] No slide 35 tornar mais explicativo o meu slide
+- [X] Remover referência aos números das figuras do texto
 - [ ] Não se limitar à sequência do texto
 - [ ] 5.4.2 ao invés de tópico e subtópico, falar em textinho que foi a migração de json pra sql
 - [ ] 5.5 (slide 47): explicar qual é o conceito da minha heurística
