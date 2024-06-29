@@ -60,9 +60,9 @@
   - [ ] (JV) Como Tang disse que o Slide 40 resume bem, posso remover a menção da progressão da API direto ali, junto com a explicação sobre a API REST
   - [X] Menção ao GitHub Projects
 - Remover
-  - [ ] Resumo (Slide 2)
-  - [ ] Documentos oficiais lidos (Slide 25)
-  - [ ] Projetos anteriores (Slide 33)
+  - [X] Resumo (Slide 2)
+  - [X] Documentos oficiais lidos (Slide 25)
+  - [X] Projetos anteriores (Slide 33)
 
 ### Pais
 
