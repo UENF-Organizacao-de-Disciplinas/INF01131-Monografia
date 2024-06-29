@@ -20,6 +20,7 @@
 - [X] Reduzir a figura 2: removendo algumas entradas do centro e removendo a legenda
 - [X] Todas imagens devem ter fundos com cores sólidas que gerem um bom contraste com o texto
 - [X] Partir a sequência de criação de grade horária em 2 para tornar mais legível
+  - [ ] Talvez eu possa fazer aquela dinâmica que fiz com Ausberto de correr a imagem no slide
 - [X] No slide 35 tornar mais explicativo o meu slide
 - [X] Remover referência aos números das figuras do texto
 - [X] 5.4.2 ao invés de tópico e subtópico, falar em textinho que foi a migração de json pra sql
@@ -31,7 +32,6 @@
 - [ ] Tornar o slide o mais autoexplicativo possível, sem me estender muito
 - [ ] Não se limitar à sequência do texto
 - [X] Aumentar figura 31 (slide 69) - Figura 31 – (Tabela 6.4) Calendário Acadêmico de 2023 - Alterado
-  - [ ] Talvez eu possa fazer aquela dinâmica que fiz com Ausberto de correr a imagem no slide
 - Conclusões (slide 70): Geralmente em tempo passado e isar verbo para descrever as ações
   - [ ] Conclui-se que
   - [ ] Foi realizado um estudo sobre a sequência...
