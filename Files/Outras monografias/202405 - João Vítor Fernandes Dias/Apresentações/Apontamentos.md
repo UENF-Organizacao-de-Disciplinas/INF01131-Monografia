@@ -53,7 +53,7 @@
   - [X] Subseções
     - (JV) Evitar tópicos de três níveis
 - Reduzir
-  - [ ] Protótipo
+  - [X] Protótipo
   - [ ] Textos em slides (ninguém vai ler)
   - [ ] Menções a entrevistas e formulário "Dá pra resumir sobre as entrevistas e formulário em poucos tópicos, sem elaborar muito"
   - [ ] Acesso aos dados acadêmicos (Slide 34): se resume a "não foi possível acessar os dados acadêmicos"
