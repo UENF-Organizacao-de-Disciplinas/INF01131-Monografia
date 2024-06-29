@@ -25,7 +25,7 @@
 - [X] 5.4.2 ao invés de tópico e subtópico, falar em textinho que foi a migração de json pra sql
 - [X] 5.5 (slide 47): explicar qual é o conceito da minha heurística
 - [X] Colocar um texto que ilustre o algoritmo ao invés do código
-- [ ] 5.8 - Próximos desenvolvimentos (slide 57): faz mais sentido colocar nos trabalhos futuros
+- [X] 5.8 - Próximos desenvolvimentos (slide 57): faz mais sentido colocar nos trabalhos futuros
 - [ ] Slide 60 a 62: no título colocar um "seção de" Para esclarecer que são várias partes de um mesmo tópico
 - [ ] Tornar texto mais sucinto, podendo ser ligeiramente mais informal
 - [ ] Tornar o slide o mais autoexplicativo possível, sem me estender muito
