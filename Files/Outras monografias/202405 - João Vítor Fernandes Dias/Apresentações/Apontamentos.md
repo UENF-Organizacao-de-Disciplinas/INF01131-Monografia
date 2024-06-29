@@ -32,15 +32,15 @@
 - [ ] Tornar o slide o mais autoexplicativo possível, sem me estender muito
 - [ ] Não se limitar à sequência do texto
 - [X] Aumentar figura 31 (slide 69) - Figura 31 – (Tabela 6.4) Calendário Acadêmico de 2023 - Alterado
-- Conclusões (slide 70): Geralmente em tempo passado e isar verbo para descrever as ações
-  - [ ] Conclui-se que
-  - [ ] Foi realizado um estudo sobre a sequência...
-  - [ ] criou-se um modelo do problema de **timetabling**
-  - [ ] Foi desenvolvido um sistema de suporte...
-  - [ ] Criar
-  - [ ] analisar
-  - [ ] analisar conflitos
-  - Trabalhos futuros: Ajudar todos os envolvidos no processo decisório
+- Conclusões (slide 70): Geralmente em tempo passado e visar verbo para descrever as ações
+  - [X] Conclui-se que
+  - [X] Foi realizado um estudo sobre a sequência...
+  - [X] Criou-se um modelo do problema de **timetabling**
+  - [X] Foi desenvolvido um sistema de suporte...
+  - [X] Criar
+  - [X] Analisar
+  - [X] Analisar conflitos
+  - [X] Trabalhos futuros: Ajudar todos os envolvidos no processo decisório
 - Letras
   - [ ] Colocar uma letra com mais contraste; O importante é que esteja legível.
   - [ ] Definir tamanho legível de fonte, entre 16 e 22
