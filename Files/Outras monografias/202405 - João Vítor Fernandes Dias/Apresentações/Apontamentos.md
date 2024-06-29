@@ -19,17 +19,17 @@
   - [X] É importante gastar mais tempo nessa parte de conflitos e resultados
 - [X] Reduzir a figura 2: removendo algumas entradas do centro e removendo a legenda
 - [X] Todas imagens devem ter fundos com cores sólidas que gerem um bom contraste com o texto
-- [ ] Tornar texto mais sucinto, podendo ser ligeiramente mais informal
 - [X] Partir a sequência de criação de grade horária em 2 para tornar mais legível
 - [X] No slide 35 tornar mais explicativo o meu slide
 - [X] Remover referência aos números das figuras do texto
-- [ ] Não se limitar à sequência do texto
 - [ ] 5.4.2 ao invés de tópico e subtópico, falar em textinho que foi a migração de json pra sql
 - [ ] 5.5 (slide 47): explicar qual é o conceito da minha heurística
 - [ ] Tornar o slide o mais autoexplicativo possível, sem me estender muito
 - [ ] Colocar um texto que ilustre o algoritmo ao invés do código
 - [ ] 5.8 - Próximos desenvolvimentos (slide 57): faz mais sentido colocar nos trabalhos futuros
 - [ ] Slide 60 a 62: no título colocar um "seção de" Para esclarecer que são várias partes de um mesmo tópico
+- [ ] Tornar texto mais sucinto, podendo ser ligeiramente mais informal
+- [ ] Não se limitar à sequência do texto
 - [ ] Aumentar figura 31 (slide 69) - Figura 31 – (Tabela 6.4) Calendário Acadêmico de 2023 - Alterado
   - [ ] Talvez eu possa fazer aquela dinâmica que fiz com Ausberto de correr a imagem no slide
 - Conclusões (slide 70): Geralmente em tempo passado e isar verbo para descrever as ações
