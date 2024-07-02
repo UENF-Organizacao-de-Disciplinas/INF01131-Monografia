@@ -97,6 +97,20 @@
 \usepackage{subcaption} % Adicionar subfiguras
 \usepackage{chngcntr} % Para resetar o contador de figuras
 
+% \usepackage[english]{babel} % Para definir o Mês e Ano na folha de rosto
+% \usepackage{datetime2} % Para definir o Mês e Ano na folha de rosto
+
+% % Definindo o formato de data para mês e ano
+% \DTMnewdatestyle{monthyear}{%
+%   \renewcommand{\DTMdisplaydate}[4]{%
+%     \DTMmonthname{##2}~##1%
+%   }
+%   \renewcommand{\DTMDisplaydate}{\DTMdisplaydate}
+% }
+% % Ativando o estilo de data definido
+% \DTMsetdatestyle{monthyear}
+
+
 \counterwithin{figure}{chapter}   % Resetar o contador de figuras a cada capítulo {chngcntr}
 \counterwithin{table}{chapter}    % Resetar o contador de tabelas a cada capítulo {chngcntr}
 % \counterwithin{lstlisting}{chapter} % Resetar o contador de tabelas a cada capítulo {chngcntr}
