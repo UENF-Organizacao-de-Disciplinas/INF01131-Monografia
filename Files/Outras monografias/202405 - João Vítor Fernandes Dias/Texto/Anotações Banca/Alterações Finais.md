@@ -227,7 +227,7 @@
 - "que aumente a **eficiência, eficácia e efetividade** do processo"
   - > Achar nos resultados!!!
 
-#### 1.5 Metodologia
+#### 1.5 Metodologia - Annabell
 
 - "durante a **modelagem da universidade** em questão"
   - > ??
@@ -236,13 +236,13 @@
 
 ### 2. Marco Teórico - Annabell
 
-#### 2.1 Questões sobre a complexidade do problema
+#### 2.1.1 Questões sobre a complexidade do problema - Annabell
 
-#### 2.1.2 Possíveis erros na gestão das informações
+#### 2.1.2 Possíveis erros na gestão das informações - Annabell
 
 - [ ] únco -> único
 
-#### 2.2 Métodos de resolução para o problema de _timetabling_
+#### 2.2 Métodos de resolução para o problema de _timetabling_ - Annabell
 
 - "**À seguir** estão dispostas as tabelas mais relevantes e que compilam **diversos encontradas** durante o estudo bibliográfico"
   - [ ] "À seguir" -> "A seguir"
@@ -251,7 +251,7 @@
   - > "diversos encontradas" Parece que falta algo!!!
   - [ ] "diversos encontradas" -> Corrigir o que quer que tenha acontecido nesse trecho aqui
 
-#### 2.3 Problema de _timetabling_ na UENF (PTT-UENF)
+#### 2.3 Problema de _timetabling_ na UENF (PTT-UENF) - Annabell
 
 ##### 2.3.1 Heurística construtiva para o PTT-UENF - Annabell
 
@@ -264,31 +264,31 @@
   - > Colocar por linha
     - [ ] Converter essa listagem numa enumeração
 
-#### 2.4 Estratégias de solução baseadas na otimização
+#### 2.4 Estratégias de solução baseadas na otimização - Annabell
 
-##### 2.4.2 Pontos de vista das dimensões do problema
+##### 2.4.2 Pontos de vista das dimensões do problema - Annabell
 
 - > "utilizando de um sistema" -> "utilizando-se de um sistema"
   - [ ] "utilizando de um sistema" -> "utilizando-se de um sistema"
 
-### 3. MODELAGEM GERAL DO SISTEMA - Annabell
+### 3. MODELAGEM GERAL DO SISTEMA - Annabell - Annabell
 
 #### 3.1 Estágios de execução - Annabell
 
 - "a metodologia para o contexto da UENF"
   - > Você modificou? Como?
 
-#### 3.2 Interação
+#### 3.2 Interação - Annabell
 
 - "Seguindo o **conceito do Design de Interação**"
   - > Onde? Conceito!!!
 
-#### 3.3 Funcionamento
+#### 3.3 Funcionamento - Annabell
 
 - > "auxiliar a coordenação do curso de Ciência da Computação da UENF criação de grades horárias" -> "auxiliar a coordenação do curso de Ciência da Computação da UENF na criação de grades horárias"
   - [ ] "UENF criação" -> "UENF na criação"
 
-#### 3.4 Modelo de banco de dados
+#### 3.4 Modelo de banco de dados - Annabell
 
 - > "Como principais apontamentos, podemos citar a parte principal do modelo que é a alocação de turmas" -> "Como principais apontamentos, podemos citar a parte principal do modelo, que é a turma"
   - [ ] "é a alocação de turmas" -> "é a turma"
@@ -298,7 +298,7 @@
 - "fazendo então uso de apenas **uma parte** do diagrama conceitual"
   - > ???
 
-#### 3.5 API REST
+#### 3.5 API REST - Annabell
 
 - "API REST"
   - > ??
@@ -310,9 +310,9 @@
 - "organizaci-`\n`onal" [Está separando sílabas]
   - JV: imagino que ela apontou como se estivesse sendo separado erroneamente, mas não está.
 
-#### 4.2 Entrevistas
+#### 4.2 Entrevistas - Annabell
 
-##### 4.2.1 Direção do CCT
+##### 4.2.1 Direção do CCT - Annabell
 
 - "Ciclo básico: disciplinas oferecidas para todas **as engenharias**"
   - > ?!?
@@ -320,20 +320,20 @@
   - > carga horária
     - [ ] Explicar que essa fuga de padrão é necessária devido à sua carga horária diferente.
 
-##### 4.2.4 Responsável pela Secretaria Acadêmica (SECACAD)
+##### 4.2.4 Responsável pela Secretaria Acadêmica (SECACAD) - Annabell
 
 - "Também se confirmou a não existência de um **registro oficial das salas** e suas capacidades."
   - > Só o CCT tem!!!
     - JV: é mais oficial, mas segue não sendo um compilado oficialmente limitado no sistema. Não acho que devo mudar algo aqui.
 
-##### 4.2.5 Coordenação de Computação
+##### 4.2.5 Coordenação de Computação - Annabell
 
 - "Seguindo o **conceito de Design Iterativo** utilizado também por [...]"
   - [ ] "Design Iterativo" -> "Design Interativo"
   - > Novamente!!!
     - JV: Comentário solto.
 
-#### 4.4 Formulário quantitativo aos discentes
+#### 4.4 Formulário quantitativo aos discentes - Annabell
 
 - "através de um **link** disponibilizado [...]"
   - > ??
@@ -342,7 +342,7 @@
   - > Qual? "A"
     - [ ] Informar qual a letra do Apêndice que contém o formulário.
 
-#### 4.5 Relações entre as variáveis
+#### 4.5 Relações entre as variáveis - Annabell
 
 - "na forma de um diagrama de Euler"
   - > Ref!!!
@@ -358,7 +358,7 @@
 
 ### 5. Desenvolvimento do sistema de suporte à decisão - Annabell
 
-#### 5.3 Prototipagem
+#### 5.3 Prototipagem - Annabell
 
 - "Para este fim, foram **feitos os designs iniciais das telas** do sistema"
   - > Cadê elas??
@@ -403,24 +403,24 @@
   - > Como foi dessa vez?
     - JV: Comentário solto. Eu poderia até elaborar mais, mas não cabe nesse momento.
 
-#### 5.5 Solução inicial
+#### 5.5 Solução inicial - Annabell
 
 - "A solução inicial foi obtida através de uma **heurística** que analisa o histórico de criação de turmas"
   - > Sem nome?
     - JV: Imagino que ela esteja se referindo aos termos tipo "Gulosa", "_Simulated Anneling_", etc. Eu poderia adicionar que foi uma heurística própria minha.
     - [ ] Adicionar que a heurística inicial foi uma proposta própria para o caso da UENF e que outra similar não foi encontrada nos materiais acadêmicos.
 
-#### 5.6 Conflitos
+#### 5.6 Conflitos - Annabell
 
-##### 5.6.2 Conflitos tratados pelo sistema
+##### 5.6.2 Conflitos tratados pelo sistema - Annabell
 
 - Conflitos de professores; Conflitos de salas.
   - > Como se resolve? Manualmente? OK, na pág 89
     - JV: Comentário solto.
 
-#### 5.8 Próximos desenvolvimentos
+#### 5.8 Próximos desenvolvimentos - Annabell
 
-#### 5.8.1 Funcionalidades preparadas
+#### 5.8.1 Funcionalidades preparadas - Annabell
 
 - Figura 5.34
   - > Aumentar!!!
