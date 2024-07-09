@@ -102,7 +102,7 @@ A \autoref{fig:selects} mostra os protótipos de caixas de seleção que foram u
 
 \subsection{Protótipos de páginas} \label{ssec:páginas}                                 % #### 5.3.2
 
-Aqui serão elencadas as sete páginas esboçadas para o sistema. Sendo elas a \hyperref[fig:main]{página principal}, a \hyperref[fig:CRUD_main]{página de seleção}, a \hyperref[fig:CRUD_salas]{página de salas}, a \hyperref[fig:CRUD_alunos]{página de alunos}, a \hyperref[fig:CRUD_disciplinas]{página de disciplinas}, a \hyperref[fig:CRUD_professores]{página de professores} e a \hyperref[fig:CRUD_turmas]{página de turmas}.
+Aqui serão elencadas as sete páginas esboçadas para o sistema. Sendo elas a \hyperref[fig:main]{página principal} (\autoref{fig:main}), a \hyperref[fig:CRUD_main]{página de seleção} (\autoref{fig:CRUD_main}), a \hyperref[fig:CRUD_salas]{página de salas} (\autoref{fig:CRUD_salas}), a \hyperref[fig:CRUD_alunos]{página de alunos} (\autoref{fig:CRUD_alunos}), a \hyperref[fig:CRUD_disciplinas]{página de disciplinas} (\autoref{fig:CRUD_disciplinas}), a \hyperref[fig:CRUD_professores]{página de professores} (\autoref{fig:CRUD_professores}) e a \hyperref[fig:CRUD_turmas]{página de turmas} (\autoref{fig:CRUD_turmas}).
 
 A \textbf{primeira página} é a ilustrada pela \autoref{fig:main} que permite que o usuário arraste todas as turmas listadas até o horário desejado. A listagem das turmas a serem distribuídas é disposta em um painel à esquerda. Este painel tem como funcionalidade, fixar as turmas ainda não alocadas, como se estivessem presas por \LinkToURL{\LinkVelcro}{fechos de gancho e laço}. Assim, dispondo de um local para que turmas em processo de mudança de horário sejam armazenadas temporariamente sem que sejam perdidas.
 
@@ -110,13 +110,13 @@ A \textbf{primeira página} é a ilustrada pela \autoref{fig:main} que permite q
   \includegraphics[width=\textwidth]{files/img/2.02!5-desenvolvimento/2.02!5.3-prototipagem/5.3.2-paginas/1-main}
 \end{MyCenteredFigure}
 
-Em seguida, temos a \textbf{página de seleção} da categoria dos dados que deseja-se modificar (\autoref{fig:CRUD_main}), podendo esses serem sobre os professores, alunos, salas, disciplinas ou turmas. Cada uma destas tendo a capacidade de criação, leitura, edição e deleção dos dados.
+Em seguida, temos a \textbf{página de seleção} (\autoref{fig:CRUD_main}) da categoria dos dados que deseja-se modificar, podendo esses serem sobre os professores, alunos, salas, disciplinas ou turmas. Cada uma destas tendo a capacidade de criação, leitura, edição e deleção dos dados.
 
 \begin{MyCenteredFigure} \caption{Protótipo da página de seleção} \label{fig:CRUD_main}
   \includegraphics[width=0.5\textwidth]{files/img/2.02!5-desenvolvimento/2.02!5.3-prototipagem/5.3.2-paginas/2-CRUD_main}
 \end{MyCenteredFigure}
 
-Quanto à \textbf{página das salas}, temos primeiro a seleção da sala na qual deseja-se fazer alterações de cadastro. Abaixo desta caixa de seleção única há um filtro de visualização das alocações de determinado ano e semestre. Nessa página pode-se também registrar algumas características da sala, como a quantidade de cadeiras e computadores, e se possui monitor, projetos, quadro de giz e quadro branco. Um exemplo de sala ainda sem turmas alocadas é representado na \autoref{fig:CRUD_salas}. Essas últimas informações, embora não sejam essenciais para a alocação das turmas, podem ser úteis como forma de filtragem para a alocação de turmas, visto que certas disciplinas demandam salas com características específicas.
+Quanto à \textbf{página das salas} (\autoref{fig:CRUD_salas}), temos primeiro a seleção da sala na qual deseja-se fazer alterações de cadastro. Abaixo desta caixa de seleção única há um filtro de visualização das alocações de determinado ano e semestre. Nessa página pode-se também registrar algumas características da sala, como a quantidade de cadeiras e computadores, e se possui monitor, projetos, quadro de giz e quadro branco. Um exemplo de sala ainda sem turmas alocadas é representado na \autoref{fig:CRUD_salas}. Essas últimas informações, embora não sejam essenciais para a alocação das turmas, podem ser úteis como forma de filtragem para a alocação de turmas, visto que certas disciplinas demandam salas com características específicas.
 
 \begin{MyCenteredFigure} \caption{Protótipo da página de salas} \label{fig:CRUD_salas}
   \includegraphics[width=0.9\textwidth]{files/img/2.02!5-desenvolvimento/2.02!5.3-prototipagem/5.3.2-paginas/3-CRUD_salas}
@@ -185,7 +185,7 @@ Ao longo da implementação dessas versões, diversos métodos de manutenção d
 
 \subsection{Versão 1.0} \label{ssec:MVP1}                                               % #### 5.4.1
 
-A primeira versão do sistema foi desenvolvida em um ambiente local, com o objetivo de se aproximar ao máximo das páginas previstas no protótipo. Para isso, foi utilizada a biblioteca \LinkToURL{\LinkReactRouter}{\textit{React Router}} para a navegação entre as páginas, e a biblioteca \LinkToURL{\LinkReactSelect}{\textit{React Select}} para as caixas de seleção.
+A primeira versão do sistema foi desenvolvida inicialmente em um ambiente local, com o objetivo de se aproximar ao máximo das páginas previstas no protótipo. Para isso, foi utilizada a biblioteca \LinkToURL{\LinkReactRouter}{\textit{React Router}} para a navegação entre as páginas, e a biblioteca \LinkToURL{\LinkReactSelect}{\textit{React Select}} para as caixas de seleção. Ao final desta versão, o sistema foi hospedado no \hyperref[sssec:GitHub Pages]{GitHub Pages} no link \url{\LinkOurClass}.
 
 \subsubsection*{\textbf{Banco de dados preliminar}} \label{sssec:BDInicial}
 
@@ -213,9 +213,9 @@ A tabela de preferências de horários para professores foi desenvolvida e consi
 
 \subsubsection*{\textbf{GitHub Pages}} \label{sssec:GitHub Pages}
 
-Após o desenvolvimento local foi feita a implementação da interface do sistema para um servidor online. Para isso, foi utilizado o serviço GitHub Pages que, por ser gratuito e de fácil utilização, foi a escolha mais adequada para o momento.
+Após o desenvolvimento local foi feita a implementação da interface do sistema para um servidor online. Para isso, foi utilizado o serviço \LinkToURL{\LinkGitHubPages}{GitHub Pages} que, por ser gratuito e de fácil utilização, foi a escolha mais adequada para o momento.
 
-Para implantar no GitHub Pages o código desenvolvido, utilizou-se da \LinkToURL{\LinkBibliotecaGHPages}{biblioteca gh-pages}, que viabiliza a publicação de um site diretamente do repositório do GitHub. A partir disso, o sistema foi disponibilizado para acesso público, permitindo que qualquer pessoa pudesse acessar o sistema e testar suas funcionalidades.
+Para implantar no GitHub Pages o código desenvolvido, utilizou-se da \LinkToURL{\LinkBibliotecaGHPages}{biblioteca gh-pages}, que viabiliza a publicação de um site diretamente do repositório do GitHub. A partir disso, o sistema foi disponibilizado para acesso público, permitindo que qualquer pessoa pudesse acessar o sistema e testar suas funcionalidades no endereço eletrônico \url{\LinkOurClass}.
 
 \subsection{Versão 2.0} \label{ssec:MVP2}                                               % #### 5.4.2
 

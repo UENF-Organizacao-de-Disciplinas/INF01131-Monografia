@@ -17,7 +17,7 @@ Antes de prosseguirmos com o desenrolar deste trabalho, é adequado que primeiro
 
 % Ao longo dos anos de desenvolvimento acadêmico, diversos assuntos vão se aprofundando e se tornando mais específicos, assim, os estudiosos acabam cunhando novos termos que o auxiliam a desvencilhar as novas áreas específicas das suas áreas originárias. Porém, existe o potencial de que haja um crescimento desestruturado destes novos termos, assim vários termos diferentes podem se referir a um mesmo conceito, enquanto que um mesmo termo pode se referir a vários conceitos diferentes de acordo com o autor.
 
-Segundo \citeonline{Wren1996}, podemos definir \textit{timetable} como uma estrutura que mostra quando eventos ocorrerão, não havendo necessariamente a alocação de recursos. Vale ressaltar que este termo não tem seu uso limitado para os fins desta pesquisa, sendo também usado para problemas de alocação de enfermeiros, esportes, funcionários e transportes \cite{Arratia2021}. Entretanto, neste trabalho, abordaremos principalmente os termos relacionados ao que pode ser chamado de \textit{Educational Timetabling} (Ed-TT) \cite{Alencar2019}, que é o que tende a envolver um conjunto específico de recursos relacionados à educação.
+Segundo \citeonline{Wren1996}, \textit{timetable} é definido como uma estrutura que mostra quando eventos ocorrerão, não havendo necessariamente a alocação de recursos. Vale ressaltar que este termo não tem seu uso limitado para os fins desta pesquisa, sendo também usado para problemas de alocação de enfermeiros, esportes, funcionários e transportes \cite{Arratia2021}. Entretanto, neste trabalho, abordaremos principalmente os termos relacionados ao que pode ser chamado de \textit{Educational Timetabling} (Ed-TT) \cite{Alencar2019}, que é o que tende a envolver um conjunto específico de recursos relacionados à educação.
 
 \citeonline{Wren1996} também define os conceitos para \textit{class timetable}, \textit{university examination timetable} e \textit{university class timetable}, tendo relevância apenas o último, que considera a disponibilidade de professores e salas, a quantidade de alunos e os requisitos que determinada disciplina exige.
 
@@ -63,7 +63,7 @@ Dada a grande quantidade de variáveis interconectadas e as características esp
   \includegraphics[width=0.8\textwidth]{files/img/2.02!2-marco/Aulas-CCT-105-2023_1}
 \end{MyCenteredFigure}
 
-Nestas imagens, fica exemplificado um dos possíveis problemas que podem ocorrer durante a criação de grades horárias, devido à falta de integração das informações em um sistema únco. Situação essa que ocorre quando uma seção da universidade (o Sistema Acadêmico, ilustrado pela \autoref{fig:Academico}) aloca uma turma a uma determinada sala, outra seção da mesma instituição (o Centro de Ciência e Tecnologia, ilustrado pela \autoref{fig:CCT}) pode não estar ciente do mesmo, ou, mesmo estando ciente, pode acabar não delimitando aquela lacuna de tempo como ocupada, assim estando passível de uma segunda alocação naquele período de tempo naquela sala, assim gerando problemas.
+Nestas imagens, fica exemplificado um dos possíveis problemas que podem ocorrer durante a criação de grades horárias, devido à falta de integração das informações em um sistema único. Situação essa que ocorre quando uma seção da universidade (o Sistema Acadêmico, ilustrado pela \autoref{fig:Academico}) aloca uma turma a uma determinada sala, outra seção da mesma instituição (o Centro de Ciência e Tecnologia, ilustrado pela \autoref{fig:CCT}) pode não estar ciente do mesmo, ou, mesmo estando ciente, pode acabar não delimitando aquela lacuna de tempo como ocupada, assim estando passível de uma segunda alocação naquele período de tempo naquela sala, assim gerando problemas.
 
 \section{Métodos de resolução para o problema de \textit{timetabling}} \label{sec:resolucao}                                                    % ###  2.2
 
@@ -109,7 +109,7 @@ Nestas imagens, fica exemplificado um dos possíveis problemas que podem ocorrer
 
 Existem diversas implementações já realizadas, utilizando uma miríade de métodos. Em seu trabalho, \citeonline{Miranda2012} informam sobre diversos sistemas baseados em computador para auxiliar na tarefa de agendamento. \citeonline{Miranda2012} também citam dois possíveis métodos de resolução, sendo eles o \textbf{modelo de programação inteira} e os \textbf{métodos heurísticos}.
 
-Outros trabalhos buscaram condensar em forma de tabela as informações encontradas. À seguir estão dispostas as tabelas mais relevantes e que compilam diversos  encontradas durante o estudo bibliográfico e que foram elaboradas por diversos autores.
+Dada a variedade de publicações acadêmicas nessa área de estudo, alguns trabalhos buscaram condensar em forma de tabela as informações encontradas. A seguir, algumas das tabelas mais relevantes encontradas durante o estudo bibliográfico serão apresentadas em conjunto com uma breve descrição e análise sobre seu conteúdo.
 
 Na \autoref{fig:Desenvolvimento}, \citeonline{Poulsen2012} traçam a relação entre os diversos autores, ano de sua publicação e seu país de origem com os dados encontrados em seus trabalhos quanto aos parâmetros utilizados na elaboração da grade horária, quão grandes eram cada um de seus parâmetros, quanto tempo foi necessário para achar uma solução e quais foram as técnicas utilizadas.
 
@@ -142,7 +142,7 @@ Como visto nas seções anteriores, cada instituição de ensino possui suas pr�
 
 Em seu trabalho, \citeonline{SanyaSantos2013} aborda o problema de Programação de Horários de Disciplinas em Universidades, tendo como foco o curso de Ciência da Computação da UENF. Sua abordagem foi a de desenvolver um software que fosse capaz de gerar uma grade horária ótima para o curso, levando em conta as restrições impostas pelo curso. Para isso, Sânya explicou diversos métodos possíveis para se alcançar a solução desejada, passando inicialmente pelos métodos construtivos, seguido de métodos refinamento, podendo essas heurísticas serem utilizadas em conjunto com meta-heurísticas.
 
-Por fim, utilizou uma heurística que consistia em respeitar a uma matriz de preferência para a distribuição das disciplinas. Seguindo com o uso do \textit{Simulated Annealing} para a otimização da solução inicial.
+Por fim, utilizou uma heurística que consistia em respeitar uma matriz de preferência para a distribuição das disciplinas. Seguindo com o uso do \textit{Simulated Annealing} para a otimização da solução inicial.
 
 \subsection{Metaheurísticas para o PTT-UENF} \label{ssec:ricardo}   % #### 2.4.2
 
@@ -237,7 +237,7 @@ Com isso, entende-se que a flexibilização das restrições pode ser uma forma 
 
 \subsection{Pontos de vista das dimensões do problema} \label{ssec:pontos}                                % #### 2.5.2
 
-\citeonline{Piechowiak2004} lidam com a busca por uma solução para o problema de alocação de horários em universidades, utilizando de um sistema de suporte à decisão. Seu enfoque é em auxiliar o usuário em suas decisões, visando a interatividade, adaptabilidade e qualidades ergonômicas. Nele, o autor aborda a importância de se considerar que diferentes usuários têm diferentes pontos de vista e que devem cada um resolver sua parte local do problema em questão. O problema global é o \textit{design} e gestão das grades horárias de todos os recursos, entretanto, cada um dos ``gestores educacionais'' apenas veem uma parte do problema, porém, como os recursos são compartilhados, diversos conflitos acabam ocorrendo.
+\citeonline{Piechowiak2004} lidam com a busca por uma solução para o problema de alocação de horários em universidades, utilizando-se de um sistema de suporte à decisão. Seu enfoque é em auxiliar o usuário em suas decisões, visando a interatividade, adaptabilidade e qualidades ergonômicas. Nele, o autor aborda a importância de se considerar que diferentes usuários têm diferentes pontos de vista e que devem cada um resolver sua parte local do problema em questão. O problema global é o \textit{design} e gestão das grades horárias de todos os recursos, entretanto, cada um dos ``gestores educacionais'' apenas veem uma parte do problema, porém, como os recursos são compartilhados, diversos conflitos acabam ocorrendo.
 
 \subsection{Uso de soluções anteriores, soluções parciais e desvio de conflitos} \label{ssec:parciais}    % #### 2.5.3
 

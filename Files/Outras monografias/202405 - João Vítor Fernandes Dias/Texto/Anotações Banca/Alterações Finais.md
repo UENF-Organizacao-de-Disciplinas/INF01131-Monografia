@@ -11,7 +11,7 @@
 
 #### 1.1 O problema
 
-- [ ] (Annabell) "que fala sobre a multidimensional do problema" -> "que fala sobre a multidimensionalidade do problema"
+- [x] (Annabell) "que fala sobre a multidimensional do problema" -> "que fala sobre a multidimensionalidade do problema"
 
 #### 1.2 Hipótese
 
@@ -23,13 +23,13 @@
 
 #### 2.1 Problema de _timetabling_
 
-- [ ] (Rivera) "podemos definir" -> "é definido"
+- [x] (Rivera) "podemos definir" -> "é definido"
 
 ##### 2.1.1 Questões sobre a complexidade do problema
 
 ##### 2.1.2 Possíveis erros na gestão das informações
 
-- [ ] (Annabell) únco -> único
+- [x] (Annabell) únco -> único
 
 #### 2.2 Métodos de resolução para o problema de _timetabling_
 
@@ -41,18 +41,18 @@
   - [ ] (Rivera) Adicionar comentários finais sobre o meu entendimento das tabelas apresentadas.
 
 - "**À seguir** estão dispostas as tabelas mais relevantes e que compilam **diversos encontradas** durante o estudo bibliográfico"
-  - [ ] (Annabell) "À seguir" -> "A seguir"
+  - [x] (Annabell) "À seguir" -> "A seguir"
   - > "À seguir" Onde?
     - [ ] (Annabell) Assim como no 3.4 foi listada a subseção e figura em que aparecem, aqui eu poderia fazer algo similar.
   - > "diversos encontradas" Parece que falta algo!!!
-  - [ ] (Annabell) "diversos encontradas" -> Corrigir o que quer que tenha acontecido nesse trecho aqui
+  - [x] (Annabell) "diversos encontradas" -> Corrigir o que quer que tenha acontecido nesse trecho aqui
 
 #### 2.3 Problema de _timetabling_ na UENF (PTT-UENF)
 
 ##### 2.3.1 Heurística construtiva para o PTT-UENF
 
 - > "consistia em respeitar a uma matriz" -> "consistia em respeitar uma matriz"
-  - [ ] (Annabell) "respeitar a uma matriz" -> "respeitar uma matriz"
+  - [x] (Annabell) "respeitar a uma matriz" -> "respeitar uma matriz"
 
 ##### 2.3.2 Metaheurísticas para o PTT-UENF
 
@@ -61,6 +61,7 @@
 - "algumas conclusões podem ser obtidas: 1. [...]; 2. [...]; 3. [...]; 4. [...]."
   - > Colocar por linha
     - [ ] (Annabell) Converter essa listagem numa enumeração
+      - JV: Escolhi não fazer
 
 #### 2.4 Estratégias de solução baseadas na otimização
 
@@ -71,20 +72,21 @@
 ##### 2.4.2 Pontos de vista das dimensões do problema
 
 - > "utilizando de um sistema" -> "utilizando-se de um sistema"
-  - [ ] (Annabell) "utilizando de um sistema" -> "utilizando-se de um sistema"
+  - [x] (Annabell) "utilizando de um sistema" -> "utilizando-se de um sistema"
 
 ### 3. MODELAGEM GERAL DO SISTEMA
 
 - "Ao longo deste capítulo serão abordados"
   - > Erro conceitual
-    - [ ] (Rivera) JV: criar hyperlinks para os tópicos desse capítulo.
+    - [x] (Rivera) JV: criar hyperlinks para os tópicos desse capítulo.
+      - JV: Ué... Já tava feito
 
 #### 3.1 Estágios de execução
 
 - > Confunde [Falando sobre a figura 3.1 estar antes do texto explicativo]
   - [ ] (Rivera) Colocar a Figura 3.1 pra depois do texto explicativo.
 - "O primeiro dispõe da aquisição de informações, sendo elas a disponibilidade do profesor, os recursos da infraestrutura, as grades dos cursos, as estimativas de demanda e as políticas internas."
-  - [ ] (Rivera) "profesor" -> "professor"
+  - [x] (Rivera) "profesor" -> "professor"
 - "O segundo tem caráter iterativo entre as **coordenações e diretoria do CCT**"
   - [ ] (Rivera) Explicar o que é CCT, acho que mencionei essa sigla sem explicar o que é.
   - > Como? Salas?
@@ -94,12 +96,12 @@
 #### 3.3 Funcionamento
 
 - > "auxiliar a coordenação do curso de Ciência da Computação da UENF criação de grades horárias" -> "auxiliar a coordenação do curso de Ciência da Computação da UENF na criação de grades horárias"
-  - [ ] (Annabell) "UENF criação" -> "UENF na criação"
+  - [x] (Annabell) "UENF criação" -> "UENF na criação"
 
 #### 3.4 Modelo de banco de dados
 
 - > "Como principais apontamentos, podemos citar a parte principal do modelo que é a alocação de turmas" -> "Como principais apontamentos, podemos citar a parte principal do modelo, que é a turma"
-  - [ ] (Annabell) "é a alocação de turmas" -> "é a turma"
+  - [x] (Annabell) "é a alocação de turmas" -> "é a turma"
 
 #### 3.5 API REST
 
@@ -127,13 +129,13 @@
 ##### 4.2.5 Coordenação de Computação
 
 - "Seguindo o **conceito de Design Iterativo** utilizado também por [...]"
-  - [ ] (Annabell) "Design Iterativo" -> "Design Interativo"
+  - [x] (Annabell) "Design Iterativo" -> "Design Interativo"
 
 #### 4.4 Formulário quantitativo aos discentes
 
 - "encontra-se no **Apêndice** junto com sua análise"
   - > Qual? "A"
-    - [ ] (Annabell) Informar qual a letra do Apêndice que contém o formulário.
+    - [x] (Annabell) Informar qual a letra do Apêndice que contém o formulário.
 
 #### 4.5 Relações entre as variáveis
 
@@ -141,9 +143,10 @@
   - > Ref!!!
     - [ ] (Annabell) Adicionar referência bibliográfica que define o que é um diagrama de Euler.
 - > "distribuída **pelos pelos** cursos e centros" -> "distribuída pelos cursos e centros"
-  - [ ] (Annabell) "pelos pelos" -> "pelos"
+  - [x] (Annabell) "pelos pelos" -> "pelos"
 - "Os horários disponíveis para alocação são das 7 às 22 horas" -> "Os horários disponíveis para alocação são das 8:00 às 22:00"
   - [ ] (Annabell) "das 7 às 22 horas" -> "das 8:00 às 22:00"
+    - JV: Escolhi não alterar.
 
 ### 5. Desenvolvimento do sistema de suporte à decisão
 
@@ -171,10 +174,10 @@
 
 - "Aqui serão elencadas [...] e a página de turmas"
   - > \# das figuras?
-    - [ ] (Annabell) Ao invés de usar hyperlinks, referencias os labels das figuras.
+    - [x] (Annabell) Ao invés de usar hyperlinks, referencias os labels das figuras.
 - "Quanto à página das salas temos"
   - > \# da figura?
-    - [ ] (Annabell) Indicar o label da figura que representa a página das salas.
+    - [x] (Annabell) Indicar o label da figura que representa a página das salas.
 
 #### 5.4 Programação do sistema
 
@@ -188,7 +191,7 @@
 
 - "permitindo que qualquer pessoa pudesse acessar o sistema e testar suas funcionalidades.
   - > Qual o link?
-    - [ ] (Annabell) Adicionar o link para acesso ao sistema.
+    - [x] (Annabell) Adicionar o link para acesso ao sistema.
 
 ##### 5.4.2 Versão 2.0
 
