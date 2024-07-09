@@ -7,12 +7,12 @@
 - > Quais são as alternativas possíveis, que aspectos computacionais, que podem melhorar essa problemática?
   - JV: não sei se são reflexões específicas dele ou se eu deveria respondê-los no texto.
 
-#### 1.2 Hipótese
+#### 1.2 Hipótese - Rivera
 
 - > Qual é o mecanismo para melhorar a deficiência que aprensenta o problema? Não está claro.
   - JV: é apresentado depois, então imagino que eu não precise alterar nada aqui.
 
-#### 1.3 Objetivos
+#### 1.3 Objetivos - Rivera
 
 - > Entender não é problema de pesquisa
   - JV: mas é um dos meus objetivos. Não tô falando de problema de pesquisa agora... 🤔
@@ -20,9 +20,9 @@
 - > 3. Considerações de aceitação de uso.
   - JV: Reflexão ou sugestão de alteração?
 
-### 2. Marco Teórico
+### 2. Marco Teórico - Rivera
 
-#### 2.1 Problema de _timetabling_
+#### 2.1 Problema de _timetabling_ - Rivera
 
 - [ ] "podemos definir" -> "é definido"
 - > Enquanto nas escolas as salas e alnos são fixos por dia
@@ -34,7 +34,7 @@
 - > Mesma coisa de escolas
   - JV: segundo ele, a escola também envolve as mesmas dimensões da universidade. Porém, em escolas, as turmas têm alunos e salas inicialmente fixas anualmente. Não havendo essa variância por turmas.
 
-#### 2.2 Métodos de resolução para o problema de timetabling
+#### 2.2 Métodos de resolução para o problema de _timetabling_ - Rivera
 
 - > O que observa desta como relevante para teu trabalho [?]
   - JV: Acho que isso daqui é mais interessante a alterar
@@ -42,43 +42,43 @@
 - > Aqui deve colocar comentários em relaçação das tabelas
   - [ ] Adicionar comentários finais sobre o meu entendimento das tabelas apresentadas.
 
-#### 2.3 Problemas de _timetabling_ na UENF (PTT-UENF)
+#### 2.3 Problema de _timetabling_ na UENF (PTT-UENF) - Rivera
 
 - > Não "ferclceram" [#] ?
   - JV: Não faço ideia do que ele quis dizer aqui.
 - > O que faz UENF DIFERENTE em relação "eu ceuivors em" [#] tudo? "Ceie trab" [#] não pode ser usado na UENF?
   - JV: Essa também foi uma dúvida que eu tive, acho que pode não ter ficado muito claro realmente. Na verdade, sigo tendo essa dúvida. Como eu não testei na prática, não sei se os softwares existentes tankariam.
 
-##### 2.3.1 Heurística construtiva para o PTT-UENF
+##### 2.3.1 Heurística construtiva para o PTT-UENF - Rivera
 
 - > "[...] capaz de gerar uma grade horária ótima para o curso, levando em conta as restrições impostas pelo curso." Quais restrições?
   - JV: Aí eu teria que rever lá. Mas como aqui era só um resuminho do trabalho, acho válido não ter elaborado.
 - > Como todos os outros. [Se referindo a usar métodos heurísticos e meta-heurísticos]
   - JV: sim, o uso de heurísticas e meta-heurísticas é comum, mas não significa que a estrutura de restrições da instituição seja a mesma.
 
-##### 2.3.2 Metaheurísticas para o PTT-UENF
+##### 2.3.2 Metaheurísticas para o PTT-UENF - Rivera
 
 - > ?? Pode ser para qualquer univers[idade]
   - JV: Mesma resposta anterior: sim, mas instituições e regras diferentes.
 
-##### 2.3.3 Grade horária do curso de Engenharia Civil da UENF
+##### 2.3.3 Grade horária do curso de Engenharia Civil da UENF - Rivera
 
 - > Este é o problema de interfaces e atributos de IHM [Interface Homem-Máquina]. E não problema de _Timetabling_
   - JV: Correto, mas como ambos estão interligados, acho válida a menção.
 
-#### 2.4 Estratégias de solução baseada na otimização
+#### 2.4 Estratégias de solução baseadas na otimização - Rivera
 
 - "Uma das formas de se encontrar soluções para problemas complexos é a de relaxar restrições."
   - > O que é relaxar restrições? Como?
     - [ ] Explicar melhor o conceito de relaxar restrições.
 
-### 3. MODELAGEM GERAL DO SISTEMA
+### 3. MODELAGEM GERAL DO SISTEMA - Rivera
 
 - "Ao longo deste capítulo serão abordados"
   - > Erro conceitual
     - [ ] JV: criar hyperlinks para os tópicos desse capítulo.
 
-#### 3.1 Estágios de execução
+#### 3.1 Estágios de execução - Rivera
 
 - > Confunde [Falando sobre a figura 3.1 estar antes do texto explicativo]
   - [ ] Colocar a Figura 3.1 pra depois do texto explicativo.
@@ -95,13 +95,13 @@
   - [ ] Explicar o que é CCT, acho que mencionei essa sigla sem explicar o que é.
   - > Como? Salas?
 
-#### 3.6 Diferença dos trabalhos anteriores
+#### 3.6 Diferença dos trabalhos anteriores - Rivera
 
 - "Os trabalhos mais próximos quanto a instituição [...] se distingue em algumas questões."
   - > ?? Não foram publicados - Não são relevantes
 - > Por isso são [#] restritos
 
-### 4. Coleta de informações sobre a instituição
+### 4. Coleta de informações sobre a instituição - Rivera
 
 - > Requisitors de desenvolvimento de _software_ - Engenharia de _software_ - ESTE NÃO SERIA PESQUISA CIENTÍFICA
   - JV: ao meu ver, é sim pesquisa científica pois apresenta todo o processo de entendimento da realidade da instituição, os problemas e soluções encontradas até se obter por fim a solução final.
@@ -109,24 +109,24 @@
   - > ?
     - JV: Comentário solto.
 
-### 5. Desenvolvimento do sistema de suporte à decisão
+### 5. Desenvolvimento do sistema de suporte à decisão - Rivera
 
-#### 5.1 Projetos anteriores
+#### 5.1 Projetos anteriores - Rivera
 
-##### 5.1.1 Andamento dos alunos
+##### 5.1.1 Andamento dos alunos - Rivera
 
 - "**Fonte: autoria própria**"
 - > Antes devia ter formulado um modelo conceitual de dados de entrada -> Processos "gueiico" [#] |-> O que se deseja como resultado
   - JV: Sei lá, muito confuso. Imagino que o "que se espera como resultado" seja o que já foi descrito na parte de "3.3 Funcionamento".
 
-##### 5.3.1 Protótipos de componentes
+##### 5.3.1 Protótipos de componentes - Rivera
 
 - > Sem os protótipos $\alpha$ [#] difícil ver
   - [ ] Jogar as Figuras 5.2 e 5.3 para mais próximo de sua referência.
 - > por exemplo, onde este estaria no processo? Entrada? Saída?
   - [ ] Explicar melhor em que parte do processo o protótipo se encaixa.
 
-##### 5.3.2 Protótipos de páginas
+##### 5.3.2 Protótipos de páginas - Rivera
 
 - > podia ser antes de 5.3.1 porque aqui se vê os componentes
   - [ ] Colocar a seção 5.3.2 antes da 5.3.1.
@@ -145,13 +145,13 @@
   - > O que faz aqui? Quem?
   - JV: Ah! Acho que ele não entendeu quem que mexeria nessa página. De toda forma, acho que tá explicado o bastante no texto.
 
-#### 5.4 Programação do sistema
+#### 5.4 Programação do sistema - Rivera
 
 - "Após a conceitualização diagramática do banco de dados"
   - > Onde fez isso? Antes
     - JV: Acho que ele perguntou e se respondeu.
 
-##### 5.4.1 Versão 1.0
+##### 5.4.1 Versão 1.0 - Rivera
 
 - "Funcionalidades iniciais: CRUD e primeiros conflitos"
   - > De onde foi necessária essa funcionalidade?
@@ -161,7 +161,7 @@
   - > Como o quê?
     - JV: Não entendi a dúvida.
 
-##### 5.4.2 Versão 2.0
+##### 5.4.2 Versão 2.0 - Rivera
 
 - Figura 5.14
   - > dar um caso [#] o que representam esses dados.
@@ -169,7 +169,7 @@
   - > Acho este é gestão não é parte da pesquisa.
     - JV: eu concordo. Porém quis registrar para uso posterior os métodos que foram utilizados.
 
-###### 5.4.2.B2 Acesso ao Banco de Dados
+###### 5.4.2.B2 Acesso ao Banco de Dados - Rivera
 
 - > Muito Técnico
   - JV: Comentário solto.
@@ -181,7 +181,7 @@
     - JV: boa pergunta
       - [ ] Devo mencionar o uso da IA Generativa para me referir à logomarca?
 
-##### 5.4.3 Versão 3.0
+##### 5.4.3 Versão 3.0 - Rivera
 
 - B) Gráficos
   - > ??
