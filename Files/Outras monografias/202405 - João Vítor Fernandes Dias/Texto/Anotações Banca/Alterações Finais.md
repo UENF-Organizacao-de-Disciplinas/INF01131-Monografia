@@ -1,6 +1,5 @@
 # Alterações finais
 
-## Rivera
 ## Unificando apontamentos de Rivera e Annabell
 
 - > Você fez um manual do processo de geração de grade horária na UENF, senti muita falta da metodologia teórica utilizada para abordar este problema recorrente.
@@ -242,6 +241,10 @@
 - Figura 5.34
   - > Aumentar!!!
     - [ ] (Annabell) Aumentar o tamanho da Figura 5.34; colocando os 3 laterais abaixo dos 3 principais.
+
+## Rivera
+
+### 1. Introdução - Rivera
 
 - > Quais são as alternativas possíveis, que aspectos computacionais, que podem melhorar essa problemática?
   - JV: não sei se são reflexões específicas dele ou se eu deveria respondê-los no texto.
