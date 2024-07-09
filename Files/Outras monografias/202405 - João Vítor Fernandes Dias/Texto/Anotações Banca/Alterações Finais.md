@@ -216,14 +216,11 @@
 
 ### 1. Introdução - Annabell
 
-#### 1.1 O problema
+#### 1.1 O problema - Annabell
 
 - [ ] "que fala sobre a multidimensional do problema" -> "que fala sobre a multidimensionalidade do problema"
 - "o **problema** que será abordado, consiste na criação de grades horárias se apresenta com [...]"
   - > ? Consite; se;
-
-#### 1.1 O problema - Annabell
-
 - "que aumente a **eficiência, eficácia e efetividade** do processo"
   - > Achar nos resultados!!!
 
