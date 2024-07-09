@@ -1,8 +1,247 @@
 # Alterações finais
 
 ## Rivera
+## Unificando apontamentos de Rivera e Annabell
+
+- > Você fez um manual do processo de geração de grade horária na UENF, senti muita falta da metodologia teórica utilizada para abordar este problema recorrente.
+  - [ ] (Annabell) Procurar por referências teóricas para a metodologia utilizada.
+- > Que é sistema de suporte a decisão teoricamente?
+  - [ ] (Annabell) Explicar melhor o conceito de Sistemas de Suporte a Decisão bibliograficamente
 
 ### 1. Introdução
+
+#### 1.1 O problema
+
+- [ ] (Annabell) "que fala sobre a multidimensional do problema" -> "que fala sobre a multidimensionalidade do problema"
+
+#### 1.2 Hipótese
+
+#### 1.3 Objetivos
+
+#### 1.5 Metodologia
+
+### 2. Marco Teórico
+
+#### 2.1 Problema de _timetabling_
+
+- [ ] (Rivera) "podemos definir" -> "é definido"
+
+##### 2.1.1 Questões sobre a complexidade do problema
+
+##### 2.1.2 Possíveis erros na gestão das informações
+
+- [ ] (Annabell) únco -> único
+
+#### 2.2 Métodos de resolução para o problema de _timetabling_
+
+- > O que observa desta como relevante para teu trabalho [?]
+  - JV: Acho que isso daqui é mais interessante a alterar
+  - [ ] (Rivera) Explicar de que forma essa figura (2.3) se mostra como importante, ou o motivo mais objetivo disso ter sido apresentado por mim.
+- > Aqui deve colocar comentários em relaçação das tabelas
+
+  - [ ] (Rivera) Adicionar comentários finais sobre o meu entendimento das tabelas apresentadas.
+
+- "**À seguir** estão dispostas as tabelas mais relevantes e que compilam **diversos encontradas** durante o estudo bibliográfico"
+  - [ ] (Annabell) "À seguir" -> "A seguir"
+  - > "À seguir" Onde?
+    - [ ] (Annabell) Assim como no 3.4 foi listada a subseção e figura em que aparecem, aqui eu poderia fazer algo similar.
+  - > "diversos encontradas" Parece que falta algo!!!
+  - [ ] (Annabell) "diversos encontradas" -> Corrigir o que quer que tenha acontecido nesse trecho aqui
+
+#### 2.3 Problema de _timetabling_ na UENF (PTT-UENF)
+
+##### 2.3.1 Heurística construtiva para o PTT-UENF
+
+- > "consistia em respeitar a uma matriz" -> "consistia em respeitar uma matriz"
+  - [ ] (Annabell) "respeitar a uma matriz" -> "respeitar uma matriz"
+
+##### 2.3.2 Metaheurísticas para o PTT-UENF
+
+##### 2.3.3 Grade horária do curso de Engenharia Civil da UENF
+
+- "algumas conclusões podem ser obtidas: 1. [...]; 2. [...]; 3. [...]; 4. [...]."
+  - > Colocar por linha
+    - [ ] (Annabell) Converter essa listagem numa enumeração
+
+#### 2.4 Estratégias de solução baseadas na otimização
+
+- "Uma das formas de se encontrar soluções para problemas complexos é a de relaxar restrições."
+  - > O que é relaxar restrições? Como?
+    - [ ] (Rivera) Explicar melhor o conceito de relaxar restrições.
+
+##### 2.4.2 Pontos de vista das dimensões do problema
+
+- > "utilizando de um sistema" -> "utilizando-se de um sistema"
+  - [ ] (Annabell) "utilizando de um sistema" -> "utilizando-se de um sistema"
+
+### 3. MODELAGEM GERAL DO SISTEMA
+
+- "Ao longo deste capítulo serão abordados"
+  - > Erro conceitual
+    - [ ] (Rivera) JV: criar hyperlinks para os tópicos desse capítulo.
+
+#### 3.1 Estágios de execução
+
+- > Confunde [Falando sobre a figura 3.1 estar antes do texto explicativo]
+  - [ ] (Rivera) Colocar a Figura 3.1 pra depois do texto explicativo.
+- "O primeiro dispõe da aquisição de informações, sendo elas a disponibilidade do profesor, os recursos da infraestrutura, as grades dos cursos, as estimativas de demanda e as políticas internas."
+  - [ ] (Rivera) "profesor" -> "professor"
+- "O segundo tem caráter iterativo entre as **coordenações e diretoria do CCT**"
+  - [ ] (Rivera) Explicar o que é CCT, acho que mencionei essa sigla sem explicar o que é.
+  - > Como? Salas?
+
+#### 3.2 Interação
+
+#### 3.3 Funcionamento
+
+- > "auxiliar a coordenação do curso de Ciência da Computação da UENF criação de grades horárias" -> "auxiliar a coordenação do curso de Ciência da Computação da UENF na criação de grades horárias"
+  - [ ] (Annabell) "UENF criação" -> "UENF na criação"
+
+#### 3.4 Modelo de banco de dados
+
+- > "Como principais apontamentos, podemos citar a parte principal do modelo que é a alocação de turmas" -> "Como principais apontamentos, podemos citar a parte principal do modelo, que é a turma"
+  - [ ] (Annabell) "é a alocação de turmas" -> "é a turma"
+
+#### 3.5 API REST
+
+- "API REST"
+  - > ??
+  - [ ] (Annabell) Tá em "português" então não deveria estar em itálico.
+  - [ ] (Annabell) Explicar o que é API REST com alguma referência bibliográfica.
+
+#### 3.6 Diferença dos trabalhos anteriores
+
+### 4. Coleta de informações sobre a instituição
+
+#### 4.2 Entrevistas
+
+##### 4.2.1 Direção do CCT
+
+- "Ciclo básico: disciplinas oferecidas para todas **as engenharias**"
+  - > ?!?
+- "possuem três horas de duração"
+  - > carga horária
+    - [ ] (Annabell) Explicar que essa fuga de padrão é necessária devido à sua carga horária diferente.
+
+##### 4.2.4 Responsável pela Secretaria Acadêmica (SECACAD)
+
+##### 4.2.5 Coordenação de Computação
+
+- "Seguindo o **conceito de Design Iterativo** utilizado também por [...]"
+  - [ ] (Annabell) "Design Iterativo" -> "Design Interativo"
+
+#### 4.4 Formulário quantitativo aos discentes
+
+- "encontra-se no **Apêndice** junto com sua análise"
+  - > Qual? "A"
+    - [ ] (Annabell) Informar qual a letra do Apêndice que contém o formulário.
+
+#### 4.5 Relações entre as variáveis
+
+- "na forma de um diagrama de Euler"
+  - > Ref!!!
+    - [ ] (Annabell) Adicionar referência bibliográfica que define o que é um diagrama de Euler.
+- > "distribuída **pelos pelos** cursos e centros" -> "distribuída pelos cursos e centros"
+  - [ ] (Annabell) "pelos pelos" -> "pelos"
+- "Os horários disponíveis para alocação são das 7 às 22 horas" -> "Os horários disponíveis para alocação são das 8:00 às 22:00"
+  - [ ] (Annabell) "das 7 às 22 horas" -> "das 8:00 às 22:00"
+
+### 5. Desenvolvimento do sistema de suporte à decisão
+
+#### 5.1 Projetos anteriores
+
+##### 5.1.1 Andamento dos alunos
+
+#### 5.3 Prototipagem
+
+##### 5.3.1 Protótipos de componentes
+
+- > Sem os protótipos $\alpha$ [#] difícil ver
+  - [ ] (Rivera) Jogar as Figuras 5.2 e 5.3 para mais próximo de sua referência.
+- > por exemplo, onde este estaria no processo? Entrada? Saída?
+  - [ ] (Rivera) Explicar melhor em que parte do processo o protótipo se encaixa.
+
+##### 5.3.2 Protótipos de páginas
+
+- > podia ser antes de 5.3.1 porque aqui se vê os componentes
+  - [ ] (Rivera) Colocar a seção 5.3.2 antes da 5.3.1.
+- "presas por fechos de gancho e laço"
+
+  - > O que está preso?
+    - [ ] (Rivera) Explicar melhor de que forma esse componente funcionaria.
+
+- "Aqui serão elencadas [...] e a página de turmas"
+  - > \# das figuras?
+    - [ ] (Annabell) Ao invés de usar hyperlinks, referencias os labels das figuras.
+- "Quanto à página das salas temos"
+  - > \# da figura?
+    - [ ] (Annabell) Indicar o label da figura que representa a página das salas.
+
+#### 5.4 Programação do sistema
+
+##### 5.4.1 Versão 1.0
+
+- "Funcionalidades iniciais: CRUD e primeiros conflitos"
+
+  - > De onde foi necessária essa funcionalidade?
+    - JV: Imagino que ele queira entender a motivação para o desenvolvimento dessa funcionalidade. Acho válido.
+      - [ ] (Rivera) Adicionar explicação sobre a motivação para o desenvolvimento do CRUD como funcionalidade inicial
+
+- "permitindo que qualquer pessoa pudesse acessar o sistema e testar suas funcionalidades.
+  - > Qual o link?
+    - [ ] (Annabell) Adicionar o link para acesso ao sistema.
+
+##### 5.4.2 Versão 2.0
+
+- Figura 5.14
+  - > dar um caso [#] o que representam esses dados.
+    - [ ] (Rivera) Explicar de que forma esses dados da tabela seriam utilizados
+
+###### 5.4.2.B2 Acesso ao Banco de Dados
+
+- Figura 5.18
+
+  - > Não usou IA Generativa?
+    - JV: boa pergunta
+      - [ ] (Rivera) Devo mencionar o uso da IA Generativa para me referir à logomarca?
+
+- Figura 5.14
+  - > Não dá pra ler!!!!
+    - [ ] (Annabell) Tirar print do GitHub com tema branco
+
+##### 5.4.3 Versão 3.0
+
+- B) Gráficos
+  - > ??
+    - JV: Comentário solto. Imagino que "não seja científico".
+- [ ] (Rivera) Conferir se eu expliquei o que significa AWS e o que significa AWS CLI.
+- Melhorias no sistema - A) Filtros e ordenações
+
+  - [ ] (Rivera) separar numa categoria própria a definição gambiarrenta de Período Esperado
+
+- "e a reimplementação **da heurística para** criação de uma grade horária inicial"
+  - > Onde foi apresentada?
+    - JV: Puts... é verdade! Não mostrei isso na versão 1!
+      - [ ] (Annabell) Adicionar a apresentação da heurística para criação de uma grade horária inicial na versão 1.0.
+
+#### 5.5 Solução inicial
+
+- "A solução inicial foi obtida através de uma **heurística** que analisa o histórico de criação de turmas"
+  - > Sem nome?
+    - JV: Imagino que ela esteja se referindo aos termos tipo "Gulosa", "_Simulated Anneling_", etc. Eu poderia adicionar que foi uma heurística própria minha.
+    - [ ] (Annabell) Adicionar que a heurística inicial foi uma proposta própria para o caso da UENF e que outra similar não foi encontrada nos materiais acadêmicos.
+
+#### 5.6 Conflitos
+
+##### 5.6.2 Conflitos tratados pelo sistema
+
+#### 5.8 Próximos desenvolvimentos
+
+##### 5.8.1 Funcionalidades preparadas
+
+- Figura 5.34
+  - > Aumentar!!!
+    - [ ] (Annabell) Aumentar o tamanho da Figura 5.34; colocando os 3 laterais abaixo dos 3 principais.
 
 - > Quais são as alternativas possíveis, que aspectos computacionais, que podem melhorar essa problemática?
   - JV: não sei se são reflexões específicas dele ou se eu deveria respondê-los no texto.
