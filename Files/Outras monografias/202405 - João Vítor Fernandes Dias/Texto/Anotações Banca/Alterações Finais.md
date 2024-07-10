@@ -243,7 +243,7 @@
 
 - Figura 5.34
   - > Aumentar!!!
-    - [ ] (Annabell) Aumentar o tamanho da Figura 5.34; colocando os 3 laterais abaixo dos 3 principais.
+    - [x] (Annabell) Aumentar o tamanho da Figura 5.34; colocando os 3 laterais abaixo dos 3 principais.
 
 ## Rivera
 
