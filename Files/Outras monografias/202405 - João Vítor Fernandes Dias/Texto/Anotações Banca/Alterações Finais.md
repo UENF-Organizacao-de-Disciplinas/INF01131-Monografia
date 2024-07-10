@@ -682,6 +682,6 @@
 ### Mínimo necessário
 
 - [ ] Reestruturar a seção 2.4
-  - [ ] Explicar o conceito de relaxar restrições
+  - [x] Explicar o conceito de relaxar restrições
   - [ ] Definindo o que é usado na heurística inicial e dar ênfase na proposta
   - [ ] Definir o sistema de suporte à decisão
