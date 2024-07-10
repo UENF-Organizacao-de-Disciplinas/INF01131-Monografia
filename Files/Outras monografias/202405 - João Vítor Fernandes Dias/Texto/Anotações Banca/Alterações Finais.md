@@ -209,7 +209,7 @@
 
 - Figura 5.14
   - > Não dá pra ler!!!!
-    - [ ] (Annabell) Tirar print do GitHub com tema branco
+    - [x] (Annabell) Tirar print do GitHub com tema branco
 
 ##### 5.4.3 Versão 3.0
 
