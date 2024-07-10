@@ -670,8 +670,8 @@
 
 ## Tang
 
-- [ ] Adicionar Link do projeto logo no início dos resultados
-  - [ ] Adicionar também na parte do 5.4.1 GitHub Pages
+- [x] Adicionar Link do projeto logo no início dos resultados
+  - [x] Adicionar também na parte do 5.4.1 GitHub Pages
 - [ ] Melhorar o marco teórico
   - [ ] Revisar explicação da heurística inicial e tentar espalhar menções a ela ao longo do texto
     - [ ] Adicionar referências
