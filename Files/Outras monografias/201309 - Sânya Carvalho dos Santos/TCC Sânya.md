@@ -319,7 +319,7 @@ Outra variante, na área esportiva, é o Problema na Programação de Jogos. Bia
 
 ### 4.1 Conceitos de Heurística e Metaheurística
 
-O termno heurística é derivado do grego _heuriskein_, que significa descobrir ou achar, encontrar [Silva2005]. As heurísticas são métodos aproximados que se preocupam em encontrar soluções próximas da otimalidade em um tempo computacional hábil. Arenales et al [Arenales__2007] cita uma definição de Nicholson (1971) que expressa muito bem as características de uma heurística: é um procedimento para resolver problemas por meio de um enfoque "intuitivo", em geral racional, no qual a estrutura do problema possa ser interpretada e explorada inteligentemente para se obter uma solução razoável.
+O termo heurística é derivado do grego _heuriskein_, que significa descobrir ou achar, encontrar [Silva2005]. As heurísticas são métodos aproximados que se preocupam em encontrar soluções próximas da otimalidade em um tempo computacional hábil. Arenales et al [Arenales2007] cita uma definição de Nicholson (1971) que expressa muito bem as características de uma heurística: é um procedimento para resolver problemas por meio de um enfoque "intuitivo", em geral racional, no qual a estrutura do problema possa ser interpretada e explorada inteligentemente para se obter uma solução razoável.
 
 Como se pode perceber, o enfoque de uma heurística é encontrar uma solução aceitável, razoável, que seja útil, mesmo não sendo esta a melhor. Problemas como do PPH são comumente resolvidos através de métodos heurísticos por estes fornecerem soluções satisfatórias para o problema, já que os métodos exatos não o fazem em tempo razoável.
 
@@ -508,7 +508,7 @@ $R(s) = M x \sum_{i=R_1}^{R_n} r_i(s)$ (5.2)
 
 e
 
-$Q(s) = \sum_{Q^n}^{i=Q_1} \alpha_j q_j $ (5.3)
+$Q(s) = \sum\_{Q^n}^{i=Q_1} \alpha_j q_j $ (5.3)
 
 em que é o números de vezes que a restrição i E {RI ...Rn}, e qj(s) os requisitos de qualidade j c (Ql Qn) não são atendidos na solução s. M é um parâmetro de penalidade associado ao não atendimento das restrições, enquanto aj O é a penalidade associada ao requisito de qualidade qj. A ideia de Subramanian et al [Subramanian__2011], foi permitir ao usuário atribuir valores às penalimções referentes aos requisitos de qualidade diretamente proporcionais às suas respectivas relevâncias, permitindo este gerar diferentes soluçOes, por meio da variação de tais penalidades.
 
