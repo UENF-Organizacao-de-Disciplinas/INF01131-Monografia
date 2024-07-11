@@ -63,51 +63,51 @@ Dedico este trabalho a minha mãe que me ensinou o amor pelos estudos. Sem o seu
 ## Sumário
 
 1. Introdução
-1.1 Considerações iniciais
-1.2 Objetivos e justificativas
-1.3 Estrutura do trabalho
+   1.1 Considerações iniciais
+   1.2 Objetivos e justificativas
+   1.3 Estrutura do trabalho
 2. Problemas de Otimização Combinatória
-2.1 Introdução
-2.2 Métodos de solução exatos
+   2.1 Introdução
+   2.2 Métodos de solução exatos
 3. Revisão Bibliográfica do Problemas de Programação de Horários
-3.1 Introdução
-3.2 Casos mais estudados
-3.3 Outras Variantes
+   3.1 Introdução
+   3.2 Casos mais estudados
+   3.3 Outras Variantes
 4. Metodologia
-4.1 Conceitos de Heurística e Metaheurística
-4.2 Métodos construtivos (Solução Inicial)
-4.3 Métodos de refinamento (Busca Local)
-4.3.1 Conceito de Vizinhança
-4.3.2 Método de Descida Clássico
-4.4 Metaheurísticas
-4.4.1 Algoritmos Genéticos (AG)
-4.4.2 Colônia de Formigas
-4.4.3 Busca Tabu
-4.5 Simulated Annealing
-4.5.1.1 Analogia Física
-4.5.1.2 Descrição do algoritmo
+   4.1 Conceitos de Heurística e Metaheurística
+   4.2 Métodos construtivos (Solução Inicial)
+   4.3 Métodos de refinamento (Busca Local)
+   4.3.1 Conceito de Vizinhança
+   4.3.2 Método de Descida Clássico
+   4.4 Metaheurísticas
+   4.4.1 Algoritmos Genéticos (AG)
+   4.4.2 Colônia de Formigas
+   4.4.3 Busca Tabu
+   4.5 Simulated Annealing
+   4.5.1.1 Analogia Física
+   4.5.1.2 Descrição do algoritmo
 5. Aplicação da Metodologia ao Problema de Programação de Horários
-5.1 Definição do Problema de Programação de Horários
-5.2 Definição do Estudo de Caso
-5.3 Definição da Representação
-5.4 Métodos de Construção
-5.5 Descrição das Vizinhanças
-5.6 Metaheurística Simulated Annealing
+   5.1 Definição do Problema de Programação de Horários
+   5.2 Definição do Estudo de Caso
+   5.3 Definição da Representação
+   5.4 Métodos de Construção
+   5.5 Descrição das Vizinhanças
+   5.6 Metaheurística Simulated Annealing
 6. Resultados computacionais
-6.1 Descrição do Estudo de Caso
-6.2 Representação da Solução
-6.3 Resultados Computacionais
-6.4 Análise da qualidade dos resultados
+   6.1 Descrição do Estudo de Caso
+   6.2 Representação da Solução
+   6.3 Resultados Computacionais
+   6.4 Análise da qualidade dos resultados
 7. Considerações Finais
-7.1 Conclusões
-7.2 Trabalhos Futuros
-Referências Bibliográficas
-Apêndice A
-Apêndice B
-Apêndice C
-Apêndice D
-Apêndice E
-Apêndice F
+   7.1 Conclusões
+   7.2 Trabalhos Futuros
+   Referências Bibliográficas
+   Apêndice A
+   Apêndice B
+   Apêndice C
+   Apêndice D
+   Apêndice E
+   Apêndice F
 
 ## 1. Introdução
 
@@ -172,6 +172,7 @@ z = \max cx \\
 Ax \leq b \\
 x \in Z^{n}_{+}
 $$
+
 (2.1)
 
 E se todas as variáveis assumem valores _0 ou l, tem-se um problema de programação 0-1 ou binária (PB)_ escrito como:
@@ -181,6 +182,7 @@ z = \max cx \\
 Ax \leq b \\
 x \in B^{n}
 $$
+
 (2.2)
 
 Já um problema com variáveis inteiras e reais é chamado de _programação (linear) inteira mista (PIM)_ quando possui a seguinte forma:
@@ -190,6 +192,7 @@ z = \max cx + dy \\
 Ax + Dy = b \\
 x \in R^{n}_{+}, y \in Z^{p}_{+}
 $$
+
 (2.3)
 
 onde os parâmetros do problema são representados por: $A$ é uma matriz ($mxn$), $D$ uma matriz ($mxp$), $c$ um vetor ($lxn$), $d$ um vetor ($lxp$) e $b$ um vetor ($mxl$). Os vetores de variáveis são $x$ e $y$ com dimensões ($nxl$) e ($pxl$).
@@ -200,6 +203,7 @@ isto é:
 $$
 \min \{\sum_{j \in S} C_j: S \in F \}
 $$
+
 (2.4)
 
 <!-- Não consegui usar o Left and Right -->
@@ -218,27 +222,32 @@ $$
 \text{encontre } x_{ptdh}
 \forall p \in P, t \in T, d \in D, h \in H
 $$
+
 (2.5)
 
 $$
 \text{sujeito a } \\
 \sum_{d \in D} \sum_{h \in H} x_{ptdh} = \~{r}_{pt} \forall p \in P, t \in T
 $$
+
 (2.6)
 
 $$
 \sum_{p \in P} x_{ptdh} \leq 1 \forall t \in T, d \in D, h \in H
 $$
+
 (2.7)
 
 $$
 \sum_{t \in T} x_{ptdh} \leq \~{p}_{pdh} \forall p \in P, d \in D, h \in H
 $$
+
 (2.8)
 
 $$
 x_{ptdh} \in \{0, 1\} \forall p \in P, t \in T, d \in D, h \in H
 $$
+
 (2.9)
 
 Onde:
@@ -751,6 +760,7 @@ Tabela 6.2 - Dados das disciplinas de períodos pares.
 Além dos dados das disciplinas descritos nas tabelas 6.1 e 62. foram utilizadas mais três matrizes de dados complementares: i) matriz de preferência ii) matriz de horários préfixados e iii) matriz de categoria de professor.
 
 A matriz de preferência foi descrita na seção 5.4. A matriz de horários pré- fixados contém as informações das disciplinas que tem horário fixo. Cada linha da matriz contém o código de identificação da disciplina, na primeira coluna e nas colunas subsequentes a identificação dos timeslots pré-fixados a essa disciplina (ver Figura 6.1).
+
 <!-- Figura 6.1 -->
 
 Figura 6.1 - RepresentaçSo da matriz de horários pré-fixados.
