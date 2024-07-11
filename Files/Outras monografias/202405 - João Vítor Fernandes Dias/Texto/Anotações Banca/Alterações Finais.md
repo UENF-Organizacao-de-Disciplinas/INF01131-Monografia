@@ -298,8 +298,8 @@
 
 - > "[...] capaz de gerar uma grade horária ótima para o curso, levando em conta as restrições impostas pelo curso." Quais restrições?
   - JV: Aí eu teria que rever lá. Mas como aqui era só um resuminho do trabalho, acho válido não ter elaborado.
-- > Como todos os outros. [Se referindo a usar métodos heurísticos e meta-heurísticos]
-  - JV: sim, o uso de heurísticas e meta-heurísticas é comum, mas não significa que a estrutura de restrições da instituição seja a mesma.
+- > Como todos os outros. [Se referindo a usar métodos heurísticos e metaheurísticos]
+  - JV: sim, o uso de heurísticas e metaheurísticas é comum, mas não significa que a estrutura de restrições da instituição seja a mesma.
 
 ##### 2.3.2 Metaheurísticas para o PTT-UENF - Rivera
 
