@@ -684,4 +684,4 @@
 - [ ] Reestruturar a seção 2.4
   - [x] Explicar o conceito de relaxar restrições
   - [ ] Definindo o que é usado na heurística inicial e dar ênfase na proposta
-  - [ ] Definir o sistema de suporte à decisão
+  - [x] Definir o sistema de suporte à decisão
