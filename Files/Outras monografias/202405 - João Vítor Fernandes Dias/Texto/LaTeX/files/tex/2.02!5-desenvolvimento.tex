@@ -480,7 +480,7 @@ Outra característica aprimorada, foi a velocidade de adição e deleção, prin
 
 \paragraph*{B4) Aprimoramento das disciplinas não oferecidas} \label{par:Solução inicial}
 
-A funcionalidade anteriormente denominada ``Disciplinas ainda não oferecidas'' foi aprimorada de tal forma que agora, além de criar uma turma para a disciplina selecionada, o sistema automaticamente analisa o histórico de criação de turmas, definindo previamente o professor, a demanda estimada, e os horários, incluindo seus dias, horas de início e sala em que é alocada. Então, após a criação de todas as turmas referentes ao curso de Ciência da Computação, uma solução inicial foi obtida. Sendo ela \hyperref[sec:Solução inicial]{mais detalhadamente descrita posteriormente}.
+A funcionalidade \hyperref[sssec:Funcionalidades Adicionais]{anteriormente denominada ``Disciplinas ainda não oferecidas''} foi aprimorada de tal forma que agora, além de criar uma turma para a disciplina selecionada, o sistema automaticamente analisa o histórico de criação de turmas, definindo previamente o professor, a demanda estimada, e os horários, incluindo seus dias, horas de início e sala em que é alocada. Então, após a criação de todas as turmas referentes ao curso de Ciência da Computação, uma solução inicial foi obtida. Sendo ela mais detalhadamente descrita posteriormente na \autoref{sec:Solução inicial} denominada \nameref{sec:Solução inicial}.
 
 \subsubsubsection*{C) Grade horária} \label{ssssec:Grade Horária}
 
@@ -513,50 +513,41 @@ Além das funcionalidades voltadas para o usuário final, algumas mudanças clas
 
 \section{Solução inicial} \label{sec:Solução inicial}                                   % ###  5.5 
 
-A funcionalidade anteriormente denominada ``Disciplinas ainda não oferecidas'', que consistia na exibição de uma lista de disciplinas do curso de Ciência da Computação que espera-se que sejam oferecidas naquele semestre, foi aprimorada de tal forma que agora, além de criar uma turma para a disciplina selecionada, o sistema automaticamente analisa o histórico de criação de turmas, definindo previamente o professor, a demanda estimada, e os horários, incluindo seus dias, horas de início e sala em que é alocada.
+Um dos processos mais importantes para a alocação de turmas é a definição de uma solução inicial. Ao longo das versões, a solução inicial foi sendo aprimorada, deixando de \hyperref[sssec:Funcionalidades Adicionais]{criar turmas para todas as disciplinas disponíveis, porém sem as suas informações preenchidas}, para \hyperref[par:Solução inicial]{criar turmas com suas características já preenchidas seguindo uma heurística baseada no histórico de criação de turmas}.
 
-O botão de adição de todas as disciplinas foi mantido, e agora, ao ser clicado, cria as turmas com suas características já preenchidas, não considerando, entretanto, a descrição, visto que esta é uma característica única de cada turma e deve ser adicionada manualmente em caso de necessidade. Então, após a criação de todas as turmas referentes ao curso de Ciência da Computação, uma solução inicial foi obtida.
+O botão de adição de todas as disciplinas foi mantido, e agora, ao ser clicado, cria as turmas com suas características já preenchidas, assim gerando uma solução inicial, porém passível de conflitos. Vale ressaltar que o preenchimento das características, entretanto, não inclui o campo descrição, visto que esta é uma característica única de cada turma e deve ser adicionada manualmente somente em caso de necessidade.
 
-\subsection{Heurística de solução inicial} \label{ssec:Heurística}
+\subsection{Heurística histórica para criação de uma solução inicial} \label{ssec:Heurística}
 
-A solução inicial foi obtida através de uma heurística que analisa o histórico de criação de turmas, e a partir disso, define as características das turmas a serem criadas. Ela ocorre assim que o botão de adição de turmas a partir das disciplinas ainda não ofertadas é clicado.
+A solução inicial é obtida através de uma heurística própria que analisa o histórico de criação de turmas, ou seja, todas as turmas, de todos os anos, cadastradas no sistema, com o objetivo de criar todas as turmas necessárias para o semestre. A partir disso, define as características das turmas a serem criadas. Ela é executada assim que o botão de adição de turmas a partir das disciplinas ainda não ofertadas é clicado.
 
-Primariamente, a lista completa de turmas é filtrada para que \textbf{apenas as turmas daquela mesma disciplina sejam consideradas}. Em seguida, a heurística analisa o histórico de criação de turmas, e a partir disso, define as características das turmas a serem criadas.
+Baseado na grade curricular de 2015, foram armazenadas no sistema as disciplinas e seus respectivos períodos esperados. Com essa informação, é possível distinguir entre disciplinas geralmente oferecidas no primeiro semestre (aquelas cujo período esperado é um número ímpar), e as disciplinas oferecidas no segundo semestre (aquelas cujo período esperado é um número par).
 
-Seu algoritmo é ilustrado no \autoref{code:heuristica} e consiste em 4 funções principais: \textit{splitClasses}, \textit{getMostFrequentClassTimeSizes}, \textit{getMeanDemand} e \textit{getMostFrequent}.
+Na seção inferior da página Multiturmas há uma tabela com a listagem das disciplinas esperadas a serem oferecidas no semestre selecionado nos filtros, desde que ainda não tenham sido atreladas a alguma turma naquele semestre. Listagem essa que apresenta as disciplinas pares, ímpares, ou todas, caso o semestre de verão seja selecionado.
 
-\begin{lstlisting}[language=JavaScript, caption={Heurística de solução inicial}, label={code:heuristica}]
-function getUsualInfo(classes) {
-  const classTimes = splitClasses(classes);
-  const quantity = getMostFrequentClassTimeSizes(classes);
-  const classUsualInfo = {
-    professor: getMostFrequent(classes, ["professor"]),
-    expectedDemand: getMeanDemand(classes),
-    // description: getDescription(classes, currentSemester),
-    description: null,
-    classTime: {
-      quantity,
-      day: getMostFrequent(classTimes, ["dia"], quantity),
-      room: getMostFrequent(classTimes, ["sala"]),
-      duration: getMostFrequent(classTimes, ["duracao"]),
-      startHour: getMostFrequent(classTimes, ["horaInicio"]),
-    },
-  };
-  return classUsualInfo;
-}
-\end{lstlisting}
+Com essas informações o usuário pode escolher criar uma turma para uma \textbf{disciplina em específico}, ou então uma turma para \textbf{cada uma das disciplinas listadas}. Ao criar uma turma para uma \textbf{disciplina específica}, ele inserirá essa uma disciplina em uma lista de turmas a serem criadas. Já ao criar uma turma para \textbf{todas as disciplinas listadas}, o sistema irá inserir todas as disciplinas da listagem em uma lista de turmas a serem criadas.
 
-Na função \textbf{\textit{splitClasses}} uma lista de objetos ``turma'' contendo múltiplos horários é passada por parâmetro e é dividido em uma lista de objetos ``turma'', onde cada objeto contém as informações de um dos horários, então retornando uma lista de objetos ``horário''. Essa função realiza esta conversão para que possa-se trabalhar com os dados referentes a cada horário de forma individual.
+A partir daí o sistema percorrerá cada uma das disciplinas na listagem das turmas a serem criadas e, se baseando no histórico de turmas cadastradas no sistema, as filtrará para que sejam obtidas apenas as turmas da disciplina em questão.
 
-Na função \textbf{\textit{getMostFrequentClassTimeSizes}} é passada uma lista de objetos ``turma'' contendo múltiplos horários e é retornado um número inteiro que representa a quantidade de horários que foi mais frequente dentre as turmas passadas por parâmetro. Essa função é utilizada para definir a quantidade de horários que a nova turma terá.
+Dessa listagem filtrada, serão obtidas as informações mais recorrentes sobre as alocações prévia dessa disciplina. Entende-se "informações mais recorrentes" como "o valor que apresenta maior frequência dentre as alocações prévias".
 
-Na função \textbf{\textit{getMeanDemand}} é passada uma lista de objetos ``turma'' e é retornado um número inteiro que representa a média da demanda de todas as turmas que possuam demanda estimada.
+Então, serão obtidos os valores mais frequentes de: quantidade de horários, professor, sala, hora de início e duração. Duas outras informações também obtidas, porém de formas ligeiramente diferentes são: os dias da semana em que a disciplina é ofertada e a demanda estimada.
 
-Na função \textbf{\textit{getMostFrequent}} são passados três parâmetros usualmente: uma \textbf{lista de objetos} ``turma'' ou uma lista de objetos ``horário'', uma lista de strings que representam \textbf{o campo que se deseja analisar}, e um número inteiro que representa a \textbf{quantidade de valores} que se deseja retornar, sendo este valor igual a 1 caso nenhum valor seja passado. A função então usa a lista de objetos passada por parâmetro para contar a frequência de cada valor registrado no campo desejado, e então, retorna os valores mais frequentes.
+Para o primeiro caso, baseado na quantidade $H$ de horários oferecidos na semana para tal disciplina, é possível inferir os dias da semana em que a disciplina é ofertada, ao se analisar os $H$ horários mais frequentes.
 
-Com essas quatro funções a turma de cada disciplina ao ser criada é preenchida com as informações de professor, demanda estimada, quantidade de horários, dia, sala, duração e hora de início.
+Já para o segundo caso, a demanda estimada é obtida ao se calcular a média aritmética dos valores presentes nas alocações prévias da disciplina que possuam a informação de demanda.
 
-Como a heurística é baseada no histórico de criação de turmas, ela é capaz de prever com certa precisão as características das turmas a serem criadas. É esperado, entretanto, que esta solução apresente problemas em sua execução, visto que nem todas as alocações de turmas apresentam um padrão objetivo. Além disso, a heurística não checa se a turma a ser criada está alocada em um horário já ocupado pelo professor ou sala em questão.
+Após a coleta dessas informações, o sistema criará uma turma para a disciplina em questão contendo as informações obtidas.
+
+% Seu algoritmo é ilustrado no \autoref{code:heuristica}.
+
+\subsection{Requisitos, benefícios e limitações da heurística histórica} \label{ssec:limitacoes_heuristicas}
+
+Como a heurística é baseada no histórico de criação de turmas, é necessário, claro, que haja um histórico de criação de turmas para que a solução inicial seja obtida. E, quanto maior o histórico, mais precisa será a solução inicial obtida.
+
+A heurística é capaz de prever com certa precisão as características das turmas a serem criadas. Entretanto, a solução encontrada está passível de apresentar conflitos visto que nem todas as alocações de turmas apresentam um padrão objetivo. Além disso, a heurística não checa se a turma a ser criada está alocada em um horário já ocupado pelo professor ou sala em questão. Outra limitação é quanto a professores que já não estejam mais associados à instituição ou que acabaram de ser contratados, nesses casos, os mesmos, devido à baixa frequência de alocações, terão menor probabilidade de serem alocados.
+
+Como o usuário tem a capacidade de escolher alocações de apenas algumas disciplinas específicas, a geração da solução inicial pode ser feita parcialmente, o que traz maior flexiblidade ao usuário.
 
 As limitações da heurística encarregam então ao usuário a verificação e a correção dos possíveis conflitos gerados durante a criação da solução inicial. Essa correção se dá através da análise do sistema de \hyperref[sec:conflitos]{detecção e alerta dos conflitos}.
 
