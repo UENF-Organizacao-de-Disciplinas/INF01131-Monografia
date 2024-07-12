@@ -525,21 +525,42 @@ Baseado na grade curricular de 2015, foram armazenadas no sistema as disciplinas
 
 Na seção inferior da página Multiturmas há uma tabela com a listagem das disciplinas esperadas a serem oferecidas no semestre selecionado nos filtros, desde que ainda não tenham sido atreladas a alguma turma naquele semestre. Listagem essa que apresenta as disciplinas pares, ímpares, ou todas, caso o semestre de verão seja selecionado.
 
-Com essas informações o usuário pode escolher criar uma turma para uma \textbf{disciplina em específico}, ou então uma turma para \textbf{cada uma das disciplinas listadas}. Ao criar uma turma para uma \textbf{disciplina específica}, ele inserirá essa uma disciplina em uma lista de turmas a serem criadas. Já ao criar uma turma para \textbf{todas as disciplinas listadas}, o sistema irá inserir todas as disciplinas da listagem em uma lista de turmas a serem criadas.
+Com essas informações o usuário pode escolher criar uma turma para uma \textbf{disciplina em específico}, ou então uma turma para \textbf{cada uma das disciplinas listadas}. Ao criar uma turma para uma \textbf{disciplina específica}, ele inserirá essa disciplina em uma lista de turmas a serem criadas. Já ao criar uma turma para \textbf{todas as disciplinas listadas}, o sistema irá inserir todas as disciplinas da listagem em uma lista de turmas a serem criadas.
 
-A partir daí o sistema percorrerá cada uma das disciplinas na listagem das turmas a serem criadas e, se baseando no histórico de turmas cadastradas no sistema, as filtrará para que sejam obtidas apenas as turmas da disciplina em questão.
+A partir daí o sistema percorrerá cada uma das disciplinas na listagem das turmas a serem criadas e, filtrará do cadastro histórico de turmas para que sejam obtidas \textbf{apenas as turmas da disciplina em questão}. Em seguida, a heurística analisa a listagem das turmas já filtradas e define as características das turmas a serem criadas.
 
-Dessa listagem filtrada, serão obtidas as informações mais recorrentes sobre as alocações prévia dessa disciplina. Entende-se ``informações mais recorrentes'' como ``o valor que apresenta maior frequência dentre as alocações prévias''.
+O algoritmo de aquisição das informações para a criação da turma é ilustrado no \autoref{code:heuristica} e consiste em 4 funções principais: \textit{splitClasses}, \textit{getMostFrequentClassTimeSizes}, \textit{getMeanDemand} e \textit{getMostFrequent}.
 
-Então, serão obtidos os valores mais frequentes de: quantidade de horários, professor, sala, hora de início e duração. Duas outras informações também obtidas, porém de formas ligeiramente diferentes são: os dias da semana em que a disciplina é ofertada e a demanda estimada.
+\begin{lstlisting}[language=JavaScript, caption={Heurística de solução inicial}, label={code:heuristica}]
+function getUsualInfo(classes) {
+  const classTimes = splitClasses(classes);
+  const quantity = getMostFrequentClassTimeSizes(classes);
+  const classUsualInfo = {
+    professor: getMostFrequent(classes, ["professor"]),
+    expectedDemand: getMeanDemand(classes),
+    // description: getDescription(classes, currentSemester),
+    description: null,
+    classTime: {
+      quantity,
+      day: getMostFrequent(classTimes, ["dia"], quantity),
+      room: getMostFrequent(classTimes, ["sala"]),
+      duration: getMostFrequent(classTimes, ["duracao"]),
+      startHour: getMostFrequent(classTimes, ["horaInicio"]),
+    },
+  };
+  return classUsualInfo;
+}
+\end{lstlisting}
 
-Para o primeiro caso, baseado na quantidade $H$ de horários oferecidos na semana para tal disciplina, é possível inferir os dias da semana em que a disciplina é ofertada, ao se analisar os $H$ horários mais frequentes.
+Na função \textbf{\textit{splitClasses}} uma lista de objetos ``turma'' contendo múltiplos horários é passada por parâmetro e é dividido em uma lista de objetos ``turma'', onde cada objeto contém as informações de um dos horários, então retornando uma lista de objetos ``horário''. Essa função realiza esta conversão para que se possa trabalhar com os dados referentes a cada horário de forma individual.
 
-Já para o segundo caso, a demanda estimada é obtida ao se calcular a média aritmética dos valores presentes nas alocações prévias da disciplina que possuam a informação de demanda.
+Na função \textbf{\textit{getMostFrequentClassTimeSizes}} é passada uma lista de objetos ``turma'' contendo múltiplos horários e é retornado um número inteiro que representa a quantidade de horários que foi mais frequente dentre as turmas passadas por parâmetro. Essa função é utilizada para definir a quantidade de horários que a nova turma terá.
 
-Após a coleta dessas informações, o sistema criará uma turma para a disciplina em questão contendo as informações obtidas.
+Na função \textbf{\textit{getMeanDemand}} é passada uma lista de objetos ``turma'' e é retornado um número inteiro que representa a média da demanda de todas as turmas que possuam demanda estimada.
 
-% Seu algoritmo é ilustrado no \autoref{code:heuristica}.
+Na função \textbf{\textit{getMostFrequent}} são passados três parâmetros usualmente: uma \textbf{lista de objetos} ``turma'' ou uma lista de objetos ``horário'', uma lista de strings que representam \textbf{o campo que se deseja analisar}, e um número inteiro que representa a \textbf{quantidade de valores} que se deseja retornar, sendo este valor igual a 1 caso nenhum valor seja passado. A função então usa a lista de objetos passada por parâmetro para contar a frequência de cada valor registrado no campo desejado, e então, retorna os valores mais frequentes.
+
+Com essas quatro funções são coletadas as informações pertinentes à turma de tal disciplina, sendo elas: professor, demanda estimada, quantidade de horários, dia, sala, duração e hora de início. E, com esses dados, o sistema criará uma turma para a disciplina em questão contendo as informações obtidas.
 
 \subsection{Requisitos, benefícios e limitações da heurística histórica} \label{ssec:limitacoes_heuristicas}
 
