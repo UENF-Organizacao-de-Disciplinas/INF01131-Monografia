@@ -460,7 +460,7 @@ Com essa divisão, definiu-se o sistema para que, por padrão, apenas exibisse a
 
 Dentre as tarefas realizadas, uma das páginas que mais sofreu alterações foi a página de \textbf{MultiTurmas}. Nela, foram feitas diversas melhorias, como a adição de filtros, ordenações e aprimoramento dos textos contidos nas caixas de seleção.
 
-\paragraph*{B1) Adição da propriedade ``descrição''}
+\paragraph*{B1) Adição da propriedade ``descrição''} \label{par:Descrição}
 
 Disciplinas oferecidas em um mesmo semestre por vezes são oferecidas para alunos demais para que uma única turma os comporte, e assim, é necessário a criação de mais de uma turma. Para que os alunos e professores possam identificar facilmente a qual turma pertencem, foi adicionada a propriedade descrição, que é uma breve descrição da turma. Esse código descritor já se encontra no Sistema Acadêmico, porém com a limitação de apenas 3 caracteres. No presente trabalho, a descrição pode conter até 255 caracteres.
 
@@ -515,11 +515,11 @@ Além das funcionalidades voltadas para o usuário final, algumas mudanças clas
 
 Um dos processos mais importantes para a alocação de turmas é a definição de uma solução inicial. Ao longo das versões, a solução inicial foi sendo aprimorada, deixando de \hyperref[sssec:Funcionalidades Adicionais]{criar turmas para todas as disciplinas disponíveis, porém sem as suas informações preenchidas}, para \hyperref[par:Solução inicial]{criar turmas com suas características já preenchidas seguindo uma heurística baseada no histórico de criação de turmas}.
 
-O botão de adição de todas as disciplinas foi mantido, e agora, ao ser clicado, cria as turmas com suas características já preenchidas, assim gerando uma solução inicial, porém passível de conflitos. Vale ressaltar que o preenchimento das características, entretanto, não inclui o campo descrição, visto que esta é uma característica única de cada turma e deve ser adicionada manualmente somente em caso de necessidade.
+O botão de adição de todas as disciplinas foi mantido, e agora, ao ser clicado, cria as turmas com suas características já preenchidas, assim gerando uma solução inicial, porém passível de conflitos. Vale ressaltar que o preenchimento das características, entretanto, não inclui a propriedade \hyperref[par:Descrição]{descrição}, visto que esta é uma característica única de cada turma e deve ser adicionada manualmente somente em caso de necessidade.
 
 \subsection{Heurística histórica para criação de uma solução inicial} \label{ssec:Heurística}
 
-A solução inicial é obtida através de uma heurística própria que analisa o histórico de criação de turmas, ou seja, todas as turmas, de todos os anos, cadastradas no sistema, com o objetivo de criar todas as turmas necessárias para o semestre. A partir disso, define as características das turmas a serem criadas. Ela é executada assim que o botão de adição de turmas a partir das disciplinas ainda não ofertadas é clicado.
+A solução inicial é obtida através de uma heurística própria que analisa o histórico de criação de turmas com o objetivo de criar todas as turmas necessárias para o semestre. O histórico em que se baseia consiste em todas as turmas, de todos os anos, cadastradas no sistema, sendo elas do curso de Ciência da Computação ou não. A partir disso, define as características das turmas a serem criadas. A heurística é executada assim que o botão de adição de turmas a partir das disciplinas ainda não ofertadas for clicado.
 
 Baseado na grade curricular de 2015, foram armazenadas no sistema as disciplinas e seus respectivos períodos esperados. Com essa informação, é possível distinguir entre disciplinas geralmente oferecidas no primeiro semestre (aquelas cujo período esperado é um número ímpar), e as disciplinas oferecidas no segundo semestre (aquelas cujo período esperado é um número par).
 
@@ -529,7 +529,7 @@ Com essas informações o usuário pode escolher criar uma turma para uma \textb
 
 A partir daí o sistema percorrerá cada uma das disciplinas na listagem das turmas a serem criadas e, se baseando no histórico de turmas cadastradas no sistema, as filtrará para que sejam obtidas apenas as turmas da disciplina em questão.
 
-Dessa listagem filtrada, serão obtidas as informações mais recorrentes sobre as alocações prévia dessa disciplina. Entende-se "informações mais recorrentes" como "o valor que apresenta maior frequência dentre as alocações prévias".
+Dessa listagem filtrada, serão obtidas as informações mais recorrentes sobre as alocações prévia dessa disciplina. Entende-se ``informações mais recorrentes'' como ``o valor que apresenta maior frequência dentre as alocações prévias''.
 
 Então, serão obtidos os valores mais frequentes de: quantidade de horários, professor, sala, hora de início e duração. Duas outras informações também obtidas, porém de formas ligeiramente diferentes são: os dias da semana em que a disciplina é ofertada e a demanda estimada.
 
