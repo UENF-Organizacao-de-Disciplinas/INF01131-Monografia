@@ -67,7 +67,8 @@
 
 - "Uma das formas de se encontrar soluções para problemas complexos é a de relaxar restrições."
   - > O que é relaxar restrições? Como?
-    - [ ] (Rivera) Explicar melhor o conceito de relaxar restrições.
+    - [x] (Rivera) Explicar melhor o conceito de relaxar restrições.
+      - JV: Já tá feito... Ou já fiz... Ou será que eu deveria explicar ainda melhor?
 
 ##### 2.4.2 Pontos de vista das dimensões do problema
 
