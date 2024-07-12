@@ -544,7 +544,7 @@
 
 - "API REST"
   - > ??
-  - [ ] Tá em "português" então não deveria estar em itálico.
+  - [x] Tá em "português" então não deveria estar em itálico.
   - [ ] Explicar o que é API REST com alguma referência bibliográfica.
 
 ### 4. Coleta de informações sobre a instituição - Annabell
