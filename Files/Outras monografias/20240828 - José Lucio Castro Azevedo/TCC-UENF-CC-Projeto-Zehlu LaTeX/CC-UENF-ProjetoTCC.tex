@@ -1,0 +1,208 @@
+%% CC-UENF-projeto-pesquisa.tex
+%% Prof. Ausberto Castro Vera
+%% URNF - CCT - LCMAT - CC
+%% 2016-2021
+%%  Informa\c{c}\~{o}es do Projeto de TCC
+
+% verso e anverso:
+%\documentclass[12pt,openright, twoside,a4paper,english,brazil]{abntex2}	
+
+% apenas verso:
+\documentclass[12pt,oneside,a4paper,english,brazil]{abntex2}	
+
+\usepackage{titlesec}
+
+\titleformat{\chapter}[display]
+{\normalfont\huge\bfseries}{Capítulo \thechapter : }{0cm}{\Huge}
+
+% ---
+% Pacotes fundamentais 
+% ---
+%\usepackage{sbc-template}
+\usepackage{cmap}				% Mapear caracteres especiais no PDF
+\usepackage{lmodern}			% Usa a fonte Latin Modern
+\usepackage[T1]{fontenc}		% Selecao de codigos de fonte.
+\usepackage[utf8]{inputenc}		% Codificacao do documento (convers\~{a}o autom\'{a}tica dos acentos)
+\usepackage{indentfirst}		% Indenta o primeiro par\'{a}grafo de cada se\c{c}\~{a}o.
+\usepackage{xcolor}				% Controle das cores
+\usepackage{here}               % Fixar as imagens dentro do texto
+\usepackage[table,xcdraw]{xcolor}
+\usepackage{colortbl} 
+\usepackage[table,xcdraw]{xcolor}
+
+\usepackage{url}
+\usepackage{quoting}
+\setlength\tabcolsep{0.3cm}
+\renewcommand{\arraystretch}{1.7} 
+
+
+% Definindo novas cores
+\definecolor{verde}{rgb}{0.25,0.5,0.35}
+\definecolor{jpurple}{rgb}{0.5,0,0.35}
+\definecolor{darkgreen}{rgb}{0.0, 0.2, 0.13}
+\definecolor{oldmauve}{rgb}{0.4, 0.19, 0.28}
+
+% Configurando layout para mostrar codigos Java
+\usepackage{listings}
+
+\renewcommand{\lstlistingname}{Código}
+\renewcommand{\lstlistlistingname}{Lista de Códigos}
+
+\newcommand{\estiloJava}{
+\lstset{
+    language=Java,
+    basicstyle=\ttfamily\small,
+    keywordstyle=\color{jpurple}\bfseries,
+    stringstyle=\color{red},
+    commentstyle=\color{verde},
+    morecomment=[s][\color{blue}]{/**}{*/},
+    extendedchars=true,
+    showspaces=false,
+    showstringspaces=false,
+    numbers=left,
+    numberstyle=\tiny,
+    breaklines=true,
+    backgroundcolor=\color{cyan!10},
+    breakautoindent=true,
+    xleftmargin=0pt,
+    tabsize=2,
+}}
+
+
+
+\usepackage{graphicx}			% Inclus\~{a}o de gr\'{a}ficos
+ \graphicspath{{Pictures/}{Imagens/}{Figuras/}} % Especifica a pasta onde  est\~{a}o armazenados os arquivos imagens
+% ---
+
+% ---
+% Pacotes adicionais, usados apenas no \^{a}mbito do Modelo Can\^{o}nico do abnteX2
+% ---
+% Pacotes de cita\c{c}\~{o}es
+% ---
+\usepackage[brazilian,hyperpageref]{backref}	 % Paginas com as cita\c{c}\~{o}es na bibl
+\usepackage[alf]{abntex2cite}	% Cita\c{c}\~{o}es padr\~{a}o ABNT
+
+% ---
+% CONFIGURA\c{C}\~{O}ES DE PACOTES
+% ---
+
+% ---
+% Configura\c{c}\~{o}es do pacote backref
+% Usado sem a op\c{c}\~{a}o hyperpageref de backref
+\renewcommand{\backrefpagesname}{Citado na(s) p\'{a}gina(s):~}
+% Texto padr\~{a}o antes do n\'{u}mero das p\'{a}ginas
+\renewcommand{\backref}{}
+% Define os textos da cita\c{c}\~{a}o
+\renewcommand*{\backrefalt}[4]{
+	\ifcase #1 %
+		Nenhuma cita\c{c}\~{a}o no texto.%
+	\or
+		Citado na p\'{a}gina #2.%
+	\else
+		Citado #1 vezes nas p\'{a}ginas #2.%
+	\fi}%
+% ---
+
+
+% ---
+% Informa\c{c}\~{o}es de dados para CAPA e FOLHA DE ROSTO
+% ---
+\titulo{Um modelo de requisitos de segurança para aplicações bancárias no Android
+}
+\autor{José Lucio C. Azevedo }
+\local{Campos dos Goytacazes, RJ}
+\data{\today}                    %% <======================== MUDAR: dd Maio de 202xxxs
+\orientador{Prof. Dr. Ausberto S. Castro Vera}   %% <======================== MUDAR
+\coorientador{Prof. Dr. João Luiz de Almeida Filho}
+\instituicao{%
+  Universidade Estadual do Norte Fluminense Darcy Ribeyro
+  \par
+  CCT - Laborat\'{o}rio de Ciencias Matem\'{a}ticas
+  \par
+  Curso de Ci\^{e}ncia da Computa\c{c}\~{a}o}
+\tipotrabalho{Projeto de Pesquisa (TCC)}
+% O preambulo deve conter o tipo do trabalho, o objetivo,
+% o nome da institui\c{c}\~{a}o e a \'{a}rea de concentra\c{c}\~{a}o
+\preambulo{Projeto de pesquisa apresentado como requisito para aprovar a disciplina de Projeto de Monografia do Curso de Bacharel em Ci\^{e}ncia da Computa\c{c}\~{a}o, da Universidade Estadual do Norte Fluminense Darcy Ribeiro}
+% ---
+
+% ---
+% Configura\c{c}\~{o}es de apar\^{e}ncia do PDF final
+
+% alterando o aspecto da cor azul
+\definecolor{blue}{RGB}{41,5,195}
+
+% informa\c{c}\~{o}es do PDF
+\makeatletter
+\hypersetup{
+     	%pagebackref=true,
+		pdftitle={\@title},
+		pdfauthor={\@author},
+    	pdfsubject={\imprimirpreambulo},
+	    pdfcreator={\@author, LaTeX with abnTeX2},
+		pdfkeywords={abnt}{latex}{abntex}{abntex2}{projeto de pesquisa},
+		colorlinks=true,       		% false: boxed links; true: colored links
+    	linkcolor=red,          	% color of internal links
+    	citecolor=blue,        		% color of links to bibliography
+    	filecolor=magenta,      		% color of file links
+		urlcolor=blue,
+		bookmarksdepth=4
+}
+\makeatother
+% ---
+
+% ---
+% Espa\c{c}amentos entre linhas e par\'{a}grafos
+% ---
+
+% O tamanho do par\'{a}grafo \'{e} dado por:
+\setlength{\parindent}{1.3cm}
+
+% Controle do espa\c{c}amento entre um par\'{a}grafo e outro:
+\setlength{\parskip}{0.2cm}  % tente tamb\'{e}m \onelineskip
+
+% ---
+% compila o indice
+% ---
+\makeindex
+% ---
+
+% ----
+% In\'{\i}cio do documento
+% ----
+\begin{document}
+
+% Retira espa\c{c}o extra obsoleto entre as frases.
+\frenchspacing
+
+% ----------------------------------------------------------
+% ELEMENTOS PR\'{E}-TEXTUAIS
+% ----------------------------------------------------------
+\input{Pre-textuais.tex}
+
+% ----------------------------------------------------------
+% ELEMENTOS TEXTUAIS
+% ----------------------------------------------------------
+\textual
+
+% ----------------------------------------------------------
+% Introdu\c{c}\~{a}o
+% ----------------------------------------------------------
+
+\input{1 - Introdução}
+\input{2 - Referencial}
+\input{3 - Metodologia}
+\input{4 - Resultados}
+\input{5 - Avaliação}
+\input{6 - Conclusão}
+
+% ----------------------------------------------------------
+% Refer\^{e}ncias bibliogr\'{a}ficas
+% ----------------------------------------------------------
+
+\bibliography{Projeto,ZehluTCC}    %% arquivos *.bib
+                                         %% FulanoTCCbib.bib \'{e} o arquvi exclusivo do TCC
+
+
+
+\end{document}

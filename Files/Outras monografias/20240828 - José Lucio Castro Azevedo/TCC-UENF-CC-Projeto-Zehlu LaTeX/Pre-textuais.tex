@@ -1,0 +1,70 @@
+% -------------------------------------------------
+% Prof. Dr. Ausberto S. Castro Vera
+% UENF - CCT - LCMAT - Curso de Ci\^{e}ncia da Computa\c{c}\~{a}o - Matem\'{a}tica - PROFMAT
+% Campos, RJ,  2013-2022
+% Curso de LaTeX
+% -------------------------------------------------
+%%  Informa\c{c}\~{o}es do Projeto de TCC
+% -------------------------------------------------
+
+
+% ----------------------------------------------------------
+% ELEMENTOS PR\'{E}-TEXTUAIS
+% ----------------------------------------------------------
+% \pretextual 
+
+% ---
+% Capa
+% ---
+\imprimircapa
+% ---
+
+% ---
+% F olha de rosto
+% ---
+\imprimirfolhaderosto
+% ---
+
+% ---
+% NOTA DA ABNT NBR 15287:2011, p. 4:
+%  ``Se exigido pela entidade, apresentar os dados curriculares do autor em
+%     folha ou p\'{a}gina distinta ap\'{o}s a folha de rosto.''
+% ---
+
+\input{Aprovação}
+
+\input{Agradecimentos}
+
+\input{Epigrafe}
+
+\input{Resumo}
+
+
+% ---
+% inserir lista de ilustra\c{c}\~{o}es
+% ---
+\pdfbookmark[0]{\listfigurename}{lof}
+\listoffigures*
+\cleardoublepage
+% ---
+
+% ---
+% inserir lista de tabelas
+% ---
+\pdfbookmark[0]{\listtablename}{lot}
+\listoftables*
+\cleardoublepage
+% ---
+
+\pdfbookmark[0]{\listfigurename}{lof}
+\input{Siglas}
+\cleardoublepage
+
+% ---
+% inserir o sumario
+% ---
+\pdfbookmark[0]{\contentsname}{toc}
+\tableofcontents*
+\cleardoublepage
+% ---
+
